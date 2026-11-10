@@ -1,0 +1,163 @@
+{
+  "method_id": "m2a",
+  "name": "M2A",
+  "summary": "Dual-layer text-image memory for long-term personalized interaction.",
+  "capabilities": {
+    "max_scopes": 1,
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "forms": [
+      "multimodal",
+      "hierarchical"
+    ],
+    "operations": [
+      "observe",
+      "retrieve",
+      "learn",
+      "commit",
+      "reset",
+      "save_state",
+      "load_state"
+    ],
+    "integration_slots": [
+      "context",
+      "episode"
+    ],
+    "accepted_events": [
+      "message",
+      "observation"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true,
+    "history_ingestion": "commit"
+  },
+  "version": "1",
+  "paper_url": null,
+  "repository_url": "https://github.com/Little-Fridge/M2A",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {
+    "path_parameters": {
+      "storage_path": "directory",
+      "data_storage_path": "directory",
+      "db_dir": "directory"
+    },
+    "kind": "embedded_db",
+    "backend": "sqlite_plus_milvus_lite",
+    "database_paths": [
+      "raw.db",
+      "semantic.db"
+    ],
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "tracked",
+  "implementation_notes": [
+    "Reference: Little-Fridge/M2A edd8c3b75bae8b2c9c1a0ac8ed67e38c2c2723f8.",
+    "SQLite raw messages; Milvus dense IP + native BM25 hybrid search followed by image-vector search and two-stage RRF, with upstream candidate limits 5 and 3.",
+    "Image vectors use a separately configured SigLIP-compatible chat embedding endpoint, or an injected m2a.multimodal_embedder with encode_image. Standard image input fails explicitly without it.",
+    "Memory manager can iteratively search semantic memories and fetch raw evidence by ID/time before ADD/DELETE decisions. JSON commands implement the tool loop within the framework."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "offline"
+        ],
+        "default": "standard"
+      },
+      "llm_model": {
+        "type": "string"
+      },
+      "llm_base_url": {
+        "type": "string"
+      },
+      "llm_api_key_env": {
+        "type": "string"
+      },
+      "embedding_model": {
+        "type": "string"
+      },
+      "embedding_base_url": {
+        "type": "string"
+      },
+      "embedding_api_key_env": {
+        "type": "string"
+      },
+      "embedding_dims": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "db_dir": {
+        "type": "string",
+        "default": ".mematlas/artifacts/m2a"
+      },
+      "speaker_0": {
+        "type": "string",
+        "default": "user"
+      },
+      "speaker_1": {
+        "type": "string",
+        "default": "assistant"
+      },
+      "top_k": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 8
+      },
+      "context_window": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 20
+      },
+      "multimodal_model": {
+        "type": "string"
+      },
+      "multimodal_base_url": {
+        "type": "string"
+      },
+      "multimodal_api_key_env": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": true
+  },
+  "limitations": [
+    "The selected upstream hybrid_search constructs a text-to-image request but does not execute it; this implementation follows its executed text-hybrid and image-query paths.",
+    "The memory-manager evidence loop is bounded to 8 rounds; multimodal image services must be supplied for image inputs."
+  ],
+  "tags": [
+    "multimodal",
+    "text-image",
+    "long-term"
+  ],
+  "requirements": {
+    "python": [
+      "pymilvus"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "offline_mode": "Explicit simplified smoke tests; results do not represent the standard algorithm."
+  },
+  "route_hints": [
+    "discrete image-text dialogue memory",
+    "multimodal long-term personalization"
+  ]
+}

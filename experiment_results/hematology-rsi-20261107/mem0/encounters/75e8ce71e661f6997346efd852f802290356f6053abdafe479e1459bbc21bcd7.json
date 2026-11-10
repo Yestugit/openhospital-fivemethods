@@ -1,0 +1,451 @@
+{
+  "patient_id": "Patient_00634",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了进行初步诊断，首先需要询问患者的临床症状。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "最近半年反复鼻出血，手臂容易瘀青，刷牙也偶尔出血。过去六周手指遇冷或压力大时会灼痛、刺痛，还会发红甚至发紫，暖和点就好。另外觉得越来越累，偶尔头晕，胃口差，左上腹有点胀。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为反复鼻出血、易瘀青、牙龈出血等出血倾向，伴有雷诺现象（遇冷手指变色疼痛）、乏力、左上腹胀等症状，高度怀疑血液系统疾病（如白血病、骨髓增生异常综合征或血管炎等）。目前尚未进行任何检查，缺乏血常规、凝血功能等关键诊断依据，因此优先开具相关检查以明确病因。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为反复鼻出血、皮肤瘀青、牙龈出血等出血倾向，伴有乏力、头晕及左上腹胀痛，且出现遇冷后手指颜色改变（雷诺现象），高度提示血液系统疾病（如白血病、再生障碍性贫血、血小板减少性紫癜或凝血功能障碍）。血常规、外周血涂片及凝血功能等血液学检查是评估贫血、血小板数量与功能、白细胞异常及凝血状态的首选和关键步骤，能为后续诊断提供核心依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者表现为反复鼻出血、易瘀青、牙龈出血等出血倾向，伴有乏力、头晕及左上腹不适，需通过全血细胞计数（CBC）评估贫血及血小板情况，外周血涂片观察细胞形态以排查血液系统疾病，凝血功能全套用于明确是否存在凝血障碍。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血小板计数\": \"PLT：1280 x 10^9/L［参考范围：150-400］\", \"血白细胞计数\": \"WBC：13.8 x 10^9/L［参考范围：4.5-11.0］\", \"血红蛋白\": \"Hgb：128 g/L［参考范围：140-180］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板计数\", \"血白细胞计数\", \"血红蛋白\"]}, \"外周血涂片\": {\"result\": {\"血小板数量\": \"显著血小板增多［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"可见血小板聚集\", \"血小板形态与分布\": \"巨大血小板\", \"外周血涂片其他异常所见\": \"偶见巨核细胞碎片；轻度左移，罕见髓细胞\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板数量\", \"血小板聚集\", \"血小板形态与分布\", \"外周血涂片其他异常所见\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"D-二聚体：0.82 mg/L FEU［参考范围：<0.5］\", \"凝血酶原时间\": \"PT：12.4 s［参考范围：11-13.5］\", \"活化部分凝血活酶时间\": \"aPTT：31 s［参考范围：25-35］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"D-二聚体\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者血常规显示血小板显著增多（1280 x 10^9/L），外周血涂片提示巨大血小板和聚集，需进一步行骨髓穿刺检查以鉴别原发性血小板增多症、骨髓增殖性肿瘤或反应性血小板增多，同时建议进行JAK2 V617F基因突变检测以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者全血细胞计数显示血小板显著增多（1280 x 10^9/L），外周血涂片提示巨大血小板及聚集，结合病史中的雷诺现象、脾大（左上腹胀）及出血症状，高度怀疑原发性血小板增多症或骨髓增殖性肿瘤。为进一步明确诊断，需进行骨髓穿刺活检以评估巨核细胞增生情况，并完善JAK2 V617F等基因突变检测，这些均属于血液学范畴的深入检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"骨髓检查\", \"铁代谢检查\"], \"reason\": \"患者表现为血小板显著增多（1280 x 10^9/L）、白细胞轻度升高及贫血，外周血涂片提示巨大血小板和血小板聚集，需通过骨髓检查明确是否为原发性血小板增多症或其他骨髓增殖性肿瘤；同时患者有乏力、头晕等贫血症状，需进行铁代谢检查以鉴别缺铁性贫血或慢性病贫血。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"骨髓检查\": {\"result\": {\"异常浸润\": \"无异常浸润\", \"粒红比\": \"3:1［参考值：2:1 至 4:1］\", \"粒细胞系成熟\": \"自髓母细胞经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序［参考值：自髓母细胞（<3%）经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序］\", \"红细胞系成熟\": \"正成红细胞性成熟，无发育异常特征\", \"纤维化或坏死\": \"轻度网状纤维化\", \"骨小梁\": \"正常\", \"骨髓原始细胞\": \"2%［参考值：<5%］\", \"骨髓巨核细胞\": \"显著增生；巨核细胞增大、核分叶过多并成簇分布\", \"骨髓浆细胞\": \"1.5%［参考值：<3%］\", \"骨髓淋巴细胞\": \"15%［参考值：10-20%］\", \"骨髓细胞密度\": \"80%［参考值：30-70%（随年龄变化）］\", \"骨髓铁储备\": \"存在（2-3级）［参考值：存在（2-3级）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"纤维化或坏死\", \"骨髓巨核细胞\", \"骨髓细胞密度\"]}, \"铁代谢检查\": {\"result\": {\"总铁结合力\": \"310 μg/dL［参考值：250-370 μg/dL (45-66 μmol/L)］\", \"血清铁\": \"125 μg/dL［参考值：65-175 μg/dL (11.6-31.3 μmol/L)］\", \"血清铁蛋白\": \"450 ng/mL［参考值：30-400 ng/mL (μg/L)］\", \"转铁蛋白饱和度\": \"40%［参考值：20-50%］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清铁蛋白\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有典型症状（鼻出血、瘀斑、雷诺现象、左上腹胀），结合全血细胞计数显示显著血小板增多（PLT 1280）、白细胞轻度升高及贫血，外周血涂片见巨大血小板和聚集，骨髓检查示巨核细胞显著增生伴网状纤维化，铁代谢正常，已具备诊断原发性血小板增多症（ET）的关键依据，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为血小板显著增多（PLT 1280 x 10^9/L）、白细胞轻度升高及贫血，伴有鼻出血、瘀斑等出血症状。外周血涂片显示巨大血小板及血小板聚集，骨髓检查示巨核细胞显著增生、成簇分布且伴轻度网状纤维化，符合原发性血小板增多症（ET）或骨髓增殖性肿瘤的特征。此类疾病属于血液系统疾病，需由血液科进行确诊和制定治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"原发性血小板增多症\", \"treatment_plan\": \"1. 主要治疗：启动细胞减灭治疗。鉴于患者血小板计数显著升高（1280×10^9/L）且伴有血栓/出血症状（鼻出血、瘀斑、肢体缺血性疼痛），首选羟基脲（Hydroxyurea）口服，起始剂量根据体重调整（如15-30mg/kg/日），目标是将血小板控制在安全范围（<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α或芦可替尼（Ruxolitinib）。\\n2. 抗血小板治疗：在排除活动性大出血风险后，加用阿司匹林（75-100mg/日）以预防微血管血栓事件，缓解手指遇冷发紫等缺血症状。\\n3. 个性化调整：患者有左上腹胀痛（可能为脾大），需定期监测脾脏大小；针对反复鼻出血和瘀斑，治疗初期需密切观察出血倾向变化，若出血加重需暂停抗血小板药物并评估是否需要输注血小板或进行血小板单采术紧急降板。\\n4. 安全性与监测：每2周复查血常规直至指标稳定，随后每月复查。监测骨髓抑制情况（白细胞、血红蛋白下降）。告知患者若出现剧烈头痛、视力模糊、胸痛、肢体突然麻木或严重出血，需立即就医。长期随访以监测疾病进展或转化为骨髓纤维化/白血病。\", \"reasoning\": \"诊断依据：患者表现为持续性血小板显著增多（1280×10^9/L），外周血涂片见巨大血小板及聚集，骨髓检查显示巨核细胞显著增生、成簇分布伴轻度网状纤维化，符合原发性血小板增多症（ET）的形态学特征。临床症状包括高凝/低凝并存表现（鼻出血、瘀斑提示功能异常，手指遇冷发紫提示微血管血栓），且无其他导致继发性血小板增多的明确原因（如感染、缺铁等，铁蛋白正常）。鉴别诊断中，骨髓纤维化虽有纤维化但通常伴贫血和脾大更显著，本例Hgb正常；特发性血小板减少性紫癜（ITP）表现为血小板减少而非增多。因此最可能的诊断为原发性血小板增多症。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_00634",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_01590 has mild anemia with hemoglobin of 98 g/L, normal platelet count (280 x 10^9/L), and isolated prolonged activated partial thromboplastin time (aPTT) of 46 seconds.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User recommended a treatment plan for Patient_02107 including oral iron supplementation (ferrous sulfate, succinate, or polysaccharide-iron complex) providing 150-200 mg elemental iron daily taken after meals with vitamin C, dietary adjustments to increase heme iron intake (red meat, liver, blood products), referral to gynecology to evaluate the cause of menorrhagia, and follow-up CBC in 2 weeks with continued iron therapy for 3-6 months to replenish stores (target ferritin >50 ng/mL)",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L).",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's child has severe thrombocytopenia (platelet count 22×10^9/L) with signs of disseminated intravascular coagulation (DIC), including elevated D-dimer and low fibrinogen."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "最近半年反复鼻出血，手臂容易瘀青，刷牙也偶尔出血。过去六周手指遇冷或压力大时会灼痛、刺痛，还会发红甚至发紫，暖和点就好。另外觉得越来越累，偶尔头晕，胃口差，左上腹有点胀。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血小板计数": "PLT：1280 x 10^9/L［参考范围：150-400］",
+          "血白细胞计数": "WBC：13.8 x 10^9/L［参考范围：4.5-11.0］",
+          "血红蛋白": "Hgb：128 g/L［参考范围：140-180］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板计数",
+          "血白细胞计数",
+          "血红蛋白"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "血小板数量": "显著血小板增多［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "可见血小板聚集",
+          "血小板形态与分布": "巨大血小板",
+          "外周血涂片其他异常所见": "偶见巨核细胞碎片；轻度左移，罕见髓细胞"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板数量",
+          "血小板聚集",
+          "血小板形态与分布",
+          "外周血涂片其他异常所见"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "D-二聚体": "D-二聚体：0.82 mg/L FEU［参考范围：<0.5］",
+          "凝血酶原时间": "PT：12.4 s［参考范围：11-13.5］",
+          "活化部分凝血活酶时间": "aPTT：31 s［参考范围：25-35］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "D-二聚体"
+        ]
+      },
+      "骨髓检查": {
+        "result": {
+          "异常浸润": "无异常浸润",
+          "粒红比": "3:1［参考值：2:1 至 4:1］",
+          "粒细胞系成熟": "自髓母细胞经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序［参考值：自髓母细胞（<3%）经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序］",
+          "红细胞系成熟": "正成红细胞性成熟，无发育异常特征",
+          "纤维化或坏死": "轻度网状纤维化",
+          "骨小梁": "正常",
+          "骨髓原始细胞": "2%［参考值：<5%］",
+          "骨髓巨核细胞": "显著增生；巨核细胞增大、核分叶过多并成簇分布",
+          "骨髓浆细胞": "1.5%［参考值：<3%］",
+          "骨髓淋巴细胞": "15%［参考值：10-20%］",
+          "骨髓细胞密度": "80%［参考值：30-70%（随年龄变化）］",
+          "骨髓铁储备": "存在（2-3级）［参考值：存在（2-3级）］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "纤维化或坏死",
+          "骨髓巨核细胞",
+          "骨髓细胞密度"
+        ]
+      },
+      "铁代谢检查": {
+        "result": {
+          "总铁结合力": "310 μg/dL［参考值：250-370 μg/dL (45-66 μmol/L)］",
+          "血清铁": "125 μg/dL［参考值：65-175 μg/dL (11.6-31.3 μmol/L)］",
+          "血清铁蛋白": "450 ng/mL［参考值：30-400 ng/mL (μg/L)］",
+          "转铁蛋白饱和度": "40%［参考值：20-50%］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清铁蛋白"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了进行初步诊断，首先需要询问患者的临床症状。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为反复鼻出血、易瘀青、牙龈出血等出血倾向，伴有雷诺现象（遇冷手指变色疼痛）、乏力、左上腹胀等症状，高度怀疑血液系统疾病（如白血病、骨髓增生异常综合征或血管炎等）。目前尚未进行任何检查，缺乏血常规、凝血功能等关键诊断依据，因此优先开具相关检查以明确病因。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者血常规显示血小板显著增多（1280 x 10^9/L），外周血涂片提示巨大血小板和聚集，需进一步行骨髓穿刺检查以鉴别原发性血小板增多症、骨髓增殖性肿瘤或反应性血小板增多，同时建议进行JAK2 V617F基因突变检测以明确诊断。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有典型症状（鼻出血、瘀斑、雷诺现象、左上腹胀），结合全血细胞计数显示显著血小板增多（PLT 1280）、白细胞轻度升高及贫血，外周血涂片见巨大血小板和聚集，骨髓检查示巨核细胞显著增生伴网状纤维化，铁代谢正常，已具备诊断原发性血小板增多症（ET）的关键依据，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者表现为反复鼻出血、易瘀青、牙龈出血等出血倾向，伴有乏力、头晕及左上腹不适，需通过全血细胞计数（CBC）评估贫血及血小板情况，外周血涂片观察细胞形态以排查血液系统疾病，凝血功能全套用于明确是否存在凝血障碍。"
+      },
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "骨髓检查",
+          "铁代谢检查"
+        ],
+        "reason": "患者表现为血小板显著增多（1280 x 10^9/L）、白细胞轻度升高及贫血，外周血涂片提示巨大血小板和血小板聚集，需通过骨髓检查明确是否为原发性血小板增多症或其他骨髓增殖性肿瘤；同时患者有乏力、头晕等贫血症状，需进行铁代谢检查以鉴别缺铁性贫血或慢性病贫血。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "原发性血小板增多症",
+      "treatment_plan": "1. 主要治疗：启动细胞减灭治疗。鉴于患者血小板计数显著升高（1280×10^9/L）且伴有血栓/出血症状（鼻出血、瘀斑、肢体缺血性疼痛），首选羟基脲（Hydroxyurea）口服，起始剂量根据体重调整（如15-30mg/kg/日），目标是将血小板控制在安全范围（<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α或芦可替尼（Ruxolitinib）。\n2. 抗血小板治疗：在排除活动性大出血风险后，加用阿司匹林（75-100mg/日）以预防微血管血栓事件，缓解手指遇冷发紫等缺血症状。\n3. 个性化调整：患者有左上腹胀痛（可能为脾大），需定期监测脾脏大小；针对反复鼻出血和瘀斑，治疗初期需密切观察出血倾向变化，若出血加重需暂停抗血小板药物并评估是否需要输注血小板或进行血小板单采术紧急降板。\n4. 安全性与监测：每2周复查血常规直至指标稳定，随后每月复查。监测骨髓抑制情况（白细胞、血红蛋白下降）。告知患者若出现剧烈头痛、视力模糊、胸痛、肢体突然麻木或严重出血，需立即就医。长期随访以监测疾病进展或转化为骨髓纤维化/白血病。",
+      "reasoning": "诊断依据：患者表现为持续性血小板显著增多（1280×10^9/L），外周血涂片见巨大血小板及聚集，骨髓检查显示巨核细胞显著增生、成簇分布伴轻度网状纤维化，符合原发性血小板增多症（ET）的形态学特征。临床症状包括高凝/低凝并存表现（鼻出血、瘀斑提示功能异常，手指遇冷发紫提示微血管血栓），且无其他导致继发性血小板增多的明确原因（如感染、缺铁等，铁蛋白正常）。鉴别诊断中，骨髓纤维化虽有纤维化但通常伴贫血和脾大更显著，本例Hgb正常；特发性血小板减少性紫癜（ITP）表现为血小板减少而非增多。因此最可能的诊断为原发性血小板增多症。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_00634",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.6,
+      "treatmentOverallScore": 0.56,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "原发性血小板增多症"
+        ],
+        "expected": [
+          "原发性血小板增多症"
+        ],
+        "matched": [
+          "原发性血小板增多症"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "骨髓检查",
+          "铁代谢检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测",
+          "细胞遗传学分析",
+          "凝血功能全套",
+          "综合代谢面板（CMP）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "precision": 0.6,
+        "coverage": 0.42857142857142855,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：启动细胞减灭治疗。鉴于患者血小板计数显著升高（1280×10^9/L）且伴有血栓/出血症状（鼻出血、瘀斑、肢体缺血性疼痛），首选羟基脲（Hydroxyurea）口服，起始剂量根据体重调整（如15-30mg/kg/日），目标是将血小板控制在安全范围（<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α或芦可替尼（Ruxolitinib）。\n2. 抗血小板治疗：在排除活动性大出血风险后，加用阿司匹林（75-100mg/日）以预防微血管血栓事件，缓解手指遇冷发紫等缺血症状。\n3. 个性化调整：患者有左上腹胀痛（可能为脾大），需定期监测脾脏大小；针对反复鼻出血和瘀斑，治疗初期需密切观察出血倾向变化，若出血加重需暂停抗血小板药物并评估是否需要输注血小板或进行血小板单采术紧急降板。\n4. 安全性与监测：每2周复查血常规直至指标稳定，随后每月复查。监测骨髓抑制情况（白细胞、血红蛋白下降）。告知患者若出现剧烈头痛、视力模糊、胸痛、肢体突然麻木或严重出血，需立即就医。长期随访以监测疾病进展或转化为骨髓纤维化/白血病。",
+        "overallScore": 0.56,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.8,
+        "reasoning": "方案未违反禁忌，但错误在出血期使用阿司匹林且监测频率不足。",
+        "reference": "启动羟基脲作为一线细胞减灭治疗，以降低血小板计数并减少血栓和出血风险；前两个月每周严密监测全血细胞计数，之后改为每月监测。仅在血小板计数稳定降至 1000 × 10^9/L 以下时再加用小剂量阿司匹林；鉴于当前血小板增多和出血症状，暂不使用阿司匹林，以避免升高的出血风险。建议严格控制血压，继续避免烟草（保持戒断），并避免寒冷暴露和压力，以减少指尖血管痉挛发作；建议做好手部保暖并采用压力管理技巧。一周后复诊，进行临床再评估和全血细胞计数；如出现严重头痛、视力改变、胸痛、气短或持续出血，应立即就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "原发性血小板增多症",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测",
+          "细胞遗传学分析",
+          "凝血功能全套",
+          "综合代谢面板（CMP）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": [
+            "脾切除术"
+          ]
+        },
+        "treatment_plan": "启动羟基脲作为一线细胞减灭治疗，以降低血小板计数并减少血栓和出血风险；前两个月每周严密监测全血细胞计数，之后改为每月监测。仅在血小板计数稳定降至 1000 × 10^9/L 以下时再加用小剂量阿司匹林；鉴于当前血小板增多和出血症状，暂不使用阿司匹林，以避免升高的出血风险。建议严格控制血压，继续避免烟草（保持戒断），并避免寒冷暴露和压力，以减少指尖血管痉挛发作；建议做好手部保暖并采用压力管理技巧。一周后复诊，进行临床再评估和全血细胞计数；如出现严重头痛、视力改变、胸痛、气短或持续出血，应立即就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为中年，主诉反复鼻出血、瘀斑及左上腹胀痛，伴手指遇冷发紫刺痛（雷诺现象），提示血小板增多症伴微血管症状及脾大风险。",
+        "diagnosis_reflection": "诊断准确命中原发性血小板增多症。经验：需结合出血倾向与缺血性疼痛（如指端发紫）综合判断高血小板血症的临床表现。",
+        "examination_reflection": "检查遗漏了骨髓穿刺活检、分子遗传学检测及细胞遗传学分析等确诊关键项目；仅做了基础血常规和凝血功能。经验：疑似骨髓增殖性肿瘤时，必须完善骨髓形态学及基因突变检测以明确分型。",
+        "treatment_reflection": "治疗策略正确选择了羟基脲作为一线降板药物，但错误地在活动性出血期加用阿司匹林，且监测频率不足。经验：对于伴有明显出血症状的高危患者，应暂缓抗血小板治疗，优先控制血小板计数，并加强初期血常规监测频率。",
+        "future_strategy": "面对疑似骨髓增殖性疾病，务必完善骨髓及基因检测；制定治疗方案时需严格权衡血栓与出血风险，出血未控前慎用抗血小板药，并设定高频复查计划。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:12:33.302537+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_00634",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "原发性血小板增多症"
+    ],
+    "treatment_plan": "1. 主要治疗：启动细胞减灭治疗。鉴于患者血小板计数显著升高（1280×10^9/L）且伴有血栓/出血症状（鼻出血、瘀斑、肢体缺血性疼痛），首选羟基脲（Hydroxyurea）口服，起始剂量根据体重调整（如15-30mg/kg/日），目标是将血小板控制在安全范围（<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α或芦可替尼（Ruxolitinib）。\n2. 抗血小板治疗：在排除活动性大出血风险后，加用阿司匹林（75-100mg/日）以预防微血管血栓事件，缓解手指遇冷发紫等缺血症状。\n3. 个性化调整：患者有左上腹胀痛（可能为脾大），需定期监测脾脏大小；针对反复鼻出血和瘀斑，治疗初期需密切观察出血倾向变化，若出血加重需暂停抗血小板药物并评估是否需要输注血小板或进行血小板单采术紧急降板。\n4. 安全性与监测：每2周复查血常规直至指标稳定，随后每月复查。监测骨髓抑制情况（白细胞、血红蛋白下降）。告知患者若出现剧烈头痛、视力模糊、胸痛、肢体突然麻木或严重出血，需立即就医。长期随访以监测疾病进展或转化为骨髓纤维化/白血病。",
+    "reasoning": "诊断依据：患者表现为持续性血小板显著增多（1280×10^9/L），外周血涂片见巨大血小板及聚集，骨髓检查显示巨核细胞显著增生、成簇分布伴轻度网状纤维化，符合原发性血小板增多症（ET）的形态学特征。临床症状包括高凝/低凝并存表现（鼻出血、瘀斑提示功能异常，手指遇冷发紫提示微血管血栓），且无其他导致继发性血小板增多的明确原因（如感染、缺铁等，铁蛋白正常）。鉴别诊断中，骨髓纤维化虽有纤维化但通常伴贫血和脾大更显著，本例Hgb正常；特发性血小板减少性紫癜（ITP）表现为血小板减少而非增多。因此最可能的诊断为原发性血小板增多症。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套",
+      "骨髓检查",
+      "铁代谢检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_00634",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.6,
+    "treatmentOverallScore": 0.56,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "原发性血小板增多症"
+      ],
+      "expected": [
+        "原发性血小板增多症"
+      ],
+      "matched": [
+        "原发性血小板增多症"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "骨髓检查",
+        "铁代谢检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测",
+        "细胞遗传学分析",
+        "凝血功能全套",
+        "综合代谢面板（CMP）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "precision": 0.6,
+      "coverage": 0.42857142857142855,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：启动细胞减灭治疗。鉴于患者血小板计数显著升高（1280×10^9/L）且伴有血栓/出血症状（鼻出血、瘀斑、肢体缺血性疼痛），首选羟基脲（Hydroxyurea）口服，起始剂量根据体重调整（如15-30mg/kg/日），目标是将血小板控制在安全范围（<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α或芦可替尼（Ruxolitinib）。\n2. 抗血小板治疗：在排除活动性大出血风险后，加用阿司匹林（75-100mg/日）以预防微血管血栓事件，缓解手指遇冷发紫等缺血症状。\n3. 个性化调整：患者有左上腹胀痛（可能为脾大），需定期监测脾脏大小；针对反复鼻出血和瘀斑，治疗初期需密切观察出血倾向变化，若出血加重需暂停抗血小板药物并评估是否需要输注血小板或进行血小板单采术紧急降板。\n4. 安全性与监测：每2周复查血常规直至指标稳定，随后每月复查。监测骨髓抑制情况（白细胞、血红蛋白下降）。告知患者若出现剧烈头痛、视力模糊、胸痛、肢体突然麻木或严重出血，需立即就医。长期随访以监测疾病进展或转化为骨髓纤维化/白血病。",
+      "overallScore": 0.56,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.8,
+      "reasoning": "方案未违反禁忌，但错误在出血期使用阿司匹林且监测频率不足。",
+      "reference": "启动羟基脲作为一线细胞减灭治疗，以降低血小板计数并减少血栓和出血风险；前两个月每周严密监测全血细胞计数，之后改为每月监测。仅在血小板计数稳定降至 1000 × 10^9/L 以下时再加用小剂量阿司匹林；鉴于当前血小板增多和出血症状，暂不使用阿司匹林，以避免升高的出血风险。建议严格控制血压，继续避免烟草（保持戒断），并避免寒冷暴露和压力，以减少指尖血管痉挛发作；建议做好手部保暖并采用压力管理技巧。一周后复诊，进行临床再评估和全血细胞计数；如出现严重头痛、视力改变、胸痛、气短或持续出血，应立即就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "原发性血小板增多症",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测",
+        "细胞遗传学分析",
+        "凝血功能全套",
+        "综合代谢面板（CMP）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": [
+          "脾切除术"
+        ]
+      },
+      "treatment_plan": "启动羟基脲作为一线细胞减灭治疗，以降低血小板计数并减少血栓和出血风险；前两个月每周严密监测全血细胞计数，之后改为每月监测。仅在血小板计数稳定降至 1000 × 10^9/L 以下时再加用小剂量阿司匹林；鉴于当前血小板增多和出血症状，暂不使用阿司匹林，以避免升高的出血风险。建议严格控制血压，继续避免烟草（保持戒断），并避免寒冷暴露和压力，以减少指尖血管痉挛发作；建议做好手部保暖并采用压力管理技巧。一周后复诊，进行临床再评估和全血细胞计数；如出现严重头痛、视力改变、胸痛、气短或持续出血，应立即就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为中年，主诉反复鼻出血、瘀斑及左上腹胀痛，伴手指遇冷发紫刺痛（雷诺现象），提示血小板增多症伴微血管症状及脾大风险。",
+      "diagnosis_reflection": "诊断准确命中原发性血小板增多症。经验：需结合出血倾向与缺血性疼痛（如指端发紫）综合判断高血小板血症的临床表现。",
+      "examination_reflection": "检查遗漏了骨髓穿刺活检、分子遗传学检测及细胞遗传学分析等确诊关键项目；仅做了基础血常规和凝血功能。经验：疑似骨髓增殖性肿瘤时，必须完善骨髓形态学及基因突变检测以明确分型。",
+      "treatment_reflection": "治疗策略正确选择了羟基脲作为一线降板药物，但错误地在活动性出血期加用阿司匹林，且监测频率不足。经验：对于伴有明显出血症状的高危患者，应暂缓抗血小板治疗，优先控制血小板计数，并加强初期血常规监测频率。",
+      "future_strategy": "面对疑似骨髓增殖性疾病，务必完善骨髓及基因检测；制定治疗方案时需严格权衡血栓与出血风险，出血未控前慎用抗血小板药，并设定高频复查计划。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/046.json#/applied_memory"
+  }
+}

@@ -1,0 +1,548 @@
+{
+  "patient_id": "Patient_03544",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？\", \"reason\": \"当前没有患者的病史信息和检查结果，为了明确诊断方向，首先需要询问患者的临床症状。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我有频繁流鼻血，刷牙时牙龈也会出血，轻微碰撞后小腿和前臂容易瘀青。最近几个月发作更频繁了，有时要按很久才能止血。没有发热、骨痛或淋巴结肿大。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有感到明显的乏力、头晕或活动后气短？另外，您的月经情况（如果是女性）是否规律，有无经量过多或经期延长的情况？\", \"reason\": \"患者主诉有出血倾向（鼻血、牙龈出血、瘀斑），但尚未提供贫血相关症状（如乏力、头晕）及女性患者的月经史等关键信息，这些对于判断出血原因（如血小板减少、凝血功能障碍或血管性因素）及严重程度至关重要，因此需要进一步问诊。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有感到明显的乏力、头晕或活动后气短？另外，您的月经情况（如果是女性）是否规律，有无经量过多或经期延长的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我没有头晕或活动后气短。我是男生，没有月经。不过我最近确实觉得有点累，特别是流鼻血之后，但我觉得这跟我之前查到的资料有关。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为频繁鼻出血、牙龈出血及皮肤瘀斑，提示存在出血倾向。目前缺乏血常规、凝血功能等关键实验室检查结果来评估血小板数量、功能及凝血因子状态，无法明确诊断（如血小板减少性紫癜、血友病或血管性血友病等），因此需优先开具相关检查以获取客观依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主要表现为出血倾向（频繁鼻血、牙龈出血、皮肤瘀斑）和乏力，病史提示可能存在血小板减少或凝血功能障碍。首选实验室检查 - 血液（包括血常规、凝血功能等）是评估出血原因最直接、最关键的手段，可初步判断是否存在贫血、血小板数量及功能异常或凝血因子缺乏。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"凝血功能全套\", \"外周血涂片\"], \"reason\": \"患者主要表现为出血倾向（频繁鼻出血、牙龈出血、皮肤瘀斑）及乏力，需首先通过全血细胞计数（CBC）评估是否存在贫血或血小板减少；通过凝血功能全套排查凝血因子异常导致的出血；通过外周血涂片观察血细胞形态，辅助鉴别血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"102 g/L［参考范围：110-155 g/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\"]}, \"凝血功能全套\": {\"result\": {\"活化部分凝血活酶时间\": \"44 秒［参考范围：24-38 秒］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"活化部分凝血活酶时间\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"未见异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞55%、淋巴细胞30%、单核细胞10%、嗜酸性粒细胞4%、嗜碱性粒细胞1%。［参考值：中性粒细胞40-70%、淋巴细胞20-40%、单核细胞2-8%、嗜酸性粒细胞1-4%、嗜碱性粒细胞0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。\", \"血小板形态与分布\": \"大小及形态正常，分布均匀。\", \"血小板数量\": \"数量充足（估计200,000/μL）。［参考值：数量充足（估计150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有出血倾向且aPTT延长，但血小板计数正常，需进一步检查凝血因子（如FVIII、FIX等）及血管性血友病抗原以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为出血倾向（鼻衄、牙龈出血、瘀斑），全血细胞计数提示轻度贫血，凝血功能显示活化部分凝血活酶时间（aPTT）延长，但外周血涂片血小板数量正常且形态无异常。目前的检查结果指向凝血因子缺乏或血管性血友病等可能性，为了明确诊断，需要进一步进行针对凝血因子的特异性检测（如凝血因子活性测定、vWF抗原及活性测定等），这些均属于血液相关的实验室检查范畴。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"铁代谢检查\", \"促血小板生成素（TPO）检测\"], \"reason\": \"患者表现为出血倾向（鼻出血、牙龈出血、瘀斑），全血细胞计数显示轻度贫血（Hgb 102 g/L），但外周血涂片显示血小板数量充足且形态正常，凝血功能仅活化部分凝血活酶时间（aPTT）延长。首先进行铁代谢检查以排查缺铁性贫血导致的乏力及潜在出血风险；其次，鉴于存在孤立性aPTT延长和出血症状，需检测促血小板生成素（TPO）水平以辅助鉴别血小板减少或功能障碍的病因，并评估骨髓巨核细胞功能状态。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"铁代谢检查\": {\"result\": {\"总铁结合力\": \"380 μg/dL［参考值：250-425 μg/dL (45-76 μmol/L)］\", \"血清铁\": \"65 μg/dL［参考值：50-170 μg/dL (9.0-30.4 μmol/L)］\", \"血清铁蛋白\": \"45 ng/mL［参考值：20-200 ng/mL (μg/L)］\", \"转铁蛋白饱和度\": \"17%［参考值：16-45%］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}, \"促血小板生成素（TPO）检测\": {\"result\": {\"促血小板生成素\": \"45 pg/mL［参考值：7-99 pg/mL（或 0.7-9.9 ng/dL）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有出血症状且aPTT延长，但血小板计数正常。需进一步检查凝血因子（如VIII、IX等）以鉴别血友病或获得性凝血因子缺乏症，同时排查血管性血友病（vWD），目前信息不足以确诊。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 免疫学\", \"reason\": \"患者表现为出血倾向（鼻衄、牙龈出血、瘀斑），全血细胞计数提示轻度贫血，凝血功能显示活化部分凝血活酶时间（aPTT）延长，但外周血涂片血小板数量正常且形态无异常。这种孤立性aPTT延长伴出血症状，需高度怀疑获得性或先天性凝血因子缺乏（如血管性血友病vWD或血友病携带者/轻型）。虽然已查铁代谢和TPO排除缺铁和生成不足，但尚未进行针对凝血因子的特异性免疫学检测（如vWF抗原及活性、凝血因子VIII/IX活性测定等），这是明确诊断的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"抗血小板抗体检测\"], \"reason\": \"患者表现为明显的出血倾向（频繁鼻出血、牙龈出血、皮肤瘀斑），但外周血涂片显示血小板数量正常且形态无异常，同时铁代谢和TPO水平正常。在排除血小板减少性因素后，需考虑免疫介导的血小板破坏或功能异常（如免疫性血小板减少症ITP的某些表现或血管性血友病等），因此进行抗血小板抗体检测以辅助诊断是否存在自身免疫性血小板破坏。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"抗血小板抗体检测\": {\"result\": {\"抗血小板抗体\": \"阴性［参考值：阴性（或 <10 U/mL，取决于检测方法）；未检出针对血小板表面糖蛋白的抗血小板抗体（IgG、IgM、IgA）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有出血症状且aPTT延长，但血小板计数正常（200,000/μL），需进一步排查凝血因子缺乏或获得性凝血障碍（如狼疮抗凝物、血友病等）。建议加做凝血因子活性检测及狼疮抗凝物筛查以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为出血倾向（鼻衄、牙龈出血、瘀斑）且全血细胞计数显示贫血，但外周血涂片血小板数量正常。已排除缺铁性贫血和抗血小板抗体阳性导致的免疫性血小板减少症。目前凝血功能全套仅提示活化部分凝血活酶时间（aPTT）延长，需进一步进行凝血因子活性测定（如VIII、IX、XI因子等）及狼疮抗凝物检测，以明确是否存在凝血因子缺乏（如血友病）或获得性凝血障碍，这属于血液学实验室检查的范畴。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"骨髓检查\"], \"reason\": \"患者表现为出血倾向（鼻衄、牙龈出血、瘀斑），且全血细胞计数显示血红蛋白降低（102 g/L），提示贫血。虽然外周血涂片未见原始细胞，但已排除缺铁性贫血（铁代谢正常）和免疫性血小板破坏（抗血小板抗体阴性）。鉴于患者有持续性出血症状且存在不明原因的血液学异常，为明确骨髓造血功能状态、排除再生障碍性贫血、白血病或其他骨髓浸润性疾病，需进行骨髓检查以获取病理诊断依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"骨髓检查\": {\"result\": {\"异常浸润\": \"无异常浸润\", \"粒红比\": \"3:1［参考值：2:1 至 4:1］\", \"粒细胞系成熟\": \"从髓母细胞（<3%）到成熟粒细胞呈有序成熟［参考值：从髓母细胞（<3%）到成熟粒细胞呈有序成熟］\", \"红细胞系成熟\": \"正成红细胞性成熟\", \"骨髓原始细胞\": \"<5%［参考值：<5%］\", \"骨髓巨核细胞\": \"数量充足，形态正常\", \"骨髓浆细胞\": \"<2%［参考值：<2%］\", \"骨髓淋巴细胞\": \"10-20%（可见造血前体B淋巴细胞）［参考值：10-20%（可见造血前体B淋巴细胞）］\", \"骨髓细胞密度\": \"60-85%（按年龄为正常细胞量，较成人偏高）［参考值：60-85%（按年龄为正常细胞量，较成人偏高）］\", \"骨髓铁储备\": \"存在（2-3级）［参考值：存在（2-3级）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有出血症状，但全血细胞计数仅显示轻度贫血（血红蛋白102 g/L），血小板数量在涂片估计中正常（200,000/μL），骨髓检查未见异常浸润、巨核细胞数量充足且形态正常，排除了再生障碍性贫血和白血病等血液系统恶性疾病。抗血小板抗体阴性，铁代谢正常。目前主要异常为凝血功能全套显示活化部分凝血活酶时间（aPTT）延长至44秒。结合患者无发热、骨痛、淋巴结肿大，且外周血涂片未见异常细胞，高度怀疑存在凝血因子缺乏（如血友病或获得性凝血因子抑制物）或血管性血友病（vWD）。虽然已进行多项检查，但针对aPTT延长的特异性病因（如凝血因子活性测定、vWF抗原及活性测定）尚未进行，不过根据现有信息，初步诊断方向明确指向凝血功能障碍，可进入诊断和治疗阶段以制定进一步确诊方案（如补充特定凝血因子检测）及治疗计划。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为出血倾向（鼻衄、牙龈出血、皮肤瘀斑），实验室检查显示血红蛋白降低（102 g/L）提示贫血，活化部分凝血活酶时间（APTT）延长。虽然外周血涂片血小板计数正常且骨髓检查未见明显异常，但结合出血症状和凝血功能异常，需由血液科进一步排查获得性凝血因子缺乏（如血管性血友病）、血小板功能障碍或其他血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"血管性血友病\", \"treatment_plan\": \"1. 主要治疗：针对患者出血症状（鼻衄、牙龈出血、瘀斑）及aPTT延长，首选去氨加压素（DDAVP）静脉或皮下注射以释放内源性vWF因子，适用于轻中度患者。若对DDAVP反应不佳或病情较重，可使用含高分子量vWF因子的浓缩制剂（如von Willebrand因子/凝血因子VIII复合物）。\\n2. 个性化调整：患者为男性，无妊娠史，无需考虑妊娠期用药禁忌。鉴于其血红蛋白轻度降低（102 g/L）但骨髓及铁代谢正常，暂不需输血或补铁，重点在于止血。避免使用阿司匹林、布洛芬等影响血小板功能的药物。\\n3. 安全性与监测：治疗期间需监测血压及水钠潴留情况（DDAVP可能引起低钠血症）。告知患者若出现严重头痛、视力模糊或持续大量出血需立即就医。建议定期复查血常规及凝血功能，评估疗效并调整剂量。\", \"reasoning\": \"诊断依据：患者表现为黏膜出血（鼻衄、牙龈出血）和皮肤瘀斑，符合出血性疾病特征。实验室检查显示血红蛋白轻度降低，但全血细胞计数中血小板数量正常（外周血涂片估计20万/μL），排除了血小板减少性紫癜（ITP）及再生障碍性贫血。关键异常为活化部分凝血活酶时间（aPTT）延长至44秒，而凝血酶原时间（PT）未提及异常（通常vWD时PT正常）。外周血涂片及骨髓检查均未见白血病细胞、巨核细胞减少或异常浸润，排除了血液系统恶性肿瘤及骨髓衰竭性疾病。结合aPTT延长伴出血倾向且血小板计数正常，高度提示血管性血友病（vWD），该病常导致aPTT延长（因vWF携带FVIII，vWF缺乏可致FVIII继发性减少）。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_03544",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_08888's complete blood count showed pancytopenia: WBC 2.4 × 10^9/L (leukopenia), Hgb 82 g/L (anemia), and PLT 38 × 10^9/L (thrombocytopenia).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_00068's lab results showed microcytic hypochromic anemia (Hgb 98 g/L, RBC 3.8 x 10^12/L, MCV 72 fL) with normal coagulation function.",
+      "Patient_03614's CBC showed mild anemia (Hb 95 g/L) with microcytic hypochromic indices (MCV 72 fL, MCH 24 pg), normal platelets (280 × 10^9/L), and normal WBC count (10.5 × 10^9/L).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_01590 has mild anemia with hemoglobin of 98 g/L, normal platelet count (280 x 10^9/L), and isolated prolonged activated partial thromboplastin time (aPTT) of 46 seconds.",
+      "Patient_04183's laboratory results showed severe thrombocytosis (PLT: 1350 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and elevated D-dimer (0.78 mg/L FEU) with normal PT and aPTT.",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_06243's peripheral blood smear showed normocytic, normochromic red blood cells with normal morphology, normal platelet size and distribution, but reduced platelet count estimated at 42,000/μL; no parasites, inclusions, or abnormal cells were seen.",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_06974's bone marrow examination showed reduced megakaryocyte numbers with low platelet production function, no abnormal infiltration, <5% blasts, and normal iron stores (Grade 1).",
+      "Patient_03568's peripheral blood smear showed reduced platelet count (~32,000/μL), reactive lymphocytes, no abnormal cell clusters or blast cells, normal cell morphology, and polychromasia in red blood cells.",
+      "Patient_04911's peripheral blood smear showed normal red cell morphology with mild polychromasia but no abnormal cells, lymphocytes at 58% consistent with age norms, and platelet count of 240,000/μL.",
+      "Patient_06243's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 98 g/L (anemia), and PLT 42 x 10^9/L (thrombocytopenia).",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_03135's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 34 x 10^9/L).",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我有频繁流鼻血，刷牙时牙龈也会出血，轻微碰撞后小腿和前臂容易瘀青。最近几个月发作更频繁了，有时要按很久才能止血。没有发热、骨痛或淋巴结肿大。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有感到明显的乏力、头晕或活动后气短？另外，您的月经情况（如果是女性）是否规律，有无经量过多或经期延长的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我没有头晕或活动后气短。我是男生，没有月经。不过我最近确实觉得有点累，特别是流鼻血之后，但我觉得这跟我之前查到的资料有关。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "102 g/L［参考范围：110-155 g/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "活化部分凝血活酶时间": "44 秒［参考范围：24-38 秒］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "活化部分凝血活酶时间"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "未见异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞55%、淋巴细胞30%、单核细胞10%、嗜酸性粒细胞4%、嗜碱性粒细胞1%。［参考值：中性粒细胞40-70%、淋巴细胞20-40%、单核细胞2-8%、嗜酸性粒细胞1-4%、嗜碱性粒细胞0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当。",
+          "红细胞形态": "正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。",
+          "血小板形态与分布": "大小及形态正常，分布均匀。",
+          "血小板数量": "数量充足（估计200,000/μL）。［参考值：数量充足（估计150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "铁代谢检查": {
+        "result": {
+          "总铁结合力": "380 μg/dL［参考值：250-425 μg/dL (45-76 μmol/L)］",
+          "血清铁": "65 μg/dL［参考值：50-170 μg/dL (9.0-30.4 μmol/L)］",
+          "血清铁蛋白": "45 ng/mL［参考值：20-200 ng/mL (μg/L)］",
+          "转铁蛋白饱和度": "17%［参考值：16-45%］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "促血小板生成素（TPO）检测": {
+        "result": {
+          "促血小板生成素": "45 pg/mL［参考值：7-99 pg/mL（或 0.7-9.9 ng/dL）］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "抗血小板抗体检测": {
+        "result": {
+          "抗血小板抗体": "阴性［参考值：阴性（或 <10 U/mL，取决于检测方法）；未检出针对血小板表面糖蛋白的抗血小板抗体（IgG、IgM、IgA）］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "骨髓检查": {
+        "result": {
+          "异常浸润": "无异常浸润",
+          "粒红比": "3:1［参考值：2:1 至 4:1］",
+          "粒细胞系成熟": "从髓母细胞（<3%）到成熟粒细胞呈有序成熟［参考值：从髓母细胞（<3%）到成熟粒细胞呈有序成熟］",
+          "红细胞系成熟": "正成红细胞性成熟",
+          "骨髓原始细胞": "<5%［参考值：<5%］",
+          "骨髓巨核细胞": "数量充足，形态正常",
+          "骨髓浆细胞": "<2%［参考值：<2%］",
+          "骨髓淋巴细胞": "10-20%（可见造血前体B淋巴细胞）［参考值：10-20%（可见造血前体B淋巴细胞）］",
+          "骨髓细胞密度": "60-85%（按年龄为正常细胞量，较成人偏高）［参考值：60-85%（按年龄为正常细胞量，较成人偏高）］",
+          "骨髓铁储备": "存在（2-3级）［参考值：存在（2-3级）］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？",
+        "reason": "当前没有患者的病史信息和检查结果，为了明确诊断方向，首先需要询问患者的临床症状。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有感到明显的乏力、头晕或活动后气短？另外，您的月经情况（如果是女性）是否规律，有无经量过多或经期延长的情况？",
+        "reason": "患者主诉有出血倾向（鼻血、牙龈出血、瘀斑），但尚未提供贫血相关症状（如乏力、头晕）及女性患者的月经史等关键信息，这些对于判断出血原因（如血小板减少、凝血功能障碍或血管性因素）及严重程度至关重要，因此需要进一步问诊。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为频繁鼻出血、牙龈出血及皮肤瘀斑，提示存在出血倾向。目前缺乏血常规、凝血功能等关键实验室检查结果来评估血小板数量、功能及凝血因子状态，无法明确诊断（如血小板减少性紫癜、血友病或血管性血友病等），因此需优先开具相关检查以获取客观依据。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有出血倾向且aPTT延长，但血小板计数正常，需进一步检查凝血因子（如FVIII、FIX等）及血管性血友病抗原以明确诊断。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有出血症状且aPTT延长，但血小板计数正常。需进一步检查凝血因子（如VIII、IX等）以鉴别血友病或获得性凝血因子缺乏症，同时排查血管性血友病（vWD），目前信息不足以确诊。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有出血症状且aPTT延长，但血小板计数正常（200,000/μL），需进一步排查凝血因子缺乏或获得性凝血障碍（如狼疮抗凝物、血友病等）。建议加做凝血因子活性检测及狼疮抗凝物筛查以明确诊断。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有出血症状，但全血细胞计数仅显示轻度贫血（血红蛋白102 g/L），血小板数量在涂片估计中正常（200,000/μL），骨髓检查未见异常浸润、巨核细胞数量充足且形态正常，排除了再生障碍性贫血和白血病等血液系统恶性疾病。抗血小板抗体阴性，铁代谢正常。目前主要异常为凝血功能全套显示活化部分凝血活酶时间（aPTT）延长至44秒。结合患者无发热、骨痛、淋巴结肿大，且外周血涂片未见异常细胞，高度怀疑存在凝血因子缺乏（如血友病或获得性凝血因子抑制物）或血管性血友病（vWD）。虽然已进行多项检查，但针对aPTT延长的特异性病因（如凝血因子活性测定、vWF抗原及活性测定）尚未进行，不过根据现有信息，初步诊断方向明确指向凝血功能障碍，可进入诊断和治疗阶段以制定进一步确诊方案（如补充特定凝血因子检测）及治疗计划。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片"
+        ],
+        "reason": "患者主要表现为出血倾向（频繁鼻出血、牙龈出血、皮肤瘀斑）及乏力，需首先通过全血细胞计数（CBC）评估是否存在贫血或血小板减少；通过凝血功能全套排查凝血因子异常导致的出血；通过外周血涂片观察血细胞形态，辅助鉴别血液系统疾病。"
+      },
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "铁代谢检查",
+          "促血小板生成素（TPO）检测"
+        ],
+        "reason": "患者表现为出血倾向（鼻出血、牙龈出血、瘀斑），全血细胞计数显示轻度贫血（Hgb 102 g/L），但外周血涂片显示血小板数量充足且形态正常，凝血功能仅活化部分凝血活酶时间（aPTT）延长。首先进行铁代谢检查以排查缺铁性贫血导致的乏力及潜在出血风险；其次，鉴于存在孤立性aPTT延长和出血症状，需检测促血小板生成素（TPO）水平以辅助鉴别血小板减少或功能障碍的病因，并评估骨髓巨核细胞功能状态。"
+      },
+      {
+        "category": "实验室检查 - 免疫学",
+        "examinations": [
+          "抗血小板抗体检测"
+        ],
+        "reason": "患者表现为明显的出血倾向（频繁鼻出血、牙龈出血、皮肤瘀斑），但外周血涂片显示血小板数量正常且形态无异常，同时铁代谢和TPO水平正常。在排除血小板减少性因素后，需考虑免疫介导的血小板破坏或功能异常（如免疫性血小板减少症ITP的某些表现或血管性血友病等），因此进行抗血小板抗体检测以辅助诊断是否存在自身免疫性血小板破坏。"
+      },
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "骨髓检查"
+        ],
+        "reason": "患者表现为出血倾向（鼻衄、牙龈出血、瘀斑），且全血细胞计数显示血红蛋白降低（102 g/L），提示贫血。虽然外周血涂片未见原始细胞，但已排除缺铁性贫血（铁代谢正常）和免疫性血小板破坏（抗血小板抗体阴性）。鉴于患者有持续性出血症状且存在不明原因的血液学异常，为明确骨髓造血功能状态、排除再生障碍性贫血、白血病或其他骨髓浸润性疾病，需进行骨髓检查以获取病理诊断依据。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "血管性血友病",
+      "treatment_plan": "1. 主要治疗：针对患者出血症状（鼻衄、牙龈出血、瘀斑）及aPTT延长，首选去氨加压素（DDAVP）静脉或皮下注射以释放内源性vWF因子，适用于轻中度患者。若对DDAVP反应不佳或病情较重，可使用含高分子量vWF因子的浓缩制剂（如von Willebrand因子/凝血因子VIII复合物）。\n2. 个性化调整：患者为男性，无妊娠史，无需考虑妊娠期用药禁忌。鉴于其血红蛋白轻度降低（102 g/L）但骨髓及铁代谢正常，暂不需输血或补铁，重点在于止血。避免使用阿司匹林、布洛芬等影响血小板功能的药物。\n3. 安全性与监测：治疗期间需监测血压及水钠潴留情况（DDAVP可能引起低钠血症）。告知患者若出现严重头痛、视力模糊或持续大量出血需立即就医。建议定期复查血常规及凝血功能，评估疗效并调整剂量。",
+      "reasoning": "诊断依据：患者表现为黏膜出血（鼻衄、牙龈出血）和皮肤瘀斑，符合出血性疾病特征。实验室检查显示血红蛋白轻度降低，但全血细胞计数中血小板数量正常（外周血涂片估计20万/μL），排除了血小板减少性紫癜（ITP）及再生障碍性贫血。关键异常为活化部分凝血活酶时间（aPTT）延长至44秒，而凝血酶原时间（PT）未提及异常（通常vWD时PT正常）。外周血涂片及骨髓检查均未见白血病细胞、巨核细胞减少或异常浸润，排除了血液系统恶性肿瘤及骨髓衰竭性疾病。结合aPTT延长伴出血倾向且血小板计数正常，高度提示血管性血友病（vWD），该病常导致aPTT延长（因vWF携带FVIII，vWF缺乏可致FVIII继发性减少）。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_03544",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.2857,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "血管性血友病"
+        ],
+        "expected": [
+          "血管性血友病"
+        ],
+        "matched": [
+          "血管性血友病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片",
+          "铁代谢检查",
+          "促血小板生成素（TPO）检测",
+          "抗血小板抗体检测",
+          "骨髓检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套"
+        ],
+        "precision": 0.2857142857142857,
+        "coverage": 1.0,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：针对患者出血症状（鼻衄、牙龈出血、瘀斑）及aPTT延长，首选去氨加压素（DDAVP）静脉或皮下注射以释放内源性vWF因子，适用于轻中度患者。若对DDAVP反应不佳或病情较重，可使用含高分子量vWF因子的浓缩制剂（如von Willebrand因子/凝血因子VIII复合物）。\n2. 个性化调整：患者为男性，无妊娠史，无需考虑妊娠期用药禁忌。鉴于其血红蛋白轻度降低（102 g/L）但骨髓及铁代谢正常，暂不需输血或补铁，重点在于止血。避免使用阿司匹林、布洛芬等影响血小板功能的药物。\n3. 安全性与监测：治疗期间需监测血压及水钠潴留情况（DDAVP可能引起低钠血症）。告知患者若出现严重头痛、视力模糊或持续大量出血需立即就医。建议定期复查血常规及凝血功能，评估疗效并调整剂量。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全且避开禁忌药，但遗漏氨甲环酸及鼻腔护理等关键措施，未充分结合患者心理特点。",
+        "reference": "开始预防性去氨加压素静脉输注，以提高血管性血友病因子水平并减少出血发作；同时辅以氨甲环酸作为黏膜皮肤出血的辅助性抗纤溶治疗。在持续/预防性使用前，应进行并记录去氨加压素试验剂量及其客观反应（如 VWF 活性和Ⅷ因子升高）和临床耐受性；若亚型提示反应不佳或风险增加（如疑似 2B 型），应避免使用去氨加压素，并在维持已列药物禁忌的同时，根据情况采用替代性止血策略。监测低钠血症/水潴留：给药后 24 小时内实施限液，并在基线及给药后 12-24 小时内检测血清钠（尤其是儿童或重复给药时）。避免所有 NSAIDs，包括阿司匹林、布洛芬、萘普生、酮咯酸和双氯芬酸；如需止痛，使用对乙酰氨基酚。家中使用加湿器以防止鼻腔干燥，并鼓励使用生理盐水喷雾进行轻柔鼻腔护理，以尽量减少创伤。安排 4 周后复诊，监测血红蛋白和凝血参数；如出血持续超过 30 分钟，或出现明显贫血迹象如乏力加重或面色苍白，应立即就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "血管性血友病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套"
+        ],
+        "contraindications": {
+          "drugs": [
+            "阿司匹林",
+            "布洛芬",
+            "萘普生",
+            "酮咯酸",
+            "双氯芬酸"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "开始预防性去氨加压素静脉输注，以提高血管性血友病因子水平并减少出血发作；同时辅以氨甲环酸作为黏膜皮肤出血的辅助性抗纤溶治疗。在持续/预防性使用前，应进行并记录去氨加压素试验剂量及其客观反应（如 VWF 活性和Ⅷ因子升高）和临床耐受性；若亚型提示反应不佳或风险增加（如疑似 2B 型），应避免使用去氨加压素，并在维持已列药物禁忌的同时，根据情况采用替代性止血策略。监测低钠血症/水潴留：给药后 24 小时内实施限液，并在基线及给药后 12-24 小时内检测血清钠（尤其是儿童或重复给药时）。避免所有 NSAIDs，包括阿司匹林、布洛芬、萘普生、酮咯酸和双氯芬酸；如需止痛，使用对乙酰氨基酚。家中使用加湿器以防止鼻腔干燥，并鼓励使用生理盐水喷雾进行轻柔鼻腔护理，以尽量减少创伤。安排 4 周后复诊，监测血红蛋白和凝血参数；如出血持续超过 30 分钟，或出现明显贫血迹象如乏力加重或面色苍白，应立即就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "青年男性，主诉频繁鼻衄、牙龈出血及轻微碰撞后瘀斑，无发热骨痛，伴乏力感。",
+        "diagnosis_reflection": "诊断准确（血管性血友病），成功识别黏膜皮肤出血倾向与凝血异常特征，未受阴性症状（无淋巴结肿大）干扰。",
+        "examination_reflection": "检查覆盖率高但精准度不足，遗漏了全血细胞计数和凝血功能全套之外的特异性检查（如vWF抗原/活性测定），且开单了骨髓检查等过度检查。",
+        "treatment_reflection": "治疗方案安全有效，避开了NSAIDs并首选去氨加压素，但遗漏了氨甲环酸辅助止血及鼻腔局部护理（加湿器、生理盐水喷雾）等关键细节。",
+        "future_strategy": "面对疑似血管性血友病患者，除基础血常规和凝血筛查外，应直接安排vWF相关特异性检测；治疗时务必联合抗纤溶药物（氨甲环酸）并强调局部物理护理措施。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T11:42:32.849364+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_03544",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "血管性血友病"
+    ],
+    "treatment_plan": "1. 主要治疗：针对患者出血症状（鼻衄、牙龈出血、瘀斑）及aPTT延长，首选去氨加压素（DDAVP）静脉或皮下注射以释放内源性vWF因子，适用于轻中度患者。若对DDAVP反应不佳或病情较重，可使用含高分子量vWF因子的浓缩制剂（如von Willebrand因子/凝血因子VIII复合物）。\n2. 个性化调整：患者为男性，无妊娠史，无需考虑妊娠期用药禁忌。鉴于其血红蛋白轻度降低（102 g/L）但骨髓及铁代谢正常，暂不需输血或补铁，重点在于止血。避免使用阿司匹林、布洛芬等影响血小板功能的药物。\n3. 安全性与监测：治疗期间需监测血压及水钠潴留情况（DDAVP可能引起低钠血症）。告知患者若出现严重头痛、视力模糊或持续大量出血需立即就医。建议定期复查血常规及凝血功能，评估疗效并调整剂量。",
+    "reasoning": "诊断依据：患者表现为黏膜出血（鼻衄、牙龈出血）和皮肤瘀斑，符合出血性疾病特征。实验室检查显示血红蛋白轻度降低，但全血细胞计数中血小板数量正常（外周血涂片估计20万/μL），排除了血小板减少性紫癜（ITP）及再生障碍性贫血。关键异常为活化部分凝血活酶时间（aPTT）延长至44秒，而凝血酶原时间（PT）未提及异常（通常vWD时PT正常）。外周血涂片及骨髓检查均未见白血病细胞、巨核细胞减少或异常浸润，排除了血液系统恶性肿瘤及骨髓衰竭性疾病。结合aPTT延长伴出血倾向且血小板计数正常，高度提示血管性血友病（vWD），该病常导致aPTT延长（因vWF携带FVIII，vWF缺乏可致FVIII继发性减少）。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "凝血功能全套",
+      "外周血涂片",
+      "铁代谢检查",
+      "促血小板生成素（TPO）检测",
+      "抗血小板抗体检测",
+      "骨髓检查"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_03544",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.2857,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "血管性血友病"
+      ],
+      "expected": [
+        "血管性血友病"
+      ],
+      "matched": [
+        "血管性血友病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套",
+        "外周血涂片",
+        "铁代谢检查",
+        "促血小板生成素（TPO）检测",
+        "抗血小板抗体检测",
+        "骨髓检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套"
+      ],
+      "precision": 0.2857142857142857,
+      "coverage": 1.0,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：针对患者出血症状（鼻衄、牙龈出血、瘀斑）及aPTT延长，首选去氨加压素（DDAVP）静脉或皮下注射以释放内源性vWF因子，适用于轻中度患者。若对DDAVP反应不佳或病情较重，可使用含高分子量vWF因子的浓缩制剂（如von Willebrand因子/凝血因子VIII复合物）。\n2. 个性化调整：患者为男性，无妊娠史，无需考虑妊娠期用药禁忌。鉴于其血红蛋白轻度降低（102 g/L）但骨髓及铁代谢正常，暂不需输血或补铁，重点在于止血。避免使用阿司匹林、布洛芬等影响血小板功能的药物。\n3. 安全性与监测：治疗期间需监测血压及水钠潴留情况（DDAVP可能引起低钠血症）。告知患者若出现严重头痛、视力模糊或持续大量出血需立即就医。建议定期复查血常规及凝血功能，评估疗效并调整剂量。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全且避开禁忌药，但遗漏氨甲环酸及鼻腔护理等关键措施，未充分结合患者心理特点。",
+      "reference": "开始预防性去氨加压素静脉输注，以提高血管性血友病因子水平并减少出血发作；同时辅以氨甲环酸作为黏膜皮肤出血的辅助性抗纤溶治疗。在持续/预防性使用前，应进行并记录去氨加压素试验剂量及其客观反应（如 VWF 活性和Ⅷ因子升高）和临床耐受性；若亚型提示反应不佳或风险增加（如疑似 2B 型），应避免使用去氨加压素，并在维持已列药物禁忌的同时，根据情况采用替代性止血策略。监测低钠血症/水潴留：给药后 24 小时内实施限液，并在基线及给药后 12-24 小时内检测血清钠（尤其是儿童或重复给药时）。避免所有 NSAIDs，包括阿司匹林、布洛芬、萘普生、酮咯酸和双氯芬酸；如需止痛，使用对乙酰氨基酚。家中使用加湿器以防止鼻腔干燥，并鼓励使用生理盐水喷雾进行轻柔鼻腔护理，以尽量减少创伤。安排 4 周后复诊，监测血红蛋白和凝血参数；如出血持续超过 30 分钟，或出现明显贫血迹象如乏力加重或面色苍白，应立即就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "血管性血友病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套"
+      ],
+      "contraindications": {
+        "drugs": [
+          "阿司匹林",
+          "布洛芬",
+          "萘普生",
+          "酮咯酸",
+          "双氯芬酸"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "开始预防性去氨加压素静脉输注，以提高血管性血友病因子水平并减少出血发作；同时辅以氨甲环酸作为黏膜皮肤出血的辅助性抗纤溶治疗。在持续/预防性使用前，应进行并记录去氨加压素试验剂量及其客观反应（如 VWF 活性和Ⅷ因子升高）和临床耐受性；若亚型提示反应不佳或风险增加（如疑似 2B 型），应避免使用去氨加压素，并在维持已列药物禁忌的同时，根据情况采用替代性止血策略。监测低钠血症/水潴留：给药后 24 小时内实施限液，并在基线及给药后 12-24 小时内检测血清钠（尤其是儿童或重复给药时）。避免所有 NSAIDs，包括阿司匹林、布洛芬、萘普生、酮咯酸和双氯芬酸；如需止痛，使用对乙酰氨基酚。家中使用加湿器以防止鼻腔干燥，并鼓励使用生理盐水喷雾进行轻柔鼻腔护理，以尽量减少创伤。安排 4 周后复诊，监测血红蛋白和凝血参数；如出血持续超过 30 分钟，或出现明显贫血迹象如乏力加重或面色苍白，应立即就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "青年男性，主诉频繁鼻衄、牙龈出血及轻微碰撞后瘀斑，无发热骨痛，伴乏力感。",
+      "diagnosis_reflection": "诊断准确（血管性血友病），成功识别黏膜皮肤出血倾向与凝血异常特征，未受阴性症状（无淋巴结肿大）干扰。",
+      "examination_reflection": "检查覆盖率高但精准度不足，遗漏了全血细胞计数和凝血功能全套之外的特异性检查（如vWF抗原/活性测定），且开单了骨髓检查等过度检查。",
+      "treatment_reflection": "治疗方案安全有效，避开了NSAIDs并首选去氨加压素，但遗漏了氨甲环酸辅助止血及鼻腔局部护理（加湿器、生理盐水喷雾）等关键细节。",
+      "future_strategy": "面对疑似血管性血友病患者，除基础血常规和凝血筛查外，应直接安排vWF相关特异性检测；治疗时务必联合抗纤溶药物（氨甲环酸）并强调局部物理护理措施。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/067.json#/applied_memory"
+  }
+}

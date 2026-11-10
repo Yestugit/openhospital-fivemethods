@@ -1,0 +1,398 @@
+{
+  "patient_id": "Patient_03774",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者目前是否有发热、皮肤出血点、牙龈出血或骨关节疼痛等症状？\", \"reason\": \"当前缺乏患者的主诉和具体症状描述，且记忆摘要中混杂了多个不同病例的信息，需要通过问诊明确当前患者的临床表现以进行鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者目前是否有发热、皮肤出血点、牙龈出血或骨关节疼痛等症状？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "是的，我有发热感（其实是盗汗），皮肤容易瘀青，刷牙时牙龈也会出血。我最近还总觉得骨头关节隐隐作痛，这会不会是白血病？是不是因为我在网上查了底特律雄狮队比赛后太焦虑导致的？这病能治好吗？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有发热（盗汗）、皮肤瘀青、牙龈出血及骨关节疼痛等疑似血液系统恶性肿瘤的症状，但尚未进行任何实验室检查。为了明确诊断（如排除或确诊白血病、淋巴瘤等），必须优先完善血常规、外周血涂片及骨髓穿刺等关键检查以获取客观依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者出现发热（盗汗）、皮肤瘀青、牙龈出血及骨关节疼痛等疑似白血病症状，首先需要完善血常规检查以评估白细胞、血红蛋白及血小板水平，并观察外周血涂片是否有异常细胞，这是初步筛查和鉴别诊断的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\"], \"reason\": \"患者表现为发热（盗汗）、皮肤瘀青、牙龈出血及骨关节疼痛，这些症状高度提示血液系统疾病（如白血病或淋巴瘤）。首先需要进行全血细胞计数（CBC）以评估白细胞、血红蛋白和血小板水平，判断是否存在贫血、血小板减少或白细胞异常；同时需进行外周血涂片检查，观察是否有原始细胞（blasts）或异常形态细胞，为初步诊断提供关键依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：2.1 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］\", \"血红蛋白\": \"Hgb：112 g/L［参考范围：140-180 g/L］\", \"血小板计数\": \"PLT：78 x 10^9/L［参考范围：150-400 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"可见毛细胞，胞质丰富呈淡蓝色，边缘不规则呈绒毛状。\", \"异型细胞或原始细胞\": \"未见异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 55%、淋巴细胞 30%、单核细胞 10%、嗜酸性粒细胞 4%、嗜碱性粒细胞 1%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"部分淋巴细胞形态异常，胞体较大，胞浆丰富且边缘呈细绒毛状突起，核染色质疏松。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。\", \"血小板形态与分布\": \"血小板体积偏大，形态大致正常，分布欠均匀。\", \"血小板数量\": \"数量减少（估计约 80,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"外周血涂片其他异常所见\", \"白细胞形态\", \"血小板形态与分布\", \"血小板数量\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者外周血涂片发现特征性的‘毛细胞’（胞质丰富呈淡蓝色，边缘不规则呈绒毛状），结合全血细胞减少（白细胞、血红蛋白、血小板均降低）及发热、盗汗、骨痛等症状，高度怀疑毛细胞白血病。为确诊该疾病，必须获取骨髓象以观察骨髓中毛细胞的浸润情况，并可能需要进行免疫分型等进一步检查。因此，下一步应开具骨髓穿刺及相关检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者外周血涂片发现特征性的‘毛细胞’（胞质丰富、边缘呈绒毛状），结合全血细胞减少（白细胞、血红蛋白、血小板均降低）及发热、盗汗、骨痛、出血等症状，高度提示毛细胞白血病。确诊该疾病必须依赖骨髓穿刺活检进行形态学观察及免疫组化/流式细胞术检测，以明确诊断并指导后续治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片发现形态异常的淋巴细胞（胞体大、边缘呈细绒毛状突起，疑似毛细胞），且伴有发热、盗汗、骨痛及出血倾向。为明确诊断（如鉴别毛细胞白血病、急性白血病或其他血液系统恶性肿瘤）并评估骨髓造血功能及浸润情况，必须进行骨髓穿刺和活检检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"骨髓穿刺和活检（BMAB）\": {\"result\": {\"补充描述\": \"干抽\", \"异常浸润或纤维化\": \"活检显示弥漫性毛细胞浸润，呈蜂窝样模式\", \"网状纤维化\": \"网状纤维化增加［参考值：0-1级（轻微）。］\", \"骨髓三系造血\": \"正常三系造血减少\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异常浸润或纤维化\", \"网状纤维化\", \"骨髓三系造血\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有发热、盗汗、出血倾向及骨痛症状，血常规显示全血细胞减少。外周血涂片发现特征性的‘毛细胞’（胞质丰富呈淡蓝色，边缘不规则呈绒毛状），骨髓穿刺出现‘干抽’且活检显示弥漫性毛细胞浸润伴网状纤维化增加。这些临床和实验室检查结果高度提示毛细胞白血病，诊断依据已充分，可直接进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有发热、盗汗、皮肤瘀斑、牙龈出血及骨关节疼痛。外周血涂片发现形态异常的淋巴细胞（胞体大、边缘呈细绒毛状突起，即毛细胞特征），骨髓穿刺提示“干抽”，活检显示弥漫性毛细胞浸润伴网状纤维化增加。这些临床表现和检查结果高度提示毛细胞白血病（Hairy Cell Leukemia），属于血液系统恶性肿瘤，需由血液科进行确诊和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"毛细胞白血病\", \"treatment_plan\": \"1. 主要治疗：首选嘌呤类似物化疗，如克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续5天静脉滴注或皮下注射方案，对毛细胞白血病具有极高的完全缓解率（>90%），是国际公认的一线标准治疗方案。\\n2. 个性化调整：患者目前表现为全血细胞减少（白细胞、血红蛋白、血小板均低）及脾脏浸润可能（虽未直接提及脾大，但毛细胞白血病常伴脾大），且骨髓呈“干抽”现象，提示骨髓纤维化。鉴于患者有发热、盗汗及骨痛症状，需评估感染风险，在化疗前或化疗期间若出现严重中性粒细胞缺乏，需预防性使用抗生素或升白针。若患者对嘌呤类药物过敏或有严重肾功能不全，可考虑替代方案如利妥昔单抗联合化疗，或针对脾功能亢进显著者考虑脾切除（但在现代靶向治疗下较少作为首选）。\\n3. 安全性与监测：\\n   - 禁忌：对嘌呤类药物过敏者禁用；妊娠及哺乳期妇女慎用或禁用。\\n   - 监测：治疗期间需严密监测血常规（特别是中性粒细胞和血小板恢复情况）、肝肾功能及电解质。注意观察有无发热、出血倾向加重等感染或出血迹象。\\n   - 复诊：治疗后需定期复查骨髓象以评估疗效，确认是否达到完全缓解。\\n   - 危险信号：若出现高热不退、严重出血（如鼻出血不止、黑便）、呼吸困难或意识改变，需立即就医。\", \"reasoning\": \"诊断依据：1. 临床表现：患者有发热（盗汗）、皮肤瘀斑、牙龈出血及骨关节疼痛，符合血液系统恶性肿瘤的全身症状。2. 实验室检查：全血细胞减少（WBC 2.1, Hgb 112, PLT 78）。3. 关键特征：外周血涂片发现形态异常的淋巴细胞，胞浆丰富边缘呈细绒毛状突起（毛细胞特征）；骨髓穿刺出现“干抽”，活检显示弥漫性毛细胞浸润及网状纤维化增加，这是毛细胞白血病的典型病理表现。综合上述特征，排除急性白血病（无原始细胞增多）、ITP（有贫血和白细胞减少且骨髓有特异性浸润）及其他淋巴瘤，确诊为毛细胞白血病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_03774",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "Patient_06974's bone marrow examination showed reduced megakaryocyte numbers with low platelet production function, no abnormal infiltration, <5% blasts, and normal iron stores (Grade 1).",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User was recommended a treatment plan for ITP including first-line corticosteroids (prednisone 1-2 mg/kg/day or dexamethasone 40 mg/day for 4 days), second-line options like IVIG or eltrombopag if refractory, strict bed rest, and monitoring for intracranial hemorrhage.",
+      "User participated in a hematology diagnostic task for Patient_04601, a 4-year-old girl presenting with microcytic hypochromic anemia (Hb 78-86 g/L, MCV 68 fL), target cells on smear, and absent bone marrow iron stores (Grade 0)",
+      "User's child has a CBC showing hemoglobin of 86 g/L (low), hematocrit of 28% (low), MCV of 68 fL (low), and MCH of 20 pg (low), indicating microcytic hypochromic anemia.",
+      "User is a middle-aged male patient diagnosed with Mantle Cell Lymphoma (套细胞淋巴瘤) around November 2026, presenting with a painless left neck mass the size of a large walnut discovered 10 days prior",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's child has severe thrombocytopenia (platelet count 22×10^9/L) with signs of disseminated intravascular coagulation (DIC), including elevated D-dimer and low fibrinogen.",
+      "Patient_06974's peripheral blood smear revealed significant thrombocytopenia with occasional large platelets, but no abnormal cells or blast cells were observed.",
+      "Patient_01894's peripheral blood smear revealed abnormal neutrophil development (hypogranulation), circulating promonocytes, large platelets, and significant absolute monocytosis.",
+      "User participated in a hematology diagnostic task for Patient_01894, a patient presenting with low-grade fever, easy bruising, occasional gum bleeding, and bone pain.",
+      "The system evaluation revealed that the diagnosis of iron deficiency anemia for Patient_04601 was incorrect; the actual condition is osteopetrosis (marble bone disease), resulting in a diagnosis accuracy score of 0.0% and treatment safety score of 0.2%",
+      "Lymph node biopsy results showed complete loss of normal lymph node architecture, destruction of cortical follicles, absence of reactive germinal centers, and invasion by atypical CD20+ B-lymphoid cells forming a monoclonal population."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问患者目前是否有发热、皮肤出血点、牙龈出血或骨关节疼痛等症状？"
+      },
+      {
+        "from": "patient",
+        "text": "是的，我有发热感（其实是盗汗），皮肤容易瘀青，刷牙时牙龈也会出血。我最近还总觉得骨头关节隐隐作痛，这会不会是白血病？是不是因为我在网上查了底特律雄狮队比赛后太焦虑导致的？这病能治好吗？"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：2.1 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］",
+          "血红蛋白": "Hgb：112 g/L［参考范围：140-180 g/L］",
+          "血小板计数": "PLT：78 x 10^9/L［参考范围：150-400 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "可见毛细胞，胞质丰富呈淡蓝色，边缘不规则呈绒毛状。",
+          "异型细胞或原始细胞": "未见异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞 55%、淋巴细胞 30%、单核细胞 10%、嗜酸性粒细胞 4%、嗜碱性粒细胞 1%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］",
+          "白细胞形态": "部分淋巴细胞形态异常，胞体较大，胞浆丰富且边缘呈细绒毛状突起，核染色质疏松。",
+          "红细胞形态": "正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。",
+          "血小板形态与分布": "血小板体积偏大，形态大致正常，分布欠均匀。",
+          "血小板数量": "数量减少（估计约 80,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "外周血涂片其他异常所见",
+          "白细胞形态",
+          "血小板形态与分布",
+          "血小板数量"
+        ]
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "补充描述": "干抽",
+          "异常浸润或纤维化": "活检显示弥漫性毛细胞浸润，呈蜂窝样模式",
+          "网状纤维化": "网状纤维化增加［参考值：0-1级（轻微）。］",
+          "骨髓三系造血": "正常三系造血减少"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异常浸润或纤维化",
+          "网状纤维化",
+          "骨髓三系造血"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问患者目前是否有发热、皮肤出血点、牙龈出血或骨关节疼痛等症状？",
+        "reason": "当前缺乏患者的主诉和具体症状描述，且记忆摘要中混杂了多个不同病例的信息，需要通过问诊明确当前患者的临床表现以进行鉴别诊断。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有发热（盗汗）、皮肤瘀青、牙龈出血及骨关节疼痛等疑似血液系统恶性肿瘤的症状，但尚未进行任何实验室检查。为了明确诊断（如排除或确诊白血病、淋巴瘤等），必须优先完善血常规、外周血涂片及骨髓穿刺等关键检查以获取客观依据。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者外周血涂片发现特征性的‘毛细胞’（胞质丰富呈淡蓝色，边缘不规则呈绒毛状），结合全血细胞减少（白细胞、血红蛋白、血小板均降低）及发热、盗汗、骨痛等症状，高度怀疑毛细胞白血病。为确诊该疾病，必须获取骨髓象以观察骨髓中毛细胞的浸润情况，并可能需要进行免疫分型等进一步检查。因此，下一步应开具骨髓穿刺及相关检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有发热、盗汗、出血倾向及骨痛症状，血常规显示全血细胞减少。外周血涂片发现特征性的‘毛细胞’（胞质丰富呈淡蓝色，边缘不规则呈绒毛状），骨髓穿刺出现‘干抽’且活检显示弥漫性毛细胞浸润伴网状纤维化增加。这些临床和实验室检查结果高度提示毛细胞白血病，诊断依据已充分，可直接进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "reason": "患者表现为发热（盗汗）、皮肤瘀青、牙龈出血及骨关节疼痛，这些症状高度提示血液系统疾病（如白血病或淋巴瘤）。首先需要进行全血细胞计数（CBC）以评估白细胞、血红蛋白和血小板水平，判断是否存在贫血、血小板减少或白细胞异常；同时需进行外周血涂片检查，观察是否有原始细胞（blasts）或异常形态细胞，为初步诊断提供关键依据。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片发现形态异常的淋巴细胞（胞体大、边缘呈细绒毛状突起，疑似毛细胞），且伴有发热、盗汗、骨痛及出血倾向。为明确诊断（如鉴别毛细胞白血病、急性白血病或其他血液系统恶性肿瘤）并评估骨髓造血功能及浸润情况，必须进行骨髓穿刺和活检检查。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "毛细胞白血病",
+      "treatment_plan": "1. 主要治疗：首选嘌呤类似物化疗，如克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续5天静脉滴注或皮下注射方案，对毛细胞白血病具有极高的完全缓解率（>90%），是国际公认的一线标准治疗方案。\n2. 个性化调整：患者目前表现为全血细胞减少（白细胞、血红蛋白、血小板均低）及脾脏浸润可能（虽未直接提及脾大，但毛细胞白血病常伴脾大），且骨髓呈“干抽”现象，提示骨髓纤维化。鉴于患者有发热、盗汗及骨痛症状，需评估感染风险，在化疗前或化疗期间若出现严重中性粒细胞缺乏，需预防性使用抗生素或升白针。若患者对嘌呤类药物过敏或有严重肾功能不全，可考虑替代方案如利妥昔单抗联合化疗，或针对脾功能亢进显著者考虑脾切除（但在现代靶向治疗下较少作为首选）。\n3. 安全性与监测：\n   - 禁忌：对嘌呤类药物过敏者禁用；妊娠及哺乳期妇女慎用或禁用。\n   - 监测：治疗期间需严密监测血常规（特别是中性粒细胞和血小板恢复情况）、肝肾功能及电解质。注意观察有无发热、出血倾向加重等感染或出血迹象。\n   - 复诊：治疗后需定期复查骨髓象以评估疗效，确认是否达到完全缓解。\n   - 危险信号：若出现高热不退、严重出血（如鼻出血不止、黑便）、呼吸困难或意识改变，需立即就医。",
+      "reasoning": "诊断依据：1. 临床表现：患者有发热（盗汗）、皮肤瘀斑、牙龈出血及骨关节疼痛，符合血液系统恶性肿瘤的全身症状。2. 实验室检查：全血细胞减少（WBC 2.1, Hgb 112, PLT 78）。3. 关键特征：外周血涂片发现形态异常的淋巴细胞，胞浆丰富边缘呈细绒毛状突起（毛细胞特征）；骨髓穿刺出现“干抽”，活检显示弥漫性毛细胞浸润及网状纤维化增加，这是毛细胞白血病的典型病理表现。综合上述特征，排除急性白血病（无原始细胞增多）、ITP（有贫血和白细胞减少且骨髓有特异性浸润）及其他淋巴瘤，确诊为毛细胞白血病。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_03774",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "毛细胞白血病"
+        ],
+        "expected": [
+          "毛细胞白血病"
+        ],
+        "matched": [
+          "毛细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "腹部超声",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.5,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：首选嘌呤类似物化疗，如克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续5天静脉滴注或皮下注射方案，对毛细胞白血病具有极高的完全缓解率（>90%），是国际公认的一线标准治疗方案。\n2. 个性化调整：患者目前表现为全血细胞减少（白细胞、血红蛋白、血小板均低）及脾脏浸润可能（虽未直接提及脾大，但毛细胞白血病常伴脾大），且骨髓呈“干抽”现象，提示骨髓纤维化。鉴于患者有发热、盗汗及骨痛症状，需评估感染风险，在化疗前或化疗期间若出现严重中性粒细胞缺乏，需预防性使用抗生素或升白针。若患者对嘌呤类药物过敏或有严重肾功能不全，可考虑替代方案如利妥昔单抗联合化疗，或针对脾功能亢进显著者考虑脾切除（但在现代靶向治疗下较少作为首选）。\n3. 安全性与监测：\n   - 禁忌：对嘌呤类药物过敏者禁用；妊娠及哺乳期妇女慎用或禁用。\n   - 监测：治疗期间需严密监测血常规（特别是中性粒细胞和血小板恢复情况）、肝肾功能及电解质。注意观察有无发热、出血倾向加重等感染或出血迹象。\n   - 复诊：治疗后需定期复查骨髓象以评估疗效，确认是否达到完全缓解。\n   - 危险信号：若出现高热不退、严重出血（如鼻出血不止、黑便）、呼吸困难或意识改变，需立即就医。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全且符合标准，但遗漏了针对纯素食贫血及心理焦虑的个体化支持细节。",
+        "reference": "由于患者存在有症状的毛细胞白血病，伴全血细胞减少和脾肿大，开始使用克拉屈滨化疗以针对基础疾病过程。对症支持治疗包括对症状性贫血给予照射红细胞悬液输注，并在预期的中性粒细胞减少/免疫抑制期间实施感染风险降低措施：根据中性粒细胞减少/淋巴细胞减少的深度与持续时间及既往感染史，按照当地方案考虑给予抗菌、抗病毒（如HSV/VZV）及PJP预防；治疗前按方案酌情筛查（如肝炎/TB/水痘状态），并强化感染预防宣教（手卫生、避免接触病人、发热及时报告）。建议高营养密度的纯素饮食，增加富含铁的食物，并少量多餐，以应对体重下降和早饱，同时继续参加其互助支持小组以进行压力管理。治疗期间安排每周监测血常规，并告知患者如出现体温高于38.3°C、出血发作或乏力加重，应立即返诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "毛细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "腹部超声",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "由于患者存在有症状的毛细胞白血病，伴全血细胞减少和脾肿大，开始使用克拉屈滨化疗以针对基础疾病过程。对症支持治疗包括对症状性贫血给予照射红细胞悬液输注，并在预期的中性粒细胞减少/免疫抑制期间实施感染风险降低措施：根据中性粒细胞减少/淋巴细胞减少的深度与持续时间及既往感染史，按照当地方案考虑给予抗菌、抗病毒（如HSV/VZV）及PJP预防；治疗前按方案酌情筛查（如肝炎/TB/水痘状态），并强化感染预防宣教（手卫生、避免接触病人、发热及时报告）。建议高营养密度的纯素饮食，增加富含铁的食物，并少量多餐，以应对体重下降和早饱，同时继续参加其互助支持小组以进行压力管理。治疗期间安排每周监测血常规，并告知患者如出现体温高于38.3°C、出血发作或乏力加重，应立即返诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为发热（盗汗）、皮肤瘀斑、牙龈出血及骨关节疼痛，伴有焦虑情绪，需警惕血液系统恶性肿瘤。",
+        "diagnosis_reflection": "诊断准确命中毛细胞白血病。经验：面对全血细胞减少伴脾大倾向及‘干抽’风险时，应高度怀疑此病，避免被患者焦虑或网络信息干扰判断。",
+        "examination_reflection": "检查遗漏了腹部超声和分子遗传学检测。经验：确诊毛细胞白血病必须完善腹部超声评估脾脏浸润情况，并加做分子检测（如BRAF V600E）以明确分型，仅靠血常规和骨髓穿刺不足以全面评估。",
+        "treatment_reflection": "治疗方案安全且首选药物正确，但缺乏对贫血输血支持、纯素饮食营养指导及心理焦虑干预的个体化细节。经验：治疗不仅需针对疾病本身，还需同步处理并发症（如严重贫血需备血）及患者特殊背景（如素食导致的营养风险）。",
+        "future_strategy": "遇到疑似毛细胞白血病患者，除常规骨髓检查外，务必补充腹部超声和基因检测；制定方案时需整合感染预防、营养支持（特别是特殊饮食习惯者）及心理疏导。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T08:46:35.582399+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_03774",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "毛细胞白血病"
+    ],
+    "treatment_plan": "1. 主要治疗：首选嘌呤类似物化疗，如克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续5天静脉滴注或皮下注射方案，对毛细胞白血病具有极高的完全缓解率（>90%），是国际公认的一线标准治疗方案。\n2. 个性化调整：患者目前表现为全血细胞减少（白细胞、血红蛋白、血小板均低）及脾脏浸润可能（虽未直接提及脾大，但毛细胞白血病常伴脾大），且骨髓呈“干抽”现象，提示骨髓纤维化。鉴于患者有发热、盗汗及骨痛症状，需评估感染风险，在化疗前或化疗期间若出现严重中性粒细胞缺乏，需预防性使用抗生素或升白针。若患者对嘌呤类药物过敏或有严重肾功能不全，可考虑替代方案如利妥昔单抗联合化疗，或针对脾功能亢进显著者考虑脾切除（但在现代靶向治疗下较少作为首选）。\n3. 安全性与监测：\n   - 禁忌：对嘌呤类药物过敏者禁用；妊娠及哺乳期妇女慎用或禁用。\n   - 监测：治疗期间需严密监测血常规（特别是中性粒细胞和血小板恢复情况）、肝肾功能及电解质。注意观察有无发热、出血倾向加重等感染或出血迹象。\n   - 复诊：治疗后需定期复查骨髓象以评估疗效，确认是否达到完全缓解。\n   - 危险信号：若出现高热不退、严重出血（如鼻出血不止、黑便）、呼吸困难或意识改变，需立即就医。",
+    "reasoning": "诊断依据：1. 临床表现：患者有发热（盗汗）、皮肤瘀斑、牙龈出血及骨关节疼痛，符合血液系统恶性肿瘤的全身症状。2. 实验室检查：全血细胞减少（WBC 2.1, Hgb 112, PLT 78）。3. 关键特征：外周血涂片发现形态异常的淋巴细胞，胞浆丰富边缘呈细绒毛状突起（毛细胞特征）；骨髓穿刺出现“干抽”，活检显示弥漫性毛细胞浸润及网状纤维化增加，这是毛细胞白血病的典型病理表现。综合上述特征，排除急性白血病（无原始细胞增多）、ITP（有贫血和白细胞减少且骨髓有特异性浸润）及其他淋巴瘤，确诊为毛细胞白血病。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "骨髓穿刺和活检（BMAB）"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_03774",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "毛细胞白血病"
+      ],
+      "expected": [
+        "毛细胞白血病"
+      ],
+      "matched": [
+        "毛细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "腹部超声",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.5,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：首选嘌呤类似物化疗，如克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续5天静脉滴注或皮下注射方案，对毛细胞白血病具有极高的完全缓解率（>90%），是国际公认的一线标准治疗方案。\n2. 个性化调整：患者目前表现为全血细胞减少（白细胞、血红蛋白、血小板均低）及脾脏浸润可能（虽未直接提及脾大，但毛细胞白血病常伴脾大），且骨髓呈“干抽”现象，提示骨髓纤维化。鉴于患者有发热、盗汗及骨痛症状，需评估感染风险，在化疗前或化疗期间若出现严重中性粒细胞缺乏，需预防性使用抗生素或升白针。若患者对嘌呤类药物过敏或有严重肾功能不全，可考虑替代方案如利妥昔单抗联合化疗，或针对脾功能亢进显著者考虑脾切除（但在现代靶向治疗下较少作为首选）。\n3. 安全性与监测：\n   - 禁忌：对嘌呤类药物过敏者禁用；妊娠及哺乳期妇女慎用或禁用。\n   - 监测：治疗期间需严密监测血常规（特别是中性粒细胞和血小板恢复情况）、肝肾功能及电解质。注意观察有无发热、出血倾向加重等感染或出血迹象。\n   - 复诊：治疗后需定期复查骨髓象以评估疗效，确认是否达到完全缓解。\n   - 危险信号：若出现高热不退、严重出血（如鼻出血不止、黑便）、呼吸困难或意识改变，需立即就医。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全且符合标准，但遗漏了针对纯素食贫血及心理焦虑的个体化支持细节。",
+      "reference": "由于患者存在有症状的毛细胞白血病，伴全血细胞减少和脾肿大，开始使用克拉屈滨化疗以针对基础疾病过程。对症支持治疗包括对症状性贫血给予照射红细胞悬液输注，并在预期的中性粒细胞减少/免疫抑制期间实施感染风险降低措施：根据中性粒细胞减少/淋巴细胞减少的深度与持续时间及既往感染史，按照当地方案考虑给予抗菌、抗病毒（如HSV/VZV）及PJP预防；治疗前按方案酌情筛查（如肝炎/TB/水痘状态），并强化感染预防宣教（手卫生、避免接触病人、发热及时报告）。建议高营养密度的纯素饮食，增加富含铁的食物，并少量多餐，以应对体重下降和早饱，同时继续参加其互助支持小组以进行压力管理。治疗期间安排每周监测血常规，并告知患者如出现体温高于38.3°C、出血发作或乏力加重，应立即返诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "毛细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "腹部超声",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "由于患者存在有症状的毛细胞白血病，伴全血细胞减少和脾肿大，开始使用克拉屈滨化疗以针对基础疾病过程。对症支持治疗包括对症状性贫血给予照射红细胞悬液输注，并在预期的中性粒细胞减少/免疫抑制期间实施感染风险降低措施：根据中性粒细胞减少/淋巴细胞减少的深度与持续时间及既往感染史，按照当地方案考虑给予抗菌、抗病毒（如HSV/VZV）及PJP预防；治疗前按方案酌情筛查（如肝炎/TB/水痘状态），并强化感染预防宣教（手卫生、避免接触病人、发热及时报告）。建议高营养密度的纯素饮食，增加富含铁的食物，并少量多餐，以应对体重下降和早饱，同时继续参加其互助支持小组以进行压力管理。治疗期间安排每周监测血常规，并告知患者如出现体温高于38.3°C、出血发作或乏力加重，应立即返诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为发热（盗汗）、皮肤瘀斑、牙龈出血及骨关节疼痛，伴有焦虑情绪，需警惕血液系统恶性肿瘤。",
+      "diagnosis_reflection": "诊断准确命中毛细胞白血病。经验：面对全血细胞减少伴脾大倾向及‘干抽’风险时，应高度怀疑此病，避免被患者焦虑或网络信息干扰判断。",
+      "examination_reflection": "检查遗漏了腹部超声和分子遗传学检测。经验：确诊毛细胞白血病必须完善腹部超声评估脾脏浸润情况，并加做分子检测（如BRAF V600E）以明确分型，仅靠血常规和骨髓穿刺不足以全面评估。",
+      "treatment_reflection": "治疗方案安全且首选药物正确，但缺乏对贫血输血支持、纯素饮食营养指导及心理焦虑干预的个体化细节。经验：治疗不仅需针对疾病本身，还需同步处理并发症（如严重贫血需备血）及患者特殊背景（如素食导致的营养风险）。",
+      "future_strategy": "遇到疑似毛细胞白血病患者，除常规骨髓检查外，务必补充腹部超声和基因检测；制定方案时需整合感染预防、营养支持（特别是特殊饮食习惯者）及心理疏导。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/018.json#/applied_memory"
+  }
+}

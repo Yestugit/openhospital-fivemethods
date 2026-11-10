@@ -1,0 +1,71 @@
+{
+  "interface_version": 3,
+  "method_id": "reasoningbank",
+  "name": "ReasoningBank",
+  "summary": "Induces generalizable reasoning memories from successful and failed trajectories and retrieves complete note groups by task similarity.",
+  "version": "2",
+  "paper_url": "https://arxiv.org/abs/2509.25140",
+  "repository_url": "https://github.com/google-research/reasoning-bank",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "internal_token_tracking": "tracked",
+  "capabilities": {
+    "modalities": ["text"],
+    "forms": ["procedural"],
+    "operations": ["index", "add", "search", "episode_end", "reset", "save", "load"],
+    "integration_slots": ["context", "episode"],
+    "accepted_events": ["message", "observation", "action", "tool_result", "feedback"],
+    "scopes": ["user", "agent", "session", "team", "run"],
+    "default_scope": "user",
+    "required_episode_fields": ["success", "task", "trajectory"],
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "supports_async": true,
+    "read_only_mode": "snapshot"
+  },
+  "storage": {
+    "kind": "local_files",
+    "backend": "json_native_reasoningbank",
+    "path_parameters": {"storage_path": "auto"},
+    "database_paths": ["reasoningbank.json"],
+    "supports_snapshot": true
+  },
+  "requirements": {
+    "python": [],
+    "services": ["llm", "embedding"]
+  },
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {"type": "string", "enum": ["standard", "offline"], "default": "standard"},
+      "domain": {"type": "string", "default": "web navigation"},
+      "include_feedback": {"type": "boolean", "default": false},
+      "top_k": {"type": "integer", "minimum": 1, "maximum": 10, "default": 1},
+      "extraction_temperature": {"type": "number", "minimum": 0, "maximum": 2, "default": 1.0},
+      "llm_model": {"type": "string"},
+      "llm_base_url": {"type": "string"},
+      "llm_api_key_env": {"type": "string"},
+      "llm_options": {"type": "object"},
+      "embedding_model": {"type": "string"},
+      "embedding_base_url": {"type": "string"},
+      "embedding_api_key_env": {"type": "string"},
+      "embedding_dims": {"type": "integer", "minimum": 1},
+      "storage_path": {"type": "string", "minLength": 1}
+    },
+    "additionalProperties": false
+  },
+  "limitations": [
+    "This adapter implements the external-success-feedback, single-trajectory variant; self-judging and multi-trajectory variants remain outside the public contract.",
+    "The extraction LLM should prefer the native Markdown note format; source-compatible raw note text is also retained when headings are absent. LoCoMo and LongMemEval do not provide the task-success trajectory labels required for direct learning."
+  ],
+  "tags": ["reasoning", "experience", "feedback", "procedural"],
+  "implementation_notes": [
+    "Reference: google-research/reasoning-bank ed80611788292ea739f1effd31f16c53823b8a0d, WebArena single-trajectory path.",
+    "Successful and failed induction prompts, source-compatible blank-line note splitting, instruction-prefixed task retrieval, and episode-group selection are retained. Note headers are parsed only for metadata and do not gate storage.",
+    "Framework embedding services replace the source Torch bindings; deterministic offline embeddings are available only for local smoke tests.",
+    "learn requires real success, task, and a nonempty trajectory from episode.events; duplicate episode identity is ignored."
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "patient_id": "Patient_01666",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近有没有出现发热、盗汗（夜间睡觉时大量出汗）、不明原因的体重下降？另外，颈部肿块发现多久了？是否有其他部位的淋巴结肿大或不适？\", \"reason\": \"患者目前仅提供了主诉信息，缺乏关于B症状（发热、盗汗、体重下降）的具体细节、颈部肿块的持续时间以及有无其他伴随症状等关键病史。这些信息对于鉴别诊断（如淋巴瘤、结核或其他感染性疾病）至关重要，因此需要先进行问诊以完善病史采集。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近有没有出现发热、盗汗（夜间睡觉时大量出汗）、不明原因的体重下降？另外，颈部肿块发现多久了？是否有其他部位的淋巴结肿大或不适？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "发热和盗汗确实有，体重也掉了大概4公斤。颈部肿块发现快两个月了，最近感觉腋下也有点肿。但我网上查过这些症状，觉得可能是寄生虫感染或者淋巴瘤，您得给我做相关检查确认一下，不能光听我说。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您提到颈部肿块快两个月了，最近感觉腋下也有点肿。请问除了颈部和腋下，腹股沟或其他部位有没有摸到类似的肿块？另外，您是否有皮疹、关节痛或近期接触过传染病患者？\", \"reason\": \"患者主诉颈部肿块伴发热、盗汗、体重下降及新出现的腋下肿大，高度怀疑淋巴瘤或感染性疾病。目前缺乏关于全身淋巴结分布情况（如腹股沟）、伴随症状（皮疹、关节痛）及流行病学史的关键信息，需要进一步问诊以鉴别诊断方向并决定后续检查策略。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您提到颈部肿块快两个月了，最近感觉腋下也有点肿。请问除了颈部和腋下，腹股沟或其他部位有没有摸到类似的肿块？另外，您是否有皮疹、关节痛或近期接触过传染病患者？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "腹股沟没摸到肿块，其他地方也没有。没有关节痛，也没接触过传染病患者。但我网上查了，结合我农村旅行和吃生食的经历，很像寄生虫感染或淋巴瘤，必须做检查确认，不能光听我说。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有颈部及腋下肿块、发热、盗汗、体重下降等B症状，且自述有农村旅行和生食史，需鉴别淋巴瘤与寄生虫感染。目前尚未进行任何检查，必须优先开具全血细胞计数（CBC）、外周血涂片以评估血液系统异常，以及寄生虫相关检查（如粪便虫卵检查）来明确病因，为后续诊断提供依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为颈部及腋下淋巴结肿大，伴有发热、盗汗和体重下降（B症状），且自述有农村旅行和生食史，需鉴别淋巴瘤与寄生虫感染。首选进行全血细胞计数（CBC）以评估贫血、血小板减少或白细胞异常，结合外周血涂片寻找异型淋巴细胞（提示淋巴瘤）或嗜酸性粒细胞增多/寄生虫卵（提示寄生虫感染）。这是区分血液系统恶性肿瘤与感染性疾病最直接、关键的初步筛查手段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"β2-微球蛋白检测\"], \"reason\": \"患者表现为颈部及腋下淋巴结肿大，伴有发热、盗汗和体重下降（B症状），高度怀疑淋巴瘤或血液系统恶性肿瘤。首先需进行全血细胞计数（CBC）评估是否存在贫血、血小板减少或白细胞异常；外周血涂片用于观察是否有异型淋巴细胞或原始细胞，辅助鉴别白血病或淋巴瘤；β2-微球蛋白是评估淋巴瘤肿瘤负荷和预后的重要指标，有助于确诊和分期。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"15.2 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］\", \"血液嗜酸性粒细胞\": \"3.4 x 10^9/L［参考范围：<0.5 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血液嗜酸性粒细胞\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"可见大量嗜酸性粒细胞，部分细胞呈现脱颗粒现象；未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"无异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 52%、淋巴细胞 30%、单核细胞 8%、嗜酸性粒细胞 9%、嗜碱性粒细胞 1%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当，嗜酸性粒细胞胞质内可见明显嗜酸性颗粒及脱颗粒改变。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。\", \"血小板形态与分布\": \"大小和形态正常，分布均匀。\", \"血小板数量\": \"数量充足（估计 240,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"外周血涂片其他异常所见\", \"白细胞分类计数\"]}, \"β2-微球蛋白检测\": {\"result\": {\"β2-微球蛋白\": \"1.6 mg/L［参考值：0.8-2.4 mg/L（或 0.8-2.4 μg/mL）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为颈部及腋下淋巴结肿大，伴有发热、盗汗、体重下降（B症状），且血常规显示白细胞升高伴显著嗜酸性粒细胞增多。虽然外周血涂片未见寄生虫，但结合患者有农村旅行和生食史，高度怀疑寄生虫感染（如异尖线虫、弓首线虫等）或嗜酸性粒细胞增多症相关疾病（如淋巴瘤、特发性高嗜酸性粒细胞综合征）。目前的检查不足以确诊病因，需进一步进行粪便常规及寄生虫卵检查以排查肠道寄生虫，同时建议行腹部超声或CT评估内脏受累情况，必要时进行淋巴结活检以明确病理诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 免疫学\", \"reason\": \"患者表现为颈部及腋下淋巴结肿大，伴有发热、盗汗、体重下降等B症状，且血常规显示显著嗜酸性粒细胞增多（3.4 x 10^9/L），外周血涂片见脱颗粒现象。虽然β2-微球蛋白正常排除了部分高肿瘤负荷的淋巴瘤可能，但嗜酸性粒细胞显著升高需高度警惕寄生虫感染（如旋毛虫、异尖线虫等，结合患者农村旅行和生食史）或嗜酸性粒细胞相关血液系统疾病（如慢性嗜酸性粒细胞白血病、霍奇金淋巴瘤伴嗜酸反应）。此时进行免疫学检查（如总IgE水平、特异性寄生虫抗体检测、嗜酸性粒细胞阳离子蛋白ECP等）对于鉴别寄生虫感染与血液系统恶性肿瘤至关重要，是明确病因的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"寄生虫血清学检测\", \"血清IgE检测\"], \"reason\": \"患者有颈部及腋下淋巴结肿大、盗汗、体重下降等B症状，且近期有农村旅行和生食史，外周血检查显示白细胞计数显著升高伴嗜酸性粒细胞增多（3.4 x 10^9/L），高度提示寄生虫感染可能。因此首选“寄生虫血清学检测”以明确病原体（如囊虫、棘球蚴、丝虫等）。同时，嗜酸性粒细胞增多常与过敏反应或寄生虫感染相关，“血清IgE检测”作为过敏及寄生虫感染的辅助指标，有助于进一步鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"寄生虫血清学检测\": {\"result\": {\"特异性抗体IgG滴度\": \"1:128［参考范围：<1:16］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"特异性抗体IgG滴度\"]}, \"血清IgE检测\": {\"result\": {\"总IgE\": \"980 IU/mL［参考值：0 - 100 IU/mL（相当于 0 - 100 kU/L 或约 0 - 240 ng/mL）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"总IgE\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有颈部及腋下肿块、发热、盗汗、体重下降等B症状，结合农村旅行和生食史。实验室检查显示白细胞显著升高伴嗜酸性粒细胞增多（3.4 x 10^9/L），外周血涂片见大量嗜酸性粒细胞及脱颗粒现象，寄生虫血清学特异性抗体IgG滴度显著升高（1:128），总IgE显著升高（980 IU/mL）。β2-微球蛋白正常排除了高肿瘤负荷的血液恶性肿瘤。综合临床表现、流行病学史及特异性检查结果，高度提示寄生虫感染（如内脏幼虫移行症或类似疾病）引起的嗜酸性粒细胞增多症，诊断依据充分，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为颈部及腋下淋巴结肿大，伴有发热、盗汗和体重下降等B症状。实验室检查显示显著的外周血嗜酸性粒细胞增多（3.4 x 10^9/L）和总IgE升高（980 IU/mL），且寄生虫血清学检测呈阳性（特异性抗体IgG滴度1:128）。虽然存在寄生虫感染证据，但显著的淋巴结肿大、全身症状以及外周血中大量嗜酸性粒细胞需高度警惕嗜酸性粒细胞白血病、淋巴瘤（如霍奇金淋巴瘤伴嗜酸性粒细胞浸润）或副肿瘤综合征等血液系统恶性肿瘤的可能。血液科负责血液系统疾病的诊断、鉴别诊断及制定化疗或针对性治疗方案，是处理此类复杂病例的核心科室。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"嗜酸性粒细胞增多症\", \"treatment_plan\": \"1. 主要治疗：针对寄生虫感染引起的继发性嗜酸性粒细胞增多症，首选抗寄生虫药物治疗。鉴于血清学检测提示特异性抗体阳性（IgG滴度1:128），建议立即启动阿苯达唑（Albendazole）或吡喹酮（Praziquantel）治疗，具体药物选择需根据进一步确认的寄生虫种类（如蛔虫、钩虫、血吸虫等）调整剂量和疗程。同时，可短期使用糖皮质激素（如泼尼松）以缓解严重的过敏反应和嗜酸性粒细胞介导的组织损伤，但需在抗寄生虫药起效后逐渐减量，以防寄生虫死亡释放抗原加重反应。\\n2. 个性化调整：患者有农村旅行史和生食经历，高度怀疑食源性寄生虫感染。治疗方案需结合其具体的饮食暴露史进行针对性驱虫。若患者对拟用药物过敏（如既往有磺胺类或特定抗生素过敏史），需更换替代药物。鉴于患者目前无严重器官受累证据（β2-微球蛋白正常，无骨髓浸润迹象），暂不需要化疗或免疫抑制剂长期维持，重点在于清除病原体和纠正高IgE状态。\\n3. 安全性与监测：治疗期间需密切监测血常规变化，特别是嗜酸性粒细胞计数是否下降，以及肝功能指标（部分抗寄生虫药可能引起肝毒性）。告知患者可能出现赫氏反应（Jarisch-Herxheimer reaction），即治疗后症状暂时加重，属正常现象，但若出现呼吸困难、喉头水肿、剧烈腹痛或意识改变，需立即急诊处理。建议治疗2周后复查全血细胞计数、总IgE及寄生虫相关抗体，评估疗效并决定是否需要重复疗程。若症状持续或加重，需重新评估是否存在其他病因（如嗜酸性粒细胞白血病或淋巴瘤）。\", \"reasoning\": \"诊断依据：患者表现为颈部及腋下淋巴结肿大、发热、盗汗、体重下降等B症状，且外周血检查显示白细胞总数升高（15.2 x 10^9/L）伴显著嗜酸性粒细胞增多（3.4 x 10^9/L，分类占比9%），符合嗜酸性粒细胞增多症的实验室特征。结合患者农村旅行史、生食习惯，以及寄生虫血清学检测特异性抗体IgG滴度显著升高（1:128）和总IgE水平极度升高（980 IU/mL），高度提示由寄生虫感染引发的继发性嗜酸性粒细胞增多症。虽然患者担心淋巴瘤，但β2-微球蛋白正常且外周血未见异型细胞，不支持恶性血液肿瘤诊断。因此，诊断为嗜酸性粒细胞增多症（继发于寄生虫感染）。治疗方案以抗寄生虫为核心，兼顾抗炎和对症支持，确保快速控制感染源并缓解全身症状。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_01666",
+    "mode": "train",
+    "memory_notes": [
+      "The patient's white blood cell count was 13.6 x 10^9/L, which is above the reference range of 4.5-11.0 x 10^9/L.",
+      "Based on clinical presentation and laboratory results including high tumor burden and atypical lymphoid cells, the patient was diagnosed with Diffuse Large B-Cell Lymphoma (DLBCL).",
+      "The patient reported no perceived enlargement or discomfort in lymph nodes in other parts of the body. Specifically, there are no lumps in the armpits or groin area, and no associated rash or joint pain.",
+      "The patient has a neck mass that was discovered approximately two months ago, feels slightly larger recently, is hard to the touch, and is tender upon palpation; no other lymph nodes in the axillary or inguinal regions are swollen.",
+      "Peripheral blood smear revealed numerous atypical lymphoid cells characterized by large cytoplasm, large dark nuclei, prominent nucleoli, increased nuclear-cytoplasmic ratio, coarse chromatin, and some mitotic figures. Neutrophils showed toxic granulation and hypersegmented nuclei. Red blood cells were normocytic/normochromic with mild anisopoikilocytosis. Platelets were enlarged, irregular, with occasional small clusters. No parasites or inclusions were observed.",
+      "Patient_00278's laboratory findings indicate a complex hematologic picture. Complete Blood Count (CBC) shows microcytic hypochromic anemia with hemoglobin 86 g/L, hematocrit 28%, MCV 68 fL, and absent bone marrow iron reserves. Additionally, results reveal thrombocytopenia, elevated white blood cells, significantly elevated beta-2 microglobulin, and peripheral blood smear revealing numerous atypical lymphoid cells.",
+      "The patient's platelet count was 118 x 10^9/L, which is below the reference range of 150-400 x 10^9/L.",
+      "The parents are worried that the child's symptoms might indicate leukemia.",
+      "The beta-2 microglobulin level was 4.8 mg/L, which is significantly elevated compared to the reference range of 0.8-2.4 mg/L.",
+      "The patient presents with a neck mass that has persisted for approximately two months. The mass is hard in texture (质硬), tender to pressure (压痛), and the patient notes it has recently felt larger.",
+      "On 2026-11-09, the bone marrow examination for Patient_00278 revealed absent iron reserves (Grade 0), normal cellularity (45%), normal myeloid maturation with a granulocyte-to-erythrocyte ratio of 3:1, 2% blasts, adequate megakaryocytes, 1% plasma cells, and 15% lymphocytes. The examination excluded acute leukemia and myeloid sarcoma, showing no abnormal infiltration, orderly maturation of granulocytes, normal erythroid maturation with mild nuclear-cytoplasmic asynchrony, no fibrosis or necrosis, and normal bone trabeculae.",
+      "The patient has an underlying primary immunodeficiency requiring immunoglobulin replacement therapy.",
+      "The child has bruises on her legs and frequently rubs her eyes.",
+      "The differential count showed neutrophils at 65%, lymphocytes at 20%, monocytes at 10%, eosinophils at 3%, and basophils at 2%.",
+      "Complete blood count for Patient_04339 shows severe microcytic hypochromic anemia: hemoglobin 86 g/L (ref 140-180), RBC 3.10 x 10^12/L (ref 4.5-5.5), MCV 72 fL (ref 80-100). Inflammatory markers are significantly elevated: C-reactive protein is 185 mg/L (reference value <10 mg/L), high-sensitivity C-reactive protein is 4.2 mg/L (reference value <3.0 mg/L), and procalcitonin is 2.8 ng/mL (reference value <0.05 ng/mL).",
+      "The patient stated that they have not had recent contact with patients suffering from infectious diseases.",
+      "To identify the cause of anemia and rule out chronic blood loss (e.g., gastrointestinal bleeding or parasitic infection), the following examinations are recommended: Complete Blood Count (CBC), iron metabolism studies, fecal occult blood test (FOBT), abdominal ultrasound, and colonoscopy.",
+      "The patient exhibits high fever of 39 degrees Celsius, chills (寒战), dizziness (头晕), and weakness (虚弱).",
+      "The patient is a 4-year-old child presenting with left eye protrusion, swollen eyelids, and a lump on the temple. The child has no fever, no reported vision loss, no double vision, and no pain or restricted movement when turning the eyes.",
+      "The patient has a history of an orbital mass and recent leg bruising without trauma. Current presentation includes leg bruising with no other bleeding symptoms, no fever, and no ocular abnormalities such as vision loss or pain on eye movement.",
+      "Li Chunchi reports having a neck mass (neck lump) and night sweats. He now presents with low-grade fever (previously denied), decreased appetite, early satiety, and worsening fatigue. He continues to deny vision decline or pain when moving his eyes. Additionally, he reports no eye symptoms, cough, or chest pain.",
+      "On November 9, 2026, the patient experienced a high fever, severe dizziness, and general weakness.",
+      "The patient does not present with typical B symptoms associated with certain conditions, specifically reporting no unexplained weight loss and no night sweats (drenching sweats during sleep).",
+      "Physical examination reveals no rashes, no joint pain, and no contact with infectious disease patients recently.",
+      "The serum protein electrophoresis (SPEP) results were normal, showing alpha-1 globulin at 0.25 g/dL, alpha-2 globulin at 0.85 g/dL, albumin/globulin ratio at 1.4, beta globulin at 0.95 g/dL, total protein at 7.2 g/dL, albumin at 4.2 g/dL, and gamma globulin at 1.35 g/dL, all within their respective reference ranges.",
+      "The patient reported a body temperature of approximately 39 degrees Celsius.",
+      "The 4-year-old child has no history of gum bleeding, nosebleeds, or other unexplained bruises on the skin.",
+      "The patient has no history of fever or recent trauma.",
+      "Currently, there are no other areas of discomfort or abnormal bleeding in the child besides the leg bruises.",
+      "The child has no fever, no vision loss, no diplopia, and no pain during eye movement. The child frequently rubs their eyes and has recent bruising on the legs without any history of trauma or bleeding from gums, nose, or other skin areas.",
+      "user: 诊疗任务（血液科）\n患者描述：医生您好，我是孩子的妈妈。孩子5天前突然左眼突出、眼皮肿了，左边太阳穴还长了个不疼的包。这会不会危及生命？我们很担心，但希望能得到您的指导，好让我们回家能正确照顾她。\n没有发热，视力好像没下降，也没说重影或转动疼。孩子4岁。但我看她腿上有瘀伤，最近还总揉眼，这会不会是白血病？网上说的症状很像，我们很担心！\n没有受过外伤，腿上的瘀伤也是最近才有的。孩子其他部位没出血，就是总揉眼睛。我们很担心是不是白血病，您看这严重吗？\n没有牙龈或鼻出血，皮肤其他部位也没发现不明原因的瘀斑。孩子左眼凸出挺明显的，感觉快突到眼眶外面了，眼皮肿得厉害，摸起来硬硬的，范围大概覆盖了整个上眼睑。\n检查信息：{\"脑和眼眶CT扫描（Brain/Orbital CT）\": {\"result\": {\"基底池\": \"基底池通畅\", \"大脑半球对称性\": \"双侧大脑半球对称\", \"影像学视神经\": \"视神经口径正常\", \"球后脂肪\": \"球后脂肪受压移位，密度增高\", \"眶内异常病变\": \"左侧眶上外侧肌锥外见强化肿块，累及泪腺窝并推挤眼球向前突出；邻近颞部软组织可见结节影\", \"眶壁\": \"眶壁完整\", \"眼外肌\": \"眼外肌对称\", \"眼球\": \"左眼球位置较右眼前突，形态未见明显变形\", \"眼球壁\": \"眼球壁完整\", \"眼眶影像晶状体和玻璃体\": \"晶状体及玻璃体密度正常\", \"脑和眼眶CT扫描(Brain/OrbitalCT)脑灰白质分界\": \"灰白质分界与4岁儿童发育年龄相符\", \"脑和眼眶CT扫描(Brain/OrbitalCT)颅脑中线结构\": \"无中线移位\", \"脑外积液\": \"未见颅外轴性积液\", \"脑室系统\": \"脑室系统大小及形态正常\", \"颅内异常病变\": \"未见颅内出血、缺氧缺血性损伤或占位性病变的证据\", \"颅骨/颅缝/囟门\": \"颅盖骨完整；颅缝及囟门闭合，与4岁年龄相符\", \"鼻旁窦及乳突气房\": \"鼻旁窦及乳突气房的含气化程度与年龄相符\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"球后脂肪\", \"眶内异常病变\", \"眼球\"]}}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子除了腿部瘀伤，最近有没有出现牙龈出血、鼻出血或皮肤其他部位不明原因的瘀斑？另外，孩子是否有发热、视力下降、看东西重影或眼球转动疼痛的情况？\", \"reason\": \"患者为4岁儿童，表现为单侧眼球突出、眼睑硬肿及太阳穴包块，伴有近期不明原因腿部瘀伤。目前缺乏关于全身出血倾向（如牙龈、鼻腔出血）及眼部伴随症状（如发热、视力改变）的关键信息。鉴于需高度警惕血液系统恶性肿瘤（如髓系肉瘤/白血病）与眼眶肿瘤性病变的鉴别，必须通过问诊进一步排除或确认这些关键线索，以决定后续检查方向（如血常规、骨髓穿刺等）。\"}}\nassistant: 孩子除了腿部瘀伤，最近有没有出现牙龈出血、鼻出血或皮肤其他部位不明原因的瘀斑？另外，孩子是否有发热、视力下降、看东西重影或眼球转动疼痛的情况？\nuser: 孩子没有牙龈出血、鼻出血或其他不明原因瘀斑。也没有发热、视力下降、重影或眼球转动疼痛的情况。",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者表现为高热（39℃）、寒战、颈部疼痛性肿块，结合实验室检查显示严重贫血（Hb 86g/L）、小细胞低色素改变（MCV 72fL）以及显著的炎症指标升高（CRP 185mg/L, PCT 2.8ng/mL），高度提示急性细菌性感染（如化脓性淋巴结炎伴全身性反应）。虽然存在贫血，但结合急性感染表现，首要诊断为感染性疾病。现有信息足以支持初步诊断并制定抗感染及支持治疗方案，可进入诊疗阶段。\"}}\nassistant: {\"phase\": \"department\", \"decision\": {\"department\": \"感染科\", \"reason\": \"患者表现为突发高烧（39℃）、寒战、颈部肿块伴压痛，且实验室检查显示C反应蛋白（185 mg/L）和降钙素原（2.8 ng/mL）显著升高，提示严重的细菌性感染或脓毒症。虽然患者有贫血，但结合高热、寒战及炎症指标急剧升高的特点，首要考虑为急性化脓性淋巴结炎或其他严重细菌感染，需由感染科进行抗感染治疗及进一步排查感染源。\"}}\nassistant: {\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"急性淋巴结炎\", \"treatment_plan\": \"1. 主要治疗：立即启动经验性抗细菌治疗。鉴于患者高热（39℃）、寒战、颈部肿块压痛明显，且降钙素原（PCT）显著升高（2.8 ng/mL），高度提示细菌感染。首选静脉输注广谱抗生素，如头孢曲松联合阿奇霉素，或根据当地耐药情况选用哌拉西林/他唑巴坦。待血培养及脓液培养结果回报后，及时调整为目标性抗生素。\\n2. 个性化调整：患者血红蛋白86 g/L，存在中度贫血，需评估是否因感染导致骨髓抑制或慢性失血，必要时给予铁剂补充或输血支持以改善携氧能力，缓解头晕乏力症状。针对患者“想赶紧治好别耽误干活”的诉求，在病情稳定（体温正常、疼痛减轻）且无严重并发症前提下，可考虑在48-72小时后转为口服抗生素序贯治疗，缩短住院时间，但必须严格遵医嘱完成疗程以防复发。\\n3. 安全性与监测：密切监测体温变化、颈部肿块大小及波动感。若出现肿块软化、波动感增强，提示脓肿形成，需及时行超声引导下穿刺引流或切开引流术，避免自行挤压导致感染扩散。告知患者若出现呼吸困难、意识模糊、皮疹或药物过敏反应，需立即急诊处理。建议治疗3天后复查血常规、CRP及PCT评估疗效。\", \"reasoning\": \"诊断依据：患者表现为急性起病的高热（39℃）、寒战，伴颈部肿块压痛，符合急性淋巴结炎的典型临床表现。实验室检查显示C反应蛋白（185 mg/L）和降钙素原（2.8 ng/mL）显著升高，强烈提示细菌性感染而非病毒性或非感染性炎症。虽然患者有贫血，但结合急性感染征象，首要诊断为急性淋巴结炎。治疗方案以抗感染为核心，兼顾贫血纠正及脓肿预防，确保快速控制感染并减少并发症风险。\"}}\nassistant: {\"patient_id\": \"Patient_04339\", \"team_id\": \"rsi_87690fabef3b4f2387053bc11a81abbc\", \"diagnosis\": [\"急性淋巴结炎\"], \"treatment_plan\": \"1. 主要治疗：立即启动经验性抗细菌治疗。鉴于患者高热（39℃）、寒战、颈部肿块压痛明显，且降钙素原（PCT）显著升高（2.8 ng/mL），高度提示细菌感染。首选静脉输注广谱抗生素，如头孢曲松联合阿奇霉素，或根据当地耐药情况选用哌拉西林/他唑巴坦。待血培养及脓液培养结果回报后，及时调整为目标性抗生素。\\n2. 个性化调整：患者血红蛋白86 g/L，存在中度贫血，需评估是否因感染导致骨髓抑制或慢性失血，必要时给予铁剂补充或输血支持以改善携氧能力，缓解头晕乏力症状。针对患者“想赶紧治好别耽误干活”的诉求，在病情稳定（体温正常、疼痛减轻）且无严重并发症前提下，可考虑在48-72小时后转为口服抗生素序贯治疗，缩短住院时间，但必须严格遵医嘱完成疗程以防复发。\\n3. 安全性与监测：密切监测体温变化、颈部肿块大小及波动感。若出现肿块软化、波动感增强，提示脓肿形成，需及时行超声引导下穿刺引流或切开引流术，避免自行挤压导致感染扩散。告知患者若出现呼吸困难、意识模糊、皮疹或药物过敏反应，需立即急诊处理。建议治疗3天后复查血常规、CRP及PCT评估疗效。\", \"reasoning\": \"诊断依据：患者表现为急性起病的高热（39℃）、寒战，伴颈部肿块压痛，符合急性淋巴结炎的典型临床表现。实验室检查显示C反应蛋白（185 mg/L）和降钙素原（2.8 ng/mL）显著升高，强烈提示细菌性感染而非病毒性或非感染性炎症。虽然患者有贫血，但结合急性感染征象，首要诊断为急性淋巴结炎。治疗方案以抗感染为核心，兼顾贫血纠正及脓肿预防，确保快速控制感染并减少并发症风险。\", \"ordered_examinations\": [\"全血细胞计数（CBC）\", \"C反应蛋白（CRP）\", \"降钙素原（PCT）\"], \"conversation_rounds\": 3, \"finished\": true}",
+      "user: {\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"86 g/L［参考范围：120-160］\", \"红细胞压积\": \"28%［参考范围：36-48］\", \"平均红细胞体积\": \"68 fL［参考范围：80-100］\", \"平均红细胞血红蛋白含量\": \"20 pg［参考范围：27-34］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"红细胞压积\", \"平均红细胞体积\", \"平均红细胞血红蛋白含量\"]}, \"骨髓检查\": {\"result\": {\"异常浸润\": \"无异常浸润\", \"粒红比\": \"3:1［参考值：2:1 至 4:1］\", \"粒细胞系成熟\": \"自髓母细胞经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序［参考值：自髓母细胞（<3%）经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序］\", \"红细胞系成熟\": \"正成红细胞性成熟，可见轻度核浆发育不同步，无发育异常特征\", \"纤维化或坏死\": \"无纤维化或坏死\", \"骨小梁\": \"正常\", \"骨髓原始细胞\": \"2%［参考值：<5%］\", \"骨髓巨核细胞\": \"数量充足，形态正常\", \"骨髓浆细胞\": \"1%［参考值：<3%］\", \"骨髓淋巴细胞\": \"15%［参考值：10-20%］\", \"骨髓细胞密度\": \"45%［参考值：30-70%（随年龄变化）］\", \"骨髓铁储备\": \"缺如（0级）［参考值：存在（1-2级，因月经可能较低）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓铁储备\"]}}}",
+      "assistant: {\"reflection\": {\"reflection\": {\"profile\": \"患者为中年男性，主诉颈部肿块伴高热（39℃）、寒战及头晕乏力，自述无体重下降和盗汗，但存在严重贫血症状。\", \"diagnosis_reflection\": \"本次误诊为急性淋巴结炎，完全忽略了缺铁性贫血这一核心诊断。未能识别患者‘头晕、人很虚’的贫血表现与潜在的上消化道出血或慢性失血关联，导致诊断方向错误。\", \"examination_reflection\": \"检查选择过于局限，仅开具了血常规、CRP和PCT等感染指标，遗漏了针对贫血病因的关键检查，如铁代谢、大便常规、胃镜及肠镜等，无法确诊贫血原因。\", \"treatment_reflection\": \"治疗方案基于错误的感染诊断，过度强调抗细菌治疗，完全忽略了对上消化道出血的内镜干预、质子泵抑制剂使用及肾功能保护，存在致命风险且未处理贫血根本问题。\", \"future_strategy\": \"面对发热伴贫血症状的患者，必须优先排查消化道出血及血液系统疾病，完善铁代谢、粪便潜血及内镜检查；避免仅凭局部体征（如颈部肿块）草率诊断为单纯炎症，需全面评估全身状况。\"}}, \"evaluation\": {\"patientId\": \"Patient_04339\", \"status\": \"evaluated\", \"evaluationStatus\": \"evaluated\", \"diagnosisAccuracy\": 0.0, \"examinationPrecision\": 0.3333, \"treatmentOverallScore\": 0.2, \"treatmentSafety\": 0.2, \"treatmentEffectivenessAlignment\": 0.2, \"treatmentPersonalization\": 0.2, \"diagnosisDetail\": {\"submitted\": [\"急性淋巴结炎\"], \"expected\": [\"缺铁性贫血\"], \"matched\": [], \"accuracy\": 0.0, \"status\": \"wrong\"}, \"examinationDetail\": {\"ordered\": [\"全血细胞计数（CBC）\", \"C反应蛋白（CRP）\", \"降钙素原（PCT）\"], \"expected\": [\"全血细胞计数（CBC）\", \"铁代谢检查\", \"大便常规检查\", \"肾功能检查（RFTs）\", \"维生素和矿物质测定\", \"肝功能检查（LFTs）\", \"尿液分析（UA）\", \"食管胃十二指肠镜检查（EGD）\", \"结肠镜检查\"], \"matched\": [\"全血细胞计数（CBC）\"], \"precision\": 0.3333333333333333, \"coverage\": 0.1111111111111111, \"precisionEligible\": true}, \"treatmentDetail\": {\"submitted\": \"1. 主要治疗：立即启动经验性抗细菌治疗。鉴于患者高热（39℃）、寒战、颈部肿块压痛明显，且降钙素原（PCT）显著升高（2.8 ng/mL），高度提示细菌感染。首选静脉输注广谱抗生素，如头孢曲松联合阿奇霉素，或根据当地耐药情况选用哌拉西林/他唑巴坦。待血培养及脓液培养结果回报后，及时调整为目标性抗生素。\\n2. 个性化调整：患者血红蛋白86 g/L，存在中度贫血，需评估是否因感染导致骨髓抑制或慢性失血，必要时给予铁剂补充或输血支持以改善携氧能力，缓解头晕乏力症状。针对患者“想赶紧治好别耽误干活”的诉求，在病情稳定（体温正常、疼痛减轻）且无严重并发症前提下，可考虑在48-72小时后转为口服抗生素序贯治疗，缩短住院时间，但必须严格遵医嘱完成疗程以防复发。\\n3. 安全性与监测：密切监测体温变化、颈部肿块大小及波动感。若出现肿块软化、波动感增强，提示脓肿形成，需及时行超声引导下穿刺引流或切开引流术，避免自行挤压导致感染扩散。告知患者若出现呼吸困难、意识模糊、皮疹或药物过敏反应，需立即急诊处理。建议治疗3天后复查血常规、CRP及PCT评估疗效。\", \"overallScore\": 0.2, \"safety\": 0.2, \"effectivenessAlignment\": 0.2, \"personalization\": 0.2, \"reasoning\": \"方案误诊为淋巴结炎，完全忽略上消化道出血及肾衰竭核心问题，存在致命风险。\", \"reference\": \"首先通过静脉补液稳定患者脱水状态，并使用适当的退热药控制发热。通过内镜干预处理活动性上消化道出血，并按肾功能调整剂量开始口服质子泵抑制剂治疗。在出血得到控制且肾功能稳定之前，暂停静脉补铁。餐后开始口服硫酸亚铁325 mg，每日1次。提供营养指导，建议摄入富含铁的饮食，包括瘦红肉及富含维生素C的食物来源，以促进吸收。安排1周后复诊，复查全血细胞计数（CBC）和铁代谢检查；如任何症状加重，需立即返回就医。\"}, \"ground_truth\": {\"final_diagnosis\": \"缺铁性贫血\", \"necessary_examinations\": [\"全血细胞计数（CBC）\", \"铁代谢检查\", \"大便常规检查\", \"肾功能检查（RFTs）\", \"维生素和矿物质测定\", \"肝功能检查（LFTs）\", \"尿液分析（UA）\", \"食管胃十二指肠镜检查（EGD）\", \"结肠镜检查\"], \"contraindications\": {\"drugs\": [], \"treatments\": []}, \"treatment_plan\": \"首先通过静脉补液稳定患者脱水状态，并使用适当的退热药控制发热。通过内镜干预处理活动性上消化道出血，并按肾功能调整剂量开始口服质子泵抑制剂治疗。在出血得到控制且肾功能稳定之前，暂停静脉补铁。餐后开始口服硫酸亚铁325 mg，每日1次。提供营养指导，建议摄入富含铁的饮食，包括瘦红肉及富含维生素C的食物来源，以促进吸收。安排1周后复诊，复查全血细胞计数（CBC）和铁代谢检查；如任何症状加重，需立即返回就医。\"}}}\nuser: 诊疗任务（血液科）\n患者描述：没有不明原因的体重下降，也没有盗汗。颈部肿块发现大概两个月了，最近感觉有点大。其他部位淋巴结没觉得肿大，就是现在发高烧、头晕得厉害，人很虚。\n体温大概39度。有寒战，但没有咳嗽、咳痰或呼吸困难。颈部肿块摸起来有点硬，按着会疼。\n没有，腋下和腹股沟都没肿块。没皮疹，关节也不痛。最近没接触过传染病患者。我就想赶紧把病治好，别耽误干活。\n检查信息：{\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"86 g/L [参考范围：140-180 g/L]\", \"血液红细胞计数\": \"3.10 x 10^12/L [参考范围：4.5-5.5 x 10^12/L]\", \"平均红细胞体积\": \"72 fL [参考范围：80-100 fL]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血液红细胞计数\", \"平均红细胞体积\"]}, \"C反应蛋白（CRP）\": {\"result\": {\"C反应蛋白\": \"185 mg/L［参考值：<10 mg/L（或 <1.0 mg/dL）］\", \"高敏C反应蛋白\": \"4.2 mg/L［参考值：<3.0 mg/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"C反应蛋白\", \"高敏C反应蛋白\"]}, \"降钙素原（PCT）\": {\"result\": {\"降钙素原\": \"2.8 ng/mL［参考值：<0.05 ng/mL（或根据检测方法为 <0.5 ng/mL；数值 <0.1 ng/mL 表示无或极轻微全身性炎症）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"降钙素原\"]}}\nsystem: {\"reward\": 0.17776666666666666, \"success\": false, \"text\": \"{\\\"reflection\\\": {\\\"profile\\\": \\\"患者为中年男性，主诉颈部肿块伴高热（39℃）、寒战及头晕乏力，自述无体重下降和盗汗，但存在严重贫血症状。\\\", \\\"diagnosis_reflection\\\": \\\"本次误诊为急性淋巴结炎，完全忽略了缺铁性贫血这一核心诊断。未能识别患者‘头晕、人很虚’的贫血表现与潜在的上消化道出血或慢性失血关联，导致诊断方向错误。\\\", \\\"examination_reflection\\\": \\\"检查选择过于局限，仅开具了血常规、CRP和PCT等感染指标，遗漏了针对贫血病因的关键检查，如铁代谢、大便常规、胃镜及肠镜等，无法确诊贫血原因。\\\", \\\"treatment_reflection\\\": \\\"治疗方案基于错误的感染诊断，过度强调抗细菌治疗，完全忽略了对上消化道出血的内镜干预、质子泵抑制剂使用及肾功能保护，存在致命风险且未处理贫血根本问题。\\\", \\\"future_strategy\\\": \\\"面对发热伴贫血症状的患者，必须优先排查消化道出血及血液系统疾病，完善铁代谢、粪便潜血及内镜检查；避免仅凭局部体征（如颈部肿块）草率诊断为单纯炎症，需全面评估全身状况。\\\"}}\"}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您提到颈部肿块按压疼痛且伴有高烧和寒战，请问除了颈部，身体其他部位（如腋下、腹股沟）是否有类似的肿块或疼痛？另外，您是否有皮疹、关节痛或近期接触过传染病患者？\", \"reason\": \"患者目前表现为高热、寒战及颈部疼痛性肿块，虽然初步考虑感染性淋巴结炎，但缺乏对全身淋巴结分布、伴随症状（如皮疹、关节痛）及流行病学史的详细询问。这些信息对于鉴别急性细菌性/病毒性淋巴结炎、传染性单核细胞增多症或其他系统性感染至关重要，需进一步问诊以明确诊断方向。\"}}\nassistant: 您提到颈部肿块按压疼痛且伴有高烧和寒战，请问除了颈部，身体其他部位（如腋下、腹股沟）是否有类似的肿块或疼痛？另外，您是否有皮疹、关节痛或近期接触过传染病患者？\nuser: 没有，腋下和腹股沟都没肿块。没皮疹，关节也不痛。最近没接触过传染病患者。我就想赶紧把病治好，别耽误干活。",
+      "assistant: {\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. 主要治疗：立即启动口服铁剂补充治疗。首选硫酸亚铁或富马酸亚铁，剂量按元素铁计算（3-6 mg/kg/日），分2-3次口服，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时口服维生素C（100mg/次）以增强铁的吸收。\\n2. 个性化调整：患儿4岁，需根据体重精确计算铁剂剂量，避免过量导致中毒。鉴于患儿有眼部肿块和腿部瘀伤病史，虽骨髓检查排除了白血病和髓系肉瘤，但需警惕是否存在慢性失血（如消化道出血、寄生虫感染等）导致的缺铁，建议完善大便潜血试验及腹部超声排查潜在出血源。若口服铁剂不耐受或贫血纠正缓慢，可考虑静脉铁剂治疗，但需在严密监护下进行。\\n3. 安全性与监测：治疗期间需监测血红蛋白、红细胞压积及网织红细胞计数，通常服药后1周网织红细胞升高，2-4周血红蛋白开始上升。注意观察有无黑便（正常现象）、恶心、腹痛等副作用。若出现严重过敏反应或症状无改善，需立即停药并复诊。疗程至少持续至血红蛋白恢复正常后2-3个月，以补足体内储存铁。告知家长若出现高热、剧烈头痛、呕吐或意识改变（提示颅内高压或病情恶化），需立即急诊处理。\", \"reasoning\": \"诊断依据：患者为4岁女童，表现为小细胞低色素性贫血特征（Hb 86g/L，MCV 68fL，MCH 20pg），且骨髓铁储备缺如（0级），符合缺铁性贫血的典型实验室表现。虽然患儿有眼眶肿块和腿部瘀伤，但骨髓穿刺显示原始细胞比例正常（2%），无异常浸润，排除了急性白血病和髓系肉瘤的可能。因此，当前最明确的血液系统诊断为缺铁性贫血。治疗方案针对缺铁进行补充，同时结合患儿年龄和既往症状，强调排查潜在失血原因及严密监测，确保治疗安全有效。\"}}\nassistant: {\"patient_id\": \"Patient_00278\", \"team_id\": \"rsi_87690fabef3b4f2387053bc11a81abbc\", \"diagnosis\": [\"缺铁性贫血\"], \"treatment_plan\": \"1. 主要治疗：立即启动口服铁剂补充治疗。首选硫酸亚铁或富马酸亚铁，剂量按元素铁计算（3-6 mg/kg/日），分2-3次口服，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时口服维生素C（100mg/次）以增强铁的吸收。\\n2. 个性化调整：患儿4岁，需根据体重精确计算铁剂剂量，避免过量导致中毒。鉴于患儿有眼部肿块和腿部瘀伤病史，虽骨髓检查排除了白血病和髓系肉瘤，但需警惕是否存在慢性失血（如消化道出血、寄生虫感染等）导致的缺铁，建议完善大便潜血试验及腹部超声排查潜在出血源。若口服铁剂不耐受或贫血纠正缓慢，可考虑静脉铁剂治疗，但需在严密监护下进行。\\n3. 安全性与监测：治疗期间需监测血红蛋白、红细胞压积及网织红细胞计数，通常服药后1周网织红细胞升高，2-4周血红蛋白开始上升。注意观察有无黑便（正常现象）、恶心、腹痛等副作用。若出现严重过敏反应或症状无改善，需立即停药并复诊。疗程至少持续至血红蛋白恢复正常后2-3个月，以补足体内储存铁。告知家长若出现高热、剧烈头痛、呕吐或意识改变（提示颅内高压或病情恶化），需立即急诊处理。\", \"reasoning\": \"诊断依据：患者为4岁女童，表现为小细胞低色素性贫血特征（Hb 86g/L，MCV 68fL，MCH 20pg），且骨髓铁储备缺如（0级），符合缺铁性贫血的典型实验室表现。虽然患儿有眼眶肿块和腿部瘀伤，但骨髓穿刺显示原始细胞比例正常（2%），无异常浸润，排除了急性白血病和髓系肉瘤的可能。因此，当前最明确的血液系统诊断为缺铁性贫血。治疗方案针对缺铁进行补充，同时结合患儿年龄和既往症状，强调排查潜在失血原因及严密监测，确保治疗安全有效。\", \"ordered_examinations\": [\"全血细胞计数（CBC）\", \"骨髓检查\"], \"conversation_rounds\": 2, \"finished\": true}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为颈部肿块（2个月，质硬、压痛）伴高热（39℃）、寒战、头晕及虚弱，虽无典型B症状，但急性感染（如化脓性淋巴结炎、深部脓肿）或血液系统恶性肿瘤（如淋巴瘤继发感染）均需鉴别。目前缺乏实验室证据，需立即开具血常规、C反应蛋白、降钙素原等检查以评估感染程度及白细胞异常，同时建议行颈部超声或CT明确肿块性质，为后续抗感染或进一步诊疗提供依据。\"}}\nassistant: {\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为颈部肿块伴高热（39℃）、寒战及局部压痛，临床高度怀疑急性感染（如化脓性淋巴结炎）或血液系统恶性肿瘤。首选进行全血细胞计数（CBC）以评估白细胞计数、中性粒细胞比例及是否存在贫血或血小板减少，同时可结合C反应蛋白（CRP）和降钙素原（PCT）等炎症指标快速鉴别细菌感染与肿瘤性发热，为后续抗感染治疗或进一步影像学/病理检查提供关键依据。\"}}\nassistant: {\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"C反应蛋白（CRP）\", \"降钙素原（PCT）\"], \"reason\": \"患者表现为高热（39℃）、寒战、颈部肿块伴压痛，高度怀疑急性细菌性感染（如化脓性淋巴结炎或脓肿）。全血细胞计数（CBC）可评估白细胞总数及中性粒细胞比例以判断感染程度；C反应蛋白（CRP）和降钙素原（PCT）是鉴别细菌感染与病毒感染及评估炎症严重程度的关键指标，有助于指导抗生素的使用。\"}}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子最近有没有受过外伤？另外，您提到的腿部瘀伤是近期出现的吗？是否有其他部位的不适或异常出血情况？\", \"reason\": \"患者主诉左眼突出、眼皮肿及太阳穴包块，同时提及腿部瘀伤并担心白血病。目前缺乏关于外伤史、瘀伤具体出现时间及是否伴有其他出血倾向等关键信息，需要进一步问诊以鉴别眼眶蜂窝织炎、外伤性血肿或血液系统疾病（如白血病）的可能性。\"}}\nassistant: 孩子最近有没有受过外伤？另外，您提到的腿部瘀伤是近期出现的吗？是否有其他部位的不适或异常出血情况？\nuser: 孩子最近没有受过外伤。腿部瘀伤是近期出现的，但具体细节我不太确定。目前没有其他部位的不适或异常出血情况。",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子最近有没有出现发热、视力下降、看东西重影或眼球转动疼痛的情况？另外，您提到孩子总揉眼睛，能否描述一下孩子左眼突出的具体程度（比如是否明显凸出眼眶）以及眼皮肿胀的范围和硬度？\", \"reason\": \"患者主诉眼部症状但缺乏关键体征信息（如发热、视力改变、眼球突出度及眼睑肿胀的具体性质），且未提及是否有其他伴随症状。为了鉴别诊断（如眼眶蜂窝织炎、肿瘤、血管畸形等），需要进一步询问这些细节以评估病情严重程度并指导后续检查方向。\"}}\nassistant: 孩子最近有没有出现发热、视力下降、看东西重影或眼球转动疼痛的情况？另外，您提到孩子总揉眼睛，能否描述一下孩子左眼突出的具体程度（比如是否明显凸出眼眶）以及眼皮肿胀的范围和硬度？\nuser: 我没有发热、视力下降或眼球转动疼痛。我只有颈部肿块和盗汗，没有提到孩子揉眼睛或左眼突出的情况。您是不是问错人了？我是李春池，44岁男性。",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问孩子除了左眼突出、眼皮肿和太阳穴长包外，有没有出现发热、视力下降、复视（看东西重影）、眼球转动疼痛或活动受限的情况？另外，孩子的年龄是多少？\", \"reason\": \"患者主诉症状涉及眼部及头部，目前缺乏关键病史信息如年龄、伴随症状（发热、视力改变等）以及既往史，需要进一步问诊以评估病情严重程度并指导后续检查方向。\"}}\nassistant: 请问孩子除了左眼突出、眼皮肿和太阳穴长包外，有没有出现发热、视力下降、复视（看东西重影）、眼球转动疼痛或活动受限的情况？另外，孩子的年龄是多少？\nuser: 没有发热，视力好像没下降，也没说重影或转动疼。孩子4岁。但我看她腿上有瘀伤，最近还总揉眼，这会不会是白血病？网上说的症状很像，我们很担心！",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者为4岁儿童，出现单侧眼球突出、眼睑硬肿及太阳穴无痛包块，虽无发热外伤史，但伴有近期腿部瘀伤，需高度警惕血液系统恶性肿瘤（如髓系肉瘤/白血病）或眼眶肿瘤。目前缺乏血常规、凝血功能等关键实验室检查以排除全身性疾病，且CT结果尚未获取（当前已开检查为空），因此优先开具必要的影像学检查（脑和眼眶CT扫描）及血液学检查以明确诊断。\"}}\nassistant: {\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患儿为4岁儿童，表现为单侧眼球突出、眼睑硬肿及太阳穴无痛性包块，同时伴有近期不明原因的腿部瘀伤。虽然CT已显示眶内占位，但结合“眼部肿块+皮肤瘀斑”这一关键组合，必须高度警惕髓系肉瘤（白血病）等血液系统恶性肿瘤。仅靠影像学无法确诊，急需进行全血细胞计数（CBC）、凝血功能等血液学检查以评估是否存在贫血、血小板减少或白细胞异常，这是鉴别诊断和制定后续治疗方案（如是否需骨髓穿刺）的首要且最关键的步骤。\"}}\nassistant: {\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"骨髓检查\"], \"reason\": \"患儿为4岁儿童，表现为单侧眼球突出、眼睑硬肿及太阳穴无痛包块，同时伴有近期不明原因的腿部瘀伤。虽然目前无发热和外伤史，但‘眼眶肿块’合并‘皮肤瘀斑’是髓系肉瘤（白血病）的典型警示信号。必须立即进行全血细胞计数（CBC）以评估是否存在贫血、血小板减少或白细胞异常，并尽快安排骨髓检查以明确是否患有急性白血病或髓系肉瘤，从而避免误诊为炎症而延误化疗时机。\"}}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您提到最近发高烧，请问体温具体是多少度？除了头晕和虚弱，有没有出现寒战、咳嗽、咳痰或呼吸困难等症状？另外，颈部肿块摸起来是硬的还是软的，按压时是否有疼痛感？\", \"reason\": \"患者主诉颈部肿块伴高烧、头晕和虚弱，但缺乏关于发热程度、伴随症状（如呼吸道症状）以及肿块性质（硬度、压痛）的关键信息。这些细节对于鉴别诊断（如急性感染、淋巴瘤或其他占位性病变）至关重要，因此需要进一步问诊以明确病情严重程度和方向。\"}}\nassistant: 您提到最近发高烧，请问体温具体是多少度？除了头晕和虚弱，有没有出现寒战、咳嗽、咳痰或呼吸困难等症状？另外，颈部肿块摸起来是硬的还是软的，按压时是否有疼痛感？\nuser: 体温大概39度。有寒战，但没有咳嗽、咳痰或呼吸困难。颈部肿块摸起来有点硬，按着会疼。",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者为4岁女童，表现为突发左眼突出、眼睑硬肿及太阳穴包块，无外伤发热史，伴近期腿部瘀伤。CT显示左侧眶内占位性病变。已完成的检查中，全血细胞计数（CBC）提示小细胞低色素性贫血（血红蛋白86g/L，MCV 68fL），骨髓检查虽未见原始细胞增多，但铁储备缺如。结合眼部肿块与不明原因瘀伤/贫血的临床表现，需综合判断。虽然骨髓未报白血病典型象，但眼眶肿块合并贫血和瘀伤高度提示血液系统恶性肿瘤（如髓系肉瘤）或严重缺铁性贫血合并其他病变。鉴于信息已涵盖关键病史、体征、影像学及实验室检查，足以进行初步诊断并制定进一步诊疗计划（如转诊血液科、完善病理活检等）。\"}}\nassistant: {\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者为4岁儿童，表现为单侧眼眶肿块、眼睑硬肿及太阳穴包块，同时伴有近期不明原因的腿部瘀伤。虽然眼部症状明显，但结合全血细胞计数（CBC）显示的中重度小细胞低色素性贫血（血红蛋白86g/L，MCV 68fL），以及骨髓检查提示的缺铁（骨髓铁储备缺如），需高度警惕血液系统疾病（如白血病伴髓外浸润或严重贫血导致的凝血/出血倾向）。尽管骨髓原始细胞比例未达急性白血病诊断标准，但眼眶肿块合并贫血和瘀伤是髓系肉瘤（粒细胞肉瘤）或急性白血病的典型表现，且既往诊疗中已明确存在误诊风险。血液科负责全面评估血液系统恶性肿瘤、贫血病因及制定化疗或针对性治疗方案，是处理此类复杂鉴别诊断的核心科室。\"}}",
+      "assistant: {\"reflection\": {\"reflection\": {\"profile\": \"患者表现为近期腿部瘀伤，无外伤史，无其他出血症状及发热、眼部异常等表现。\", \"diagnosis_reflection\": \"诊断准确命中缺铁性贫血，但在鉴别诊断时未充分结合患者‘腿部瘀伤’这一关键线索深入排查血液系统恶性疾病（如白血病）或凝血功能障碍的潜在风险。\", \"examination_reflection\": \"检查选择存在明显偏差：漏开了针对贫血病因筛查的关键检查（铁代谢、粪便隐血、结肠镜），错误开具了非首选的骨髓检查；仅完成了全血细胞计数，导致对慢性失血源头的排查不足。\", \"treatment_reflection\": \"治疗方案严重脱离实际：误判患者为儿童并套用儿科剂量方案，完全忽略了成人患者的生活方式（活跃）、痔出血病史及饮食调整需求，缺乏个体化用药指导。\", \"future_strategy\": \"面对不明原因瘀伤合并贫血患者，需优先完善铁代谢及消化道出血筛查以明确病因；制定治疗方案时必须严格依据患者年龄、既往史（如痔疮）及生活习惯进行个性化调整，避免套用通用模板。\"}}, \"evaluation\": {\"patientId\": \"Patient_00278\", \"status\": \"evaluated\", \"evaluationStatus\": \"evaluated\", \"diagnosisAccuracy\": 1.0, \"examinationPrecision\": 0.5, \"treatmentOverallScore\": 0.32, \"treatmentSafety\": 1.0, \"treatmentEffectivenessAlignment\": 0.4, \"treatmentPersonalization\": 0.2, \"diagnosisDetail\": {\"submitted\": [\"缺铁性贫血\"], \"expected\": [\"缺铁性贫血\"], \"matched\": [\"缺铁性贫血\"], \"accuracy\": 1.0, \"status\": \"correct\"}, \"examinationDetail\": {\"ordered\": [\"全血细胞计数（CBC）\", \"骨髓检查\"], \"expected\": [\"全血细胞计数（CBC）\", \"铁代谢检查\", \"粪便隐血试验（FOBT）\", \"结肠镜检查\"], \"matched\": [\"全血细胞计数（CBC）\"], \"precision\": 0.5, \"coverage\": 0.25, \"precisionEligible\": true}, \"treatmentDetail\": {\"submitted\": \"1. 主要治疗：立即启动口服铁剂补充治疗。首选硫酸亚铁或富马酸亚铁，剂量按元素铁计算（3-6 mg/kg/日），分2-3次口服，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时口服维生素C（100mg/次）以增强铁的吸收。\\n2. 个性化调整：患儿4岁，需根据体重精确计算铁剂剂量，避免过量导致中毒。鉴于患儿有眼部肿块和腿部瘀伤病史，虽骨髓检查排除了白血病和髓系肉瘤，但需警惕是否存在慢性失血（如消化道出血、寄生虫感染等）导致的缺铁，建议完善大便潜血试验及腹部超声排查潜在出血源。若口服铁剂不耐受或贫血纠正缓慢，可考虑静脉铁剂治疗，但需在严密监护下进行。\\n3. 安全性与监测：治疗期间需监测血红蛋白、红细胞压积及网织红细胞计数，通常服药后1周网织红细胞升高，2-4周血红蛋白开始上升。注意观察有无黑便（正常现象）、恶心、腹痛等副作用。若出现严重过敏反应或症状无改善，需立即停药并复诊。疗程至少持续至血红蛋白恢复正常后2-3个月，以补足体内储存铁。告知家长若出现高热、剧烈头痛、呕吐或意识改变（提示颅内高压或病情恶化），需立即急诊处理。\", \"overallScore\": 0.32, \"safety\": 1.0, \"effectivenessAlignment\": 0.4, \"personalization\": 0.2, \"reasoning\": \"方案误判患者为儿童，完全忽略真实病例特征，存在严重个体化错误。\", \"reference\": \"主要治疗为口服硫酸亚铁补铁，建议餐后服用以减少胃肠道不适，同时每日补充维生素C以促进铁吸收。鉴于您生活方式活跃且有痔出血病史，辅助治疗包括通过食用小扁豆、菠菜和铁强化谷物来增加膳食铁摄入，并保证充足水分摄入以缓解便秘。您应优先保证每晚7-8小时睡眠，并在白天安排短暂休息，以帮助恢复体力。请安排4周后复诊，复查全血细胞计数（CBC）以评估治疗反应；如乏力加重、出现气短或直肠出血增多，请及时报告。\"}, \"ground_truth\": {\"final_diagnosis\": \"缺铁性贫血\", \"necessary_examinations\": [\"全血细胞计数（CBC）\", \"铁代谢检查\", \"粪便隐血试验（FOBT）\", \"结肠镜检查\"], \"contraindications\": {\"drugs\": [\"Penicillin\"], \"treatments\": []}, \"treatment_plan\": \"主要治疗为口服硫酸亚铁补铁，建议餐后服用以减少胃肠道不适，同时每日补充维生素C以促进铁吸收。鉴于您生活方式活跃且有痔出血病史，辅助治疗包括通过食用小扁豆、菠菜和铁强化谷物来增加膳食铁摄入，并保证充足水分摄入以缓解便秘。您应优先保证每晚7-8小时睡眠，并在白天安排短暂休息，以帮助恢复体力。请安排4周后复诊，复查全血细胞计数（CBC）以评估治疗反应；如乏力加重、出现气短或直肠出血增多，请及时报告。\"}}}\nuser: 诊疗任务（血液科）\n患者描述：孩子最近没有受过外伤。腿部瘀伤是近期出现的，但具体细节我不太确定。目前没有其他部位的不适或异常出血情况。\n孩子没有牙龈出血、鼻出血或其他不明原因瘀斑。也没有发热、视力下降、重影或眼球转动疼痛的情况。\n检查信息：{\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"86 g/L［参考范围：120-160］\", \"红细胞压积\": \"28%［参考范围：36-48］\", \"平均红细胞体积\": \"68 fL［参考范围：80-100］\", \"平均红细胞血红蛋白含量\": \"20 pg［参考范围：27-34］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"红细胞压积\", \"平均红细胞体积\", \"平均红细胞血红蛋白含量\"]}, \"骨髓检查\": {\"result\": {\"异常浸润\": \"无异常浸润\", \"粒红比\": \"3:1［参考值：2:1 至 4:1］\", \"粒细胞系成熟\": \"自髓母细胞经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序［参考值：自髓母细胞（<3%）经早幼粒细胞、幼粒细胞、晚幼粒细胞至成熟粒细胞，成熟过程有序］\", \"红细胞系成熟\": \"正成红细胞性成熟，可见轻度核浆发育不同步，无发育异常特征\", \"纤维化或坏死\": \"无纤维化或坏死\", \"骨小梁\": \"正常\", \"骨髓原始细胞\": \"2%［参考值：<5%］\", \"骨髓巨核细胞\": \"数量充足，形态正常\", \"骨髓浆细胞\": \"1%［参考值：<3%］\", \"骨髓淋巴细胞\": \"15%［参考值：10-20%］\", \"骨髓细胞密度\": \"45%［参考值：30-70%（随年龄变化）］\", \"骨髓铁储备\": \"缺如（0级）［参考值：存在（1-2级，因月经可能较低）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓铁储备\"]}}\nsystem: {\"reward\": 0.6066666666666667, \"success\": true, \"text\": \"{\\\"reflection\\\": {\\\"profile\\\": \\\"患者表现为近期腿部瘀伤，无外伤史，无其他出血症状及发热、眼部异常等表现。\\\", \\\"diagnosis_reflection\\\": \\\"诊断准确命中缺铁性贫血，但在鉴别诊断时未充分结合患者‘腿部瘀伤’这一关键线索深入排查血液系统恶性疾病（如白血病）或凝血功能障碍的潜在风险。\\\", \\\"examination_reflection\\\": \\\"检查选择存在明显偏差：漏开了针对贫血病因筛查的关键检查（铁代谢、粪便隐血、结肠镜），错误开具了非首选的骨髓检查；仅完成了全血细胞计数，导致对慢性失血源头的排查不足。\\\", \\\"treatment_reflection\\\": \\\"治疗方案严重脱离实际：误判患者为儿童并套用儿科剂量方案，完全忽略了成人患者的生活方式（活跃）、痔出血病史及饮食调整需求，缺乏个体化用药指导。\\\", \\\"future_strategy\\\": \\\"面对不明原因瘀伤合并贫血患者，需优先完善铁代谢及消化道出血筛查以明确病因；制定治疗方案时必须严格依据患者年龄、既往史（如痔疮）及生活习惯进行个性化调整，避免套用通用模板。\\\"}}\"}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近有没有出现发热、盗汗（夜间睡觉时大量出汗）、不明原因的体重下降？另外，颈部肿块发现多久了？是否有其他部位的淋巴结肿大或不适？\", \"reason\": \"患者目前仅提供了主诉信息，缺乏关于B症状（发热、盗汗、体重下降）的具体细节、颈部肿块的持续时间以及有无其他伴随症状等关键病史。这些信息对于鉴别诊断（如淋巴瘤、结核或其他感染性疾病）至关重要，因此需要先进行问诊以完善病史采集。\"}}\nassistant: 请问您最近有没有出现发热、盗汗（夜间睡觉时大量出汗）、不明原因的体重下降？另外，颈部肿块发现多久了？是否有其他部位的淋巴结肿大或不适？\nuser: 没有不明原因的体重下降，也没有盗汗。颈部肿块发现大概两个月了，最近感觉有点大。其他部位淋巴结没觉得肿大，就是现在发高烧、头晕得厉害，人很虚。",
+      "assistant: {\"patient_id\": \"Patient_01332\", \"team_id\": \"rsi_87690fabef3b4f2387053bc11a81abbc\", \"diagnosis\": [\"弥漫性大B细胞淋巴瘤\"], \"treatment_plan\": \"1. 主要治疗：立即启动以R-CHOP方案（利妥昔单抗、环磷酰胺、多柔比星、长春新碱、泼尼松）为主的诱导化疗。该方案是治疗弥漫性大B细胞淋巴瘤的标准一线方案，旨在快速杀灭肿瘤细胞，缓解颈部肿块及全身症状。\\n2. 个性化调整：患者为44岁男性，伴有盗汗、低热、体重下降（B症状）及贫血、血小板减少，提示疾病负荷较高且骨髓可能受累。需根据患者体表面积精确计算各药物剂量。鉴于患者有早饱感（可能提示脾大或腹腔淋巴结压迫），化疗期间需密切监测胃肠道反应，必要时加用止吐药和胃黏膜保护剂。若外周血异型细胞负荷高，需警惕肿瘤溶解综合征，化疗前及初期应充分水化并预防性使用别嘌醇或拉布立酶。\\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心电图（特别是多柔比星的心脏毒性）。若出现发热（>38℃）、寒战、严重出血倾向或呼吸困难，需立即就医排除感染或肿瘤溶解综合征。建议每2个疗程后通过PET-CT评估疗效。完成6个疗程后，根据病理亚型和风险分层决定是否进行巩固治疗或自体干细胞移植。告知患者若出现剧烈头痛、呕吐或意识改变（提示中枢神经系统受累），需紧急处理。\", \"reasoning\": \"诊断依据：患者为44岁男性，表现为颈部肿块（8周）、盗汗、低热、体重明显下降（B症状），符合淋巴瘤典型临床表现。实验室检查显示全血细胞减少（贫血、血小板减少、白细胞升高），β2-微球蛋白显著升高（提示肿瘤负荷大），外周血涂片见大量异型淋巴样细胞（胞体大、核深染、核仁明显），高度提示侵袭性非霍奇金淋巴瘤。结合标准疾病名称列表，弥漫性大B细胞淋巴瘤是最符合的恶性血液病诊断。治疗方案选择R-CHOP是基于其作为DLBCL标准治疗的循证医学证据，同时针对患者的年龄和并发症进行了个体化调整以确保安全有效。\", \"ordered_examinations\": [\"全血细胞计数（CBC）\", \"β2-微球蛋白检测\", \"血清蛋白电泳（SPEP）\", \"外周血涂片\"], \"conversation_rounds\": 3, \"finished\": true}\nassistant: {\"reflection\": {\"reflection\": {\"profile\": \"44岁男性，主诉颈部肿块8周伴盗汗、低热、体重下降（B症状）及早饱感，需警惕淋巴瘤可能。\", \"diagnosis_reflection\": \"诊断准确命中弥漫性大B细胞淋巴瘤。经验：对于不明原因淋巴结肿大合并B症状（发热、盗汗、消瘦）的患者，应高度怀疑恶性淋巴瘤并尽快确诊。\", \"examination_reflection\": \"检查选择存在明显遗漏。本次仅开具了基础血液检查，漏掉了关键的影像学分期（PET-CT/增强CT）、骨髓活检（BMAB）以及HIV筛查和肝肾功能评估。经验：疑似淋巴瘤确诊后，必须完善全身分期检查（PET-CT/BMAB）以指导治疗，且务必进行HIV等免疫状态筛查，因这直接影响治疗方案选择和感染预防策略。\", \"treatment_reflection\": \"治疗方案未采用最新的Pola-R-CHP标准方案，且忽略了基于HIV状态和肾功能的个体化调整及抗感染预防细节。经验：DLBCL一线治疗需根据最新指南（如考虑Pola-R-CHP），并在启动化疗前明确患者免疫缺陷状态（如HIV结果）及过敏史，制定针对性的TLS预防和抗感染方案。\", \"future_strategy\": \"面对B症状+淋巴结肿大病例，优先排查淋巴瘤；确诊后必须同步完成分期检查（PET-CT/BMAB）和HIV/免疫评估；治疗方案需严格遵循最新指南并针对患者具体风险（如HIV阳性、肾功能异常、过敏史）进行精细化调整。\"}}, \"evaluation\": {\"patientId\": \"Patient_01332\", \"status\": \"evaluated\", \"evaluationStatus\": \"evaluated\", \"diagnosisAccuracy\": 1.0, \"examinationPrecision\": 0.25, \"treatmentOverallScore\": 0.48, \"treatmentSafety\": 1.0, \"treatmentEffectivenessAlignment\": 0.4, \"treatmentPersonalization\": 0.6, \"diagnosisDetail\": {\"submitted\": [\"弥漫性大B细胞淋巴瘤\"], \"expected\": [\"弥漫性大B细胞淋巴瘤\"], \"matched\": [\"弥漫性大B细胞淋巴瘤\"], \"accuracy\": 1.0, \"status\": \"correct\"}, \"examinationDetail\": {\"ordered\": [\"全血细胞计数（CBC）\", \"β2-微球蛋白检测\", \"血清蛋白电泳（SPEP）\", \"外周血涂片\"], \"expected\": [\"全血细胞计数（CBC）\", \"肝功能检查（LFTs）\", \"肾功能检查（RFTs）\", \"人类免疫缺陷病毒（HIV）筛查\", \"正电子发射断层显像-计算机断层扫描（PET-CT）\", \"增强CT扫描（CECT）\", \"骨髓穿刺和活检（BMAB）\"], \"matched\": [\"全血细胞计数（CBC）\"], \"precision\": 0.25, \"coverage\": 0.14285714285714285, \"precisionEligible\": true}, \"treatmentDetail\": {\"submitted\": \"1. 主要治疗：立即启动以R-CHOP方案（利妥昔单抗、环磷酰胺、多柔比星、长春新碱、泼尼松）为主的诱导化疗。该方案是治疗弥漫性大B细胞淋巴瘤的标准一线方案，旨在快速杀灭肿瘤细胞，缓解颈部肿块及全身症状。\\n2. 个性化调整：患者为44岁男性，伴有盗汗、低热、体重下降（B症状）及贫血、血小板减少，提示疾病负荷较高且骨髓可能受累。需根据患者体表面积精确计算各药物剂量。鉴于患者有早饱感（可能提示脾大或腹腔淋巴结压迫），化疗期间需密切监测胃肠道反应，必要时加用止吐药和胃黏膜保护剂。若外周血异型细胞负荷高，需警惕肿瘤溶解综合征，化疗前及初期应充分水化并预防性使用别嘌醇或拉布立酶。\\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心电图（特别是多柔比星的心脏毒性）。若出现发热（>38℃）、寒战、严重出血倾向或呼吸困难，需立即就医排除感染或肿瘤溶解综合征。建议每2个疗程后通过PET-CT评估疗效。完成6个疗程后，根据病理亚型和风险分层决定是否进行巩固治疗或自体干细胞移植。告知患者若出现剧烈头痛、呕吐或意识改变（提示中枢神经系统受累），需紧急处理。\", \"overallScore\": 0.48, \"safety\": 1.0, \"effectivenessAlignment\": 0.4, \"personalization\": 0.6, \"reasoning\": \"方案未采用参考标准Pola-R-CHP且忽略HIV确诊及免疫缺陷关键管理，仅提及青霉素过敏。\", \"reference\": \"患者将开始采用Pola-R-CHP方案进行一线治疗，该方案包括维泊妥珠单抗联合利妥昔单抗、环磷酰胺、多柔比星和泼尼松，按每21天为一个周期给药。鉴于其存在免疫抑制状态（接受免疫球蛋白替代治疗的原发性免疫缺陷）及轻至中度肾功能障碍，将给予感染预防和肿瘤溶解综合征（TLS）预防，并根据肾功能调整剂量，同时进行密切监测。\\n\\nHIV筛查结果核实：第四代HIV筛查试验为反应性；将进一步进行HIV-1/2分型免疫测定和HIV-1 RNA病毒载量检测以确认。如果确认检测提示真实HIV感染，则需在Pola-R-CHP治疗前/治疗期间与HIV专科医生协同管理，以启动/优化抗逆转录病毒治疗，并据此调整感染预防和疫苗接种策略（避免活疫苗；根据免疫状态及治疗时机，确保接种适当的灭活疫苗）。如果确认检测为阴性且HIV RNA不可检测，应将该结果记录为很可能是假阳性筛查，并继续以原发性免疫缺陷为重点开展感染预防。\\n\\n抗感染预防（青霉素过敏）：鉴于既往对青霉素出现皮疹，应避免使用青霉素，并酌情避免其他β-内酰胺类药物。采用过敏安全的预防方案（例如，如可耐受可使用甲氧苄啶-磺胺甲噁唑进行肺孢子菌肺炎预防；若出现磺胺类不耐受，可改用阿托伐醌等替代方案；抗病毒预防如阿昔洛韦/伐昔洛韦按机构方案执行）。如因中性粒细胞减少风险需要抗菌预防，应依据本地指南选择非β-内酰胺类药物。\\n\\nTLS预防和肾功能监测：开始使用经肾功能调整剂量的别嘌醇（例如100 mg每日，并根据尿酸和肾功能耐受情况逐步调整），并在治疗周期开始前后频繁监测尿酸、钾、磷、钙、碳酸氢盐和肌酐。提供明确的补液策略（在耐受范围内口服/静脉补液，同时关注容量状态和肾功能）。如果TLS风险高（例如肿瘤负荷高/LDH高、尿酸快速升高），或肾功能恶化且尿酸无法控制，或已发生TLS，则升级使用拉布立酶。\\n\\n随访将包括定期复查血常规和生化全套，并在两个周期后进行影像学检查以评估治疗反应，同时嘱患者如出现发热、寒战或明显神经系统症状应立即报告。\"}, \"ground_truth\": {\"final_diagnosis\": \"弥漫性大B细胞淋巴瘤\", \"necessary_examinations\": [\"全血细胞计数（CBC）\", \"肝功能检查（LFTs）\", \"肾功能检查（RFTs）\", \"人类免疫缺陷病毒（HIV）筛查\", \"正电子发射断层显像-计算机断层扫描（PET-CT）\", \"增强CT扫描（CECT）\", \"骨髓穿刺和活检（BMAB）\"], \"contraindications\": {\"drugs\": [\"Penicillin\"], \"treatments\": []}, \"treatment_plan\": \"患者将开始采用Pola-R-CHP方案进行一线治疗，该方案包括维泊妥珠单抗联合利妥昔单抗、环磷酰胺、多柔比星和泼尼松，按每21天为一个周期给药。鉴于其存在免疫抑制状态（接受免疫球蛋白替代治疗的原发性免疫缺陷）及轻至中度肾功能障碍，将给予感染预防和肿瘤溶解综合征（TLS）预防，并根据肾功能调整剂量，同时进行密切监测。\\n\\nHIV筛查结果核实：第四代HIV筛查试验为反应性；将进一步进行HIV-1/2分型免疫测定和HIV-1 RNA病毒载量检测以确认。如果确认检测提示真实HIV感染，则需在Pola-R-CHP治疗前/治疗期间与HIV专科医生协同管理，以启动/优化抗逆转录病毒治疗，并据此调整感染预防和疫苗接种策略（避免活疫苗；根据免疫状态及治疗时机，确保接种适当的灭活疫苗）。如果确认检测为阴性且HIV RNA不可检测，应将该结果记录为很可能是假阳性筛查，并继续以原发性免疫缺陷为重点开展感染预防。\\n\\n抗感染预防（青霉素过敏）：鉴于既往对青霉素出现皮疹，应避免使用青霉素，并酌情避免其他β-内酰胺类药物。采用过敏安全的预防方案（例如，如可耐受可使用甲氧苄啶-磺胺甲噁唑进行肺孢子菌肺炎预防；若出现磺胺类不耐受，可改用阿托伐醌等替代方案；抗病毒预防如阿昔洛韦/伐昔洛韦按机构方案执行）。如因中性粒细胞减少风险需要抗菌预防，应依据本地指南选择非β-内酰胺类药物。\\n\\nTLS预防和肾功能监测：开始使用经肾功能调整剂量的别嘌醇（例如100 mg每日，并根据尿酸和肾功能耐受情况逐步调整），并在治疗周期开始前后频繁监测尿酸、钾、磷、钙、碳酸氢盐和肌酐。提供明确的补液策略（在耐受范围内口服/静脉补液，同时关注容量状态和肾功能）。如果TLS风险高（例如肿瘤负荷高/LDH高、尿酸快速升高），或肾功能恶化且尿酸无法控制，或已发生TLS，则升级使用拉布立酶。\\n\\n随访将包括定期复查血常规和生化全套，并在两个周期后进行影像学检查以评估治疗反应，同时嘱患者如出现发热、寒战或明显神经系统症状应立即报告。\"}}}\nuser: 诊疗任务（血液科）\n患者描述：没有外伤，腿部也没有瘀伤。我没有牙龈出血、鼻出血或皮肤不明原因的瘀斑。\n我没有发热、视力下降或眼球转动疼痛。我只有颈部肿块和盗汗，没有提到孩子揉眼睛或左眼突出的情况。您是不是问错人了？我是李春池，44岁男性。\n颈部肿块发现约8周了。除了盗汗，我还有低热、食欲下降、早饱、疲劳加重和3个月内减重约12磅。没有咳嗽或胸痛。\n检查信息：{\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"112 g/L［参考范围：140-180］\", \"血小板计数\": \"118 x10^9/L［参考范围：150-400］\", \"血白细胞计数\": \"13.6 x10^9/L［参考范围：4.5-11.0］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血小板计数\", \"血白细胞计数\"]}, \"β2-微球蛋白检测\": {\"result\": {\"β2-微球蛋白\": \"4.8 mg/L［参考值：0.8-2.4 mg/L（或 0.8-2.4 μg/mL）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"β2-微球蛋白\"]}, \"血清蛋白电泳（SPEP）\": {\"result\": {\"α1球蛋白\": \"0.25 g/dL［参考值：0.1-0.3 g/dL（2-5%）］\", \"α2球蛋白\": \"0.85 g/dL［参考值：0.6-1.0 g/dL（7-13%）］\", \"白蛋白/球蛋白比值\": \"1.4［参考值：1.1-2.5］\", \"血清β球蛋白\": \"0.95 g/dL［参考值：0.7-1.2 g/dL（8-14%）］\", \"血清总蛋白\": \"7.2 g/dL［参考值：6.0-8.3 g/dL］\", \"血清白蛋白\": \"4.2 g/dL［参考值：3.5-5.0 g/dL（53-65%）］\", \"血清蛋白电泳γ球蛋白\": \"1.35 g/dL［参考值：0.7-1.6 g/dL（12-22%）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫或包涵体。\", \"异型细胞或原始细胞\": \"可见大量异型淋巴样细胞，胞体较大，核大深染，核仁明显，部分细胞呈分裂象。\", \"白细胞分类计数\": \"中性粒细胞 65%、淋巴细胞 20%、单核细胞 10%、嗜酸性粒细胞 3%、嗜碱性粒细胞 2%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"部分中性粒细胞核分叶过多，可见中毒颗粒；异型淋巴样细胞核浆比例增大，染色质粗糙。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一，可见轻度大小不等及异形红细胞。\", \"血小板形态与分布\": \"部分血小板体积增大，形态不规则，分布欠均匀。\", \"血小板数量\": \"估计约 120,000/μL。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"偶见小簇聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异型细胞或原始细胞\", \"白细胞分类计数\", \"白细胞形态\", \"红细胞形态\", \"血小板形态与分布\", \"血小板数量\", \"血小板聚集\"]}}\nsystem: {\"reward\": 0.5766666666666667, \"success\": true, \"text\": \"{\\\"reflection\\\": {\\\"profile\\\": \\\"44岁男性，主诉颈部肿块8周伴盗汗、低热、体重下降（B症状）及早饱感，需警惕淋巴瘤可能。\\\", \\\"diagnosis_reflection\\\": \\\"诊断准确命中弥漫性大B细胞淋巴瘤。经验：对于不明原因淋巴结肿大合并B症状（发热、盗汗、消瘦）的患者，应高度怀疑恶性淋巴瘤并尽快确诊。\\\", \\\"examination_reflection\\\": \\\"检查选择存在明显遗漏。本次仅开具了基础血液检查，漏掉了关键的影像学分期（PET-CT/增强CT）、骨髓活检（BMAB）以及HIV筛查和肝肾功能评估。经验：疑似淋巴瘤确诊后，必须完善全身分期检查（PET-CT/BMAB）以指导治疗，且务必进行HIV等免疫状态筛查，因这直接影响治疗方案选择和感染预防策略。\\\", \\\"treatment_reflection\\\": \\\"治疗方案未采用最新的Pola-R-CHP标准方案，且忽略了基于HIV状态和肾功能的个体化调整及抗感染预防细节。经验：DLBCL一线治疗需根据最新指南（如考虑Pola-R-CHP），并在启动化疗前明确患者免疫缺陷状态（如HIV结果）及过敏史，制定针对性的TLS预防和抗感染方案。\\\", \\\"future_strategy\\\": \\\"面对B症状+淋巴结肿大病例，优先排查淋巴瘤；确诊后必须同步完成分期检查（PET-CT/BMAB）和HIV/免疫评估；治疗方案需严格遵循最新指南并针对患者具体风险（如HIV阳性、肾功能异常、过敏史）进行精细化调整。\\\"}}\"}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子最近有没有受过外伤？另外，您提到的腿部瘀伤是近期出现的吗？是否有其他部位的不适或异常出血情况？\", \"reason\": \"患者主诉左眼突出、眼皮肿及太阳穴包块，同时提及腿部瘀伤并担心白血病。目前缺乏关于外伤史、瘀伤具体出现时间及是否伴有其他出血倾向等关键信息，需要进一步问诊以鉴别眼眶蜂窝织炎、外伤性血肿或血液系统疾病（如白血病）的可能性。\"}}\nassistant: 孩子最近有没有受过外伤？另外，您提到的腿部瘀伤是近期出现的吗？是否有其他部位的不适或异常出血情况？\nuser: 没有受过外伤，腿上的瘀伤也是最近才有的。孩子其他部位没出血，就是总揉眼睛。我们很担心是不是白血病，您看这严重吗？",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，李春池先生。刚才的对话似乎有些混淆，您提到自己是44岁男性，有颈部肿块和盗汗，但没有眼部症状。请问您出现颈部肿块多久了？除了盗汗，是否还有发热、体重明显下降或咳嗽等其他不适？\", \"reason\": \"患者自述为44岁男性，主诉颈部肿块和盗汗，这与之前的儿童眼眶症状完全不同。为了明确诊断方向（如淋巴瘤、结核或其他感染/肿瘤），需要进一步询问肿块的持续时间、伴随症状及全身情况，以决定是否需要开具血液检查或影像学检查。\"}}\nassistant: 您好，李春池先生。刚才的对话似乎有些混淆，您提到自己是44岁男性，有颈部肿块和盗汗，但没有眼部症状。请问您出现颈部肿块多久了？除了盗汗，是否还有发热、体重明显下降或咳嗽等其他不适？\nuser: 颈部肿块发现约8周了。除了盗汗，我还有低热、食欲下降、早饱、疲劳加重和3个月内减重约12磅。没有咳嗽或胸痛。",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者为44岁男性，有颈部肿块、盗汗、低热、体重下降等B症状。检查结果显示全血细胞计数异常（贫血、血小板减少、白细胞升高），β2-微球蛋白显著升高，外周血涂片可见大量异型淋巴样细胞。结合临床表现和实验室检查结果，高度提示恶性淋巴瘤，信息已足够进行诊断并制定后续治疗方案。\"}}\nassistant: {\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者为44岁男性，表现为颈部肿块、盗汗、低热、体重下降等B症状，且全血细胞计数显示贫血、血小板减少及白细胞升高。外周血涂片发现大量异型淋巴样细胞，形态学高度提示恶性淋巴瘤或白血病。β2-微球蛋白显著升高也支持血液系统恶性肿瘤的诊断。虽然肿瘤科也可处理此类疾病，但血液科是负责血液系统恶性肿瘤（如淋巴瘤、白血病）的确诊、分期及制定化疗方案的首选和核心科室。\"}}\nassistant: {\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"弥漫性大B细胞淋巴瘤\", \"treatment_plan\": \"1. 主要治疗：立即启动以R-CHOP方案（利妥昔单抗、环磷酰胺、多柔比星、长春新碱、泼尼松）为主的诱导化疗。该方案是治疗弥漫性大B细胞淋巴瘤的标准一线方案，旨在快速杀灭肿瘤细胞，缓解颈部肿块及全身症状。\\n2. 个性化调整：患者为44岁男性，伴有盗汗、低热、体重下降（B症状）及贫血、血小板减少，提示疾病负荷较高且骨髓可能受累。需根据患者体表面积精确计算各药物剂量。鉴于患者有早饱感（可能提示脾大或腹腔淋巴结压迫），化疗期间需密切监测胃肠道反应，必要时加用止吐药和胃黏膜保护剂。若外周血异型细胞负荷高，需警惕肿瘤溶解综合征，化疗前及初期应充分水化并预防性使用别嘌醇或拉布立酶。\\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心电图（特别是多柔比星的心脏毒性）。若出现发热（>38℃）、寒战、严重出血倾向或呼吸困难，需立即就医排除感染或肿瘤溶解综合征。建议每2个疗程后通过PET-CT评估疗效。完成6个疗程后，根据病理亚型和风险分层决定是否进行巩固治疗或自体干细胞移植。告知患者若出现剧烈头痛、呕吐或意识改变（提示中枢神经系统受累），需紧急处理。\", \"reasoning\": \"诊断依据：患者为44岁男性，表现为颈部肿块（8周）、盗汗、低热、体重明显下降（B症状），符合淋巴瘤典型临床表现。实验室检查显示全血细胞减少（贫血、血小板减少、白细胞升高），β2-微球蛋白显著升高（提示肿瘤负荷大），外周血涂片见大量异型淋巴样细胞（胞体大、核深染、核仁明显），高度提示侵袭性非霍奇金淋巴瘤。结合标准疾病名称列表，弥漫性大B细胞淋巴瘤是最符合的恶性血液病诊断。治疗方案选择R-CHOP是基于其作为DLBCL标准治疗的循证医学证据，同时针对患者的年龄和并发症进行了个体化调整以确保安全有效。\"}}",
+      "assistant: {\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者为44岁男性，出现颈部肿块（8周）、盗汗、低热、体重下降及早饱等症状，高度怀疑淋巴瘤或血液系统恶性肿瘤。目前缺乏实验室检查支持诊断，需优先开具血常规、LDH等血液学检查及颈部超声/CT以明确病因。\"}}\nassistant: {\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者为44岁男性，出现颈部肿块、盗汗、低热、体重明显下降（B症状）及早饱感，高度怀疑淋巴瘤或血液系统恶性肿瘤。首选进行全血细胞计数（CBC）以评估是否存在贫血、血小板减少或白细胞异常，同时可初步筛查感染或炎症指标，为后续确诊（如骨髓穿刺、淋巴结活检）提供关键依据。\"}}\nassistant: {\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"β2-微球蛋白检测\", \"血清蛋白电泳（SPEP）\", \"外周血涂片\"], \"reason\": \"\"}}\nuser: {\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"112 g/L［参考范围：140-180］\", \"血小板计数\": \"118 x10^9/L［参考范围：150-400］\", \"血白细胞计数\": \"13.6 x10^9/L［参考范围：4.5-11.0］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血小板计数\", \"血白细胞计数\"]}, \"β2-微球蛋白检测\": {\"result\": {\"β2-微球蛋白\": \"4.8 mg/L［参考值：0.8-2.4 mg/L（或 0.8-2.4 μg/mL）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"β2-微球蛋白\"]}, \"血清蛋白电泳（SPEP）\": {\"result\": {\"α1球蛋白\": \"0.25 g/dL［参考值：0.1-0.3 g/dL（2-5%）］\", \"α2球蛋白\": \"0.85 g/dL［参考值：0.6-1.0 g/dL（7-13%）］\", \"白蛋白/球蛋白比值\": \"1.4［参考值：1.1-2.5］\", \"血清β球蛋白\": \"0.95 g/dL［参考值：0.7-1.2 g/dL（8-14%）］\", \"血清总蛋白\": \"7.2 g/dL［参考值：6.0-8.3 g/dL］\", \"血清白蛋白\": \"4.2 g/dL［参考值：3.5-5.0 g/dL（53-65%）］\", \"血清蛋白电泳γ球蛋白\": \"1.35 g/dL［参考值：0.7-1.6 g/dL（12-22%）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫或包涵体。\", \"异型细胞或原始细胞\": \"可见大量异型淋巴样细胞，胞体较大，核大深染，核仁明显，部分细胞呈分裂象。\", \"白细胞分类计数\": \"中性粒细胞 65%、淋巴细胞 20%、单核细胞 10%、嗜酸性粒细胞 3%、嗜碱性粒细胞 2%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"部分中性粒细胞核分叶过多，可见中毒颗粒；异型淋巴样细胞核浆比例增大，染色质粗糙。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一，可见轻度大小不等及异形红细胞。\", \"血小板形态与分布\": \"部分血小板体积增大，形态不规则，分布欠均匀。\", \"血小板数量\": \"估计约 120,000/μL。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"偶见小簇聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异型细胞或原始细胞\", \"白细胞分类计数\", \"白细胞形态\", \"红细胞形态\", \"血小板形态与分布\", \"血小板数量\", \"血小板聚集\"]}}}"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您最近有没有出现发热、盗汗（夜间睡觉时大量出汗）、不明原因的体重下降？另外，颈部肿块发现多久了？是否有其他部位的淋巴结肿大或不适？"
+      },
+      {
+        "from": "patient",
+        "text": "发热和盗汗确实有，体重也掉了大概4公斤。颈部肿块发现快两个月了，最近感觉腋下也有点肿。但我网上查过这些症状，觉得可能是寄生虫感染或者淋巴瘤，您得给我做相关检查确认一下，不能光听我说。"
+      },
+      {
+        "from": "doctor",
+        "text": "您提到颈部肿块快两个月了，最近感觉腋下也有点肿。请问除了颈部和腋下，腹股沟或其他部位有没有摸到类似的肿块？另外，您是否有皮疹、关节痛或近期接触过传染病患者？"
+      },
+      {
+        "from": "patient",
+        "text": "腹股沟没摸到肿块，其他地方也没有。没有关节痛，也没接触过传染病患者。但我网上查了，结合我农村旅行和吃生食的经历，很像寄生虫感染或淋巴瘤，必须做检查确认，不能光听我说。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "15.2 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］",
+          "血液嗜酸性粒细胞": "3.4 x 10^9/L［参考范围：<0.5 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血液嗜酸性粒细胞"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "可见大量嗜酸性粒细胞，部分细胞呈现脱颗粒现象；未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "无异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞 52%、淋巴细胞 30%、单核细胞 8%、嗜酸性粒细胞 9%、嗜碱性粒细胞 1%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当，嗜酸性粒细胞胞质内可见明显嗜酸性颗粒及脱颗粒改变。",
+          "红细胞形态": "正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。",
+          "血小板形态与分布": "大小和形态正常，分布均匀。",
+          "血小板数量": "数量充足（估计 240,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "外周血涂片其他异常所见",
+          "白细胞分类计数"
+        ]
+      },
+      "β2-微球蛋白检测": {
+        "result": {
+          "β2-微球蛋白": "1.6 mg/L［参考值：0.8-2.4 mg/L（或 0.8-2.4 μg/mL）］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "寄生虫血清学检测": {
+        "result": {
+          "特异性抗体IgG滴度": "1:128［参考范围：<1:16］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "特异性抗体IgG滴度"
+        ]
+      },
+      "血清IgE检测": {
+        "result": {
+          "总IgE": "980 IU/mL［参考值：0 - 100 IU/mL（相当于 0 - 100 kU/L 或约 0 - 240 ng/mL）］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "总IgE"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您最近有没有出现发热、盗汗（夜间睡觉时大量出汗）、不明原因的体重下降？另外，颈部肿块发现多久了？是否有其他部位的淋巴结肿大或不适？",
+        "reason": "患者目前仅提供了主诉信息，缺乏关于B症状（发热、盗汗、体重下降）的具体细节、颈部肿块的持续时间以及有无其他伴随症状等关键病史。这些信息对于鉴别诊断（如淋巴瘤、结核或其他感染性疾病）至关重要，因此需要先进行问诊以完善病史采集。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "您提到颈部肿块快两个月了，最近感觉腋下也有点肿。请问除了颈部和腋下，腹股沟或其他部位有没有摸到类似的肿块？另外，您是否有皮疹、关节痛或近期接触过传染病患者？",
+        "reason": "患者主诉颈部肿块伴发热、盗汗、体重下降及新出现的腋下肿大，高度怀疑淋巴瘤或感染性疾病。目前缺乏关于全身淋巴结分布情况（如腹股沟）、伴随症状（皮疹、关节痛）及流行病学史的关键信息，需要进一步问诊以鉴别诊断方向并决定后续检查策略。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有颈部及腋下肿块、发热、盗汗、体重下降等B症状，且自述有农村旅行和生食史，需鉴别淋巴瘤与寄生虫感染。目前尚未进行任何检查，必须优先开具全血细胞计数（CBC）、外周血涂片以评估血液系统异常，以及寄生虫相关检查（如粪便虫卵检查）来明确病因，为后续诊断提供依据。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为颈部及腋下淋巴结肿大，伴有发热、盗汗、体重下降（B症状），且血常规显示白细胞升高伴显著嗜酸性粒细胞增多。虽然外周血涂片未见寄生虫，但结合患者有农村旅行和生食史，高度怀疑寄生虫感染（如异尖线虫、弓首线虫等）或嗜酸性粒细胞增多症相关疾病（如淋巴瘤、特发性高嗜酸性粒细胞综合征）。目前的检查不足以确诊病因，需进一步进行粪便常规及寄生虫卵检查以排查肠道寄生虫，同时建议行腹部超声或CT评估内脏受累情况，必要时进行淋巴结活检以明确病理诊断。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有颈部及腋下肿块、发热、盗汗、体重下降等B症状，结合农村旅行和生食史。实验室检查显示白细胞显著升高伴嗜酸性粒细胞增多（3.4 x 10^9/L），外周血涂片见大量嗜酸性粒细胞及脱颗粒现象，寄生虫血清学特异性抗体IgG滴度显著升高（1:128），总IgE显著升高（980 IU/mL）。β2-微球蛋白正常排除了高肿瘤负荷的血液恶性肿瘤。综合临床表现、流行病学史及特异性检查结果，高度提示寄生虫感染（如内脏幼虫移行症或类似疾病）引起的嗜酸性粒细胞增多症，诊断依据充分，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "β2-微球蛋白检测"
+        ],
+        "reason": "患者表现为颈部及腋下淋巴结肿大，伴有发热、盗汗和体重下降（B症状），高度怀疑淋巴瘤或血液系统恶性肿瘤。首先需进行全血细胞计数（CBC）评估是否存在贫血、血小板减少或白细胞异常；外周血涂片用于观察是否有异型淋巴细胞或原始细胞，辅助鉴别白血病或淋巴瘤；β2-微球蛋白是评估淋巴瘤肿瘤负荷和预后的重要指标，有助于确诊和分期。"
+      },
+      {
+        "category": "实验室检查 - 免疫学",
+        "examinations": [
+          "寄生虫血清学检测",
+          "血清IgE检测"
+        ],
+        "reason": "患者有颈部及腋下淋巴结肿大、盗汗、体重下降等B症状，且近期有农村旅行和生食史，外周血检查显示白细胞计数显著升高伴嗜酸性粒细胞增多（3.4 x 10^9/L），高度提示寄生虫感染可能。因此首选“寄生虫血清学检测”以明确病原体（如囊虫、棘球蚴、丝虫等）。同时，嗜酸性粒细胞增多常与过敏反应或寄生虫感染相关，“血清IgE检测”作为过敏及寄生虫感染的辅助指标，有助于进一步鉴别诊断。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "嗜酸性粒细胞增多症",
+      "treatment_plan": "1. 主要治疗：针对寄生虫感染引起的继发性嗜酸性粒细胞增多症，首选抗寄生虫药物治疗。鉴于血清学检测提示特异性抗体阳性（IgG滴度1:128），建议立即启动阿苯达唑（Albendazole）或吡喹酮（Praziquantel）治疗，具体药物选择需根据进一步确认的寄生虫种类（如蛔虫、钩虫、血吸虫等）调整剂量和疗程。同时，可短期使用糖皮质激素（如泼尼松）以缓解严重的过敏反应和嗜酸性粒细胞介导的组织损伤，但需在抗寄生虫药起效后逐渐减量，以防寄生虫死亡释放抗原加重反应。\n2. 个性化调整：患者有农村旅行史和生食经历，高度怀疑食源性寄生虫感染。治疗方案需结合其具体的饮食暴露史进行针对性驱虫。若患者对拟用药物过敏（如既往有磺胺类或特定抗生素过敏史），需更换替代药物。鉴于患者目前无严重器官受累证据（β2-微球蛋白正常，无骨髓浸润迹象），暂不需要化疗或免疫抑制剂长期维持，重点在于清除病原体和纠正高IgE状态。\n3. 安全性与监测：治疗期间需密切监测血常规变化，特别是嗜酸性粒细胞计数是否下降，以及肝功能指标（部分抗寄生虫药可能引起肝毒性）。告知患者可能出现赫氏反应（Jarisch-Herxheimer reaction），即治疗后症状暂时加重，属正常现象，但若出现呼吸困难、喉头水肿、剧烈腹痛或意识改变，需立即急诊处理。建议治疗2周后复查全血细胞计数、总IgE及寄生虫相关抗体，评估疗效并决定是否需要重复疗程。若症状持续或加重，需重新评估是否存在其他病因（如嗜酸性粒细胞白血病或淋巴瘤）。",
+      "reasoning": "诊断依据：患者表现为颈部及腋下淋巴结肿大、发热、盗汗、体重下降等B症状，且外周血检查显示白细胞总数升高（15.2 x 10^9/L）伴显著嗜酸性粒细胞增多（3.4 x 10^9/L，分类占比9%），符合嗜酸性粒细胞增多症的实验室特征。结合患者农村旅行史、生食习惯，以及寄生虫血清学检测特异性抗体IgG滴度显著升高（1:128）和总IgE水平极度升高（980 IU/mL），高度提示由寄生虫感染引发的继发性嗜酸性粒细胞增多症。虽然患者担心淋巴瘤，但β2-微球蛋白正常且外周血未见异型细胞，不支持恶性血液肿瘤诊断。因此，诊断为嗜酸性粒细胞增多症（继发于寄生虫感染）。治疗方案以抗寄生虫为核心，兼顾抗炎和对症支持，确保快速控制感染源并缓解全身症状。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_01666",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.4,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "expected": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "matched": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "β2-微球蛋白检测",
+          "寄生虫血清学检测",
+          "血清IgE检测"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "红细胞沉降率（ESR）",
+          "C反应蛋白（CRP）",
+          "肝功能检查（LFTs）",
+          "肺功能检查（PFTs）",
+          "胸部CT扫描（Chest CT）",
+          "皮肤活检"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "寄生虫血清学检测"
+        ],
+        "precision": 0.4,
+        "coverage": 0.2,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：针对寄生虫感染引起的继发性嗜酸性粒细胞增多症，首选抗寄生虫药物治疗。鉴于血清学检测提示特异性抗体阳性（IgG滴度1:128），建议立即启动阿苯达唑（Albendazole）或吡喹酮（Praziquantel）治疗，具体药物选择需根据进一步确认的寄生虫种类（如蛔虫、钩虫、血吸虫等）调整剂量和疗程。同时，可短期使用糖皮质激素（如泼尼松）以缓解严重的过敏反应和嗜酸性粒细胞介导的组织损伤，但需在抗寄生虫药起效后逐渐减量，以防寄生虫死亡释放抗原加重反应。\n2. 个性化调整：患者有农村旅行史和生食经历，高度怀疑食源性寄生虫感染。治疗方案需结合其具体的饮食暴露史进行针对性驱虫。若患者对拟用药物过敏（如既往有磺胺类或特定抗生素过敏史），需更换替代药物。鉴于患者目前无严重器官受累证据（β2-微球蛋白正常，无骨髓浸润迹象），暂不需要化疗或免疫抑制剂长期维持，重点在于清除病原体和纠正高IgE状态。\n3. 安全性与监测：治疗期间需密切监测血常规变化，特别是嗜酸性粒细胞计数是否下降，以及肝功能指标（部分抗寄生虫药可能引起肝毒性）。告知患者可能出现赫氏反应（Jarisch-Herxheimer reaction），即治疗后症状暂时加重，属正常现象，但若出现呼吸困难、喉头水肿、剧烈腹痛或意识改变，需立即急诊处理。建议治疗2周后复查全血细胞计数、总IgE及寄生虫相关抗体，评估疗效并决定是否需要重复疗程。若症状持续或加重，需重新评估是否存在其他病因（如嗜酸性粒细胞白血病或淋巴瘤）。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全未违禁忌，但遗漏吸入激素及抗组胺药等关键辅助治疗。",
+        "reference": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "嗜酸性粒细胞增多症",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "红细胞沉降率（ESR）",
+          "C反应蛋白（CRP）",
+          "肝功能检查（LFTs）",
+          "肺功能检查（PFTs）",
+          "胸部CT扫描（Chest CT）",
+          "皮肤活检"
+        ],
+        "contraindications": {
+          "drugs": [
+            "青霉素类",
+            "贝类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者有发热、盗汗、体重下降及多部位淋巴结肿大，伴有农村旅行史和生食经历，高度提示寄生虫感染或淋巴瘤。",
+        "diagnosis_reflection": "诊断准确命中嗜酸性粒细胞增多症，成功识别了核心病理状态。",
+        "examination_reflection": "检查选择精准度不足（0.4），遗漏了粪便虫卵检查、炎症指标（ESR/CRP）、影像学（胸部CT）及肝功能等关键排查项目，仅覆盖了血常规和部分血清学检测。",
+        "treatment_reflection": "治疗方案安全性高且逻辑正确，但遗漏了抗组胺药缓解瘙痒及吸入性糖皮质激素控制呼吸道症状等辅助治疗措施，个性化调整空间可进一步优化。",
+        "future_strategy": "面对疑似寄生虫感染伴全身症状患者，需完善粪便镜检、炎症指标及影像学评估以排除其他病因；治疗时除针对性驱虫外，应常规联合抗过敏及对症支持治疗，并密切监测赫氏反应及肝毒性。"
+      }
+    },
+    "encounter_timestamp": "2026-11-09T07:59:46.908226+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_01666",
+    "team_id": "rsi_87690fabef3b4f2387053bc11a81abbc",
+    "diagnosis": [
+      "嗜酸性粒细胞增多症"
+    ],
+    "treatment_plan": "1. 主要治疗：针对寄生虫感染引起的继发性嗜酸性粒细胞增多症，首选抗寄生虫药物治疗。鉴于血清学检测提示特异性抗体阳性（IgG滴度1:128），建议立即启动阿苯达唑（Albendazole）或吡喹酮（Praziquantel）治疗，具体药物选择需根据进一步确认的寄生虫种类（如蛔虫、钩虫、血吸虫等）调整剂量和疗程。同时，可短期使用糖皮质激素（如泼尼松）以缓解严重的过敏反应和嗜酸性粒细胞介导的组织损伤，但需在抗寄生虫药起效后逐渐减量，以防寄生虫死亡释放抗原加重反应。\n2. 个性化调整：患者有农村旅行史和生食经历，高度怀疑食源性寄生虫感染。治疗方案需结合其具体的饮食暴露史进行针对性驱虫。若患者对拟用药物过敏（如既往有磺胺类或特定抗生素过敏史），需更换替代药物。鉴于患者目前无严重器官受累证据（β2-微球蛋白正常，无骨髓浸润迹象），暂不需要化疗或免疫抑制剂长期维持，重点在于清除病原体和纠正高IgE状态。\n3. 安全性与监测：治疗期间需密切监测血常规变化，特别是嗜酸性粒细胞计数是否下降，以及肝功能指标（部分抗寄生虫药可能引起肝毒性）。告知患者可能出现赫氏反应（Jarisch-Herxheimer reaction），即治疗后症状暂时加重，属正常现象，但若出现呼吸困难、喉头水肿、剧烈腹痛或意识改变，需立即急诊处理。建议治疗2周后复查全血细胞计数、总IgE及寄生虫相关抗体，评估疗效并决定是否需要重复疗程。若症状持续或加重，需重新评估是否存在其他病因（如嗜酸性粒细胞白血病或淋巴瘤）。",
+    "reasoning": "诊断依据：患者表现为颈部及腋下淋巴结肿大、发热、盗汗、体重下降等B症状，且外周血检查显示白细胞总数升高（15.2 x 10^9/L）伴显著嗜酸性粒细胞增多（3.4 x 10^9/L，分类占比9%），符合嗜酸性粒细胞增多症的实验室特征。结合患者农村旅行史、生食习惯，以及寄生虫血清学检测特异性抗体IgG滴度显著升高（1:128）和总IgE水平极度升高（980 IU/mL），高度提示由寄生虫感染引发的继发性嗜酸性粒细胞增多症。虽然患者担心淋巴瘤，但β2-微球蛋白正常且外周血未见异型细胞，不支持恶性血液肿瘤诊断。因此，诊断为嗜酸性粒细胞增多症（继发于寄生虫感染）。治疗方案以抗寄生虫为核心，兼顾抗炎和对症支持，确保快速控制感染源并缓解全身症状。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "β2-微球蛋白检测",
+      "寄生虫血清学检测",
+      "血清IgE检测"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_01666",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.4,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "expected": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "matched": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "β2-微球蛋白检测",
+        "寄生虫血清学检测",
+        "血清IgE检测"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "红细胞沉降率（ESR）",
+        "C反应蛋白（CRP）",
+        "肝功能检查（LFTs）",
+        "肺功能检查（PFTs）",
+        "胸部CT扫描（Chest CT）",
+        "皮肤活检"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "寄生虫血清学检测"
+      ],
+      "precision": 0.4,
+      "coverage": 0.2,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：针对寄生虫感染引起的继发性嗜酸性粒细胞增多症，首选抗寄生虫药物治疗。鉴于血清学检测提示特异性抗体阳性（IgG滴度1:128），建议立即启动阿苯达唑（Albendazole）或吡喹酮（Praziquantel）治疗，具体药物选择需根据进一步确认的寄生虫种类（如蛔虫、钩虫、血吸虫等）调整剂量和疗程。同时，可短期使用糖皮质激素（如泼尼松）以缓解严重的过敏反应和嗜酸性粒细胞介导的组织损伤，但需在抗寄生虫药起效后逐渐减量，以防寄生虫死亡释放抗原加重反应。\n2. 个性化调整：患者有农村旅行史和生食经历，高度怀疑食源性寄生虫感染。治疗方案需结合其具体的饮食暴露史进行针对性驱虫。若患者对拟用药物过敏（如既往有磺胺类或特定抗生素过敏史），需更换替代药物。鉴于患者目前无严重器官受累证据（β2-微球蛋白正常，无骨髓浸润迹象），暂不需要化疗或免疫抑制剂长期维持，重点在于清除病原体和纠正高IgE状态。\n3. 安全性与监测：治疗期间需密切监测血常规变化，特别是嗜酸性粒细胞计数是否下降，以及肝功能指标（部分抗寄生虫药可能引起肝毒性）。告知患者可能出现赫氏反应（Jarisch-Herxheimer reaction），即治疗后症状暂时加重，属正常现象，但若出现呼吸困难、喉头水肿、剧烈腹痛或意识改变，需立即急诊处理。建议治疗2周后复查全血细胞计数、总IgE及寄生虫相关抗体，评估疗效并决定是否需要重复疗程。若症状持续或加重，需重新评估是否存在其他病因（如嗜酸性粒细胞白血病或淋巴瘤）。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全未违禁忌，但遗漏吸入激素及抗组胺药等关键辅助治疗。",
+      "reference": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "嗜酸性粒细胞增多症",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "红细胞沉降率（ESR）",
+        "C反应蛋白（CRP）",
+        "肝功能检查（LFTs）",
+        "肺功能检查（PFTs）",
+        "胸部CT扫描（Chest CT）",
+        "皮肤活检"
+      ],
+      "contraindications": {
+        "drugs": [
+          "青霉素类",
+          "贝类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者有发热、盗汗、体重下降及多部位淋巴结肿大，伴有农村旅行史和生食经历，高度提示寄生虫感染或淋巴瘤。",
+      "diagnosis_reflection": "诊断准确命中嗜酸性粒细胞增多症，成功识别了核心病理状态。",
+      "examination_reflection": "检查选择精准度不足（0.4），遗漏了粪便虫卵检查、炎症指标（ESR/CRP）、影像学（胸部CT）及肝功能等关键排查项目，仅覆盖了血常规和部分血清学检测。",
+      "treatment_reflection": "治疗方案安全性高且逻辑正确，但遗漏了抗组胺药缓解瘙痒及吸入性糖皮质激素控制呼吸道症状等辅助治疗措施，个性化调整空间可进一步优化。",
+      "future_strategy": "面对疑似寄生虫感染伴全身症状患者，需完善粪便镜检、炎症指标及影像学评估以排除其他病因；治疗时除针对性驱虫外，应常规联合抗过敏及对症支持治疗，并密切监测赫氏反应及肝毒性。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/005.json#/applied_memory"
+  }
+}

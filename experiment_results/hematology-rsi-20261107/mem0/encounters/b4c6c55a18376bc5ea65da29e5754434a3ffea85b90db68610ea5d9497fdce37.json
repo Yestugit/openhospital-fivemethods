@@ -1,0 +1,365 @@
+{
+  "patient_id": "Patient_03943",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问孩子目前有没有发热、乏力、皮肤瘀点瘀斑或骨关节疼痛等症状？\", \"reason\": \"当前没有任何病史和检查结果，为了明确诊断方向（如贫血、白血病等），需要首先询问患者的主要症状和体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问孩子目前有没有发热、乏力、皮肤瘀点瘀斑或骨关节疼痛等症状？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热，也没有皮肤出血点或者骨头关节疼。就是觉得特别累，爬楼梯喘得厉害，有时候头晕心慌。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者主诉乏力、头晕心慌，结合记忆摘要中提示的贫血（Hb 78-86 g/L）及外周血涂片异常（小细胞低色素、靶形红细胞），目前缺乏完整的血常规及网织红细胞等关键实验室数据来明确贫血类型及严重程度，需先完善检查以辅助诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为乏力、头晕心慌等贫血症状，且既往病史提示存在小细胞低色素性贫血及血小板减少的可能。为了明确贫血的严重程度、类型（如缺铁性、地中海贫血等）以及评估是否存在凝血功能障碍或感染迹象，进行血常规、网织红细胞计数及外周血涂片等血液学检查是确诊和制定治疗方案的首要步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"铁代谢检查\"], \"reason\": \"患者表现为乏力、头晕心慌等贫血症状，需通过全血细胞计数（CBC）评估贫血程度及血小板情况；结合病史中疑似缺铁性贫血的表现，需进行外周血涂片观察红细胞形态，并完善铁代谢检查以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"Hgb：78 g/L [参考范围：120-160]\", \"红细胞压积\": \"Hct：26% [参考范围：36-48]\", \"平均红细胞体积\": \"MCV：68 fL [参考范围：80-100]\", \"平均红细胞血红蛋白含量\": \"MCH：21 pg [参考范围：27-34]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"红细胞压积\", \"平均红细胞体积\", \"平均红细胞血红蛋白含量\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"无异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 62%、淋巴细胞 30%、单核细胞 5%、嗜酸性粒细胞 3%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"小细胞低色素性，中央淡染区扩大，约占细胞直径的二分之一；可见明显红细胞大小不等及靶形红细胞。\", \"血小板形态与分布\": \"大小和形态正常，分布均匀。\", \"血小板数量\": \"数量充足（估计 280,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞形态\"]}, \"铁代谢检查\": {\"result\": {\"血清铁\": \"血清铁：22 ug/dL [参考范围：50-170]\", \"总铁结合力\": \"总铁结合力（TIBC）：462 ug/dL [参考范围：250-370]\", \"转铁蛋白饱和度\": \"转铁蛋白饱和度（TSAT）：5% [参考范围：15-50]\", \"血清铁蛋白\": \"铁蛋白：6 ng/mL [参考范围：15-150]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清铁\", \"总铁结合力\", \"转铁蛋白饱和度\", \"血清铁蛋白\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者血常规显示小细胞低色素性贫血，外周血涂片证实红细胞形态异常（靶形红细胞、中央淡染区扩大），铁代谢检查明确提示严重缺铁（血清铁低、总铁结合力高、铁蛋白极低）。结合临床表现（乏力、头晕）及排除感染和血液系统恶性肿瘤的证据，诊断依据已充分，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者为4岁儿童，主要表现为小细胞低色素性贫血（Hb 78g/L，MCV 68fL），外周血涂片显示靶形红细胞及明显大小不等，铁代谢检查提示严重缺铁（血清铁蛋白极低）。虽然临床表现符合缺铁性贫血，但结合记忆摘要中关于该病例最终被诊断为骨硬化症（Osteopetrosis）的复杂背景，以及贫血合并骨髓异常的可能性，此类涉及造血系统疾病、骨髓形态学改变及鉴别诊断（如地中海贫血与缺铁性贫血的区分）的复杂病例，应由血液科进行专业评估和进一步诊治。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. 口服铁剂治疗：首选硫酸亚铁或蛋白琥珀酸铁口服液，按元素铁 4-6 mg/kg/天分次口服（建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用）。疗程至少3个月，直至血红蛋白恢复正常后继续补铁2-3个月以补足储存铁。\\n2. 饮食指导：增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），同时补充富含维生素C的蔬果以促进铁吸收，避免与牛奶、茶、咖啡同服。\\n3. 监测与随访：治疗2周后复查网织红细胞计数及血红蛋白，评估疗效；每月复查血常规及铁代谢指标。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\\n4. 安全性警示：若出现严重腹痛、黑便（需鉴别消化道出血）、皮疹或呼吸困难等过敏反应，立即停药就医。定期监测肝肾功能及铁过载风险。\", \"reasoning\": \"患者为4岁女童，表现为乏力、头晕心慌等贫血症状。实验室检查显示小细胞低色素性贫血（Hb 78g/L, MCV 68fL, MCH 21pg），外周血涂片见靶形红细胞及大小不等，铁代谢检查提示血清铁降低、总铁结合力升高、转铁蛋白饱和度降低及铁蛋白显著降低（6ng/mL），符合典型的缺铁性贫血诊断标准。虽然记忆摘要中提及过“大理石骨病”的干扰案例，但本例患者无骨痛、无骨髓异常增生证据（如原始细胞增多），且铁代谢指标高度特异指向缺铁，故排除其他血液系统恶性肿瘤或遗传性骨病，确诊为缺铁性贫血。治疗方案以口服补铁为主，兼顾儿童耐受性及长期储铁需求。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_03943",
+    "mode": "train",
+    "memory_notes": [
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "User's child has a CBC showing hemoglobin of 86 g/L (low), hematocrit of 28% (low), MCV of 68 fL (low), and MCH of 20 pg (low), indicating microcytic hypochromic anemia.",
+      "User participated in a hematology diagnostic task for Patient_04601, a 4-year-old girl presenting with microcytic hypochromic anemia (Hb 78-86 g/L, MCV 68 fL), target cells on smear, and absent bone marrow iron stores (Grade 0)",
+      "User's child's iron metabolism tests confirm severe iron deficiency with serum iron of 22 ug/dL (low), total iron binding capacity of 462 ug/dL (high), and ferritin of 5 ng/mL (very low)",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User's child has elevated inflammatory markers: CRP 45.0 mg/L, high-sensitivity CRP 8.5 mg/L, and PCT 2.8 ng/mL.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's child has acute kidney injury with serum creatinine 2.2 mg/dL and estimated GFR 38 mL/min/1.73m2.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "User's child has elevated indirect bilirubin at 1.4 mg/dL.",
+      "User's child's coagulation profile showed elevated D-dimer (2.8 mg/L FEU), prolonged PT (19.5s) and aPTT (52s), elevated INR (1.6), and low fibrinogen (0.9 g/L), indicating coagulopathy.",
+      "User's child's peripheral blood smear shows small cell hypochromic red blood cells with central pallor occupying half the diameter, marked anisocytosis, and target cells, but no parasites or abnormal cells.",
+      "User's child's peripheral blood smear showed microcytic hypochromic red blood cells with central pallor occupying half the cell diameter, marked anisocytosis, and target cells, but no parasites, inclusions, or abnormal cells.",
+      "Patient_01894's coagulation profile showed elevated D-dimer (1.82 mg/L FEU), prolonged PT (16.5s) and PTT (38.0s), elevated INR (1.45), and low fibrinogen (1.6 g/L).",
+      "The system evaluation revealed that the diagnosis of iron deficiency anemia for Patient_04601 was incorrect; the actual condition is osteopetrosis (marble bone disease), resulting in a diagnosis accuracy score of 0.0% and treatment safety score of 0.2%",
+      "Patient_01894's peripheral blood smear revealed abnormal neutrophil development (hypogranulation), circulating promonocytes, large platelets, and significant absolute monocytosis."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问孩子目前有没有发热、乏力、皮肤瘀点瘀斑或骨关节疼痛等症状？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热，也没有皮肤出血点或者骨头关节疼。就是觉得特别累，爬楼梯喘得厉害，有时候头晕心慌。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "Hgb：78 g/L [参考范围：120-160]",
+          "红细胞压积": "Hct：26% [参考范围：36-48]",
+          "平均红细胞体积": "MCV：68 fL [参考范围：80-100]",
+          "平均红细胞血红蛋白含量": "MCH：21 pg [参考范围：27-34]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "红细胞压积",
+          "平均红细胞体积",
+          "平均红细胞血红蛋白含量"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "无异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞 62%、淋巴细胞 30%、单核细胞 5%、嗜酸性粒细胞 3%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当。",
+          "红细胞形态": "小细胞低色素性，中央淡染区扩大，约占细胞直径的二分之一；可见明显红细胞大小不等及靶形红细胞。",
+          "血小板形态与分布": "大小和形态正常，分布均匀。",
+          "血小板数量": "数量充足（估计 280,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "红细胞形态"
+        ]
+      },
+      "铁代谢检查": {
+        "result": {
+          "血清铁": "血清铁：22 ug/dL [参考范围：50-170]",
+          "总铁结合力": "总铁结合力（TIBC）：462 ug/dL [参考范围：250-370]",
+          "转铁蛋白饱和度": "转铁蛋白饱和度（TSAT）：5% [参考范围：15-50]",
+          "血清铁蛋白": "铁蛋白：6 ng/mL [参考范围：15-150]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清铁",
+          "总铁结合力",
+          "转铁蛋白饱和度",
+          "血清铁蛋白"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问孩子目前有没有发热、乏力、皮肤瘀点瘀斑或骨关节疼痛等症状？",
+        "reason": "当前没有任何病史和检查结果，为了明确诊断方向（如贫血、白血病等），需要首先询问患者的主要症状和体征。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者主诉乏力、头晕心慌，结合记忆摘要中提示的贫血（Hb 78-86 g/L）及外周血涂片异常（小细胞低色素、靶形红细胞），目前缺乏完整的血常规及网织红细胞等关键实验室数据来明确贫血类型及严重程度，需先完善检查以辅助诊断。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者血常规显示小细胞低色素性贫血，外周血涂片证实红细胞形态异常（靶形红细胞、中央淡染区扩大），铁代谢检查明确提示严重缺铁（血清铁低、总铁结合力高、铁蛋白极低）。结合临床表现（乏力、头晕）及排除感染和血液系统恶性肿瘤的证据，诊断依据已充分，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "铁代谢检查"
+        ],
+        "reason": "患者表现为乏力、头晕心慌等贫血症状，需通过全血细胞计数（CBC）评估贫血程度及血小板情况；结合病史中疑似缺铁性贫血的表现，需进行外周血涂片观察红细胞形态，并完善铁代谢检查以明确诊断。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "缺铁性贫血",
+      "treatment_plan": "1. 口服铁剂治疗：首选硫酸亚铁或蛋白琥珀酸铁口服液，按元素铁 4-6 mg/kg/天分次口服（建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用）。疗程至少3个月，直至血红蛋白恢复正常后继续补铁2-3个月以补足储存铁。\n2. 饮食指导：增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），同时补充富含维生素C的蔬果以促进铁吸收，避免与牛奶、茶、咖啡同服。\n3. 监测与随访：治疗2周后复查网织红细胞计数及血红蛋白，评估疗效；每月复查血常规及铁代谢指标。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n4. 安全性警示：若出现严重腹痛、黑便（需鉴别消化道出血）、皮疹或呼吸困难等过敏反应，立即停药就医。定期监测肝肾功能及铁过载风险。",
+      "reasoning": "患者为4岁女童，表现为乏力、头晕心慌等贫血症状。实验室检查显示小细胞低色素性贫血（Hb 78g/L, MCV 68fL, MCH 21pg），外周血涂片见靶形红细胞及大小不等，铁代谢检查提示血清铁降低、总铁结合力升高、转铁蛋白饱和度降低及铁蛋白显著降低（6ng/mL），符合典型的缺铁性贫血诊断标准。虽然记忆摘要中提及过“大理石骨病”的干扰案例，但本例患者无骨痛、无骨髓异常增生证据（如原始细胞增多），且铁代谢指标高度特异指向缺铁，故排除其他血液系统恶性肿瘤或遗传性骨病，确诊为缺铁性贫血。治疗方案以口服补铁为主，兼顾儿童耐受性及长期储铁需求。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_03943",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.52,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.4,
+      "diagnosisDetail": {
+        "submitted": [
+          "缺铁性贫血"
+        ],
+        "expected": [
+          "缺铁性贫血"
+        ],
+        "matched": [
+          "缺铁性贫血"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "铁代谢检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "盆腔超声",
+          "食管胃十二指肠镜检查（EGD）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.4,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 口服铁剂治疗：首选硫酸亚铁或蛋白琥珀酸铁口服液，按元素铁 4-6 mg/kg/天分次口服（建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用）。疗程至少3个月，直至血红蛋白恢复正常后继续补铁2-3个月以补足储存铁。\n2. 饮食指导：增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），同时补充富含维生素C的蔬果以促进铁吸收，避免与牛奶、茶、咖啡同服。\n3. 监测与随访：治疗2周后复查网织红细胞计数及血红蛋白，评估疗效；每月复查血常规及铁代谢指标。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n4. 安全性警示：若出现严重腹痛、黑便（需鉴别消化道出血）、皮疹或呼吸困难等过敏反应，立即停药就医。定期监测肝肾功能及铁过载风险。",
+        "overallScore": 0.52,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.4,
+        "reasoning": "方案未提及停用NSAIDs及妇科手术评估，且建议红肉违背患者素食习惯。",
+        "reference": "开始口服硫酸亚铁补充治疗，并协调妇科评估，以处理导致月经过多的子宫肌瘤。加用维生素C以促进铁吸收，并建议在您的素食饮食中进行调整，加入铁强化谷物、扁豆和菠菜。由于胃炎/吻合口糜烂及出血风险，应尽量减少或避免使用NSAIDs；可考虑替代性的经期疼痛控制方式（如对乙酰氨基酚及妇科指导下的其他方案）。与消化科协作处理糜烂性胃炎/术后吻合口渗血，并在适当情况下考虑抑酸治疗，尤其是在出现消化不良或口服铁不耐受时。4周后复查血红蛋白和铁代谢指标；如果口服铁不耐受或疗效不足（如血红蛋白升高很少或铁蛋白/TSAT持续偏低），鉴于曾行部分胃切除术及可能存在吸收减少，可考虑改用静脉铁；如果在依从治疗且妇科出血得到控制的情况下贫血仍无改善，应评估并监测其他胃肠道出血来源。如出现严重头晕、胸痛或气短加重，请立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "缺铁性贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "盆腔超声",
+          "食管胃十二指肠镜检查（EGD）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "开始口服硫酸亚铁补充治疗，并协调妇科评估，以处理导致月经过多的子宫肌瘤。加用维生素C以促进铁吸收，并建议在您的素食饮食中进行调整，加入铁强化谷物、扁豆和菠菜。由于胃炎/吻合口糜烂及出血风险，应尽量减少或避免使用NSAIDs；可考虑替代性的经期疼痛控制方式（如对乙酰氨基酚及妇科指导下的其他方案）。与消化科协作处理糜烂性胃炎/术后吻合口渗血，并在适当情况下考虑抑酸治疗，尤其是在出现消化不良或口服铁不耐受时。4周后复查血红蛋白和铁代谢指标；如果口服铁不耐受或疗效不足（如血红蛋白升高很少或铁蛋白/TSAT持续偏低），鉴于曾行部分胃切除术及可能存在吸收减少，可考虑改用静脉铁；如果在依从治疗且妇科出血得到控制的情况下贫血仍无改善，应评估并监测其他胃肠道出血来源。如出现严重头晕、胸痛或气短加重，请立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为乏力、活动后气促及头晕心慌，无发热或出血点，需警惕贫血。",
+        "diagnosis_reflection": "诊断准确命中缺铁性贫血。经验：对于以乏力、气促为主诉的疑似贫血患者，结合典型症状可直接锁定缺铁性病因方向。",
+        "examination_reflection": "检查遗漏了粪便隐血试验（FOBT）、盆腔超声及胃镜。经验：确诊缺铁性贫血后，必须完善寻找病因的检查，特别是针对女性患者的妇科评估（如肌瘤）和消化道出血筛查（如FOBT、内镜），不能仅停留在血常规和铁代谢。",
+        "treatment_reflection": "治疗方案未考虑患者素食习惯导致红肉建议不当，且遗漏停用NSAIDs及妇科手术评估。经验：制定补铁方案时需严格结合患者饮食结构调整食物建议，并同步处理原发病因（如控制月经过多、避免损伤胃肠道的药物）。",
+        "future_strategy": "面对疑似缺铁性贫血病例，除确认诊断外，务必立即启动病因排查（妇科+消化道），并根据患者具体生活习惯（如素食）个性化调整饮食指导，同时关注合并用药风险。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T08:42:38.816542+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_03943",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "缺铁性贫血"
+    ],
+    "treatment_plan": "1. 口服铁剂治疗：首选硫酸亚铁或蛋白琥珀酸铁口服液，按元素铁 4-6 mg/kg/天分次口服（建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用）。疗程至少3个月，直至血红蛋白恢复正常后继续补铁2-3个月以补足储存铁。\n2. 饮食指导：增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），同时补充富含维生素C的蔬果以促进铁吸收，避免与牛奶、茶、咖啡同服。\n3. 监测与随访：治疗2周后复查网织红细胞计数及血红蛋白，评估疗效；每月复查血常规及铁代谢指标。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n4. 安全性警示：若出现严重腹痛、黑便（需鉴别消化道出血）、皮疹或呼吸困难等过敏反应，立即停药就医。定期监测肝肾功能及铁过载风险。",
+    "reasoning": "患者为4岁女童，表现为乏力、头晕心慌等贫血症状。实验室检查显示小细胞低色素性贫血（Hb 78g/L, MCV 68fL, MCH 21pg），外周血涂片见靶形红细胞及大小不等，铁代谢检查提示血清铁降低、总铁结合力升高、转铁蛋白饱和度降低及铁蛋白显著降低（6ng/mL），符合典型的缺铁性贫血诊断标准。虽然记忆摘要中提及过“大理石骨病”的干扰案例，但本例患者无骨痛、无骨髓异常增生证据（如原始细胞增多），且铁代谢指标高度特异指向缺铁，故排除其他血液系统恶性肿瘤或遗传性骨病，确诊为缺铁性贫血。治疗方案以口服补铁为主，兼顾儿童耐受性及长期储铁需求。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "铁代谢检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_03943",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.52,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.4,
+    "diagnosisDetail": {
+      "submitted": [
+        "缺铁性贫血"
+      ],
+      "expected": [
+        "缺铁性贫血"
+      ],
+      "matched": [
+        "缺铁性贫血"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "铁代谢检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "盆腔超声",
+        "食管胃十二指肠镜检查（EGD）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.4,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 口服铁剂治疗：首选硫酸亚铁或蛋白琥珀酸铁口服液，按元素铁 4-6 mg/kg/天分次口服（建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用）。疗程至少3个月，直至血红蛋白恢复正常后继续补铁2-3个月以补足储存铁。\n2. 饮食指导：增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），同时补充富含维生素C的蔬果以促进铁吸收，避免与牛奶、茶、咖啡同服。\n3. 监测与随访：治疗2周后复查网织红细胞计数及血红蛋白，评估疗效；每月复查血常规及铁代谢指标。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n4. 安全性警示：若出现严重腹痛、黑便（需鉴别消化道出血）、皮疹或呼吸困难等过敏反应，立即停药就医。定期监测肝肾功能及铁过载风险。",
+      "overallScore": 0.52,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.4,
+      "reasoning": "方案未提及停用NSAIDs及妇科手术评估，且建议红肉违背患者素食习惯。",
+      "reference": "开始口服硫酸亚铁补充治疗，并协调妇科评估，以处理导致月经过多的子宫肌瘤。加用维生素C以促进铁吸收，并建议在您的素食饮食中进行调整，加入铁强化谷物、扁豆和菠菜。由于胃炎/吻合口糜烂及出血风险，应尽量减少或避免使用NSAIDs；可考虑替代性的经期疼痛控制方式（如对乙酰氨基酚及妇科指导下的其他方案）。与消化科协作处理糜烂性胃炎/术后吻合口渗血，并在适当情况下考虑抑酸治疗，尤其是在出现消化不良或口服铁不耐受时。4周后复查血红蛋白和铁代谢指标；如果口服铁不耐受或疗效不足（如血红蛋白升高很少或铁蛋白/TSAT持续偏低），鉴于曾行部分胃切除术及可能存在吸收减少，可考虑改用静脉铁；如果在依从治疗且妇科出血得到控制的情况下贫血仍无改善，应评估并监测其他胃肠道出血来源。如出现严重头晕、胸痛或气短加重，请立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "缺铁性贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "盆腔超声",
+        "食管胃十二指肠镜检查（EGD）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "开始口服硫酸亚铁补充治疗，并协调妇科评估，以处理导致月经过多的子宫肌瘤。加用维生素C以促进铁吸收，并建议在您的素食饮食中进行调整，加入铁强化谷物、扁豆和菠菜。由于胃炎/吻合口糜烂及出血风险，应尽量减少或避免使用NSAIDs；可考虑替代性的经期疼痛控制方式（如对乙酰氨基酚及妇科指导下的其他方案）。与消化科协作处理糜烂性胃炎/术后吻合口渗血，并在适当情况下考虑抑酸治疗，尤其是在出现消化不良或口服铁不耐受时。4周后复查血红蛋白和铁代谢指标；如果口服铁不耐受或疗效不足（如血红蛋白升高很少或铁蛋白/TSAT持续偏低），鉴于曾行部分胃切除术及可能存在吸收减少，可考虑改用静脉铁；如果在依从治疗且妇科出血得到控制的情况下贫血仍无改善，应评估并监测其他胃肠道出血来源。如出现严重头晕、胸痛或气短加重，请立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为乏力、活动后气促及头晕心慌，无发热或出血点，需警惕贫血。",
+      "diagnosis_reflection": "诊断准确命中缺铁性贫血。经验：对于以乏力、气促为主诉的疑似贫血患者，结合典型症状可直接锁定缺铁性病因方向。",
+      "examination_reflection": "检查遗漏了粪便隐血试验（FOBT）、盆腔超声及胃镜。经验：确诊缺铁性贫血后，必须完善寻找病因的检查，特别是针对女性患者的妇科评估（如肌瘤）和消化道出血筛查（如FOBT、内镜），不能仅停留在血常规和铁代谢。",
+      "treatment_reflection": "治疗方案未考虑患者素食习惯导致红肉建议不当，且遗漏停用NSAIDs及妇科手术评估。经验：制定补铁方案时需严格结合患者饮食结构调整食物建议，并同步处理原发病因（如控制月经过多、避免损伤胃肠道的药物）。",
+      "future_strategy": "面对疑似缺铁性贫血病例，除确认诊断外，务必立即启动病因排查（妇科+消化道），并根据患者具体生活习惯（如素食）个性化调整饮食指导，同时关注合并用药风险。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/016.json#/applied_memory"
+  }
+}

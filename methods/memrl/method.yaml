@@ -1,0 +1,529 @@
+{
+  "method_id": "memrl",
+  "name": "MemRL",
+  "summary": "Procedural episodic memory with MemOS/Qdrant storage and feedback-driven Q-value retrieval.",
+  "version": "1",
+  "paper_url": "https://arxiv.org/abs/2601.03192",
+  "repository_url": "https://github.com/MemTensor/MemRL",
+  "source_subdir": "methods/memrl/_vendor",
+  "recommended_executor": "in_process",
+  "fidelity": "upstream_source_adapter",
+  "implementation_strategy": "direct_upstream_memory_service",
+  "internal_token_tracking": "tracked",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "procedural"
+    ],
+    "operations": ["index", "add", "search", "episode_end", "flush", "save", "load"],
+    "integration_slots": [
+      "context",
+      "episode"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "action",
+      "tool_result",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "team",
+      "session",
+      "run"
+    ],
+    "default_scope": "user",
+    "required_episode_fields": [
+      "success",
+      "task",
+      "trajectory"
+    ],
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "supports_async": true,
+    "read_only_mode": "snapshot"
+  },
+  "storage": {
+    "kind": "local_files",
+    "backend": "MemOS GeneralMemCube + local Qdrant",
+    "path_parameters": {},
+    "database_paths": [
+      "results/mem_cubes/<user_id>/<timestamp>/",
+      "results/qdrant/<user_id>/<timestamp>/",
+      "<artifact_dir>/memrl/users/<user_id>.db",
+      "<artifact_dir>/memrl/snapshots/<scope>/<logical-state-digest>/",
+      "<artifact_dir>/memrl/adapter_state.json"
+    ],
+    "supports_snapshot": true
+  },
+  "requirements": {
+    "python": [
+      "MemoryOS",
+      "qdrant-client",
+      "openai",
+      "pandas",
+      "PyYAML",
+      "click",
+      "pydantic",
+      "numpy",
+      "tenacity",
+      "tqdm",
+      "chonkie",
+      "packaging"
+    ],
+    "python_constraints": {
+      "MemoryOS": "==1.0.0",
+      "qdrant-client": ">=1.14.2,<1.16.0",
+      "openai": ">=1.77.0,<2.0.0",
+      "pandas": ">=2.0.0",
+      "PyYAML": ">=6.0",
+      "click": ">=8.0",
+      "pydantic": ">=2.0",
+      "numpy": ">=1.24.0",
+      "tenacity": ">=9.1.2,<10.0.0",
+      "tqdm": ">=4.67.1",
+      "chonkie": ">=1.0.7,<2.0.0",
+      "packaging": ">=23"
+    },
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "usage": {
+      "inputs": "Text events; learn requires task, a nonempty trajectory and real boolean success. episode_id is generated when omitted; provide events in the episode unless events were observed with an explicit matching ID. Observe journals events without native learning.",
+      "attribution": "Record the complete contributions actually applied in episode.applied_memory. MemRL query grouping stays in contribution.extensions.memrl, including empty-item results.",
+      "batches": "learn absorbs complete feedback-bearing experiences. At batch_size it automatically builds/refines native memories and updates Q-values in profile order. On the last experience of finite training, extensions.memrl.end_of_training=true also processes that scope's incomplete batch. Evolution stays internal; no public evolve operation is exposed.",
+      "persistence": "flush/save/load/close never start batch learning. Restore explicitly with load; keep native snapshot directories alongside the JSON checkpoint.",
+      "providers": "Configure providers.llm and providers.embedding; profile defaults remain available. MemOS also needs API credentials or an existing mos_config_path.",
+      "profiles": "Default/HLE batch size 32; ALFWorld 32, BigCodeBench 25, LLB 5. Each profile retains its native add/update order.",
+      "extensions": "retrieve accepts extensions.memrl.task_type for configured task thresholds; learn accepts task_id, task_type and optional end_of_training in episode.extensions.memrl.",
+      "boundaries": "A full batch or the last learn marked end_of_training triggers internal evolution. Frozen evaluation never triggers evolution; flush/save/load/close only preserve pending work."
+    }
+  },
+  "implementation_notes": [
+    "The adapter delegates build, query retrieval, MemOS persistence, adjustment, ranking, and Q-value updates to MemTensor/MemRL revision c1b322ca43de36ddf64c6712f89d0095bfc35ce0, included under methods/memrl/_vendor with its MIT license and a revision/SHA-256 inventory. All native service strategies, providers, public configuration, and required utilities are included; benchmark runners and datasets are outside this memory plugin. Runtime and tests do not require plan/.",
+    "The MemAtlas default is the official HLE experiment profile, not an upstream universal default: batch_size=32, k_retrieve=5, topk=3, tau/sim_threshold=0.25, and source HLE normalization values. HLE-written metadata initializes q_value to 1 for success and 0 for failure, independently of RLConfig.q_init_pos/q_init_neg.",
+    "The service_defaults variant preserves the former public config/service parameter combination at batch_size=1. hle_episode explicitly changes the HLE batch size to 1. Official ALFWorld, BigCodeBench, and LLB profiles are also declared under config_schema.x-variants; their effective runner batch sizes are 32, 25, and 5.",
+    "Memory v2 learn accumulates complete experiences and runs private batch evolution at batch_size or when the last training experience sets extensions.memrl.end_of_training=true. Native memory formation/refinement and value updates retain profile order; flush only persists state.",
+    "HLE performs native add_memories before update_values; ALFWorld, BigCodeBench, and LLB perform update_values before add_memories. LLB profiles use the service normalization defaults that its runner actually retains, rather than unused YAML normalization fields.",
+    "The default profile requires framework LLM and embedding providers plus API credentials for MemOS GeneralMemCube's own text-memory backend; mos_config_path supplies an existing input configuration and is never treated as a runtime output storage path.",
+    "The MemOS simple_struct reader requires the optional chonkie sentence chunker; it is declared explicitly along with qdrant-client. OpenAI and tenacity constraints include MemoryOS 1.0.0's own bounds.",
+    "Adapter logs use mematlas.methods.memrl.adapter; native upstream logging remains under memrl.* and memos.*.",
+    "MemoryOS 1.0.0 calls QdrantClient.search for native query/avefact strategies; qdrant-client is constrained below 1.16, which removed that API."
+  ],
+  "limitations": [
+    "The bundled source already includes test/memrl/memrl-vector-dimension.patch, which preserves the upstream default of 3072 while forwarding configured embedding dimensions to live and restored Qdrant collections. An explicit runtime.source_roots.memrl override using unpatched upstream source needs this patch for non-3072 embeddings; preflight checks all required dimension markers.",
+    "Preflight verifies the bundled UPSTREAM.json revision and file hashes. Explicit runtime.source_roots.memrl overrides are supported; missing files, invalid source inventories, or a known mismatched revision are rejected. Archives without Git metadata or a source inventory are explicitly reported as revision-unverified.",
+    "MemRL's native retrieve_query mutates local retrieval caches; read-only test evaluation uses native state snapshots and restores them, so it requires save/load.",
+    "MemRL stores a single user_id per MemoryService. The adapter derives one stable upstream user_id from the configured prefix and the complete MemAtlas scope.",
+    "Upstream checkpoint snapshots are directory-based; MemAtlas state stores local snapshot path references and is not portable without the referenced native files.",
+    "Evolution is internal at a full batch or an explicit training-end signal on the last learn; public evolve is unsupported. Incomplete batches remain pending across save/load and continue accumulating. flush/save/close do not evolve them.",
+    "MemoryEpisode.task, a nonempty text trajectory and external boolean success are required. Preserve actual retrieval contributions through applied_memory."
+  ],
+  "tags": [
+    "episodic",
+    "procedural",
+    "reinforcement-learning",
+    "feedback"
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "profile": {
+        "type": "string",
+        "enum": [
+          "default",
+          "hle",
+          "hle_episode",
+          "service_defaults",
+          "alfworld",
+          "bcb",
+          "llb",
+          "llb_os",
+          "llb_db"
+        ],
+        "default": "default"
+      },
+      "mos_config_path": {
+        "type": "string"
+      },
+      "user_id": {
+        "type": "string"
+      },
+      "build_strategy": {
+        "type": "string",
+        "enum": [
+          "trajectory",
+          "script",
+          "proceduralization"
+        ]
+      },
+      "retrieve_strategy": {
+        "type": "string",
+        "enum": [
+          "random",
+          "query",
+          "avefact"
+        ]
+      },
+      "update_strategy": {
+        "type": "string",
+        "enum": [
+          "vanilla",
+          "validation",
+          "adjustment"
+        ]
+      },
+      "enable_value_driven": {
+        "type": "boolean"
+      },
+      "k_retrieve": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "topk": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "max_keywords": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "num_workers": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "batch_size": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "memory_confidence": {
+        "type": "number"
+      },
+      "add_similarity_threshold": {
+        "type": "number"
+      },
+      "sim_norm_mean": {
+        "type": "number"
+      },
+      "sim_norm_std": {
+        "type": "number"
+      },
+      "epsilon": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "tau": {
+        "type": "number"
+      },
+      "alpha": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "gamma": {
+        "type": "number",
+        "minimum": 0
+      },
+      "q_init_pos": {
+        "type": "number"
+      },
+      "q_init_neg": {
+        "type": "number"
+      },
+      "q_floor": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "success_reward": {
+        "type": "number"
+      },
+      "failure_reward": {
+        "type": "number"
+      },
+      "sim_threshold": {
+        "type": "number"
+      },
+      "sim_threshold_by_task": {
+        "type": "object"
+      },
+      "novelty_threshold": {
+        "type": "number"
+      },
+      "recency_boost": {
+        "type": "number"
+      },
+      "reward_merge_gain": {
+        "type": "number"
+      },
+      "q_min_threshold": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "weight_sim": {
+        "type": "number"
+      },
+      "weight_q": {
+        "type": "number"
+      },
+      "use_z_score_normalization": {
+        "type": "boolean"
+      },
+      "dedup_by_task_id": {
+        "type": "boolean"
+      },
+      "adjustment_mode": {
+        "type": "string",
+        "enum": [
+          "append",
+          "inplace"
+        ]
+      },
+      "llm_temperature": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 2
+      },
+      "llm_max_tokens": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "embedding_max_text_len": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "additionalProperties": false,
+    "x-variants": {
+      "default": {
+        "build_strategy": "proceduralization",
+        "retrieve_strategy": "query",
+        "update_strategy": "adjustment",
+        "user_id": "memrl_user",
+        "enable_value_driven": true,
+        "batch_size": 32,
+        "k_retrieve": 5,
+        "topk": 3,
+        "max_keywords": 8,
+        "num_workers": 32,
+        "memory_confidence": 100.0,
+        "add_similarity_threshold": 0.9,
+        "sim_norm_mean": 0.1856827586889267,
+        "sim_norm_std": 0.09407906234264374,
+        "epsilon": 0.0,
+        "tau": 0.25,
+        "alpha": 0.3,
+        "gamma": 0.0,
+        "q_init_pos": 0.0,
+        "q_init_neg": 0.0,
+        "q_floor": null,
+        "success_reward": 1.0,
+        "failure_reward": -1.0,
+        "sim_threshold": 0.25,
+        "novelty_threshold": 0.85,
+        "recency_boost": 0.0,
+        "reward_merge_gain": 0.1,
+        "q_min_threshold": -10.0,
+        "weight_sim": 0.5,
+        "weight_q": 0.5,
+        "use_z_score_normalization": true,
+        "dedup_by_task_id": false,
+        "adjustment_mode": "append",
+        "llm_model": "gemini-3-pro",
+        "llm_temperature": 0.6,
+        "llm_max_tokens": 65536,
+        "embedding_model": "text-embedding-3-large",
+        "embedding_dims": 3072,
+        "embedding_max_text_len": 4096
+      },
+      "hle": {},
+      "hle_episode": {
+        "batch_size": 1
+      },
+      "service_defaults": {
+        "user_id": "memp_user",
+        "batch_size": 1,
+        "k_retrieve": 1,
+        "topk": 5,
+        "epsilon": 0.1,
+        "tau": 0.35,
+        "sim_threshold": 0.5,
+        "q_min_threshold": -0.8,
+        "sim_norm_mean": 0.0,
+        "sim_norm_std": 0.0,
+        "llm_model": "gpt-4.1-mini",
+        "llm_temperature": 0.7,
+        "llm_max_tokens": null,
+        "embedding_max_text_len": 8196
+      },
+      "alfworld": {
+        "batch_size": 32,
+        "k_retrieve": 5,
+        "topk": 3,
+        "num_workers": 32,
+        "epsilon": 0.0,
+        "tau": 0.62,
+        "sim_threshold": 0.62,
+        "q_min_threshold": -10.0,
+        "sim_norm_mean": 0.5187,
+        "sim_norm_std": 0.1203,
+        "llm_model": "gpt-5-mini",
+        "llm_temperature": 0.0,
+        "llm_max_tokens": 4096,
+        "embedding_max_text_len": 4096
+      },
+      "bcb": {
+        "user_id": "memp_user",
+        "batch_size": 25,
+        "k_retrieve": 5,
+        "topk": 5,
+        "num_workers": 32,
+        "epsilon": 0.1,
+        "tau": 0.35,
+        "sim_threshold": 0.38,
+        "q_min_threshold": -0.8,
+        "sim_norm_mean": 0.31,
+        "sim_norm_std": 0.1,
+        "llm_model": "gpt-4o-mini",
+        "llm_temperature": 0.0,
+        "llm_max_tokens": 12800,
+        "embedding_max_text_len": 8196
+      },
+      "llb": {
+        "user_id": "llb_memrl_os_seed42",
+        "batch_size": 5,
+        "k_retrieve": 10,
+        "topk": 5,
+        "num_workers": 5,
+        "epsilon": 0.01,
+        "tau": 0.35,
+        "alpha": 0.3,
+        "q_init_pos": 0.5,
+        "q_init_neg": 0.5,
+        "q_floor": 0.0,
+        "success_reward": 1.0,
+        "failure_reward": 0.0,
+        "sim_threshold": 0.5,
+        "sim_threshold_by_task": {
+          "os": 0.5,
+          "db": 0.37
+        },
+        "q_min_threshold": -0.8,
+        "sim_norm_mean": 0.1856827586889267,
+        "sim_norm_std": 0.09407906234264374,
+        "add_similarity_threshold": 0.99,
+        "llm_model": "gpt-4o-mini",
+        "llm_temperature": 0.0,
+        "llm_max_tokens": 10240,
+        "embedding_max_text_len": 8196
+      },
+      "llb_os": {
+        "user_id": "llb_memrl_os_seed42",
+        "batch_size": 5,
+        "k_retrieve": 10,
+        "topk": 5,
+        "num_workers": 5,
+        "epsilon": 0.01,
+        "tau": 0.35,
+        "alpha": 0.3,
+        "q_init_pos": 0.5,
+        "q_init_neg": 0.5,
+        "q_floor": 0.0,
+        "success_reward": 1.0,
+        "failure_reward": 0.0,
+        "sim_threshold": 0.5,
+        "q_min_threshold": -0.8,
+        "sim_norm_mean": 0.1856827586889267,
+        "sim_norm_std": 0.09407906234264374,
+        "add_similarity_threshold": 0.99,
+        "llm_model": "gpt-4o-mini",
+        "llm_temperature": 0.0,
+        "llm_max_tokens": 10240,
+        "embedding_max_text_len": 8196
+      },
+      "llb_db": {
+        "user_id": "llb_memrl_db_seed42",
+        "batch_size": 5,
+        "k_retrieve": 10,
+        "topk": 5,
+        "num_workers": 5,
+        "epsilon": 0.01,
+        "tau": 0.35,
+        "alpha": 0.3,
+        "q_init_pos": 0.5,
+        "q_init_neg": 0.5,
+        "q_floor": 0.0,
+        "success_reward": 1.0,
+        "failure_reward": 0.0,
+        "sim_threshold": 0.37,
+        "q_min_threshold": -0.8,
+        "sim_norm_mean": 0.1856827586889267,
+        "sim_norm_std": 0.09407906234264374,
+        "add_similarity_threshold": 0.99,
+        "llm_model": "gpt-4o-mini",
+        "llm_temperature": 0.0,
+        "llm_max_tokens": 10240,
+        "embedding_max_text_len": 8196
+      }
+    }
+  },
+  "interface_version": 3,
+  "commands": {},
+  "input_schemas": {
+    "search": {
+      "type": "object",
+      "properties": {
+        "memrl": {
+          "type": "object",
+          "properties": {
+            "task_type": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "add": {
+      "type": "object",
+      "properties": {
+        "memrl": {
+          "type": "object",
+          "properties": {
+            "task_id": {
+              "type": [
+                "string",
+                "integer"
+              ]
+            },
+            "task_type": {
+              "type": "string"
+            },
+            "end_of_training": {
+              "type": "boolean",
+              "default": false,
+              "description": "On the last training experience, process the current scope's incomplete batch after absorbing this episode."
+            }
+          }
+        }
+      }
+    }
+  }
+}

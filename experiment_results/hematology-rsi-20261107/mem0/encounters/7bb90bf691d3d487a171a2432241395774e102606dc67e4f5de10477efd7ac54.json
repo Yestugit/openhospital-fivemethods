@@ -1,0 +1,450 @@
+{
+  "patient_id": "Patient_07345",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向或骨痛等表现？\", \"reason\": \"当前病例没有任何病史、检查结果或已开检查信息，属于诊断初始阶段，必须首先通过问诊获取患者的基本信息和主要症状，才能决定后续的检查方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "过去三周，我稍微碰一下就容易起瘀斑，双小腿也出现了红紫色斑点。刷牙时牙龈会渗血，一个月前感冒后还流了两次鼻血，止血比以前慢。没有发烧、骨痛或体重下降。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为出血倾向（瘀斑、牙龈渗血、鼻出血）和皮肤红紫色斑点，但无发热、骨痛等感染或白血病典型症状。为了明确诊断，首先需要完善血常规检查以评估血小板计数及有无贫血、白细胞异常，这是鉴别血小板减少性紫癜、凝血功能障碍或其他血液系统疾病的关键第一步。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为皮肤瘀斑、牙龈渗血、鼻出血等出血倾向，且无发热、骨痛或体重下降，需首先通过血常规（包括血小板计数）和外周血涂片检查来评估是否存在血小板减少症（如ITP）或其他血液系统异常，这是明确诊断和制定后续治疗方案的关键第一步。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者表现为易瘀斑、皮肤红紫色斑点（紫癜）、牙龈渗血及鼻出血，提示存在出血倾向和血小板异常。首先需要进行全血细胞计数（CBC）以评估血小板数量是否减少（如血小板减少症），同时结合外周血涂片观察血小板形态及排除其他血液系统疾病；此外，需进行凝血功能全套检查以鉴别是血小板问题还是凝血因子异常导致的出血。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血小板计数\": \"18 x 10^9/L［参考范围：140-380 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"血小板数量\": \"显著血小板减少［参考值：数量充足（估计150,000-400,000/μL）。］\", \"血小板形态与分布\": \"偶见大型血小板\", \"红细胞形态\": \"无明显异常\", \"白细胞形态\": \"无明显异常\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板数量\", \"血小板形态与分布\"]}, \"凝血功能全套\": {\"result\": {\"国际标准化比值\": \"1.3［参考范围：0.8-1.2］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"国际标准化比值\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为严重血小板减少伴出血症状，外周血涂片未见原始细胞但提示偶见大型血小板，凝血功能轻度异常。为明确病因（如排除骨髓衰竭、免疫性血小板减少症或血液系统恶性肿瘤），需进一步完善骨髓穿刺检查以评估巨核细胞情况及有无异常细胞浸润，同时建议完善自身抗体筛查等检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为严重血小板减少（18 x 10^9/L）伴皮肤黏膜出血，外周血涂片未见原始细胞但提示偶见大型血小板。为明确病因是免疫性血小板减少症（ITP）、再生障碍性贫血、骨髓增生异常综合征还是其他血液系统恶性肿瘤，需进行骨髓穿刺及活检以评估骨髓造血功能、巨核细胞数量及形态，这是确诊的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为严重血小板减少症（PLT 18 x 10^9/L），伴有皮肤瘀斑、牙龈渗血及鼻出血等出血倾向，且外周血涂片显示偶见大型血小板。虽然目前无发热或骨痛，但需通过骨髓穿刺和活检排除再生障碍性贫血、骨髓增生异常综合征、白血病或其他骨髓浸润性疾病，以明确血小板减少的病因并指导后续治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"骨髓穿刺和活检（BMAB）\": {\"result\": {\"骨髓细胞密度\": \"骨髓低细胞性与年龄相符［参考值：降低（通常为20-50%，与年龄成反比）。］\", \"骨髓巨核细胞\": \"巨核细胞增多并显示成熟障碍\", \"骨髓原始细胞\": \"原始细胞未增多［参考值：无增多（<5%）。］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓细胞密度\", \"骨髓巨核细胞\", \"骨髓原始细胞\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有明确的出血症状（瘀斑、牙龈渗血、鼻衄），实验室检查显示严重血小板减少（18 x 10^9/L），外周血涂片见偶见大型血小板，骨髓象示巨核细胞增多伴成熟障碍且原始细胞未增多。这些特征高度提示免疫性血小板减少症（ITP）。病史、体征及关键检查结果已齐全，足以支持初步诊断并进入治疗方案制定阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为严重的血小板减少（18 x 10^9/L）及出血症状（瘀斑、牙龈渗血、鼻衄），骨髓检查显示巨核细胞增多伴成熟障碍，且排除了白血病等恶性疾病。这些临床特征和检查结果高度提示免疫性血小板减少症（ITP）或其他血液系统疾病，属于血液科的诊疗范围。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"特发性血小板减少性紫癜\", \"treatment_plan\": \"1. 一线治疗：鉴于患者血小板计数极低（18×10^9/L）且伴有活动性出血症状（瘀斑、牙龈渗血、鼻衄），立即启动糖皮质激素治疗。首选口服泼尼松（1mg/kg/日，最大剂量60-80mg/日），或根据病情严重程度考虑静脉注射甲泼尼龙冲击治疗。激素治疗起效快，能有效提升血小板计数，控制出血风险。\\n2. 二线及紧急干预：若激素治疗3-5天无效或出血危及生命，可联合使用丙种球蛋白（IVIG）快速提升血小板；必要时输注单采血小板（需配合激素使用以防迅速消耗）。\\n3. 个性化调整：患者无发热、骨痛及原始细胞增多，排除了白血病等恶性疾病，治疗方案以免疫抑制为主。需监测患者血压、血糖及情绪变化，预防激素副作用。\\n4. 安全性与随访：严格告知患者避免剧烈运动、碰撞及使用抗凝药物（如阿司匹林）。密切监测血常规变化，若出现严重头痛、视力模糊或黑便，提示颅内或消化道大出血，需立即急诊就医。治疗有效后逐渐减量停药，并定期复查骨髓象及外周血涂片以评估疗效及排除其他血液病。\", \"reasoning\": \"诊断依据：患者主要表现为皮肤黏膜出血（瘀斑、牙龈渗血、鼻衄），实验室检查显示孤立性重度血小板减少（PLT 18×10^9/L），而血红蛋白和白细胞计数正常。外周血涂片仅见大型血小板，未见异常细胞或原始细胞。骨髓穿刺结果显示巨核细胞数量增多但存在成熟障碍（产板功能受损），原始细胞未增多，这符合特发性血小板减少性紫癜（ITP）的典型病理特征，即免疫介导的血小板破坏增加及生成不足。结合患者无发热、骨痛及全血细胞减少，基本排除了急性白血病、再生障碍性贫血及骨髓增生异常综合征等其他血液系统恶性肿瘤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_07345",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "Patient_01590 has mild anemia with hemoglobin of 98 g/L, normal platelet count (280 x 10^9/L), and isolated prolonged activated partial thromboplastin time (aPTT) of 46 seconds.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "Patient_04911's CBC showed elevated hemoglobin at 162 g/L (high) and elevated RBC count at 5.8 x 10^12/L (high), indicating secondary polycythemia.",
+      "Bone marrow biopsy of Patient_02851 showed hypercellularity (85%) with diffuse infiltration by small mature lymphocytes (>70%), resulting in trilineage hematopoietic suppression.",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L).",
+      "Patient_06974's peripheral blood smear revealed significant thrombocytopenia with occasional large platelets, but no abnormal cells or blast cells were observed.",
+      "Patient_06974's bone marrow examination showed reduced megakaryocyte numbers with low platelet production function, no abnormal infiltration, <5% blasts, and normal iron stores (Grade 1).",
+      "User's child has severe thrombocytopenia (platelet count 22×10^9/L) with signs of disseminated intravascular coagulation (DIC), including elevated D-dimer and low fibrinogen.",
+      "User participated in a hematology diagnostic task for Patient_01894, a patient presenting with low-grade fever, easy bruising, occasional gum bleeding, and bone pain.",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "Patient_04911's peripheral blood smear showed normal red cell morphology with mild polychromasia but no abnormal cells, lymphocytes at 58% consistent with age norms, and platelet count of 240,000/μL.",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "User's peripheral blood smear revealed hairy cells (abundant pale blue cytoplasm with irregular fringed edges) and abnormal lymphocytes with large cell bodies, abundant cytoplasm, fine fringed projections, and loose chromatin; platelets were estimated at 80,000/μL"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "from": "patient",
+        "text": "过去三周，我稍微碰一下就容易起瘀斑，双小腿也出现了红紫色斑点。刷牙时牙龈会渗血，一个月前感冒后还流了两次鼻血，止血比以前慢。没有发烧、骨痛或体重下降。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血小板计数": "18 x 10^9/L［参考范围：140-380 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "血小板数量": "显著血小板减少［参考值：数量充足（估计150,000-400,000/μL）。］",
+          "血小板形态与分布": "偶见大型血小板",
+          "红细胞形态": "无明显异常",
+          "白细胞形态": "无明显异常"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板数量",
+          "血小板形态与分布"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "国际标准化比值": "1.3［参考范围：0.8-1.2］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "国际标准化比值"
+        ]
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "骨髓细胞密度": "骨髓低细胞性与年龄相符［参考值：降低（通常为20-50%，与年龄成反比）。］",
+          "骨髓巨核细胞": "巨核细胞增多并显示成熟障碍",
+          "骨髓原始细胞": "原始细胞未增多［参考值：无增多（<5%）。］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "骨髓细胞密度",
+          "骨髓巨核细胞",
+          "骨髓原始细胞"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向或骨痛等表现？",
+        "reason": "当前病例没有任何病史、检查结果或已开检查信息，属于诊断初始阶段，必须首先通过问诊获取患者的基本信息和主要症状，才能决定后续的检查方向。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为出血倾向（瘀斑、牙龈渗血、鼻出血）和皮肤红紫色斑点，但无发热、骨痛等感染或白血病典型症状。为了明确诊断，首先需要完善血常规检查以评估血小板计数及有无贫血、白细胞异常，这是鉴别血小板减少性紫癜、凝血功能障碍或其他血液系统疾病的关键第一步。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为严重血小板减少伴出血症状，外周血涂片未见原始细胞但提示偶见大型血小板，凝血功能轻度异常。为明确病因（如排除骨髓衰竭、免疫性血小板减少症或血液系统恶性肿瘤），需进一步完善骨髓穿刺检查以评估巨核细胞情况及有无异常细胞浸润，同时建议完善自身抗体筛查等检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有明确的出血症状（瘀斑、牙龈渗血、鼻衄），实验室检查显示严重血小板减少（18 x 10^9/L），外周血涂片见偶见大型血小板，骨髓象示巨核细胞增多伴成熟障碍且原始细胞未增多。这些特征高度提示免疫性血小板减少症（ITP）。病史、体征及关键检查结果已齐全，足以支持初步诊断并进入治疗方案制定阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者表现为易瘀斑、皮肤红紫色斑点（紫癜）、牙龈渗血及鼻出血，提示存在出血倾向和血小板异常。首先需要进行全血细胞计数（CBC）以评估血小板数量是否减少（如血小板减少症），同时结合外周血涂片观察血小板形态及排除其他血液系统疾病；此外，需进行凝血功能全套检查以鉴别是血小板问题还是凝血因子异常导致的出血。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为严重血小板减少症（PLT 18 x 10^9/L），伴有皮肤瘀斑、牙龈渗血及鼻出血等出血倾向，且外周血涂片显示偶见大型血小板。虽然目前无发热或骨痛，但需通过骨髓穿刺和活检排除再生障碍性贫血、骨髓增生异常综合征、白血病或其他骨髓浸润性疾病，以明确血小板减少的病因并指导后续治疗。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "特发性血小板减少性紫癜",
+      "treatment_plan": "1. 一线治疗：鉴于患者血小板计数极低（18×10^9/L）且伴有活动性出血症状（瘀斑、牙龈渗血、鼻衄），立即启动糖皮质激素治疗。首选口服泼尼松（1mg/kg/日，最大剂量60-80mg/日），或根据病情严重程度考虑静脉注射甲泼尼龙冲击治疗。激素治疗起效快，能有效提升血小板计数，控制出血风险。\n2. 二线及紧急干预：若激素治疗3-5天无效或出血危及生命，可联合使用丙种球蛋白（IVIG）快速提升血小板；必要时输注单采血小板（需配合激素使用以防迅速消耗）。\n3. 个性化调整：患者无发热、骨痛及原始细胞增多，排除了白血病等恶性疾病，治疗方案以免疫抑制为主。需监测患者血压、血糖及情绪变化，预防激素副作用。\n4. 安全性与随访：严格告知患者避免剧烈运动、碰撞及使用抗凝药物（如阿司匹林）。密切监测血常规变化，若出现严重头痛、视力模糊或黑便，提示颅内或消化道大出血，需立即急诊就医。治疗有效后逐渐减量停药，并定期复查骨髓象及外周血涂片以评估疗效及排除其他血液病。",
+      "reasoning": "诊断依据：患者主要表现为皮肤黏膜出血（瘀斑、牙龈渗血、鼻衄），实验室检查显示孤立性重度血小板减少（PLT 18×10^9/L），而血红蛋白和白细胞计数正常。外周血涂片仅见大型血小板，未见异常细胞或原始细胞。骨髓穿刺结果显示巨核细胞数量增多但存在成熟障碍（产板功能受损），原始细胞未增多，这符合特发性血小板减少性紫癜（ITP）的典型病理特征，即免疫介导的血小板破坏增加及生成不足。结合患者无发热、骨痛及全血细胞减少，基本排除了急性白血病、再生障碍性贫血及骨髓增生异常综合征等其他血液系统恶性肿瘤。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_07345",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "特发性血小板减少性紫癜"
+        ],
+        "expected": [
+          "特发性血小板减少性紫癜"
+        ],
+        "matched": [
+          "特发性血小板减少性紫癜"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "抗血小板抗体检测",
+          "骨髓穿刺和活检（BMAB）",
+          "自身免疫筛查组合",
+          "甲状腺功能检查（TFTs）",
+          "直接抗人球蛋白试验（DAT）",
+          "幽门螺杆菌抗体检测"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "precision": 1.0,
+        "coverage": 0.4444444444444444,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 一线治疗：鉴于患者血小板计数极低（18×10^9/L）且伴有活动性出血症状（瘀斑、牙龈渗血、鼻衄），立即启动糖皮质激素治疗。首选口服泼尼松（1mg/kg/日，最大剂量60-80mg/日），或根据病情严重程度考虑静脉注射甲泼尼龙冲击治疗。激素治疗起效快，能有效提升血小板计数，控制出血风险。\n2. 二线及紧急干预：若激素治疗3-5天无效或出血危及生命，可联合使用丙种球蛋白（IVIG）快速提升血小板；必要时输注单采血小板（需配合激素使用以防迅速消耗）。\n3. 个性化调整：患者无发热、骨痛及原始细胞增多，排除了白血病等恶性疾病，治疗方案以免疫抑制为主。需监测患者血压、血糖及情绪变化，预防激素副作用。\n4. 安全性与随访：严格告知患者避免剧烈运动、碰撞及使用抗凝药物（如阿司匹林）。密切监测血常规变化，若出现严重头痛、视力模糊或黑便，提示颅内或消化道大出血，需立即急诊就医。治疗有效后逐渐减量停药，并定期复查骨髓象及外周血涂片以评估疗效及排除其他血液病。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全合规，核心治疗与标准一致，但遗漏防跌倒及戒烟等关键个体化建议。",
+        "reference": "启动大剂量泼尼松治疗以快速提升血小板计数，并联合静脉注射免疫球蛋白进行即时免疫调节，以应对重度血小板减少。卡巴克洛可作为可选的辅助止血支持措施使用（仅支持治疗；需结合临床监测），并确保严格落实防跌倒措施，包括使用助行器和清除家中危险隐患。除非血液科明确指导，否则必须严格避免使用禁忌中所列的抗血小板和抗凝药物（如阿司匹林/NSAIDs、P2Y12抑制剂、肝素类、华法林、DOACs和溶栓药）。患者应避免吸烟，限制咖啡因摄入，并保持营养均衡、富含营养的饮食，以维持整体健康并在发生出血时降低贫血风险。每周复查血常规以监测治疗反应；如出现任何颅内出血迹象或持续性黏膜出血，应立即进行紧急评估。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "特发性血小板减少性紫癜",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "抗血小板抗体检测",
+          "骨髓穿刺和活检（BMAB）",
+          "自身免疫筛查组合",
+          "甲状腺功能检查（TFTs）",
+          "直接抗人球蛋白试验（DAT）",
+          "幽门螺杆菌抗体检测"
+        ],
+        "contraindications": {
+          "drugs": [
+            "阿司匹林",
+            "非甾体抗炎药（NSAIDs）",
+            "P2Y12抑制剂（如氯吡格雷、普拉格雷、替格瑞洛）",
+            "糖蛋白IIb/IIIa抑制剂（如阿昔单抗、依替巴肽、替罗非班）",
+            "肝素（普通肝素和低分子肝素）",
+            "华法林",
+            "直接口服抗凝药（如阿哌沙班、利伐沙班、达比加群、艾多沙班）",
+            "溶栓药/纤溶药（如阿替普酶、替奈普酶、链激酶）"
+          ],
+          "treatments": [
+            "肌内注射（非必要时避免）",
+            "椎管内麻醉（脊麻/硬膜外麻醉）",
+            "未纠正血小板前的择期有创操作/手术"
+          ]
+        },
+        "treatment_plan": "启动大剂量泼尼松治疗以快速提升血小板计数，并联合静脉注射免疫球蛋白进行即时免疫调节，以应对重度血小板减少。卡巴克洛可作为可选的辅助止血支持措施使用（仅支持治疗；需结合临床监测），并确保严格落实防跌倒措施，包括使用助行器和清除家中危险隐患。除非血液科明确指导，否则必须严格避免使用禁忌中所列的抗血小板和抗凝药物（如阿司匹林/NSAIDs、P2Y12抑制剂、肝素类、华法林、DOACs和溶栓药）。患者应避免吸烟，限制咖啡因摄入，并保持营养均衡、富含营养的饮食，以维持整体健康并在发生出血时降低贫血风险。每周复查血常规以监测治疗反应；如出现任何颅内出血迹象或持续性黏膜出血，应立即进行紧急评估。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为青年，主诉近期出现皮肤瘀斑、牙龈渗血及鼻衄等出血症状，无发热骨痛，提示血小板减少性出血倾向。",
+        "diagnosis_reflection": "诊断准确（特发性血小板减少性紫癜），成功识别了非感染性、非白血病性的免疫性出血特征，无需额外鉴别恶性血液病。",
+        "examination_reflection": "基础检查（CBC、涂片、凝血、骨髓）选择正确且精准，但遗漏了抗血小板抗体、自身免疫筛查、甲状腺功能及幽门螺杆菌检测等病因排查项目，导致检查覆盖率不足。",
+        "treatment_reflection": "一线激素治疗方案安全有效，核心用药逻辑正确；但缺乏防跌倒具体指导（如居家环境改造）、戒烟建议及辅助止血药物（如卡巴克洛）的提及，个性化支持稍显不足。",
+        "future_strategy": "面对疑似ITP病例，除完善基础血液学检查外，应常规补充病因筛查（抗体、甲功、幽门螺杆菌）；治疗时不仅关注药物方案，需同步强化生活干预（防跌倒、戒烟）及紧急出血预警教育。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:17:05.563711+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_07345",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "特发性血小板减少性紫癜"
+    ],
+    "treatment_plan": "1. 一线治疗：鉴于患者血小板计数极低（18×10^9/L）且伴有活动性出血症状（瘀斑、牙龈渗血、鼻衄），立即启动糖皮质激素治疗。首选口服泼尼松（1mg/kg/日，最大剂量60-80mg/日），或根据病情严重程度考虑静脉注射甲泼尼龙冲击治疗。激素治疗起效快，能有效提升血小板计数，控制出血风险。\n2. 二线及紧急干预：若激素治疗3-5天无效或出血危及生命，可联合使用丙种球蛋白（IVIG）快速提升血小板；必要时输注单采血小板（需配合激素使用以防迅速消耗）。\n3. 个性化调整：患者无发热、骨痛及原始细胞增多，排除了白血病等恶性疾病，治疗方案以免疫抑制为主。需监测患者血压、血糖及情绪变化，预防激素副作用。\n4. 安全性与随访：严格告知患者避免剧烈运动、碰撞及使用抗凝药物（如阿司匹林）。密切监测血常规变化，若出现严重头痛、视力模糊或黑便，提示颅内或消化道大出血，需立即急诊就医。治疗有效后逐渐减量停药，并定期复查骨髓象及外周血涂片以评估疗效及排除其他血液病。",
+    "reasoning": "诊断依据：患者主要表现为皮肤黏膜出血（瘀斑、牙龈渗血、鼻衄），实验室检查显示孤立性重度血小板减少（PLT 18×10^9/L），而血红蛋白和白细胞计数正常。外周血涂片仅见大型血小板，未见异常细胞或原始细胞。骨髓穿刺结果显示巨核细胞数量增多但存在成熟障碍（产板功能受损），原始细胞未增多，这符合特发性血小板减少性紫癜（ITP）的典型病理特征，即免疫介导的血小板破坏增加及生成不足。结合患者无发热、骨痛及全血细胞减少，基本排除了急性白血病、再生障碍性贫血及骨髓增生异常综合征等其他血液系统恶性肿瘤。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套",
+      "骨髓穿刺和活检（BMAB）"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_07345",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "特发性血小板减少性紫癜"
+      ],
+      "expected": [
+        "特发性血小板减少性紫癜"
+      ],
+      "matched": [
+        "特发性血小板减少性紫癜"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "抗血小板抗体检测",
+        "骨髓穿刺和活检（BMAB）",
+        "自身免疫筛查组合",
+        "甲状腺功能检查（TFTs）",
+        "直接抗人球蛋白试验（DAT）",
+        "幽门螺杆菌抗体检测"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "precision": 1.0,
+      "coverage": 0.4444444444444444,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 一线治疗：鉴于患者血小板计数极低（18×10^9/L）且伴有活动性出血症状（瘀斑、牙龈渗血、鼻衄），立即启动糖皮质激素治疗。首选口服泼尼松（1mg/kg/日，最大剂量60-80mg/日），或根据病情严重程度考虑静脉注射甲泼尼龙冲击治疗。激素治疗起效快，能有效提升血小板计数，控制出血风险。\n2. 二线及紧急干预：若激素治疗3-5天无效或出血危及生命，可联合使用丙种球蛋白（IVIG）快速提升血小板；必要时输注单采血小板（需配合激素使用以防迅速消耗）。\n3. 个性化调整：患者无发热、骨痛及原始细胞增多，排除了白血病等恶性疾病，治疗方案以免疫抑制为主。需监测患者血压、血糖及情绪变化，预防激素副作用。\n4. 安全性与随访：严格告知患者避免剧烈运动、碰撞及使用抗凝药物（如阿司匹林）。密切监测血常规变化，若出现严重头痛、视力模糊或黑便，提示颅内或消化道大出血，需立即急诊就医。治疗有效后逐渐减量停药，并定期复查骨髓象及外周血涂片以评估疗效及排除其他血液病。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全合规，核心治疗与标准一致，但遗漏防跌倒及戒烟等关键个体化建议。",
+      "reference": "启动大剂量泼尼松治疗以快速提升血小板计数，并联合静脉注射免疫球蛋白进行即时免疫调节，以应对重度血小板减少。卡巴克洛可作为可选的辅助止血支持措施使用（仅支持治疗；需结合临床监测），并确保严格落实防跌倒措施，包括使用助行器和清除家中危险隐患。除非血液科明确指导，否则必须严格避免使用禁忌中所列的抗血小板和抗凝药物（如阿司匹林/NSAIDs、P2Y12抑制剂、肝素类、华法林、DOACs和溶栓药）。患者应避免吸烟，限制咖啡因摄入，并保持营养均衡、富含营养的饮食，以维持整体健康并在发生出血时降低贫血风险。每周复查血常规以监测治疗反应；如出现任何颅内出血迹象或持续性黏膜出血，应立即进行紧急评估。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "特发性血小板减少性紫癜",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "抗血小板抗体检测",
+        "骨髓穿刺和活检（BMAB）",
+        "自身免疫筛查组合",
+        "甲状腺功能检查（TFTs）",
+        "直接抗人球蛋白试验（DAT）",
+        "幽门螺杆菌抗体检测"
+      ],
+      "contraindications": {
+        "drugs": [
+          "阿司匹林",
+          "非甾体抗炎药（NSAIDs）",
+          "P2Y12抑制剂（如氯吡格雷、普拉格雷、替格瑞洛）",
+          "糖蛋白IIb/IIIa抑制剂（如阿昔单抗、依替巴肽、替罗非班）",
+          "肝素（普通肝素和低分子肝素）",
+          "华法林",
+          "直接口服抗凝药（如阿哌沙班、利伐沙班、达比加群、艾多沙班）",
+          "溶栓药/纤溶药（如阿替普酶、替奈普酶、链激酶）"
+        ],
+        "treatments": [
+          "肌内注射（非必要时避免）",
+          "椎管内麻醉（脊麻/硬膜外麻醉）",
+          "未纠正血小板前的择期有创操作/手术"
+        ]
+      },
+      "treatment_plan": "启动大剂量泼尼松治疗以快速提升血小板计数，并联合静脉注射免疫球蛋白进行即时免疫调节，以应对重度血小板减少。卡巴克洛可作为可选的辅助止血支持措施使用（仅支持治疗；需结合临床监测），并确保严格落实防跌倒措施，包括使用助行器和清除家中危险隐患。除非血液科明确指导，否则必须严格避免使用禁忌中所列的抗血小板和抗凝药物（如阿司匹林/NSAIDs、P2Y12抑制剂、肝素类、华法林、DOACs和溶栓药）。患者应避免吸烟，限制咖啡因摄入，并保持营养均衡、富含营养的饮食，以维持整体健康并在发生出血时降低贫血风险。每周复查血常规以监测治疗反应；如出现任何颅内出血迹象或持续性黏膜出血，应立即进行紧急评估。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为青年，主诉近期出现皮肤瘀斑、牙龈渗血及鼻衄等出血症状，无发热骨痛，提示血小板减少性出血倾向。",
+      "diagnosis_reflection": "诊断准确（特发性血小板减少性紫癜），成功识别了非感染性、非白血病性的免疫性出血特征，无需额外鉴别恶性血液病。",
+      "examination_reflection": "基础检查（CBC、涂片、凝血、骨髓）选择正确且精准，但遗漏了抗血小板抗体、自身免疫筛查、甲状腺功能及幽门螺杆菌检测等病因排查项目，导致检查覆盖率不足。",
+      "treatment_reflection": "一线激素治疗方案安全有效，核心用药逻辑正确；但缺乏防跌倒具体指导（如居家环境改造）、戒烟建议及辅助止血药物（如卡巴克洛）的提及，个性化支持稍显不足。",
+      "future_strategy": "面对疑似ITP病例，除完善基础血液学检查外，应常规补充病因筛查（抗体、甲功、幽门螺杆菌）；治疗时不仅关注药物方案，需同步强化生活干预（防跌倒、戒烟）及紧急出血预警教育。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/028.json#/applied_memory"
+  }
+}

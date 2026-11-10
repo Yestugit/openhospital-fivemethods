@@ -1,0 +1,458 @@
+{
+  "patient_id": "Patient_01919",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史、检查结果或已开检查信息，无法进行诊断，必须首先通过问诊获取患者的临床症状以明确诊疗方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "乏力三个月，最近两周加重。颈部和腋下长了无痛肿块，还在变大。盗汗严重，体重掉了近五公斤，偶尔低烧。上楼梯气短头晕，前臂容易青一块紫一块。左上腹吃一点就胀。别跟我提那些网上查的废话，直接说检查费用多少？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者症状（乏力、无痛性淋巴结肿大、盗汗、体重下降、出血倾向、脾大引起的早饱感）高度提示血液系统恶性肿瘤（如淋巴瘤或白血病），目前尚未进行任何检查，急需通过外周血涂片、骨髓穿刺活检及影像学检查来明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"体格检查\", \"reason\": \"患者主诉颈部和腋下无痛肿块增大、左上腹饱胀感（提示脾大可能）、乏力及出血倾向，病史描述中缺乏详细的体格检查记录。首先进行全面的体格检查（重点评估淋巴结大小、质地、活动度以及肝脾肿大情况）是明确体征、评估疾病分期和指导后续实验室或影像学检查的基础步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"腹部检查\", \"皮肤检查\", \"生命体征\"], \"reason\": \"患者主诉左上腹饱胀感，需进行腹部检查以评估脾脏是否肿大；患者有前臂易出现瘀斑的症状，需进行皮肤检查以观察出血点或瘀斑情况；患者有乏力、盗汗、低烧等症状，需监测体温等生命体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"腹部检查\": {\"result\": {\"卵巢触诊\": \"未触及\", \"子宫触诊\": \"未触及\", \"肝浊音界/肝跨度\": \"肝浊音界上界位于右锁骨中线第5肋间，下界位于右肋缘下约3cm\", \"肝缘触诊\": \"于右肋缘下可触及肝脏边缘，质韧，表面光滑，无压痛\", \"肠鸣音\": \"肠鸣音正常，每分钟约4次\", \"腹主动脉搏动\": \"腹主动脉搏动可见且易于触及\", \"腹股沟疝\": \"双侧腹股沟区未触及肿块或疝囊\", \"腹膜刺激征\": \"无反跳痛及肌紧张\", \"腹部压痛\": \"左上腹有轻度压痛，其余部位无压痛\", \"腹部叩诊音\": \"全腹叩诊以鼓音为主，肝区呈浊音\", \"腹部外观\": \"腹部平坦，未见明显膨隆，皮肤无静脉曲张\", \"腹部肿块\": \"左上腹可触及一质地较硬、边界不清的包块，随呼吸移动\", \"腹部触感\": \"腹壁柔软，无明显抵抗感\", \"血管杂音\": \"未闻及血管杂音\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"肝浊音界/肝跨度\", \"肝缘触诊\", \"腹部压痛\", \"腹部肿块\"]}, \"皮肤检查\": {\"result\": {\"全身体格检查-皮肤状态\": \"皮肤温暖干燥，张力与弹性下降，可见明显皱纹和松弛，表皮变薄。\", \"指(趾)甲\": \"指（趾）甲较脆，伴有纵嵴。\", \"毛发分布\": \"头发灰白且弥漫性稀疏，腋毛和阴毛稀少，面部可见粗硬毛发。\", \"毛细血管再充盈时间\": \"毛细血管再充盈时间为2秒。\", \"水肿肿块及淋巴结\": \"双侧颈部及腋下可触及多个无痛、质韧如橡皮样的肿大淋巴结，大小约1.5至3.0厘米，活动度尚可；无病理性水肿。\", \"皮肤病变与出血点\": \"前臂可见散在瘀斑，直径约0.5至1.5厘米，无其他皮疹或溃疡。\", \"肤色与发绀黄疸\": \"肤色与种族背景相符，可见日光性雀斑样痣和脂溢性角化，无发绀或黄疸。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"水肿肿块及淋巴结\", \"皮肤病变与出血点\"]}, \"生命体征\": {\"result\": {\"体温\": \"37.2°C［参考值：35.8-36.8°C（96.4-98.2°F），通常低于年轻成人］\", \"呼吸频率\": \"24次/分［参考值：16-24次/分，通常略快且较浅］\", \"心率\": \"98次/分［参考值：60-100次/分，但最大运动时心率会下降］\", \"血压\": \"135/85 mmHg［参考值：收缩压100-140 mmHg，舒张压60-90 mmHg］\", \"血氧饱和度\": \"94%［参考值：在室内空气下为93-100%］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"体温\", \"呼吸频率\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有乏力、盗汗、体重下降、淋巴结肿大、脾大及出血倾向等典型血液系统恶性肿瘤症状，腹部检查发现左上腹包块（疑似脾脏或淋巴结肿大），皮肤检查确认淋巴结肿大和瘀斑。目前缺乏关键的实验室检查结果（如血常规、外周血涂片、骨髓穿刺等）来明确诊断（如淋巴瘤、白血病等），因此需要优先开具相关检查以获取确诊依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为进行性无痛性淋巴结肿大（颈部及腋下）、发热、盗汗、体重下降等B症状，伴有脾脏肿大和皮肤瘀斑。虽然体格检查和生命体征已提示异常，但确诊淋巴瘤或白血病等血液系统恶性肿瘤的金标准是获取组织样本进行病理学检查（如淋巴结活检），以明确细胞类型、免疫表型及分子遗传学特征，从而指导后续治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"淋巴结活检\", \"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为无痛性进行性增大的颈部及腋下淋巴结肿大，伴有发热、盗汗、体重下降等B症状，以及脾脏肿大和皮肤瘀斑。为明确淋巴结肿大的性质（如淋巴瘤或其他恶性肿瘤），首选淋巴结活检进行病理学诊断；同时考虑到患者有全血细胞减少倾向（贫血、血小板减少导致的瘀斑）及脾大，需行骨髓穿刺和活检以评估骨髓造血功能及排除血液系统恶性肿瘤（如白血病或淋巴瘤骨髓浸润）。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"淋巴结活检\": {\"result\": {\"恶性细胞或恶性浸润\": \"可见成熟小淋巴细胞弥漫性浸润，呈克隆性B细胞群（CD5+、CD23+），符合慢性淋巴细胞白血病/小淋巴细胞淋巴瘤特征。\", \"淋巴结皮质厚度\": \"皮质显著增厚，被大量淋巴样细胞取代。\", \"淋巴结细胞分布\": \"呈现单克隆B细胞主导的异常分布，缺乏正常的多克隆T/B细胞平衡。\", \"病理坏死\": \"未见坏死证据。\", \"病理淋巴结结构\": \"淋巴结正常结构消失，被弥漫性肿瘤细胞浸润破坏。\", \"皮质滤泡及生发中心\": \"淋巴滤泡数量减少，生发中心缺如或萎缩。\", \"结构消失\": \"淋巴结正常解剖结构完全消失。\", \"肉芽肿性炎症\": \"未见肉芽肿性炎症证据。\", \"脂肪替代\": \"自淋巴结门部向外延伸的脂肪替代明显增加。\", \"退行性变化\": \"显示与年龄相关的退行性变化征象。\", \"间质纤维化或透明样变\": \"间质纤维化或透明样变增加。\", \"非典型性淋巴样增生\": \"无异型性增殖。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"恶性细胞或恶性浸润\", \"淋巴结皮质厚度\", \"淋巴结细胞分布\", \"病理淋巴结结构\", \"结构消失\"]}, \"骨髓穿刺和活检（BMAB）\": {\"result\": {\"骨髓细胞密度\": \"细胞密度：70%［参考值：降低（通常为20-50%，与年龄成反比）。］\", \"异常浸润或纤维化\": \"成熟淋巴细胞弥漫性浸润＞60%\", \"骨髓三系造血\": \"三系造血明显减少\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓细胞密度\", \"异常浸润或纤维化\", \"骨髓三系造血\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者已出现典型的B症状（发热、盗汗、体重下降）、无痛性淋巴结肿大、脾大及出血倾向。关键的淋巴结活检结果明确显示为CD5+、CD23+的克隆性B细胞浸润，符合慢性淋巴细胞白血病/小淋巴细胞淋巴瘤（CLL/SLL）的特征。骨髓穿刺也证实了成熟淋巴细胞的弥漫性浸润和三系造血受抑。目前诊断所需的临床和病理信息已充分，可直接进入确诊和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为乏力、盗汗、体重下降（B症状）、无痛性淋巴结肿大及出血倾向。检查结果显示淋巴结活检证实为CD5+、CD23+的克隆性B细胞浸润，符合慢性淋巴细胞白血病/小淋巴细胞淋巴瘤特征；骨髓穿刺显示成熟淋巴细胞弥漫性浸润超过60%并导致三系造血减少。这些临床表现和病理结果均指向血液系统恶性肿瘤，属于血液科诊疗范围。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"慢性淋巴细胞白血病\", \"treatment_plan\": \"1. 治疗策略：患者目前处于疾病进展期（B症状明显、淋巴结肿大进行性增加、骨髓受累严重），符合启动治疗的指征。首选方案为“苯达莫司汀联合利妥昔单抗”或“维奈克拉联合奥妥珠单抗”。前者适用于无高危遗传学异常且体能状态尚可的患者，后者对高龄或有合并症者安全性更佳，且无需化疗即可达到深度缓解。\\n2. 个性化调整：鉴于患者有乏力、贫血及出血倾向（瘀斑），需密切监测血常规；若存在TP53突变或17p缺失（需进一步基因检测确认），则避免使用传统化疗，优先选择BCL-2抑制剂（如维奈克拉）或BTK抑制剂（如伊布替尼/泽布替尼）。\\n3. 安全性与监测：治疗期间需严密监测感染风险（特别是带状疱疹病毒再激活）、肿瘤溶解综合征及免疫抑制相关副作用。建议每疗程前评估肝肾功能及心电图。若出现高热不退、严重出血或呼吸困难，需立即就医。治疗结束后需定期随访流式细胞术以监测微小残留病（MRD）。\", \"reasoning\": \"诊断依据：患者表现为无痛性淋巴结肿大（颈部、腋下）、盗汗、体重下降等B症状，伴贫血和血小板减少导致的出血倾向。淋巴结活检显示成熟小淋巴细胞弥漫性浸润，呈克隆性B细胞群（CD5+、CD23+），这是慢性淋巴细胞白血病（CLL）的典型病理特征。骨髓穿刺证实成熟淋巴细胞弥漫性浸润超过60%，导致三系造血受抑。结合临床表现与实验室检查，确诊为慢性淋巴细胞白血病。治疗方案需根据疾病分期、遗传学风险及患者体能状况制定，旨在控制病情、缓解症状并延长生存期。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_01919",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_04985's bone marrow examination revealed hypercellularity (90%), replacement by abnormal infiltration of blasts (68%), significantly increased myeloid-to-erythroid ratio, maturation arrest in granulocytes, suppressed erythroid series, and significantly reduced megakaryocytes.",
+      "Bone marrow biopsy of Patient_02851 showed hypercellularity (85%) with diffuse infiltration by small mature lymphocytes (>70%), resulting in trilineage hematopoietic suppression.",
+      "Physical examination of Patient_00952 revealed BMI 18.2 kg/m², low-grade fever (37.6°C), pale conjunctiva, scattered skin ecchymoses, and multiple painless cervical/submandibular lymph nodes up to 2cm x 1.5cm.",
+      "Patient_09606's bone marrow examination revealed diffuse infiltration by lymphoblasts replacing normal hematopoietic tissue, with 85% blast cells, significantly reduced myeloid and erythroid maturation, decreased megakaryocytes, and hypercellularity (>90%).",
+      "User's child's bone marrow biopsy showed high cellularity (90%), normal trilineage hematopoiesis, <5% blasts, adequate megakaryocytes, and present iron stores, ruling out leukemia and aplastic anemia.",
+      "Physical examination of Patient_02851 revealed BMI 21.5 kg/m², temperature 37.6°C, conjunctival pallor, multiple ecchymoses on skin, spleen enlargement (palpable 3-4 cm below left costal margin, firm texture), and multiple painless, firm, slowly enlarging lymph nodes in the neck and left axilla.",
+      "Patient_02057's abdominal examination revealed hepatomegaly (liver dullness 14 cm, liver edge palpable 2 cm below right costal margin) and massive splenomegaly (spleen palpable 8 cm below left costal margin, hard consistency), with positive deep tenderness in the left upper quadrant and a large palpable mass.",
+      "Patient_00634's bone marrow examination showed no abnormal infiltration, normal granulocytic and erythrocytic maturation, mild reticular fibrosis, 2% blasts, significantly hyperplastic megakaryocytes with enlargement and clustering, and increased cellularity (80%).",
+      "Patient_00827's laboratory results showed anemia (Hemoglobin 88 g/L, RBC 3.0 × 10^12/L), hypercalcemia (Calcium 12.1 mg/dL), elevated total protein (9.4 g/dL), renal insufficiency (Creatinine 2.3 mg/dL, eGFR 28 mL/min/1.73m²), normal PTH, and mildly elevated CA-125 (42 U/mL).",
+      "Lymph node biopsy results showed complete loss of normal lymph node architecture, destruction of cortical follicles, absence of reactive germinal centers, and invasion by atypical CD20+ B-lymphoid cells forming a monoclonal population.",
+      "User's peripheral blood smear revealed hairy cells (abundant pale blue cytoplasm with irregular fringed edges) and abnormal lymphocytes with large cell bodies, abundant cytoplasm, fine fringed projections, and loose chromatin; platelets were estimated at 80,000/μL",
+      "Bone marrow examination of Patient_06317 revealed abnormal infiltration by clonal plasma cells replacing normal hematopoietic tissue, with plasma cells comprising 42% of marrow cells (normal <4%), suppressed granulocytic and erythroid maturation, and reduced megakaryocytes.",
+      "User participated in a hematology diagnostic task for Patient_06427, a middle-aged male presenting with a progressively enlarging painless left neck mass (3cm), early satiety, upper abdominal discomfort, fatigue, night sweats, and weight loss of 4.5 kg over two months.",
+      "User diagnosed Patient_02057 with myelofibrosis based on progressive fatigue, early satiety, left upper quadrant fullness, low-grade fever, night sweats, weight loss, gum bleeding, easy bruising, massive splenomegaly (8 cm below left costal margin), leukocytosis (18.6 x10^9/L), anemia (Hb 92 g/L), thrombocytopenia (92 x10^9/L), teardrop cells on peripheral smear, and bone marrow showing diffuse reticulin/collagen fibrosis with atypical megakaryocytes.",
+      "Physical examination of Patient_06427 revealed BMI 24 kg/m², temperature 36.5°C, thin papery skin with decreased elasticity, sparse white hair, S4 heart sound, enlarged prostate, reduced vibration sense in feet, high-frequency hearing loss, hepatomegaly, splenomegaly, and a hard, immobile 3cm painless mass on the left neck.",
+      "User is a middle-aged male patient diagnosed with Mantle Cell Lymphoma (套细胞淋巴瘤) around November 2026, presenting with a painless left neck mass the size of a large walnut discovered 10 days prior",
+      "User participated in a hematology diagnostic task for Patient_04112, who presented with progressively enlarging painless neck and axillary masses, fatigue, early satiety, abdominal distension, night sweats, weight loss, and occasional low-grade fever.",
+      "User diagnosed Patient_00952 with Chronic Lymphocytic Leukemia (CLL) based on B symptoms (fatigue, night sweats, weight loss), painless lymphadenopathy, bleeding tendency, leukocytosis with lymphocytosis (WBC 68.4 x 10^9/L, 82% lymphocytes), anemia (Hgb 98 g/L), thrombocytopenia (PLT 92 x 10^9/L), smudge cells on peripheral smear, and biopsy confirmation of monoclonal B-cell infiltration.",
+      "Physical examination of Patient_03960 revealed splenomegaly (spleen palpable 4 cm below left costal margin), positive shifting dullness indicating ascites, mild varicose veins on the abdominal wall, pale skin, scattered petechiae on arms and legs, and ecchymosis on lower legs.",
+      "Patient_07426 had abdominal examination findings of hepatomegaly (liver span 14 cm), palpable liver edge, massive spleen (hard, smooth surface) extending below the left costal margin, left hypochondriac mass, and appendectomy scar in the right lower abdomen."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "乏力三个月，最近两周加重。颈部和腋下长了无痛肿块，还在变大。盗汗严重，体重掉了近五公斤，偶尔低烧。上楼梯气短头晕，前臂容易青一块紫一块。左上腹吃一点就胀。别跟我提那些网上查的废话，直接说检查费用多少？"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "腹部检查": {
+        "result": {
+          "卵巢触诊": "未触及",
+          "子宫触诊": "未触及",
+          "肝浊音界/肝跨度": "肝浊音界上界位于右锁骨中线第5肋间，下界位于右肋缘下约3cm",
+          "肝缘触诊": "于右肋缘下可触及肝脏边缘，质韧，表面光滑，无压痛",
+          "肠鸣音": "肠鸣音正常，每分钟约4次",
+          "腹主动脉搏动": "腹主动脉搏动可见且易于触及",
+          "腹股沟疝": "双侧腹股沟区未触及肿块或疝囊",
+          "腹膜刺激征": "无反跳痛及肌紧张",
+          "腹部压痛": "左上腹有轻度压痛，其余部位无压痛",
+          "腹部叩诊音": "全腹叩诊以鼓音为主，肝区呈浊音",
+          "腹部外观": "腹部平坦，未见明显膨隆，皮肤无静脉曲张",
+          "腹部肿块": "左上腹可触及一质地较硬、边界不清的包块，随呼吸移动",
+          "腹部触感": "腹壁柔软，无明显抵抗感",
+          "血管杂音": "未闻及血管杂音"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "肝浊音界/肝跨度",
+          "肝缘触诊",
+          "腹部压痛",
+          "腹部肿块"
+        ]
+      },
+      "皮肤检查": {
+        "result": {
+          "全身体格检查-皮肤状态": "皮肤温暖干燥，张力与弹性下降，可见明显皱纹和松弛，表皮变薄。",
+          "指(趾)甲": "指（趾）甲较脆，伴有纵嵴。",
+          "毛发分布": "头发灰白且弥漫性稀疏，腋毛和阴毛稀少，面部可见粗硬毛发。",
+          "毛细血管再充盈时间": "毛细血管再充盈时间为2秒。",
+          "水肿肿块及淋巴结": "双侧颈部及腋下可触及多个无痛、质韧如橡皮样的肿大淋巴结，大小约1.5至3.0厘米，活动度尚可；无病理性水肿。",
+          "皮肤病变与出血点": "前臂可见散在瘀斑，直径约0.5至1.5厘米，无其他皮疹或溃疡。",
+          "肤色与发绀黄疸": "肤色与种族背景相符，可见日光性雀斑样痣和脂溢性角化，无发绀或黄疸。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "水肿肿块及淋巴结",
+          "皮肤病变与出血点"
+        ]
+      },
+      "生命体征": {
+        "result": {
+          "体温": "37.2°C［参考值：35.8-36.8°C（96.4-98.2°F），通常低于年轻成人］",
+          "呼吸频率": "24次/分［参考值：16-24次/分，通常略快且较浅］",
+          "心率": "98次/分［参考值：60-100次/分，但最大运动时心率会下降］",
+          "血压": "135/85 mmHg［参考值：收缩压100-140 mmHg，舒张压60-90 mmHg］",
+          "血氧饱和度": "94%［参考值：在室内空气下为93-100%］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "体温",
+          "呼吸频率"
+        ]
+      },
+      "淋巴结活检": {
+        "result": {
+          "恶性细胞或恶性浸润": "可见成熟小淋巴细胞弥漫性浸润，呈克隆性B细胞群（CD5+、CD23+），符合慢性淋巴细胞白血病/小淋巴细胞淋巴瘤特征。",
+          "淋巴结皮质厚度": "皮质显著增厚，被大量淋巴样细胞取代。",
+          "淋巴结细胞分布": "呈现单克隆B细胞主导的异常分布，缺乏正常的多克隆T/B细胞平衡。",
+          "病理坏死": "未见坏死证据。",
+          "病理淋巴结结构": "淋巴结正常结构消失，被弥漫性肿瘤细胞浸润破坏。",
+          "皮质滤泡及生发中心": "淋巴滤泡数量减少，生发中心缺如或萎缩。",
+          "结构消失": "淋巴结正常解剖结构完全消失。",
+          "肉芽肿性炎症": "未见肉芽肿性炎症证据。",
+          "脂肪替代": "自淋巴结门部向外延伸的脂肪替代明显增加。",
+          "退行性变化": "显示与年龄相关的退行性变化征象。",
+          "间质纤维化或透明样变": "间质纤维化或透明样变增加。",
+          "非典型性淋巴样增生": "无异型性增殖。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "恶性细胞或恶性浸润",
+          "淋巴结皮质厚度",
+          "淋巴结细胞分布",
+          "病理淋巴结结构",
+          "结构消失"
+        ]
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "骨髓细胞密度": "细胞密度：70%［参考值：降低（通常为20-50%，与年龄成反比）。］",
+          "异常浸润或纤维化": "成熟淋巴细胞弥漫性浸润＞60%",
+          "骨髓三系造血": "三系造血明显减少"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "骨髓细胞密度",
+          "异常浸润或纤维化",
+          "骨髓三系造血"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史、检查结果或已开检查信息，无法进行诊断，必须首先通过问诊获取患者的临床症状以明确诊疗方向。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者症状（乏力、无痛性淋巴结肿大、盗汗、体重下降、出血倾向、脾大引起的早饱感）高度提示血液系统恶性肿瘤（如淋巴瘤或白血病），目前尚未进行任何检查，急需通过外周血涂片、骨髓穿刺活检及影像学检查来明确诊断。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有乏力、盗汗、体重下降、淋巴结肿大、脾大及出血倾向等典型血液系统恶性肿瘤症状，腹部检查发现左上腹包块（疑似脾脏或淋巴结肿大），皮肤检查确认淋巴结肿大和瘀斑。目前缺乏关键的实验室检查结果（如血常规、外周血涂片、骨髓穿刺等）来明确诊断（如淋巴瘤、白血病等），因此需要优先开具相关检查以获取确诊依据。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者已出现典型的B症状（发热、盗汗、体重下降）、无痛性淋巴结肿大、脾大及出血倾向。关键的淋巴结活检结果明确显示为CD5+、CD23+的克隆性B细胞浸润，符合慢性淋巴细胞白血病/小淋巴细胞淋巴瘤（CLL/SLL）的特征。骨髓穿刺也证实了成熟淋巴细胞的弥漫性浸润和三系造血受抑。目前诊断所需的临床和病理信息已充分，可直接进入确诊和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "体格检查",
+        "examinations": [
+          "腹部检查",
+          "皮肤检查",
+          "生命体征"
+        ],
+        "reason": "患者主诉左上腹饱胀感，需进行腹部检查以评估脾脏是否肿大；患者有前臂易出现瘀斑的症状，需进行皮肤检查以观察出血点或瘀斑情况；患者有乏力、盗汗、低烧等症状，需监测体温等生命体征。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "淋巴结活检",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为无痛性进行性增大的颈部及腋下淋巴结肿大，伴有发热、盗汗、体重下降等B症状，以及脾脏肿大和皮肤瘀斑。为明确淋巴结肿大的性质（如淋巴瘤或其他恶性肿瘤），首选淋巴结活检进行病理学诊断；同时考虑到患者有全血细胞减少倾向（贫血、血小板减少导致的瘀斑）及脾大，需行骨髓穿刺和活检以评估骨髓造血功能及排除血液系统恶性肿瘤（如白血病或淋巴瘤骨髓浸润）。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "慢性淋巴细胞白血病",
+      "treatment_plan": "1. 治疗策略：患者目前处于疾病进展期（B症状明显、淋巴结肿大进行性增加、骨髓受累严重），符合启动治疗的指征。首选方案为“苯达莫司汀联合利妥昔单抗”或“维奈克拉联合奥妥珠单抗”。前者适用于无高危遗传学异常且体能状态尚可的患者，后者对高龄或有合并症者安全性更佳，且无需化疗即可达到深度缓解。\n2. 个性化调整：鉴于患者有乏力、贫血及出血倾向（瘀斑），需密切监测血常规；若存在TP53突变或17p缺失（需进一步基因检测确认），则避免使用传统化疗，优先选择BCL-2抑制剂（如维奈克拉）或BTK抑制剂（如伊布替尼/泽布替尼）。\n3. 安全性与监测：治疗期间需严密监测感染风险（特别是带状疱疹病毒再激活）、肿瘤溶解综合征及免疫抑制相关副作用。建议每疗程前评估肝肾功能及心电图。若出现高热不退、严重出血或呼吸困难，需立即就医。治疗结束后需定期随访流式细胞术以监测微小残留病（MRD）。",
+      "reasoning": "诊断依据：患者表现为无痛性淋巴结肿大（颈部、腋下）、盗汗、体重下降等B症状，伴贫血和血小板减少导致的出血倾向。淋巴结活检显示成熟小淋巴细胞弥漫性浸润，呈克隆性B细胞群（CD5+、CD23+），这是慢性淋巴细胞白血病（CLL）的典型病理特征。骨髓穿刺证实成熟淋巴细胞弥漫性浸润超过60%，导致三系造血受抑。结合临床表现与实验室检查，确诊为慢性淋巴细胞白血病。治疗方案需根据疾病分期、遗传学风险及患者体能状况制定，旨在控制病情、缓解症状并延长生存期。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_01919",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.2,
+      "treatmentOverallScore": 0.48,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "慢性淋巴细胞白血病"
+        ],
+        "expected": [
+          "慢性淋巴细胞白血病"
+        ],
+        "matched": [
+          "慢性淋巴细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "腹部检查",
+          "皮肤检查",
+          "生命体征",
+          "淋巴结活检",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "流式细胞术免疫分型",
+          "骨髓穿刺和活检（BMAB）",
+          "血清免疫球蛋白（IgG、IgA、IgM）",
+          "直接抗人球蛋白试验（DAT）",
+          "荧光原位杂交（FISH）"
+        ],
+        "matched": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "precision": 0.2,
+        "coverage": 0.16666666666666666,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 治疗策略：患者目前处于疾病进展期（B症状明显、淋巴结肿大进行性增加、骨髓受累严重），符合启动治疗的指征。首选方案为“苯达莫司汀联合利妥昔单抗”或“维奈克拉联合奥妥珠单抗”。前者适用于无高危遗传学异常且体能状态尚可的患者，后者对高龄或有合并症者安全性更佳，且无需化疗即可达到深度缓解。\n2. 个性化调整：鉴于患者有乏力、贫血及出血倾向（瘀斑），需密切监测血常规；若存在TP53突变或17p缺失（需进一步基因检测确认），则避免使用传统化疗，优先选择BCL-2抑制剂（如维奈克拉）或BTK抑制剂（如伊布替尼/泽布替尼）。\n3. 安全性与监测：治疗期间需严密监测感染风险（特别是带状疱疹病毒再激活）、肿瘤溶解综合征及免疫抑制相关副作用。建议每疗程前评估肝肾功能及心电图。若出现高热不退、严重出血或呼吸困难，需立即就医。治疗结束后需定期随访流式细胞术以监测微小残留病（MRD）。",
+        "overallScore": 0.48,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.6,
+        "reasoning": "方案未遵循首选伊布替尼标准，忽略自身免疫性溶血评估及出血预防细节。",
+        "reference": "最佳治疗方案为开始伊布替尼单药治疗，并根据其年龄以及伴有血细胞减少的症状性疾病情况进行个体化调整。在开始治疗之前（或开始时），鉴于DAT阳性，应评估贫血是由骨髓受累还是自身免疫性溶血性贫血（AIHA）所致：获取/确认溶血指标（总/间接胆红素、LDH、结合珠蛋白、网织红细胞计数及外周血涂片）。如果实验室或涂片证据提示存在与AIHA一致的溶血，则加用针对AIHA的治疗（例如泼尼松约1 mg/kg/天，并根据疗效逐渐减量；若反应不足/复发可考虑利妥昔单抗），并根据临床指征给予红细胞输血支持。\n\n鉴于PLT 98 x10^9/L且易瘀青，使用BTK抑制剂治疗时需采取出血风险预防措施：记录基线出血病史/查体，避免使用NSAIDs及抗血小板/抗凝药物，除非确有必要（必要时协调处理），并提供明确的停药/重新评估参数（例如，若发生具有临床意义的出血，或出现严重血小板减少如PLT <50 x10^9/L或计数快速下降，则暂停伊布替尼并紧急重新评估）。应指导其如出现黑便/便血、血尿、持续鼻出血超过10分钟、无法止住的牙龈出血、新发严重头痛/神经系统症状或大片进行性扩大的瘀斑，应立即就医。\n\n辅助治疗包括根据需要为贫血和血小板减少提供输血支持，同时细致处理盗汗和乏力等症状。她应保持高蛋白饮食，少量多餐，以改善早饱和体重下降，并继续其日常编织活动以缓解压力。\n\n由于她有明显的针刺恐惧和轻度认知功能障碍，应实施可行性支持措施：让家属/照护者参与预约安排、用药监督以及就诊时携带书面用药清单；提供简化的书面说明和清晰的给药时间表。对于抽血，在安全的前提下可考虑就诊前使用局部表面麻醉剂和/或短效抗焦虑药物，允许照护者陪同，并尽可能由固定的采血团队操作。监测计划：在基线时进行CBC和出血评估，于开始伊布替尼后1-2周再次检查，之后根据病情稳定性按间隔复查（治疗早期至少每2-4周一次），并可灵活安排化验/就诊时间以集中进行，减少与针刺相关的障碍。2周后复诊对于监测血细胞计数和治疗耐受性至关重要，并应嘱其一旦出现发热、明显出血或气短加重，立即报告。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "慢性淋巴细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "流式细胞术免疫分型",
+          "骨髓穿刺和活检（BMAB）",
+          "血清免疫球蛋白（IgG、IgA、IgM）",
+          "直接抗人球蛋白试验（DAT）",
+          "荧光原位杂交（FISH）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "最佳治疗方案为开始伊布替尼单药治疗，并根据其年龄以及伴有血细胞减少的症状性疾病情况进行个体化调整。在开始治疗之前（或开始时），鉴于DAT阳性，应评估贫血是由骨髓受累还是自身免疫性溶血性贫血（AIHA）所致：获取/确认溶血指标（总/间接胆红素、LDH、结合珠蛋白、网织红细胞计数及外周血涂片）。如果实验室或涂片证据提示存在与AIHA一致的溶血，则加用针对AIHA的治疗（例如泼尼松约1 mg/kg/天，并根据疗效逐渐减量；若反应不足/复发可考虑利妥昔单抗），并根据临床指征给予红细胞输血支持。\n\n鉴于PLT 98 x10^9/L且易瘀青，使用BTK抑制剂治疗时需采取出血风险预防措施：记录基线出血病史/查体，避免使用NSAIDs及抗血小板/抗凝药物，除非确有必要（必要时协调处理），并提供明确的停药/重新评估参数（例如，若发生具有临床意义的出血，或出现严重血小板减少如PLT <50 x10^9/L或计数快速下降，则暂停伊布替尼并紧急重新评估）。应指导其如出现黑便/便血、血尿、持续鼻出血超过10分钟、无法止住的牙龈出血、新发严重头痛/神经系统症状或大片进行性扩大的瘀斑，应立即就医。\n\n辅助治疗包括根据需要为贫血和血小板减少提供输血支持，同时细致处理盗汗和乏力等症状。她应保持高蛋白饮食，少量多餐，以改善早饱和体重下降，并继续其日常编织活动以缓解压力。\n\n由于她有明显的针刺恐惧和轻度认知功能障碍，应实施可行性支持措施：让家属/照护者参与预约安排、用药监督以及就诊时携带书面用药清单；提供简化的书面说明和清晰的给药时间表。对于抽血，在安全的前提下可考虑就诊前使用局部表面麻醉剂和/或短效抗焦虑药物，允许照护者陪同，并尽可能由固定的采血团队操作。监测计划：在基线时进行CBC和出血评估，于开始伊布替尼后1-2周再次检查，之后根据病情稳定性按间隔复查（治疗早期至少每2-4周一次），并可灵活安排化验/就诊时间以集中进行，减少与针刺相关的障碍。2周后复诊对于监测血细胞计数和治疗耐受性至关重要，并应嘱其一旦出现发热、明显出血或气短加重，立即报告。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "老年女性，主诉乏力、盗汗、体重下降及无痛性淋巴结肿大，伴出血倾向（瘀斑）和早饱。患者有针刺恐惧和轻度认知障碍，需特别关注治疗依从性及侵入性操作的可行性支持。",
+        "diagnosis_reflection": "诊断准确（慢性淋巴细胞白血病），成功识别了B症状（发热、盗汗、体重减轻）及淋巴结肿大等关键线索，符合标准诊断路径。",
+        "examination_reflection": "检查选择存在明显偏差。虽然安排了骨髓穿刺（BMAB），但遗漏了确诊CLL的核心检查如全血细胞计数（CBC）、流式细胞术免疫分型及FISH基因检测；同时未针对出血倾向进行直接抗人球蛋白试验（DAT）以排除自身免疫性溶血。",
+        "treatment_reflection": "治疗方案虽提及靶向药，但未遵循首选伊布替尼单药的标准指南，且忽略了针对DAT阳性导致的贫血评估及具体的出血风险预防措施（如避免NSAIDs、监测血小板）。未充分考虑患者的针刺恐惧和认知障碍对治疗执行的影响。",
+        "future_strategy": "面对疑似CLL病例，必须优先完善血常规、流式细胞术及基因检测以确诊；制定方案时首选BTK抑制剂（如伊布替尼），并详细评估溶血风险和出血预防策略；对于有操作恐惧或认知障碍的患者，需提前制定简化给药方案和家属协助计划。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:44:38.199259+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_01919",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "慢性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. 治疗策略：患者目前处于疾病进展期（B症状明显、淋巴结肿大进行性增加、骨髓受累严重），符合启动治疗的指征。首选方案为“苯达莫司汀联合利妥昔单抗”或“维奈克拉联合奥妥珠单抗”。前者适用于无高危遗传学异常且体能状态尚可的患者，后者对高龄或有合并症者安全性更佳，且无需化疗即可达到深度缓解。\n2. 个性化调整：鉴于患者有乏力、贫血及出血倾向（瘀斑），需密切监测血常规；若存在TP53突变或17p缺失（需进一步基因检测确认），则避免使用传统化疗，优先选择BCL-2抑制剂（如维奈克拉）或BTK抑制剂（如伊布替尼/泽布替尼）。\n3. 安全性与监测：治疗期间需严密监测感染风险（特别是带状疱疹病毒再激活）、肿瘤溶解综合征及免疫抑制相关副作用。建议每疗程前评估肝肾功能及心电图。若出现高热不退、严重出血或呼吸困难，需立即就医。治疗结束后需定期随访流式细胞术以监测微小残留病（MRD）。",
+    "reasoning": "诊断依据：患者表现为无痛性淋巴结肿大（颈部、腋下）、盗汗、体重下降等B症状，伴贫血和血小板减少导致的出血倾向。淋巴结活检显示成熟小淋巴细胞弥漫性浸润，呈克隆性B细胞群（CD5+、CD23+），这是慢性淋巴细胞白血病（CLL）的典型病理特征。骨髓穿刺证实成熟淋巴细胞弥漫性浸润超过60%，导致三系造血受抑。结合临床表现与实验室检查，确诊为慢性淋巴细胞白血病。治疗方案需根据疾病分期、遗传学风险及患者体能状况制定，旨在控制病情、缓解症状并延长生存期。",
+    "ordered_examinations": [
+      "腹部检查",
+      "皮肤检查",
+      "生命体征",
+      "淋巴结活检",
+      "骨髓穿刺和活检（BMAB）"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_01919",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.2,
+    "treatmentOverallScore": 0.48,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "慢性淋巴细胞白血病"
+      ],
+      "expected": [
+        "慢性淋巴细胞白血病"
+      ],
+      "matched": [
+        "慢性淋巴细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "腹部检查",
+        "皮肤检查",
+        "生命体征",
+        "淋巴结活检",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "流式细胞术免疫分型",
+        "骨髓穿刺和活检（BMAB）",
+        "血清免疫球蛋白（IgG、IgA、IgM）",
+        "直接抗人球蛋白试验（DAT）",
+        "荧光原位杂交（FISH）"
+      ],
+      "matched": [
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "precision": 0.2,
+      "coverage": 0.16666666666666666,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 治疗策略：患者目前处于疾病进展期（B症状明显、淋巴结肿大进行性增加、骨髓受累严重），符合启动治疗的指征。首选方案为“苯达莫司汀联合利妥昔单抗”或“维奈克拉联合奥妥珠单抗”。前者适用于无高危遗传学异常且体能状态尚可的患者，后者对高龄或有合并症者安全性更佳，且无需化疗即可达到深度缓解。\n2. 个性化调整：鉴于患者有乏力、贫血及出血倾向（瘀斑），需密切监测血常规；若存在TP53突变或17p缺失（需进一步基因检测确认），则避免使用传统化疗，优先选择BCL-2抑制剂（如维奈克拉）或BTK抑制剂（如伊布替尼/泽布替尼）。\n3. 安全性与监测：治疗期间需严密监测感染风险（特别是带状疱疹病毒再激活）、肿瘤溶解综合征及免疫抑制相关副作用。建议每疗程前评估肝肾功能及心电图。若出现高热不退、严重出血或呼吸困难，需立即就医。治疗结束后需定期随访流式细胞术以监测微小残留病（MRD）。",
+      "overallScore": 0.48,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.6,
+      "reasoning": "方案未遵循首选伊布替尼标准，忽略自身免疫性溶血评估及出血预防细节。",
+      "reference": "最佳治疗方案为开始伊布替尼单药治疗，并根据其年龄以及伴有血细胞减少的症状性疾病情况进行个体化调整。在开始治疗之前（或开始时），鉴于DAT阳性，应评估贫血是由骨髓受累还是自身免疫性溶血性贫血（AIHA）所致：获取/确认溶血指标（总/间接胆红素、LDH、结合珠蛋白、网织红细胞计数及外周血涂片）。如果实验室或涂片证据提示存在与AIHA一致的溶血，则加用针对AIHA的治疗（例如泼尼松约1 mg/kg/天，并根据疗效逐渐减量；若反应不足/复发可考虑利妥昔单抗），并根据临床指征给予红细胞输血支持。\n\n鉴于PLT 98 x10^9/L且易瘀青，使用BTK抑制剂治疗时需采取出血风险预防措施：记录基线出血病史/查体，避免使用NSAIDs及抗血小板/抗凝药物，除非确有必要（必要时协调处理），并提供明确的停药/重新评估参数（例如，若发生具有临床意义的出血，或出现严重血小板减少如PLT <50 x10^9/L或计数快速下降，则暂停伊布替尼并紧急重新评估）。应指导其如出现黑便/便血、血尿、持续鼻出血超过10分钟、无法止住的牙龈出血、新发严重头痛/神经系统症状或大片进行性扩大的瘀斑，应立即就医。\n\n辅助治疗包括根据需要为贫血和血小板减少提供输血支持，同时细致处理盗汗和乏力等症状。她应保持高蛋白饮食，少量多餐，以改善早饱和体重下降，并继续其日常编织活动以缓解压力。\n\n由于她有明显的针刺恐惧和轻度认知功能障碍，应实施可行性支持措施：让家属/照护者参与预约安排、用药监督以及就诊时携带书面用药清单；提供简化的书面说明和清晰的给药时间表。对于抽血，在安全的前提下可考虑就诊前使用局部表面麻醉剂和/或短效抗焦虑药物，允许照护者陪同，并尽可能由固定的采血团队操作。监测计划：在基线时进行CBC和出血评估，于开始伊布替尼后1-2周再次检查，之后根据病情稳定性按间隔复查（治疗早期至少每2-4周一次），并可灵活安排化验/就诊时间以集中进行，减少与针刺相关的障碍。2周后复诊对于监测血细胞计数和治疗耐受性至关重要，并应嘱其一旦出现发热、明显出血或气短加重，立即报告。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "慢性淋巴细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "流式细胞术免疫分型",
+        "骨髓穿刺和活检（BMAB）",
+        "血清免疫球蛋白（IgG、IgA、IgM）",
+        "直接抗人球蛋白试验（DAT）",
+        "荧光原位杂交（FISH）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "最佳治疗方案为开始伊布替尼单药治疗，并根据其年龄以及伴有血细胞减少的症状性疾病情况进行个体化调整。在开始治疗之前（或开始时），鉴于DAT阳性，应评估贫血是由骨髓受累还是自身免疫性溶血性贫血（AIHA）所致：获取/确认溶血指标（总/间接胆红素、LDH、结合珠蛋白、网织红细胞计数及外周血涂片）。如果实验室或涂片证据提示存在与AIHA一致的溶血，则加用针对AIHA的治疗（例如泼尼松约1 mg/kg/天，并根据疗效逐渐减量；若反应不足/复发可考虑利妥昔单抗），并根据临床指征给予红细胞输血支持。\n\n鉴于PLT 98 x10^9/L且易瘀青，使用BTK抑制剂治疗时需采取出血风险预防措施：记录基线出血病史/查体，避免使用NSAIDs及抗血小板/抗凝药物，除非确有必要（必要时协调处理），并提供明确的停药/重新评估参数（例如，若发生具有临床意义的出血，或出现严重血小板减少如PLT <50 x10^9/L或计数快速下降，则暂停伊布替尼并紧急重新评估）。应指导其如出现黑便/便血、血尿、持续鼻出血超过10分钟、无法止住的牙龈出血、新发严重头痛/神经系统症状或大片进行性扩大的瘀斑，应立即就医。\n\n辅助治疗包括根据需要为贫血和血小板减少提供输血支持，同时细致处理盗汗和乏力等症状。她应保持高蛋白饮食，少量多餐，以改善早饱和体重下降，并继续其日常编织活动以缓解压力。\n\n由于她有明显的针刺恐惧和轻度认知功能障碍，应实施可行性支持措施：让家属/照护者参与预约安排、用药监督以及就诊时携带书面用药清单；提供简化的书面说明和清晰的给药时间表。对于抽血，在安全的前提下可考虑就诊前使用局部表面麻醉剂和/或短效抗焦虑药物，允许照护者陪同，并尽可能由固定的采血团队操作。监测计划：在基线时进行CBC和出血评估，于开始伊布替尼后1-2周再次检查，之后根据病情稳定性按间隔复查（治疗早期至少每2-4周一次），并可灵活安排化验/就诊时间以集中进行，减少与针刺相关的障碍。2周后复诊对于监测血细胞计数和治疗耐受性至关重要，并应嘱其一旦出现发热、明显出血或气短加重，立即报告。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "老年女性，主诉乏力、盗汗、体重下降及无痛性淋巴结肿大，伴出血倾向（瘀斑）和早饱。患者有针刺恐惧和轻度认知障碍，需特别关注治疗依从性及侵入性操作的可行性支持。",
+      "diagnosis_reflection": "诊断准确（慢性淋巴细胞白血病），成功识别了B症状（发热、盗汗、体重减轻）及淋巴结肿大等关键线索，符合标准诊断路径。",
+      "examination_reflection": "检查选择存在明显偏差。虽然安排了骨髓穿刺（BMAB），但遗漏了确诊CLL的核心检查如全血细胞计数（CBC）、流式细胞术免疫分型及FISH基因检测；同时未针对出血倾向进行直接抗人球蛋白试验（DAT）以排除自身免疫性溶血。",
+      "treatment_reflection": "治疗方案虽提及靶向药，但未遵循首选伊布替尼单药的标准指南，且忽略了针对DAT阳性导致的贫血评估及具体的出血风险预防措施（如避免NSAIDs、监测血小板）。未充分考虑患者的针刺恐惧和认知障碍对治疗执行的影响。",
+      "future_strategy": "面对疑似CLL病例，必须优先完善血常规、流式细胞术及基因检测以确诊；制定方案时首选BTK抑制剂（如伊布替尼），并详细评估溶血风险和出血预防策略；对于有操作恐惧或认知障碍的患者，需提前制定简化给药方案和家属协助计划。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/055.json#/applied_memory"
+  }
+}

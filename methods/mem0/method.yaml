@@ -1,0 +1,207 @@
+{
+  "method_id": "mem0",
+  "name": "Mem0",
+  "summary": "Pinned official Mem0 with native batched extraction, entity merge and hybrid ranking.",
+  "capabilities": {
+    "modalities": [
+      "text",
+      "image"
+    ],
+    "forms": [
+      "record"
+    ],
+    "operations": [
+      "index",
+      "add",
+      "search",
+      "episode_end",
+      "flush",
+      "reset",
+      "save",
+      "load",
+      "detail",
+      "update",
+      "delete"
+    ],
+    "integration_slots": [
+      "context"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "tool_result",
+      "action",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session",
+      "run"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "snapshot",
+    "supports_async": true
+  },
+  "version": "native-84bf468-v1",
+  "paper_url": "https://arxiv.org/abs/2504.19413",
+  "repository_url": "https://github.com/mem0ai/mem0",
+  "source_subdir": null,
+  "recommended_executor": "subprocess",
+  "fidelity": "native_wrapper",
+  "implementation_strategy": "native_plugin",
+  "storage": {
+    "path_parameters": {
+      "storage_path": "auto"
+    },
+    "kind": "embedded_db",
+    "backend": "qdrant_local_plus_sqlite_history",
+    "database_paths": [
+      "native-identity.json",
+      "qdrant/",
+      "history.db"
+    ],
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "provider_bridge",
+  "implementation_notes": [
+    "Direct execution of mem0ai/mem0@84bf468176f0c5e82493bb95aec5484eb2d92bc1; installed native Python source files are SHA256 checked before setup.",
+    "Provider factories bridge public LLM/embedding services; native prompt construction, batch calls, semantic entity merge, BM25 and hybrid ranking are unchanged.",
+    "The pinned upstream default is additive extraction, not the paper-era four-operation classic pipeline. Historical simplified implementations and checkpoints are deliberately unsupported.",
+    "Native telemetry is disabled; native config and both Qdrant collections are initialized under adapter-owned storage. Setup prewarms NLP/BM25 and fails on unavailable native components.",
+    "save/load contain compressed complete Qdrant and SQLite history/messages files; restore does not replay models or renormalize vectors. Public reset additionally clears selected recent-message context/entity links.",
+    "Frozen reads use snapshot restoration because upstream Qdrant local cosine search normalizes stored dense arrays in place; the adapter preserves exact live dtypes/order alongside all persistent DB files."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {
+        "type": "string",
+        "enum": [
+          "standard"
+        ],
+        "default": "standard",
+        "description": "Pinned native implementation only; offline simplification is unsupported."
+      },
+      "algorithm_profile": {
+        "type": "string",
+        "enum": [
+          "additive"
+        ],
+        "default": "additive",
+        "description": "The additive algorithm shipped by the pinned upstream source."
+      },
+      "infer": {
+        "type": "boolean",
+        "default": true,
+        "description": "Extract memories with an LLM; false stores supplied non-system message text directly."
+      },
+      "write_policy": {
+        "type": "string",
+        "enum": [
+          "turn",
+          "episode"
+        ],
+        "default": "turn",
+        "description": "turn processes observed messages on assistant replies; episode processes a submitted learning unit. flush handles remaining buffers."
+      },
+      "top_k": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 20,
+        "description": "Native default retrieval limit; explicit search(top_k=...) overrides it."
+      },
+      "threshold": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "default": 0.1,
+        "description": "Native hybrid search threshold."
+      },
+      "rerank": {
+        "type": "boolean",
+        "default": false,
+        "description": "No native reranker is configured; rerank=true is rejected.",
+        "enum": [
+          false
+        ]
+      },
+      "hybrid_search": {
+        "type": "boolean",
+        "default": true,
+        "description": "Native semantic/BM25/entity hybrid search is required.",
+        "enum": [
+          true
+        ]
+      },
+      "storage_path": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional embedded database location; the runtime allocates isolated run storage."
+      },
+      "embedding_dims": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Optional embedding dimensions; also resolved by the public provider configuration."
+      },
+      "enable_vision": {
+        "type": "boolean",
+        "default": false,
+        "description": "Enable the upstream image-caption path; requires infer=true and a vision-capable LLM."
+      }
+    },
+    "additionalProperties": false
+  },
+  "limitations": [
+    "Upstream English en_core_web_sm NLP remains unchanged; Chinese clinical retrieval quality must be measured separately.",
+    "Only the native additive vector-memory mode is selected. Classic, graph/procedural products and custom rerankers are not provided.",
+    "Scopes support user_id, agent_id, session_id and run_id. team_id is rejected. Complete scope mappings are SHA256 namespaced into native run_id; use identical complete scope mappings on add/search.",
+    "An isolated interpreter and explicit embedding dimensions are required. No embedding dimension probe or fallback model is used.",
+    "The upstream malformed extraction JSON behavior (empty facts) is preserved; provider transport failures are surfaced."
+  ],
+  "tags": [
+    "long-term",
+    "personalization",
+    "vector"
+  ],
+  "requirements": {
+    "python": [
+      "mem0ai",
+      "qdrant-client",
+      "spacy",
+      "fastembed",
+      "en-core-web-sm"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "usage": {
+      "installation": "Install methods/mem0/requirements-lock.txt in a separate Python 3.12 environment.",
+      "inputs": "Text queries and events; images require enable_vision=true.",
+      "learning": "One add unit maps to one native batch; no success/reward is required.",
+      "providers": "Public provider bridge preserves usage accounting and native batching. Explicit embedding dimensions are required.",
+      "state": "Native full-database snapshots only; no migration or model replay."
+    }
+  },
+  "route_hints": [
+    "long-term user preference memory",
+    "scoped semantic retrieval"
+  ],
+  "interface_version": 3,
+  "commands": {},
+  "input_schemas": {
+    "search": {
+      "type": "object",
+      "properties": {
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

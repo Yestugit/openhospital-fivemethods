@@ -1,0 +1,161 @@
+{
+  "method_id": "memorybank",
+  "name": "MemoryBank",
+  "summary": "Conversation memory with event summarization, personality memory, and forgetting-aware retrieval.",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "hierarchical"
+    ],
+    "operations": [
+      "observe",
+      "retrieve",
+      "learn",
+      "commit",
+      "reset",
+      "save_state",
+      "load_state",
+      "command"
+    ],
+    "integration_slots": [
+      "context",
+      "episode"
+    ],
+    "accepted_events": [
+      "message"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true,
+    "history_ingestion": "commit"
+  },
+  "version": "1",
+  "paper_url": "https://arxiv.org/abs/2305.10250",
+  "repository_url": "https://github.com/zhongwanjun/MemoryBank-SiliconFriend",
+  "source_subdir": null,
+  "recommended_executor": "subprocess",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {
+    "path_parameters": {
+      "storage_path": "file"
+    },
+    "kind": "local_files",
+    "backend": "memorybank_json_plus_faiss",
+    "database_paths": [
+      "memory.json",
+      "memory.faiss"
+    ],
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "conditional",
+  "implementation_notes": [
+    "Reference: MemoryBank-SiliconFriend cf61c4196e4cfdb0f2b7a0316249fa40312dc3a9, FAISS forgetting loader path.",
+    "Stochastic deletion at the first writable retrieval per loaded user; recalled surviving dialogues are reinforced. Frozen queries skip both mutations.",
+    "Default forgetting_formula=source preserves exp(-t / 5 * S) from the source; strength_denominator explicitly selects exp(-t / (5*S)).",
+    "Separate cached daily event/personality generations and separate overall generations; daily summaries participate in FAISS L2 retrieval."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "offline"
+        ],
+        "default": "standard"
+      },
+      "llm_model": {
+        "type": "string"
+      },
+      "llm_base_url": {
+        "type": "string"
+      },
+      "llm_api_key_env": {
+        "type": "string"
+      },
+      "embedding_model": {
+        "type": "string"
+      },
+      "embedding_base_url": {
+        "type": "string"
+      },
+      "embedding_api_key_env": {
+        "type": "string"
+      },
+      "embedding_dims": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "storage_path": {
+        "type": "string"
+      },
+      "language": {
+        "type": "string",
+        "enum": [
+          "en",
+          "cn"
+        ],
+        "default": "en"
+      },
+      "enable_forgetting": {
+        "type": "boolean",
+        "default": true
+      },
+      "summarize_on_episode_end": {
+        "type": "boolean",
+        "default": false
+      },
+      "seed": {
+        "type": "integer"
+      },
+      "current_date": {
+        "type": "string",
+        "description": "Evaluation date YYYY-MM-DD; otherwise latest observed event date or today."
+      },
+      "forgetting_formula": {
+        "type": "string",
+        "enum": [
+          "source",
+          "strength_denominator"
+        ],
+        "default": "source"
+      }
+    },
+    "additionalProperties": true
+  },
+  "limitations": [
+    "Whole dialogue/summary records are indexed; upstream ChineseTextSplitter long-document chunk expansion is not reproduced.",
+    "Framework-scoped user filtering prevents the upstream loader from mixing other users into the same index."
+  ],
+  "tags": [
+    "long-term",
+    "hierarchical",
+    "forgetting"
+  ],
+  "requirements": {
+    "python": [
+      "faiss-cpu"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "offline_mode": "Explicit simplified smoke tests; results do not represent the standard algorithm."
+  },
+  "route_hints": [
+    "conversation history with forgetting",
+    "personality and event summaries"
+  ]
+}

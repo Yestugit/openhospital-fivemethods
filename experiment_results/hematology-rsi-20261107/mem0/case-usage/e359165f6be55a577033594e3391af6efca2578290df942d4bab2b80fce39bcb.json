@@ -1,0 +1,8 @@
+{
+  "tokens": 57261,
+  "official_output_dir": "\\\\?\\D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\evaluation\\official_sdk\\train\\train_20261108_203013_481465",
+  "patient_id": "Patient_05207",
+  "occurrence": "batch:4:patient:Patient_05207",
+  "position": 76,
+  "response_time_s": 205.91555240005255
+}

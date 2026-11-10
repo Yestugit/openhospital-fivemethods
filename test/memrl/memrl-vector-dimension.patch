@@ -1,0 +1,31 @@
+diff --git a/memrl/service/memory_service.py b/memrl/service/memory_service.py
+index 63bed73..85ffd86 100644
+--- a/memrl/service/memory_service.py
++++ b/memrl/service/memory_service.py
+@@ -293,6 +293,8 @@ class MemoryService:
+         )
+         self.user_id = user_id
+         self.num_workers = num_workers
++        # Must match the configured embedding model; overridable for non-3072 providers.
++        self.vector_dimension: int = int(kwargs.get("vector_dimension", 3072))
+         import threading
+ 
+         self.db_max_concurrency: int = int(kwargs.get("db_max_concurrency", 4))
+@@ -378,7 +380,7 @@ class MemoryService:
+                 "backend": "qdrant",
+                 "config": {
+                     "collection_name": f"memp_{self.user_id}_{ts_str}",
+-                    "vector_dimension": 3072,
++                    "vector_dimension": self.vector_dimension,
+                     "distance_metric": "cosine",
+                     "path": qdrant_dir,
+                 },
+@@ -1837,7 +1839,7 @@ class MemoryService:
+                         "backend": "qdrant",
+                         "config": {
+                             "collection_name": f"memp_{self.user_id}_snapshot",
+-                            "vector_dimension": 3072,
++                            "vector_dimension": self.vector_dimension,
+                             "distance_metric": "cosine",
+                             "path": qdrant_dir,
+                         },

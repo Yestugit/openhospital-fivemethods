@@ -1,0 +1,2 @@
+memmachine-common @ git+https://github.com/MemMachine/MemMachine.git@377510d436dc81c3651502f2d5e36ff245650ce7#subdirectory=packages/common
+memmachine-server @ git+https://github.com/MemMachine/MemMachine.git@377510d436dc81c3651502f2d5e36ff245650ce7#subdirectory=packages/server

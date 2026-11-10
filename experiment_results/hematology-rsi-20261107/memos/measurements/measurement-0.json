@@ -1,0 +1,368 @@
+{
+  "round": 0,
+  "tokenizer_runtime": "0.22.2",
+  "memory_text_tokens": 0,
+  "text_layers": {},
+  "text_objects": [],
+  "storage_bytes": 1969557,
+  "storage_files": {
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\native-store\\runs\\cba2ca8d505a45f1992af68db019ac8f\\native.json": {
+      "bytes": 67,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\store_lock": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\database_lock": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\id-buffer.tmp.0": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.counts.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.indexstats.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db.labels": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db.labels.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.arrays": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.arrays.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index.keys": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index.keys.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.strings": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.strings.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipgroupstore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipgroupstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipgroupstore.degrees.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipstore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.schemastore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.schemastore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\database_lock": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\id-buffer.tmp.0": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.counts.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.indexstats.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db.labels": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db.labels.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.arrays": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.arrays.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index.keys": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index.keys.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.strings": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.strings.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipgroupstore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipgroupstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipgroupstore.degrees.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipstore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.schemastore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.schemastore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\token-lookup-1.0\\1\\index-1": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\token-lookup-1.0\\2\\index-2": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\3\\index-3": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\4\\index-4": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\7\\index-7": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\8\\index-8": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\9\\index-9": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\token-lookup-1.0\\1\\index-1": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\token-lookup-1.0\\2\\index-2": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\neo4j\\checkpoint.0": {
+      "bytes": 360,
+      "category": "wal_transactions"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\neo4j\\neostore.transaction.db.0": {
+      "bytes": 3238,
+      "category": "wal_transactions"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\system\\checkpoint.0": {
+      "bytes": 360,
+      "category": "wal_transactions"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\system\\neostore.transaction.db.0": {
+      "bytes": 24028,
+      "category": "wal_transactions"
+    }
+  },
+  "memory_state_serialized_bytes": 2,
+  "pending_stm_episodes": 0,
+  "pending_buffered_events": 0,
+  "storage_scope": "native_database_index_cache_state_including_wal_excluding_logs_and_snapshots",
+  "background_pending": false,
+  "rsi_tokens": 0,
+  "payload_tokens": 0,
+  "submitted_payload_tokens": 0,
+  "additional_attempt_payload_tokens": 0,
+  "accepted_event_ledger": [],
+  "accepted_units": 0,
+  "round_total_s": 0.0,
+  "memory_foreground_wait_s": 0.0,
+  "memory_background_active_s": 0.0,
+  "memory_persistence_s": 0.0,
+  "memory_measurement_s": 0.0,
+  "automatic_recovery_wait_s": 0.0,
+  "memory_method_wall_s": 0.0,
+  "timing_complete": true,
+  "unfinished_spans": [],
+  "heartbeat_interval_s": 5,
+  "unobserved_tail_bound_s": 0,
+  "storage_growth_bytes": 0,
+  "round_rsi_tokens": 0,
+  "memory_s_per_1k_rsi_tokens": null,
+  "operations": {}
+}

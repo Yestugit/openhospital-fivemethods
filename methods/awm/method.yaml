@@ -1,0 +1,217 @@
+{
+  "method_id": "awm",
+  "name": "Agent Workflow Memory",
+  "summary": "Induces reusable workflows from web-agent trajectories and injects them for later tasks; Mind2Web online accepts attempted traces, while WebArena uses successful traces.",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "procedural"
+    ],
+    "operations": ["index", "add", "search", "episode_end", "reset", "save", "load"],
+    "integration_slots": [
+      "context",
+      "episode"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "action",
+      "tool_result",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true,
+    "max_scopes": 1,
+    "required_episode_fields": [
+      "task",
+      "trajectory"
+    ]
+  },
+  "version": "1",
+  "paper_url": "https://arxiv.org/abs/2409.07429",
+  "repository_url": "https://github.com/zorazrw/agent-workflow-memory",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {
+    "path_parameters": {},
+    "kind": "local_files",
+    "backend": "awm_json_workflows",
+    "database_paths": [
+      "awm.json"
+    ],
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "tracked",
+  "implementation_notes": [
+    "Pinned zorazrw/agent-workflow-memory 8c0ff8cd11d648c8fceb99e4e42f37e3b75381b1, LM-based workflow-file injection pipeline.",
+    "The framework's required trajectory field is represented by nonempty MemoryEpisode.events; AWM derives its profile-specific trajectory from those events. There is no MemoryEpisode.trajectory attribute.",
+    "Online learn induces internally at induce_steps (default1); offline canonical data induces at the last learn marked end_of_training. Retrieve/save/close never induce.",
+    "Mind2Web online follows the source script which consumes actual agent traces without success filtering, unlike the paper success-filtered description; offline requires declared canonical examples.",
+    "WebArena uses only externally validated success and template_id grouping with num_samples per template. Local seeded sampling is an explicit reproducibility difference.",
+    "No embedding is required by the main file-injection pipeline. Native Mind2Web QA injects the site workflow plus a seeded concrete exemplar; optional FAISS retrieval ablation remains disabled.",
+    "Medicine retains the earlier explicit clinical workflow variant and is not a paper benchmark."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "profile": {
+        "type": "string",
+        "enum": [
+          "mind2web",
+          "webarena",
+          "medicine"
+        ]
+      },
+      "induction_mode": {
+        "type": "string",
+        "enum": [
+          "online",
+          "offline"
+        ],
+        "default": "online"
+      },
+      "induce_steps": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 1
+      },
+      "num_samples": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 1
+      },
+      "seed": {
+        "type": "integer",
+        "minimum": 0,
+        "default": 0
+      }
+    },
+    "required": [
+      "profile"
+    ],
+    "additionalProperties": false
+  },
+  "limitations": [
+    "Original benchmarks are Mind2Web and WebArena, not LoCoMo/LongMemEval/HotpotQA. Native Mind2Web teacher-forced small evaluation is registered; full benchmark scale and live browser deployment remain unverified.",
+    "One scope per Memory; retrieve requires a website and returns its complete workflow file as one item, without query similarity or truncation.",
+    "Mind2Web QA uses the registered ranked-data benchmark and native step scoring. Other web tasks require an external awm_environment_factory; missing browser environments never fall back to ordinary text QA. Candidate ranker training and website deployment remain external."
+  ],
+  "tags": [
+    "procedural",
+    "workflow",
+    "web-agent"
+  ],
+  "requirements": {
+    "python": [],
+    "services": [
+      "llm"
+    ]
+  },
+  "route_hints": [
+    "web navigation workflows",
+    "reuse successful action trajectories"
+  ],
+  "interface_version": 3,
+  "commands": {},
+  "input_schemas": {
+    "event": {
+      "type": "object",
+      "properties": {
+        "awm": {
+          "type": "object",
+          "properties": {
+            "action_repr": {"type": "string"},
+            "parsed_action": {"type": "string"},
+            "thought": {"type": "string"},
+            "actions": {"type": "array", "items": {"type": "string"}}
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "add": {
+      "type": "object",
+      "properties": {
+        "awm": {
+          "type": "object",
+          "properties": {
+            "website": {
+              "type": "string",
+              "minLength": 1
+            },
+            "domain": {
+              "type": "string",
+              "minLength": 1
+            },
+            "subdomain": {
+              "type": "string",
+              "minLength": 1
+            },
+            "template_id": {
+              "type": [
+                "string",
+                "integer"
+              ]
+            },
+            "canonical": {
+              "type": "boolean",
+              "default": false
+            },
+            "end_of_training": {
+              "type": "boolean",
+              "default": false
+            },
+            "mind2web": {
+              "type": "object"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "search": {
+      "type": "object",
+      "properties": {
+        "awm": {
+          "type": "object",
+          "properties": {
+            "website": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "website"
+          ],
+          "additionalProperties": false
+        },
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "awm"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

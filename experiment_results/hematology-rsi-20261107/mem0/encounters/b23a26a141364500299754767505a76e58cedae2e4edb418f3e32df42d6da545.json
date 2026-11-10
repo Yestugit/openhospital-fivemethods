@@ -1,0 +1,353 @@
+{
+  "patient_id": "Patient_00783",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史、检查结果或已开检查信息，无法进行诊断。为了明确病情并决定下一步是否需要开具检查，首先需要询问患者的临床症状。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "就是特别累，爬一层楼就喘。站起来快了会头晕，甚至眼前发黑。脸色也白了，指甲脆，嘴巴疼，最近老想嚼冰。没有发烧，也没出过血或骨痛。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者主诉乏力、活动后气短、头晕、面色苍白及异食癖（嚼冰），高度提示贫血。目前尚未进行任何检查，为明确贫血类型及严重程度，需优先开具血常规检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主诉乏力、活动后气促、头晕、面色苍白、指甲脆及异食癖（嚼冰），这些症状高度提示贫血。虽然患者自述无出血，但需通过血常规等血液检查明确是否存在贫血及其类型（如缺铁性贫血），以指导后续诊断和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"铁代谢检查\"], \"reason\": \"患者主诉乏力、活动后气促、头晕、面色苍白、指甲脆及异食癖（嚼冰），这些症状高度提示贫血，特别是缺铁性贫血的可能。首先进行全血细胞计数（CBC）以明确贫血的类型和程度，随后进行铁代谢检查以评估体内铁储备情况，从而确诊是否为缺铁性贫血并指导治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"86 g/L [参考范围：120-160]\", \"红细胞压积\": \"28% [参考范围：36-48]\", \"平均红细胞体积\": \"72 fL [参考范围：80-100]\", \"血小板计数\": \"468 x 10^9/L [参考范围：150-400]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"红细胞压积\", \"平均红细胞体积\", \"血小板计数\"]}, \"铁代谢检查\": {\"result\": {\"血清铁\": \"18 ug/dL [参考范围：50-170]\", \"总铁结合力\": \"442 ug/dL [参考范围：250-370]\", \"转铁蛋白饱和度\": \"4% [参考范围：15-50]\", \"血清铁蛋白\": \"6 ng/mL [参考范围：15-150]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清铁\", \"总铁结合力\", \"转铁蛋白饱和度\", \"血清铁蛋白\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有典型的缺铁性贫血症状（乏力、头晕、异食癖等），且血常规显示小细胞低色素性贫血，铁代谢检查证实严重缺铁（血清铁蛋白极低、转铁蛋白饱和度低）。虽然血小板计数偏高（反应性增多），但结合病史和实验室结果，诊断依据已充分，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为进行性乏力、气短、头晕、面色苍白及异食癖（嚼冰），结合全血细胞计数显示小细胞低色素性贫血（Hgb 86 g/L, MCV 72 fL）和铁代谢检查证实的严重缺铁（血清铁蛋白 6 ng/mL，转铁蛋白饱和度 4%），符合缺铁性贫血的典型特征。虽然血小板轻度升高可能为反应性改变，但核心诊断为血液系统疾病，需由血液科进一步评估贫血病因（如慢性失血或吸收障碍）并制定治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. 补铁治疗：首选口服铁剂（如硫酸亚铁、富马酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议空腹或两餐之间服用，可配合维生素C促进吸收。若患者对口服铁剂不耐受或吸收不良，可考虑静脉铁剂治疗。\\n2. 病因排查与处理：鉴于患者有“嘴巴疼”及“嚼冰”（异食癖）等典型缺铁症状，需重点排查慢性失血原因（如月经过多、消化道溃疡或肿瘤）。建议完善大便潜血试验、妇科超声及必要时胃肠镜检查，针对原发病进行治疗。\\n3. 个性化调整：患者目前血红蛋白86g/L，属于中度贫血，口服铁剂通常有效。若出现严重胃肠道反应，可调整为缓释制剂或更换铁剂种类。治疗期间需监测血常规及铁代谢指标，评估疗效。\\n4. 安全性与随访：告知患者铁剂可能导致黑便属正常现象，但若出现剧烈腹痛、呕血或柏油样便需立即就医。定期复查血常规，待血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。若出现心悸加重、呼吸困难或晕厥，应立即就诊。\", \"reasoning\": \"诊断依据：患者表现为乏力、气短、头晕、面色苍白等贫血症状，伴有典型的异食癖（喜嚼冰）和口角炎/口腔疼痛。实验室检查显示小细胞低色素性贫血（Hgb 86g/L, MCV 72fL），且铁代谢指标完全符合缺铁特征（血清铁降低、总铁结合力升高、转铁蛋白饱和度显著降低、血清铁蛋白极低）。血小板计数轻度升高为缺铁性贫血常见的反应性改变。综合病史、症状及检查结果，最可能的诊断为缺铁性贫血。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_00783",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_00068's lab results showed microcytic hypochromic anemia (Hgb 98 g/L, RBC 3.8 x 10^12/L, MCV 72 fL) with normal coagulation function.",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "User diagnosed Patient_02107 with iron deficiency anemia based on symptoms of progressive fatigue, dizziness, shortness of breath, pale complexion, heavy menstrual bleeding, and pica (craving ice), supported by lab results showing microcytic hypochromic anemia (Hgb 82 g/L, MCV 72 fL) and severe iron deficiency (serum iron 22 ug/dL, TIBC 452 ug/dL, transferrin saturation 5%, ferritin 6 ng/mL)",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L).",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "Patient_08308's CBC showed microcytic hypochromic anemia: Hemoglobin 82 g/L, Hematocrit 27%, MCV 68 fL, MCH 21 pg."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "就是特别累，爬一层楼就喘。站起来快了会头晕，甚至眼前发黑。脸色也白了，指甲脆，嘴巴疼，最近老想嚼冰。没有发烧，也没出过血或骨痛。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "86 g/L [参考范围：120-160]",
+          "红细胞压积": "28% [参考范围：36-48]",
+          "平均红细胞体积": "72 fL [参考范围：80-100]",
+          "血小板计数": "468 x 10^9/L [参考范围：150-400]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "红细胞压积",
+          "平均红细胞体积",
+          "血小板计数"
+        ]
+      },
+      "铁代谢检查": {
+        "result": {
+          "血清铁": "18 ug/dL [参考范围：50-170]",
+          "总铁结合力": "442 ug/dL [参考范围：250-370]",
+          "转铁蛋白饱和度": "4% [参考范围：15-50]",
+          "血清铁蛋白": "6 ng/mL [参考范围：15-150]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清铁",
+          "总铁结合力",
+          "转铁蛋白饱和度",
+          "血清铁蛋白"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史、检查结果或已开检查信息，无法进行诊断。为了明确病情并决定下一步是否需要开具检查，首先需要询问患者的临床症状。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者主诉乏力、活动后气短、头晕、面色苍白及异食癖（嚼冰），高度提示贫血。目前尚未进行任何检查，为明确贫血类型及严重程度，需优先开具血常规检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有典型的缺铁性贫血症状（乏力、头晕、异食癖等），且血常规显示小细胞低色素性贫血，铁代谢检查证实严重缺铁（血清铁蛋白极低、转铁蛋白饱和度低）。虽然血小板计数偏高（反应性增多），但结合病史和实验室结果，诊断依据已充分，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "reason": "患者主诉乏力、活动后气促、头晕、面色苍白、指甲脆及异食癖（嚼冰），这些症状高度提示贫血，特别是缺铁性贫血的可能。首先进行全血细胞计数（CBC）以明确贫血的类型和程度，随后进行铁代谢检查以评估体内铁储备情况，从而确诊是否为缺铁性贫血并指导治疗。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "缺铁性贫血",
+      "treatment_plan": "1. 补铁治疗：首选口服铁剂（如硫酸亚铁、富马酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议空腹或两餐之间服用，可配合维生素C促进吸收。若患者对口服铁剂不耐受或吸收不良，可考虑静脉铁剂治疗。\n2. 病因排查与处理：鉴于患者有“嘴巴疼”及“嚼冰”（异食癖）等典型缺铁症状，需重点排查慢性失血原因（如月经过多、消化道溃疡或肿瘤）。建议完善大便潜血试验、妇科超声及必要时胃肠镜检查，针对原发病进行治疗。\n3. 个性化调整：患者目前血红蛋白86g/L，属于中度贫血，口服铁剂通常有效。若出现严重胃肠道反应，可调整为缓释制剂或更换铁剂种类。治疗期间需监测血常规及铁代谢指标，评估疗效。\n4. 安全性与随访：告知患者铁剂可能导致黑便属正常现象，但若出现剧烈腹痛、呕血或柏油样便需立即就医。定期复查血常规，待血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。若出现心悸加重、呼吸困难或晕厥，应立即就诊。",
+      "reasoning": "诊断依据：患者表现为乏力、气短、头晕、面色苍白等贫血症状，伴有典型的异食癖（喜嚼冰）和口角炎/口腔疼痛。实验室检查显示小细胞低色素性贫血（Hgb 86g/L, MCV 72fL），且铁代谢指标完全符合缺铁特征（血清铁降低、总铁结合力升高、转铁蛋白饱和度显著降低、血清铁蛋白极低）。血小板计数轻度升高为缺铁性贫血常见的反应性改变。综合病史、症状及检查结果，最可能的诊断为缺铁性贫血。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_00783",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.42,
+      "treatmentSafety": 0.8,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.4,
+      "diagnosisDetail": {
+        "submitted": [
+          "缺铁性贫血"
+        ],
+        "expected": [
+          "缺铁性贫血"
+        ],
+        "matched": [
+          "缺铁性贫血"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "盆腔超声",
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "precision": 1.0,
+        "coverage": 0.2857142857142857,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 补铁治疗：首选口服铁剂（如硫酸亚铁、富马酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议空腹或两餐之间服用，可配合维生素C促进吸收。若患者对口服铁剂不耐受或吸收不良，可考虑静脉铁剂治疗。\n2. 病因排查与处理：鉴于患者有“嘴巴疼”及“嚼冰”（异食癖）等典型缺铁症状，需重点排查慢性失血原因（如月经过多、消化道溃疡或肿瘤）。建议完善大便潜血试验、妇科超声及必要时胃肠镜检查，针对原发病进行治疗。\n3. 个性化调整：患者目前血红蛋白86g/L，属于中度贫血，口服铁剂通常有效。若出现严重胃肠道反应，可调整为缓释制剂或更换铁剂种类。治疗期间需监测血常规及铁代谢指标，评估疗效。\n4. 安全性与随访：告知患者铁剂可能导致黑便属正常现象，但若出现剧烈腹痛、呕血或柏油样便需立即就医。定期复查血常规，待血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。若出现心悸加重、呼吸困难或晕厥，应立即就诊。",
+        "overallScore": 0.42,
+        "safety": 0.8,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.4,
+        "reasoning": "未强调避开茶与抑酸药，遗漏妇科转诊关键步骤且未结合患者职业生活调整。",
+        "reference": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "缺铁性贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "盆腔超声",
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为乏力、活动后气促、头晕及异食癖（嚼冰），提示缺铁性贫血，需警惕慢性失血病因。",
+        "diagnosis_reflection": "诊断准确匹配预期（缺铁性贫血），症状线索（异食癖、面色苍白）捕捉到位，未出现误诊。",
+        "examination_reflection": "检查选择精准度满分，但覆盖率不足（28.6%）。漏开了粪便隐血试验、盆腔超声及胃肠镜等关键病因排查检查，未能全面覆盖失血来源的筛查需求。",
+        "treatment_reflection": "治疗方案覆盖了补铁原则和随访，但个性化与安全性细节缺失。未强调避开茶/咖啡及抑酸药对吸收的影响，遗漏了针对妇科（如月经过多）和消化科（如痔疮/溃疡）的转诊建议，导致疗效优化不足。",
+        "future_strategy": "确诊缺铁性贫血时，必须同步完善大便潜血、妇科超声及内镜检查以明确出血源；制定补铁方案时需详细指导饮食禁忌（茶/钙/抑酸药）并主动评估是否需要多学科转诊处理原发病。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:40:41.453638+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_00783",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "缺铁性贫血"
+    ],
+    "treatment_plan": "1. 补铁治疗：首选口服铁剂（如硫酸亚铁、富马酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议空腹或两餐之间服用，可配合维生素C促进吸收。若患者对口服铁剂不耐受或吸收不良，可考虑静脉铁剂治疗。\n2. 病因排查与处理：鉴于患者有“嘴巴疼”及“嚼冰”（异食癖）等典型缺铁症状，需重点排查慢性失血原因（如月经过多、消化道溃疡或肿瘤）。建议完善大便潜血试验、妇科超声及必要时胃肠镜检查，针对原发病进行治疗。\n3. 个性化调整：患者目前血红蛋白86g/L，属于中度贫血，口服铁剂通常有效。若出现严重胃肠道反应，可调整为缓释制剂或更换铁剂种类。治疗期间需监测血常规及铁代谢指标，评估疗效。\n4. 安全性与随访：告知患者铁剂可能导致黑便属正常现象，但若出现剧烈腹痛、呕血或柏油样便需立即就医。定期复查血常规，待血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。若出现心悸加重、呼吸困难或晕厥，应立即就诊。",
+    "reasoning": "诊断依据：患者表现为乏力、气短、头晕、面色苍白等贫血症状，伴有典型的异食癖（喜嚼冰）和口角炎/口腔疼痛。实验室检查显示小细胞低色素性贫血（Hgb 86g/L, MCV 72fL），且铁代谢指标完全符合缺铁特征（血清铁降低、总铁结合力升高、转铁蛋白饱和度显著降低、血清铁蛋白极低）。血小板计数轻度升高为缺铁性贫血常见的反应性改变。综合病史、症状及检查结果，最可能的诊断为缺铁性贫血。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "铁代谢检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_00783",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.42,
+    "treatmentSafety": 0.8,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.4,
+    "diagnosisDetail": {
+      "submitted": [
+        "缺铁性贫血"
+      ],
+      "expected": [
+        "缺铁性贫血"
+      ],
+      "matched": [
+        "缺铁性贫血"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "盆腔超声",
+        "食管胃十二指肠镜检查（EGD）",
+        "结肠镜检查",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查"
+      ],
+      "precision": 1.0,
+      "coverage": 0.2857142857142857,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 补铁治疗：首选口服铁剂（如硫酸亚铁、富马酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议空腹或两餐之间服用，可配合维生素C促进吸收。若患者对口服铁剂不耐受或吸收不良，可考虑静脉铁剂治疗。\n2. 病因排查与处理：鉴于患者有“嘴巴疼”及“嚼冰”（异食癖）等典型缺铁症状，需重点排查慢性失血原因（如月经过多、消化道溃疡或肿瘤）。建议完善大便潜血试验、妇科超声及必要时胃肠镜检查，针对原发病进行治疗。\n3. 个性化调整：患者目前血红蛋白86g/L，属于中度贫血，口服铁剂通常有效。若出现严重胃肠道反应，可调整为缓释制剂或更换铁剂种类。治疗期间需监测血常规及铁代谢指标，评估疗效。\n4. 安全性与随访：告知患者铁剂可能导致黑便属正常现象，但若出现剧烈腹痛、呕血或柏油样便需立即就医。定期复查血常规，待血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。若出现心悸加重、呼吸困难或晕厥，应立即就诊。",
+      "overallScore": 0.42,
+      "safety": 0.8,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.4,
+      "reasoning": "未强调避开茶与抑酸药，遗漏妇科转诊关键步骤且未结合患者职业生活调整。",
+      "reference": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "缺铁性贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "盆腔超声",
+        "食管胃十二指肠镜检查（EGD）",
+        "结肠镜检查",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为乏力、活动后气促、头晕及异食癖（嚼冰），提示缺铁性贫血，需警惕慢性失血病因。",
+      "diagnosis_reflection": "诊断准确匹配预期（缺铁性贫血），症状线索（异食癖、面色苍白）捕捉到位，未出现误诊。",
+      "examination_reflection": "检查选择精准度满分，但覆盖率不足（28.6%）。漏开了粪便隐血试验、盆腔超声及胃肠镜等关键病因排查检查，未能全面覆盖失血来源的筛查需求。",
+      "treatment_reflection": "治疗方案覆盖了补铁原则和随访，但个性化与安全性细节缺失。未强调避开茶/咖啡及抑酸药对吸收的影响，遗漏了针对妇科（如月经过多）和消化科（如痔疮/溃疡）的转诊建议，导致疗效优化不足。",
+      "future_strategy": "确诊缺铁性贫血时，必须同步完善大便潜血、妇科超声及内镜检查以明确出血源；制定补铁方案时需详细指导饮食禁忌（茶/钙/抑酸药）并主动评估是否需要多学科转诊处理原发病。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/054.json#/applied_memory"
+  }
+}

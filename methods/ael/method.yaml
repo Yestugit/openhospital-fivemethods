@@ -1,0 +1,67 @@
+{
+  "interface_version": 3,
+  "method_id": "ael",
+  "name": "AEL",
+  "summary": "Three-tier episodic, semantic, and procedural memory with policy bandit feedback.",
+  "version": "2",
+  "paper_url": null,
+  "repository_url": "https://github.com/WujiangXu/AEL",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "native_memory_store_adapter",
+  "implementation_strategy": "direct_memory_store_meta_controller",
+  "capabilities": {
+    "modalities": ["text"],
+    "forms": ["record", "hierarchical", "procedural", "policy"],
+    "operations": ["index", "add", "search", "episode_end", "reset", "save", "load", "command"],
+    "integration_slots": ["context", "episode"],
+    "accepted_events": ["message", "observation", "action", "tool_result", "feedback", "episode_start", "episode_end"],
+    "scopes": ["user", "agent", "team", "session", "run"],
+    "default_scope": "user",
+    "required_episode_fields": ["reward"],
+    "supports_persistence": true,
+    "supports_async": true,
+    "read_only_mode": "snapshot",
+    "read_only_commands": ["bandit_state"]
+  },
+  "commands": {
+    "complete_learning_episode": {"input_schema": {"type": "object", "properties": {"scope": {"type": "object"}, "_warmup": {"type": "boolean"}}, "required": ["scope"]}, "modifies_memory": true, "read_only": false, "timing": "after each learning episode"},
+    "finish_learning_days": {"input_schema": {"type": "object"}, "modifies_memory": true, "read_only": false, "timing": "end of training"},
+    "end_day": {"input_schema": {"type": "object"}, "modifies_memory": true, "read_only": false, "timing": "explicit day boundary"},
+    "nightly_memory": {"input_schema": {"type": "object"}, "modifies_memory": true, "read_only": false, "timing": "explicit night boundary"},
+    "bandit_state": {"input_schema": {"type": "object", "properties": {"scope": {"type": "object"}, "scope_key": {"type": "string"}}}, "modifies_memory": false, "read_only": true, "timing": "inspection"}
+  },
+  "storage": {"kind": "local_files", "backend": "AEL MemoryStore and MetaController snapshots", "path_parameters": {"storage_path": "directory"}, "supports_snapshot": true},
+  "requirements": {"python": ["numpy"], "services": []},
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "profile": {"type": "string", "enum": ["default", "episode"], "default": "default"},
+      "runner_mode": {"type": "string", "enum": ["portfolio", "episode"], "default": "portfolio"},
+      "backend": {"type": "string", "enum": ["local", "xmem"], "default": "local"},
+      "retrieval_top_k": {"type": "integer", "minimum": 0, "default": 5},
+      "bars_per_day": {"type": "integer", "minimum": 1, "default": 4},
+      "planner_names": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "default": ["sequential", "decompose", "adaptive"]},
+      "tool_config_names": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "default": ["all", "core", "fundamental", "technical", "sentiment"]},
+      "memory_policy_names": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "default": ["none", "recent_window", "full_detailed", "compressed", "aggressive_learner"]},
+      "credit_method": {"type": "string", "enum": ["fcc", "portfolio", "structural", "uniform"], "default": "fcc"},
+      "evolve_planner": {"type": "boolean", "default": true},
+      "evolve_tools": {"type": "boolean", "default": true},
+      "per_tool_selection": {"type": "boolean", "default": false},
+      "storage_path": {"type": "string"},
+      "distill_interval": {"type": "integer", "minimum": 1, "default": 10},
+      "distill_min_episodes": {"type": "integer", "minimum": 1, "default": 8},
+      "promotion_min_samples": {"type": "integer", "minimum": 1, "default": 8},
+      "promotion_min_confidence": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.6},
+      "usefulness_mode": {"type": "string", "enum": ["raw_sign", "differential"], "default": "raw_sign"},
+      "evolve_memory": {"type": "boolean", "default": true}
+    },
+    "x-variants": {
+      "default": {"runner_mode": "portfolio", "backend": "local", "retrieval_top_k": 5, "bars_per_day": 4, "planner_names": ["sequential", "decompose", "adaptive"], "tool_config_names": ["all", "core", "fundamental", "technical", "sentiment"], "memory_policy_names": ["none", "recent_window", "full_detailed", "compressed", "aggressive_learner"], "credit_method": "fcc", "evolve_planner": true, "evolve_tools": true, "per_tool_selection": false, "distill_interval": 10, "distill_min_episodes": 8, "promotion_min_samples": 8, "promotion_min_confidence": 0.6, "usefulness_mode": "raw_sign", "evolve_memory": true},
+      "episode": {"runner_mode": "episode", "bars_per_day": 1}
+    }
+  },
+  "implementation_notes": ["Preserves AEL MemoryStore three tiers, native metadata relevance, MetaController selection, bandit feedback, usefulness marking, auto_distill and promotion boundaries.", "AEL uses numeric reward/outcome_score; success is not converted to reward.", "Original source revision: c95f5f961667e7df4bdddf750b22332158951bf2."],
+  "limitations": ["This plugin integrates memory and policy control only; financial agents, planners, tools and benchmark execution remain external.", "Local backend is supported for logical save/load; remote xmem is rejected."],
+  "tags": ["episodic", "semantic", "procedural", "bandit", "finance"]
+}

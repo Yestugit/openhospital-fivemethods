@@ -1,0 +1,33 @@
+# Baseline agent configuration.
+#
+# For local research use SERVICE_BASE_URL (default http://127.0.0.1:8001)
+# and MODEL_API_KEY. Contest-only credentials are unnecessary on loopback.
+# Do not put tokens or model keys in this file.
+
+output_dir: outputs
+
+# Prevent an indecisive model or retrieved memory from creating an unbounded
+# ask/exam loop. Reaching the limit enters the existing diagnosis stage.
+max_decision_steps: 12
+
+train:
+  # selection supports random, forward, and reverse.
+  selection: random
+  patient_count: 5
+  random_seed: 42
+  patient_ids: []
+
+test:
+  # Used by local /test calls.
+  selection: random
+  patient_count: 2
+  random_seed: 42
+  patient_ids: []
+
+memory:
+  md_path: data/memory_data/memory.md
+  # 只读取最近几条训练评估反思，避免 prompt 过长。
+  max_notes: 3
+  max_note_chars: 1200
+
+log_llm_prompts: false

@@ -1,0 +1,411 @@
+{
+  "patient_id": "Patient_06604",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要向患者询问主要症状和病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "过去半年一直乏力、头晕，活动后气短。最近三周加重，站着更晕，上楼心悸，脸色发白，注意力也差了。还有食欲下降、恶心腹胀，大便有时稀有时干，反复黑便，上周还拉过鲜红血。没发热或胸痛。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有乏力、头晕、黑便及鲜红血便等消化道出血表现，需立即进行血常规、大便常规+隐血试验及凝血功能检查以评估贫血程度、出血情况及凝血状态，为后续诊断提供依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 尿液和粪便\", \"reason\": \"患者主诉反复黑便及鲜红血便，提示存在消化道出血。虽然病史中未提及已进行相关检查，但根据诊疗逻辑，首先应通过实验室检查（如大便隐血试验）确认出血情况并评估贫血原因，这是诊断消化道出血最直接且必要的初步步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"粪便隐血试验（FOBT）\", \"大便常规检查\"], \"reason\": \"患者主诉反复黑便及近期鲜红血便，提示存在消化道出血风险。粪便隐血试验（FOBT）是筛查消化道出血的敏感指标，大便常规检查可进一步评估粪便性状、潜血情况及有无寄生虫等，有助于明确出血原因和部位。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"粪便隐血试验（FOBT）\": {\"result\": {\"粪便隐血\": \"阳性\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"粪便隐血\"]}, \"大便常规检查\": {\"result\": {\"隐血\": \"阳性 [参考范围：阴性]\", \"粪便红细胞\": \"10-15/HPF [参考范围：0-1/HPF]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"隐血\", \"粪便红细胞\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有黑便、鲜红血便及粪便隐血阳性，提示消化道出血。为明确出血部位和病因（如溃疡、肿瘤等），需进一步进行内镜检查（胃镜和肠镜）。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"内镜检查\", \"reason\": \"患者有反复黑便及近期鲜红血便病史，且粪便隐血试验和大便常规均提示消化道出血。结合乏力、头晕等贫血症状，高度怀疑存在上消化道或下消化道病变（如溃疡、肿瘤、息肉等）。内镜检查（胃镜和/或肠镜）是明确出血部位、病因并可能进行止血治疗的首选检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"食管胃十二指肠镜检查（EGD）\", \"结肠镜检查\"], \"reason\": \"患者有反复黑便及鲜红血便史，粪便隐血试验和大便常规均提示消化道出血。为明确出血部位及病因，需进行上消化道内镜检查（食管胃十二指肠镜检查）和下消化道内镜检查（结肠镜检查）。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"食管胃十二指肠镜检查（EGD）\": {\"result\": {\"胃窦黏膜\": \"胃窦部多发糜烂\", \"胃异常所见\": \"伴幽门前区溃疡渗血及附着血凝块，符合近期上消化道出血表现。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"胃窦黏膜\", \"胃异常所见\"]}, \"结肠镜检查\": {\"result\": {\"末端回肠插管及黏膜\": \"插管顺利，末端回肠黏膜光滑，未见溃疡、糜烂或结节。\", \"活动性出血或近期出血征象\": \"全结肠范围内未见活动性出血或近期出血征象。\", \"结肠息肉/肿块/憩室/狭窄\": \"盲肠至直肠全程未见息肉、肿块、憩室或狭窄。\", \"结肠血管纹理\": \"结肠各段血管纹理清晰完整。\", \"结肠黏膜外观\": \"整个结肠（盲肠、升结肠、肝曲、横结肠、脾曲、降结肠、乙状结肠和直肠）黏膜外观正常。\", \"结肠黏膜异常征象\": \"无红斑、水肿、溃疡或脆性增加。\", \"肛周及肛管外观\": \"肛管及痔组织外观正常，无裂口或血栓性外痔。\", \"肠腔通畅性\": \"肠腔全程通畅，无梗阻表现。\", \"镜检到达部位\": \"结肠镜推进至盲肠。\", \"阑尾开口及回盲瓣\": \"可见阑尾开口和回盲瓣，形态正常。\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有明确的乏力、黑便及鲜红血便症状，粪便隐血试验和大便常规均提示消化道出血。食管胃十二指肠镜检查（EGD）已明确发现胃窦多发糜烂及幽门前区溃疡渗血，证实了上消化道出血的病因。结肠镜检查排除了下消化道出血的可能。结合病史和检查结果，诊断依据充分，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"消化内科\", \"reason\": \"患者主要表现为乏力、头晕、黑便及鲜红血便，提示消化道出血。检查结果显示粪便隐血阳性，食管胃十二指肠镜检查（EGD）明确发现胃窦部多发糜烂及幽门前区溃疡渗血伴血凝块，证实为上消化道出血。结肠镜检查未见异常，排除了下消化道出血。因此，主要病因位于上消化道，应由消化内科负责进一步诊治。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"胃溃疡\", \"treatment_plan\": \"1. 紧急止血与病情稳定：鉴于患者有活动性上消化道出血（黑便、鲜红血、内镜下溃疡渗血及血凝块），需立即禁食水，建立静脉通道，给予质子泵抑制剂（PPI）大剂量静脉推注及持续输注（如奥美拉唑或泮托拉唑），以强力抑制胃酸分泌，促进血小板聚集和血栓形成。若血红蛋白进一步下降或出现血流动力学不稳定，需备输血治疗。\\n2. 根除幽门螺杆菌：待病情稳定、可进食后，进行C13/C14呼气试验检测幽门螺杆菌。若阳性，采用含铋剂的四联疗法（PPI + 铋剂 + 两种抗生素）根除治疗，疗程10-14天，以减少溃疡复发风险。\\n3. 黏膜修复与对症：口服PPI制剂维持治疗至少8周，促进溃疡愈合；加用胃黏膜保护剂（如硫糖铝或瑞巴派特）。针对患者贫血症状，在出血控制后补充铁剂（如多糖铁复合物）纠正缺铁性贫血，并监测血常规变化。\\n4. 生活方式干预：严格戒烟酒，避免辛辣、粗糙食物，规律饮食，避免使用非甾体抗炎药（NSAIDs）等损伤胃黏膜药物。\\n5. 随访计划：治疗结束后复查胃镜确认溃疡愈合情况。若出现呕血、黑便加重、剧烈腹痛或晕厥，需立即急诊就医。\", \"reasoning\": \"诊断依据：患者主诉反复黑便及近期鲜红血便，伴乏力、头晕等贫血症状。粪便隐血试验及大便常规均提示消化道出血。食管胃十二指肠镜检查（EGD）明确发现胃窦部多发糜烂，且幽门前区存在溃疡伴渗血及血凝块，符合胃溃疡伴活动性出血的临床表现。结肠镜检查已排除下消化道出血来源。结合病史和内镜结果，最可能的诊断为胃溃疡。治疗方案重点在于急性期止血、抑酸护膜、根除潜在病因（如幽门螺杆菌）以及纠正贫血，确保治疗的有效性和安全性。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_06604",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_00068's lab results showed microcytic hypochromic anemia (Hgb 98 g/L, RBC 3.8 x 10^12/L, MCV 72 fL) with normal coagulation function.",
+      "Patient_06317's laboratory results showed anemia (Hemoglobin 86 g/L, RBC 3.1 × 10^12/L), hyperglycemia (Fasting Blood Glucose 12.8 mmol/L), renal insufficiency (Serum Creatinine 2.3 mg/dL, eGFR 32 mL/min/1.73m²), hypercalcemia (Calcium 11.6 mg/dL), normal phosphate (2.8 mg/dL), and normal PTH (20-75 pg/mL).",
+      "Patient_03614's hemoglobin电泳 showed elevated HbF at 78% (abnormal for age), normal HbA2 at 0.8%, and no abnormal variants like HbS or HbC.",
+      "Patient_08871's laboratory results showed anemia (Hemoglobin 92 g/L), thrombocytopenia (Platelets 118 x 10^9/L), hyperglycemia (Fasting Blood Glucose 12.5 mmol/L), renal insufficiency (Serum Creatinine 2.3 mg/dL, eGFR 34 mL/min/1.73m^2), hypercalcemia (Calcium 12.1 mg/dL), and hypophosphatemia (Phosphate 2.0 mg/dL).",
+      "Patient_09094's lab results showed microcytic hypochromic anemia (Hgb 78 g/L, MCV 70 fL, RBC 3.2 x 10^12/L), prolonged coagulation times (aPTT 42s, PT 16.0s, INR 1.3), and severe iron deficiency (serum iron 18 ug/dL, ferritin 6 ng/mL, TIBC 470 ug/dL).",
+      "Patient_03544 underwent extensive testing including iron metabolism panel, TPO detection, anti-platelet antibody test, and bone marrow examination, all of which returned normal results excluding leukemia, aplastic anemia, and immune-mediated causes",
+      "Patient_03614's CBC showed mild anemia (Hb 95 g/L) with microcytic hypochromic indices (MCV 72 fL, MCH 24 pg), normal platelets (280 × 10^9/L), and normal WBC count (10.5 × 10^9/L).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_08308's hemoglobin electrophoresis showed HbA 96%, HbA2 3.8% (slightly elevated), HbF 1.5%, with no abnormal hemoglobin variants detected.",
+      "Patient_03573's hemoglobin electrophoresis revealed HbF at 70%, HbA at 25%, and the detection of an abnormal hemoglobin variant.",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "User was recommended to order additional examinations for Patient_01050 including fecal occult blood test (FOBT), esophagogastroduodenoscopy (EGD), and bone marrow aspiration/biopsy (BMAB) to investigate the cause of iron deficiency anemia given the patient's history of gastric surgery and potential bleeding sources",
+      "Patient_04911's hemoglobin electrophoresis detected an abnormal hemoglobin variant consistent with Hb M, confirming the diagnosis of congenital methemoglobinemia.",
+      "User was recommended to order fecal occult blood test (FOBT), pelvic ultrasound, and esophagogastroduodenoscopy (EGD) to investigate the cause of iron deficiency anemia in Patient_03943.",
+      "User was recommended to order fecal occult blood test (FOBT), pelvic ultrasound, esophagogastroduodenoscopy (EGD), colonoscopy, and bone marrow aspiration/biopsy (BMAB) to investigate the cause of iron deficiency anemia in Patient_00783, specifically to screen for chronic bleeding sources such as menorrhagia or gastrointestinal lesions",
+      "User was recommended to order fecal occult blood test (FOBT) and pelvic ultrasound for Patient_02913 to investigate the cause of iron deficiency anemia, specifically to screen for chronic bleeding sources such as gastrointestinal lesions or gynecological abnormalities like uterine fibroids",
+      "Patient_09529's CBC showed microcytic hypochromic anemia: Hemoglobin 125 g/L (ref 140-180), RBC 4.2 × 10^12/L (ref 4.5-5.5), MCV 76 fL (ref 80-100), MCH 24 pg (ref 27-34), MCHC 310 g/L (ref 320-360), RDW 16.2% (ref 11.5-14.5%), Hct 38% (ref 40-54%).",
+      "User participated in a hematology diagnostic task for Patient_06243, presenting with 8 months of progressive left upper quadrant fullness/pressure (worse after eating), fatigue, dyspnea on exertion, pallor, gum bleeding during brushing, easy bruising, and dizziness.",
+      "User diagnosed Patient_00068 with Hereditary Hemorrhagic Telangiectasia (HHT), characterized by recurrent epistaxis, mucocutaneous telangiectasias, and iron deficiency anemia due to chronic blood loss.",
+      "Patient_08508's physical examination revealed pale skin, scattered ecchymosis on limbs, swollen gums with intermittent bleeding during brushing, and scattered oral ulcers with white patches and surrounding erythema; abdomen was soft with mild fullness in the left upper quadrant but no palpable spleen or masses."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "过去半年一直乏力、头晕，活动后气短。最近三周加重，站着更晕，上楼心悸，脸色发白，注意力也差了。还有食欲下降、恶心腹胀，大便有时稀有时干，反复黑便，上周还拉过鲜红血。没发热或胸痛。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "粪便隐血试验（FOBT）": {
+        "result": {
+          "粪便隐血": "阳性"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "粪便隐血"
+        ]
+      },
+      "大便常规检查": {
+        "result": {
+          "隐血": "阳性 [参考范围：阴性]",
+          "粪便红细胞": "10-15/HPF [参考范围：0-1/HPF]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "隐血",
+          "粪便红细胞"
+        ]
+      },
+      "食管胃十二指肠镜检查（EGD）": {
+        "result": {
+          "胃窦黏膜": "胃窦部多发糜烂",
+          "胃异常所见": "伴幽门前区溃疡渗血及附着血凝块，符合近期上消化道出血表现。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "胃窦黏膜",
+          "胃异常所见"
+        ]
+      },
+      "结肠镜检查": {
+        "result": {
+          "末端回肠插管及黏膜": "插管顺利，末端回肠黏膜光滑，未见溃疡、糜烂或结节。",
+          "活动性出血或近期出血征象": "全结肠范围内未见活动性出血或近期出血征象。",
+          "结肠息肉/肿块/憩室/狭窄": "盲肠至直肠全程未见息肉、肿块、憩室或狭窄。",
+          "结肠血管纹理": "结肠各段血管纹理清晰完整。",
+          "结肠黏膜外观": "整个结肠（盲肠、升结肠、肝曲、横结肠、脾曲、降结肠、乙状结肠和直肠）黏膜外观正常。",
+          "结肠黏膜异常征象": "无红斑、水肿、溃疡或脆性增加。",
+          "肛周及肛管外观": "肛管及痔组织外观正常，无裂口或血栓性外痔。",
+          "肠腔通畅性": "肠腔全程通畅，无梗阻表现。",
+          "镜检到达部位": "结肠镜推进至盲肠。",
+          "阑尾开口及回盲瓣": "可见阑尾开口和回盲瓣，形态正常。"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要向患者询问主要症状和病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有乏力、头晕、黑便及鲜红血便等消化道出血表现，需立即进行血常规、大便常规+隐血试验及凝血功能检查以评估贫血程度、出血情况及凝血状态，为后续诊断提供依据。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有黑便、鲜红血便及粪便隐血阳性，提示消化道出血。为明确出血部位和病因（如溃疡、肿瘤等），需进一步进行内镜检查（胃镜和肠镜）。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有明确的乏力、黑便及鲜红血便症状，粪便隐血试验和大便常规均提示消化道出血。食管胃十二指肠镜检查（EGD）已明确发现胃窦多发糜烂及幽门前区溃疡渗血，证实了上消化道出血的病因。结肠镜检查排除了下消化道出血的可能。结合病史和检查结果，诊断依据充分，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 尿液和粪便",
+        "examinations": [
+          "粪便隐血试验（FOBT）",
+          "大便常规检查"
+        ],
+        "reason": "患者主诉反复黑便及近期鲜红血便，提示存在消化道出血风险。粪便隐血试验（FOBT）是筛查消化道出血的敏感指标，大便常规检查可进一步评估粪便性状、潜血情况及有无寄生虫等，有助于明确出血原因和部位。"
+      },
+      {
+        "category": "内镜检查",
+        "examinations": [
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查"
+        ],
+        "reason": "患者有反复黑便及鲜红血便史，粪便隐血试验和大便常规均提示消化道出血。为明确出血部位及病因，需进行上消化道内镜检查（食管胃十二指肠镜检查）和下消化道内镜检查（结肠镜检查）。"
+      }
+    ],
+    "final_plan": {
+      "department": "消化内科",
+      "diagnosis": "胃溃疡",
+      "treatment_plan": "1. 紧急止血与病情稳定：鉴于患者有活动性上消化道出血（黑便、鲜红血、内镜下溃疡渗血及血凝块），需立即禁食水，建立静脉通道，给予质子泵抑制剂（PPI）大剂量静脉推注及持续输注（如奥美拉唑或泮托拉唑），以强力抑制胃酸分泌，促进血小板聚集和血栓形成。若血红蛋白进一步下降或出现血流动力学不稳定，需备输血治疗。\n2. 根除幽门螺杆菌：待病情稳定、可进食后，进行C13/C14呼气试验检测幽门螺杆菌。若阳性，采用含铋剂的四联疗法（PPI + 铋剂 + 两种抗生素）根除治疗，疗程10-14天，以减少溃疡复发风险。\n3. 黏膜修复与对症：口服PPI制剂维持治疗至少8周，促进溃疡愈合；加用胃黏膜保护剂（如硫糖铝或瑞巴派特）。针对患者贫血症状，在出血控制后补充铁剂（如多糖铁复合物）纠正缺铁性贫血，并监测血常规变化。\n4. 生活方式干预：严格戒烟酒，避免辛辣、粗糙食物，规律饮食，避免使用非甾体抗炎药（NSAIDs）等损伤胃黏膜药物。\n5. 随访计划：治疗结束后复查胃镜确认溃疡愈合情况。若出现呕血、黑便加重、剧烈腹痛或晕厥，需立即急诊就医。",
+      "reasoning": "诊断依据：患者主诉反复黑便及近期鲜红血便，伴乏力、头晕等贫血症状。粪便隐血试验及大便常规均提示消化道出血。食管胃十二指肠镜检查（EGD）明确发现胃窦部多发糜烂，且幽门前区存在溃疡伴渗血及血凝块，符合胃溃疡伴活动性出血的临床表现。结肠镜检查已排除下消化道出血来源。结合病史和内镜结果，最可能的诊断为胃溃疡。治疗方案重点在于急性期止血、抑酸护膜、根除潜在病因（如幽门螺杆菌）以及纠正贫血，确保治疗的有效性和安全性。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_06604",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.5,
+      "treatmentOverallScore": 0.52,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.4,
+      "diagnosisDetail": {
+        "submitted": [
+          "胃溃疡"
+        ],
+        "expected": [
+          "缺铁性贫血"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "粪便隐血试验（FOBT）",
+          "大便常规检查",
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "大便常规检查",
+          "食管胃十二指肠镜检查（EGD）",
+          "凝血功能全套",
+          "维生素和矿物质测定"
+        ],
+        "matched": [
+          "大便常规检查",
+          "食管胃十二指肠镜检查（EGD）"
+        ],
+        "precision": 0.5,
+        "coverage": 0.3333333333333333,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 紧急止血与病情稳定：鉴于患者有活动性上消化道出血（黑便、鲜红血、内镜下溃疡渗血及血凝块），需立即禁食水，建立静脉通道，给予质子泵抑制剂（PPI）大剂量静脉推注及持续输注（如奥美拉唑或泮托拉唑），以强力抑制胃酸分泌，促进血小板聚集和血栓形成。若血红蛋白进一步下降或出现血流动力学不稳定，需备输血治疗。\n2. 根除幽门螺杆菌：待病情稳定、可进食后，进行C13/C14呼气试验检测幽门螺杆菌。若阳性，采用含铋剂的四联疗法（PPI + 铋剂 + 两种抗生素）根除治疗，疗程10-14天，以减少溃疡复发风险。\n3. 黏膜修复与对症：口服PPI制剂维持治疗至少8周，促进溃疡愈合；加用胃黏膜保护剂（如硫糖铝或瑞巴派特）。针对患者贫血症状，在出血控制后补充铁剂（如多糖铁复合物）纠正缺铁性贫血，并监测血常规变化。\n4. 生活方式干预：严格戒烟酒，避免辛辣、粗糙食物，规律饮食，避免使用非甾体抗炎药（NSAIDs）等损伤胃黏膜药物。\n5. 随访计划：治疗结束后复查胃镜确认溃疡愈合情况。若出现呕血、黑便加重、剧烈腹痛或晕厥，需立即急诊就医。",
+        "overallScore": 0.52,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.4,
+        "reasoning": "方案安全但遗漏铁剂具体用法、B12补充及凝血异常处理，未针对患者经济状况调整。",
+        "reference": "开始口服葡萄糖酸亚铁325 mg，每日1次，配合富含维生素C的果汁，于早餐前1小时服用；若1周后耐受良好，再增加至每日2次。进行吸收相关宣教：避免铁剂与钙/乳制品、抗酸药、茶/咖啡或高纤维麸皮/谷物在约2小时内同服；与这些食物或药物错开，并继续结合富含维生素C的食物安排实际服用时间。加用氰钴胺以纠正维生素B12缺乏并监测疗效：1–2周后复查B12水平并评估早期血液学反应（网织红细胞反应/CBC）；如怀疑/证实吸收不良或疗效不足，则改为肌内注射B12替代治疗（或在确认可吸收的情况下采用有记录的高剂量口服方案）。继续使用泮托拉唑40 mg每日1次以促进溃疡愈合。鉴于溃疡/出血风险，停用NSAIDs；对于类风湿关节炎疼痛/发作，按需使用对乙酰氨基酚500 mg（每日最大3 g），可考虑外用抗炎治疗，并安排风湿科随访以优化DMARD治疗；若出现明显炎症性发作，考虑在胃肠道保护下采用短程、严密监护的糖皮质激素治疗，而非NSAIDs。处理PT/INR延长：审查用药/补充剂及任何抗凝药暴露情况，检查并监测肝功能，并考虑维生素K缺乏；复查PT/INR和CBC，如INR升高、出血复发/加重或出现血流动力学症状，应紧急升级处理（维生素K治疗和/或血液科、消化科重新评估）。优先选择价格可负担的血红素铁来源，如罐装沙丁鱼、肝酱和瘦牛肉末；进餐时搭配富含维生素C的配菜，如甜椒或橙子。建立结构化的睡前放松程序，以达到7小时睡眠；减少与工作相关的压力源。1周内安排消化科随访，进行重复EGD及铁状态重新评估。2周后复查CBC，以确认血红蛋白上升≥10 g/L。如出现黑便、呕血、严重头晕或胸痛，立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "缺铁性贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "大便常规检查",
+          "食管胃十二指肠镜检查（EGD）",
+          "凝血功能全套",
+          "维生素和矿物质测定"
+        ],
+        "contraindications": {
+          "drugs": [
+            "非甾体抗炎药（NSAIDs）"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "开始口服葡萄糖酸亚铁325 mg，每日1次，配合富含维生素C的果汁，于早餐前1小时服用；若1周后耐受良好，再增加至每日2次。进行吸收相关宣教：避免铁剂与钙/乳制品、抗酸药、茶/咖啡或高纤维麸皮/谷物在约2小时内同服；与这些食物或药物错开，并继续结合富含维生素C的食物安排实际服用时间。加用氰钴胺以纠正维生素B12缺乏并监测疗效：1–2周后复查B12水平并评估早期血液学反应（网织红细胞反应/CBC）；如怀疑/证实吸收不良或疗效不足，则改为肌内注射B12替代治疗（或在确认可吸收的情况下采用有记录的高剂量口服方案）。继续使用泮托拉唑40 mg每日1次以促进溃疡愈合。鉴于溃疡/出血风险，停用NSAIDs；对于类风湿关节炎疼痛/发作，按需使用对乙酰氨基酚500 mg（每日最大3 g），可考虑外用抗炎治疗，并安排风湿科随访以优化DMARD治疗；若出现明显炎症性发作，考虑在胃肠道保护下采用短程、严密监护的糖皮质激素治疗，而非NSAIDs。处理PT/INR延长：审查用药/补充剂及任何抗凝药暴露情况，检查并监测肝功能，并考虑维生素K缺乏；复查PT/INR和CBC，如INR升高、出血复发/加重或出现血流动力学症状，应紧急升级处理（维生素K治疗和/或血液科、消化科重新评估）。优先选择价格可负担的血红素铁来源，如罐装沙丁鱼、肝酱和瘦牛肉末；进餐时搭配富含维生素C的配菜，如甜椒或橙子。建立结构化的睡前放松程序，以达到7小时睡眠；减少与工作相关的压力源。1周内安排消化科随访，进行重复EGD及铁状态重新评估。2周后复查CBC，以确认血红蛋白上升≥10 g/L。如出现黑便、呕血、严重头晕或胸痛，立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为慢性乏力、头晕伴活动后气短，近期加重并出现反复黑便及鲜红血便，提示上消化道出血合并贫血风险。",
+        "diagnosis_reflection": "本次误诊为胃溃疡，漏诊了核心问题缺铁性贫血。需警惕：长期乏力、面色苍白、注意力差及黑便是贫血典型表现，不能仅关注出血原因而忽略血液系统评估。",
+        "examination_reflection": "检查遗漏关键项目。虽然安排了胃镜和粪常规，但缺失全血细胞计数（CBC）和铁代谢检查，无法量化贫血程度及类型；同时未开凝血功能全套，对活动性出血风险评估不足。",
+        "treatment_reflection": "治疗方案侧重止血和抑酸，但缺乏针对贫血的纠正措施。遗漏了具体的铁剂用法（如剂量、服用时间）、维生素B12补充以及饮食宣教，导致治疗不全面。",
+        "future_strategy": "面对消化道出血伴全身症状患者，必须同步进行血常规和铁代谢检查以明确贫血诊断；治疗时需将止血与纠正贫血（铁剂/B12补充）结合，并制定详细的用药指导和随访计划。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T13:30:09.961600+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_06604",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "胃溃疡"
+    ],
+    "treatment_plan": "1. 紧急止血与病情稳定：鉴于患者有活动性上消化道出血（黑便、鲜红血、内镜下溃疡渗血及血凝块），需立即禁食水，建立静脉通道，给予质子泵抑制剂（PPI）大剂量静脉推注及持续输注（如奥美拉唑或泮托拉唑），以强力抑制胃酸分泌，促进血小板聚集和血栓形成。若血红蛋白进一步下降或出现血流动力学不稳定，需备输血治疗。\n2. 根除幽门螺杆菌：待病情稳定、可进食后，进行C13/C14呼气试验检测幽门螺杆菌。若阳性，采用含铋剂的四联疗法（PPI + 铋剂 + 两种抗生素）根除治疗，疗程10-14天，以减少溃疡复发风险。\n3. 黏膜修复与对症：口服PPI制剂维持治疗至少8周，促进溃疡愈合；加用胃黏膜保护剂（如硫糖铝或瑞巴派特）。针对患者贫血症状，在出血控制后补充铁剂（如多糖铁复合物）纠正缺铁性贫血，并监测血常规变化。\n4. 生活方式干预：严格戒烟酒，避免辛辣、粗糙食物，规律饮食，避免使用非甾体抗炎药（NSAIDs）等损伤胃黏膜药物。\n5. 随访计划：治疗结束后复查胃镜确认溃疡愈合情况。若出现呕血、黑便加重、剧烈腹痛或晕厥，需立即急诊就医。",
+    "reasoning": "诊断依据：患者主诉反复黑便及近期鲜红血便，伴乏力、头晕等贫血症状。粪便隐血试验及大便常规均提示消化道出血。食管胃十二指肠镜检查（EGD）明确发现胃窦部多发糜烂，且幽门前区存在溃疡伴渗血及血凝块，符合胃溃疡伴活动性出血的临床表现。结肠镜检查已排除下消化道出血来源。结合病史和内镜结果，最可能的诊断为胃溃疡。治疗方案重点在于急性期止血、抑酸护膜、根除潜在病因（如幽门螺杆菌）以及纠正贫血，确保治疗的有效性和安全性。",
+    "ordered_examinations": [
+      "粪便隐血试验（FOBT）",
+      "大便常规检查",
+      "食管胃十二指肠镜检查（EGD）",
+      "结肠镜检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_06604",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.5,
+    "treatmentOverallScore": 0.52,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.4,
+    "diagnosisDetail": {
+      "submitted": [
+        "胃溃疡"
+      ],
+      "expected": [
+        "缺铁性贫血"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "粪便隐血试验（FOBT）",
+        "大便常规检查",
+        "食管胃十二指肠镜检查（EGD）",
+        "结肠镜检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "大便常规检查",
+        "食管胃十二指肠镜检查（EGD）",
+        "凝血功能全套",
+        "维生素和矿物质测定"
+      ],
+      "matched": [
+        "大便常规检查",
+        "食管胃十二指肠镜检查（EGD）"
+      ],
+      "precision": 0.5,
+      "coverage": 0.3333333333333333,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 紧急止血与病情稳定：鉴于患者有活动性上消化道出血（黑便、鲜红血、内镜下溃疡渗血及血凝块），需立即禁食水，建立静脉通道，给予质子泵抑制剂（PPI）大剂量静脉推注及持续输注（如奥美拉唑或泮托拉唑），以强力抑制胃酸分泌，促进血小板聚集和血栓形成。若血红蛋白进一步下降或出现血流动力学不稳定，需备输血治疗。\n2. 根除幽门螺杆菌：待病情稳定、可进食后，进行C13/C14呼气试验检测幽门螺杆菌。若阳性，采用含铋剂的四联疗法（PPI + 铋剂 + 两种抗生素）根除治疗，疗程10-14天，以减少溃疡复发风险。\n3. 黏膜修复与对症：口服PPI制剂维持治疗至少8周，促进溃疡愈合；加用胃黏膜保护剂（如硫糖铝或瑞巴派特）。针对患者贫血症状，在出血控制后补充铁剂（如多糖铁复合物）纠正缺铁性贫血，并监测血常规变化。\n4. 生活方式干预：严格戒烟酒，避免辛辣、粗糙食物，规律饮食，避免使用非甾体抗炎药（NSAIDs）等损伤胃黏膜药物。\n5. 随访计划：治疗结束后复查胃镜确认溃疡愈合情况。若出现呕血、黑便加重、剧烈腹痛或晕厥，需立即急诊就医。",
+      "overallScore": 0.52,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.4,
+      "reasoning": "方案安全但遗漏铁剂具体用法、B12补充及凝血异常处理，未针对患者经济状况调整。",
+      "reference": "开始口服葡萄糖酸亚铁325 mg，每日1次，配合富含维生素C的果汁，于早餐前1小时服用；若1周后耐受良好，再增加至每日2次。进行吸收相关宣教：避免铁剂与钙/乳制品、抗酸药、茶/咖啡或高纤维麸皮/谷物在约2小时内同服；与这些食物或药物错开，并继续结合富含维生素C的食物安排实际服用时间。加用氰钴胺以纠正维生素B12缺乏并监测疗效：1–2周后复查B12水平并评估早期血液学反应（网织红细胞反应/CBC）；如怀疑/证实吸收不良或疗效不足，则改为肌内注射B12替代治疗（或在确认可吸收的情况下采用有记录的高剂量口服方案）。继续使用泮托拉唑40 mg每日1次以促进溃疡愈合。鉴于溃疡/出血风险，停用NSAIDs；对于类风湿关节炎疼痛/发作，按需使用对乙酰氨基酚500 mg（每日最大3 g），可考虑外用抗炎治疗，并安排风湿科随访以优化DMARD治疗；若出现明显炎症性发作，考虑在胃肠道保护下采用短程、严密监护的糖皮质激素治疗，而非NSAIDs。处理PT/INR延长：审查用药/补充剂及任何抗凝药暴露情况，检查并监测肝功能，并考虑维生素K缺乏；复查PT/INR和CBC，如INR升高、出血复发/加重或出现血流动力学症状，应紧急升级处理（维生素K治疗和/或血液科、消化科重新评估）。优先选择价格可负担的血红素铁来源，如罐装沙丁鱼、肝酱和瘦牛肉末；进餐时搭配富含维生素C的配菜，如甜椒或橙子。建立结构化的睡前放松程序，以达到7小时睡眠；减少与工作相关的压力源。1周内安排消化科随访，进行重复EGD及铁状态重新评估。2周后复查CBC，以确认血红蛋白上升≥10 g/L。如出现黑便、呕血、严重头晕或胸痛，立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "缺铁性贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "大便常规检查",
+        "食管胃十二指肠镜检查（EGD）",
+        "凝血功能全套",
+        "维生素和矿物质测定"
+      ],
+      "contraindications": {
+        "drugs": [
+          "非甾体抗炎药（NSAIDs）"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "开始口服葡萄糖酸亚铁325 mg，每日1次，配合富含维生素C的果汁，于早餐前1小时服用；若1周后耐受良好，再增加至每日2次。进行吸收相关宣教：避免铁剂与钙/乳制品、抗酸药、茶/咖啡或高纤维麸皮/谷物在约2小时内同服；与这些食物或药物错开，并继续结合富含维生素C的食物安排实际服用时间。加用氰钴胺以纠正维生素B12缺乏并监测疗效：1–2周后复查B12水平并评估早期血液学反应（网织红细胞反应/CBC）；如怀疑/证实吸收不良或疗效不足，则改为肌内注射B12替代治疗（或在确认可吸收的情况下采用有记录的高剂量口服方案）。继续使用泮托拉唑40 mg每日1次以促进溃疡愈合。鉴于溃疡/出血风险，停用NSAIDs；对于类风湿关节炎疼痛/发作，按需使用对乙酰氨基酚500 mg（每日最大3 g），可考虑外用抗炎治疗，并安排风湿科随访以优化DMARD治疗；若出现明显炎症性发作，考虑在胃肠道保护下采用短程、严密监护的糖皮质激素治疗，而非NSAIDs。处理PT/INR延长：审查用药/补充剂及任何抗凝药暴露情况，检查并监测肝功能，并考虑维生素K缺乏；复查PT/INR和CBC，如INR升高、出血复发/加重或出现血流动力学症状，应紧急升级处理（维生素K治疗和/或血液科、消化科重新评估）。优先选择价格可负担的血红素铁来源，如罐装沙丁鱼、肝酱和瘦牛肉末；进餐时搭配富含维生素C的配菜，如甜椒或橙子。建立结构化的睡前放松程序，以达到7小时睡眠；减少与工作相关的压力源。1周内安排消化科随访，进行重复EGD及铁状态重新评估。2周后复查CBC，以确认血红蛋白上升≥10 g/L。如出现黑便、呕血、严重头晕或胸痛，立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为慢性乏力、头晕伴活动后气短，近期加重并出现反复黑便及鲜红血便，提示上消化道出血合并贫血风险。",
+      "diagnosis_reflection": "本次误诊为胃溃疡，漏诊了核心问题缺铁性贫血。需警惕：长期乏力、面色苍白、注意力差及黑便是贫血典型表现，不能仅关注出血原因而忽略血液系统评估。",
+      "examination_reflection": "检查遗漏关键项目。虽然安排了胃镜和粪常规，但缺失全血细胞计数（CBC）和铁代谢检查，无法量化贫血程度及类型；同时未开凝血功能全套，对活动性出血风险评估不足。",
+      "treatment_reflection": "治疗方案侧重止血和抑酸，但缺乏针对贫血的纠正措施。遗漏了具体的铁剂用法（如剂量、服用时间）、维生素B12补充以及饮食宣教，导致治疗不全面。",
+      "future_strategy": "面对消化道出血伴全身症状患者，必须同步进行血常规和铁代谢检查以明确贫血诊断；治疗时需将止血与纠正贫血（铁剂/B12补充）结合，并制定详细的用药指导和随访计划。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/088.json#/applied_memory"
+  }
+}

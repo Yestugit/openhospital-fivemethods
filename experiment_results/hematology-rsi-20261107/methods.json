@@ -1,0 +1,35 @@
+{
+  "memos": {
+    "status": "completed",
+    "cases": 100,
+    "rounds": 5,
+    "original_results_sha256": "1e894aa48e9b2712cd1cacf75ea31a8f7a2dbcd96b0d394bafe4d070427de24f",
+    "timing_events": 14999
+  },
+  "mem0": {
+    "status": "completed",
+    "cases": 100,
+    "rounds": 5,
+    "original_results_sha256": "0772da529908be6bac0aaaebf441814a184d18a8577f7d19330a3a946b27be6a",
+    "timing_events": 15446
+  },
+  "memmachine": {
+    "status": "completed",
+    "cases": 100,
+    "rounds": 5,
+    "original_results_sha256": "748d87bbb7588988020f1e44ab7b061c92d9ac299ca0c61adb9dc0a8e8fd8cf7",
+    "timing_events": 16685
+  },
+  "memora": {
+    "status": "completed",
+    "cases": 100,
+    "rounds": 5,
+    "original_results_sha256": "673ecb98c5114cf2d735656adbab20a00c68be25bbff375d94c1bb4c163ebbd2",
+    "timing_events": 34303
+  },
+  "emem": {
+    "status": "deferred",
+    "cases": 0,
+    "reason": "Discarded invalid run removed; corrected implementation has not been rerun."
+  }
+}

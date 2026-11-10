@@ -1,0 +1,369 @@
+{
+  "patient_id": "Patient_02107",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等表现？\", \"reason\": \"当前没有任何患者病史、检查结果或已开检查信息，属于诊疗初始阶段，必须首先通过问诊收集患者的临床症状以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等表现？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "主要是越来越累，头晕，爬楼梯喘不上气。最近月经量特别大，之后症状更重了。脸色也变白了，偶尔头痛、心慌，胃口不好，还总想吃冰的东西。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为进行性乏力、头晕、活动后气促、面色苍白及月经过多，提示可能存在贫血或血液系统疾病。目前缺乏血常规等关键实验室检查结果以明确诊断，因此优先开具检查以获取客观数据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主要表现为进行性乏力、头晕、活动后气促、面色苍白及月经量过多，提示可能存在贫血及相关出血倾向。虽然病史中未提及具体检查结果，但根据症状描述（如脸色变白、心慌、月经量大），首先需要进行血常规检查以评估血红蛋白水平、红细胞形态及血小板计数，明确是否存在贫血及其类型，并排查凝血功能异常或血液系统疾病，这是诊断和制定后续治疗方案的基础。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"铁代谢检查\"], \"reason\": \"患者表现为进行性乏力、头晕、活动后气促、面色苍白，且近期月经量过大，高度提示贫血。首先需通过全血细胞计数（CBC）明确贫血程度及是否合并血小板减少或白细胞异常；外周血涂片可观察红细胞形态以初步判断贫血类型（如缺铁性、溶血性等）；结合患者月经过多病史，铁代谢检查是诊断缺铁性贫血的关键依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"Hgb：82 g/L [参考范围：120-160]\", \"红细胞压积\": \"Hct：27% [参考范围：36-48]\", \"血液红细胞计数\": \"RBC：3.2 x 10^12/L [参考范围：4.0-5.0]\", \"平均红细胞体积\": \"MCV：72 fL [参考范围：80-100]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"红细胞压积\", \"血液红细胞计数\", \"平均红细胞体积\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"无异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 62%、淋巴细胞 30%、单核细胞 5%、嗜酸性粒细胞 3%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"小细胞低色素性，中央淡染区扩大至约占细胞直径的二分之一；可见明显大小不等及异形红细胞。\", \"血小板形态与分布\": \"大小和形态正常，分布均匀。\", \"血小板数量\": \"数量充足（估计 280,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞形态\"]}, \"铁代谢检查\": {\"result\": {\"血清铁\": \"血清铁：22 ug/dL [参考范围：50-170]\", \"总铁结合力\": \"总铁结合力（TIBC）：452 ug/dL [参考范围：250-370]\", \"转铁蛋白饱和度\": \"转铁蛋白饱和度：5% [参考范围：15-50]\", \"血清铁蛋白\": \"铁蛋白：6 ng/mL [参考范围：15-150]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清铁\", \"总铁结合力\", \"转铁蛋白饱和度\", \"血清铁蛋白\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有明确的贫血症状（乏力、头晕、月经量大），且全血细胞计数显示小细胞低色素性贫血，铁代谢检查确诊为严重缺铁性贫血。病史、症状及关键检查结果已齐全，足以做出诊断并制定治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为乏力、头晕、面色苍白等贫血症状，且月经量过多。检查结果显示小细胞低色素性贫血（Hgb 82 g/L, MCV 72 fL），外周血涂片提示红细胞形态异常，铁代谢检查确诊为严重缺铁性贫血（血清铁低、总铁结合力高、铁蛋白极低）。虽然病因可能与妇产科相关（月经过多），但当前核心诊断为血液系统疾病（缺铁性贫血），需由血液科进行专业评估、鉴别诊断及制定治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. **口服铁剂治疗**：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议餐后服用，并可同时补充维生素C以促进铁吸收。鉴于患者有“总想吃冰的东西”的异食癖表现，提示缺铁程度较重，需足量足疗程治疗。\\n2. **病因治疗**：患者主诉“月经量特别大”，这是导致缺铁的主要原因。需在补铁的同时，转诊妇科评估月经过多原因（如子宫肌瘤、内分泌失调等），必要时进行止血或激素调节治疗，以阻断失血源头。\\n3. **饮食调整**：指导患者增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），避免与茶、咖啡、牛奶同服以免影响铁吸收。\\n4. **监测与随访**：治疗开始后2周复查血常规，观察网织红细胞是否升高及血红蛋白是否回升；血红蛋白恢复正常后，需继续补铁3-6个月以补足体内储存铁（目标血清铁蛋白>50ng/mL）。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\\n5. **安全警示**：若出现黑便属正常现象，但若出现严重腹痛、呕血或柏油样便需立即就医。治疗期间需定期监测肝肾功能及铁代谢指标，警惕铁过载风险。\", \"reasoning\": \"诊断依据：1. **临床表现**：患者有乏力、头晕、心慌、面色苍白等典型贫血症状，且伴有“异食癖”（想吃冰），高度提示缺铁。2. **实验室检查**：全血细胞计数显示小细胞低色素性贫血（Hgb 82g/L, MCV 72fL）；外周血涂片证实红细胞呈小细胞低色素性改变；铁代谢检查显示血清铁降低、总铁结合力升高、转铁蛋白饱和度极低（5%）、铁蛋白显著降低（6ng/mL），符合重度缺铁性贫血的金标准。3. **病史关联**：患者明确提及“月经量特别大”，这是育龄期女性缺铁性贫血最常见的病因。综合以上证据，排除白血病等其他血液系统恶性肿瘤（无原始细胞、白细胞分类正常），确诊为缺铁性贫血。治疗方案针对病因（月经过多）和病理生理（铁缺乏）制定，兼顾有效性、个性化及安全性。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_02107",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_04911's CBC showed elevated hemoglobin at 162 g/L (high) and elevated RBC count at 5.8 x 10^12/L (high), indicating secondary polycythemia.",
+      "Patient_08308's CBC showed microcytic hypochromic anemia: Hemoglobin 82 g/L, Hematocrit 27%, MCV 68 fL, MCH 21 pg.",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "User participated in a hematology diagnostic task for Patient_04601, a 4-year-old girl presenting with microcytic hypochromic anemia (Hb 78-86 g/L, MCV 68 fL), target cells on smear, and absent bone marrow iron stores (Grade 0)",
+      "Patient_08308's iron metabolism tests confirmed severe iron deficiency: Serum Iron 18 ug/dL (low), Total Iron Binding Capacity 460 ug/dL (high), Transferrin Saturation 4% (low), and Ferritin 6 ng/mL (very low).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_03943's CBC showed microcytic hypochromic anemia with hemoglobin 78 g/L, hematocrit 26%, MCV 68 fL, and MCH 21 pg.",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "Patient_03943's iron metabolism tests confirmed severe iron deficiency with serum iron 22 ug/dL (low), total iron binding capacity 462 ug/dL (high), transferrin saturation 5% (low), and ferritin 6 ng/mL (very low).",
+      "Patient_04911's iron metabolism tests were normal with total iron binding capacity 320 μg/dL, serum iron 75 μg/dL, ferritin 45 ng/mL, and transferrin saturation 28%.",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "User's child has a CBC showing hemoglobin of 86 g/L (low), hematocrit of 28% (low), MCV of 68 fL (low), and MCH of 20 pg (low), indicating microcytic hypochromic anemia.",
+      "User's child's iron metabolism tests confirm severe iron deficiency with serum iron of 22 ug/dL (low), total iron binding capacity of 462 ug/dL (high), and ferritin of 5 ng/mL (very low)"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等表现？"
+      },
+      {
+        "from": "patient",
+        "text": "主要是越来越累，头晕，爬楼梯喘不上气。最近月经量特别大，之后症状更重了。脸色也变白了，偶尔头痛、心慌，胃口不好，还总想吃冰的东西。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "Hgb：82 g/L [参考范围：120-160]",
+          "红细胞压积": "Hct：27% [参考范围：36-48]",
+          "血液红细胞计数": "RBC：3.2 x 10^12/L [参考范围：4.0-5.0]",
+          "平均红细胞体积": "MCV：72 fL [参考范围：80-100]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "红细胞压积",
+          "血液红细胞计数",
+          "平均红细胞体积"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "无异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞 62%、淋巴细胞 30%、单核细胞 5%、嗜酸性粒细胞 3%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当。",
+          "红细胞形态": "小细胞低色素性，中央淡染区扩大至约占细胞直径的二分之一；可见明显大小不等及异形红细胞。",
+          "血小板形态与分布": "大小和形态正常，分布均匀。",
+          "血小板数量": "数量充足（估计 280,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "红细胞形态"
+        ]
+      },
+      "铁代谢检查": {
+        "result": {
+          "血清铁": "血清铁：22 ug/dL [参考范围：50-170]",
+          "总铁结合力": "总铁结合力（TIBC）：452 ug/dL [参考范围：250-370]",
+          "转铁蛋白饱和度": "转铁蛋白饱和度：5% [参考范围：15-50]",
+          "血清铁蛋白": "铁蛋白：6 ng/mL [参考范围：15-150]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清铁",
+          "总铁结合力",
+          "转铁蛋白饱和度",
+          "血清铁蛋白"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等表现？",
+        "reason": "当前没有任何患者病史、检查结果或已开检查信息，属于诊疗初始阶段，必须首先通过问诊收集患者的临床症状以明确诊断方向。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为进行性乏力、头晕、活动后气促、面色苍白及月经过多，提示可能存在贫血或血液系统疾病。目前缺乏血常规等关键实验室检查结果以明确诊断，因此优先开具检查以获取客观数据。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有明确的贫血症状（乏力、头晕、月经量大），且全血细胞计数显示小细胞低色素性贫血，铁代谢检查确诊为严重缺铁性贫血。病史、症状及关键检查结果已齐全，足以做出诊断并制定治疗方案。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "铁代谢检查"
+        ],
+        "reason": "患者表现为进行性乏力、头晕、活动后气促、面色苍白，且近期月经量过大，高度提示贫血。首先需通过全血细胞计数（CBC）明确贫血程度及是否合并血小板减少或白细胞异常；外周血涂片可观察红细胞形态以初步判断贫血类型（如缺铁性、溶血性等）；结合患者月经过多病史，铁代谢检查是诊断缺铁性贫血的关键依据。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "缺铁性贫血",
+      "treatment_plan": "1. **口服铁剂治疗**：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议餐后服用，并可同时补充维生素C以促进铁吸收。鉴于患者有“总想吃冰的东西”的异食癖表现，提示缺铁程度较重，需足量足疗程治疗。\n2. **病因治疗**：患者主诉“月经量特别大”，这是导致缺铁的主要原因。需在补铁的同时，转诊妇科评估月经过多原因（如子宫肌瘤、内分泌失调等），必要时进行止血或激素调节治疗，以阻断失血源头。\n3. **饮食调整**：指导患者增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），避免与茶、咖啡、牛奶同服以免影响铁吸收。\n4. **监测与随访**：治疗开始后2周复查血常规，观察网织红细胞是否升高及血红蛋白是否回升；血红蛋白恢复正常后，需继续补铁3-6个月以补足体内储存铁（目标血清铁蛋白>50ng/mL）。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n5. **安全警示**：若出现黑便属正常现象，但若出现严重腹痛、呕血或柏油样便需立即就医。治疗期间需定期监测肝肾功能及铁代谢指标，警惕铁过载风险。",
+      "reasoning": "诊断依据：1. **临床表现**：患者有乏力、头晕、心慌、面色苍白等典型贫血症状，且伴有“异食癖”（想吃冰），高度提示缺铁。2. **实验室检查**：全血细胞计数显示小细胞低色素性贫血（Hgb 82g/L, MCV 72fL）；外周血涂片证实红细胞呈小细胞低色素性改变；铁代谢检查显示血清铁降低、总铁结合力升高、转铁蛋白饱和度极低（5%）、铁蛋白显著降低（6ng/mL），符合重度缺铁性贫血的金标准。3. **病史关联**：患者明确提及“月经量特别大”，这是育龄期女性缺铁性贫血最常见的病因。综合以上证据，排除白血病等其他血液系统恶性肿瘤（无原始细胞、白细胞分类正常），确诊为缺铁性贫血。治疗方案针对病因（月经过多）和病理生理（铁缺乏）制定，兼顾有效性、个性化及安全性。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_02107",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.68,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "缺铁性贫血"
+        ],
+        "expected": [
+          "缺铁性贫血"
+        ],
+        "matched": [
+          "缺铁性贫血"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "铁代谢检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "维生素和矿物质测定",
+          "凝血功能全套",
+          "大便常规检查",
+          "尿液分析（UA）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.3333333333333333,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **口服铁剂治疗**：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议餐后服用，并可同时补充维生素C以促进铁吸收。鉴于患者有“总想吃冰的东西”的异食癖表现，提示缺铁程度较重，需足量足疗程治疗。\n2. **病因治疗**：患者主诉“月经量特别大”，这是导致缺铁的主要原因。需在补铁的同时，转诊妇科评估月经过多原因（如子宫肌瘤、内分泌失调等），必要时进行止血或激素调节治疗，以阻断失血源头。\n3. **饮食调整**：指导患者增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），避免与茶、咖啡、牛奶同服以免影响铁吸收。\n4. **监测与随访**：治疗开始后2周复查血常规，观察网织红细胞是否升高及血红蛋白是否回升；血红蛋白恢复正常后，需继续补铁3-6个月以补足体内储存铁（目标血清铁蛋白>50ng/mL）。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n5. **安全警示**：若出现黑便属正常现象，但若出现严重腹痛、呕血或柏油样便需立即就医。治疗期间需定期监测肝肾功能及铁代谢指标，警惕铁过载风险。",
+        "overallScore": 0.68,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.8,
+        "reasoning": "方案安全，但遗漏了针对大便隐血和凝血异常的胃肠及血液科评估。",
+        "reference": "开始口服富马酸亚铁325 mg，每日1次；鉴于其有胃炎病史，初始1–2周随餐服用以提高耐受性，若耐受良好，随后改为两餐之间服用（或睡前服用）以改善吸收。每日单次铁剂同时服用维生素C 100 mg，以增强非血红素铁的吸收。建议持续摄入富含铁的食物，如扁豆、菠菜和强化谷物，并说明其嗜冰行为很可能是与缺铁相关的异食癖表现。将两种病因作为导致缺铁性贫血的可能共同因素进行处理：（1）月经过多；（2）由大便隐血阳性/粪便中RBC提示的胃肠道失血；应评估潜在相关因素，如胃炎和任何NSAID使用情况，并积极进行胃肠道评估（例如转诊消化科行内镜评估），作为当前并行处理的问题，而不是仅在血液学反应不佳时再考虑。鉴于aPTT单独延长而PT正常，建议复查凝血功能，并结合月经过多的背景，针对单纯aPTT延长的病因进行进一步评估（如混合试验及凝血因子/血管性血友病相关检查，视情况而定）。安排4周后随访，评估症状改善情况并复查CBC/铁代谢指标，同时协调妇科评估月经过多问题。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "缺铁性贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "维生素和矿物质测定",
+          "凝血功能全套",
+          "大便常规检查",
+          "尿液分析（UA）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "开始口服富马酸亚铁325 mg，每日1次；鉴于其有胃炎病史，初始1–2周随餐服用以提高耐受性，若耐受良好，随后改为两餐之间服用（或睡前服用）以改善吸收。每日单次铁剂同时服用维生素C 100 mg，以增强非血红素铁的吸收。建议持续摄入富含铁的食物，如扁豆、菠菜和强化谷物，并说明其嗜冰行为很可能是与缺铁相关的异食癖表现。将两种病因作为导致缺铁性贫血的可能共同因素进行处理：（1）月经过多；（2）由大便隐血阳性/粪便中RBC提示的胃肠道失血；应评估潜在相关因素，如胃炎和任何NSAID使用情况，并积极进行胃肠道评估（例如转诊消化科行内镜评估），作为当前并行处理的问题，而不是仅在血液学反应不佳时再考虑。鉴于aPTT单独延长而PT正常，建议复查凝血功能，并结合月经过多的背景，针对单纯aPTT延长的病因进行进一步评估（如混合试验及凝血因子/血管性血友病相关检查，视情况而定）。安排4周后随访，评估症状改善情况并复查CBC/铁代谢指标，同时协调妇科评估月经过多问题。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为育龄期女性，主诉乏力、头晕、气促及面色苍白，伴月经过多史及异食癖（嗜冰），提示重度缺铁性贫血。",
+        "diagnosis_reflection": "诊断准确命中‘缺铁性贫血’。经验在于需结合‘月经过多’与‘异食癖’双重线索快速锁定病因，但需注意鉴别是否存在合并的凝血功能障碍或胃肠道失血。",
+        "examination_reflection": "检查遗漏了针对出血源头的关键项目：大便常规（排查消化道隐性出血）、凝血功能全套（评估月经过多是否由凝血异常引起）及尿液分析。应优先完善CBC和铁代谢后，立即补充上述排查性检查以明确病因。",
+        "treatment_reflection": "治疗方案涵盖了补铁、病因治疗及饮食指导，安全性高。主要不足在于未明确提及对胃肠道出血风险的主动排查（如转诊消化科内镜评估）及对凝血异常的进一步处理，导致方案在病因阻断上不够全面。",
+        "future_strategy": "面对月经过多伴贫血患者，除补铁外必须同步排查消化道出血（大便隐血/胃肠镜）及凝血功能异常；治疗策略应强调‘止血源头’与‘纠正贫血’并行，而非单纯补铁。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:32:02.178794+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_02107",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "缺铁性贫血"
+    ],
+    "treatment_plan": "1. **口服铁剂治疗**：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议餐后服用，并可同时补充维生素C以促进铁吸收。鉴于患者有“总想吃冰的东西”的异食癖表现，提示缺铁程度较重，需足量足疗程治疗。\n2. **病因治疗**：患者主诉“月经量特别大”，这是导致缺铁的主要原因。需在补铁的同时，转诊妇科评估月经过多原因（如子宫肌瘤、内分泌失调等），必要时进行止血或激素调节治疗，以阻断失血源头。\n3. **饮食调整**：指导患者增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），避免与茶、咖啡、牛奶同服以免影响铁吸收。\n4. **监测与随访**：治疗开始后2周复查血常规，观察网织红细胞是否升高及血红蛋白是否回升；血红蛋白恢复正常后，需继续补铁3-6个月以补足体内储存铁（目标血清铁蛋白>50ng/mL）。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n5. **安全警示**：若出现黑便属正常现象，但若出现严重腹痛、呕血或柏油样便需立即就医。治疗期间需定期监测肝肾功能及铁代谢指标，警惕铁过载风险。",
+    "reasoning": "诊断依据：1. **临床表现**：患者有乏力、头晕、心慌、面色苍白等典型贫血症状，且伴有“异食癖”（想吃冰），高度提示缺铁。2. **实验室检查**：全血细胞计数显示小细胞低色素性贫血（Hgb 82g/L, MCV 72fL）；外周血涂片证实红细胞呈小细胞低色素性改变；铁代谢检查显示血清铁降低、总铁结合力升高、转铁蛋白饱和度极低（5%）、铁蛋白显著降低（6ng/mL），符合重度缺铁性贫血的金标准。3. **病史关联**：患者明确提及“月经量特别大”，这是育龄期女性缺铁性贫血最常见的病因。综合以上证据，排除白血病等其他血液系统恶性肿瘤（无原始细胞、白细胞分类正常），确诊为缺铁性贫血。治疗方案针对病因（月经过多）和病理生理（铁缺乏）制定，兼顾有效性、个性化及安全性。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "铁代谢检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_02107",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.68,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "缺铁性贫血"
+      ],
+      "expected": [
+        "缺铁性贫血"
+      ],
+      "matched": [
+        "缺铁性贫血"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "铁代谢检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "维生素和矿物质测定",
+        "凝血功能全套",
+        "大便常规检查",
+        "尿液分析（UA）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.3333333333333333,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **口服铁剂治疗**：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），建议每日补充元素铁150-200mg，分次服用。为减少胃肠道刺激并提高吸收率，建议餐后服用，并可同时补充维生素C以促进铁吸收。鉴于患者有“总想吃冰的东西”的异食癖表现，提示缺铁程度较重，需足量足疗程治疗。\n2. **病因治疗**：患者主诉“月经量特别大”，这是导致缺铁的主要原因。需在补铁的同时，转诊妇科评估月经过多原因（如子宫肌瘤、内分泌失调等），必要时进行止血或激素调节治疗，以阻断失血源头。\n3. **饮食调整**：指导患者增加富含血红素铁的食物摄入（如红肉、动物肝脏、血制品），避免与茶、咖啡、牛奶同服以免影响铁吸收。\n4. **监测与随访**：治疗开始后2周复查血常规，观察网织红细胞是否升高及血红蛋白是否回升；血红蛋白恢复正常后，需继续补铁3-6个月以补足体内储存铁（目标血清铁蛋白>50ng/mL）。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。\n5. **安全警示**：若出现黑便属正常现象，但若出现严重腹痛、呕血或柏油样便需立即就医。治疗期间需定期监测肝肾功能及铁代谢指标，警惕铁过载风险。",
+      "overallScore": 0.68,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.8,
+      "reasoning": "方案安全，但遗漏了针对大便隐血和凝血异常的胃肠及血液科评估。",
+      "reference": "开始口服富马酸亚铁325 mg，每日1次；鉴于其有胃炎病史，初始1–2周随餐服用以提高耐受性，若耐受良好，随后改为两餐之间服用（或睡前服用）以改善吸收。每日单次铁剂同时服用维生素C 100 mg，以增强非血红素铁的吸收。建议持续摄入富含铁的食物，如扁豆、菠菜和强化谷物，并说明其嗜冰行为很可能是与缺铁相关的异食癖表现。将两种病因作为导致缺铁性贫血的可能共同因素进行处理：（1）月经过多；（2）由大便隐血阳性/粪便中RBC提示的胃肠道失血；应评估潜在相关因素，如胃炎和任何NSAID使用情况，并积极进行胃肠道评估（例如转诊消化科行内镜评估），作为当前并行处理的问题，而不是仅在血液学反应不佳时再考虑。鉴于aPTT单独延长而PT正常，建议复查凝血功能，并结合月经过多的背景，针对单纯aPTT延长的病因进行进一步评估（如混合试验及凝血因子/血管性血友病相关检查，视情况而定）。安排4周后随访，评估症状改善情况并复查CBC/铁代谢指标，同时协调妇科评估月经过多问题。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "缺铁性贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "维生素和矿物质测定",
+        "凝血功能全套",
+        "大便常规检查",
+        "尿液分析（UA）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "开始口服富马酸亚铁325 mg，每日1次；鉴于其有胃炎病史，初始1–2周随餐服用以提高耐受性，若耐受良好，随后改为两餐之间服用（或睡前服用）以改善吸收。每日单次铁剂同时服用维生素C 100 mg，以增强非血红素铁的吸收。建议持续摄入富含铁的食物，如扁豆、菠菜和强化谷物，并说明其嗜冰行为很可能是与缺铁相关的异食癖表现。将两种病因作为导致缺铁性贫血的可能共同因素进行处理：（1）月经过多；（2）由大便隐血阳性/粪便中RBC提示的胃肠道失血；应评估潜在相关因素，如胃炎和任何NSAID使用情况，并积极进行胃肠道评估（例如转诊消化科行内镜评估），作为当前并行处理的问题，而不是仅在血液学反应不佳时再考虑。鉴于aPTT单独延长而PT正常，建议复查凝血功能，并结合月经过多的背景，针对单纯aPTT延长的病因进行进一步评估（如混合试验及凝血因子/血管性血友病相关检查，视情况而定）。安排4周后随访，评估症状改善情况并复查CBC/铁代谢指标，同时协调妇科评估月经过多问题。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为育龄期女性，主诉乏力、头晕、气促及面色苍白，伴月经过多史及异食癖（嗜冰），提示重度缺铁性贫血。",
+      "diagnosis_reflection": "诊断准确命中‘缺铁性贫血’。经验在于需结合‘月经过多’与‘异食癖’双重线索快速锁定病因，但需注意鉴别是否存在合并的凝血功能障碍或胃肠道失血。",
+      "examination_reflection": "检查遗漏了针对出血源头的关键项目：大便常规（排查消化道隐性出血）、凝血功能全套（评估月经过多是否由凝血异常引起）及尿液分析。应优先完善CBC和铁代谢后，立即补充上述排查性检查以明确病因。",
+      "treatment_reflection": "治疗方案涵盖了补铁、病因治疗及饮食指导，安全性高。主要不足在于未明确提及对胃肠道出血风险的主动排查（如转诊消化科内镜评估）及对凝血异常的进一步处理，导致方案在病因阻断上不够全面。",
+      "future_strategy": "面对月经过多伴贫血患者，除补铁外必须同步排查消化道出血（大便隐血/胃肠镜）及凝血功能异常；治疗策略应强调‘止血源头’与‘纠正贫血’并行，而非单纯补铁。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/034.json#/applied_memory"
+  }
+}

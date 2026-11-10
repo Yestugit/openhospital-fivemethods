@@ -1,0 +1,19 @@
+{
+  "method": {"method_id": "a-mem", "params": {}},
+  "scope": {"user_id": "alice"},
+  "runtime": {"artifact_dir": ".mematlas/a-mem-real", "operation_timeout_s": 120},
+  "providers": {
+    "llm": {
+      "model": "qwen-flash",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "options": {"response_format": {"type": "json_object"}, "extra_body": {"enable_thinking": false}}
+    },
+    "embedding": {
+      "model": "text-embedding-v4",
+      "dimensions": 1024,
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "api_key_env": "DASHSCOPE_API_KEY"
+    }
+  }
+}

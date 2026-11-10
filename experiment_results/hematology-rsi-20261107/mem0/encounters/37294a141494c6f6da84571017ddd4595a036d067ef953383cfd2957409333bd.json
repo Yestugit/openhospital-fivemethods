@@ -1,0 +1,428 @@
+{
+  "patient_id": "Patient_04352",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您有什么不适症状？比如发热、乏力、出血倾向或骨痛等？\", \"reason\": \"当前没有患者主诉和病史信息，也没有任何检查结果，无法进行诊断，需要先通过问诊收集患者的临床症状和既往史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您有什么不适症状？比如发热、乏力、出血倾向或骨痛等？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "她最近特别容易累，稍微动一下就喊困。身上经常有青一块紫一块的瘀伤，刷牙时牙龈还会出血。以前感冒好得快，现在反复发烧还总不好。脸色看起来也白白的，不像以前那么活泼了。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者除了乏力、瘀伤和牙龈出血外，是否有发热（特别是午后或夜间）、盗汗、体重下降、骨痛或关节痛的情况？另外，有没有发现淋巴结肿大或腹部胀满感？\", \"reason\": \"患者症状提示可能存在血液系统疾病（如白血病），但病史中缺乏关于发热规律、盗汗、体重变化、骨痛及淋巴结/肝脾肿大等关键鉴别诊断信息，需进一步问诊以完善病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者除了乏力、瘀伤和牙龈出血外，是否有发热（特别是午后或夜间）、盗汗、体重下降、骨痛或关节痛的情况？另外，有没有发现淋巴结肿大或腹部胀满感？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "她最近确实反复发烧，但都是低烧，没有明显的午后或夜间高热。也没有盗汗、体重明显下降或骨痛关节痛。没发现淋巴结肿大，肚子也不胀。就是特别容易累，脸色也白了。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为乏力、面色苍白、瘀伤及牙龈出血，高度提示血液系统疾病（如贫血或白血病），目前缺乏血常规等关键实验室检查结果以明确诊断，需优先完善检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为乏力、面色苍白（提示贫血）、皮肤瘀伤及牙龈出血（提示血小板减少或凝血功能障碍），这些是血液系统疾病（如白血病、再生障碍性贫血等）的典型症状。血常规检查是评估贫血、感染及出血倾向的首选和基础检查，能够直接反映红细胞、白细胞及血小板的数量和形态，对初步诊断至关重要。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\"], \"reason\": \"患者表现为乏力、面色苍白（提示贫血）、易瘀伤及牙龈出血（提示血小板减少或凝血异常），且伴有反复低热。这些症状高度提示血液系统疾病（如白血病、再生障碍性贫血等）。全血细胞计数（CBC）是评估贫血、感染和血小板减少的首选筛查检查；外周血涂片可进一步观察血细胞形态，发现原始细胞或异常细胞，对血液病诊断至关重要。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：2.4 x10^9/L［参考值：5.0-15.5］\", \"血红蛋白\": \"Hgb：82 g/L［参考值：110-155］\", \"血小板计数\": \"PLT：38 x10^9/L［参考值：150-450］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"可见反应性淋巴细胞。\", \"异型细胞或原始细胞\": \"未见原始细胞。\", \"白细胞分类计数\": \"淋巴细胞比例约60%，中性粒细胞比例约35%。［参考值：约自出生后 2 周至 4-6 岁，存在生理性淋巴细胞优势（淋巴细胞 45-65%，中性粒细胞 25-45%）；较大儿童逐渐转为成人以中性粒细胞为主的模式。］\", \"白细胞形态\": \"形态正常。\", \"红细胞形态\": \"呈正细胞性、正色素性，无明显异形红细胞增多。\", \"血小板形态与分布\": \"大小和形态正常。\", \"血小板数量\": \"显著减少（约38,000/μL）。［参考值：数量充足（150,000-450,000/μL）。］\", \"血小板聚集\": \"散在分布，无异常聚集现象。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板数量\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片未见原始细胞，但存在反应性淋巴细胞。为了明确病因，排除再生障碍性贫血、骨髓增生异常综合征或白血病等血液系统疾病，急需进行骨髓穿刺检查以评估骨髓造血功能及细胞形态。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有发热、乏力、出血倾向及瘀斑，虽然外周血涂片未见原始细胞，但鉴于症状严重且持续，需高度警惕骨髓增生异常综合征、再生障碍性贫血或白血病（尤其是低增生性白血病）等血液系统恶性肿瘤。骨髓穿刺及活检是明确诊断的金标准，可评估骨髓造血功能、细胞形态及有无恶性浸润，对确诊和指导后续治疗至关重要。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有乏力、瘀斑、牙龈出血及反复低热等贫血和出血症状。虽然外周血涂片未见原始细胞，但鉴于血常规异常明显且存在不明原因的全血细胞减少，需进一步行骨髓穿刺和活检以明确病因，排除再生障碍性贫血、白血病或其他血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"骨髓穿刺和活检（BMAB）\": {\"result\": {\"骨髓细胞密度\": \"15%［参考值：60-95%］\", \"骨髓三系造血\": \"显著减少\", \"骨髓巨核细胞\": \"减少\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓细胞密度\", \"骨髓三系造血\", \"骨髓巨核细胞\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），骨髓穿刺显示骨髓增生减低，三系造血显著减少，巨核细胞减少，结合外周血涂片未见原始细胞及临床表现（乏力、出血倾向、反复发热），已具备再生障碍性贫血的关键诊断依据，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为乏力、面色苍白（贫血）、皮肤瘀斑及牙龈出血（血小板减少），且反复发热。实验室检查显示全血细胞减少（白细胞、血红蛋白、血小板均显著降低），骨髓穿刺提示骨髓增生低下、三系造血显著减少及巨核细胞减少，符合再生障碍性贫血等血液系统疾病的特征。虽然患者有发热需考虑感染，但核心病理改变在于造血功能衰竭，属于血液科诊疗范畴。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"再生障碍性贫血\", \"treatment_plan\": \"1. 一般治疗与支持：立即启动保护性隔离，预防感染；严格监测体温及出血情况。针对贫血（Hgb 82g/L）和血小板减少（PLT 38×10^9/L），根据症状给予红细胞输注和血小板输注，避免不必要的侵入性操作以防出血。2. 免疫抑制治疗（IST）：鉴于患者为儿童且骨髓呈低增生性，首选环孢素A联合抗胸腺细胞球蛋白（ATG）进行强化免疫抑制治疗，这是重型再障的一线方案，旨在恢复造血功能。3. 促造血治疗：可联合使用雄激素（如司坦唑醇）或促血小板生成素受体激动剂（如艾曲波帕）以辅助提升血细胞计数。4. 个性化调整：需密切监测肝肾功能及药物浓度，根据年龄调整剂量；若对免疫抑制剂无反应或病情进展，需评估异基因造血干细胞移植的可行性。5. 安全性监测：治疗期间需每日监测血常规，警惕感染加重、出血倾向及药物副作用（如牙龈增生、高血压等），出现高热或严重出血需立即急诊处理。\", \"reasoning\": \"患者表现为全血细胞减少（WBC 2.4×10^9/L, Hgb 82g/L, PLT 38×10^9/L），伴有乏力、瘀斑、牙龈出血及反复低热等骨髓衰竭症状。外周血涂片未见原始细胞，排除了急性白血病。骨髓穿刺显示骨髓细胞密度显著降低（15%）、三系造血显著减少及巨核细胞减少，符合再生障碍性贫血的典型病理特征。结合病史中无脾大、无淋巴结肿大，且排除其他血液系统恶性肿瘤，故诊断为再生障碍性贫血。治疗方案需兼顾纠正贫血出血与支持免疫重建。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_04352",
+    "mode": "train",
+    "memory_notes": [
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L).",
+      "Laboratory results for Patient_00638 showed pancytopenia: WBC 2.6 x 10^9/L, Hgb 98 g/L, PLT 52 x 10^9/L; peripheral smear revealed large platelets and thrombocytopenia; bone marrow was hypercellular (80%) with normal megakaryocytes and no fibrosis or malignant infiltration.",
+      "Patient_00634's bone marrow examination showed no abnormal infiltration, normal granulocytic and erythrocytic maturation, mild reticular fibrosis, 2% blasts, significantly hyperplastic megakaryocytes with enlargement and clustering, and increased cellularity (80%).",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_06243's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 98 g/L (anemia), and PLT 42 x 10^9/L (thrombocytopenia).",
+      "Patient_09977's complete blood count showed pancytopenia: WBC 2.6 x 10^9/L, Hemoglobin 92 g/L, and Platelets 58 x 10^9/L.",
+      "Patient_08888's complete blood count showed pancytopenia: WBC 2.4 × 10^9/L (leukopenia), Hgb 82 g/L (anemia), and PLT 38 × 10^9/L (thrombocytopenia).",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_09548's complete blood count showed leukocytosis (WBC: 28.4 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 22 x 10^9/L).",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "Patient_03135's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 34 x 10^9/L).",
+      "Patient_05345's complete blood count showed leukocytosis (WBC: 42.8 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 24 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_06270's Complete Blood Count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 92 g/L), and thrombocytopenia (PLT: 68 x 10^9/L).",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您有什么不适症状？比如发热、乏力、出血倾向或骨痛等？"
+      },
+      {
+        "from": "patient",
+        "text": "她最近特别容易累，稍微动一下就喊困。身上经常有青一块紫一块的瘀伤，刷牙时牙龈还会出血。以前感冒好得快，现在反复发烧还总不好。脸色看起来也白白的，不像以前那么活泼了。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问患者除了乏力、瘀伤和牙龈出血外，是否有发热（特别是午后或夜间）、盗汗、体重下降、骨痛或关节痛的情况？另外，有没有发现淋巴结肿大或腹部胀满感？"
+      },
+      {
+        "from": "patient",
+        "text": "她最近确实反复发烧，但都是低烧，没有明显的午后或夜间高热。也没有盗汗、体重明显下降或骨痛关节痛。没发现淋巴结肿大，肚子也不胀。就是特别容易累，脸色也白了。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：2.4 x10^9/L［参考值：5.0-15.5］",
+          "血红蛋白": "Hgb：82 g/L［参考值：110-155］",
+          "血小板计数": "PLT：38 x10^9/L［参考值：150-450］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "可见反应性淋巴细胞。",
+          "异型细胞或原始细胞": "未见原始细胞。",
+          "白细胞分类计数": "淋巴细胞比例约60%，中性粒细胞比例约35%。［参考值：约自出生后 2 周至 4-6 岁，存在生理性淋巴细胞优势（淋巴细胞 45-65%，中性粒细胞 25-45%）；较大儿童逐渐转为成人以中性粒细胞为主的模式。］",
+          "白细胞形态": "形态正常。",
+          "红细胞形态": "呈正细胞性、正色素性，无明显异形红细胞增多。",
+          "血小板形态与分布": "大小和形态正常。",
+          "血小板数量": "显著减少（约38,000/μL）。［参考值：数量充足（150,000-450,000/μL）。］",
+          "血小板聚集": "散在分布，无异常聚集现象。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板数量"
+        ]
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "骨髓细胞密度": "15%［参考值：60-95%］",
+          "骨髓三系造血": "显著减少",
+          "骨髓巨核细胞": "减少"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "骨髓细胞密度",
+          "骨髓三系造血",
+          "骨髓巨核细胞"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您有什么不适症状？比如发热、乏力、出血倾向或骨痛等？",
+        "reason": "当前没有患者主诉和病史信息，也没有任何检查结果，无法进行诊断，需要先通过问诊收集患者的临床症状和既往史。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问患者除了乏力、瘀伤和牙龈出血外，是否有发热（特别是午后或夜间）、盗汗、体重下降、骨痛或关节痛的情况？另外，有没有发现淋巴结肿大或腹部胀满感？",
+        "reason": "患者症状提示可能存在血液系统疾病（如白血病），但病史中缺乏关于发热规律、盗汗、体重变化、骨痛及淋巴结/肝脾肿大等关键鉴别诊断信息，需进一步问诊以完善病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为乏力、面色苍白、瘀伤及牙龈出血，高度提示血液系统疾病（如贫血或白血病），目前缺乏血常规等关键实验室检查结果以明确诊断，需优先完善检查。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片未见原始细胞，但存在反应性淋巴细胞。为了明确病因，排除再生障碍性贫血、骨髓增生异常综合征或白血病等血液系统疾病，急需进行骨髓穿刺检查以评估骨髓造血功能及细胞形态。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），骨髓穿刺显示骨髓增生减低，三系造血显著减少，巨核细胞减少，结合外周血涂片未见原始细胞及临床表现（乏力、出血倾向、反复发热），已具备再生障碍性贫血的关键诊断依据，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "reason": "患者表现为乏力、面色苍白（提示贫血）、易瘀伤及牙龈出血（提示血小板减少或凝血异常），且伴有反复低热。这些症状高度提示血液系统疾病（如白血病、再生障碍性贫血等）。全血细胞计数（CBC）是评估贫血、感染和血小板减少的首选筛查检查；外周血涂片可进一步观察血细胞形态，发现原始细胞或异常细胞，对血液病诊断至关重要。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有乏力、瘀斑、牙龈出血及反复低热等贫血和出血症状。虽然外周血涂片未见原始细胞，但鉴于血常规异常明显且存在不明原因的全血细胞减少，需进一步行骨髓穿刺和活检以明确病因，排除再生障碍性贫血、白血病或其他血液系统疾病。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "急性淋巴细胞白血病",
+      "treatment_plan": "1. 一般治疗与支持：立即启动保护性隔离，预防感染；严格监测体温及出血情况。针对贫血（Hgb 82g/L）和血小板减少（PLT 38×10^9/L），根据症状给予红细胞输注和血小板输注，避免不必要的侵入性操作以防出血。2. 免疫抑制治疗（IST）：鉴于患者为儿童且骨髓呈低增生性，首选环孢素A联合抗胸腺细胞球蛋白（ATG）进行强化免疫抑制治疗，这是重型再障的一线方案，旨在恢复造血功能。3. 促造血治疗：可联合使用雄激素（如司坦唑醇）或促血小板生成素受体激动剂（如艾曲波帕）以辅助提升血细胞计数。4. 个性化调整：需密切监测肝肾功能及药物浓度，根据年龄调整剂量；若对免疫抑制剂无反应或病情进展，需评估异基因造血干细胞移植的可行性。5. 安全性监测：治疗期间需每日监测血常规，警惕感染加重、出血倾向及药物副作用（如牙龈增生、高血压等），出现高热或严重出血需立即急诊处理。",
+      "reasoning": "患者表现为全血细胞减少（WBC 2.4×10^9/L, Hgb 82g/L, PLT 38×10^9/L），伴有乏力、瘀斑、牙龈出血及反复低热等骨髓衰竭症状。外周血涂片未见原始细胞，排除了急性白血病。骨髓穿刺显示骨髓细胞密度显著降低（15%）、三系造血显著减少及巨核细胞减少，符合再生障碍性贫血的典型病理特征。结合病史中无脾大、无淋巴结肿大，且排除其他血液系统恶性肿瘤，故诊断为再生障碍性贫血。治疗方案需兼顾纠正贫血出血与支持免疫重建。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_04352",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.28,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.2,
+      "treatmentPersonalization": 0.4,
+      "diagnosisDetail": {
+        "submitted": [
+          "急性淋巴细胞白血病"
+        ],
+        "expected": [
+          "范可尼贫血"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "骨髓穿刺和活检（BMAB）",
+          "染色体断裂研究",
+          "基因检测"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.5,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 一般治疗与支持：立即启动保护性隔离，预防感染；严格监测体温及出血情况。针对贫血（Hgb 82g/L）和血小板减少（PLT 38×10^9/L），根据症状给予红细胞输注和血小板输注，避免不必要的侵入性操作以防出血。2. 免疫抑制治疗（IST）：鉴于患者为儿童且骨髓呈低增生性，首选环孢素A联合抗胸腺细胞球蛋白（ATG）进行强化免疫抑制治疗，这是重型再障的一线方案，旨在恢复造血功能。3. 促造血治疗：可联合使用雄激素（如司坦唑醇）或促血小板生成素受体激动剂（如艾曲波帕）以辅助提升血细胞计数。4. 个性化调整：需密切监测肝肾功能及药物浓度，根据年龄调整剂量；若对免疫抑制剂无反应或病情进展，需评估异基因造血干细胞移植的可行性。5. 安全性监测：治疗期间需每日监测血常规，警惕感染加重、出血倾向及药物副作用（如牙龈增生、高血压等），出现高热或严重出血需立即急诊处理。",
+        "overallScore": 0.28,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.2,
+        "personalization": 0.4,
+        "reasoning": "方案误诊为再障，推荐免疫抑制治疗与范可尼贫血标准不符且延误移植时机。",
+        "reference": "启动采用减低强度预处理方案的 HLA 匹配同胞或无关供者造血干细胞移植（HSCT），以避免放疗并尽量减少化疗毒性。针对重度贫血和血小板减少，按需给予浓缩红细胞和血小板输注等支持治疗；鉴于 CBC 分类已证实中性粒细胞减少（WBC 2.4 x10^9/L，ANC 约 0.4 x10^9/L），给予预防性抗生素以防感染。实施保护性措施以尽量降低创伤风险，并教育照护者识别需要立即就医的出血或发热征象。安排血液科定期随访，以监测骨髓功能并在移植后筛查实体肿瘤。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "范可尼贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "骨髓穿刺和活检（BMAB）",
+          "染色体断裂研究",
+          "基因检测"
+        ],
+        "contraindications": {
+          "drugs": [
+            "阿司匹林",
+            "可待因",
+            "曲马多"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "启动采用减低强度预处理方案的 HLA 匹配同胞或无关供者造血干细胞移植（HSCT），以避免放疗并尽量减少化疗毒性。针对重度贫血和血小板减少，按需给予浓缩红细胞和血小板输注等支持治疗；鉴于 CBC 分类已证实中性粒细胞减少（WBC 2.4 x10^9/L，ANC 约 0.4 x10^9/L），给予预防性抗生素以防感染。实施保护性措施以尽量降低创伤风险，并教育照护者识别需要立即就医的出血或发热征象。安排血液科定期随访，以监测骨髓功能并在移植后筛查实体肿瘤。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "儿童患者，表现为进行性乏力、面色苍白、易瘀伤及牙龈出血，伴反复低热；无骨痛、淋巴结肿大或明显消瘦。",
+        "diagnosis_reflection": "误诊为急性淋巴细胞白血病，未考虑到范可尼贫血（FA）。需警惕：儿童全血细胞减少伴皮肤色素异常或先天畸形线索时，应优先排查遗传性骨髓衰竭综合征，而非仅按白血病处理。",
+        "examination_reflection": "漏开染色体断裂研究（如丝裂霉素C诱导试验）和基因检测，这两项是确诊范可尼贫血的关键。已做CBC和骨髓穿刺正确，但不足以区分再障与FA。",
+        "treatment_reflection": "治疗方案基于再障诊断，错误推荐免疫抑制治疗（IST），延误了范可尼贫血首选的造血干细胞移植时机。支持治疗（输血、防感染）方向正确，但根本策略偏离。",
+        "future_strategy": "面对儿童不明原因全血细胞减少，若怀疑遗传性骨髓衰竭（如FA），必须尽早安排染色体断裂试验和基因检测；避免在未排除FA前启动IST，以防掩盖病情并错失最佳移植窗口。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T14:02:31.368254+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_04352",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "急性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. 一般治疗与支持：立即启动保护性隔离，预防感染；严格监测体温及出血情况。针对贫血（Hgb 82g/L）和血小板减少（PLT 38×10^9/L），根据症状给予红细胞输注和血小板输注，避免不必要的侵入性操作以防出血。2. 免疫抑制治疗（IST）：鉴于患者为儿童且骨髓呈低增生性，首选环孢素A联合抗胸腺细胞球蛋白（ATG）进行强化免疫抑制治疗，这是重型再障的一线方案，旨在恢复造血功能。3. 促造血治疗：可联合使用雄激素（如司坦唑醇）或促血小板生成素受体激动剂（如艾曲波帕）以辅助提升血细胞计数。4. 个性化调整：需密切监测肝肾功能及药物浓度，根据年龄调整剂量；若对免疫抑制剂无反应或病情进展，需评估异基因造血干细胞移植的可行性。5. 安全性监测：治疗期间需每日监测血常规，警惕感染加重、出血倾向及药物副作用（如牙龈增生、高血压等），出现高热或严重出血需立即急诊处理。",
+    "reasoning": "患者表现为全血细胞减少（WBC 2.4×10^9/L, Hgb 82g/L, PLT 38×10^9/L），伴有乏力、瘀斑、牙龈出血及反复低热等骨髓衰竭症状。外周血涂片未见原始细胞，排除了急性白血病。骨髓穿刺显示骨髓细胞密度显著降低（15%）、三系造血显著减少及巨核细胞减少，符合再生障碍性贫血的典型病理特征。结合病史中无脾大、无淋巴结肿大，且排除其他血液系统恶性肿瘤，故诊断为再生障碍性贫血。治疗方案需兼顾纠正贫血出血与支持免疫重建。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "骨髓穿刺和活检（BMAB）"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_04352",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.28,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.2,
+    "treatmentPersonalization": 0.4,
+    "diagnosisDetail": {
+      "submitted": [
+        "急性淋巴细胞白血病"
+      ],
+      "expected": [
+        "范可尼贫血"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "骨髓穿刺和活检（BMAB）",
+        "染色体断裂研究",
+        "基因检测"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.5,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 一般治疗与支持：立即启动保护性隔离，预防感染；严格监测体温及出血情况。针对贫血（Hgb 82g/L）和血小板减少（PLT 38×10^9/L），根据症状给予红细胞输注和血小板输注，避免不必要的侵入性操作以防出血。2. 免疫抑制治疗（IST）：鉴于患者为儿童且骨髓呈低增生性，首选环孢素A联合抗胸腺细胞球蛋白（ATG）进行强化免疫抑制治疗，这是重型再障的一线方案，旨在恢复造血功能。3. 促造血治疗：可联合使用雄激素（如司坦唑醇）或促血小板生成素受体激动剂（如艾曲波帕）以辅助提升血细胞计数。4. 个性化调整：需密切监测肝肾功能及药物浓度，根据年龄调整剂量；若对免疫抑制剂无反应或病情进展，需评估异基因造血干细胞移植的可行性。5. 安全性监测：治疗期间需每日监测血常规，警惕感染加重、出血倾向及药物副作用（如牙龈增生、高血压等），出现高热或严重出血需立即急诊处理。",
+      "overallScore": 0.28,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.2,
+      "personalization": 0.4,
+      "reasoning": "方案误诊为再障，推荐免疫抑制治疗与范可尼贫血标准不符且延误移植时机。",
+      "reference": "启动采用减低强度预处理方案的 HLA 匹配同胞或无关供者造血干细胞移植（HSCT），以避免放疗并尽量减少化疗毒性。针对重度贫血和血小板减少，按需给予浓缩红细胞和血小板输注等支持治疗；鉴于 CBC 分类已证实中性粒细胞减少（WBC 2.4 x10^9/L，ANC 约 0.4 x10^9/L），给予预防性抗生素以防感染。实施保护性措施以尽量降低创伤风险，并教育照护者识别需要立即就医的出血或发热征象。安排血液科定期随访，以监测骨髓功能并在移植后筛查实体肿瘤。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "范可尼贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "骨髓穿刺和活检（BMAB）",
+        "染色体断裂研究",
+        "基因检测"
+      ],
+      "contraindications": {
+        "drugs": [
+          "阿司匹林",
+          "可待因",
+          "曲马多"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "启动采用减低强度预处理方案的 HLA 匹配同胞或无关供者造血干细胞移植（HSCT），以避免放疗并尽量减少化疗毒性。针对重度贫血和血小板减少，按需给予浓缩红细胞和血小板输注等支持治疗；鉴于 CBC 分类已证实中性粒细胞减少（WBC 2.4 x10^9/L，ANC 约 0.4 x10^9/L），给予预防性抗生素以防感染。实施保护性措施以尽量降低创伤风险，并教育照护者识别需要立即就医的出血或发热征象。安排血液科定期随访，以监测骨髓功能并在移植后筛查实体肿瘤。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "儿童患者，表现为进行性乏力、面色苍白、易瘀伤及牙龈出血，伴反复低热；无骨痛、淋巴结肿大或明显消瘦。",
+      "diagnosis_reflection": "误诊为急性淋巴细胞白血病，未考虑到范可尼贫血（FA）。需警惕：儿童全血细胞减少伴皮肤色素异常或先天畸形线索时，应优先排查遗传性骨髓衰竭综合征，而非仅按白血病处理。",
+      "examination_reflection": "漏开染色体断裂研究（如丝裂霉素C诱导试验）和基因检测，这两项是确诊范可尼贫血的关键。已做CBC和骨髓穿刺正确，但不足以区分再障与FA。",
+      "treatment_reflection": "治疗方案基于再障诊断，错误推荐免疫抑制治疗（IST），延误了范可尼贫血首选的造血干细胞移植时机。支持治疗（输血、防感染）方向正确，但根本策略偏离。",
+      "future_strategy": "面对儿童不明原因全血细胞减少，若怀疑遗传性骨髓衰竭（如FA），必须尽早安排染色体断裂试验和基因检测；避免在未排除FA前启动IST，以防掩盖病情并错失最佳移植窗口。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/094.json#/applied_memory"
+  }
+}

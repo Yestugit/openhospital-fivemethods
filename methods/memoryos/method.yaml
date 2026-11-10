@@ -1,0 +1,170 @@
+{
+  "method_id": "memoryos",
+  "name": "MemoryOS",
+  "summary": "Short-, mid-, and long-term conversational memory with profile and knowledge updates.",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "hierarchical"
+    ],
+    "operations": ["index", "add", "search", "episode_end", "flush", "reset", "save", "load"],
+    "integration_slots": [
+      "context"
+    ],
+    "accepted_events": [
+      "message"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true
+  },
+  "version": "1",
+  "paper_url": "https://arxiv.org/abs/2506.06326",
+  "repository_url": "https://github.com/BAI-LAB/MemoryOS",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {
+    "path_parameters": {
+      "storage_path": "directory"
+    },
+    "kind": "local_files",
+    "backend": "memoryos_json_layers_plus_faiss",
+    "database_paths": [
+      "short_term.json",
+      "mid_term.json",
+      "long_term_user.json",
+      "long_term_assistant.json",
+      "mid_term.faiss",
+      "long_term.faiss"
+    ],
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "tracked",
+  "implementation_notes": [
+    "Reference: MemoryOS 587ed7755c7aed179965792830ff1b5ad9a6fa92, memoryos-pypi path.",
+    "Short-term evictions generate topic summaries and use explicit LLM continuity decisions for page links. Each topic selects a session using semantic similarity plus keyword Jaccard overlap.",
+    "FAISS first retrieves persisted session-summary vectors, then scores persisted full-dialogue page vectors. Reads embed only the query, and frozen reads preserve learning state.",
+    "The hottest eligible session triggers separate user-profile and knowledge generations; analyzed pages and heat counters are updated afterward.",
+    "Memory v2 observe pairs real conversational events; learn consumes complete units and skips already written events. Missing message sides remain empty without synthesizing feedback.",
+    "Native add_memory automatically checks the existing heat threshold and consolidates eligible profiles and knowledge. Evolution remains internal; no public evolve operation is exposed.",
+    "Storage and pending dialogues are isolated by the complete configured scope and learning-unit ID. Frozen retrieval does not update visits or run evolution."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "offline"
+        ],
+        "default": "standard"
+      },
+      "short_term_capacity": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 10
+      },
+      "mid_term_capacity": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 2000
+      },
+      "long_term_knowledge_capacity": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 100
+      },
+      "retrieval_queue_capacity": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 7
+      },
+      "mid_term_heat_threshold": {
+        "type": "number",
+        "default": 5.0,
+        "minimum": 0
+      },
+      "mid_term_similarity_threshold": {
+        "type": "number",
+        "default": 0.6
+      },
+      "segment_similarity_threshold": {
+        "type": "number",
+        "default": 0.1
+      },
+      "page_similarity_threshold": {
+        "type": "number",
+        "default": 0.1
+      },
+      "knowledge_threshold": {
+        "type": "number",
+        "default": 0.01
+      },
+      "top_k_sessions": {
+        "type": "integer",
+        "default": 5,
+        "minimum": 1
+      },
+      "top_k_knowledge": {
+        "type": "integer",
+        "default": 20,
+        "minimum": 1
+      },
+      "storage_path": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "additionalProperties": false
+  },
+  "limitations": [
+    "This integrated reimplementation retains the existing MemoryOS hierarchy, summaries, heat and consolidation rules; native get_response prompt/model execution remains with the external Agent.",
+    "retrieval_queue_capacity limits historical pages. An explicit retrieve(top_k=...) bounds all returned items and their formatted context; omitted top_k preserves the native multi-layer output.",
+    "User/agent/session scopes are isolated stores; this integration does not share assistant knowledge across independently configured scopes."
+  ],
+  "tags": [
+    "long-term",
+    "hierarchical",
+    "personalization"
+  ],
+  "requirements": {
+    "python": [
+      "faiss-cpu"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "offline_mode": "Explicit simplified smoke tests; results do not represent the standard algorithm."
+  },
+  "route_hints": [
+    "short-mid-long memory hierarchy",
+    "long-running personalized dialogue"
+  ],
+  "interface_version": 3,
+  "commands": {},
+  "input_schemas": {
+    "search": {
+      "type": "object",
+      "properties": {
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,3 @@
+methods/**/_vendor/** text eol=lf
+test/memrl/*.patch text eol=lf
+integrations/openhospital_runtime/** text=auto eol=lf

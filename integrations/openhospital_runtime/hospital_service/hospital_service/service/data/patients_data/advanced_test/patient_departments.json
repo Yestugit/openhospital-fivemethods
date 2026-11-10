@@ -1,0 +1,3362 @@
+{
+  "Patient-Comorbid-00010": [
+    "普外科",
+    "感染科"
+  ],
+  "Patient-Comorbid-00011": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00019": [
+    "皮肤科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00021": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00029": [
+    "感染科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00049": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00065": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00067": [
+    "心内科",
+    "感染科"
+  ],
+  "Patient-Comorbid-00080": [
+    "眼科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00085": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00122": [
+    "消化内科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00130": [
+    "骨科"
+  ],
+  "Patient-Comorbid-00142": [
+    "心内科",
+    "儿科"
+  ],
+  "Patient-Comorbid-00172": [
+    "心内科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-00176": [
+    "内分泌科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00177": [
+    "皮肤科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00183": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00191": [
+    "消化内科"
+  ],
+  "Patient-Comorbid-00202": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00203": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00214": [
+    "眼科",
+    "儿科"
+  ],
+  "Patient-Comorbid-00224": [
+    "内分泌科",
+    "骨科"
+  ],
+  "Patient-Comorbid-00231": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00234": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00241": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00246": [
+    "免疫科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00248": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00254": [
+    "感染科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00258": [
+    "骨科"
+  ],
+  "Patient-Comorbid-00264": [
+    "皮肤科"
+  ],
+  "Patient-Comorbid-00277": [
+    "消化内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00292": [
+    "普外科",
+    "儿科"
+  ],
+  "Patient-Comorbid-00293": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00299": [
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-00301": [
+    "内分泌科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00306": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00307": [
+    "内分泌科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00317": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00328": [
+    "口腔科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00339": [
+    "皮肤科"
+  ],
+  "Patient-Comorbid-00342": [
+    "内分泌科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00357": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00358": [
+    "皮肤科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-00361": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00369": [
+    "感染科"
+  ],
+  "Patient-Comorbid-00383": [
+    "消化内科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00386": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00390": [
+    "神经内科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00426": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00435": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00441": [
+    "皮肤科",
+    "感染科"
+  ],
+  "Patient-Comorbid-00446": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00455": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00504": [
+    "消化内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00519": [
+    "心内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00536": [
+    "免疫科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00541": [
+    "免疫科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00554": [
+    "皮肤科"
+  ],
+  "Patient-Comorbid-00565": [
+    "肿瘤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00571": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00580": [
+    "免疫科"
+  ],
+  "Patient-Comorbid-00586": [
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00590": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00606": [
+    "内分泌科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-00610": [
+    "皮肤科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00612": [
+    "内分泌科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00616": [
+    "消化内科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-00621": [
+    "内分泌科",
+    "骨科"
+  ],
+  "Patient-Comorbid-00630": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00633": [
+    "免疫科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00657": [
+    "肾内科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-00658": [
+    "普外科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-00675": [
+    "心内科",
+    "感染科"
+  ],
+  "Patient-Comorbid-00680": [
+    "内分泌科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-00688": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00694": [
+    "内分泌科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00696": [
+    "妇产科",
+    "骨科"
+  ],
+  "Patient-Comorbid-00698": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00706": [
+    "血液科"
+  ],
+  "Patient-Comorbid-00716": [
+    "口腔科"
+  ],
+  "Patient-Comorbid-00718": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00719": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00729": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00736": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00744": [
+    "内分泌科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-00760": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-00764": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00765": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00772": [
+    "心内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00778": [
+    "血液科"
+  ],
+  "Patient-Comorbid-00779": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00786": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00799": [
+    "皮肤科",
+    "普外科"
+  ],
+  "Patient-Comorbid-00804": [
+    "内分泌科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-00812": [
+    "免疫科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-00820": [
+    "消化内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00840": [
+    "肿瘤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00842": [
+    "皮肤科",
+    "普外科"
+  ],
+  "Patient-Comorbid-00843": [
+    "血液科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00853": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00854": [
+    "消化内科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00863": [
+    "肾内科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00871": [
+    "心内科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00872": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00880": [
+    "消化内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00893": [
+    "骨科",
+    "儿科"
+  ],
+  "Patient-Comorbid-00905": [
+    "骨科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00906": [
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00909": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00910": [
+    "眼科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00920": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00924": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00925": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00929": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00941": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00945": [
+    "心内科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-00951": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00953": [
+    "免疫科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00960": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00963": [
+    "骨科",
+    "儿科"
+  ],
+  "Patient-Comorbid-00968": [
+    "消化内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00973": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00991": [
+    "内分泌科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00992": [
+    "皮肤科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00005": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-00013": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00018": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00026": [
+    "皮肤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00042": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00058": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00056": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00074": [
+    "神经内科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00083": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00086": [
+    "心内科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00089": [
+    "心内科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00100": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00101": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00103": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00105": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00111": [
+    "皮肤科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-00124": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00136": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00166": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-00179": [
+    "消化内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00185": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00188": [
+    "神经内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00186": [
+    "心内科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00193": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00209": [
+    "免疫科"
+  ],
+  "Patient-Comorbid-00218": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00228": [
+    "皮肤科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00242": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00245": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00244": [
+    "皮肤科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00249": [
+    "心内科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-00253": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00261": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00263": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00279": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00291": [
+    "皮肤科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00302": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00305": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00308": [
+    "内分泌科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-00316": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00329": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00333": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00345": [
+    "皮肤科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00367": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00368": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-00371": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00384": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00388": [
+    "皮肤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00401": [
+    "神经内科"
+  ],
+  "Patient-Comorbid-00404": [
+    "皮肤科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00423": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00437": [
+    "内分泌科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-00442": [
+    "血液科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00457": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00472": [
+    "皮肤科",
+    "普外科"
+  ],
+  "Patient-Comorbid-00469": [
+    "内分泌科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00481": [
+    "心内科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-00493": [
+    "皮肤科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00496": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00497": [
+    "神经内科"
+  ],
+  "Patient-Comorbid-00499": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00508": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00514": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00525": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00526": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00529": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00528": [
+    "心内科",
+    "皮肤科"
+  ],
+  "Patient-Comorbid-00534": [
+    "血液科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-00549": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00537": [
+    "肾内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00550": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00558": [
+    "皮肤科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00563": [
+    "内分泌科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00576": [
+    "口腔科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00582": [
+    "皮肤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00584": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00588": [
+    "内分泌科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00618": [
+    "心内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00619": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00631": [
+    "心内科",
+    "皮肤科"
+  ],
+  "Patient-Comorbid-00640": [
+    "消化内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-00667": [
+    "心内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00676": [
+    "肾内科"
+  ],
+  "Patient-Comorbid-00681": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00695": [
+    "神经内科"
+  ],
+  "Patient-Comorbid-00692": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00701": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00712": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00726": [
+    "血液科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00732": [
+    "神经内科",
+    "儿科"
+  ],
+  "Patient-Comorbid-00733": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00754": [
+    "神经内科"
+  ],
+  "Patient-Comorbid-00757": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00783": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00771": [
+    "神经内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00787": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00792": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00822": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00827": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00838": [
+    "血液科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-00831": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-00848": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00852": [
+    "免疫科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00860": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00861": [
+    "口腔科",
+    "皮肤科"
+  ],
+  "Patient-Comorbid-00862": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00864": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00888": [
+    "心内科"
+  ],
+  "Patient-Comorbid-00901": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00904": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00912": [
+    "血液科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-00908": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00922": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00932": [
+    "免疫科",
+    "眼科"
+  ],
+  "Patient-Comorbid-00931": [
+    "心内科",
+    "儿科"
+  ],
+  "Patient-Comorbid-00934": [
+    "血液科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00936": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-00950": [
+    "消化内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00948": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00961": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-00967": [
+    "眼科"
+  ],
+  "Patient-Comorbid-00974": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00995": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-00997": [
+    "内分泌科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-00989": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01003": [
+    "感染科"
+  ],
+  "Patient-Comorbid-01017": [
+    "内分泌科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01024": [
+    "消化内科"
+  ],
+  "Patient-Comorbid-01034": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01044": [
+    "血液科"
+  ],
+  "Patient-Comorbid-01052": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01059": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01065": [
+    "感染科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01071": [
+    "内分泌科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01087": [
+    "内分泌科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01105": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01123": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01134": [
+    "感染科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01144": [
+    "感染科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-01145": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01147": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01151": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01158": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01187": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01189": [
+    "心内科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-01193": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01195": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01201": [
+    "肿瘤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01208": [
+    "内分泌科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01211": [
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01213": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01219": [
+    "消化内科",
+    "普外科"
+  ],
+  "Patient-Comorbid-01227": [
+    "眼科",
+    "儿科"
+  ],
+  "Patient-Comorbid-01230": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01238": [
+    "免疫科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01254": [
+    "消化内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01267": [
+    "肿瘤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01269": [
+    "消化内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01274": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01283": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01285": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01291": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01298": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01303": [
+    "皮肤科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-01317": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01334": [
+    "皮肤科",
+    "儿科"
+  ],
+  "Patient-Comorbid-01339": [
+    "内分泌科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-01354": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01356": [
+    "妇产科"
+  ],
+  "Patient-Comorbid-01377": [
+    "消化内科",
+    "感染科"
+  ],
+  "Patient-Comorbid-01380": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01383": [
+    "普外科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-01384": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01407": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01413": [
+    "心内科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01416": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01425": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01430": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01445": [
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01449": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01450": [
+    "内分泌科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01462": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01463": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01469": [
+    "血液科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01472": [
+    "消化内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01476": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01483": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01488": [
+    "心内科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01495": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01501": [
+    "心内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01505": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01510": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01515": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01517": [
+    "感染科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01527": [
+    "妇产科"
+  ],
+  "Patient-Comorbid-01528": [
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01532": [
+    "神经内科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01542": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01544": [
+    "神经内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01553": [
+    "消化内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01563": [
+    "感染科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01567": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01575": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01588": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01590": [
+    "内分泌科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-01611": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01631": [
+    "妇产科"
+  ],
+  "Patient-Comorbid-01632": [
+    "心内科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-01639": [
+    "内分泌科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01655": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01656": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01660": [
+    "心内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01670": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01682": [
+    "骨科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01687": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01689": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01696": [
+    "内分泌科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01706": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01726": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01736": [
+    "肿瘤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01738": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01750": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01763": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01766": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01790": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01810": [
+    "感染科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01818": [
+    "内分泌科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01822": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01834": [
+    "感染科"
+  ],
+  "Patient-Comorbid-01839": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01840": [
+    "免疫科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01843": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01846": [
+    "普外科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01855": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01875": [
+    "骨科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-01882": [
+    "骨科",
+    "儿科"
+  ],
+  "Patient-Comorbid-01894": [
+    "血液科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-01902": [
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-01911": [
+    "内分泌科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01913": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01922": [
+    "感染科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01935": [
+    "消化内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01938": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01940": [
+    "消化内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01958": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01960": [
+    "心内科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01961": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01969": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01975": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01978": [
+    "皮肤科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01984": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01995": [
+    "肿瘤科",
+    "儿科"
+  ],
+  "Patient-Comorbid-01997": [
+    "内分泌科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01999": [
+    "皮肤科"
+  ],
+  "Patient-Comorbid-02000": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01004": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01009": [
+    "血液科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01020": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01028": [
+    "神经内科"
+  ],
+  "Patient-Comorbid-01035": [
+    "内分泌科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01045": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01042": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01047": [
+    "消化内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01048": [
+    "感染科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01074": [
+    "免疫科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01072": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01075": [
+    "皮肤科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01082": [
+    "免疫科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01088": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01092": [
+    "神经内科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01096": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01111": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01112": [
+    "心内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01113": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01115": [
+    "心内科",
+    "儿科"
+  ],
+  "Patient-Comorbid-01108": [
+    "内分泌科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01125": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01129": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01135": [
+    "血液科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-01156": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01163": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01167": [
+    "心内科",
+    "感染科"
+  ],
+  "Patient-Comorbid-01164": [
+    "神经内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01174": [
+    "心内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01173": [
+    "普外科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01176": [
+    "口腔科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01178": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01197": [
+    "心内科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01199": [
+    "血液科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-01216": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01210": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01214": [
+    "皮肤科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01218": [
+    "皮肤科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01223": [
+    "心内科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01229": [
+    "口腔科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01231": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01249": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01250": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01252": [
+    "神经内科"
+  ],
+  "Patient-Comorbid-01253": [
+    "口腔科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01260": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01261": [
+    "神经内科"
+  ],
+  "Patient-Comorbid-01271": [
+    "心内科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01273": [
+    "内分泌科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01280": [
+    "骨科"
+  ],
+  "Patient-Comorbid-01294": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01299": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01311": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01316": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01315": [
+    "心内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01323": [
+    "内分泌科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01325": [
+    "心内科",
+    "感染科"
+  ],
+  "Patient-Comorbid-01327": [
+    "免疫科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01328": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01341": [
+    "内分泌科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01351": [
+    "心内科",
+    "感染科"
+  ],
+  "Patient-Comorbid-01358": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01362": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01372": [
+    "血液科",
+    "泌尿外科"
+  ],
+  "Patient-Comorbid-01379": [
+    "骨科"
+  ],
+  "Patient-Comorbid-01398": [
+    "内分泌科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01405": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01417": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01421": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01428": [
+    "皮肤科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01431": [
+    "血液科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-01448": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01467": [
+    "血液科",
+    "免疫科"
+  ],
+  "Patient-Comorbid-01481": [
+    "心内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01485": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01499": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01504": [
+    "血液科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01509": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01508": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01511": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01516": [
+    "心内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01513": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01520": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01524": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01530": [
+    "口腔科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01541": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01539": [
+    "皮肤科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01551": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01569": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01566": [
+    "消化内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01572": [
+    "内分泌科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01578": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01571": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01599": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01594": [
+    "神经内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01621": [
+    "皮肤科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01613": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01614": [
+    "口腔科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01623": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01624": [
+    "皮肤科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01629": [
+    "血液科",
+    "感染科"
+  ],
+  "Patient-Comorbid-01635": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01634": [
+    "普外科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01642": [
+    "肾内科",
+    "神经内科"
+  ],
+  "Patient-Comorbid-01658": [
+    "心内科",
+    "肾内科"
+  ],
+  "Patient-Comorbid-01672": [
+    "心内科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01674": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01673": [
+    "皮肤科",
+    "感染科"
+  ],
+  "Patient-Comorbid-01685": [
+    "血液科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01681": [
+    "皮肤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01686": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01693": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01695": [
+    "皮肤科"
+  ],
+  "Patient-Comorbid-01714": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01725": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01730": [
+    "皮肤科",
+    "眼科"
+  ],
+  "Patient-Comorbid-01735": [
+    "皮肤科",
+    "血液科"
+  ],
+  "Patient-Comorbid-01745": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01747": [
+    "皮肤科"
+  ],
+  "Patient-Comorbid-01751": [
+    "耳鼻咽喉科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01779": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01781": [
+    "血液科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01793": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01797": [
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01805": [
+    "口腔科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01806": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01808": [
+    "皮肤科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-01816": [
+    "儿科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01826": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01833": [
+    "肿瘤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01837": [
+    "心内科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01848": [
+    "眼科"
+  ],
+  "Patient-Comorbid-01858": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01860": [
+    "皮肤科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01867": [
+    "心内科",
+    "内分泌科"
+  ],
+  "Patient-Comorbid-01874": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01883": [
+    "皮肤科",
+    "妇产科"
+  ],
+  "Patient-Comorbid-01885": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01891": [
+    "儿科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01905": [
+    "肿瘤科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01919": [
+    "血液科",
+    "耳鼻咽喉科"
+  ],
+  "Patient-Comorbid-01952": [
+    "免疫科",
+    "骨科"
+  ],
+  "Patient-Comorbid-01949": [
+    "心内科"
+  ],
+  "Patient-Comorbid-01943": [
+    "皮肤科",
+    "消化内科"
+  ],
+  "Patient-Comorbid-01959": [
+    "肾内科"
+  ],
+  "Patient-Comorbid-01970": [
+    "皮肤科",
+    "肿瘤科"
+  ],
+  "Patient-Comorbid-01979": [
+    "免疫科",
+    "呼吸内科"
+  ],
+  "Patient-Comorbid-01985": [
+    "心内科",
+    "儿科"
+  ],
+  "Patient-Comorbid-01993": [
+    "心内科"
+  ],
+  "Patient-00001": [
+    "心内科"
+  ],
+  "Patient-00015": [
+    "皮肤科"
+  ],
+  "Patient-00032": [
+    "骨科"
+  ],
+  "Patient-00059": [
+    "感染科"
+  ],
+  "Patient-00084": [
+    "心内科"
+  ],
+  "Patient-00098": [
+    "心内科"
+  ],
+  "Patient-00117": [
+    "眼科"
+  ],
+  "Patient-00132": [
+    "骨科"
+  ],
+  "Patient-00145": [
+    "骨科"
+  ],
+  "Patient-00170": [
+    "感染科"
+  ],
+  "Patient-00181": [
+    "呼吸内科"
+  ],
+  "Patient-00251": [
+    "眼科"
+  ],
+  "Patient-00304": [
+    "内分泌科"
+  ],
+  "Patient-00362": [
+    "妇产科"
+  ],
+  "Patient-00398": [
+    "感染科"
+  ],
+  "Patient-00410": [
+    "神经内科"
+  ],
+  "Patient-00432": [
+    "儿科"
+  ],
+  "Patient-00522": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-00510": [
+    "内分泌科"
+  ],
+  "Patient-00527": [
+    "呼吸内科"
+  ],
+  "Patient-00625": [
+    "神经内科"
+  ],
+  "Patient-00643": [
+    "妇产科"
+  ],
+  "Patient-00651": [
+    "心内科"
+  ],
+  "Patient-00649": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-00654": [
+    "骨科"
+  ],
+  "Patient-00652": [
+    "呼吸内科"
+  ],
+  "Patient-00653": [
+    "皮肤科"
+  ],
+  "Patient-00670": [
+    "神经内科"
+  ],
+  "Patient-00672": [
+    "妇产科"
+  ],
+  "Patient-00690": [
+    "骨科"
+  ],
+  "Patient-00702": [
+    "消化内科"
+  ],
+  "Patient-00714": [
+    "皮肤科"
+  ],
+  "Patient-00723": [
+    "血液科"
+  ],
+  "Patient-00720": [
+    "骨科"
+  ],
+  "Patient-00724": [
+    "眼科"
+  ],
+  "Patient-00821": [
+    "儿科"
+  ],
+  "Patient-00836": [
+    "肿瘤科"
+  ],
+  "Patient-00913": [
+    "儿科"
+  ],
+  "Patient-00935": [
+    "泌尿外科"
+  ],
+  "Patient-00962": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-01000": [
+    "内分泌科"
+  ],
+  "Patient-00685": [
+    "皮肤科"
+  ],
+  "Patient-01018": [
+    "呼吸内科"
+  ],
+  "Patient-01002": [
+    "妇产科"
+  ],
+  "Patient-01027": [
+    "神经内科"
+  ],
+  "Patient-01038": [
+    "骨科"
+  ],
+  "Patient-01037": [
+    "普外科"
+  ],
+  "Patient-01070": [
+    "呼吸内科"
+  ],
+  "Patient-01076": [
+    "消化内科"
+  ],
+  "Patient-01103": [
+    "妇产科"
+  ],
+  "Patient-01097": [
+    "免疫科"
+  ],
+  "Patient-01152": [
+    "口腔科"
+  ],
+  "Patient-01172": [
+    "皮肤科"
+  ],
+  "Patient-01357": [
+    "皮肤科"
+  ],
+  "Patient-01392": [
+    "口腔科"
+  ],
+  "Patient-01411": [
+    "皮肤科"
+  ],
+  "Patient-01429": [
+    "血液科"
+  ],
+  "Patient-01441": [
+    "感染科"
+  ],
+  "Patient-01455": [
+    "神经内科"
+  ],
+  "Patient-01512": [
+    "神经内科"
+  ],
+  "Patient-01523": [
+    "妇产科"
+  ],
+  "Patient-01533": [
+    "儿科"
+  ],
+  "Patient-01573": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-01609": [
+    "心内科"
+  ],
+  "Patient-01617": [
+    "泌尿外科"
+  ],
+  "Patient-01626": [
+    "眼科"
+  ],
+  "Patient-01622": [
+    "神经内科"
+  ],
+  "Patient-01659": [
+    "消化内科"
+  ],
+  "Patient-01650": [
+    "神经内科"
+  ],
+  "Patient-01717": [
+    "消化内科"
+  ],
+  "Patient-01719": [
+    "眼科"
+  ],
+  "Patient-01748": [
+    "呼吸内科"
+  ],
+  "Patient-01762": [
+    "肿瘤科"
+  ],
+  "Patient-01765": [
+    "泌尿外科"
+  ],
+  "Patient-01850": [
+    "儿科"
+  ],
+  "Patient-01873": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-01937": [
+    "妇产科"
+  ],
+  "Patient-01936": [
+    "心内科"
+  ],
+  "Patient-01990": [
+    "内分泌科"
+  ],
+  "Patient-01870": [
+    "妇产科"
+  ],
+  "Patient-02085": [
+    "眼科"
+  ],
+  "Patient-02114": [
+    "骨科"
+  ],
+  "Patient-02122": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-02133": [
+    "免疫科"
+  ],
+  "Patient-02173": [
+    "骨科"
+  ],
+  "Patient-02194": [
+    "免疫科"
+  ],
+  "Patient-02221": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-02280": [
+    "皮肤科"
+  ],
+  "Patient-02286": [
+    "神经内科"
+  ],
+  "Patient-02308": [
+    "心内科"
+  ],
+  "Patient-02351": [
+    "眼科"
+  ],
+  "Patient-02343": [
+    "免疫科"
+  ],
+  "Patient-02357": [
+    "内分泌科"
+  ],
+  "Patient-02369": [
+    "泌尿外科"
+  ],
+  "Patient-02383": [
+    "皮肤科"
+  ],
+  "Patient-02371": [
+    "皮肤科"
+  ],
+  "Patient-02395": [
+    "骨科"
+  ],
+  "Patient-02397": [
+    "免疫科"
+  ],
+  "Patient-02405": [
+    "皮肤科"
+  ],
+  "Patient-02408": [
+    "骨科"
+  ],
+  "Patient-02447": [
+    "免疫科"
+  ],
+  "Patient-02463": [
+    "泌尿外科"
+  ],
+  "Patient-02495": [
+    "呼吸内科"
+  ],
+  "Patient-02187": [
+    "眼科"
+  ],
+  "Patient-02449": [
+    "妇产科"
+  ],
+  "Patient-02520": [
+    "呼吸内科"
+  ],
+  "Patient-02539": [
+    "皮肤科"
+  ],
+  "Patient-02555": [
+    "泌尿外科"
+  ],
+  "Patient-02551": [
+    "免疫科"
+  ],
+  "Patient-02593": [
+    "泌尿外科"
+  ],
+  "Patient-02617": [
+    "免疫科"
+  ],
+  "Patient-02676": [
+    "眼科"
+  ],
+  "Patient-02682": [
+    "感染科"
+  ],
+  "Patient-02680": [
+    "免疫科"
+  ],
+  "Patient-02691": [
+    "皮肤科"
+  ],
+  "Patient-02726": [
+    "骨科"
+  ],
+  "Patient-02717": [
+    "眼科"
+  ],
+  "Patient-02760": [
+    "眼科"
+  ],
+  "Patient-02766": [
+    "感染科"
+  ],
+  "Patient-02783": [
+    "神经内科"
+  ],
+  "Patient-02815": [
+    "内分泌科"
+  ],
+  "Patient-02806": [
+    "血液科"
+  ],
+  "Patient-02861": [
+    "肿瘤科"
+  ],
+  "Patient-02862": [
+    "感染科"
+  ],
+  "Patient-02875": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-02891": [
+    "呼吸内科"
+  ],
+  "Patient-02901": [
+    "呼吸内科"
+  ],
+  "Patient-02912": [
+    "骨科"
+  ],
+  "Patient-02902": [
+    "妇产科"
+  ],
+  "Patient-02909": [
+    "神经内科"
+  ],
+  "Patient-02921": [
+    "心内科"
+  ],
+  "Patient-02933": [
+    "眼科"
+  ],
+  "Patient-02928": [
+    "肿瘤科"
+  ],
+  "Patient-02931": [
+    "呼吸内科"
+  ],
+  "Patient-02948": [
+    "神经内科"
+  ],
+  "Patient-02955": [
+    "皮肤科"
+  ],
+  "Patient-02966": [
+    "皮肤科"
+  ],
+  "Patient-02983": [
+    "妇产科"
+  ],
+  "Patient-02998": [
+    "骨科"
+  ],
+  "Patient-02927": [
+    "眼科"
+  ],
+  "Patient-03017": [
+    "骨科"
+  ],
+  "Patient-03040": [
+    "泌尿外科"
+  ],
+  "Patient-03053": [
+    "骨科"
+  ],
+  "Patient-03061": [
+    "骨科"
+  ],
+  "Patient-03045": [
+    "儿科"
+  ],
+  "Patient-03114": [
+    "皮肤科"
+  ],
+  "Patient-03126": [
+    "皮肤科"
+  ],
+  "Patient-03141": [
+    "血液科"
+  ],
+  "Patient-03147": [
+    "肾内科"
+  ],
+  "Patient-03176": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-03184": [
+    "神经内科"
+  ],
+  "Patient-03205": [
+    "皮肤科"
+  ],
+  "Patient-03215": [
+    "骨科"
+  ],
+  "Patient-03225": [
+    "血液科"
+  ],
+  "Patient-03259": [
+    "心内科"
+  ],
+  "Patient-03270": [
+    "感染科"
+  ],
+  "Patient-03274": [
+    "皮肤科"
+  ],
+  "Patient-03309": [
+    "神经内科"
+  ],
+  "Patient-03312": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-03357": [
+    "儿科"
+  ],
+  "Patient-03383": [
+    "消化内科"
+  ],
+  "Patient-03378": [
+    "皮肤科"
+  ],
+  "Patient-03455": [
+    "神经内科"
+  ],
+  "Patient-03475": [
+    "呼吸内科"
+  ],
+  "Patient-03477": [
+    "皮肤科"
+  ],
+  "Patient-03290": [
+    "心内科"
+  ],
+  "Patient-03321": [
+    "免疫科"
+  ],
+  "Patient-03245": [
+    "神经内科"
+  ],
+  "Patient-03533": [
+    "感染科"
+  ],
+  "Patient-03556": [
+    "心内科"
+  ],
+  "Patient-03590": [
+    "皮肤科"
+  ],
+  "Patient-03605": [
+    "骨科"
+  ],
+  "Patient-03634": [
+    "血液科"
+  ],
+  "Patient-03650": [
+    "眼科"
+  ],
+  "Patient-03662": [
+    "感染科"
+  ],
+  "Patient-03697": [
+    "神经内科"
+  ],
+  "Patient-03708": [
+    "神经内科"
+  ],
+  "Patient-03755": [
+    "皮肤科"
+  ],
+  "Patient-03817": [
+    "神经内科"
+  ],
+  "Patient-03846": [
+    "神经内科"
+  ],
+  "Patient-03841": [
+    "骨科"
+  ],
+  "Patient-03871": [
+    "骨科"
+  ],
+  "Patient-03878": [
+    "泌尿外科"
+  ],
+  "Patient-03865": [
+    "骨科"
+  ],
+  "Patient-03883": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-03894": [
+    "感染科"
+  ],
+  "Patient-03935": [
+    "心内科"
+  ],
+  "Patient-03956": [
+    "妇产科"
+  ],
+  "Patient-03974": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-04023": [
+    "口腔科"
+  ],
+  "Patient-04031": [
+    "感染科"
+  ],
+  "Patient-04123": [
+    "口腔科"
+  ],
+  "Patient-04144": [
+    "呼吸内科"
+  ],
+  "Patient-04218": [
+    "口腔科"
+  ],
+  "Patient-04220": [
+    "肿瘤科"
+  ],
+  "Patient-04239": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-04249": [
+    "感染科"
+  ],
+  "Patient-04261": [
+    "血液科"
+  ],
+  "Patient-04260": [
+    "免疫科"
+  ],
+  "Patient-04294": [
+    "感染科"
+  ],
+  "Patient-04306": [
+    "儿科"
+  ],
+  "Patient-04335": [
+    "肾内科"
+  ],
+  "Patient-04375": [
+    "妇产科"
+  ],
+  "Patient-04382": [
+    "神经内科"
+  ],
+  "Patient-04395": [
+    "肿瘤科"
+  ],
+  "Patient-04408": [
+    "骨科"
+  ],
+  "Patient-04449": [
+    "眼科"
+  ],
+  "Patient-04483": [
+    "感染科"
+  ],
+  "Patient-04497": [
+    "皮肤科"
+  ],
+  "Patient-04129": [
+    "皮肤科"
+  ],
+  "Patient-04182": [
+    "口腔科"
+  ],
+  "Patient-04531": [
+    "皮肤科"
+  ],
+  "Patient-04541": [
+    "骨科"
+  ],
+  "Patient-04537": [
+    "消化内科"
+  ],
+  "Patient-04561": [
+    "血液科"
+  ],
+  "Patient-04581": [
+    "皮肤科"
+  ],
+  "Patient-04586": [
+    "免疫科"
+  ],
+  "Patient-04605": [
+    "血液科"
+  ],
+  "Patient-04617": [
+    "心内科"
+  ],
+  "Patient-04623": [
+    "内分泌科"
+  ],
+  "Patient-04643": [
+    "内分泌科"
+  ],
+  "Patient-04684": [
+    "泌尿外科"
+  ],
+  "Patient-04702": [
+    "呼吸内科"
+  ],
+  "Patient-04704": [
+    "眼科"
+  ],
+  "Patient-04759": [
+    "骨科"
+  ],
+  "Patient-04846": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-04855": [
+    "普外科"
+  ],
+  "Patient-04861": [
+    "呼吸内科"
+  ],
+  "Patient-04868": [
+    "心内科"
+  ],
+  "Patient-04900": [
+    "儿科"
+  ],
+  "Patient-04889": [
+    "呼吸内科"
+  ],
+  "Patient-04971": [
+    "眼科"
+  ],
+  "Patient-04986": [
+    "泌尿外科"
+  ],
+  "Patient-05013": [
+    "骨科"
+  ],
+  "Patient-05043": [
+    "儿科"
+  ],
+  "Patient-05053": [
+    "骨科"
+  ],
+  "Patient-05061": [
+    "泌尿外科"
+  ],
+  "Patient-05086": [
+    "骨科"
+  ],
+  "Patient-05139": [
+    "神经内科"
+  ],
+  "Patient-05143": [
+    "泌尿外科"
+  ],
+  "Patient-05192": [
+    "神经内科"
+  ],
+  "Patient-05204": [
+    "血液科"
+  ],
+  "Patient-05219": [
+    "神经内科"
+  ],
+  "Patient-05228": [
+    "骨科"
+  ],
+  "Patient-05238": [
+    "眼科"
+  ],
+  "Patient-05274": [
+    "呼吸内科"
+  ],
+  "Patient-05296": [
+    "眼科"
+  ],
+  "Patient-05309": [
+    "呼吸内科"
+  ],
+  "Patient-05323": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-05312": [
+    "皮肤科"
+  ],
+  "Patient-05342": [
+    "血液科"
+  ],
+  "Patient-05346": [
+    "儿科"
+  ],
+  "Patient-05355": [
+    "免疫科"
+  ],
+  "Patient-05423": [
+    "皮肤科"
+  ],
+  "Patient-05435": [
+    "骨科"
+  ],
+  "Patient-05468": [
+    "眼科"
+  ],
+  "Patient-05555": [
+    "皮肤科"
+  ],
+  "Patient-05569": [
+    "皮肤科"
+  ],
+  "Patient-05595": [
+    "感染科"
+  ],
+  "Patient-05601": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-05623": [
+    "皮肤科"
+  ],
+  "Patient-05656": [
+    "儿科"
+  ],
+  "Patient-05712": [
+    "普外科"
+  ],
+  "Patient-05715": [
+    "免疫科"
+  ],
+  "Patient-05732": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-05720": [
+    "内分泌科"
+  ],
+  "Patient-05775": [
+    "肿瘤科"
+  ],
+  "Patient-05776": [
+    "血液科"
+  ],
+  "Patient-05784": [
+    "眼科"
+  ],
+  "Patient-05787": [
+    "感染科"
+  ],
+  "Patient-05792": [
+    "儿科"
+  ],
+  "Patient-05819": [
+    "血液科"
+  ],
+  "Patient-05835": [
+    "眼科"
+  ],
+  "Patient-05832": [
+    "内分泌科"
+  ],
+  "Patient-05846": [
+    "泌尿外科"
+  ],
+  "Patient-05861": [
+    "神经内科"
+  ],
+  "Patient-05879": [
+    "呼吸内科"
+  ],
+  "Patient-05908": [
+    "心内科"
+  ],
+  "Patient-05913": [
+    "神经内科"
+  ],
+  "Patient-05935": [
+    "皮肤科"
+  ],
+  "Patient-05960": [
+    "妇产科"
+  ],
+  "Patient-05964": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-05997": [
+    "泌尿外科"
+  ],
+  "Patient-06008": [
+    "消化内科"
+  ],
+  "Patient-06015": [
+    "内分泌科"
+  ],
+  "Patient-06048": [
+    "内分泌科"
+  ],
+  "Patient-06064": [
+    "皮肤科"
+  ],
+  "Patient-06092": [
+    "呼吸内科"
+  ],
+  "Patient-06133": [
+    "骨科"
+  ],
+  "Patient-06132": [
+    "肾内科"
+  ],
+  "Patient-06137": [
+    "骨科"
+  ],
+  "Patient-06145": [
+    "消化内科"
+  ],
+  "Patient-06218": [
+    "心内科"
+  ],
+  "Patient-06217": [
+    "骨科"
+  ],
+  "Patient-06213": [
+    "消化内科"
+  ],
+  "Patient-06257": [
+    "泌尿外科"
+  ],
+  "Patient-06271": [
+    "感染科"
+  ],
+  "Patient-06296": [
+    "免疫科"
+  ],
+  "Patient-06307": [
+    "心内科"
+  ],
+  "Patient-06342": [
+    "皮肤科"
+  ],
+  "Patient-06381": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-06440": [
+    "皮肤科"
+  ],
+  "Patient-06496": [
+    "消化内科"
+  ],
+  "Patient-06464": [
+    "呼吸内科"
+  ],
+  "Patient-06483": [
+    "肾内科"
+  ],
+  "Patient-06537": [
+    "口腔科"
+  ],
+  "Patient-06539": [
+    "血液科"
+  ],
+  "Patient-06560": [
+    "内分泌科"
+  ],
+  "Patient-06574": [
+    "呼吸内科"
+  ],
+  "Patient-06599": [
+    "皮肤科"
+  ],
+  "Patient-06623": [
+    "肾内科"
+  ],
+  "Patient-06626": [
+    "皮肤科"
+  ],
+  "Patient-06667": [
+    "皮肤科"
+  ],
+  "Patient-06682": [
+    "血液科"
+  ],
+  "Patient-06691": [
+    "肾内科"
+  ],
+  "Patient-06720": [
+    "呼吸内科"
+  ],
+  "Patient-06740": [
+    "感染科"
+  ],
+  "Patient-06749": [
+    "骨科"
+  ],
+  "Patient-06834": [
+    "内分泌科"
+  ],
+  "Patient-06861": [
+    "骨科"
+  ],
+  "Patient-06862": [
+    "心内科"
+  ],
+  "Patient-06902": [
+    "消化内科"
+  ],
+  "Patient-06896": [
+    "皮肤科"
+  ],
+  "Patient-06922": [
+    "皮肤科"
+  ],
+  "Patient-06915": [
+    "消化内科"
+  ],
+  "Patient-06969": [
+    "皮肤科"
+  ],
+  "Patient-06998": [
+    "心内科"
+  ],
+  "Patient-07017": [
+    "普外科"
+  ],
+  "Patient-07020": [
+    "皮肤科"
+  ],
+  "Patient-07025": [
+    "妇产科"
+  ],
+  "Patient-07035": [
+    "皮肤科"
+  ],
+  "Patient-07099": [
+    "普外科"
+  ],
+  "Patient-07148": [
+    "内分泌科"
+  ],
+  "Patient-07165": [
+    "感染科"
+  ],
+  "Patient-07187": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-07190": [
+    "普外科"
+  ],
+  "Patient-07204": [
+    "心内科"
+  ],
+  "Patient-07215": [
+    "内分泌科"
+  ],
+  "Patient-07251": [
+    "妇产科"
+  ],
+  "Patient-07275": [
+    "眼科"
+  ],
+  "Patient-07298": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-07306": [
+    "皮肤科"
+  ],
+  "Patient-07317": [
+    "血液科"
+  ],
+  "Patient-07314": [
+    "呼吸内科"
+  ],
+  "Patient-07329": [
+    "泌尿外科"
+  ],
+  "Patient-07337": [
+    "骨科"
+  ],
+  "Patient-07389": [
+    "眼科"
+  ],
+  "Patient-07445": [
+    "呼吸内科"
+  ],
+  "Patient-07443": [
+    "呼吸内科"
+  ],
+  "Patient-07493": [
+    "妇产科"
+  ],
+  "Patient-07083": [
+    "呼吸内科"
+  ],
+  "Patient-07147": [
+    "骨科"
+  ],
+  "Patient-07519": [
+    "皮肤科"
+  ],
+  "Patient-07562": [
+    "内分泌科"
+  ],
+  "Patient-07563": [
+    "呼吸内科"
+  ],
+  "Patient-07577": [
+    "妇产科"
+  ],
+  "Patient-07580": [
+    "消化内科"
+  ],
+  "Patient-07604": [
+    "泌尿外科"
+  ],
+  "Patient-07637": [
+    "免疫科"
+  ],
+  "Patient-07641": [
+    "泌尿外科"
+  ],
+  "Patient-07669": [
+    "皮肤科"
+  ],
+  "Patient-07702": [
+    "血液科"
+  ],
+  "Patient-07705": [
+    "神经内科"
+  ],
+  "Patient-07724": [
+    "消化内科"
+  ],
+  "Patient-07727": [
+    "免疫科"
+  ],
+  "Patient-07772": [
+    "心内科"
+  ],
+  "Patient-07791": [
+    "骨科"
+  ],
+  "Patient-07872": [
+    "免疫科"
+  ],
+  "Patient-07896": [
+    "消化内科"
+  ],
+  "Patient-07894": [
+    "眼科"
+  ],
+  "Patient-07904": [
+    "神经内科"
+  ],
+  "Patient-07945": [
+    "免疫科"
+  ],
+  "Patient-07943": [
+    "妇产科"
+  ],
+  "Patient-07956": [
+    "消化内科"
+  ],
+  "Patient-07979": [
+    "骨科"
+  ],
+  "Patient-07853": [
+    "眼科"
+  ],
+  "Patient-08011": [
+    "骨科"
+  ],
+  "Patient-08061": [
+    "骨科"
+  ],
+  "Patient-08062": [
+    "皮肤科"
+  ],
+  "Patient-08110": [
+    "内分泌科"
+  ],
+  "Patient-08169": [
+    "呼吸内科"
+  ],
+  "Patient-08185": [
+    "消化内科"
+  ],
+  "Patient-08174": [
+    "血液科"
+  ],
+  "Patient-08234": [
+    "儿科"
+  ],
+  "Patient-08249": [
+    "内分泌科"
+  ],
+  "Patient-08267": [
+    "肿瘤科"
+  ],
+  "Patient-08282": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-08296": [
+    "内分泌科"
+  ],
+  "Patient-08299": [
+    "神经内科"
+  ],
+  "Patient-08301": [
+    "皮肤科"
+  ],
+  "Patient-08356": [
+    "感染科"
+  ],
+  "Patient-08387": [
+    "骨科"
+  ],
+  "Patient-08414": [
+    "泌尿外科"
+  ],
+  "Patient-08459": [
+    "眼科"
+  ],
+  "Patient-08492": [
+    "儿科"
+  ],
+  "Patient-08528": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-08535": [
+    "呼吸内科"
+  ],
+  "Patient-08555": [
+    "儿科"
+  ],
+  "Patient-08575": [
+    "皮肤科"
+  ],
+  "Patient-08596": [
+    "感染科"
+  ],
+  "Patient-08647": [
+    "血液科"
+  ],
+  "Patient-08691": [
+    "皮肤科"
+  ],
+  "Patient-08722": [
+    "皮肤科"
+  ],
+  "Patient-08740": [
+    "骨科"
+  ],
+  "Patient-08760": [
+    "呼吸内科"
+  ],
+  "Patient-08821": [
+    "皮肤科"
+  ],
+  "Patient-08881": [
+    "皮肤科"
+  ],
+  "Patient-08864": [
+    "感染科"
+  ],
+  "Patient-08892": [
+    "泌尿外科"
+  ],
+  "Patient-08945": [
+    "肾内科"
+  ],
+  "Patient-08967": [
+    "血液科"
+  ],
+  "Patient-09001": [
+    "呼吸内科"
+  ],
+  "Patient-09013": [
+    "眼科"
+  ],
+  "Patient-09026": [
+    "妇产科"
+  ],
+  "Patient-09054": [
+    "呼吸内科"
+  ],
+  "Patient-09067": [
+    "感染科"
+  ],
+  "Patient-09079": [
+    "心内科"
+  ],
+  "Patient-09137": [
+    "内分泌科"
+  ],
+  "Patient-09155": [
+    "骨科"
+  ],
+  "Patient-09163": [
+    "免疫科"
+  ],
+  "Patient-09201": [
+    "感染科"
+  ],
+  "Patient-09261": [
+    "心内科"
+  ],
+  "Patient-09271": [
+    "内分泌科"
+  ],
+  "Patient-09287": [
+    "皮肤科"
+  ],
+  "Patient-09301": [
+    "感染科"
+  ],
+  "Patient-09321": [
+    "感染科"
+  ],
+  "Patient-09322": [
+    "普外科"
+  ],
+  "Patient-09338": [
+    "儿科"
+  ],
+  "Patient-09371": [
+    "血液科"
+  ],
+  "Patient-09381": [
+    "皮肤科"
+  ],
+  "Patient-09448": [
+    "骨科"
+  ],
+  "Patient-09461": [
+    "免疫科"
+  ],
+  "Patient-09466": [
+    "皮肤科"
+  ],
+  "Patient-09458": [
+    "心内科"
+  ],
+  "Patient-09459": [
+    "心内科"
+  ],
+  "Patient-09494": [
+    "皮肤科"
+  ],
+  "Patient-09182": [
+    "消化内科"
+  ],
+  "Patient-09499": [
+    "内分泌科"
+  ],
+  "Patient-09526": [
+    "普外科"
+  ],
+  "Patient-09527": [
+    "皮肤科"
+  ],
+  "Patient-09535": [
+    "血液科"
+  ],
+  "Patient-09534": [
+    "普外科"
+  ],
+  "Patient-09551": [
+    "皮肤科"
+  ],
+  "Patient-09546": [
+    "皮肤科"
+  ],
+  "Patient-09558": [
+    "泌尿外科"
+  ],
+  "Patient-09576": [
+    "泌尿外科"
+  ],
+  "Patient-09595": [
+    "感染科"
+  ],
+  "Patient-09603": [
+    "免疫科"
+  ],
+  "Patient-09596": [
+    "呼吸内科"
+  ],
+  "Patient-09617": [
+    "骨科"
+  ],
+  "Patient-09649": [
+    "心内科"
+  ],
+  "Patient-09735": [
+    "肿瘤科"
+  ],
+  "Patient-09764": [
+    "皮肤科"
+  ],
+  "Patient-09791": [
+    "妇产科"
+  ],
+  "Patient-09792": [
+    "皮肤科"
+  ],
+  "Patient-09801": [
+    "耳鼻咽喉科"
+  ],
+  "Patient-09783": [
+    "口腔科"
+  ],
+  "Patient-09816": [
+    "神经内科"
+  ],
+  "Patient-09839": [
+    "血液科"
+  ],
+  "Patient-09857": [
+    "皮肤科"
+  ],
+  "Patient-09870": [
+    "心内科"
+  ],
+  "Patient-09858": [
+    "免疫科"
+  ],
+  "Patient-09874": [
+    "皮肤科"
+  ],
+  "Patient-09872": [
+    "血液科"
+  ],
+  "Patient-09884": [
+    "呼吸内科"
+  ],
+  "Patient-09885": [
+    "呼吸内科"
+  ],
+  "Patient-09898": [
+    "骨科"
+  ],
+  "Patient-09940": [
+    "感染科"
+  ],
+  "Patient-09935": [
+    "眼科"
+  ],
+  "Patient-09629": [
+    "眼科"
+  ],
+  "Patient-09807": [
+    "肿瘤科"
+  ],
+  "Patient-09922": [
+    "骨科"
+  ]
+}

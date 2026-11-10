@@ -1,0 +1,529 @@
+{
+  "patient_id": "Patient_05500",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，就是觉得不对劲。大概半年前脖子右边肿了，不疼，后来腋下也肿了，最近三周更严重了。人特别没力气，晚上睡觉出汗，肚子胀，还容易青一块紫一块的。具体哪里不舒服我也说不清，反正就是怪怪的。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"除了您提到的颈部和腋下肿块、乏力、盗汗、腹胀及容易淤青外，最近是否有发热（特别是午后或夜间）、体重明显下降、牙龈出血或鼻出血的情况？另外，您以前是否有过类似的血液疾病或肿瘤病史？\", \"reason\": \"患者主诉颈部及腋下无痛性肿块、乏力、盗汗、腹胀及出血倾向，高度提示血液系统恶性肿瘤（如淋巴瘤或白血病），但缺乏具体的发热情况、体重变化细节、其他部位出血表现及既往病史等关键信息，需进一步问诊以完善临床评估。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "除了您提到的颈部和腋下肿块、乏力、盗汗、腹胀及容易淤青外，最近是否有发热（特别是午后或夜间）、体重明显下降、牙龈出血或鼻出血的情况？另外，您以前是否有过类似的血液疾病或肿瘤病史？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "发热倒没有，就是晚上出汗多。体重好像轻了点，但记不清具体数字。牙龈和鼻子没出血。以前没得过血液病或肿瘤，只有高血压和高血脂。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为无痛性淋巴结肿大（颈部、腋下）、乏力、盗汗、腹胀及出血倾向，高度怀疑血液系统恶性肿瘤（如淋巴瘤或白血病）。目前尚未进行任何检查，急需通过血常规、外周血涂片等基础检查评估血细胞情况，并安排淋巴结活检以明确病理诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"体格检查\", \"reason\": \"患者主诉颈部和腋下肿块、乏力、盗汗、腹胀及易淤青，病史中未提及详细的体征记录。进行全面的体格检查（特别是淋巴结的触诊评估大小、质地、活动度，以及肝脾触诊）是初步评估这些症状最基础且关键的一步，有助于判断肿块的性质及是否存在肝脾肿大，为后续选择实验室或影像学检查提供重要依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"体格检查\", \"腹部检查\", \"皮肤检查\"], \"reason\": \"患者主诉颈部及腋下无痛性肿块、乏力、盗汗、腹胀及易淤青，需进行全面的体格检查以评估淋巴结肿大情况（颈部、腋窝）、脾脏是否肿大（解释腹胀）及全身皮肤出血点或瘀斑情况。腹部检查用于进一步确认腹部包块或脾大，皮肤检查用于详细评估出血倾向的表现。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"体格检查\": {\"result\": {\"一般外观\": \"患者清醒，定向力基本正常但叙述时间线混乱；体型消瘦，皮下脂肪减少；坐位时可见轻度脊柱后凸。\", \"乳房\": \"双侧乳房发育正常，未触及明显肿块或异常分泌物。\", \"体温\": \"36.4°C［参考值：常较低（36.0-36.9°C / 96.8-98.4°F），发热反应减弱。］\", \"全身体格检查-皮肤状态\": \"皮肤变薄呈羊皮纸样，弹性下降（轻捏即回缩缓慢），可见散在脂溢性角化及日光性雀斑样痣；四肢可见散在瘀斑。\", \"呼吸频率\": \"18 次/分［参考值：16-24 次/分］\", \"咽喉\": \"咽部黏膜无充血，扁桃体无肿大，未见脓性分泌物。\", \"头部查体\": \"头发稀疏且大部分变白，头皮无鳞屑或溃疡。\", \"心率\": \"78 bpm［参考值：60-100 bpm（运动时最大心率下降）］\", \"心血管查体\": \"心律齐，可闻及 S4 心音，主动脉瓣区可闻及轻度收缩期杂音，外周脉搏存在但搏动稍弱。\", \"泌尿生殖系统\": \"前列腺触诊增大，表面光滑，质地中等，无结节。\", \"生长\": \"因椎体压缩导致身高较既往下降约 2cm，BMI 为 22.5 kg/m²。\", \"盆腔检查\": \"直肠指检前列腺增大，质中，中央沟变浅，未触及硬结。\", \"眼部\": \"双眼视力下降需老花镜矫正，角膜缘可见老年环，瞳孔对光反射稍迟钝。\", \"神经系统\": \"步态缓慢且步幅缩短，足部振动觉减弱，踝反射减弱，双手可见轻微静止性震颤。\", \"耳部\": \"双耳听力减退，高频听力损失明显，鼓膜完整。\", \"肌肉骨骼\": \"四肢肌量减少，关节活动范围轻度受限，反应时间稍慢。\", \"胸部\": \"胸廓前后径略增加，胸壁顺应性下降，双肺呼吸音清。\", \"腹部\": \"腹壁肌层较薄，触诊易及，肝脏下缘肋下未触及，脾脏肋下可触及，质软，全腹无压痛。\", \"血压\": \"142/78 mmHg\", \"身高和体重\": \"身高 168cm，体重 62kg，BMI 22.0 kg/m²。［参考值：因椎体压缩导致身高下降；为维持储备，BMI 最佳范围通常略高（23-27 kg/m²）。］\", \"颈部\": \"颈部活动范围轻度受限，双侧颈部及腋窝可触及多发肿大淋巴结，质韧，无压痛，部分融合。\", \"鼻/咽喉\": \"嗅觉及味觉减退，鼻腔通畅，咽后壁无淋巴滤泡增生。\", \"鼻部\": \"鼻外形正常，鼻甲无肥大，无鼻息肉。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"全身体格检查-皮肤状态\", \"腹部\", \"颈部\"]}, \"腹部检查\": {\"result\": {\"肝浊音界/肝跨度\": \"肝浊音界因年龄相关性萎缩而缩小，但受脾脏肿大及腹腔脏器增大影响，下界可触及。\", \"肝缘触诊\": \"肋缘下可触及肝脏边缘，位置较年轻成人略低。\", \"肠鸣音\": \"肠鸣音活跃，频率稍快，与患者间歇性稀便症状相符。\", \"腹主动脉搏动\": \"腹主动脉搏动明显可见且易于触及，搏动幅度正常。\", \"腹股沟疝\": \"双侧腹股沟区未触及包块，无腹股沟疝征象。\", \"腹膜刺激征\": \"腹部无压痛、反跳痛及肌紧张，腹膜刺激征阴性。\", \"腹部压痛\": \"全腹无明显压痛，仅在左下腹偶有轻度痉挛性不适感，无固定压痛点。\", \"腹部叩诊音\": \"腹部叩诊以鼓音为主，部分区域因脏器增大呈浊音。\", \"腹部外观\": \"腹部呈圆形膨隆，腹肌张力降低，脂肪堆积集中于下腹部，符合早饱及腹胀描述。\", \"腹部肿块\": \"腹部未触及明确孤立肿块，但可触及弥漫性脏器增大（脾大），与淋巴瘤累及表现一致。\", \"腹部触感\": \"腹壁较软，阻力较小，由于腹肌无力及皮下脂肪分布，深部脏器更易触及。\", \"血管杂音\": \"未闻及明显的主动脉、肾动脉或股动脉血管杂音。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"肝浊音界/肝跨度\", \"肠鸣音\", \"腹部叩诊音\", \"腹部外观\", \"腹部肿块\"]}, \"皮肤检查\": {\"result\": {\"全身体格检查-皮肤状态\": \"皮肤温暖干燥，张力及弹性下降，可见松弛及皱纹增多，表皮变薄。\", \"指(趾)甲\": \"指（趾）甲增厚、脆裂、发黄，可见纵嵴。\", \"毛发分布\": \"头发灰白且稀疏，四肢体毛稀少，耳部和鼻部可见粗硬毛发。\", \"毛细血管再充盈时间\": \"毛细血管再充盈时间为2秒。\", \"水肿肿块及淋巴结\": \"颈部、腋窝及腹部可触及多发肿大淋巴结，质地较韧，无压痛；未见病理性水肿。\", \"皮肤病变与出血点\": \"全身皮肤可见散在瘀斑，未见活动性出血点或溃疡。\", \"肤色与发绀黄疸\": \"肤色与种族背景相符，可见日光性雀斑样痣、脂溢性角化及樱桃样血管瘤，无发绀及黄疸。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"指(趾)甲\", \"水肿肿块及淋巴结\", \"皮肤病变与出血点\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有无痛性淋巴结肿大、脾大、消瘦、盗汗及皮肤瘀斑等血液系统恶性肿瘤（如淋巴瘤或白血病）的典型症状和体征。目前缺乏血常规、外周血涂片、骨髓穿刺及淋巴结活检等关键检查来明确诊断，因此需要优先开具相关检查以获取确诊依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为无痛性进行性淋巴结肿大（颈部及腋窝）、脾大、消瘦、盗汗及皮肤瘀斑，高度怀疑淋巴瘤或白血病等血液系统恶性肿瘤。体格检查和影像学检查虽提示异常，但确诊必须依赖组织学证据。因此，对肿大的淋巴结进行活检（病理检查）是明确诊断、确定分型及指导后续治疗的最关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"淋巴结活检\", \"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为无痛性进行性淋巴结肿大（颈部及腋窝）、脾大、消瘦、盗汗及皮肤瘀斑，高度怀疑淋巴瘤或白血病。淋巴结活检是确诊淋巴瘤类型及分期的金标准；骨髓穿刺和活检用于评估骨髓受累情况及排除血液系统恶性肿瘤，两者结合可明确诊断并指导后续治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"淋巴结活检\": {\"result\": {\"恶性细胞或恶性浸润\": \"可见小至中等大小不典型淋巴样细胞呈结节状/间质性浸润，免疫表型为CD20+、CD5+、Cyclin D1核阳性且SOX11阳性，FISH检测到IGH::CCND1重排\", \"淋巴结皮质厚度\": \"皮质结构受肿瘤浸润破坏，无法测量正常皮质厚度\", \"淋巴结细胞分布\": \"单克隆B细胞群（CD19+、CD20+、CD5+）弥漫性取代正常多克隆分布\", \"病理坏死\": \"未见明显坏死证据\", \"病理淋巴结结构\": \"淋巴结正常结构消失，被肿瘤细胞浸润取代\", \"皮质滤泡及生发中心\": \"淋巴滤泡结构缺失，无生发中心形成\", \"结构消失\": \"淋巴结正常解剖结构完全消失\", \"肉芽肿性炎症\": \"未见肉芽肿性炎症证据\", \"脂肪替代\": \"未见明显的脂肪沉积替代现象\", \"退行性变化\": \"未见典型的年龄相关退行性萎缩征象，以肿瘤增生为主\", \"间质纤维化或透明样变\": \"未见显著的间质纤维化或透明样变\", \"非典型性淋巴样增生\": \"存在明确的非典型性淋巴样细胞浸润，符合套细胞淋巴瘤特征\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"恶性细胞或恶性浸润\", \"淋巴结皮质厚度\", \"淋巴结细胞分布\", \"病理淋巴结结构\", \"皮质滤泡及生发中心\", \"结构消失\", \"非典型性淋巴样增生\"]}, \"骨髓穿刺和活检（BMAB）\": {\"result\": {\"骨髓细胞密度\": \"骨髓增生活跃［参考值：降低（通常为20-50%，与年龄成反比）。］\", \"异常浸润或纤维化\": \"可见小至中等大小不典型淋巴样细胞呈结节状/间质性浸润\", \"骨髓三系造血\": \"正常三系造血减少\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓细胞密度\", \"异常浸润或纤维化\", \"骨髓三系造血\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者已出现典型的B症状（盗汗、消瘦）、无痛性淋巴结肿大及脾大，且淋巴结活检结果明确显示CD20+、CD5+、Cyclin D1阳性及IGH::CCND1重排，骨髓穿刺证实骨髓受累，这些关键信息足以确诊为套细胞淋巴瘤（Mantle Cell Lymphoma），无需进一步检查即可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为无痛性淋巴结肿大（颈部、腋窝）、脾大、乏力、盗汗及皮肤瘀斑。关键检查结果显示淋巴结活检发现CD20+、CD5+、Cyclin D1阳性且IGH::CCND1重排，符合套细胞淋巴瘤（MCL）的病理特征；骨髓穿刺亦显示异常淋巴样细胞浸润。套细胞淋巴瘤属于恶性血液肿瘤，其诊断、分期及化疗方案制定主要由血液科负责。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"套细胞淋巴瘤\", \"treatment_plan\": \"1. 主要治疗：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、消瘦）、脾大及淋巴结肿大，建议立即启动以化疗联合免疫治疗为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者年龄及基础病（高血压、高血脂），若体能状态允许，可考虑含阿糖胞苷的强化方案（如R-DHAP）作为诱导，随后评估是否进行自体造血干细胞移植（ASCT）巩固治疗，这是年轻/适合患者的标准治愈性策略。\\n2. 个性化调整：患者有高血压病史，使用激素（泼尼松）期间需严密监测血压，必要时调整降压药；存在高脂血症，需注意他汀类药物与化疗药物的相互作用。患者皮肤弹性差、易瘀斑，提示可能存在血小板减少或凝血功能异常，化疗前需完善血常规及凝血功能，预防出血风险。若患者不适合高强度化疗或移植，可考虑单用利妥昔单抗联合小分子靶向药（如伊布替尼，一种BTK抑制剂），该方案对老年或体弱患者耐受性较好。\\n3. 安全性与监测：治疗期间需每周监测血常规，警惕骨髓抑制导致的感染和出血；定期复查肝肾功能及电解质。若出现高热（>38.5°C）、严重呼吸困难、剧烈头痛或意识改变，需立即就医。长期随访需监测疾病复发迹象，包括淋巴结大小、脾脏情况及LDH水平。\", \"reasoning\": \"诊断依据：患者临床表现符合淋巴瘤特征（无痛性淋巴结肿大、脾大、B症状、易瘀斑）。关键确诊依据来自淋巴结活检病理：免疫表型CD20+、CD5+、Cyclin D1核阳性且SOX11阳性，FISH检测到IGH::CCND1重排，这是套细胞淋巴瘤（MCL）的特异性诊断标志。骨髓穿刺显示异常淋巴样细胞浸润，证实疾病已累及骨髓。结合患者消瘦、乏力等症状，排除其他血液肿瘤，确诊为套细胞淋巴瘤。治疗方案选择基于NCCN指南，针对该侵袭性亚型，需积极干预，同时根据患者合并症（高血压等）进行个体化调整以确保安全。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_05500",
+    "mode": "train",
+    "memory_notes": [
+      "Physical examination of Patient_00952 revealed BMI 18.2 kg/m², low-grade fever (37.6°C), pale conjunctiva, scattered skin ecchymoses, and multiple painless cervical/submandibular lymph nodes up to 2cm x 1.5cm.",
+      "Physical examination of Patient_00351 revealed BMI 21 kg/m², temperature 37.8°C, significant weight loss (over 10 jin), kyphosis, thin dry skin, gray sparse hair, S4 heart sound with systolic murmur, and a large hard painless lymph node mass on the left side of the neck.",
+      "Physical examination of Patient_01886 revealed BMI 24.5 kg/m², emaciated appearance, no fever (36.8°C), no skin rash or bleeding points, multiple hard painless lymph node enlargements on the left side of the neck, and splenomegaly (spleen palpable below the left costal margin)",
+      "Physical examination of Patient_02851 revealed BMI 21.5 kg/m², temperature 37.6°C, conjunctival pallor, multiple ecchymoses on skin, spleen enlargement (palpable 3-4 cm below left costal margin, firm texture), and multiple painless, firm, slowly enlarging lymph nodes in the neck and left axilla.",
+      "User diagnosed Patient_01919 with Chronic Lymphocytic Leukemia (CLL) based on B symptoms (fatigue, night sweats, weight loss of ~5kg), painless cervical and axillary lymphadenopathy (1.5-3.0 cm), bleeding tendency (bruising), early satiety from splenomegaly, low-grade fever (37.2°C), and respiratory rate of 24/min.",
+      "Physical examination of Patient_06427 revealed BMI 24 kg/m², temperature 36.5°C, thin papery skin with decreased elasticity, sparse white hair, S4 heart sound, enlarged prostate, reduced vibration sense in feet, high-frequency hearing loss, hepatomegaly, splenomegaly, and a hard, immobile 3cm painless mass on the left neck.",
+      "Patient_02239's physical examination revealed BMI 22 kg/m², pale conjunctiva and oral mucosa, gray-white sparse hair, capillary refill time 2 seconds, painless lymph nodes in neck and axilla up to 2cm diameter, palpable spleen in left upper quadrant with fullness, blood pressure 142/78 mmHg, S4 heart sound, mild systolic murmur at aortic area, reduced vibration sense and ankle reflexes, knee osteoarthritis, and mild thoracic kyphosis.",
+      "Patient_09774's physical examination revealed bilateral rubbery, non-tender cervical lymphadenopathy (max 1.5cm), scattered ecchymoses on the arms, mild conjunctival pallor, and normal abdominal exam with no hepatosplenomegaly; vital signs included temperature 36.8°C, BP 124/78 mmHg, and HR 82 bpm.",
+      "Physical examination of Patient_09102 revealed BMI 23.5 kg/m²,消瘦状态 (wasting), temperature 36.8°C, multiple hard lymph nodes on the left side of the neck, and spleen enlargement palpable 2 cm below the left costal margin.",
+      "Patient_00827's laboratory results showed anemia (Hemoglobin 88 g/L, RBC 3.0 × 10^12/L), hypercalcemia (Calcium 12.1 mg/dL), elevated total protein (9.4 g/dL), renal insufficiency (Creatinine 2.3 mg/dL, eGFR 28 mL/min/1.73m²), normal PTH, and mildly elevated CA-125 (42 U/mL).",
+      "User participated in a hematology diagnostic task for Patient_07426, presenting with progressive fatigue, early satiety, left upper quadrant pulling sensation, low-grade fever, night sweats, 5 kg weight loss, easy bruising, gum bleeding, and hip/back pain.",
+      "User participated in a hematology diagnostic task for Patient_06427, a middle-aged male presenting with a progressively enlarging painless left neck mass (3cm), early satiety, upper abdominal discomfort, fatigue, night sweats, and weight loss of 4.5 kg over two months.",
+      "User participated in a hematology diagnostic task for Patient_09977, presenting with 8 months of progressive left upper quadrant fullness, worsening fatigue, easy bruising, occasional gum bleeding, two episodes of nosebleeds, increased frequency of colds with slow recovery, and 4 kg weight loss.",
+      "Patient_06243 experienced a weight loss of approximately 4 kg over the past 8 months, had no fever or palpable lymph node enlargement, but reported increased frequency of winter colds that resolved more slowly than usual.",
+      "Patient_07050 presented with fatigue for several weeks, worsening shortness of breath on stairs, recurrent fever, severe night sweats, nearly 5 kg weight loss, easy bruising, gum bleeding, petechiae on legs, abdominal distension, and dull bone pain.",
+      "User participated in a hematology diagnostic task for Patient_04112, who presented with progressively enlarging painless neck and axillary masses, fatigue, early satiety, abdominal distension, night sweats, weight loss, and occasional low-grade fever.",
+      "User participated in a hematology diagnostic task for Patient_01886, a middle-aged male presenting with progressively enlarging left neck and right axillary masses over four months, worsening fatigue, night sweats requiring frequent clothing changes, weight loss over three months, and abdominal distension.",
+      "User participated in a hematology diagnostic task for Patient_09774, a patient presenting with painless bilateral neck lymphadenopathy (1.5cm rubbery nodes) discovered 10 days prior, progressive fatigue, decreased exercise tolerance, night sweats, low-grade evening fever, and easy bruising after minor trauma.",
+      "User participated in a hematology diagnostic task for Patient_02851, a 53-year-old female presenting with progressive fatigue (4 months), night sweats, low-grade fever (37.6°C), weight loss, painless bilateral cervical and left axillary lymphadenopathy, easy bruising after minor trauma, and left upper quadrant discomfort with early satiety.",
+      "Physical examination of Patient_01919 revealed BMI indicators of skin laxity, brittle nails with longitudinal ridges, diffuse gray hair thinning, capillary refill time of 2 seconds, bilateral cervical and axillary lymph nodes (1.5-3.0 cm, rubbery texture), scattered forearm ecchymoses (0.5-1.5 cm), liver edge palpable 3 cm below right costal margin, and a hard, ill-defined mass in the left upper quadrant."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，就是觉得不对劲。大概半年前脖子右边肿了，不疼，后来腋下也肿了，最近三周更严重了。人特别没力气，晚上睡觉出汗，肚子胀，还容易青一块紫一块的。具体哪里不舒服我也说不清，反正就是怪怪的。"
+      },
+      {
+        "from": "doctor",
+        "text": "除了您提到的颈部和腋下肿块、乏力、盗汗、腹胀及容易淤青外，最近是否有发热（特别是午后或夜间）、体重明显下降、牙龈出血或鼻出血的情况？另外，您以前是否有过类似的血液疾病或肿瘤病史？"
+      },
+      {
+        "from": "patient",
+        "text": "发热倒没有，就是晚上出汗多。体重好像轻了点，但记不清具体数字。牙龈和鼻子没出血。以前没得过血液病或肿瘤，只有高血压和高血脂。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "体格检查": {
+        "result": {
+          "一般外观": "患者清醒，定向力基本正常但叙述时间线混乱；体型消瘦，皮下脂肪减少；坐位时可见轻度脊柱后凸。",
+          "乳房": "双侧乳房发育正常，未触及明显肿块或异常分泌物。",
+          "体温": "36.4°C［参考值：常较低（36.0-36.9°C / 96.8-98.4°F），发热反应减弱。］",
+          "全身体格检查-皮肤状态": "皮肤变薄呈羊皮纸样，弹性下降（轻捏即回缩缓慢），可见散在脂溢性角化及日光性雀斑样痣；四肢可见散在瘀斑。",
+          "呼吸频率": "18 次/分［参考值：16-24 次/分］",
+          "咽喉": "咽部黏膜无充血，扁桃体无肿大，未见脓性分泌物。",
+          "头部查体": "头发稀疏且大部分变白，头皮无鳞屑或溃疡。",
+          "心率": "78 bpm［参考值：60-100 bpm（运动时最大心率下降）］",
+          "心血管查体": "心律齐，可闻及 S4 心音，主动脉瓣区可闻及轻度收缩期杂音，外周脉搏存在但搏动稍弱。",
+          "泌尿生殖系统": "前列腺触诊增大，表面光滑，质地中等，无结节。",
+          "生长": "因椎体压缩导致身高较既往下降约 2cm，BMI 为 22.5 kg/m²。",
+          "盆腔检查": "直肠指检前列腺增大，质中，中央沟变浅，未触及硬结。",
+          "眼部": "双眼视力下降需老花镜矫正，角膜缘可见老年环，瞳孔对光反射稍迟钝。",
+          "神经系统": "步态缓慢且步幅缩短，足部振动觉减弱，踝反射减弱，双手可见轻微静止性震颤。",
+          "耳部": "双耳听力减退，高频听力损失明显，鼓膜完整。",
+          "肌肉骨骼": "四肢肌量减少，关节活动范围轻度受限，反应时间稍慢。",
+          "胸部": "胸廓前后径略增加，胸壁顺应性下降，双肺呼吸音清。",
+          "腹部": "腹壁肌层较薄，触诊易及，肝脏下缘肋下未触及，脾脏肋下可触及，质软，全腹无压痛。",
+          "血压": "142/78 mmHg",
+          "身高和体重": "身高 168cm，体重 62kg，BMI 22.0 kg/m²。［参考值：因椎体压缩导致身高下降；为维持储备，BMI 最佳范围通常略高（23-27 kg/m²）。］",
+          "颈部": "颈部活动范围轻度受限，双侧颈部及腋窝可触及多发肿大淋巴结，质韧，无压痛，部分融合。",
+          "鼻/咽喉": "嗅觉及味觉减退，鼻腔通畅，咽后壁无淋巴滤泡增生。",
+          "鼻部": "鼻外形正常，鼻甲无肥大，无鼻息肉。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "全身体格检查-皮肤状态",
+          "腹部",
+          "颈部"
+        ]
+      },
+      "腹部检查": {
+        "result": {
+          "肝浊音界/肝跨度": "肝浊音界因年龄相关性萎缩而缩小，但受脾脏肿大及腹腔脏器增大影响，下界可触及。",
+          "肝缘触诊": "肋缘下可触及肝脏边缘，位置较年轻成人略低。",
+          "肠鸣音": "肠鸣音活跃，频率稍快，与患者间歇性稀便症状相符。",
+          "腹主动脉搏动": "腹主动脉搏动明显可见且易于触及，搏动幅度正常。",
+          "腹股沟疝": "双侧腹股沟区未触及包块，无腹股沟疝征象。",
+          "腹膜刺激征": "腹部无压痛、反跳痛及肌紧张，腹膜刺激征阴性。",
+          "腹部压痛": "全腹无明显压痛，仅在左下腹偶有轻度痉挛性不适感，无固定压痛点。",
+          "腹部叩诊音": "腹部叩诊以鼓音为主，部分区域因脏器增大呈浊音。",
+          "腹部外观": "腹部呈圆形膨隆，腹肌张力降低，脂肪堆积集中于下腹部，符合早饱及腹胀描述。",
+          "腹部肿块": "腹部未触及明确孤立肿块，但可触及弥漫性脏器增大（脾大），与淋巴瘤累及表现一致。",
+          "腹部触感": "腹壁较软，阻力较小，由于腹肌无力及皮下脂肪分布，深部脏器更易触及。",
+          "血管杂音": "未闻及明显的主动脉、肾动脉或股动脉血管杂音。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "肝浊音界/肝跨度",
+          "肠鸣音",
+          "腹部叩诊音",
+          "腹部外观",
+          "腹部肿块"
+        ]
+      },
+      "皮肤检查": {
+        "result": {
+          "全身体格检查-皮肤状态": "皮肤温暖干燥，张力及弹性下降，可见松弛及皱纹增多，表皮变薄。",
+          "指(趾)甲": "指（趾）甲增厚、脆裂、发黄，可见纵嵴。",
+          "毛发分布": "头发灰白且稀疏，四肢体毛稀少，耳部和鼻部可见粗硬毛发。",
+          "毛细血管再充盈时间": "毛细血管再充盈时间为2秒。",
+          "水肿肿块及淋巴结": "颈部、腋窝及腹部可触及多发肿大淋巴结，质地较韧，无压痛；未见病理性水肿。",
+          "皮肤病变与出血点": "全身皮肤可见散在瘀斑，未见活动性出血点或溃疡。",
+          "肤色与发绀黄疸": "肤色与种族背景相符，可见日光性雀斑样痣、脂溢性角化及樱桃样血管瘤，无发绀及黄疸。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "指(趾)甲",
+          "水肿肿块及淋巴结",
+          "皮肤病变与出血点"
+        ]
+      },
+      "淋巴结活检": {
+        "result": {
+          "恶性细胞或恶性浸润": "可见小至中等大小不典型淋巴样细胞呈结节状/间质性浸润，免疫表型为CD20+、CD5+、Cyclin D1核阳性且SOX11阳性，FISH检测到IGH::CCND1重排",
+          "淋巴结皮质厚度": "皮质结构受肿瘤浸润破坏，无法测量正常皮质厚度",
+          "淋巴结细胞分布": "单克隆B细胞群（CD19+、CD20+、CD5+）弥漫性取代正常多克隆分布",
+          "病理坏死": "未见明显坏死证据",
+          "病理淋巴结结构": "淋巴结正常结构消失，被肿瘤细胞浸润取代",
+          "皮质滤泡及生发中心": "淋巴滤泡结构缺失，无生发中心形成",
+          "结构消失": "淋巴结正常解剖结构完全消失",
+          "肉芽肿性炎症": "未见肉芽肿性炎症证据",
+          "脂肪替代": "未见明显的脂肪沉积替代现象",
+          "退行性变化": "未见典型的年龄相关退行性萎缩征象，以肿瘤增生为主",
+          "间质纤维化或透明样变": "未见显著的间质纤维化或透明样变",
+          "非典型性淋巴样增生": "存在明确的非典型性淋巴样细胞浸润，符合套细胞淋巴瘤特征"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "恶性细胞或恶性浸润",
+          "淋巴结皮质厚度",
+          "淋巴结细胞分布",
+          "病理淋巴结结构",
+          "皮质滤泡及生发中心",
+          "结构消失",
+          "非典型性淋巴样增生"
+        ]
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "骨髓细胞密度": "骨髓增生活跃［参考值：降低（通常为20-50%，与年龄成反比）。］",
+          "异常浸润或纤维化": "可见小至中等大小不典型淋巴样细胞呈结节状/间质性浸润",
+          "骨髓三系造血": "正常三系造血减少"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "骨髓细胞密度",
+          "异常浸润或纤维化",
+          "骨髓三系造血"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和病史。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "除了您提到的颈部和腋下肿块、乏力、盗汗、腹胀及容易淤青外，最近是否有发热（特别是午后或夜间）、体重明显下降、牙龈出血或鼻出血的情况？另外，您以前是否有过类似的血液疾病或肿瘤病史？",
+        "reason": "患者主诉颈部及腋下无痛性肿块、乏力、盗汗、腹胀及出血倾向，高度提示血液系统恶性肿瘤（如淋巴瘤或白血病），但缺乏具体的发热情况、体重变化细节、其他部位出血表现及既往病史等关键信息，需进一步问诊以完善临床评估。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为无痛性淋巴结肿大（颈部、腋下）、乏力、盗汗、腹胀及出血倾向，高度怀疑血液系统恶性肿瘤（如淋巴瘤或白血病）。目前尚未进行任何检查，急需通过血常规、外周血涂片等基础检查评估血细胞情况，并安排淋巴结活检以明确病理诊断。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有无痛性淋巴结肿大、脾大、消瘦、盗汗及皮肤瘀斑等血液系统恶性肿瘤（如淋巴瘤或白血病）的典型症状和体征。目前缺乏血常规、外周血涂片、骨髓穿刺及淋巴结活检等关键检查来明确诊断，因此需要优先开具相关检查以获取确诊依据。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者已出现典型的B症状（盗汗、消瘦）、无痛性淋巴结肿大及脾大，且淋巴结活检结果明确显示CD20+、CD5+、Cyclin D1阳性及IGH::CCND1重排，骨髓穿刺证实骨髓受累，这些关键信息足以确诊为套细胞淋巴瘤（Mantle Cell Lymphoma），无需进一步检查即可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "体格检查",
+        "examinations": [
+          "体格检查",
+          "腹部检查",
+          "皮肤检查"
+        ],
+        "reason": "患者主诉颈部及腋下无痛性肿块、乏力、盗汗、腹胀及易淤青，需进行全面的体格检查以评估淋巴结肿大情况（颈部、腋窝）、脾脏是否肿大（解释腹胀）及全身皮肤出血点或瘀斑情况。腹部检查用于进一步确认腹部包块或脾大，皮肤检查用于详细评估出血倾向的表现。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "淋巴结活检",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为无痛性进行性淋巴结肿大（颈部及腋窝）、脾大、消瘦、盗汗及皮肤瘀斑，高度怀疑淋巴瘤或白血病。淋巴结活检是确诊淋巴瘤类型及分期的金标准；骨髓穿刺和活检用于评估骨髓受累情况及排除血液系统恶性肿瘤，两者结合可明确诊断并指导后续治疗。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "套细胞淋巴瘤",
+      "treatment_plan": "1. 主要治疗：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、消瘦）、脾大及淋巴结肿大，建议立即启动以化疗联合免疫治疗为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者年龄及基础病（高血压、高血脂），若体能状态允许，可考虑含阿糖胞苷的强化方案（如R-DHAP）作为诱导，随后评估是否进行自体造血干细胞移植（ASCT）巩固治疗，这是年轻/适合患者的标准治愈性策略。\n2. 个性化调整：患者有高血压病史，使用激素（泼尼松）期间需严密监测血压，必要时调整降压药；存在高脂血症，需注意他汀类药物与化疗药物的相互作用。患者皮肤弹性差、易瘀斑，提示可能存在血小板减少或凝血功能异常，化疗前需完善血常规及凝血功能，预防出血风险。若患者不适合高强度化疗或移植，可考虑单用利妥昔单抗联合小分子靶向药（如伊布替尼，一种BTK抑制剂），该方案对老年或体弱患者耐受性较好。\n3. 安全性与监测：治疗期间需每周监测血常规，警惕骨髓抑制导致的感染和出血；定期复查肝肾功能及电解质。若出现高热（>38.5°C）、严重呼吸困难、剧烈头痛或意识改变，需立即就医。长期随访需监测疾病复发迹象，包括淋巴结大小、脾脏情况及LDH水平。",
+      "reasoning": "诊断依据：患者临床表现符合淋巴瘤特征（无痛性淋巴结肿大、脾大、B症状、易瘀斑）。关键确诊依据来自淋巴结活检病理：免疫表型CD20+、CD5+、Cyclin D1核阳性且SOX11阳性，FISH检测到IGH::CCND1重排，这是套细胞淋巴瘤（MCL）的特异性诊断标志。骨髓穿刺显示异常淋巴样细胞浸润，证实疾病已累及骨髓。结合患者消瘦、乏力等症状，排除其他血液肿瘤，确诊为套细胞淋巴瘤。治疗方案选择基于NCCN指南，针对该侵袭性亚型，需积极干预，同时根据患者合并症（高血压等）进行个体化调整以确保安全。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_05500",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.2,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "套细胞淋巴瘤"
+        ],
+        "expected": [
+          "套细胞淋巴瘤"
+        ],
+        "matched": [
+          "套细胞淋巴瘤"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "体格检查",
+          "腹部检查",
+          "皮肤检查",
+          "淋巴结活检",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "流式细胞术免疫分型",
+          "β2-微球蛋白检测",
+          "心肌酶谱",
+          "骨髓穿刺和活检（BMAB）",
+          "免疫组织化学（IHC）",
+          "荧光原位杂交（FISH）",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "结肠镜检查"
+        ],
+        "matched": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "precision": 0.2,
+        "coverage": 0.1,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、消瘦）、脾大及淋巴结肿大，建议立即启动以化疗联合免疫治疗为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者年龄及基础病（高血压、高血脂），若体能状态允许，可考虑含阿糖胞苷的强化方案（如R-DHAP）作为诱导，随后评估是否进行自体造血干细胞移植（ASCT）巩固治疗，这是年轻/适合患者的标准治愈性策略。\n2. 个性化调整：患者有高血压病史，使用激素（泼尼松）期间需严密监测血压，必要时调整降压药；存在高脂血症，需注意他汀类药物与化疗药物的相互作用。患者皮肤弹性差、易瘀斑，提示可能存在血小板减少或凝血功能异常，化疗前需完善血常规及凝血功能，预防出血风险。若患者不适合高强度化疗或移植，可考虑单用利妥昔单抗联合小分子靶向药（如伊布替尼，一种BTK抑制剂），该方案对老年或体弱患者耐受性较好。\n3. 安全性与监测：治疗期间需每周监测血常规，警惕骨髓抑制导致的感染和出血；定期复查肝肾功能及电解质。若出现高热（>38.5°C）、严重呼吸困难、剧烈头痛或意识改变，需立即就医。长期随访需监测疾病复发迹象，包括淋巴结大小、脾脏情况及LDH水平。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "未违反禁忌，方案主流但遗漏贝类过敏监测细节，缺乏针对患者认知与心理的适配。",
+        "reference": "开始使用利妥昔单抗联合苯达莫司汀化疗，并根据其年龄及合并症进行个体化调整；给予预处理以预防输注反应，并鉴于其有贝类相关过敏性休克病史而加强监测。根据需要提供止吐治疗和生长因子支持等对症支持治疗，并指导其维持高蛋白饮食和进行轻柔的身体活动，以帮助缓解疲劳并防止去适应。安排定期随访，在完成4个周期后通过PET-CT评估疗效，并密切监测感染、出血或新发神经系统症状等需要立即评估的迹象。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "套细胞淋巴瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "流式细胞术免疫分型",
+          "β2-微球蛋白检测",
+          "心肌酶谱",
+          "骨髓穿刺和活检（BMAB）",
+          "免疫组织化学（IHC）",
+          "荧光原位杂交（FISH）",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "结肠镜检查"
+        ],
+        "contraindications": {
+          "drugs": [
+            "贝类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "开始使用利妥昔单抗联合苯达莫司汀化疗，并根据其年龄及合并症进行个体化调整；给予预处理以预防输注反应，并鉴于其有贝类相关过敏性休克病史而加强监测。根据需要提供止吐治疗和生长因子支持等对症支持治疗，并指导其维持高蛋白饮食和进行轻柔的身体活动，以帮助缓解疲劳并防止去适应。安排定期随访，在完成4个周期后通过PET-CT评估疗效，并密切监测感染、出血或新发神经系统症状等需要立即评估的迹象。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "中年患者，主诉颈部及腋下无痛性淋巴结肿大伴盗汗、乏力、腹胀及易瘀斑，既往有高血压和高血脂病史。",
+        "diagnosis_reflection": "诊断准确（套细胞淋巴瘤），成功识别了B症状（盗汗、消瘦）及出血倾向等关键线索，但需警惕非典型发热表现。",
+        "examination_reflection": "检查选择存在明显遗漏，仅完成了骨髓穿刺，未开具全血细胞计数、流式细胞术、PET-CT等确诊及分期必需的关键检查，导致检查覆盖率低。",
+        "treatment_reflection": "治疗方案总体规范，涵盖了R-CHOP/BR方案及移植策略，并考虑了基础病调整；但遗漏了对贝类过敏史的监测细节及心理支持指导。",
+        "future_strategy": "面对疑似血液肿瘤病例，应优先完善血常规、流式细胞术及影像学分期检查以明确诊断和分期；制定化疗方案时需全面排查过敏史及合并症风险，并补充对症支持治疗计划。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T13:48:06.019650+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_05500",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "套细胞淋巴瘤"
+    ],
+    "treatment_plan": "1. 主要治疗：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、消瘦）、脾大及淋巴结肿大，建议立即启动以化疗联合免疫治疗为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者年龄及基础病（高血压、高血脂），若体能状态允许，可考虑含阿糖胞苷的强化方案（如R-DHAP）作为诱导，随后评估是否进行自体造血干细胞移植（ASCT）巩固治疗，这是年轻/适合患者的标准治愈性策略。\n2. 个性化调整：患者有高血压病史，使用激素（泼尼松）期间需严密监测血压，必要时调整降压药；存在高脂血症，需注意他汀类药物与化疗药物的相互作用。患者皮肤弹性差、易瘀斑，提示可能存在血小板减少或凝血功能异常，化疗前需完善血常规及凝血功能，预防出血风险。若患者不适合高强度化疗或移植，可考虑单用利妥昔单抗联合小分子靶向药（如伊布替尼，一种BTK抑制剂），该方案对老年或体弱患者耐受性较好。\n3. 安全性与监测：治疗期间需每周监测血常规，警惕骨髓抑制导致的感染和出血；定期复查肝肾功能及电解质。若出现高热（>38.5°C）、严重呼吸困难、剧烈头痛或意识改变，需立即就医。长期随访需监测疾病复发迹象，包括淋巴结大小、脾脏情况及LDH水平。",
+    "reasoning": "诊断依据：患者临床表现符合淋巴瘤特征（无痛性淋巴结肿大、脾大、B症状、易瘀斑）。关键确诊依据来自淋巴结活检病理：免疫表型CD20+、CD5+、Cyclin D1核阳性且SOX11阳性，FISH检测到IGH::CCND1重排，这是套细胞淋巴瘤（MCL）的特异性诊断标志。骨髓穿刺显示异常淋巴样细胞浸润，证实疾病已累及骨髓。结合患者消瘦、乏力等症状，排除其他血液肿瘤，确诊为套细胞淋巴瘤。治疗方案选择基于NCCN指南，针对该侵袭性亚型，需积极干预，同时根据患者合并症（高血压等）进行个体化调整以确保安全。",
+    "ordered_examinations": [
+      "体格检查",
+      "腹部检查",
+      "皮肤检查",
+      "淋巴结活检",
+      "骨髓穿刺和活检（BMAB）"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_05500",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.2,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "套细胞淋巴瘤"
+      ],
+      "expected": [
+        "套细胞淋巴瘤"
+      ],
+      "matched": [
+        "套细胞淋巴瘤"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "体格检查",
+        "腹部检查",
+        "皮肤检查",
+        "淋巴结活检",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "流式细胞术免疫分型",
+        "β2-微球蛋白检测",
+        "心肌酶谱",
+        "骨髓穿刺和活检（BMAB）",
+        "免疫组织化学（IHC）",
+        "荧光原位杂交（FISH）",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "结肠镜检查"
+      ],
+      "matched": [
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "precision": 0.2,
+      "coverage": 0.1,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、消瘦）、脾大及淋巴结肿大，建议立即启动以化疗联合免疫治疗为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者年龄及基础病（高血压、高血脂），若体能状态允许，可考虑含阿糖胞苷的强化方案（如R-DHAP）作为诱导，随后评估是否进行自体造血干细胞移植（ASCT）巩固治疗，这是年轻/适合患者的标准治愈性策略。\n2. 个性化调整：患者有高血压病史，使用激素（泼尼松）期间需严密监测血压，必要时调整降压药；存在高脂血症，需注意他汀类药物与化疗药物的相互作用。患者皮肤弹性差、易瘀斑，提示可能存在血小板减少或凝血功能异常，化疗前需完善血常规及凝血功能，预防出血风险。若患者不适合高强度化疗或移植，可考虑单用利妥昔单抗联合小分子靶向药（如伊布替尼，一种BTK抑制剂），该方案对老年或体弱患者耐受性较好。\n3. 安全性与监测：治疗期间需每周监测血常规，警惕骨髓抑制导致的感染和出血；定期复查肝肾功能及电解质。若出现高热（>38.5°C）、严重呼吸困难、剧烈头痛或意识改变，需立即就医。长期随访需监测疾病复发迹象，包括淋巴结大小、脾脏情况及LDH水平。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "未违反禁忌，方案主流但遗漏贝类过敏监测细节，缺乏针对患者认知与心理的适配。",
+      "reference": "开始使用利妥昔单抗联合苯达莫司汀化疗，并根据其年龄及合并症进行个体化调整；给予预处理以预防输注反应，并鉴于其有贝类相关过敏性休克病史而加强监测。根据需要提供止吐治疗和生长因子支持等对症支持治疗，并指导其维持高蛋白饮食和进行轻柔的身体活动，以帮助缓解疲劳并防止去适应。安排定期随访，在完成4个周期后通过PET-CT评估疗效，并密切监测感染、出血或新发神经系统症状等需要立即评估的迹象。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "套细胞淋巴瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "流式细胞术免疫分型",
+        "β2-微球蛋白检测",
+        "心肌酶谱",
+        "骨髓穿刺和活检（BMAB）",
+        "免疫组织化学（IHC）",
+        "荧光原位杂交（FISH）",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "结肠镜检查"
+      ],
+      "contraindications": {
+        "drugs": [
+          "贝类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "开始使用利妥昔单抗联合苯达莫司汀化疗，并根据其年龄及合并症进行个体化调整；给予预处理以预防输注反应，并鉴于其有贝类相关过敏性休克病史而加强监测。根据需要提供止吐治疗和生长因子支持等对症支持治疗，并指导其维持高蛋白饮食和进行轻柔的身体活动，以帮助缓解疲劳并防止去适应。安排定期随访，在完成4个周期后通过PET-CT评估疗效，并密切监测感染、出血或新发神经系统症状等需要立即评估的迹象。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "中年患者，主诉颈部及腋下无痛性淋巴结肿大伴盗汗、乏力、腹胀及易瘀斑，既往有高血压和高血脂病史。",
+      "diagnosis_reflection": "诊断准确（套细胞淋巴瘤），成功识别了B症状（盗汗、消瘦）及出血倾向等关键线索，但需警惕非典型发热表现。",
+      "examination_reflection": "检查选择存在明显遗漏，仅完成了骨髓穿刺，未开具全血细胞计数、流式细胞术、PET-CT等确诊及分期必需的关键检查，导致检查覆盖率低。",
+      "treatment_reflection": "治疗方案总体规范，涵盖了R-CHOP/BR方案及移植策略，并考虑了基础病调整；但遗漏了对贝类过敏史的监测细节及心理支持指导。",
+      "future_strategy": "面对疑似血液肿瘤病例，应优先完善血常规、流式细胞术及影像学分期检查以明确诊断和分期；制定化疗方案时需全面排查过敏史及合并症风险，并补充对症支持治疗计划。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/091.json#/applied_memory"
+  }
+}

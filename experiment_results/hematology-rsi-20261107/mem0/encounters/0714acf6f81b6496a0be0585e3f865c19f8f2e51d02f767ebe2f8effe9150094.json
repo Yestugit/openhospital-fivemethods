@@ -1,0 +1,252 @@
+{
+  "patient_id": "Patient_00554",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者为4岁女童，已确诊急性淋巴细胞白血病（ALL），骨髓象显示82%原始淋巴细胞，外周血可见大量淋巴母细胞，伴有严重贫血、血小板减少及凝血功能异常。病史、体征及关键检查结果（骨髓、流式、基因检测等）已齐全，具备进入诊断和治疗阶段的条件。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者为4岁儿童，骨髓检查显示原始淋巴细胞占比高达82%，外周血涂片见大量原始淋巴细胞，结合贫血、血小板减少及凝血功能异常等表现，符合急性淋巴细胞白血病（ALL）的典型特征。该疾病属于血液系统恶性肿瘤，需由血液科进行确诊、分型及制定化疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"急性淋巴细胞白血病\", \"treatment_plan\": \"1. 紧急住院与支持治疗：立即收治血液科，执行保护性隔离。鉴于血小板严重减少（22×10^9/L）及凝血功能异常（D-二聚体升高、纤维蛋白原降低），需严格卧床休息，避免外伤；根据出血风险及时输注血小板和新鲜冰冻血浆纠正凝血障碍。2. 诱导缓解化疗：确诊为B细胞急性淋巴细胞白血病后，立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中82%的原始淋巴细胞。3. 个体化调整：患儿4岁，需根据体重精确计算药物剂量；针对既往误诊史及当前高白细胞计数，加强水化碱化尿液以防肿瘤溶解综合征；若存在中枢神经系统受累迹象，需加用鞘内注射化疗药。4. 安全性监测：治疗期间严密监测血常规、肝肾功能、电解质及凝血指标；警惕感染（PCT升高提示潜在感染风险）、出血及药物毒性（如胰腺炎、神经毒性）。出现高热不退、活动性出血或意识改变等危险信号时立即抢救。5. 后续规划：诱导缓解后需进行微小残留病（MRD）检测及遗传学分层，制定巩固维持治疗方案及造血干细胞移植评估。\", \"reasoning\": \"诊断依据：患者为4岁儿童，临床表现为发热、骨痛、出血；实验室检查显示全血细胞减少（贫血、血小板显著减少）伴白细胞升高；外周血涂片见大量原始淋巴细胞；骨髓象示原始淋巴细胞占比高达82%，且淋巴活检证实为CD20+ B淋巴细胞单克隆浸润，符合急性淋巴细胞白血病（ALL）诊断标准。虽病史中有缺铁性贫血描述，但骨髓及免疫表型结果明确指向白血病，且伴有弥散性血管内凝血（DIC）倾向（D-二聚体升高、纤维蛋白原降低），病情危重，需按ALL紧急处理。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_00554",
+    "mode": "train",
+    "memory_notes": [
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User's child's peripheral blood smear shows small cell hypochromic red blood cells with central pallor occupying half the diameter, marked anisocytosis, and target cells, but no parasites or abnormal cells.",
+      "User's child's peripheral blood smear showed microcytic hypochromic red blood cells with central pallor occupying half the cell diameter, marked anisocytosis, and target cells, but no parasites, inclusions, or abnormal cells.",
+      "User's child's bone marrow examination showed massive infiltration by lymphoblasts replacing normal hematopoietic tissue, with 82% blast cells, significantly reduced myeloid and erythroid maturation, and abundant primitive B-lymphocytes.",
+      "User's child was diagnosed with iron deficiency anemia based on microcytic hypochromic anemia findings, absent bone marrow iron stores, and target cells on smear, while leukemia and myeloid sarcoma were ruled out.",
+      "User was recommended to admit their child immediately for bone marrow aspiration, biopsy, flow cytometry, and genetic testing to confirm diagnosis, along with strict bed rest and potential platelet transfusion due to low platelet count.",
+      "User's child was diagnosed with Acute Lymphoblastic Leukemia (ALL) based on clinical symptoms (fever, bone pain, bleeding) and diagnostic findings (82% blasts in bone marrow, circulating lymphoblasts).",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's child's peripheral blood smear revealed numerous circulating lymphoblasts with high nuclear-to-cytoplasmic ratio and scant cytoplasm, along with significant thrombocytopenia.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "User's child was recommended for immediate hospitalization in the hematology department with protective isolation, strict bed rest, and potential platelet transfusion due to severe thrombocytopenia and bleeding history.",
+      "User's child's blood culture was negative after 5 days of incubation, showing no bacterial, fungal, or other microbial growth.",
+      "User's child has elevated indirect bilirubin at 1.4 mg/dL.",
+      "User's child has a CBC showing hemoglobin of 86 g/L (low), hematocrit of 28% (low), MCV of 68 fL (low), and MCH of 20 pg (low), indicating microcytic hypochromic anemia.",
+      "Lymph node biopsy results showed complete loss of normal lymph node architecture, destruction of cortical follicles, absence of reactive germinal centers, and invasion by atypical CD20+ B-lymphoid cells forming a monoclonal population.",
+      "User's child's coagulation profile showed elevated D-dimer (2.8 mg/L FEU), prolonged PT (19.5s) and aPTT (52s), elevated INR (1.6), and low fibrinogen (0.9 g/L), indicating coagulopathy.",
+      "User's child has elevated inflammatory markers: CRP 45.0 mg/L, high-sensitivity CRP 8.5 mg/L, and PCT 2.8 ng/mL.",
+      "The medical case involved a misdiagnosis where acute lymphoblastic leukemia was initially suspected but the correct diagnosis was myeloid sarcoma (granulocytic sarcoma), highlighting the need to prioritize MRI, bone marrow biopsy, and immunophenotyping for children with orbital masses and spontaneous bruising."
+    ],
+    "chat_history": [],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {},
+    "decision_trace": [
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者为4岁女童，已确诊急性淋巴细胞白血病（ALL），骨髓象显示82%原始淋巴细胞，外周血可见大量淋巴母细胞，伴有严重贫血、血小板减少及凝血功能异常。病史、体征及关键检查结果（骨髓、流式、基因检测等）已齐全，具备进入诊断和治疗阶段的条件。"
+      }
+    ],
+    "exam_decision_trace": [],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "急性淋巴细胞白血病",
+      "treatment_plan": "1. 紧急住院与支持治疗：立即收治血液科，执行保护性隔离。鉴于血小板严重减少（22×10^9/L）及凝血功能异常（D-二聚体升高、纤维蛋白原降低），需严格卧床休息，避免外伤；根据出血风险及时输注血小板和新鲜冰冻血浆纠正凝血障碍。2. 诱导缓解化疗：确诊为B细胞急性淋巴细胞白血病后，立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中82%的原始淋巴细胞。3. 个体化调整：患儿4岁，需根据体重精确计算药物剂量；针对既往误诊史及当前高白细胞计数，加强水化碱化尿液以防肿瘤溶解综合征；若存在中枢神经系统受累迹象，需加用鞘内注射化疗药。4. 安全性监测：治疗期间严密监测血常规、肝肾功能、电解质及凝血指标；警惕感染（PCT升高提示潜在感染风险）、出血及药物毒性（如胰腺炎、神经毒性）。出现高热不退、活动性出血或意识改变等危险信号时立即抢救。5. 后续规划：诱导缓解后需进行微小残留病（MRD）检测及遗传学分层，制定巩固维持治疗方案及造血干细胞移植评估。",
+      "reasoning": "诊断依据：患者为4岁儿童，临床表现为发热、骨痛、出血；实验室检查显示全血细胞减少（贫血、血小板显著减少）伴白细胞升高；外周血涂片见大量原始淋巴细胞；骨髓象示原始淋巴细胞占比高达82%，且淋巴活检证实为CD20+ B淋巴细胞单克隆浸润，符合急性淋巴细胞白血病（ALL）诊断标准。虽病史中有缺铁性贫血描述，但骨髓及免疫表型结果明确指向白血病，且伴有弥散性血管内凝血（DIC）倾向（D-二聚体升高、纤维蛋白原降低），病情危重，需按ALL紧急处理。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_00554",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "急性淋巴细胞白血病"
+        ],
+        "expected": [
+          "急性淋巴细胞白血病"
+        ],
+        "matched": [
+          "急性淋巴细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "综合代谢面板（CMP）",
+          "凝血功能全套",
+          "脑脊液（CSF）分析"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": false
+      },
+      "treatmentDetail": {
+        "submitted": "1. 紧急住院与支持治疗：立即收治血液科，执行保护性隔离。鉴于血小板严重减少（22×10^9/L）及凝血功能异常（D-二聚体升高、纤维蛋白原降低），需严格卧床休息，避免外伤；根据出血风险及时输注血小板和新鲜冰冻血浆纠正凝血障碍。2. 诱导缓解化疗：确诊为B细胞急性淋巴细胞白血病后，立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中82%的原始淋巴细胞。3. 个体化调整：患儿4岁，需根据体重精确计算药物剂量；针对既往误诊史及当前高白细胞计数，加强水化碱化尿液以防肿瘤溶解综合征；若存在中枢神经系统受累迹象，需加用鞘内注射化疗药。4. 安全性监测：治疗期间严密监测血常规、肝肾功能、电解质及凝血指标；警惕感染（PCT升高提示潜在感染风险）、出血及药物毒性（如胰腺炎、神经毒性）。出现高热不退、活动性出血或意识改变等危险信号时立即抢救。5. 后续规划：诱导缓解后需进行微小残留病（MRD）检测及遗传学分层，制定巩固维持治疗方案及造血干细胞移植评估。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全未违禁，核心治疗与标准一致但细节略简，未充分结合患儿年龄及心理特点。",
+        "reference": "启动改良VDLP诱导治疗，按体重给药：长春新碱 1.5 mg/m²，每周静脉注射一次；柔红霉素 50 mg/m²，每周静脉注射一次，共4周；泼尼松 60 mg/m²/天，口服，连续28天；以及PEG-门冬酰胺酶 2500 U/m²，于第4天静脉注射。诱导期间每周经腰椎穿刺鞘内注射甲氨蝶呤 12 mg 和阿糖胞苷 70 mg，但仅在达到操作止血目标时进行（例如，腰穿前输注血小板使其达到≥50×10⁹/L，并将具有临床意义的凝血功能障碍纠正至本机构/儿童肿瘤科阈值，如INR ≤1.5且aPTT可接受；在操作前再次复查血小板计数和凝血参数）。开始肿瘤溶解综合征预防，给予积极的等渗静脉补液（目标为较高尿量，并严格记录出入量，频繁监测电解质、尿酸和肌酐）。使用适用于儿科的别嘌醇剂量（例如，100 mg/m²，口服，每8小时一次 [约10 mg/kg/天]，若肌酐升高则进行肾功能调整），除非有明确指征记录，否则避免常规尿液碱化；对于高风险肿瘤溶解综合征，或尽管已预防但尿酸/肌酐仍升高者，可考虑使用拉布立酶。输注浓缩红细胞以维持血红蛋白 >80 g/L，血小板 >20×10⁹/L 用于一般支持治疗（如上所述，操作时目标值需更高）。使用对乙酰氨基酚作为首选退热/镇痛药；由于血小板减少/出血风险，避免使用阿司匹林/水杨酸盐和非水杨酸类NSAIDs（如布洛芬、萘普生）；避免所有其他禁忌药物。监测门冬酰胺酶相关超敏反应、胰腺炎和凝血功能障碍，并在门冬酰胺酶暴露前后重新评估凝血参数。随后进入巩固治疗，采用大剂量甲氨蝶呤 5 g/m² 并给予亚叶酸钙解救，之后进行延迟强化和维持治疗。全程提供营养支持、感染控制以及符合患儿发育阶段的心理社会照护。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "急性淋巴细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "综合代谢面板（CMP）",
+          "凝血功能全套",
+          "脑脊液（CSF）分析"
+        ],
+        "contraindications": {
+          "drugs": [
+            "可待因",
+            "曲马多",
+            "阿司匹林（水杨酸盐）"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "启动改良VDLP诱导治疗，按体重给药：长春新碱 1.5 mg/m²，每周静脉注射一次；柔红霉素 50 mg/m²，每周静脉注射一次，共4周；泼尼松 60 mg/m²/天，口服，连续28天；以及PEG-门冬酰胺酶 2500 U/m²，于第4天静脉注射。诱导期间每周经腰椎穿刺鞘内注射甲氨蝶呤 12 mg 和阿糖胞苷 70 mg，但仅在达到操作止血目标时进行（例如，腰穿前输注血小板使其达到≥50×10⁹/L，并将具有临床意义的凝血功能障碍纠正至本机构/儿童肿瘤科阈值，如INR ≤1.5且aPTT可接受；在操作前再次复查血小板计数和凝血参数）。开始肿瘤溶解综合征预防，给予积极的等渗静脉补液（目标为较高尿量，并严格记录出入量，频繁监测电解质、尿酸和肌酐）。使用适用于儿科的别嘌醇剂量（例如，100 mg/m²，口服，每8小时一次 [约10 mg/kg/天]，若肌酐升高则进行肾功能调整），除非有明确指征记录，否则避免常规尿液碱化；对于高风险肿瘤溶解综合征，或尽管已预防但尿酸/肌酐仍升高者，可考虑使用拉布立酶。输注浓缩红细胞以维持血红蛋白 >80 g/L，血小板 >20×10⁹/L 用于一般支持治疗（如上所述，操作时目标值需更高）。使用对乙酰氨基酚作为首选退热/镇痛药；由于血小板减少/出血风险，避免使用阿司匹林/水杨酸盐和非水杨酸类NSAIDs（如布洛芬、萘普生）；避免所有其他禁忌药物。监测门冬酰胺酶相关超敏反应、胰腺炎和凝血功能障碍，并在门冬酰胺酶暴露前后重新评估凝血参数。随后进入巩固治疗，采用大剂量甲氨蝶呤 5 g/m² 并给予亚叶酸钙解救，之后进行延迟强化和维持治疗。全程提供营养支持、感染控制以及符合患儿发育阶段的心理社会照护。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "4岁患儿，确诊急性淋巴细胞白血病，伴血小板严重减少及凝血功能异常。",
+        "diagnosis_reflection": "诊断准确（100%），成功识别急性淋巴细胞白血病。",
+        "examination_reflection": "检查遗漏严重，未开具任何关键检查（如骨髓穿刺、流式细胞术等），导致检查覆盖率和精确度均为0，需强化对血液肿瘤确诊路径的掌握。",
+        "treatment_reflection": "治疗方案核心方向正确且安全，但细节不足：未充分结合患儿年龄进行药物剂量精确计算，对预防肿瘤溶解综合征的具体措施（如水化碱化方案）及操作前止血目标描述不够具体。",
+        "future_strategy": "面对疑似血液恶性肿瘤病例，必须立即完善骨髓及免疫分型等确诊检查；制定化疗方案时需严格依据体重/体表面积计算剂量，并详细列出支持治疗（如防TLS、出血管理）的具体执行标准。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T08:29:27.947056+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_00554",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "急性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. 紧急住院与支持治疗：立即收治血液科，执行保护性隔离。鉴于血小板严重减少（22×10^9/L）及凝血功能异常（D-二聚体升高、纤维蛋白原降低），需严格卧床休息，避免外伤；根据出血风险及时输注血小板和新鲜冰冻血浆纠正凝血障碍。2. 诱导缓解化疗：确诊为B细胞急性淋巴细胞白血病后，立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中82%的原始淋巴细胞。3. 个体化调整：患儿4岁，需根据体重精确计算药物剂量；针对既往误诊史及当前高白细胞计数，加强水化碱化尿液以防肿瘤溶解综合征；若存在中枢神经系统受累迹象，需加用鞘内注射化疗药。4. 安全性监测：治疗期间严密监测血常规、肝肾功能、电解质及凝血指标；警惕感染（PCT升高提示潜在感染风险）、出血及药物毒性（如胰腺炎、神经毒性）。出现高热不退、活动性出血或意识改变等危险信号时立即抢救。5. 后续规划：诱导缓解后需进行微小残留病（MRD）检测及遗传学分层，制定巩固维持治疗方案及造血干细胞移植评估。",
+    "reasoning": "诊断依据：患者为4岁儿童，临床表现为发热、骨痛、出血；实验室检查显示全血细胞减少（贫血、血小板显著减少）伴白细胞升高；外周血涂片见大量原始淋巴细胞；骨髓象示原始淋巴细胞占比高达82%，且淋巴活检证实为CD20+ B淋巴细胞单克隆浸润，符合急性淋巴细胞白血病（ALL）诊断标准。虽病史中有缺铁性贫血描述，但骨髓及免疫表型结果明确指向白血病，且伴有弥散性血管内凝血（DIC）倾向（D-二聚体升高、纤维蛋白原降低），病情危重，需按ALL紧急处理。",
+    "ordered_examinations": [],
+    "conversation_rounds": 0,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_00554",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "急性淋巴细胞白血病"
+      ],
+      "expected": [
+        "急性淋巴细胞白血病"
+      ],
+      "matched": [
+        "急性淋巴细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "综合代谢面板（CMP）",
+        "凝血功能全套",
+        "脑脊液（CSF）分析"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": false
+    },
+    "treatmentDetail": {
+      "submitted": "1. 紧急住院与支持治疗：立即收治血液科，执行保护性隔离。鉴于血小板严重减少（22×10^9/L）及凝血功能异常（D-二聚体升高、纤维蛋白原降低），需严格卧床休息，避免外伤；根据出血风险及时输注血小板和新鲜冰冻血浆纠正凝血障碍。2. 诱导缓解化疗：确诊为B细胞急性淋巴细胞白血病后，立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中82%的原始淋巴细胞。3. 个体化调整：患儿4岁，需根据体重精确计算药物剂量；针对既往误诊史及当前高白细胞计数，加强水化碱化尿液以防肿瘤溶解综合征；若存在中枢神经系统受累迹象，需加用鞘内注射化疗药。4. 安全性监测：治疗期间严密监测血常规、肝肾功能、电解质及凝血指标；警惕感染（PCT升高提示潜在感染风险）、出血及药物毒性（如胰腺炎、神经毒性）。出现高热不退、活动性出血或意识改变等危险信号时立即抢救。5. 后续规划：诱导缓解后需进行微小残留病（MRD）检测及遗传学分层，制定巩固维持治疗方案及造血干细胞移植评估。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全未违禁，核心治疗与标准一致但细节略简，未充分结合患儿年龄及心理特点。",
+      "reference": "启动改良VDLP诱导治疗，按体重给药：长春新碱 1.5 mg/m²，每周静脉注射一次；柔红霉素 50 mg/m²，每周静脉注射一次，共4周；泼尼松 60 mg/m²/天，口服，连续28天；以及PEG-门冬酰胺酶 2500 U/m²，于第4天静脉注射。诱导期间每周经腰椎穿刺鞘内注射甲氨蝶呤 12 mg 和阿糖胞苷 70 mg，但仅在达到操作止血目标时进行（例如，腰穿前输注血小板使其达到≥50×10⁹/L，并将具有临床意义的凝血功能障碍纠正至本机构/儿童肿瘤科阈值，如INR ≤1.5且aPTT可接受；在操作前再次复查血小板计数和凝血参数）。开始肿瘤溶解综合征预防，给予积极的等渗静脉补液（目标为较高尿量，并严格记录出入量，频繁监测电解质、尿酸和肌酐）。使用适用于儿科的别嘌醇剂量（例如，100 mg/m²，口服，每8小时一次 [约10 mg/kg/天]，若肌酐升高则进行肾功能调整），除非有明确指征记录，否则避免常规尿液碱化；对于高风险肿瘤溶解综合征，或尽管已预防但尿酸/肌酐仍升高者，可考虑使用拉布立酶。输注浓缩红细胞以维持血红蛋白 >80 g/L，血小板 >20×10⁹/L 用于一般支持治疗（如上所述，操作时目标值需更高）。使用对乙酰氨基酚作为首选退热/镇痛药；由于血小板减少/出血风险，避免使用阿司匹林/水杨酸盐和非水杨酸类NSAIDs（如布洛芬、萘普生）；避免所有其他禁忌药物。监测门冬酰胺酶相关超敏反应、胰腺炎和凝血功能障碍，并在门冬酰胺酶暴露前后重新评估凝血参数。随后进入巩固治疗，采用大剂量甲氨蝶呤 5 g/m² 并给予亚叶酸钙解救，之后进行延迟强化和维持治疗。全程提供营养支持、感染控制以及符合患儿发育阶段的心理社会照护。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "急性淋巴细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "综合代谢面板（CMP）",
+        "凝血功能全套",
+        "脑脊液（CSF）分析"
+      ],
+      "contraindications": {
+        "drugs": [
+          "可待因",
+          "曲马多",
+          "阿司匹林（水杨酸盐）"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "启动改良VDLP诱导治疗，按体重给药：长春新碱 1.5 mg/m²，每周静脉注射一次；柔红霉素 50 mg/m²，每周静脉注射一次，共4周；泼尼松 60 mg/m²/天，口服，连续28天；以及PEG-门冬酰胺酶 2500 U/m²，于第4天静脉注射。诱导期间每周经腰椎穿刺鞘内注射甲氨蝶呤 12 mg 和阿糖胞苷 70 mg，但仅在达到操作止血目标时进行（例如，腰穿前输注血小板使其达到≥50×10⁹/L，并将具有临床意义的凝血功能障碍纠正至本机构/儿童肿瘤科阈值，如INR ≤1.5且aPTT可接受；在操作前再次复查血小板计数和凝血参数）。开始肿瘤溶解综合征预防，给予积极的等渗静脉补液（目标为较高尿量，并严格记录出入量，频繁监测电解质、尿酸和肌酐）。使用适用于儿科的别嘌醇剂量（例如，100 mg/m²，口服，每8小时一次 [约10 mg/kg/天]，若肌酐升高则进行肾功能调整），除非有明确指征记录，否则避免常规尿液碱化；对于高风险肿瘤溶解综合征，或尽管已预防但尿酸/肌酐仍升高者，可考虑使用拉布立酶。输注浓缩红细胞以维持血红蛋白 >80 g/L，血小板 >20×10⁹/L 用于一般支持治疗（如上所述，操作时目标值需更高）。使用对乙酰氨基酚作为首选退热/镇痛药；由于血小板减少/出血风险，避免使用阿司匹林/水杨酸盐和非水杨酸类NSAIDs（如布洛芬、萘普生）；避免所有其他禁忌药物。监测门冬酰胺酶相关超敏反应、胰腺炎和凝血功能障碍，并在门冬酰胺酶暴露前后重新评估凝血参数。随后进入巩固治疗，采用大剂量甲氨蝶呤 5 g/m² 并给予亚叶酸钙解救，之后进行延迟强化和维持治疗。全程提供营养支持、感染控制以及符合患儿发育阶段的心理社会照护。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "4岁患儿，确诊急性淋巴细胞白血病，伴血小板严重减少及凝血功能异常。",
+      "diagnosis_reflection": "诊断准确（100%），成功识别急性淋巴细胞白血病。",
+      "examination_reflection": "检查遗漏严重，未开具任何关键检查（如骨髓穿刺、流式细胞术等），导致检查覆盖率和精确度均为0，需强化对血液肿瘤确诊路径的掌握。",
+      "treatment_reflection": "治疗方案核心方向正确且安全，但细节不足：未充分结合患儿年龄进行药物剂量精确计算，对预防肿瘤溶解综合征的具体措施（如水化碱化方案）及操作前止血目标描述不够具体。",
+      "future_strategy": "面对疑似血液恶性肿瘤病例，必须立即完善骨髓及免疫分型等确诊检查；制定化疗方案时需严格依据体重/体表面积计算剂量，并详细列出支持治疗（如防TLS、出血管理）的具体执行标准。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/008.json#/applied_memory"
+  }
+}

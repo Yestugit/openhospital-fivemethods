@@ -1,0 +1,438 @@
+{
+  "patient_id": "Patient_04183",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史、检查结果或已开检查信息，为了明确诊断方向，首先需要向患者询问主要临床症状和体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "鼻子经常自己出血，手臂腿上一碰就青。最近两周头痛头晕更厉害，手指会刺痛发凉。吃饭稍微多一点就觉得胃胀。没有发烧，也没有黑便或呕血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的月经量是否过多（如果是女性）？\", \"reason\": \"患者主诉鼻出血和易瘀青，提示可能存在出血倾向，需要进一步询问其他部位出血情况（如牙龈、皮肤紫癜、月经过多等）以评估出血严重程度及可能病因。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的月经量是否过多（如果是女性）？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "牙龈没出血，但鼻子常自己流。皮肤一碰就青。我52岁绝经了，现在没有月经，所以不存在月经量多的问题。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的大便颜色是否正常，有无黑便？\", \"reason\": \"患者主诉鼻出血和易瘀伤，但尚未明确是否有其他部位出血（如牙龈、皮肤紫癜）及消化道出血情况，且未进行任何检查。为进一步评估出血倾向的原因（如血小板减少、凝血功能障碍等），需要补充询问相关症状并考虑后续检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的大便颜色是否正常，有无黑便？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "牙龈没出血，但鼻子常自己流。皮肤一碰就青。我52岁绝经了，现在没有月经，所以不存在月经量多的问题。大便颜色正常，没有黑便。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者为52岁女性，主诉鼻出血、皮肤易瘀斑，伴有头痛头晕及手指刺痛发凉等神经系统症状。虽然已排除月经因素和黑便，但缺乏关键的实验室检查结果（如血常规、凝血功能）来明确是否存在血小板减少、贫血或凝血功能障碍，这是制定后续诊疗方案的基础。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主要表现为自发性鼻出血、皮肤易瘀斑（提示血小板减少或功能异常），伴有头痛头晕及肢体末梢刺痛发凉，需优先进行血常规及凝血功能检查以评估是否存在贫血、血小板减少症或凝血障碍，这是明确出血原因的关键第一步。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"凝血功能全套\", \"外周血涂片\"], \"reason\": \"患者表现为自发性鼻出血、轻微外伤后皮肤瘀斑，伴有头痛头晕及肢体末梢症状，需首先通过全血细胞计数（CBC）评估是否存在血小板减少或贫血；凝血功能全套用于排查凝血因子异常导致的出血倾向；外周血涂片可观察血细胞形态，辅助鉴别血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血小板计数\": \"PLT：1350 x 10^9/L［参考范围：150-400 x 10^9/L］\", \"血白细胞计数\": \"WBC：13.8 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板计数\", \"血白细胞计数\"]}, \"凝血功能全套\": {\"result\": {\"凝血酶原时间\": \"PT：12.6 s［参考范围：11-13.5］\", \"活化部分凝血活酶时间\": \"aPTT：31 s［参考范围：25-35］\", \"D-二聚体\": \"D-二聚体：0.78 mg/L FEU［参考范围：<0.5］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"D-二聚体\"]}, \"外周血涂片\": {\"result\": {\"血小板数量\": \"显著血小板增多［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"伴血小板聚集\", \"血小板形态与分布\": \"血小板大小不一及大量巨大血小板\", \"外周血涂片其他异常所见\": \"偶见巨核细胞碎片\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板数量\", \"血小板聚集\", \"血小板形态与分布\", \"外周血涂片其他异常所见\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者表现为血小板显著增多（1350 x 10^9/L）、白细胞轻度升高，外周血涂片显示巨大血小板及聚集，结合临床症状（鼻出血、皮肤瘀斑），高度提示原发性血小板增多症。关键检查（CBC、凝血功能、外周血涂片）结果已出且指向明确，信息足以支持进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为血小板显著增多（PLT 1350 x 10^9/L）、白细胞轻度升高，外周血涂片显示血小板聚集、大小不一及大量巨大血小板，伴有偶见巨核细胞碎片。结合患者有鼻出血、皮肤易瘀斑等出血倾向症状，高度提示原发性血小板增多症或其他骨髓增殖性肿瘤，属于血液系统疾病，需由血液科进行进一步诊断和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"原发性血小板增多症\", \"treatment_plan\": \"1. 风险分层与基础治疗：患者52岁，血小板显著升高（1350×10^9/L）且伴有微循环障碍症状（手指刺痛发凉、头痛头晕），属于高危组。首选阿司匹林抗血小板治疗以预防血栓形成，但需密切监测出血风险（如鼻出血）。\\n2. 细胞减灭治疗：鉴于血小板计数极高且出现缺血性症状，建议立即启动降细胞治疗。首选羟基脲作为一线药物，根据血常规结果动态调整剂量，目标是将血小板控制在安全范围（通常<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α治疗。\\n3. 紧急处理：若出现严重出血或血栓事件，需住院进行血小板单采术快速降低血小板数量，并补充凝血因子或输注血小板（视具体情况而定）。\\n4. 个性化监测：定期复查全血细胞计数、外周血涂片及JAK2 V617F突变状态。针对患者绝经后年龄特点，评估心血管风险因素（高血压、高血脂等）并进行综合管理。\\n5. 安全性警示：治疗期间需警惕骨髓抑制导致的贫血或白细胞减少；若出现剧烈头痛、视力模糊、肢体麻木加重或大量出血，需立即就医。\", \"reasoning\": \"诊断依据：患者表现为显著的持续性血小板增多（PLT 1350×10^9/L），白细胞轻度升高，符合骨髓增殖性肿瘤特征。外周血涂片显示血小板大小不一、巨大血小板及聚集现象，这是原发性血小板增多症的典型形态学改变。临床症状（手指刺痛发凉、头痛头晕）提示存在微血管血流受阻，是ET常见的缺血表现。虽然患者有鼻出血史，但在ET中，极高血小板水平既导致血栓也常伴获得性vWD综合征引起出血。排除其他选项：无贫血、无原始细胞增多，不支持白血病或MDS；无脾大描述，不支持脾功能亢进；无淋巴结肿大，不支持淋巴瘤。因此最可能的诊断为原发性血小板增多症。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_04183",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_01590 has mild anemia with hemoglobin of 98 g/L, normal platelet count (280 x 10^9/L), and isolated prolonged activated partial thromboplastin time (aPTT) of 46 seconds.",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L).",
+      "User's child has severe thrombocytopenia (platelet count 22×10^9/L) with signs of disseminated intravascular coagulation (DIC), including elevated D-dimer and low fibrinogen.",
+      "Patient_01894's coagulation profile showed elevated D-dimer (1.82 mg/L FEU), prolonged PT (16.5s) and PTT (38.0s), elevated INR (1.45), and low fibrinogen (1.6 g/L)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "鼻子经常自己出血，手臂腿上一碰就青。最近两周头痛头晕更厉害，手指会刺痛发凉。吃饭稍微多一点就觉得胃胀。没有发烧，也没有黑便或呕血。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的月经量是否过多（如果是女性）？"
+      },
+      {
+        "from": "patient",
+        "text": "牙龈没出血，但鼻子常自己流。皮肤一碰就青。我52岁绝经了，现在没有月经，所以不存在月经量多的问题。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的大便颜色是否正常，有无黑便？"
+      },
+      {
+        "from": "patient",
+        "text": "牙龈没出血，但鼻子常自己流。皮肤一碰就青。我52岁绝经了，现在没有月经，所以不存在月经量多的问题。大便颜色正常，没有黑便。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血小板计数": "PLT：1350 x 10^9/L［参考范围：150-400 x 10^9/L］",
+          "血白细胞计数": "WBC：13.8 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板计数",
+          "血白细胞计数"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "凝血酶原时间": "PT：12.6 s［参考范围：11-13.5］",
+          "活化部分凝血活酶时间": "aPTT：31 s［参考范围：25-35］",
+          "D-二聚体": "D-二聚体：0.78 mg/L FEU［参考范围：<0.5］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "D-二聚体"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "血小板数量": "显著血小板增多［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "伴血小板聚集",
+          "血小板形态与分布": "血小板大小不一及大量巨大血小板",
+          "外周血涂片其他异常所见": "偶见巨核细胞碎片"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板数量",
+          "血小板聚集",
+          "血小板形态与分布",
+          "外周血涂片其他异常所见"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史、检查结果或已开检查信息，为了明确诊断方向，首先需要向患者询问主要临床症状和体征。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的月经量是否过多（如果是女性）？",
+        "reason": "患者主诉鼻出血和易瘀青，提示可能存在出血倾向，需要进一步询问其他部位出血情况（如牙龈、皮肤紫癜、月经过多等）以评估出血严重程度及可能病因。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有牙龈出血、皮肤出现不明原因的瘀斑或红点？另外，您的大便颜色是否正常，有无黑便？",
+        "reason": "患者主诉鼻出血和易瘀伤，但尚未明确是否有其他部位出血（如牙龈、皮肤紫癜）及消化道出血情况，且未进行任何检查。为进一步评估出血倾向的原因（如血小板减少、凝血功能障碍等），需要补充询问相关症状并考虑后续检查。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者为52岁女性，主诉鼻出血、皮肤易瘀斑，伴有头痛头晕及手指刺痛发凉等神经系统症状。虽然已排除月经因素和黑便，但缺乏关键的实验室检查结果（如血常规、凝血功能）来明确是否存在血小板减少、贫血或凝血功能障碍，这是制定后续诊疗方案的基础。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者表现为血小板显著增多（1350 x 10^9/L）、白细胞轻度升高，外周血涂片显示巨大血小板及聚集，结合临床症状（鼻出血、皮肤瘀斑），高度提示原发性血小板增多症。关键检查（CBC、凝血功能、外周血涂片）结果已出且指向明确，信息足以支持进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片"
+        ],
+        "reason": "患者表现为自发性鼻出血、轻微外伤后皮肤瘀斑，伴有头痛头晕及肢体末梢症状，需首先通过全血细胞计数（CBC）评估是否存在血小板减少或贫血；凝血功能全套用于排查凝血因子异常导致的出血倾向；外周血涂片可观察血细胞形态，辅助鉴别血液系统疾病。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "原发性血小板增多症",
+      "treatment_plan": "1. 风险分层与基础治疗：患者52岁，血小板显著升高（1350×10^9/L）且伴有微循环障碍症状（手指刺痛发凉、头痛头晕），属于高危组。首选阿司匹林抗血小板治疗以预防血栓形成，但需密切监测出血风险（如鼻出血）。\n2. 细胞减灭治疗：鉴于血小板计数极高且出现缺血性症状，建议立即启动降细胞治疗。首选羟基脲作为一线药物，根据血常规结果动态调整剂量，目标是将血小板控制在安全范围（通常<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α治疗。\n3. 紧急处理：若出现严重出血或血栓事件，需住院进行血小板单采术快速降低血小板数量，并补充凝血因子或输注血小板（视具体情况而定）。\n4. 个性化监测：定期复查全血细胞计数、外周血涂片及JAK2 V617F突变状态。针对患者绝经后年龄特点，评估心血管风险因素（高血压、高血脂等）并进行综合管理。\n5. 安全性警示：治疗期间需警惕骨髓抑制导致的贫血或白细胞减少；若出现剧烈头痛、视力模糊、肢体麻木加重或大量出血，需立即就医。",
+      "reasoning": "诊断依据：患者表现为显著的持续性血小板增多（PLT 1350×10^9/L），白细胞轻度升高，符合骨髓增殖性肿瘤特征。外周血涂片显示血小板大小不一、巨大血小板及聚集现象，这是原发性血小板增多症的典型形态学改变。临床症状（手指刺痛发凉、头痛头晕）提示存在微血管血流受阻，是ET常见的缺血表现。虽然患者有鼻出血史，但在ET中，极高血小板水平既导致血栓也常伴获得性vWD综合征引起出血。排除其他选项：无贫血、无原始细胞增多，不支持白血病或MDS；无脾大描述，不支持脾功能亢进；无淋巴结肿大，不支持淋巴瘤。因此最可能的诊断为原发性血小板增多症。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_04183",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.68,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "原发性血小板增多症"
+        ],
+        "expected": [
+          "原发性血小板增多症"
+        ],
+        "matched": [
+          "原发性血小板增多症"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测",
+          "血清电解质",
+          "综合代谢面板（CMP）",
+          "细胞遗传学分析"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片"
+        ],
+        "precision": 1.0,
+        "coverage": 0.375,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 风险分层与基础治疗：患者52岁，血小板显著升高（1350×10^9/L）且伴有微循环障碍症状（手指刺痛发凉、头痛头晕），属于高危组。首选阿司匹林抗血小板治疗以预防血栓形成，但需密切监测出血风险（如鼻出血）。\n2. 细胞减灭治疗：鉴于血小板计数极高且出现缺血性症状，建议立即启动降细胞治疗。首选羟基脲作为一线药物，根据血常规结果动态调整剂量，目标是将血小板控制在安全范围（通常<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α治疗。\n3. 紧急处理：若出现严重出血或血栓事件，需住院进行血小板单采术快速降低血小板数量，并补充凝血因子或输注血小板（视具体情况而定）。\n4. 个性化监测：定期复查全血细胞计数、外周血涂片及JAK2 V617F突变状态。针对患者绝经后年龄特点，评估心血管风险因素（高血压、高血脂等）并进行综合管理。\n5. 安全性警示：治疗期间需警惕骨髓抑制导致的贫血或白细胞减少；若出现剧烈头痛、视力模糊、肢体麻木加重或大量出血，需立即就医。",
+        "overallScore": 0.68,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.8,
+        "reasoning": "未违禁忌。方案忽略出血风险下阿司匹林需暂停及假性高钾确认，但整体策略合理且关注个体情况。",
+        "reference": "启动羟基脲作为一线细胞减灭治疗，将血小板计数降至 500 x 10^9/L 以下，并在前两个月每周监测一次 CBC。鉴于存在活动性皮肤黏膜出血且 PLT >1000 x 10^9/L，应评估是否存在获得性冯·维勒布兰德综合征（vWF 抗原和活性 +/- 多聚体分析；因子 VIII；考虑进行血小板功能检测）。在出血得到控制且 AvWS 被排除或治疗前，应暂停或推迟使用小剂量阿司匹林；如因明确的血栓高风险而开始/继续使用阿司匹林，应明确记录风险/获益，并制定停药规则（如反复/加重鼻出血、新发明显瘀斑、胃肠道出血或血红蛋白下降，应立即停用），同时密切监测出血情况。使用血浆或床旁全血检测重复测定钾值，并评估溶血指数，以确认疑似假性高钾血症，避免漏诊真正的高钾血症。明确 del(21)(q22) 为低水平非典型克隆；在监测病情演变的同时继续按 ET 进行管理，若出现新的血细胞减少/发育异常、原始细胞增多、进行性脾大或非典型临床过程，则以重复骨髓检查/细胞遗传学复查重新评估。建议在当前用药基础上严格控制血糖和高血压，保持充足水分摄入，避免脱水以降低血栓风险。安排 4 周后复诊，进行 CBC 和症状评估，并嘱患者如出现严重头痛、视力改变或出血增多，应立即就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "原发性血小板增多症",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测",
+          "血清电解质",
+          "综合代谢面板（CMP）",
+          "细胞遗传学分析"
+        ],
+        "contraindications": {
+          "drugs": [
+            "青霉素类"
+          ],
+          "treatments": [
+            "脾切除术"
+          ]
+        },
+        "treatment_plan": "启动羟基脲作为一线细胞减灭治疗，将血小板计数降至 500 x 10^9/L 以下，并在前两个月每周监测一次 CBC。鉴于存在活动性皮肤黏膜出血且 PLT >1000 x 10^9/L，应评估是否存在获得性冯·维勒布兰德综合征（vWF 抗原和活性 +/- 多聚体分析；因子 VIII；考虑进行血小板功能检测）。在出血得到控制且 AvWS 被排除或治疗前，应暂停或推迟使用小剂量阿司匹林；如因明确的血栓高风险而开始/继续使用阿司匹林，应明确记录风险/获益，并制定停药规则（如反复/加重鼻出血、新发明显瘀斑、胃肠道出血或血红蛋白下降，应立即停用），同时密切监测出血情况。使用血浆或床旁全血检测重复测定钾值，并评估溶血指数，以确认疑似假性高钾血症，避免漏诊真正的高钾血症。明确 del(21)(q22) 为低水平非典型克隆；在监测病情演变的同时继续按 ET 进行管理，若出现新的血细胞减少/发育异常、原始细胞增多、进行性脾大或非典型临床过程，则以重复骨髓检查/细胞遗传学复查重新评估。建议在当前用药基础上严格控制血糖和高血压，保持充足水分摄入，避免脱水以降低血栓风险。安排 4 周后复诊，进行 CBC 和症状评估，并嘱患者如出现严重头痛、视力改变或出血增多，应立即就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "52岁绝经女性，主诉反复鼻出血、皮肤易瘀斑伴头痛头晕及手指刺痛发凉（微循环障碍），无发热黑便。",
+        "diagnosis_reflection": "诊断准确命中原发性血小板增多症。经验：面对老年患者出现自发性黏膜出血与缺血症状并存时，需高度警惕血小板异常增高导致的获得性血管性血友病综合征（AvWS）或血栓/出血双重风险。",
+        "examination_reflection": "检查精准度1.0但覆盖率低（37.5%）。做对点：及时开具CBC、凝血功能及外周血涂片以确认血小板异常。遗漏点：未安排骨髓穿刺活检（BMAB）、分子遗传学检测（如JAK2突变）及细胞遗传学分析，导致无法确诊分型及评估克隆演变风险。",
+        "treatment_reflection": "治疗策略整体合理但存在关键疏漏。做对点：识别高危组并启动羟基脲降细胞治疗。遗漏点：在存在活动性鼻出血和皮肤瘀斑且PLT>1000×10^9/L时，未暂停阿司匹林以防加重出血，也未提及排查AvWS；同时忽略了假性高钾血症的鉴别处理。",
+        "future_strategy": "遇到疑似ET病例：1.完善骨髓+基因+细胞遗传学检查以确诊分型；2.若合并活动性出血，暂缓抗血小板药并排查AvWS；3.高危患者立即启动细胞减灭治疗，并制定严密监测计划。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:15:29.772238+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_04183",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "原发性血小板增多症"
+    ],
+    "treatment_plan": "1. 风险分层与基础治疗：患者52岁，血小板显著升高（1350×10^9/L）且伴有微循环障碍症状（手指刺痛发凉、头痛头晕），属于高危组。首选阿司匹林抗血小板治疗以预防血栓形成，但需密切监测出血风险（如鼻出血）。\n2. 细胞减灭治疗：鉴于血小板计数极高且出现缺血性症状，建议立即启动降细胞治疗。首选羟基脲作为一线药物，根据血常规结果动态调整剂量，目标是将血小板控制在安全范围（通常<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α治疗。\n3. 紧急处理：若出现严重出血或血栓事件，需住院进行血小板单采术快速降低血小板数量，并补充凝血因子或输注血小板（视具体情况而定）。\n4. 个性化监测：定期复查全血细胞计数、外周血涂片及JAK2 V617F突变状态。针对患者绝经后年龄特点，评估心血管风险因素（高血压、高血脂等）并进行综合管理。\n5. 安全性警示：治疗期间需警惕骨髓抑制导致的贫血或白细胞减少；若出现剧烈头痛、视力模糊、肢体麻木加重或大量出血，需立即就医。",
+    "reasoning": "诊断依据：患者表现为显著的持续性血小板增多（PLT 1350×10^9/L），白细胞轻度升高，符合骨髓增殖性肿瘤特征。外周血涂片显示血小板大小不一、巨大血小板及聚集现象，这是原发性血小板增多症的典型形态学改变。临床症状（手指刺痛发凉、头痛头晕）提示存在微血管血流受阻，是ET常见的缺血表现。虽然患者有鼻出血史，但在ET中，极高血小板水平既导致血栓也常伴获得性vWD综合征引起出血。排除其他选项：无贫血、无原始细胞增多，不支持白血病或MDS；无脾大描述，不支持脾功能亢进；无淋巴结肿大，不支持淋巴瘤。因此最可能的诊断为原发性血小板增多症。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "凝血功能全套",
+      "外周血涂片"
+    ],
+    "conversation_rounds": 3,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_04183",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.68,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "原发性血小板增多症"
+      ],
+      "expected": [
+        "原发性血小板增多症"
+      ],
+      "matched": [
+        "原发性血小板增多症"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套",
+        "外周血涂片"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测",
+        "血清电解质",
+        "综合代谢面板（CMP）",
+        "细胞遗传学分析"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套",
+        "外周血涂片"
+      ],
+      "precision": 1.0,
+      "coverage": 0.375,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 风险分层与基础治疗：患者52岁，血小板显著升高（1350×10^9/L）且伴有微循环障碍症状（手指刺痛发凉、头痛头晕），属于高危组。首选阿司匹林抗血小板治疗以预防血栓形成，但需密切监测出血风险（如鼻出血）。\n2. 细胞减灭治疗：鉴于血小板计数极高且出现缺血性症状，建议立即启动降细胞治疗。首选羟基脲作为一线药物，根据血常规结果动态调整剂量，目标是将血小板控制在安全范围（通常<400×10^9/L）。若对羟基脲不耐受或无效，可考虑干扰素α治疗。\n3. 紧急处理：若出现严重出血或血栓事件，需住院进行血小板单采术快速降低血小板数量，并补充凝血因子或输注血小板（视具体情况而定）。\n4. 个性化监测：定期复查全血细胞计数、外周血涂片及JAK2 V617F突变状态。针对患者绝经后年龄特点，评估心血管风险因素（高血压、高血脂等）并进行综合管理。\n5. 安全性警示：治疗期间需警惕骨髓抑制导致的贫血或白细胞减少；若出现剧烈头痛、视力模糊、肢体麻木加重或大量出血，需立即就医。",
+      "overallScore": 0.68,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.8,
+      "reasoning": "未违禁忌。方案忽略出血风险下阿司匹林需暂停及假性高钾确认，但整体策略合理且关注个体情况。",
+      "reference": "启动羟基脲作为一线细胞减灭治疗，将血小板计数降至 500 x 10^9/L 以下，并在前两个月每周监测一次 CBC。鉴于存在活动性皮肤黏膜出血且 PLT >1000 x 10^9/L，应评估是否存在获得性冯·维勒布兰德综合征（vWF 抗原和活性 +/- 多聚体分析；因子 VIII；考虑进行血小板功能检测）。在出血得到控制且 AvWS 被排除或治疗前，应暂停或推迟使用小剂量阿司匹林；如因明确的血栓高风险而开始/继续使用阿司匹林，应明确记录风险/获益，并制定停药规则（如反复/加重鼻出血、新发明显瘀斑、胃肠道出血或血红蛋白下降，应立即停用），同时密切监测出血情况。使用血浆或床旁全血检测重复测定钾值，并评估溶血指数，以确认疑似假性高钾血症，避免漏诊真正的高钾血症。明确 del(21)(q22) 为低水平非典型克隆；在监测病情演变的同时继续按 ET 进行管理，若出现新的血细胞减少/发育异常、原始细胞增多、进行性脾大或非典型临床过程，则以重复骨髓检查/细胞遗传学复查重新评估。建议在当前用药基础上严格控制血糖和高血压，保持充足水分摄入，避免脱水以降低血栓风险。安排 4 周后复诊，进行 CBC 和症状评估，并嘱患者如出现严重头痛、视力改变或出血增多，应立即就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "原发性血小板增多症",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测",
+        "血清电解质",
+        "综合代谢面板（CMP）",
+        "细胞遗传学分析"
+      ],
+      "contraindications": {
+        "drugs": [
+          "青霉素类"
+        ],
+        "treatments": [
+          "脾切除术"
+        ]
+      },
+      "treatment_plan": "启动羟基脲作为一线细胞减灭治疗，将血小板计数降至 500 x 10^9/L 以下，并在前两个月每周监测一次 CBC。鉴于存在活动性皮肤黏膜出血且 PLT >1000 x 10^9/L，应评估是否存在获得性冯·维勒布兰德综合征（vWF 抗原和活性 +/- 多聚体分析；因子 VIII；考虑进行血小板功能检测）。在出血得到控制且 AvWS 被排除或治疗前，应暂停或推迟使用小剂量阿司匹林；如因明确的血栓高风险而开始/继续使用阿司匹林，应明确记录风险/获益，并制定停药规则（如反复/加重鼻出血、新发明显瘀斑、胃肠道出血或血红蛋白下降，应立即停用），同时密切监测出血情况。使用血浆或床旁全血检测重复测定钾值，并评估溶血指数，以确认疑似假性高钾血症，避免漏诊真正的高钾血症。明确 del(21)(q22) 为低水平非典型克隆；在监测病情演变的同时继续按 ET 进行管理，若出现新的血细胞减少/发育异常、原始细胞增多、进行性脾大或非典型临床过程，则以重复骨髓检查/细胞遗传学复查重新评估。建议在当前用药基础上严格控制血糖和高血压，保持充足水分摄入，避免脱水以降低血栓风险。安排 4 周后复诊，进行 CBC 和症状评估，并嘱患者如出现严重头痛、视力改变或出血增多，应立即就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "52岁绝经女性，主诉反复鼻出血、皮肤易瘀斑伴头痛头晕及手指刺痛发凉（微循环障碍），无发热黑便。",
+      "diagnosis_reflection": "诊断准确命中原发性血小板增多症。经验：面对老年患者出现自发性黏膜出血与缺血症状并存时，需高度警惕血小板异常增高导致的获得性血管性血友病综合征（AvWS）或血栓/出血双重风险。",
+      "examination_reflection": "检查精准度1.0但覆盖率低（37.5%）。做对点：及时开具CBC、凝血功能及外周血涂片以确认血小板异常。遗漏点：未安排骨髓穿刺活检（BMAB）、分子遗传学检测（如JAK2突变）及细胞遗传学分析，导致无法确诊分型及评估克隆演变风险。",
+      "treatment_reflection": "治疗策略整体合理但存在关键疏漏。做对点：识别高危组并启动羟基脲降细胞治疗。遗漏点：在存在活动性鼻出血和皮肤瘀斑且PLT>1000×10^9/L时，未暂停阿司匹林以防加重出血，也未提及排查AvWS；同时忽略了假性高钾血症的鉴别处理。",
+      "future_strategy": "遇到疑似ET病例：1.完善骨髓+基因+细胞遗传学检查以确诊分型；2.若合并活动性出血，暂缓抗血小板药并排查AvWS；3.高危患者立即启动细胞减灭治疗，并制定严密监测计划。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/047.json#/applied_memory"
+  }
+}

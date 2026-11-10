@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/MemTensor/MemRL",
+  "revision": "c1b322ca43de36ddf64c6712f89d0095bfc35ce0",
+  "license": "MIT",
+  "scope": "Complete native memory service (all build/retrieve/update variants), providers, public configuration, and utility import closure. Benchmark runners/environments and datasets are outside this memory plugin.",
+  "patches": [
+    {
+      "path": "test/memrl/memrl-vector-dimension.patch",
+      "sha256": "9ad9876086e61d3c7fb4ed1bae103677e8f5866237e9d2608800e7af8bfc9210",
+      "reason": "Expose the configured embedding dimension at the MemOS/Qdrant interface; defaults remain 3072."
+    }
+  ],
+  "packaging_notes": [
+    "Empty upstream package marker files have a final newline; no executable algorithm code is changed by packaging."
+  ],
+  "files": {
+    "memrl/__init__.py": "211e875d87010370da001b20f0f566d5fcacd0a1bbf3c49e3ab1337063b4a13f",
+    "memrl/__version__.py": "24bd8e8c7ce867d9576fb79c0f55d900bf0e5ad038c8f4a7bc3715d60f9d12c4",
+    "memrl/configs/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "memrl/configs/config.py": "3cd35e4bf0ece43e7622de54f8a8e9a17226cc403fb54fa21b319a95452b6ff3",
+    "memrl/providers/__init__.py": "f61a794d5a404401e4b8c630414c1767046cdaf51c7ec23d1367d711e3331021",
+    "memrl/providers/base.py": "4af72e20da724c3e7c4bb7f4081a341acc7494e73992cd92a258c3c68acce31d",
+    "memrl/providers/embedding.py": "ff90545baa0b2434a4f788d99c735424845b120a3cf9e4e80fd56af07c818a73",
+    "memrl/providers/llm.py": "986cfdab92ad1f73a6f810e511d4079fc45cc8f88429e57841b2da36bb0f7beb",
+    "memrl/service/__init__.py": "b65184596a59c7bbcdb824e2b70164c5d0ef7770be319d8c21cfd77debd262cd",
+    "memrl/service/builders.py": "aa54c44f5ec0bd4142aac627de6b73bda8e322f0b03cb078632c1dfb3698cfe6",
+    "memrl/service/keyer.py": "19f68631e5777814b0d35735214d39e1b6fc8d3e5888a6f7c87c57f024418d9e",
+    "memrl/service/memory_service.py": "7b2cf3f8774ca9ce81e6c87a7ca9df256b1110451b672aeda27768fd6384a309",
+    "memrl/service/procedural_memory.py": "e2d14fd894ba54dd2c55f05c0a128392e31021854527af0f99b299abc3eb3c12",
+    "memrl/service/retrievers.py": "a9a4494a08e9dec4fea71650807e854d90f2957937ba1443dfb303f2447e686b",
+    "memrl/service/strategies.py": "fa70673283d84799d2d02e87782e33f143324c55cd5c57b6a4104c5ac84b162a",
+    "memrl/service/updater.py": "cc372bfc00ca2bf614e6328d8234037286cbb48f10aeb9846883290cc088d5db",
+    "memrl/service/value_driven.py": "994a27154e78bdfdad07018b795c22c68e26ad30a41c67da7276c75cd85f563b",
+    "memrl/utils/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "memrl/utils/task_id.py": "38fd64a9e53722b9dfb0a13d11a6ff799db3a5b19889385641e821b8e905e454",
+    "LICENSE": "edb8d2d30665cbc9cf313a6194d6ff6e36fab43a47324ab59fbb3416df77ef55"
+  }
+}

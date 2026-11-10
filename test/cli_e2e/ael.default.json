@@ -1,0 +1,6 @@
+{
+  "method": {"method_id": "ael", "params": {}},
+  "providers": {
+    "llm": {"model": "Qwen/Qwen2.5-72B-Instruct", "base_url": "https://api.siliconflow.cn/v1", "api_key_env": "SILICONFLOW_API_KEY"}
+  }
+}

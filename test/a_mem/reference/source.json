@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/agiresearch/A-mem",
+  "commit": "ceffb860f0712bbae97b184d440df62bc910ca8d",
+  "path": "agentic_memory/memory_system.py",
+  "sha256": "fa58c3ed405e37d298a3d11e5cd69459bc9709004461c0e01fc0c497c77c949b",
+  "license": "../../../methods/a_mem/UPSTREAM_LICENSE",
+  "usage": "Unmodified source for AST-only controlled differential checks; no upstream model/dependency execution.",
+  "related_files": [
+    {
+      "path": "agentic_memory/retrievers.py",
+      "sha256": "a4cd9645b9df0774f7f67bdfff3cf4d1a41911b4bac3843208db2019b57e311d"
+    },
+    {
+      "path": "agentic_memory/llm_controller.py",
+      "sha256": "44e7d228326fe78dd8ecb8c8176364511547f5fef7cd7d58e433e883caeae0bb"
+    }
+  ]
+}

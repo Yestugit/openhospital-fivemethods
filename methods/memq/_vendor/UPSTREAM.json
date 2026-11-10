@@ -1,0 +1,34 @@
+{
+  "repository": "https://github.com/SII-MemQ/MemQ",
+  "revision": "9d66abf4f0252b084f088d5081c44b840842e47b",
+  "license": "MIT",
+  "scope": "Complete native memory import closure: all service build/retrieve/update strategies, MemoryStore, value-driven updates, provider prompt/circuit-breaker/embedding implementations, public configuration models, and required utilities. Benchmark runners, environments, agents, datasets, and credential configuration files are outside this plugin.",
+  "patches": [],
+  "packaging_notes": [
+    "A final newline is added to memq/service/keyer.py, memq/service/strategies.py, memq/service/__init__.py, and the originally empty memq/configs/__init__.py and memq/utils/__init__.py package markers. All other bytes are unchanged; no executable algorithm text is changed."
+  ],
+  "files": {
+    "memq/__init__.py": "e7819d896ad501909303e1fffe38b7f837b1da9b1713f13a351f4dbb52758c82",
+    "memq/__version__.py": "1bdb11b559b8c9b19f0c5beea316d1be40e44e6fbb5dd5023aa7f82ddad17a87",
+    "memq/service/memory_service.py": "4cf633833e451d6f518ccb0fd9616943a1d54e75e379be77e4e837de758332c4",
+    "memq/service/updater.py": "a2ad41f018f85f7f917fe90e75855b21db6e4082a65ffa22fd0afa1dda2d4fe7",
+    "memq/service/retrievers.py": "4b497992ac6d2461192a572b3fe07fd26d425995d81991ff83e8cdff6730883a",
+    "memq/service/procedural_memory.py": "83141749159d73ac0dda351541c20e3096d804609fe40e26d8a7ff5a4d6f5cad",
+    "memq/service/builders.py": "8c3868349fa4cb27e6162a63080514467cf0d0e906e9480aa06cc041062902ab",
+    "memq/service/memory_store.py": "01efd35687dbb9743408b4fb92e4fb5e7f050c148efcd987fbcce849c4297cea",
+    "memq/service/keyer.py": "19f68631e5777814b0d35735214d39e1b6fc8d3e5888a6f7c87c57f024418d9e",
+    "memq/service/strategies.py": "fa70673283d84799d2d02e87782e33f143324c55cd5c57b6a4104c5ac84b162a",
+    "memq/service/value_driven.py": "e451c1f4b6f2139e74b4fc0c11f0f3ee36c448908d2888a53a939edd4aef79c3",
+    "memq/service/__init__.py": "b65184596a59c7bbcdb824e2b70164c5d0ef7770be319d8c21cfd77debd262cd",
+    "memq/configs/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "memq/configs/config.py": "378bb2ba36a870afcfd84d69c4a277efb6b41206b810eefacd4d8c1d391d273a",
+    "memq/providers/circuit_breaker.py": "43b8820a1a84efd886e72e3f1694abd0cfde8d8ed23441604473b4198e275a0b",
+    "memq/providers/llm.py": "c545387c8a33b6fe11ab39465074062aca85beb80579e7789a929376bed0771a",
+    "memq/providers/embedding.py": "7689e185a4017b862ad789680d2f7775b3a338eecf3ba1ef1f5bca35695b0458",
+    "memq/providers/__init__.py": "d9c441153e12178b44a3825c5f16f5dbfb73ba7748f3b8aaadc5659c58955b06",
+    "memq/providers/base.py": "023daf0f76fa92b2f9380ea3093e8a3320746fd18053be6a57240a414ddfa9e5",
+    "memq/utils/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "memq/utils/task_id.py": "38fd64a9e53722b9dfb0a13d11a6ff799db3a5b19889385641e821b8e905e454",
+    "LICENSE": "55c9ff45200c70883ee75d5e7fb7610af44eccc23a18a5f0c33958d3a2a7f0b0"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "schema_version": 1
+  },
+  "examinations": [
+    {
+      "name": "眼压测量（IOP）",
+      "aliases": [
+        "眼压测量"
+      ]
+    },
+    {
+      "name": "钡灌肠检查（BE）",
+      "aliases": [
+        "钡灌肠检查"
+      ]
+    },
+    {
+      "name": "外斐试验（立克次体凝集）",
+      "aliases": [
+        "外斐试验"
+      ]
+    },
+    {
+      "name": "斜视评估",
+      "aliases": [
+        "斜视评估（Hirschberg试验）"
+      ]
+    },
+    {
+      "name": "视轴矫正评估",
+      "aliases": [
+        "视 orthoptic 评估"
+      ]
+    },
+    {
+      "name": "乙型肝炎病毒（HBV）检测组合",
+      "aliases": [
+        "乙型肝炎病毒检测"
+      ]
+    },
+    {
+      "name": "肿瘤标志物谱",
+      "aliases": [
+        "肿瘤标志物检测"
+      ]
+    }
+  ]
+}

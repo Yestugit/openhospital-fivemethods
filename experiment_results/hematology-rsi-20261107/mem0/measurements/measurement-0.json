@@ -1,0 +1,64 @@
+{
+  "round": 0,
+  "tokenizer_runtime": "0.23.3",
+  "memory_text_tokens": 0,
+  "text_layers": {},
+  "text_objects": [],
+  "storage_bytes": 46343,
+  "storage_files": {
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\memory\\runs\\2a69a056bbea4d4db2c5e4a7c1434205\\mem0-native\\history.db": {
+      "bytes": 20480,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\memory\\runs\\2a69a056bbea4d4db2c5e4a7c1434205\\mem0-native\\native-identity.json": {
+      "bytes": 146,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\memory\\runs\\2a69a056bbea4d4db2c5e4a7c1434205\\mem0-native\\native-config\\config.json": {
+      "bytes": 59,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\memory\\runs\\2a69a056bbea4d4db2c5e4a7c1434205\\mem0-native\\qdrant\\.lock": {
+      "bytes": 13,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\memory\\runs\\2a69a056bbea4d4db2c5e4a7c1434205\\mem0-native\\qdrant\\meta.json": {
+      "bytes": 1069,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\memory\\runs\\2a69a056bbea4d4db2c5e4a7c1434205\\mem0-native\\qdrant\\collection\\mem0\\storage.sqlite": {
+      "bytes": 12288,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\mem0\\attempt-001\\memory\\runs\\2a69a056bbea4d4db2c5e4a7c1434205\\mem0-native\\qdrant\\collection\\mem0_entities\\storage.sqlite": {
+      "bytes": 12288,
+      "category": "database_index_cache_state"
+    }
+  },
+  "memory_state_serialized_bytes": 2,
+  "pending_stm_episodes": 0,
+  "pending_buffered_events": 0,
+  "storage_scope": "native_database_index_cache_state_including_wal_excluding_logs_and_snapshots",
+  "background_pending": false,
+  "rsi_tokens": 0,
+  "payload_tokens": 0,
+  "submitted_payload_tokens": 0,
+  "additional_attempt_payload_tokens": 0,
+  "accepted_event_ledger": [],
+  "accepted_units": 0,
+  "round_total_s": 0.0,
+  "memory_foreground_wait_s": 0.0,
+  "memory_background_active_s": 0.0,
+  "memory_persistence_s": 0.0,
+  "memory_measurement_s": 0.0,
+  "automatic_recovery_wait_s": 0.0,
+  "memory_method_wall_s": 0.0,
+  "timing_complete": true,
+  "unfinished_spans": [],
+  "heartbeat_interval_s": 5,
+  "unobserved_tail_bound_s": 0,
+  "storage_growth_bytes": 0,
+  "round_rsi_tokens": 0,
+  "memory_s_per_1k_rsi_tokens": null,
+  "operations": {}
+}

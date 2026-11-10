@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "case_id": "cedar-train-1",
+      "split": "train",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "history": [
+        {"event_id": "cedar-1-start", "kind": "episode_start", "text": "Find the release code for the synthetic project Cedar.", "metadata": {"episode_id": "cedar-train-1", "task": "Find the release code for the synthetic project Cedar."}},
+        {"event_id": "cedar-1-action", "kind": "action", "text": "Read the verified synthetic Cedar release note.", "metadata": {"episode_id": "cedar-train-1"}},
+        {"event_id": "cedar-1-observation", "kind": "observation", "text": "The verified note says project Cedar has release code COBALT-42.", "metadata": {"episode_id": "cedar-train-1", "reward": 1.0, "done": true}}
+      ],
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42",
+      "outcome": {"success": true, "reward": 1.0, "metadata": {"episode_id": "cedar-train-1", "task": "Find the release code for the synthetic project Cedar."}}
+    },
+    {
+      "case_id": "cedar-train-2",
+      "split": "train",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "history": [
+        {"event_id": "cedar-2-start", "kind": "episode_start", "text": "Find the release code for the synthetic project Cedar.", "metadata": {"episode_id": "cedar-train-2", "task": "Find the release code for the synthetic project Cedar."}},
+        {"event_id": "cedar-2-action", "kind": "action", "text": "Guess the release code is GREEN-99 without checking the note.", "metadata": {"episode_id": "cedar-train-2"}},
+        {"event_id": "cedar-2-observation", "kind": "observation", "text": "The guess failed verification. The correct code in the verified note is COBALT-42.", "metadata": {"episode_id": "cedar-train-2", "reward": -1.0, "done": true}}
+      ],
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42",
+      "outcome": {"success": false, "reward": -1.0, "feedback": "The guess was wrong; verify the release note.", "metadata": {"episode_id": "cedar-train-2", "task": "Find the release code for the synthetic project Cedar."}}
+    },
+    {
+      "case_id": "cedar-test-1",
+      "split": "test",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42",
+      "metadata": {"episode_id": "cedar-test-1", "task": "Find the release code for the synthetic project Cedar."}
+    },
+    {
+      "case_id": "cedar-test-2",
+      "split": "test",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42",
+      "metadata": {"episode_id": "cedar-test-2", "task": "Find the release code for the synthetic project Cedar."}
+    }
+  ]
+}

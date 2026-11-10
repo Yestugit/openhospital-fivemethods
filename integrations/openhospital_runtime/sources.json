@@ -1,0 +1,26 @@
+{
+  "imported_on": "2026-10-26",
+  "source_workspace": "agent-memory-benchmarks/openhospital",
+  "components": {
+    "hospital-agent-sdk": {
+      "base_commit": "505a317828eeaab72dbae6ff39b35d263ddbcdb1",
+      "local_changes": []
+    },
+    "hospital_agent_example": {
+      "base_commit": "d5dca5c7f0aa818e5025ccf96f7b3bc4a1645148",
+      "local_changes": []
+    },
+    "hospital_service": {
+      "base_commit": "baeb4abb99e4db1999edabeab9e2449e26c588a0",
+      "local_changes": []
+    }
+  },
+  "configuration": "Service credentials are read from local environment; private configuration and nested Git histories were preserved in the workspace migration backup.",
+  "patient_index_sha256": "efc5c8422cd572fba9734a9b6e9b32a453b262027c491b4ff85dc94c70fa91ad",
+  "layout": "Independent hospital project in integrations/openhospital_runtime, alongside the framework adapter integrations/openhospital; its service runs with its own script and dependencies.",
+  "packaging_changes": [
+    "Relative paths follow the independent directory layout.",
+    "Private service credentials are supplied through environment variables.",
+    "Local persistent-world implementation is hosted with the hospital."
+  ]
+}

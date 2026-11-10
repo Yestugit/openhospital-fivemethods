@@ -1,0 +1,386 @@
+{
+  "patient_id": "Patient_01544",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的临床症状。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "孩子6天前开始发烧，最高39.5度。最近4天越来越没力气，总想让人抱。身上和腿上多了很多瘀斑，刷牙时牙龈出血，昨天还流鼻血止不住。她全身骨头疼，特别是晚上，疼的时候很烦躁。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者为儿童，出现高热、严重乏力、多部位出血（牙龈、鼻出血）、皮肤瘀斑及骨痛，高度怀疑急性白血病。目前尚未进行任何实验室检查，急需完善血常规、凝血功能及骨髓穿刺等关键检查以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者为儿童，出现高热、乏力、广泛出血倾向（瘀斑、牙龈出血、鼻出血）及全身骨痛，临床表现高度提示急性白血病或严重血液系统疾病。进行血常规等血液学检查是评估贫血、血小板减少及白细胞异常的首选且最关键的步骤，可迅速明确是否存在全血细胞减少或原始细胞增多，从而指导后续骨髓穿刺等确诊检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者为儿童，表现为高热、严重乏力、多部位出血（牙龈、鼻出血、皮肤瘀斑）及全身骨痛，临床高度怀疑急性白血病或严重血液系统疾病。首先需进行全血细胞计数（CBC）以评估贫血、血小板减少及白细胞异常程度；外周血涂片可观察是否有原始细胞（如幼稚淋巴细胞）以辅助诊断；凝血功能全套用于排查是否存在凝血障碍或弥散性血管内凝血（DIC），指导后续治疗及输血策略。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：28.4 x 10^9/L［参考范围：5.0-15.5 x 10^9/L］\", \"血红蛋白\": \"Hgb：78 g/L［参考范围：110-155 g/L］\", \"血小板计数\": \"PLT：32 x 10^9/L［参考范围：150-450 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"异型细胞或原始细胞\": \"可见大量循环原始细胞，核浆比高\", \"血小板数量\": \"显著血小板减少［参考值：数量充足（150,000-450,000/μL）。］\", \"红细胞形态\": \"红细胞大小和形态不等\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异型细胞或原始细胞\", \"血小板数量\", \"红细胞形态\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"2.8 mg/L FEU［参考值：<0.5 mg/L FEU］\", \"凝血酶原时间\": \"18.5秒［参考值：10.0-14.0秒］\", \"凝血酶时间\": \"24秒［参考值：12-22秒］\", \"国际标准化比值\": \"1.6［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"48秒［参考值：24-38秒（与成人相比，年龄较小的儿童通常会略有延长）］\", \"血浆纤维蛋白原\": \"0.9 g/L［参考值：1.7-4.0 g/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"D-二聚体\", \"凝血酶原时间\", \"凝血酶时间\", \"国际标准化比值\", \"活化部分凝血活酶时间\", \"血浆纤维蛋白原\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者为4岁女童，有发热、骨痛、出血倾向等典型症状。血常规显示白细胞显著升高伴贫血和血小板减少（全血细胞异常），外周血涂片见大量原始细胞，凝血功能提示消耗性凝血病（疑似DIC）。这些关键信息已高度提示急性白血病（如ALL或AML）合并DIC，足以支持进入诊断和治疗阶段进行骨髓穿刺确诊及制定化疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者为儿童，表现为发热、乏力、骨痛及明显出血倾向（瘀斑、牙龈出血、鼻出血）。实验室检查显示全血细胞减少伴白细胞显著升高（28.4×10^9/L），血红蛋白降低（78g/L），血小板严重减少（32×10^9/L）。外周血涂片发现大量循环原始细胞，凝血功能异常提示可能存在弥散性血管内凝血（DIC）或白血病相关凝血障碍。结合病史中提到的“原始细胞”及典型的白血病临床表现（发热、贫血、出血、骨痛），高度怀疑急性白血病，属于血液系统恶性肿瘤，需由血液科进行骨髓穿刺等进一步确诊及化疗治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"急性淋巴细胞白血病\", \"treatment_plan\": \"1. **紧急处理与支持治疗**：鉴于患者血小板极低（32×10^9/L）且伴有活动性出血（鼻衄、牙龈出血），需立即输注单采血小板以预防颅内出血；血红蛋白78g/L伴乏力，建议输注悬浮红细胞纠正贫血。同时监测凝血功能，D-二聚体升高及纤维蛋白原降低提示存在弥散性血管内凝血（DIC）风险，需密切观察并补充冷沉淀或新鲜冰冻血浆。2. **诱导缓解化疗**：确诊后应立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松）。该方案针对儿童B细胞ALL疗效确切，是国际公认的一线治疗方案。3. **个性化调整**：患儿4岁，处于ALL高发年龄段，对化疗敏感度高。需根据基因分型（如Ph染色体、ETV6-RUNX1等）及微小残留病（MRD）水平动态调整后续巩固和维持治疗强度。4. **安全性监测**：化疗期间严密监测骨髓抑制程度、肝肾功能及心脏毒性（蒽环类药物）。出现发热需立即排查中性粒细胞缺乏伴感染，必要时使用广谱抗生素。若出现严重出血或意识改变，需立即急诊就医。\", \"reasoning\": \"诊断依据：患儿为4岁女童，典型表现为发热、骨痛、出血倾向（瘀斑、鼻衄、牙龈出血）及极度乏力。实验室检查显示全血细胞减少（WBC虽高但分类异常，Hb 78g/L，PLT 32×10^9/L），外周血涂片见大量原始细胞，高度提示急性白血病。结合病史中“全身骨头疼”、“烦躁”及“原始细胞”特征，最符合急性淋巴细胞白血病（ALL）的临床表现。鉴别诊断中，特发性血小板减少性紫癜通常无原始细胞及严重骨痛；再生障碍性贫血无白细胞增高及原始细胞。因此首选诊断为急性淋巴细胞白血病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_01544",
+    "mode": "train",
+    "memory_notes": [
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_07050's Complete Blood Count showed WBC 26.4 x 10^9/L, Hgb 86 g/L, and PLT 62 x 10^9/L; Peripheral blood smear revealed significant monocytosis, neutrophil dysplasia, 3% circulating promonocytes/blast cells, and thrombocytopenia.",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_03614's CBC showed mild anemia (Hb 95 g/L) with microcytic hypochromic indices (MCV 72 fL, MCH 24 pg), normal platelets (280 × 10^9/L), and normal WBC count (10.5 × 10^9/L).",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_09774's laboratory results showed leukocytosis (WBC 38.6 × 10^9/L), anemia (Hgb 104 g/L), and thrombocytopenia (PLT 118 × 10^9/L); peripheral smear demonstrated lymphocytosis (50% lymphocytes) with reduced platelet count but no circulating blasts or abnormal cells.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_06243's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 98 g/L (anemia), and PLT 42 x 10^9/L (thrombocytopenia).",
+      "Patient_03135's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 34 x 10^9/L).",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "Patient_09977's complete blood count showed pancytopenia: WBC 2.6 x 10^9/L, Hemoglobin 92 g/L, and Platelets 58 x 10^9/L."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "孩子6天前开始发烧，最高39.5度。最近4天越来越没力气，总想让人抱。身上和腿上多了很多瘀斑，刷牙时牙龈出血，昨天还流鼻血止不住。她全身骨头疼，特别是晚上，疼的时候很烦躁。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：28.4 x 10^9/L［参考范围：5.0-15.5 x 10^9/L］",
+          "血红蛋白": "Hgb：78 g/L［参考范围：110-155 g/L］",
+          "血小板计数": "PLT：32 x 10^9/L［参考范围：150-450 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "异型细胞或原始细胞": "可见大量循环原始细胞，核浆比高",
+          "血小板数量": "显著血小板减少［参考值：数量充足（150,000-450,000/μL）。］",
+          "红细胞形态": "红细胞大小和形态不等"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异型细胞或原始细胞",
+          "血小板数量",
+          "红细胞形态"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "D-二聚体": "2.8 mg/L FEU［参考值：<0.5 mg/L FEU］",
+          "凝血酶原时间": "18.5秒［参考值：10.0-14.0秒］",
+          "凝血酶时间": "24秒［参考值：12-22秒］",
+          "国际标准化比值": "1.6［参考值：0.8-1.2］",
+          "活化部分凝血活酶时间": "48秒［参考值：24-38秒（与成人相比，年龄较小的儿童通常会略有延长）］",
+          "血浆纤维蛋白原": "0.9 g/L［参考值：1.7-4.0 g/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "D-二聚体",
+          "凝血酶原时间",
+          "凝血酶时间",
+          "国际标准化比值",
+          "活化部分凝血活酶时间",
+          "血浆纤维蛋白原"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的临床症状。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者为儿童，出现高热、严重乏力、多部位出血（牙龈、鼻出血）、皮肤瘀斑及骨痛，高度怀疑急性白血病。目前尚未进行任何实验室检查，急需完善血常规、凝血功能及骨髓穿刺等关键检查以明确诊断。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者为4岁女童，有发热、骨痛、出血倾向等典型症状。血常规显示白细胞显著升高伴贫血和血小板减少（全血细胞异常），外周血涂片见大量原始细胞，凝血功能提示消耗性凝血病（疑似DIC）。这些关键信息已高度提示急性白血病（如ALL或AML）合并DIC，足以支持进入诊断和治疗阶段进行骨髓穿刺确诊及制定化疗方案。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者为儿童，表现为高热、严重乏力、多部位出血（牙龈、鼻出血、皮肤瘀斑）及全身骨痛，临床高度怀疑急性白血病或严重血液系统疾病。首先需进行全血细胞计数（CBC）以评估贫血、血小板减少及白细胞异常程度；外周血涂片可观察是否有原始细胞（如幼稚淋巴细胞）以辅助诊断；凝血功能全套用于排查是否存在凝血障碍或弥散性血管内凝血（DIC），指导后续治疗及输血策略。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "急性淋巴细胞白血病",
+      "treatment_plan": "1. **紧急处理与支持治疗**：鉴于患者血小板极低（32×10^9/L）且伴有活动性出血（鼻衄、牙龈出血），需立即输注单采血小板以预防颅内出血；血红蛋白78g/L伴乏力，建议输注悬浮红细胞纠正贫血。同时监测凝血功能，D-二聚体升高及纤维蛋白原降低提示存在弥散性血管内凝血（DIC）风险，需密切观察并补充冷沉淀或新鲜冰冻血浆。2. **诱导缓解化疗**：确诊后应立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松）。该方案针对儿童B细胞ALL疗效确切，是国际公认的一线治疗方案。3. **个性化调整**：患儿4岁，处于ALL高发年龄段，对化疗敏感度高。需根据基因分型（如Ph染色体、ETV6-RUNX1等）及微小残留病（MRD）水平动态调整后续巩固和维持治疗强度。4. **安全性监测**：化疗期间严密监测骨髓抑制程度、肝肾功能及心脏毒性（蒽环类药物）。出现发热需立即排查中性粒细胞缺乏伴感染，必要时使用广谱抗生素。若出现严重出血或意识改变，需立即急诊就医。",
+      "reasoning": "诊断依据：患儿为4岁女童，典型表现为发热、骨痛、出血倾向（瘀斑、鼻衄、牙龈出血）及极度乏力。实验室检查显示全血细胞减少（WBC虽高但分类异常，Hb 78g/L，PLT 32×10^9/L），外周血涂片见大量原始细胞，高度提示急性白血病。结合病史中“全身骨头疼”、“烦躁”及“原始细胞”特征，最符合急性淋巴细胞白血病（ALL）的临床表现。鉴别诊断中，特发性血小板减少性紫癜通常无原始细胞及严重骨痛；再生障碍性贫血无白细胞增高及原始细胞。因此首选诊断为急性淋巴细胞白血病。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_01544",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "急性淋巴细胞白血病"
+        ],
+        "expected": [
+          "急性淋巴细胞白血病"
+        ],
+        "matched": [
+          "急性淋巴细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "综合代谢面板（CMP）",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "分子遗传学检测"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.25,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **紧急处理与支持治疗**：鉴于患者血小板极低（32×10^9/L）且伴有活动性出血（鼻衄、牙龈出血），需立即输注单采血小板以预防颅内出血；血红蛋白78g/L伴乏力，建议输注悬浮红细胞纠正贫血。同时监测凝血功能，D-二聚体升高及纤维蛋白原降低提示存在弥散性血管内凝血（DIC）风险，需密切观察并补充冷沉淀或新鲜冰冻血浆。2. **诱导缓解化疗**：确诊后应立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松）。该方案针对儿童B细胞ALL疗效确切，是国际公认的一线治疗方案。3. **个性化调整**：患儿4岁，处于ALL高发年龄段，对化疗敏感度高。需根据基因分型（如Ph染色体、ETV6-RUNX1等）及微小残留病（MRD）水平动态调整后续巩固和维持治疗强度。4. **安全性监测**：化疗期间严密监测骨髓抑制程度、肝肾功能及心脏毒性（蒽环类药物）。出现发热需立即排查中性粒细胞缺乏伴感染，必要时使用广谱抗生素。若出现严重出血或意识改变，需立即急诊就医。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全未违禁，但遗漏鞘内化疗及肿瘤溶解综合征预防细节。",
+        "reference": "针对伴有ETV6-RUNX1重排的前体B细胞急性淋巴细胞白血病，按照方案规定的长春新碱、泼尼松和鞘内甲氨蝶呤剂量，并根据中枢神经系统预防指南及方案中的年龄/体表面积（BSA）给药表，启动基于风险分层的多药联合化疗。输注浓缩红细胞以将血红蛋白维持在80 g/L以上；当血小板低于20 x 10⁹/L或出现活动性出血时给予血小板输注。发热和疼痛按需使用对乙酰氨基酚15 mg/kg/次，每4–6小时一次，避免所有非甾体抗炎药、阿司匹林、可待因、曲马多和四环素类药物。确保充分补液以预防肿瘤溶解综合征（TLS），并维持尿量>1 mL/kg/小时；在基线和诱导治疗期间频繁监测尿酸、钾、磷、钙和肌酐，并根据TLS风险/方案使用别嘌醇或拉布立酶。除非方案或特定临床指征明确要求，否则避免常规尿液碱化。由小儿肿瘤科密切随访，进行疗效评估、毒性监测以及每三个月一次的微小残留病（MRD）检测。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "急性淋巴细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "综合代谢面板（CMP）",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "分子遗传学检测"
+        ],
+        "contraindications": {
+          "drugs": [
+            "阿司匹林（水杨酸盐）",
+            "可待因",
+            "曲马多",
+            "四环素类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "针对伴有ETV6-RUNX1重排的前体B细胞急性淋巴细胞白血病，按照方案规定的长春新碱、泼尼松和鞘内甲氨蝶呤剂量，并根据中枢神经系统预防指南及方案中的年龄/体表面积（BSA）给药表，启动基于风险分层的多药联合化疗。输注浓缩红细胞以将血红蛋白维持在80 g/L以上；当血小板低于20 x 10⁹/L或出现活动性出血时给予血小板输注。发热和疼痛按需使用对乙酰氨基酚15 mg/kg/次，每4–6小时一次，避免所有非甾体抗炎药、阿司匹林、可待因、曲马多和四环素类药物。确保充分补液以预防肿瘤溶解综合征（TLS），并维持尿量>1 mL/kg/小时；在基线和诱导治疗期间频繁监测尿酸、钾、磷、钙和肌酐，并根据TLS风险/方案使用别嘌醇或拉布立酶。除非方案或特定临床指征明确要求，否则避免常规尿液碱化。由小儿肿瘤科密切随访，进行疗效评估、毒性监测以及每三个月一次的微小残留病（MRD）检测。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "4岁患儿，急性起病伴高热、进行性乏力、多部位出血（瘀斑、鼻衄、牙龈出血）及骨关节疼痛。",
+        "diagnosis_reflection": "诊断准确，成功识别发热、出血倾向及骨痛三联征指向急性淋巴细胞白血病。",
+        "examination_reflection": "已开具血常规和血涂片作为初筛，但遗漏了确诊必需的骨髓穿刺活检、流式细胞术免疫分型及分子遗传学检测等关键检查。",
+        "treatment_reflection": "支持治疗（输血、防DIC）思路正确且安全，但诱导化疗方案中遗漏了鞘内化疗预防中枢神经系统浸润及肿瘤溶解综合征的预防措施。",
+        "future_strategy": "面对疑似ALL患儿，除完善基础血液检查外，必须立即安排骨髓穿刺及基因/免疫分型以确诊；制定治疗方案时需同步涵盖化疗、鞘内注射及TLS预防策略。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T11:35:35.476768+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_01544",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "急性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. **紧急处理与支持治疗**：鉴于患者血小板极低（32×10^9/L）且伴有活动性出血（鼻衄、牙龈出血），需立即输注单采血小板以预防颅内出血；血红蛋白78g/L伴乏力，建议输注悬浮红细胞纠正贫血。同时监测凝血功能，D-二聚体升高及纤维蛋白原降低提示存在弥散性血管内凝血（DIC）风险，需密切观察并补充冷沉淀或新鲜冰冻血浆。2. **诱导缓解化疗**：确诊后应立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松）。该方案针对儿童B细胞ALL疗效确切，是国际公认的一线治疗方案。3. **个性化调整**：患儿4岁，处于ALL高发年龄段，对化疗敏感度高。需根据基因分型（如Ph染色体、ETV6-RUNX1等）及微小残留病（MRD）水平动态调整后续巩固和维持治疗强度。4. **安全性监测**：化疗期间严密监测骨髓抑制程度、肝肾功能及心脏毒性（蒽环类药物）。出现发热需立即排查中性粒细胞缺乏伴感染，必要时使用广谱抗生素。若出现严重出血或意识改变，需立即急诊就医。",
+    "reasoning": "诊断依据：患儿为4岁女童，典型表现为发热、骨痛、出血倾向（瘀斑、鼻衄、牙龈出血）及极度乏力。实验室检查显示全血细胞减少（WBC虽高但分类异常，Hb 78g/L，PLT 32×10^9/L），外周血涂片见大量原始细胞，高度提示急性白血病。结合病史中“全身骨头疼”、“烦躁”及“原始细胞”特征，最符合急性淋巴细胞白血病（ALL）的临床表现。鉴别诊断中，特发性血小板减少性紫癜通常无原始细胞及严重骨痛；再生障碍性贫血无白细胞增高及原始细胞。因此首选诊断为急性淋巴细胞白血病。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_01544",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "急性淋巴细胞白血病"
+      ],
+      "expected": [
+        "急性淋巴细胞白血病"
+      ],
+      "matched": [
+        "急性淋巴细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "综合代谢面板（CMP）",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "分子遗传学检测"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.25,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **紧急处理与支持治疗**：鉴于患者血小板极低（32×10^9/L）且伴有活动性出血（鼻衄、牙龈出血），需立即输注单采血小板以预防颅内出血；血红蛋白78g/L伴乏力，建议输注悬浮红细胞纠正贫血。同时监测凝血功能，D-二聚体升高及纤维蛋白原降低提示存在弥散性血管内凝血（DIC）风险，需密切观察并补充冷沉淀或新鲜冰冻血浆。2. **诱导缓解化疗**：确诊后应立即启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松）。该方案针对儿童B细胞ALL疗效确切，是国际公认的一线治疗方案。3. **个性化调整**：患儿4岁，处于ALL高发年龄段，对化疗敏感度高。需根据基因分型（如Ph染色体、ETV6-RUNX1等）及微小残留病（MRD）水平动态调整后续巩固和维持治疗强度。4. **安全性监测**：化疗期间严密监测骨髓抑制程度、肝肾功能及心脏毒性（蒽环类药物）。出现发热需立即排查中性粒细胞缺乏伴感染，必要时使用广谱抗生素。若出现严重出血或意识改变，需立即急诊就医。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全未违禁，但遗漏鞘内化疗及肿瘤溶解综合征预防细节。",
+      "reference": "针对伴有ETV6-RUNX1重排的前体B细胞急性淋巴细胞白血病，按照方案规定的长春新碱、泼尼松和鞘内甲氨蝶呤剂量，并根据中枢神经系统预防指南及方案中的年龄/体表面积（BSA）给药表，启动基于风险分层的多药联合化疗。输注浓缩红细胞以将血红蛋白维持在80 g/L以上；当血小板低于20 x 10⁹/L或出现活动性出血时给予血小板输注。发热和疼痛按需使用对乙酰氨基酚15 mg/kg/次，每4–6小时一次，避免所有非甾体抗炎药、阿司匹林、可待因、曲马多和四环素类药物。确保充分补液以预防肿瘤溶解综合征（TLS），并维持尿量>1 mL/kg/小时；在基线和诱导治疗期间频繁监测尿酸、钾、磷、钙和肌酐，并根据TLS风险/方案使用别嘌醇或拉布立酶。除非方案或特定临床指征明确要求，否则避免常规尿液碱化。由小儿肿瘤科密切随访，进行疗效评估、毒性监测以及每三个月一次的微小残留病（MRD）检测。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "急性淋巴细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "综合代谢面板（CMP）",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "分子遗传学检测"
+      ],
+      "contraindications": {
+        "drugs": [
+          "阿司匹林（水杨酸盐）",
+          "可待因",
+          "曲马多",
+          "四环素类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "针对伴有ETV6-RUNX1重排的前体B细胞急性淋巴细胞白血病，按照方案规定的长春新碱、泼尼松和鞘内甲氨蝶呤剂量，并根据中枢神经系统预防指南及方案中的年龄/体表面积（BSA）给药表，启动基于风险分层的多药联合化疗。输注浓缩红细胞以将血红蛋白维持在80 g/L以上；当血小板低于20 x 10⁹/L或出现活动性出血时给予血小板输注。发热和疼痛按需使用对乙酰氨基酚15 mg/kg/次，每4–6小时一次，避免所有非甾体抗炎药、阿司匹林、可待因、曲马多和四环素类药物。确保充分补液以预防肿瘤溶解综合征（TLS），并维持尿量>1 mL/kg/小时；在基线和诱导治疗期间频繁监测尿酸、钾、磷、钙和肌酐，并根据TLS风险/方案使用别嘌醇或拉布立酶。除非方案或特定临床指征明确要求，否则避免常规尿液碱化。由小儿肿瘤科密切随访，进行疗效评估、毒性监测以及每三个月一次的微小残留病（MRD）检测。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "4岁患儿，急性起病伴高热、进行性乏力、多部位出血（瘀斑、鼻衄、牙龈出血）及骨关节疼痛。",
+      "diagnosis_reflection": "诊断准确，成功识别发热、出血倾向及骨痛三联征指向急性淋巴细胞白血病。",
+      "examination_reflection": "已开具血常规和血涂片作为初筛，但遗漏了确诊必需的骨髓穿刺活检、流式细胞术免疫分型及分子遗传学检测等关键检查。",
+      "treatment_reflection": "支持治疗（输血、防DIC）思路正确且安全，但诱导化疗方案中遗漏了鞘内化疗预防中枢神经系统浸润及肿瘤溶解综合征的预防措施。",
+      "future_strategy": "面对疑似ALL患儿，除完善基础血液检查外，必须立即安排骨髓穿刺及基因/免疫分型以确诊；制定治疗方案时需同步涵盖化疗、鞘内注射及TLS预防策略。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/066.json#/applied_memory"
+  }
+}

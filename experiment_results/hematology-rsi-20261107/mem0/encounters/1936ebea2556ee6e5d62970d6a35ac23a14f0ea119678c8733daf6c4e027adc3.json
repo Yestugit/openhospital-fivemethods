@@ -1,0 +1,450 @@
+{
+  "patient_id": "Patient_01299",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？\", \"reason\": \"当前没有任何病史信息和检查结果，无法进行诊断或开具检查，首先需要询问患者的主要症状以获取初步临床信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "她今天早晨换尿布和抱起来时突然剧烈哭闹，之后一直拒绝用左腿走路。我们摸到左大腿肿了，一碰她就哭得更厉害。她今天吃得少，脸色看起来有点白，但没有发烧。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问孩子除了左腿疼痛和肿胀外，最近是否有发热、牙龈出血、皮肤出现不明原因的瘀斑或淤青？另外，孩子的精神状态如何，是否容易疲劳或食欲明显下降？\", \"reason\": \"患者为4岁儿童，表现为突发左下肢剧痛、拒走、局部肿胀及面色苍白，需进一步询问有无发热、出血倾向（如瘀斑、牙龈出血）及全身症状（如乏力、食欲差），以鉴别白血病、骨髓炎、外伤或其他血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问孩子除了左腿疼痛和肿胀外，最近是否有发热、牙龈出血、皮肤出现不明原因的瘀斑或淤青？另外，孩子的精神状态如何，是否容易疲劳或食欲明显下降？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热，也没有牙龈出血或皮肤瘀斑。孩子今天精神不太好，容易累，吃得也很少，脸色发白。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问孩子最近两周是否有过不明原因的瘀斑或淤青？另外，您是否注意到孩子有牙龈出血、流鼻血的情况，或者精神状态是否比平时明显变差、容易疲劳？\", \"reason\": \"患者表现为左腿剧痛、肿胀、拒走、面色苍白及精神萎靡，虽无发热和明确外伤史，但需进一步排查血液系统疾病（如白血病）或其他严重病因。目前缺乏关于出血倾向（皮肤瘀斑、黏膜出血）、全身症状（乏力程度、食欲变化）以及既往类似发作的关键信息，因此需要先进行问诊以完善病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问孩子最近两周是否有过不明原因的瘀斑或淤青？另外，您是否注意到孩子有牙龈出血、流鼻血的情况，或者精神状态是否比平时明显变差、容易疲劳？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发现不明原因的瘀斑或淤青，也没有牙龈出血或流鼻血。孩子今天确实精神不好，容易累，吃得也很少，脸色发白。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患儿表现为左腿剧痛、肿胀、拒走，伴有面色苍白、精神差和食欲减退，虽无发热和出血倾向，但症状提示可能存在血液系统疾病（如白血病骨痛）或骨骼问题。目前缺乏关键实验室检查数据（如血常规、凝血功能等）来鉴别诊断，因此优先开具检查以获取客观依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"影像学检查 - X线\", \"reason\": \"患儿表现为左大腿肿胀、剧烈疼痛、拒绝负重及面色苍白，虽无发热和出血倾向，但需首先通过X线检查排除骨折（包括隐匿性骨折）、骨肿瘤或骨髓炎等骨骼病变。这是评估局部肢体肿痛最基础且必要的影像学手段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"四肢X线检查\"], \"reason\": \"患儿表现为左大腿肿胀、剧烈疼痛及拒绝负重，需通过四肢X线检查排除骨折、骨肿瘤（如白血病骨浸润）或骨髓炎等骨骼病变。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"四肢X线检查\": {\"result\": {\"关节间隙及关节面\": \"关节间隙较成人宽，符合婴儿期未骨化软骨特征。\", \"四肢先天性异常\": \"未见先天性骨骼畸形或发育异常。\", \"四肢骨骼肌肉影像软组织\": \"左大腿软组织可见肿胀影，周围软组织水肿明显。\", \"继发性骨化中心\": \"股骨远端及胫骨近端可见圆形继发性骨化中心，大小与年龄相符。\", \"骨密度及骨小梁\": \"全段长骨骨质密度显著增高，骨小梁结构模糊，呈弥漫性硬化表现。\", \"骨折/脱位/骨性病变\": \"未见移位性骨折或脱位；骨干形态规则，无破坏性骨性病变。\", \"骨皮质\": \"骨皮质普遍增厚，边缘光滑连续。\", \"骨膜\": \"骨膜完整，未见骨膜反应或新骨形成。\", \"骺板\": \"各主要生长板（骺板）广泛开放，宽度正常。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"四肢骨骼肌肉影像软组织\", \"骨密度及骨小梁\", \"骨皮质\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者为4岁儿童，表现为左腿剧痛、肿胀、拒走、贫血貌及乏力。X线检查显示全段长骨骨质密度显著增高、骨小梁模糊呈弥漫性硬化、骨皮质普遍增厚，这些是骨硬化症（如石骨症）的典型影像学特征，但需进一步评估骨髓功能及全身骨骼受累情况以确诊并排除白血病等血液系统恶性肿瘤。因此，需要开具骨髓穿刺检查以明确造血功能及有无异常细胞浸润，同时建议进行基因检测或DEXA扫描以辅助诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"遗传学检测\", \"reason\": \"患者为4岁儿童，表现为突发骨痛、跛行、左大腿肿胀及面色苍白。X线检查显示全段长骨骨质密度显著增高、骨小梁结构模糊呈弥漫性硬化、骨皮质普遍增厚，这些是骨硬化症（如石骨症）的典型影像学特征。结合病史中提到的“抱起来时剧烈哭闹”提示骨痛和骨折风险，以及贫血表现，高度怀疑遗传性骨硬化症（如TCIRG1基因突变导致的石骨症）。既往记忆摘要也指出该病易被误诊且需进行基因检测确诊。因此，遗传学检测是明确病因的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"基因检测\"], \"reason\": \"患者为4岁儿童，表现为左腿剧痛、肿胀、拒走，伴有贫血（脸色白、易累）及乏力。X线检查显示全段长骨骨质密度显著增高、骨小梁结构模糊呈弥漫性硬化、骨皮质普遍增厚，这些是骨硬化症（如石骨症/Osteopetrosis）的典型影像学特征。结合病史中提到的抱持时哭闹（提示骨痛）、贫血及可能的骨髓衰竭风险，高度怀疑遗传性骨硬化症。此类疾病多由特定基因突变引起（如TCIRG1等），因此需要进行基因检测以明确病因和确诊。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"基因检测\": {\"result\": {\"致病性变异\": \"检测到致病性双等位基因 TCIRG1 变异，与常染色体隐性婴儿型大理石骨病一致。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"致病性变异\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者临床表现（抱持时剧痛、拒用左腿、软组织肿胀、贫血貌）结合四肢X线显示的弥漫性骨质硬化、骨皮质增厚及基因检测确诊的TCIRG1双等位基因变异，已明确诊断为恶性婴儿型成骨不全症（大理石骨病），无需进一步检查即可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为贫血（脸色苍白、易疲劳）、喂养困难及骨痛，X线显示全段长骨骨质密度显著增高、弥漫性硬化，基因检测确诊为TCIRG1突变导致的恶性婴儿型大理石骨病（Osteopetrosis）。该病属于罕见遗传性代谢性骨病，常伴有骨髓腔闭塞和造血功能衰竭，需由血液科主导进行造血干细胞移植评估及综合管理。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"大理石骨病\", \"treatment_plan\": \"1. 紧急转诊：鉴于患儿确诊为TCIRG1基因突变的恶性婴儿型大理石骨病，目前病情危重（骨髓衰竭、严重贫血、骨痛），需立即转诊至具备造血干细胞移植（HSCT）资质的中心进行异基因造血干细胞移植评估，这是目前唯一可能治愈的手段。\\n2. 支持治疗与护理：\\n   - 骨折预防：严格限制活动，抱持和移动患儿时需极度轻柔，避免任何可能导致骨折的受力或扭转动作。\\n   - 疼痛管理：使用对乙酰氨基酚缓解骨痛；严禁使用阿片类药物（如可待因、曲马多），因其可能抑制呼吸并加重缺氧风险。\\n   - 营养与代谢：补充钙剂和维生素D以辅助骨骼健康，但需注意监测血钙水平，避免高钙血症。\\n   - 输血支持：根据血红蛋白水平输注红细胞，纠正严重贫血导致的缺氧和乏力。\\n3. 监测与随访：密切监测血常规、肝肾功能及电解质变化；定期复查X线评估骨质硬化进展；若出现呼吸困难、意识改变或剧烈疼痛无法控制，需立即急诊就医。\", \"reasoning\": \"诊断依据：患儿表现为换尿布时剧哭（提示骨痛）、拒绝负重、左大腿肿胀（软组织水肿而非骨折）、面色苍白（贫血）。四肢X线显示全段长骨骨质密度显著增高、骨小梁模糊、弥漫性硬化及骨皮质增厚，符合大理石骨病典型影像学特征。基因检测确认存在双等位基因TCIRG1致病性变异，确诊为TCIRG1相关的恶性婴儿型大理石骨病。该病导致骨髓腔被硬化骨填充，引起骨髓衰竭（贫血）和骨痛。治疗方案需针对病因（移植）及并发症（贫血、疼痛、骨折风险）进行综合管理，且需特别注意避免不当用药和暴力操作带来的安全风险。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_01299",
+    "mode": "train",
+    "memory_notes": [
+      "Evaluation revealed User's diagnosis of ITP was incorrect; the correct diagnosis is Osteopetrosis (Marble Bone Disease), specifically TCIRG1-related malignant type.",
+      "The diagnostic error for Patient_03614 involved missing key features of osteopetrosis: bone pain indicated by crying when held/changed, fracture risk, and marrow failure causing anemia, leading to inappropriate testing that omitted gene testing (TCIRG1), DEXA, and MRI.",
+      "Correct management for Patient_03614 involves urgent hematopoietic stem cell transplant referral for TCIRG1-mutated malignant infantile osteopetrosis, plus supportive care including gentle handling to prevent fractures, calcium/vitamin D supplementation, acetaminophen for pain, and avoiding codeine/tramadol.",
+      "User evaluated Patient_09529, a patient with recurrent bone pain in long bones and back over several years, severe left wrist pain and swelling 3 weeks ago after lifting light boxes, decreased grip strength, shortness of breath on exertion, dizziness, and tingling fingertips.",
+      "Patient_03549's bone marrow biopsy showed hypercellular marrow (80% cellularity) with trilineage hyperplasia and increased megakaryocytes, but no dysplasia or abnormal infiltration.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User's child (Patient_02800) presented with severe leg pain for two weeks, causing a limp and difficulty walking.",
+      "User's child's bone marrow biopsy showed high cellularity (90%), normal trilineage hematopoiesis, <5% blasts, adequate megakaryocytes, and present iron stores, ruling out leukemia and aplastic anemia.",
+      "User incorrectly diagnosed Patient_00827 with Chronic Kidney Disease instead of the correct diagnosis of Multiple Myeloma, failing to recognize the classic tetrad of bone pain, anemia, renal failure, and hypercalcemia.",
+      "User participated in a hematology diagnostic task for Patient_03614, a 4-year-old child presenting with pallor, feeding difficulty, respiratory distress during feeding, crying when held or changed, and occasional limb swelling over two weeks.",
+      "User's child's bone marrow examination showed massive infiltration by lymphoblasts replacing normal hematopoietic tissue, with 82% blast cells, significantly reduced myeloid and erythroid maturation, and abundant primitive B-lymphocytes.",
+      "User incorrectly diagnosed Patient_03614 with congenital heart disease, recommending iron supplementation and cardiac medications, but the correct diagnosis was malignant infantile osteopetrosis (marble bone disease).",
+      "User has a 4-year-old daughter who presented with sudden left eye protrusion, eyelid swelling, and a hard lump on the temple starting 5 days ago, accompanied by fatigue, poor appetite, and spontaneous bruising on the legs over the past two weeks.",
+      "User's child has elevated inflammatory markers: CRP 45.0 mg/L, high-sensitivity CRP 8.5 mg/L, and PCT 2.8 ng/mL.",
+      "Patient_06532 had no fever, bleeding tendencies (no gum or nose bleeding, no skin ecchymoses), or bone pain during the initial presentation.",
+      "Patient_04911 had no history of fever, cough, chest pain, pale complexion, fatigue, recurrent infections, bleeding tendencies (bruising, nosebleeds, gum bleeding), clubbed fingers, squatting behavior, growth retardation, feeding difficulties, or recurrent respiratory infections; the child was a picky eater with decreased appetite due to a recent cold.",
+      "User diagnosed Patient_09529 with Osteopetrosis (Marble Bone Disease) based on recurrent bone pain, fracture history, microcytic hypochromic anemia, elevated alkaline phosphatase, and characteristic X-ray findings of diffuse osteosclerosis with marrow cavity obliteration.",
+      "The medical evaluation incorrectly diagnosed Patient_08871 with Chronic Kidney Disease (CKD) instead of the correct diagnosis of Multiple Myeloma, failing to recognize the classic tetrad of bone pain, renal failure, anemia, and hypercalcemia.",
+      "Patient_07426's bone marrow biopsy showed hypocellularity (20%), significant reticulin and collagen fibrosis, cluster formation of atypical megakaryocytes, dysplastic maturation, and reduced trilineage hematopoiesis."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "from": "patient",
+        "text": "她今天早晨换尿布和抱起来时突然剧烈哭闹，之后一直拒绝用左腿走路。我们摸到左大腿肿了，一碰她就哭得更厉害。她今天吃得少，脸色看起来有点白，但没有发烧。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问孩子除了左腿疼痛和肿胀外，最近是否有发热、牙龈出血、皮肤出现不明原因的瘀斑或淤青？另外，孩子的精神状态如何，是否容易疲劳或食欲明显下降？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热，也没有牙龈出血或皮肤瘀斑。孩子今天精神不太好，容易累，吃得也很少，脸色发白。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问孩子最近两周是否有过不明原因的瘀斑或淤青？另外，您是否注意到孩子有牙龈出血、流鼻血的情况，或者精神状态是否比平时明显变差、容易疲劳？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发现不明原因的瘀斑或淤青，也没有牙龈出血或流鼻血。孩子今天确实精神不好，容易累，吃得也很少，脸色发白。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "四肢X线检查": {
+        "result": {
+          "关节间隙及关节面": "关节间隙较成人宽，符合婴儿期未骨化软骨特征。",
+          "四肢先天性异常": "未见先天性骨骼畸形或发育异常。",
+          "四肢骨骼肌肉影像软组织": "左大腿软组织可见肿胀影，周围软组织水肿明显。",
+          "继发性骨化中心": "股骨远端及胫骨近端可见圆形继发性骨化中心，大小与年龄相符。",
+          "骨密度及骨小梁": "全段长骨骨质密度显著增高，骨小梁结构模糊，呈弥漫性硬化表现。",
+          "骨折/脱位/骨性病变": "未见移位性骨折或脱位；骨干形态规则，无破坏性骨性病变。",
+          "骨皮质": "骨皮质普遍增厚，边缘光滑连续。",
+          "骨膜": "骨膜完整，未见骨膜反应或新骨形成。",
+          "骺板": "各主要生长板（骺板）广泛开放，宽度正常。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "四肢骨骼肌肉影像软组织",
+          "骨密度及骨小梁",
+          "骨皮质"
+        ]
+      },
+      "基因检测": {
+        "result": {
+          "致病性变异": "检测到致病性双等位基因 TCIRG1 变异，与常染色体隐性婴儿型大理石骨病一致。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "致病性变异"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？",
+        "reason": "当前没有任何病史信息和检查结果，无法进行诊断或开具检查，首先需要询问患者的主要症状以获取初步临床信息。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问孩子除了左腿疼痛和肿胀外，最近是否有发热、牙龈出血、皮肤出现不明原因的瘀斑或淤青？另外，孩子的精神状态如何，是否容易疲劳或食欲明显下降？",
+        "reason": "患者为4岁儿童，表现为突发左下肢剧痛、拒走、局部肿胀及面色苍白，需进一步询问有无发热、出血倾向（如瘀斑、牙龈出血）及全身症状（如乏力、食欲差），以鉴别白血病、骨髓炎、外伤或其他血液系统疾病。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问孩子最近两周是否有过不明原因的瘀斑或淤青？另外，您是否注意到孩子有牙龈出血、流鼻血的情况，或者精神状态是否比平时明显变差、容易疲劳？",
+        "reason": "患者表现为左腿剧痛、肿胀、拒走、面色苍白及精神萎靡，虽无发热和明确外伤史，但需进一步排查血液系统疾病（如白血病）或其他严重病因。目前缺乏关于出血倾向（皮肤瘀斑、黏膜出血）、全身症状（乏力程度、食欲变化）以及既往类似发作的关键信息，因此需要先进行问诊以完善病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患儿表现为左腿剧痛、肿胀、拒走，伴有面色苍白、精神差和食欲减退，虽无发热和出血倾向，但症状提示可能存在血液系统疾病（如白血病骨痛）或骨骼问题。目前缺乏关键实验室检查数据（如血常规、凝血功能等）来鉴别诊断，因此优先开具检查以获取客观依据。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者为4岁儿童，表现为左腿剧痛、肿胀、拒走、贫血貌及乏力。X线检查显示全段长骨骨质密度显著增高、骨小梁模糊呈弥漫性硬化、骨皮质普遍增厚，这些是骨硬化症（如石骨症）的典型影像学特征，但需进一步评估骨髓功能及全身骨骼受累情况以确诊并排除白血病等血液系统恶性肿瘤。因此，需要开具骨髓穿刺检查以明确造血功能及有无异常细胞浸润，同时建议进行基因检测或DEXA扫描以辅助诊断。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者临床表现（抱持时剧痛、拒用左腿、软组织肿胀、贫血貌）结合四肢X线显示的弥漫性骨质硬化、骨皮质增厚及基因检测确诊的TCIRG1双等位基因变异，已明确诊断为恶性婴儿型成骨不全症（大理石骨病），无需进一步检查即可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "影像学检查 - X线",
+        "examinations": [
+          "四肢X线检查"
+        ],
+        "reason": "患儿表现为左大腿肿胀、剧烈疼痛及拒绝负重，需通过四肢X线检查排除骨折、骨肿瘤（如白血病骨浸润）或骨髓炎等骨骼病变。"
+      },
+      {
+        "category": "遗传学检测",
+        "examinations": [
+          "基因检测"
+        ],
+        "reason": "患者为4岁儿童，表现为左腿剧痛、肿胀、拒走，伴有贫血（脸色白、易累）及乏力。X线检查显示全段长骨骨质密度显著增高、骨小梁结构模糊呈弥漫性硬化、骨皮质普遍增厚，这些是骨硬化症（如石骨症/Osteopetrosis）的典型影像学特征。结合病史中提到的抱持时哭闹（提示骨痛）、贫血及可能的骨髓衰竭风险，高度怀疑遗传性骨硬化症。此类疾病多由特定基因突变引起（如TCIRG1等），因此需要进行基因检测以明确病因和确诊。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "大理石骨病",
+      "treatment_plan": "1. 紧急转诊：鉴于患儿确诊为TCIRG1基因突变的恶性婴儿型大理石骨病，目前病情危重（骨髓衰竭、严重贫血、骨痛），需立即转诊至具备造血干细胞移植（HSCT）资质的中心进行异基因造血干细胞移植评估，这是目前唯一可能治愈的手段。\n2. 支持治疗与护理：\n   - 骨折预防：严格限制活动，抱持和移动患儿时需极度轻柔，避免任何可能导致骨折的受力或扭转动作。\n   - 疼痛管理：使用对乙酰氨基酚缓解骨痛；严禁使用阿片类药物（如可待因、曲马多），因其可能抑制呼吸并加重缺氧风险。\n   - 营养与代谢：补充钙剂和维生素D以辅助骨骼健康，但需注意监测血钙水平，避免高钙血症。\n   - 输血支持：根据血红蛋白水平输注红细胞，纠正严重贫血导致的缺氧和乏力。\n3. 监测与随访：密切监测血常规、肝肾功能及电解质变化；定期复查X线评估骨质硬化进展；若出现呼吸困难、意识改变或剧烈疼痛无法控制，需立即急诊就医。",
+      "reasoning": "诊断依据：患儿表现为换尿布时剧哭（提示骨痛）、拒绝负重、左大腿肿胀（软组织水肿而非骨折）、面色苍白（贫血）。四肢X线显示全段长骨骨质密度显著增高、骨小梁模糊、弥漫性硬化及骨皮质增厚，符合大理石骨病典型影像学特征。基因检测确认存在双等位基因TCIRG1致病性变异，确诊为TCIRG1相关的恶性婴儿型大理石骨病。该病导致骨髓腔被硬化骨填充，引起骨髓衰竭（贫血）和骨痛。治疗方案需针对病因（移植）及并发症（贫血、疼痛、骨折风险）进行综合管理，且需特别注意避免不当用药和暴力操作带来的安全风险。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_01299",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.5,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "大理石骨病"
+        ],
+        "expected": [
+          "大理石骨病"
+        ],
+        "matched": [
+          "大理石骨病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "四肢X线检查",
+          "基因检测"
+        ],
+        "expected": [
+          "双能X线吸收测定法（DEXA）",
+          "磁共振成像（MRI）",
+          "综合代谢面板（CMP）",
+          "维生素D检测",
+          "尿液分析（UA）",
+          "基因检测"
+        ],
+        "matched": [
+          "基因检测"
+        ],
+        "precision": 0.5,
+        "coverage": 0.16666666666666666,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 紧急转诊：鉴于患儿确诊为TCIRG1基因突变的恶性婴儿型大理石骨病，目前病情危重（骨髓衰竭、严重贫血、骨痛），需立即转诊至具备造血干细胞移植（HSCT）资质的中心进行异基因造血干细胞移植评估，这是目前唯一可能治愈的手段。\n2. 支持治疗与护理：\n   - 骨折预防：严格限制活动，抱持和移动患儿时需极度轻柔，避免任何可能导致骨折的受力或扭转动作。\n   - 疼痛管理：使用对乙酰氨基酚缓解骨痛；严禁使用阿片类药物（如可待因、曲马多），因其可能抑制呼吸并加重缺氧风险。\n   - 营养与代谢：补充钙剂和维生素D以辅助骨骼健康，但需注意监测血钙水平，避免高钙血症。\n   - 输血支持：根据血红蛋白水平输注红细胞，纠正严重贫血导致的缺氧和乏力。\n3. 监测与随访：密切监测血常规、肝肾功能及电解质变化；定期复查X线评估骨质硬化进展；若出现呼吸困难、意识改变或剧烈疼痛无法控制，需立即急诊就医。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全且涵盖移植评估，但遗漏骨折制动细节及家属沟通策略。",
+        "reference": "立即请骨科会诊，对左侧股骨骨折进行制动（如髋人字石膏固定），除非存在移位/成角或对位对线不可接受，否则不进行复位。疼痛管理采用符合年龄的对乙酰氨基酚剂量。根据需要在监测下补充维生素D和钙，以治疗维生素D缺乏及相关低钙血症；鉴于大理石骨病的骨病理特点，需谨慎监测。密切随访钙、磷、镁和甲状旁腺激素（PTH）等实验室指标，并重复检测以确保安全纠正并降低低钙血症加重的风险。每周进行临床评估并复查影像，以评估对线及骨折愈合情况。鉴于 TCIRG1 突变及家族史，转诊至小儿血液科评估造血干细胞移植。家长需监测石膏不适、发热或皮肤变化。保持充足水分和营养，喂养符合年龄的配方奶。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "大理石骨病",
+        "necessary_examinations": [
+          "双能X线吸收测定法（DEXA）",
+          "磁共振成像（MRI）",
+          "综合代谢面板（CMP）",
+          "维生素D检测",
+          "尿液分析（UA）",
+          "基因检测"
+        ],
+        "contraindications": {
+          "drugs": [
+            "Codeine",
+            "Tramadol",
+            "Tetracyclines"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "立即请骨科会诊，对左侧股骨骨折进行制动（如髋人字石膏固定），除非存在移位/成角或对位对线不可接受，否则不进行复位。疼痛管理采用符合年龄的对乙酰氨基酚剂量。根据需要在监测下补充维生素D和钙，以治疗维生素D缺乏及相关低钙血症；鉴于大理石骨病的骨病理特点，需谨慎监测。密切随访钙、磷、镁和甲状旁腺激素（PTH）等实验室指标，并重复检测以确保安全纠正并降低低钙血症加重的风险。每周进行临床评估并复查影像，以评估对线及骨折愈合情况。鉴于 TCIRG1 突变及家族史，转诊至小儿血液科评估造血干细胞移植。家长需监测石膏不适、发热或皮肤变化。保持充足水分和营养，喂养符合年龄的配方奶。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患儿表现为突发左腿剧痛、拒走及局部肿胀，伴面色苍白、精神萎靡和食欲减退，无发热出血史，需警惕骨病合并骨髓衰竭。",
+        "diagnosis_reflection": "诊断准确命中大理石骨病，成功识别了骨痛与贫血并存的危重表现，但需进一步结合基因检测确认TCIRG1突变以指导预后。",
+        "examination_reflection": "检查选择存在偏差，遗漏了DEXA、MRI、CMP及维生素D等关键评估项目，仅开了四肢X线和基因检测，导致对骨质硬化程度及代谢紊乱的覆盖不足。",
+        "treatment_reflection": "治疗方案涵盖了紧急转诊移植和支持治疗，安全性高，但遗漏了针对疑似骨折的制动细节（如髋人字石膏）及具体的疼痛剂量管理策略。",
+        "future_strategy": "面对不明原因骨痛伴贫血患儿，应优先完善全身代谢面板、影像学全面评估及基因检测；治疗上需兼顾止血/制动防骨折与造血干细胞移植评估。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T13:21:29.183931+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_01299",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "大理石骨病"
+    ],
+    "treatment_plan": "1. 紧急转诊：鉴于患儿确诊为TCIRG1基因突变的恶性婴儿型大理石骨病，目前病情危重（骨髓衰竭、严重贫血、骨痛），需立即转诊至具备造血干细胞移植（HSCT）资质的中心进行异基因造血干细胞移植评估，这是目前唯一可能治愈的手段。\n2. 支持治疗与护理：\n   - 骨折预防：严格限制活动，抱持和移动患儿时需极度轻柔，避免任何可能导致骨折的受力或扭转动作。\n   - 疼痛管理：使用对乙酰氨基酚缓解骨痛；严禁使用阿片类药物（如可待因、曲马多），因其可能抑制呼吸并加重缺氧风险。\n   - 营养与代谢：补充钙剂和维生素D以辅助骨骼健康，但需注意监测血钙水平，避免高钙血症。\n   - 输血支持：根据血红蛋白水平输注红细胞，纠正严重贫血导致的缺氧和乏力。\n3. 监测与随访：密切监测血常规、肝肾功能及电解质变化；定期复查X线评估骨质硬化进展；若出现呼吸困难、意识改变或剧烈疼痛无法控制，需立即急诊就医。",
+    "reasoning": "诊断依据：患儿表现为换尿布时剧哭（提示骨痛）、拒绝负重、左大腿肿胀（软组织水肿而非骨折）、面色苍白（贫血）。四肢X线显示全段长骨骨质密度显著增高、骨小梁模糊、弥漫性硬化及骨皮质增厚，符合大理石骨病典型影像学特征。基因检测确认存在双等位基因TCIRG1致病性变异，确诊为TCIRG1相关的恶性婴儿型大理石骨病。该病导致骨髓腔被硬化骨填充，引起骨髓衰竭（贫血）和骨痛。治疗方案需针对病因（移植）及并发症（贫血、疼痛、骨折风险）进行综合管理，且需特别注意避免不当用药和暴力操作带来的安全风险。",
+    "ordered_examinations": [
+      "四肢X线检查",
+      "基因检测"
+    ],
+    "conversation_rounds": 3,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_01299",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.5,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "大理石骨病"
+      ],
+      "expected": [
+        "大理石骨病"
+      ],
+      "matched": [
+        "大理石骨病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "四肢X线检查",
+        "基因检测"
+      ],
+      "expected": [
+        "双能X线吸收测定法（DEXA）",
+        "磁共振成像（MRI）",
+        "综合代谢面板（CMP）",
+        "维生素D检测",
+        "尿液分析（UA）",
+        "基因检测"
+      ],
+      "matched": [
+        "基因检测"
+      ],
+      "precision": 0.5,
+      "coverage": 0.16666666666666666,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 紧急转诊：鉴于患儿确诊为TCIRG1基因突变的恶性婴儿型大理石骨病，目前病情危重（骨髓衰竭、严重贫血、骨痛），需立即转诊至具备造血干细胞移植（HSCT）资质的中心进行异基因造血干细胞移植评估，这是目前唯一可能治愈的手段。\n2. 支持治疗与护理：\n   - 骨折预防：严格限制活动，抱持和移动患儿时需极度轻柔，避免任何可能导致骨折的受力或扭转动作。\n   - 疼痛管理：使用对乙酰氨基酚缓解骨痛；严禁使用阿片类药物（如可待因、曲马多），因其可能抑制呼吸并加重缺氧风险。\n   - 营养与代谢：补充钙剂和维生素D以辅助骨骼健康，但需注意监测血钙水平，避免高钙血症。\n   - 输血支持：根据血红蛋白水平输注红细胞，纠正严重贫血导致的缺氧和乏力。\n3. 监测与随访：密切监测血常规、肝肾功能及电解质变化；定期复查X线评估骨质硬化进展；若出现呼吸困难、意识改变或剧烈疼痛无法控制，需立即急诊就医。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全且涵盖移植评估，但遗漏骨折制动细节及家属沟通策略。",
+      "reference": "立即请骨科会诊，对左侧股骨骨折进行制动（如髋人字石膏固定），除非存在移位/成角或对位对线不可接受，否则不进行复位。疼痛管理采用符合年龄的对乙酰氨基酚剂量。根据需要在监测下补充维生素D和钙，以治疗维生素D缺乏及相关低钙血症；鉴于大理石骨病的骨病理特点，需谨慎监测。密切随访钙、磷、镁和甲状旁腺激素（PTH）等实验室指标，并重复检测以确保安全纠正并降低低钙血症加重的风险。每周进行临床评估并复查影像，以评估对线及骨折愈合情况。鉴于 TCIRG1 突变及家族史，转诊至小儿血液科评估造血干细胞移植。家长需监测石膏不适、发热或皮肤变化。保持充足水分和营养，喂养符合年龄的配方奶。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "大理石骨病",
+      "necessary_examinations": [
+        "双能X线吸收测定法（DEXA）",
+        "磁共振成像（MRI）",
+        "综合代谢面板（CMP）",
+        "维生素D检测",
+        "尿液分析（UA）",
+        "基因检测"
+      ],
+      "contraindications": {
+        "drugs": [
+          "Codeine",
+          "Tramadol",
+          "Tetracyclines"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "立即请骨科会诊，对左侧股骨骨折进行制动（如髋人字石膏固定），除非存在移位/成角或对位对线不可接受，否则不进行复位。疼痛管理采用符合年龄的对乙酰氨基酚剂量。根据需要在监测下补充维生素D和钙，以治疗维生素D缺乏及相关低钙血症；鉴于大理石骨病的骨病理特点，需谨慎监测。密切随访钙、磷、镁和甲状旁腺激素（PTH）等实验室指标，并重复检测以确保安全纠正并降低低钙血症加重的风险。每周进行临床评估并复查影像，以评估对线及骨折愈合情况。鉴于 TCIRG1 突变及家族史，转诊至小儿血液科评估造血干细胞移植。家长需监测石膏不适、发热或皮肤变化。保持充足水分和营养，喂养符合年龄的配方奶。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患儿表现为突发左腿剧痛、拒走及局部肿胀，伴面色苍白、精神萎靡和食欲减退，无发热出血史，需警惕骨病合并骨髓衰竭。",
+      "diagnosis_reflection": "诊断准确命中大理石骨病，成功识别了骨痛与贫血并存的危重表现，但需进一步结合基因检测确认TCIRG1突变以指导预后。",
+      "examination_reflection": "检查选择存在偏差，遗漏了DEXA、MRI、CMP及维生素D等关键评估项目，仅开了四肢X线和基因检测，导致对骨质硬化程度及代谢紊乱的覆盖不足。",
+      "treatment_reflection": "治疗方案涵盖了紧急转诊移植和支持治疗，安全性高，但遗漏了针对疑似骨折的制动细节（如髋人字石膏）及具体的疼痛剂量管理策略。",
+      "future_strategy": "面对不明原因骨痛伴贫血患儿，应优先完善全身代谢面板、影像学全面评估及基因检测；治疗上需兼顾止血/制动防骨折与造血干细胞移植评估。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/086.json#/applied_memory"
+  }
+}

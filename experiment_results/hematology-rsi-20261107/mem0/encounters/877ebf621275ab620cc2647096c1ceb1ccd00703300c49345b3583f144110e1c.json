@@ -1,0 +1,462 @@
+{
+  "patient_id": "Patient_03440",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和既往病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，我回国5天后开始喘鸣、呼吸急促和全身瘙痒。最近有胸闷、干咳，晚上和活动后加重。还有乏力、食欲差、稀便和肚子痉挛。偶尔心悸，上楼会头晕，但没有发烧或胸痛。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您回国前是否去过热带或亚热带地区？近期是否有接触蚊虫叮咬、食用不洁食物或饮用生水的情况？另外，您的皮肤瘙痒和皮疹在夜间是否加重？\", \"reason\": \"患者有明确的旅行史（回国后发病）及呼吸道、消化道、皮肤过敏症状，需进一步询问流行病学史以鉴别寄生虫感染（如钩虫、蛔虫等）、过敏性疾病或其他系统性疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您回国前是否去过热带或亚热带地区？近期是否有接触蚊虫叮咬、食用不洁食物或饮用生水的情况？另外，您的皮肤瘙痒和皮疹在夜间是否加重？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "回国前去过热带地区，有接触蚊虫和饮用生水。皮肤瘙痒和皮疹在夜间确实加重了。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有热带旅行史、饮用生水史，出现喘息、瘙痒、腹泻及夜间症状加重，高度怀疑寄生虫感染（如强殖线虫或钩虫）引起的嗜酸性粒细胞增多症。目前尚未进行任何检查，需优先完善血常规（关注嗜酸性粒细胞计数）、粪便常规及虫卵检查以明确诊断，并评估肝肾功能等基础情况，为后续治疗提供依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 尿液和粪便\", \"reason\": \"患者有热带地区旅行史、饮用生水史，且出现全身瘙痒、荨麻疹、呼吸困难、干咳、腹泻及夜间症状加重等表现，高度怀疑寄生虫感染（如粪类圆线虫或钩虫）。根据记忆摘要中的诊疗经验，对于此类疑似寄生虫感染病例，优先进行粪便检查以寻找虫卵或幼虫是确诊的关键步骤，同时需评估是否存在强心线虫高感染风险。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"粪便虫卵和寄生虫检查（O&P）\", \"大便常规检查\"], \"reason\": \"患者有热带地区旅行史，饮用生水，出现全身瘙痒、荨麻疹、呼吸困难、干咳、腹泻及夜间加重等症状，高度怀疑寄生虫感染（如钩虫、粪类圆线虫等）。根据记忆摘要中的诊疗经验，对于此类病例需优先进行粪便虫卵和寄生虫检查以明确诊断，同时做大便常规检查评估消化道情况。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"粪便虫卵和寄生虫检查（O&P）\": {\"result\": {\"蠕虫卵\": \"浓集显微镜检查可见蠕虫虫卵\", \"补充描述\": \"O&P 阳性\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"蠕虫卵\"]}, \"大便常规检查\": {\"result\": {\"寄生虫及虫卵\": \"可见蠕虫虫卵\", \"性状\": \"稀便\", \"未消化食物\": \"阴性或偶见\", \"粪便pH\": \"6.5［参考值：6.0-7.5］\", \"粪便白细胞\": \"0-2/HPF［参考值：阴性或 0-2/HPF］\", \"粪便红细胞\": \"阴性［参考值：阴性或 0-1/HPF］\", \"粪便颜色\": \"黄褐色至棕色\", \"脂肪球\": \"阴性或偶见\", \"隐血\": \"阴性\", \"黏液\": \"微量\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"寄生虫及虫卵\", \"性状\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有热带旅行史、呼吸道及消化道症状，且粪便检查已发现蠕虫卵，高度怀疑寄生虫感染（如钩虫或粪类圆线虫）。为明确具体虫种、评估感染负荷及并发症风险（特别是强直线虫高感染综合征风险），需进一步完善血常规（关注嗜酸性粒细胞）、生化及寄生虫血清学等检查以指导精准治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者有热带旅行史、呼吸道症状（喘鸣、呼吸急促）、全身瘙痒及粪便检出蠕虫卵，高度怀疑寄生虫感染（如类圆线虫）或嗜酸性粒细胞增多症。虽然粪便检查已发现虫卵，但为了评估感染的严重程度、是否存在嗜酸性粒细胞显著升高（提示过敏或特定寄生虫感染）、贫血情况以及排除其他血液系统疾病，进行血常规（重点关注嗜酸性粒细胞计数）和炎症指标检查至关重要，这将直接指导后续抗寄生虫治疗及是否需要使用糖皮质激素等决策。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\"], \"reason\": \"患者有热带旅行史、喘息、瘙痒及粪便检出虫卵，高度怀疑寄生虫感染（如钩虫或粪类圆线虫）引起的嗜酸性粒细胞增多。全血细胞计数（CBC）可评估白细胞总数及嗜酸性粒细胞比例，外周血涂片可进一步确认嗜酸性粒细胞形态并排除其他血液系统疾病，这是诊断和评估寄生虫感染相关嗜酸性粒细胞增多的关键检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：15.8 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］\", \"血液嗜酸性粒细胞\": \"绝对嗜酸性粒细胞：3.2 x 10^9/L［参考范围：0.0-0.5 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血液嗜酸性粒细胞\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"无异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 52%、淋巴细胞 28%、单核细胞 6%、嗜酸性粒细胞 18%、嗜碱性粒细胞 0.5%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。\", \"血小板形态与分布\": \"大小和形态正常，分布均匀。\", \"血小板数量\": \"数量充足（估计 240,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"白细胞分类计数\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有热带地区旅行史，出现喘鸣、瘙痒、腹泻等症状。检查结果显示粪便O&P阳性（发现蠕虫卵），血常规显示白细胞和嗜酸性粒细胞显著升高，外周血涂片证实嗜酸性粒细胞增多。结合病史和检查结果，已具备诊断寄生虫感染（特别是嗜酸性粒细胞增多相关寄生虫病）的充分依据，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"感染科\", \"reason\": \"患者有热带地区旅居史，饮用生水，出现喘鸣、呼吸急促、全身瘙痒（夜间加重）、腹泻等症状。检查结果显示粪便O&P及大便常规均检出蠕虫虫卵，且全血细胞计数显示白细胞升高伴显著嗜酸性粒细胞增多（绝对值3.2 x 10^9/L），外周血涂片嗜酸性粒细胞比例高达18%。这些临床表现和实验室检查结果高度提示寄生虫感染（如钩虫病或类似肠道寄生虫病引起的肺-肠综合征或过敏反应）。虽然涉及呼吸和皮肤症状，但病因明确为寄生虫感染，属于感染性疾病范畴，故首选感染科进行抗寄生虫治疗及综合管理。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"钩虫病\", \"treatment_plan\": \"1. 主要治疗：给予阿苯达唑（Albendazole）400mg 口服，每日一次，连续服用3天；或甲苯咪唑（Mebendazole）100mg 口服，每日两次，连续服用3天。此方案对成虫及幼虫均有高效杀灭作用，是治疗钩虫病的首选药物。\\n2. 个性化调整：患者有严重嗜酸性粒细胞增多（绝对值3.2 x 10^9/L）及呼吸道症状（喘鸣、呼吸急促），提示可能存在强烈的过敏反应或幼虫移行引起的肺部损伤（Loeffler综合征）。建议在驱虫治疗同时，短期使用抗组胺药（如氯雷他定）缓解瘙痒和皮疹；若呼吸困难明显，可酌情短期使用吸入性糖皮质激素或口服糖皮质激素控制气道炎症，但需在医生指导下严密监测，避免掩盖感染征象。患者有稀便和腹痛，注意补充水分和电解质，饮食宜清淡易消化。\\n3. 安全性与监测：治疗期间需监测血常规变化，特别是嗜酸性粒细胞计数是否下降。告知患者可能出现短暂的胃肠道反应（恶心、腹痛），属正常现象。若出现黑便加重、呕血、严重头晕心悸（提示贫血加重）或呼吸困难急剧恶化，需立即就医。治疗后2-4周复查粪便常规及O&P检查，确认虫卵转阴。建议患者及其密切接触者进行卫生宣教，改善饮水习惯，避免饮用生水，防止再次感染。\", \"reasoning\": \"诊断依据：1. 流行病学史：患者近期从热带地区回国，有饮用生水和接触蚊虫史，符合钩虫病的高危暴露特征。2. 临床表现：典型的皮肤瘙痒（幼虫侵入皮肤）、呼吸道症状（喘鸣、咳嗽，提示幼虫经肺移行）、消化道症状（腹痛、稀便）。3. 实验室检查：全血细胞计数显示白细胞升高且嗜酸性粒细胞显著增高（绝对值3.2 x 10^9/L，比例18%），外周血涂片证实嗜酸性粒细胞增多；粪便检查（O&P及大便常规）明确检出蠕虫虫卵。综合上述病史、症状及特异性检查结果，诊断为钩虫病。治疗方案首选广谱驱虫药阿苯达唑或甲苯咪唑，针对患者高嗜酸血症及呼吸道症状进行对症支持治疗，确保疗效并保障安全。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_03440",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_06604 had abnormal stool tests: fecal occult blood test (FOBT) was positive, and stool routine showed occult blood positive with 10-15 red blood cells/HPF (reference range 0-1/HPF).",
+      "Patient_07621 had abnormal blood results: WBC 15.8 x 10^9/L, absolute eosinophils 3.2 x 10^9/L, CRP 18 mg/L, and ESR 45 mm/hr, with peripheral smear showing abundant eosinophils with coarse granules.",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_07050's Complete Blood Count showed WBC 26.4 x 10^9/L, Hgb 86 g/L, and PLT 62 x 10^9/L; Peripheral blood smear revealed significant monocytosis, neutrophil dysplasia, 3% circulating promonocytes/blast cells, and thrombocytopenia.",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_03135's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 34 x 10^9/L).",
+      "Patient_05345's complete blood count showed leukocytosis (WBC: 42.8 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 24 x 10^9/L).",
+      "Patient_06270's Complete Blood Count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 92 g/L), and thrombocytopenia (PLT: 68 x 10^9/L).",
+      "Patient_03827's complete blood count showed extreme thrombocytosis (platelet count: 1280 x 10^9/L), mild anemia (Hgb 104 g/L), and mild leukocytosis (WBC 14.6 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_08107's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal white blood cell and hemoglobin levels.",
+      "Patient_07127's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal red and white blood cell morphology.",
+      "User's patient had parasitology examinations showing positive results across all methods: morphological examination, component analysis, microscopic examination, direct wet mount, and concentration techniques all detected worm eggs in stool specimens.",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Physical examination of Patient_00952 revealed BMI 18.2 kg/m², low-grade fever (37.6°C), pale conjunctiva, scattered skin ecchymoses, and multiple painless cervical/submandibular lymph nodes up to 2cm x 1.5cm.",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "User was informed that the correct workup for eosinophilia includes CBC, ESR, CRP, allergy testing, fecal O&P, parasitic serology, PFTs, Chest CT, skin biopsy, and bone marrow aspiration/biopsy, none of which were ordered in the erroneous case.",
+      "System evaluation revealed the diagnosis of hookworm disease for Patient_09288 was incorrect; the correct diagnosis is eosinophilia associated with tropical travel exposure, characterized by multi-system allergic symptoms (hives, wheezing, dry cough, diarrhea) and night sweats."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，我回国5天后开始喘鸣、呼吸急促和全身瘙痒。最近有胸闷、干咳，晚上和活动后加重。还有乏力、食欲差、稀便和肚子痉挛。偶尔心悸，上楼会头晕，但没有发烧或胸痛。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您回国前是否去过热带或亚热带地区？近期是否有接触蚊虫叮咬、食用不洁食物或饮用生水的情况？另外，您的皮肤瘙痒和皮疹在夜间是否加重？"
+      },
+      {
+        "from": "patient",
+        "text": "回国前去过热带地区，有接触蚊虫和饮用生水。皮肤瘙痒和皮疹在夜间确实加重了。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "粪便虫卵和寄生虫检查（O&P）": {
+        "result": {
+          "蠕虫卵": "浓集显微镜检查可见蠕虫虫卵",
+          "补充描述": "O&P 阳性"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "蠕虫卵"
+        ]
+      },
+      "大便常规检查": {
+        "result": {
+          "寄生虫及虫卵": "可见蠕虫虫卵",
+          "性状": "稀便",
+          "未消化食物": "阴性或偶见",
+          "粪便pH": "6.5［参考值：6.0-7.5］",
+          "粪便白细胞": "0-2/HPF［参考值：阴性或 0-2/HPF］",
+          "粪便红细胞": "阴性［参考值：阴性或 0-1/HPF］",
+          "粪便颜色": "黄褐色至棕色",
+          "脂肪球": "阴性或偶见",
+          "隐血": "阴性",
+          "黏液": "微量"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "寄生虫及虫卵",
+          "性状"
+        ]
+      },
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：15.8 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］",
+          "血液嗜酸性粒细胞": "绝对嗜酸性粒细胞：3.2 x 10^9/L［参考范围：0.0-0.5 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血液嗜酸性粒细胞"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "无异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞 52%、淋巴细胞 28%、单核细胞 6%、嗜酸性粒细胞 18%、嗜碱性粒细胞 0.5%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当。",
+          "红细胞形态": "正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。",
+          "血小板形态与分布": "大小和形态正常，分布均匀。",
+          "血小板数量": "数量充足（估计 240,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "白细胞分类计数"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和既往病史。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您回国前是否去过热带或亚热带地区？近期是否有接触蚊虫叮咬、食用不洁食物或饮用生水的情况？另外，您的皮肤瘙痒和皮疹在夜间是否加重？",
+        "reason": "患者有明确的旅行史（回国后发病）及呼吸道、消化道、皮肤过敏症状，需进一步询问流行病学史以鉴别寄生虫感染（如钩虫、蛔虫等）、过敏性疾病或其他系统性疾病。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有热带旅行史、饮用生水史，出现喘息、瘙痒、腹泻及夜间症状加重，高度怀疑寄生虫感染（如强殖线虫或钩虫）引起的嗜酸性粒细胞增多症。目前尚未进行任何检查，需优先完善血常规（关注嗜酸性粒细胞计数）、粪便常规及虫卵检查以明确诊断，并评估肝肾功能等基础情况，为后续治疗提供依据。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有热带旅行史、呼吸道及消化道症状，且粪便检查已发现蠕虫卵，高度怀疑寄生虫感染（如钩虫或粪类圆线虫）。为明确具体虫种、评估感染负荷及并发症风险（特别是强直线虫高感染综合征风险），需进一步完善血常规（关注嗜酸性粒细胞）、生化及寄生虫血清学等检查以指导精准治疗。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有热带地区旅行史，出现喘鸣、瘙痒、腹泻等症状。检查结果显示粪便O&P阳性（发现蠕虫卵），血常规显示白细胞和嗜酸性粒细胞显著升高，外周血涂片证实嗜酸性粒细胞增多。结合病史和检查结果，已具备诊断寄生虫感染（特别是嗜酸性粒细胞增多相关寄生虫病）的充分依据，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 尿液和粪便",
+        "examinations": [
+          "粪便虫卵和寄生虫检查（O&P）",
+          "大便常规检查"
+        ],
+        "reason": "患者有热带地区旅行史，饮用生水，出现全身瘙痒、荨麻疹、呼吸困难、干咳、腹泻及夜间加重等症状，高度怀疑寄生虫感染（如钩虫、粪类圆线虫等）。根据记忆摘要中的诊疗经验，对于此类病例需优先进行粪便虫卵和寄生虫检查以明确诊断，同时做大便常规检查评估消化道情况。"
+      },
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "reason": "患者有热带旅行史、喘息、瘙痒及粪便检出虫卵，高度怀疑寄生虫感染（如钩虫或粪类圆线虫）引起的嗜酸性粒细胞增多。全血细胞计数（CBC）可评估白细胞总数及嗜酸性粒细胞比例，外周血涂片可进一步确认嗜酸性粒细胞形态并排除其他血液系统疾病，这是诊断和评估寄生虫感染相关嗜酸性粒细胞增多的关键检查。"
+      }
+    ],
+    "final_plan": {
+      "department": "感染科",
+      "diagnosis": "钩虫病",
+      "treatment_plan": "1. 主要治疗：给予阿苯达唑（Albendazole）400mg 口服，每日一次，连续服用3天；或甲苯咪唑（Mebendazole）100mg 口服，每日两次，连续服用3天。此方案对成虫及幼虫均有高效杀灭作用，是治疗钩虫病的首选药物。\n2. 个性化调整：患者有严重嗜酸性粒细胞增多（绝对值3.2 x 10^9/L）及呼吸道症状（喘鸣、呼吸急促），提示可能存在强烈的过敏反应或幼虫移行引起的肺部损伤（Loeffler综合征）。建议在驱虫治疗同时，短期使用抗组胺药（如氯雷他定）缓解瘙痒和皮疹；若呼吸困难明显，可酌情短期使用吸入性糖皮质激素或口服糖皮质激素控制气道炎症，但需在医生指导下严密监测，避免掩盖感染征象。患者有稀便和腹痛，注意补充水分和电解质，饮食宜清淡易消化。\n3. 安全性与监测：治疗期间需监测血常规变化，特别是嗜酸性粒细胞计数是否下降。告知患者可能出现短暂的胃肠道反应（恶心、腹痛），属正常现象。若出现黑便加重、呕血、严重头晕心悸（提示贫血加重）或呼吸困难急剧恶化，需立即就医。治疗后2-4周复查粪便常规及O&P检查，确认虫卵转阴。建议患者及其密切接触者进行卫生宣教，改善饮水习惯，避免饮用生水，防止再次感染。",
+      "reasoning": "诊断依据：1. 流行病学史：患者近期从热带地区回国，有饮用生水和接触蚊虫史，符合钩虫病的高危暴露特征。2. 临床表现：典型的皮肤瘙痒（幼虫侵入皮肤）、呼吸道症状（喘鸣、咳嗽，提示幼虫经肺移行）、消化道症状（腹痛、稀便）。3. 实验室检查：全血细胞计数显示白细胞升高且嗜酸性粒细胞显著增高（绝对值3.2 x 10^9/L，比例18%），外周血涂片证实嗜酸性粒细胞增多；粪便检查（O&P及大便常规）明确检出蠕虫虫卵。综合上述病史、症状及特异性检查结果，诊断为钩虫病。治疗方案首选广谱驱虫药阿苯达唑或甲苯咪唑，针对患者高嗜酸血症及呼吸道症状进行对症支持治疗，确保疗效并保障安全。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_03440",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.5,
+      "treatmentOverallScore": 0.56,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "钩虫病"
+        ],
+        "expected": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "粪便虫卵和寄生虫检查（O&P）",
+          "大便常规检查",
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "C反应蛋白（CRP）",
+          "红细胞沉降率（ESR）",
+          "肺功能检查（PFTs）",
+          "皮肤活检",
+          "肝功能检查（LFTs）"
+        ],
+        "matched": [
+          "粪便虫卵和寄生虫检查（O&P）",
+          "全血细胞计数（CBC）"
+        ],
+        "precision": 0.5,
+        "coverage": 0.2222222222222222,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：给予阿苯达唑（Albendazole）400mg 口服，每日一次，连续服用3天；或甲苯咪唑（Mebendazole）100mg 口服，每日两次，连续服用3天。此方案对成虫及幼虫均有高效杀灭作用，是治疗钩虫病的首选药物。\n2. 个性化调整：患者有严重嗜酸性粒细胞增多（绝对值3.2 x 10^9/L）及呼吸道症状（喘鸣、呼吸急促），提示可能存在强烈的过敏反应或幼虫移行引起的肺部损伤（Loeffler综合征）。建议在驱虫治疗同时，短期使用抗组胺药（如氯雷他定）缓解瘙痒和皮疹；若呼吸困难明显，可酌情短期使用吸入性糖皮质激素或口服糖皮质激素控制气道炎症，但需在医生指导下严密监测，避免掩盖感染征象。患者有稀便和腹痛，注意补充水分和电解质，饮食宜清淡易消化。\n3. 安全性与监测：治疗期间需监测血常规变化，特别是嗜酸性粒细胞计数是否下降。告知患者可能出现短暂的胃肠道反应（恶心、腹痛），属正常现象。若出现黑便加重、呕血、严重头晕心悸（提示贫血加重）或呼吸困难急剧恶化，需立即就医。治疗后2-4周复查粪便常规及O&P检查，确认虫卵转阴。建议患者及其密切接触者进行卫生宣教，改善饮水习惯，避免饮用生水，防止再次感染。",
+        "overallScore": 0.56,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.8,
+        "reasoning": "方案误诊为钩虫病且未用伊维菌素，违背核心标准。",
+        "reference": "鉴于已确认粪类圆线虫感染（O&P/血清学），应记录对粪类圆线虫的评估，并在使用全身性糖皮质激素前先行治疗或予以排除。若因呼吸功能受损必须使用全身性激素，应根据当地指南启动经验性抗粪类圆线虫治疗（如伊维菌素），并密切监测超感染症状；在开始或确认已进行粪类圆线虫治疗之前，应避免使用泼尼松。继续按指征进行抗寄生虫治疗，并使用西替利嗪缓解瘙痒/荨麻疹，使用短效吸入性支气管扩张剂（沙丁胺醇）缓解喘鸣。保持充足补液和休息；1周后复诊，复查带分类的CBC并重新评估肺部情况；如出现呼吸困难加重、胸痛、发热、胃肠道症状或全身情况恶化，应立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "嗜酸性粒细胞增多症",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "C反应蛋白（CRP）",
+          "红细胞沉降率（ESR）",
+          "肺功能检查（PFTs）",
+          "皮肤活检",
+          "肝功能检查（LFTs）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "Penicillin"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "鉴于已确认粪类圆线虫感染（O&P/血清学），应记录对粪类圆线虫的评估，并在使用全身性糖皮质激素前先行治疗或予以排除。若因呼吸功能受损必须使用全身性激素，应根据当地指南启动经验性抗粪类圆线虫治疗（如伊维菌素），并密切监测超感染症状；在开始或确认已进行粪类圆线虫治疗之前，应避免使用泼尼松。继续按指征进行抗寄生虫治疗，并使用西替利嗪缓解瘙痒/荨麻疹，使用短效吸入性支气管扩张剂（沙丁胺醇）缓解喘鸣。保持充足补液和休息；1周后复诊，复查带分类的CBC并重新评估肺部情况；如出现呼吸困难加重、胸痛、发热、胃肠道症状或全身情况恶化，应立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者有热带地区旅居史，接触蚊虫并饮用生水，回国后出现喘鸣、呼吸急促、全身瘙痒（夜间加重）、乏力及消化道症状。",
+        "diagnosis_reflection": "误诊为钩虫病，未识别出粪类圆线虫感染（Strongyloides stercoralis）这一关键诊断。需警惕热带旅行史伴嗜酸性粒细胞增多和呼吸道症状时，粪类圆线虫是重要鉴别对象，而非仅考虑钩虫。",
+        "examination_reflection": "遗漏了过敏检测、寄生虫血清学检测、肺功能检查及炎症指标（CRP/ESR）。对于疑似蠕虫移行症或过敏性肺炎的患者，应完善血清学及肺功能评估以明确肺部受累情况。",
+        "treatment_reflection": "治疗方案错误地选择了阿苯达唑/甲苯咪唑，未使用针对粪类圆线虫的首选药物伊维菌素。在疑似强直性线虫感染且存在高嗜酸性粒细胞血症时，必须优先使用伊维菌素，并谨慎评估激素使用风险以防超感染。",
+        "future_strategy": "面对热带旅行史+呼吸道症状+皮肤瘙痒+嗜酸增多的患者，首先排查粪类圆线虫（血清学/O&P），首选伊维菌素治疗，避免盲目使用激素，并完善肺功能及过敏相关检查。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T14:07:17.059055+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_03440",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "钩虫病"
+    ],
+    "treatment_plan": "1. 主要治疗：给予阿苯达唑（Albendazole）400mg 口服，每日一次，连续服用3天；或甲苯咪唑（Mebendazole）100mg 口服，每日两次，连续服用3天。此方案对成虫及幼虫均有高效杀灭作用，是治疗钩虫病的首选药物。\n2. 个性化调整：患者有严重嗜酸性粒细胞增多（绝对值3.2 x 10^9/L）及呼吸道症状（喘鸣、呼吸急促），提示可能存在强烈的过敏反应或幼虫移行引起的肺部损伤（Loeffler综合征）。建议在驱虫治疗同时，短期使用抗组胺药（如氯雷他定）缓解瘙痒和皮疹；若呼吸困难明显，可酌情短期使用吸入性糖皮质激素或口服糖皮质激素控制气道炎症，但需在医生指导下严密监测，避免掩盖感染征象。患者有稀便和腹痛，注意补充水分和电解质，饮食宜清淡易消化。\n3. 安全性与监测：治疗期间需监测血常规变化，特别是嗜酸性粒细胞计数是否下降。告知患者可能出现短暂的胃肠道反应（恶心、腹痛），属正常现象。若出现黑便加重、呕血、严重头晕心悸（提示贫血加重）或呼吸困难急剧恶化，需立即就医。治疗后2-4周复查粪便常规及O&P检查，确认虫卵转阴。建议患者及其密切接触者进行卫生宣教，改善饮水习惯，避免饮用生水，防止再次感染。",
+    "reasoning": "诊断依据：1. 流行病学史：患者近期从热带地区回国，有饮用生水和接触蚊虫史，符合钩虫病的高危暴露特征。2. 临床表现：典型的皮肤瘙痒（幼虫侵入皮肤）、呼吸道症状（喘鸣、咳嗽，提示幼虫经肺移行）、消化道症状（腹痛、稀便）。3. 实验室检查：全血细胞计数显示白细胞升高且嗜酸性粒细胞显著增高（绝对值3.2 x 10^9/L，比例18%），外周血涂片证实嗜酸性粒细胞增多；粪便检查（O&P及大便常规）明确检出蠕虫虫卵。综合上述病史、症状及特异性检查结果，诊断为钩虫病。治疗方案首选广谱驱虫药阿苯达唑或甲苯咪唑，针对患者高嗜酸血症及呼吸道症状进行对症支持治疗，确保疗效并保障安全。",
+    "ordered_examinations": [
+      "粪便虫卵和寄生虫检查（O&P）",
+      "大便常规检查",
+      "全血细胞计数（CBC）",
+      "外周血涂片"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_03440",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.5,
+    "treatmentOverallScore": 0.56,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "钩虫病"
+      ],
+      "expected": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "粪便虫卵和寄生虫检查（O&P）",
+        "大便常规检查",
+        "全血细胞计数（CBC）",
+        "外周血涂片"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "C反应蛋白（CRP）",
+        "红细胞沉降率（ESR）",
+        "肺功能检查（PFTs）",
+        "皮肤活检",
+        "肝功能检查（LFTs）"
+      ],
+      "matched": [
+        "粪便虫卵和寄生虫检查（O&P）",
+        "全血细胞计数（CBC）"
+      ],
+      "precision": 0.5,
+      "coverage": 0.2222222222222222,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：给予阿苯达唑（Albendazole）400mg 口服，每日一次，连续服用3天；或甲苯咪唑（Mebendazole）100mg 口服，每日两次，连续服用3天。此方案对成虫及幼虫均有高效杀灭作用，是治疗钩虫病的首选药物。\n2. 个性化调整：患者有严重嗜酸性粒细胞增多（绝对值3.2 x 10^9/L）及呼吸道症状（喘鸣、呼吸急促），提示可能存在强烈的过敏反应或幼虫移行引起的肺部损伤（Loeffler综合征）。建议在驱虫治疗同时，短期使用抗组胺药（如氯雷他定）缓解瘙痒和皮疹；若呼吸困难明显，可酌情短期使用吸入性糖皮质激素或口服糖皮质激素控制气道炎症，但需在医生指导下严密监测，避免掩盖感染征象。患者有稀便和腹痛，注意补充水分和电解质，饮食宜清淡易消化。\n3. 安全性与监测：治疗期间需监测血常规变化，特别是嗜酸性粒细胞计数是否下降。告知患者可能出现短暂的胃肠道反应（恶心、腹痛），属正常现象。若出现黑便加重、呕血、严重头晕心悸（提示贫血加重）或呼吸困难急剧恶化，需立即就医。治疗后2-4周复查粪便常规及O&P检查，确认虫卵转阴。建议患者及其密切接触者进行卫生宣教，改善饮水习惯，避免饮用生水，防止再次感染。",
+      "overallScore": 0.56,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.8,
+      "reasoning": "方案误诊为钩虫病且未用伊维菌素，违背核心标准。",
+      "reference": "鉴于已确认粪类圆线虫感染（O&P/血清学），应记录对粪类圆线虫的评估，并在使用全身性糖皮质激素前先行治疗或予以排除。若因呼吸功能受损必须使用全身性激素，应根据当地指南启动经验性抗粪类圆线虫治疗（如伊维菌素），并密切监测超感染症状；在开始或确认已进行粪类圆线虫治疗之前，应避免使用泼尼松。继续按指征进行抗寄生虫治疗，并使用西替利嗪缓解瘙痒/荨麻疹，使用短效吸入性支气管扩张剂（沙丁胺醇）缓解喘鸣。保持充足补液和休息；1周后复诊，复查带分类的CBC并重新评估肺部情况；如出现呼吸困难加重、胸痛、发热、胃肠道症状或全身情况恶化，应立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "嗜酸性粒细胞增多症",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "C反应蛋白（CRP）",
+        "红细胞沉降率（ESR）",
+        "肺功能检查（PFTs）",
+        "皮肤活检",
+        "肝功能检查（LFTs）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "Penicillin"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "鉴于已确认粪类圆线虫感染（O&P/血清学），应记录对粪类圆线虫的评估，并在使用全身性糖皮质激素前先行治疗或予以排除。若因呼吸功能受损必须使用全身性激素，应根据当地指南启动经验性抗粪类圆线虫治疗（如伊维菌素），并密切监测超感染症状；在开始或确认已进行粪类圆线虫治疗之前，应避免使用泼尼松。继续按指征进行抗寄生虫治疗，并使用西替利嗪缓解瘙痒/荨麻疹，使用短效吸入性支气管扩张剂（沙丁胺醇）缓解喘鸣。保持充足补液和休息；1周后复诊，复查带分类的CBC并重新评估肺部情况；如出现呼吸困难加重、胸痛、发热、胃肠道症状或全身情况恶化，应立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者有热带地区旅居史，接触蚊虫并饮用生水，回国后出现喘鸣、呼吸急促、全身瘙痒（夜间加重）、乏力及消化道症状。",
+      "diagnosis_reflection": "误诊为钩虫病，未识别出粪类圆线虫感染（Strongyloides stercoralis）这一关键诊断。需警惕热带旅行史伴嗜酸性粒细胞增多和呼吸道症状时，粪类圆线虫是重要鉴别对象，而非仅考虑钩虫。",
+      "examination_reflection": "遗漏了过敏检测、寄生虫血清学检测、肺功能检查及炎症指标（CRP/ESR）。对于疑似蠕虫移行症或过敏性肺炎的患者，应完善血清学及肺功能评估以明确肺部受累情况。",
+      "treatment_reflection": "治疗方案错误地选择了阿苯达唑/甲苯咪唑，未使用针对粪类圆线虫的首选药物伊维菌素。在疑似强直性线虫感染且存在高嗜酸性粒细胞血症时，必须优先使用伊维菌素，并谨慎评估激素使用风险以防超感染。",
+      "future_strategy": "面对热带旅行史+呼吸道症状+皮肤瘙痒+嗜酸增多的患者，首先排查粪类圆线虫（血清学/O&P），首选伊维菌素治疗，避免盲目使用激素，并完善肺功能及过敏相关检查。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/095.json#/applied_memory"
+  }
+}

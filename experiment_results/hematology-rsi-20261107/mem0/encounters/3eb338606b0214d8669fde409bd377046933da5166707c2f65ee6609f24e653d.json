@@ -1,0 +1,368 @@
+{
+  "patient_id": "Patient_09094",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "就是觉得特别累，一站起来就头晕。最近上楼也喘，心跳很快，脸色好像也变白了。有时候头会痛，上课注意力集中不了。大概是从三天前开始的，后来月经量特别多，之后感觉更不对劲了。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为急性贫血症状（乏力、头晕、气促、面色苍白）及月经过多导致的出血倾向，病史仅3天，急需通过血常规检查评估贫血程度、血小板数量及白细胞情况，以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为进行性乏力、活动后气促、头晕、面色苍白及月经量增多，高度提示贫血或出血性疾病。血常规是评估贫血程度、血小板数量及功能、白细胞情况的首选检查，能直接帮助判断是否存在血液系统疾病（如再生障碍性贫血、白血病、血小板减少性紫癜等），对后续诊断和治疗至关重要。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"凝血功能全套\", \"铁代谢检查\"], \"reason\": \"患者为女性，主诉乏力、头晕、活动后气喘、面色苍白，且有近期月经量过多史，高度提示贫血及可能的出血性疾病。首先进行全血细胞计数（CBC）以明确贫血程度及血小板情况；结合出血倾向（月经量多），需加做凝血功能全套排查凝血障碍；鉴于失血性病因可能性大，铁代谢检查有助于评估缺铁性贫血。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"78 g/L［参考范围：120-160 g/L］\", \"平均红细胞体积\": \"70 fL［参考范围：78-100 fL］\", \"血液红细胞计数\": \"3.2 x 10^12/L［参考范围：4.1-5.1 x 10^12/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"平均红细胞体积\", \"血液红细胞计数\"]}, \"凝血功能全套\": {\"result\": {\"活化部分凝血活酶时间\": \"42 秒［参考范围：25-35 秒］\", \"凝血酶原时间\": \"16.0 秒［参考范围：11-13.5 秒］\", \"国际标准化比值\": \"1.3［参考范围：0.8-1.2］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"活化部分凝血活酶时间\", \"凝血酶原时间\", \"国际标准化比值\"]}, \"铁代谢检查\": {\"result\": {\"血清铁\": \"18 ug/dL［参考范围：40-160 ug/dL］\", \"血清铁蛋白\": \"6 ng/mL［参考范围：10-120 ng/mL］\", \"总铁结合力\": \"470 ug/dL［参考范围：250-425 ug/dL］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清铁\", \"血清铁蛋白\", \"总铁结合力\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有典型的小细胞低色素性贫血症状（乏力、头晕、气短、面色苍白）及月经量过多病史，结合已完成的检查结果显示血红蛋白显著降低（78 g/L）、MCV降低（70 fL），且铁代谢检查明确提示严重缺铁（血清铁低、铁蛋白极低、总铁结合力升高），同时凝血功能异常可能与出血相关。现有信息足以确诊为缺铁性贫血，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为严重的小细胞低色素性贫血（血红蛋白78 g/L，MCV 70 fL），铁代谢检查证实为重度缺铁（血清铁蛋白6 ng/mL，总铁结合力升高）。虽然患者有月经量多的病史提示可能存在妇科原因，但目前的实验室结果（贫血、凝血功能异常）及症状（乏力、头晕、气促）主要指向血液系统疾病或严重的营养性贫血并发症。血液科负责贫血的病因诊断、鉴别诊断及治疗（如排除其他血液病、制定补铁方案等），是处理此类复杂血液指标异常的首选科室。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. 病因治疗：立即针对月经量过多进行妇科评估与止血治疗（如使用氨甲环酸或激素调节），这是纠正贫血的根本。2. 补铁治疗：口服铁剂（如硫酸亚铁或琥珀酸亚铁），建议每日补充元素铁150-200mg，分次服用，同时配合维生素C以促进吸收；若患者胃肠道反应严重或吸收不良，可考虑静脉铁剂替代。3. 支持治疗：鉴于血红蛋白仅78g/L且伴有明显头晕、气促症状，需严格卧床休息，避免剧烈活动以防晕厥跌倒；暂不输血，除非出现心绞痛、心力衰竭等危急情况。4. 监测与随访：治疗后2周复查网织红细胞计数，4周复查血常规及铁代谢指标，直至血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。5. 安全警示：若出现黑便（非药物引起）、呕血、意识模糊或胸痛，需立即急诊就医。\", \"reasoning\": \"诊断依据：患者为育龄期女性，有明确的月经过多病史，临床表现为乏力、头晕、面色苍白等典型贫血症状。实验室检查显示小细胞低色素性贫血（Hgb 78g/L, MCV 70fL），铁代谢检查证实严重缺铁（血清铁降低、总铁结合力升高、铁蛋白显著降低）。凝血功能异常（PT/APT/INR轻度延长）可能与严重贫血导致的血液稀释或合并轻微凝血因子消耗有关，但核心问题为缺铁。综合病史与检查结果，最可能的诊断为缺铁性贫血。治疗方案侧重于去除病因（止血）、补充铁剂及对症支持，确保有效改善携氧能力并恢复铁储备，同时强调安全性监测。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_09094",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_00068's lab results showed microcytic hypochromic anemia (Hgb 98 g/L, RBC 3.8 x 10^12/L, MCV 72 fL) with normal coagulation function.",
+      "Patient_09529's CBC showed microcytic hypochromic anemia: Hemoglobin 125 g/L (ref 140-180), RBC 4.2 × 10^12/L (ref 4.5-5.5), MCV 76 fL (ref 80-100), MCH 24 pg (ref 27-34), MCHC 310 g/L (ref 320-360), RDW 16.2% (ref 11.5-14.5%), Hct 38% (ref 40-54%).",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "Laboratory results for Patient_09102 showed anemia (Hemoglobin 118 g/L) and thrombocytopenia (Platelets 112 x 10^9/L), with normal white blood cell differential counts.",
+      "Patient_06243's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 98 g/L (anemia), and PLT 42 x 10^9/L (thrombocytopenia).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_03135's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 34 x 10^9/L).",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "User diagnosed Patient_02107 with iron deficiency anemia based on symptoms of progressive fatigue, dizziness, shortness of breath, pale complexion, heavy menstrual bleeding, and pica (craving ice), supported by lab results showing microcytic hypochromic anemia (Hgb 82 g/L, MCV 72 fL) and severe iron deficiency (serum iron 22 ug/dL, TIBC 452 ug/dL, transferrin saturation 5%, ferritin 6 ng/mL)",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_05291's iron metabolism panel confirmed severe iron deficiency: total iron binding capacity 380 μg/dL, serum iron 45 μg/dL, ferritin 12 ng/mL, and transferrin saturation 12%.",
+      "Patient_01544's complete blood count showed leukocytosis (WBC: 28.4 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "Patient_08107's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal white blood cell and hemoglobin levels.",
+      "Patient_07050's Complete Blood Count showed WBC 26.4 x 10^9/L, Hgb 86 g/L, and PLT 62 x 10^9/L; Peripheral blood smear revealed significant monocytosis, neutrophil dysplasia, 3% circulating promonocytes/blast cells, and thrombocytopenia.",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "就是觉得特别累，一站起来就头晕。最近上楼也喘，心跳很快，脸色好像也变白了。有时候头会痛，上课注意力集中不了。大概是从三天前开始的，后来月经量特别多，之后感觉更不对劲了。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "78 g/L［参考范围：120-160 g/L］",
+          "平均红细胞体积": "70 fL［参考范围：78-100 fL］",
+          "血液红细胞计数": "3.2 x 10^12/L［参考范围：4.1-5.1 x 10^12/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "平均红细胞体积",
+          "血液红细胞计数"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "活化部分凝血活酶时间": "42 秒［参考范围：25-35 秒］",
+          "凝血酶原时间": "16.0 秒［参考范围：11-13.5 秒］",
+          "国际标准化比值": "1.3［参考范围：0.8-1.2］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "活化部分凝血活酶时间",
+          "凝血酶原时间",
+          "国际标准化比值"
+        ]
+      },
+      "铁代谢检查": {
+        "result": {
+          "血清铁": "18 ug/dL［参考范围：40-160 ug/dL］",
+          "血清铁蛋白": "6 ng/mL［参考范围：10-120 ng/mL］",
+          "总铁结合力": "470 ug/dL［参考范围：250-425 ug/dL］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清铁",
+          "血清铁蛋白",
+          "总铁结合力"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和体征。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为急性贫血症状（乏力、头晕、气促、面色苍白）及月经过多导致的出血倾向，病史仅3天，急需通过血常规检查评估贫血程度、血小板数量及白细胞情况，以明确诊断方向。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有典型的小细胞低色素性贫血症状（乏力、头晕、气短、面色苍白）及月经量过多病史，结合已完成的检查结果显示血红蛋白显著降低（78 g/L）、MCV降低（70 fL），且铁代谢检查明确提示严重缺铁（血清铁低、铁蛋白极低、总铁结合力升高），同时凝血功能异常可能与出血相关。现有信息足以确诊为缺铁性贫血，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "铁代谢检查"
+        ],
+        "reason": "患者为女性，主诉乏力、头晕、活动后气喘、面色苍白，且有近期月经量过多史，高度提示贫血及可能的出血性疾病。首先进行全血细胞计数（CBC）以明确贫血程度及血小板情况；结合出血倾向（月经量多），需加做凝血功能全套排查凝血障碍；鉴于失血性病因可能性大，铁代谢检查有助于评估缺铁性贫血。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "缺铁性贫血",
+      "treatment_plan": "1. 病因治疗：立即针对月经量过多进行妇科评估与止血治疗（如使用氨甲环酸或激素调节），这是纠正贫血的根本。2. 补铁治疗：口服铁剂（如硫酸亚铁或琥珀酸亚铁），建议每日补充元素铁150-200mg，分次服用，同时配合维生素C以促进吸收；若患者胃肠道反应严重或吸收不良，可考虑静脉铁剂替代。3. 支持治疗：鉴于血红蛋白仅78g/L且伴有明显头晕、气促症状，需严格卧床休息，避免剧烈活动以防晕厥跌倒；暂不输血，除非出现心绞痛、心力衰竭等危急情况。4. 监测与随访：治疗后2周复查网织红细胞计数，4周复查血常规及铁代谢指标，直至血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。5. 安全警示：若出现黑便（非药物引起）、呕血、意识模糊或胸痛，需立即急诊就医。",
+      "reasoning": "诊断依据：患者为育龄期女性，有明确的月经过多病史，临床表现为乏力、头晕、面色苍白等典型贫血症状。实验室检查显示小细胞低色素性贫血（Hgb 78g/L, MCV 70fL），铁代谢检查证实严重缺铁（血清铁降低、总铁结合力升高、铁蛋白显著降低）。凝血功能异常（PT/APT/INR轻度延长）可能与严重贫血导致的血液稀释或合并轻微凝血因子消耗有关，但核心问题为缺铁。综合病史与检查结果，最可能的诊断为缺铁性贫血。治疗方案侧重于去除病因（止血）、补充铁剂及对症支持，确保有效改善携氧能力并恢复铁储备，同时强调安全性监测。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_09094",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.58,
+      "treatmentSafety": 0.8,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "缺铁性贫血"
+        ],
+        "expected": [
+          "缺铁性贫血"
+        ],
+        "matched": [
+          "缺铁性贫血"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "铁代谢检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "凝血功能全套",
+          "大便常规检查",
+          "维生素和矿物质测定",
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "铁代谢检查"
+        ],
+        "precision": 1.0,
+        "coverage": 0.42857142857142855,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 病因治疗：立即针对月经量过多进行妇科评估与止血治疗（如使用氨甲环酸或激素调节），这是纠正贫血的根本。2. 补铁治疗：口服铁剂（如硫酸亚铁或琥珀酸亚铁），建议每日补充元素铁150-200mg，分次服用，同时配合维生素C以促进吸收；若患者胃肠道反应严重或吸收不良，可考虑静脉铁剂替代。3. 支持治疗：鉴于血红蛋白仅78g/L且伴有明显头晕、气促症状，需严格卧床休息，避免剧烈活动以防晕厥跌倒；暂不输血，除非出现心绞痛、心力衰竭等危急情况。4. 监测与随访：治疗后2周复查网织红细胞计数，4周复查血常规及铁代谢指标，直至血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。5. 安全警示：若出现黑便（非药物引起）、呕血、意识模糊或胸痛，需立即急诊就医。",
+        "overallScore": 0.58,
+        "safety": 0.8,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.8,
+        "reasoning": "方案安全但遗漏凝血异常评估及叶酸补充，未完全遵循参考标准。",
+        "reference": "开始治疗剂量的口服硫酸亚铁治疗以纠正缺铁，并给予短期口服叶酸补充以纠正叶酸缺乏（需注意合并缺铁可能掩盖叶酸相关的大细胞性改变）；通过复查CBC监测治疗反应，并在开始治疗后考虑追踪网织红细胞反应和MCV变化趋势。鉴于凝血功能结果显示PT延长且aPTT延长，建议安排血液科会诊及有针对性的随访检查（复查PT/aPTT以确认、混合试验、纤维蛋白原、肝功能检查、评估维生素K缺乏，以及结合类风湿关节炎病史评估抗磷脂抗体），以明确潜在凝血异常。尽管粪便隐血阳性，但EGD和结肠镜检查均正常；近期月经过多时应谨慎解读FOBT结果（可能存在污染），并认识到间断使用NSAIDs可导致间歇性黏膜损伤——建议在非月经期重复FOBT，且仅当复查仍为阳性或贫血对治疗无反应时，再考虑小肠评估。建议在贫血/可能胃肠道出血的评估与治疗期间尽量减少或避免使用NSAIDs，并与相关临床医生讨论替代性镇痛方案及类风湿关节炎管理。饮食中加入富含铁的食物，如红肉和扁豆，保证充足蛋白质摄入，并避免进餐时饮茶，因为茶会抑制铁吸收。2周后复诊，复查全血细胞计数并进行临床评估；若出现严重头晕、乏力加重、黑便或任何部位出血，请立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "缺铁性贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "凝血功能全套",
+          "大便常规检查",
+          "维生素和矿物质测定",
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "开始治疗剂量的口服硫酸亚铁治疗以纠正缺铁，并给予短期口服叶酸补充以纠正叶酸缺乏（需注意合并缺铁可能掩盖叶酸相关的大细胞性改变）；通过复查CBC监测治疗反应，并在开始治疗后考虑追踪网织红细胞反应和MCV变化趋势。鉴于凝血功能结果显示PT延长且aPTT延长，建议安排血液科会诊及有针对性的随访检查（复查PT/aPTT以确认、混合试验、纤维蛋白原、肝功能检查、评估维生素K缺乏，以及结合类风湿关节炎病史评估抗磷脂抗体），以明确潜在凝血异常。尽管粪便隐血阳性，但EGD和结肠镜检查均正常；近期月经过多时应谨慎解读FOBT结果（可能存在污染），并认识到间断使用NSAIDs可导致间歇性黏膜损伤——建议在非月经期重复FOBT，且仅当复查仍为阳性或贫血对治疗无反应时，再考虑小肠评估。建议在贫血/可能胃肠道出血的评估与治疗期间尽量减少或避免使用NSAIDs，并与相关临床医生讨论替代性镇痛方案及类风湿关节炎管理。饮食中加入富含铁的食物，如红肉和扁豆，保证充足蛋白质摄入，并避免进餐时饮茶，因为茶会抑制铁吸收。2周后复诊，复查全血细胞计数并进行临床评估；若出现严重头晕、乏力加重、黑便或任何部位出血，请立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "青年女性，主诉乏力、头晕、气促及面色苍白，有明确月经过多诱因，症状急性加重。",
+        "diagnosis_reflection": "诊断准确（缺铁性贫血），成功识别月经量过多为关键病因。",
+        "examination_reflection": "检查选择精准（CBC、凝血功能、铁代谢），但遗漏了消化道出血筛查（大便常规）及内镜评估等排查继发性失血来源的检查。",
+        "treatment_reflection": "治疗策略安全且针对性强（止血、补铁、休息），但遗漏了参考方案中建议的叶酸补充及针对凝血异常的进一步血液科会诊评估。",
+        "future_strategy": "面对月经过多致贫血患者，除常规补铁外，务必完善大便隐血及胃肠镜排查隐匿性出血；同时需警惕合并凝血障碍或营养缺乏（如叶酸），制定综合治疗方案。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T12:40:21.593499+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_09094",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "缺铁性贫血"
+    ],
+    "treatment_plan": "1. 病因治疗：立即针对月经量过多进行妇科评估与止血治疗（如使用氨甲环酸或激素调节），这是纠正贫血的根本。2. 补铁治疗：口服铁剂（如硫酸亚铁或琥珀酸亚铁），建议每日补充元素铁150-200mg，分次服用，同时配合维生素C以促进吸收；若患者胃肠道反应严重或吸收不良，可考虑静脉铁剂替代。3. 支持治疗：鉴于血红蛋白仅78g/L且伴有明显头晕、气促症状，需严格卧床休息，避免剧烈活动以防晕厥跌倒；暂不输血，除非出现心绞痛、心力衰竭等危急情况。4. 监测与随访：治疗后2周复查网织红细胞计数，4周复查血常规及铁代谢指标，直至血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。5. 安全警示：若出现黑便（非药物引起）、呕血、意识模糊或胸痛，需立即急诊就医。",
+    "reasoning": "诊断依据：患者为育龄期女性，有明确的月经过多病史，临床表现为乏力、头晕、面色苍白等典型贫血症状。实验室检查显示小细胞低色素性贫血（Hgb 78g/L, MCV 70fL），铁代谢检查证实严重缺铁（血清铁降低、总铁结合力升高、铁蛋白显著降低）。凝血功能异常（PT/APT/INR轻度延长）可能与严重贫血导致的血液稀释或合并轻微凝血因子消耗有关，但核心问题为缺铁。综合病史与检查结果，最可能的诊断为缺铁性贫血。治疗方案侧重于去除病因（止血）、补充铁剂及对症支持，确保有效改善携氧能力并恢复铁储备，同时强调安全性监测。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "凝血功能全套",
+      "铁代谢检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_09094",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.58,
+    "treatmentSafety": 0.8,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "缺铁性贫血"
+      ],
+      "expected": [
+        "缺铁性贫血"
+      ],
+      "matched": [
+        "缺铁性贫血"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套",
+        "铁代谢检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "凝血功能全套",
+        "大便常规检查",
+        "维生素和矿物质测定",
+        "食管胃十二指肠镜检查（EGD）",
+        "结肠镜检查"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套",
+        "铁代谢检查"
+      ],
+      "precision": 1.0,
+      "coverage": 0.42857142857142855,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 病因治疗：立即针对月经量过多进行妇科评估与止血治疗（如使用氨甲环酸或激素调节），这是纠正贫血的根本。2. 补铁治疗：口服铁剂（如硫酸亚铁或琥珀酸亚铁），建议每日补充元素铁150-200mg，分次服用，同时配合维生素C以促进吸收；若患者胃肠道反应严重或吸收不良，可考虑静脉铁剂替代。3. 支持治疗：鉴于血红蛋白仅78g/L且伴有明显头晕、气促症状，需严格卧床休息，避免剧烈活动以防晕厥跌倒；暂不输血，除非出现心绞痛、心力衰竭等危急情况。4. 监测与随访：治疗后2周复查网织红细胞计数，4周复查血常规及铁代谢指标，直至血红蛋白恢复正常后继续补铁3-6个月以补足储存铁。5. 安全警示：若出现黑便（非药物引起）、呕血、意识模糊或胸痛，需立即急诊就医。",
+      "overallScore": 0.58,
+      "safety": 0.8,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.8,
+      "reasoning": "方案安全但遗漏凝血异常评估及叶酸补充，未完全遵循参考标准。",
+      "reference": "开始治疗剂量的口服硫酸亚铁治疗以纠正缺铁，并给予短期口服叶酸补充以纠正叶酸缺乏（需注意合并缺铁可能掩盖叶酸相关的大细胞性改变）；通过复查CBC监测治疗反应，并在开始治疗后考虑追踪网织红细胞反应和MCV变化趋势。鉴于凝血功能结果显示PT延长且aPTT延长，建议安排血液科会诊及有针对性的随访检查（复查PT/aPTT以确认、混合试验、纤维蛋白原、肝功能检查、评估维生素K缺乏，以及结合类风湿关节炎病史评估抗磷脂抗体），以明确潜在凝血异常。尽管粪便隐血阳性，但EGD和结肠镜检查均正常；近期月经过多时应谨慎解读FOBT结果（可能存在污染），并认识到间断使用NSAIDs可导致间歇性黏膜损伤——建议在非月经期重复FOBT，且仅当复查仍为阳性或贫血对治疗无反应时，再考虑小肠评估。建议在贫血/可能胃肠道出血的评估与治疗期间尽量减少或避免使用NSAIDs，并与相关临床医生讨论替代性镇痛方案及类风湿关节炎管理。饮食中加入富含铁的食物，如红肉和扁豆，保证充足蛋白质摄入，并避免进餐时饮茶，因为茶会抑制铁吸收。2周后复诊，复查全血细胞计数并进行临床评估；若出现严重头晕、乏力加重、黑便或任何部位出血，请立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "缺铁性贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "凝血功能全套",
+        "大便常规检查",
+        "维生素和矿物质测定",
+        "食管胃十二指肠镜检查（EGD）",
+        "结肠镜检查"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "开始治疗剂量的口服硫酸亚铁治疗以纠正缺铁，并给予短期口服叶酸补充以纠正叶酸缺乏（需注意合并缺铁可能掩盖叶酸相关的大细胞性改变）；通过复查CBC监测治疗反应，并在开始治疗后考虑追踪网织红细胞反应和MCV变化趋势。鉴于凝血功能结果显示PT延长且aPTT延长，建议安排血液科会诊及有针对性的随访检查（复查PT/aPTT以确认、混合试验、纤维蛋白原、肝功能检查、评估维生素K缺乏，以及结合类风湿关节炎病史评估抗磷脂抗体），以明确潜在凝血异常。尽管粪便隐血阳性，但EGD和结肠镜检查均正常；近期月经过多时应谨慎解读FOBT结果（可能存在污染），并认识到间断使用NSAIDs可导致间歇性黏膜损伤——建议在非月经期重复FOBT，且仅当复查仍为阳性或贫血对治疗无反应时，再考虑小肠评估。建议在贫血/可能胃肠道出血的评估与治疗期间尽量减少或避免使用NSAIDs，并与相关临床医生讨论替代性镇痛方案及类风湿关节炎管理。饮食中加入富含铁的食物，如红肉和扁豆，保证充足蛋白质摄入，并避免进餐时饮茶，因为茶会抑制铁吸收。2周后复诊，复查全血细胞计数并进行临床评估；若出现严重头晕、乏力加重、黑便或任何部位出血，请立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "青年女性，主诉乏力、头晕、气促及面色苍白，有明确月经过多诱因，症状急性加重。",
+      "diagnosis_reflection": "诊断准确（缺铁性贫血），成功识别月经量过多为关键病因。",
+      "examination_reflection": "检查选择精准（CBC、凝血功能、铁代谢），但遗漏了消化道出血筛查（大便常规）及内镜评估等排查继发性失血来源的检查。",
+      "treatment_reflection": "治疗策略安全且针对性强（止血、补铁、休息），但遗漏了参考方案中建议的叶酸补充及针对凝血异常的进一步血液科会诊评估。",
+      "future_strategy": "面对月经过多致贫血患者，除常规补铁外，务必完善大便隐血及胃肠镜排查隐匿性出血；同时需警惕合并凝血障碍或营养缺乏（如叶酸），制定综合治疗方案。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/078.json#/applied_memory"
+  }
+}

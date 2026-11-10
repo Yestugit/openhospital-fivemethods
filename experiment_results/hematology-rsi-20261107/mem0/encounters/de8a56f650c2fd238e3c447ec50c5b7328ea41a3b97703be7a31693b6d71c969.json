@@ -1,0 +1,548 @@
+{
+  "patient_id": "Patient_06317",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等？\", \"reason\": \"当前没有任何病史信息和检查结果，无法进行诊断，首先需要询问患者的主要症状以明确诊疗方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，我主要是不舒服。两周来越来越乏力，走路气短。三天前搬重物后，腰背突然剧痛，站着走更疼，躺下能好点，现在疼得睡不着。最近还特别口渴、尿多，有点便秘，站起来会头晕。手脚偶尔发麻。没有发烧或出血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为骨痛、乏力、口渴多尿、便秘及体位性头晕，结合记忆摘要中类似病例（如Patient_00827, Patient_08871）的病史，高度怀疑多发性骨髓瘤。目前缺乏关键的实验室检查数据（如血常规、肾功能、血钙、蛋白电泳等）来确诊，因此需要立即开具相关检查以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为进行性乏力、活动后气短（提示贫血），搬重物后突发剧烈腰背痛（需警惕病理性骨折或高钙血症导致的骨痛），伴有多饮多尿、便秘和头晕（高度疑似高钙血症及肾功能受损）。结合既往类似病例（如Patient_08871, Patient_00827）的经验，这些症状组合是典型的多发性骨髓瘤表现（CRAB综合征：高钙血症、肾功能不全、贫血、骨病变）。因此，首选进行血常规、肾功能、血钙、磷等血液生化检查以快速评估贫血程度、肾功能和电解质紊乱情况，为后续确诊提供关键依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"空腹血糖（FBG）\", \"肾功能检查（RFTs）\", \"血清电解质\", \"甲状旁腺激素检测（PTH）\"], \"reason\": \"患者表现为搬重物后突发腰背痛、进行性乏力、气短、多饮多尿、便秘及体位性头晕，结合既往类似病例（如Patient_00827和Patient_08871）的病史特征，高度怀疑多发性骨髓瘤或高钙血症。需通过全血细胞计数（CBC）评估贫血及血小板情况；空腹血糖（FBG）排查糖尿病；肾功能检查（RFTs）评估肾损伤；血清电解质重点监测钙水平以确认高钙血症；甲状旁腺激素检测（PTH）鉴别高钙血症病因（原发性甲旁亢 vs 肿瘤相关）。这些是确诊该临床综合征的关键实验室检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"86 g/L［参考范围：120-170 g/L］\", \"血液红细胞计数\": \"3.1 x 10^12/L［参考范围：4.0-5.3 x 10^12/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血液红细胞计数\"]}, \"空腹血糖（FBG）\": {\"result\": {\"空腹血糖\": \"12.8 mmol/L［参考值：3.9-6.1 mmol/L (70-110 mg/dL)］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"空腹血糖\"]}, \"肾功能检查（RFTs）\": {\"result\": {\"血清肌酐\": \"2.3 mg/dL［参考范围：0.7-1.5 mg/dL］\", \"估算肾小球滤过率\": \"32 mL/min/1.73m^2［参考范围：>=60 mL/min/1.73m^2］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清肌酐\", \"估算肾小球滤过率\"]}, \"血清电解质\": {\"result\": {\"磷酸盐\": \"2.8 mg/dL［参考值：2.3-4.1 mg/dL（0.74-1.32 mmol/L）］\", \"血氯\": \"102 mmol/L［参考值：98-106 mmol/L］\", \"血清碳酸氢盐\": \"24 mmol/L［参考值：22-29 mmol/L］\", \"血钙\": \"11.6 mg/dL［参考值：8.5-10.2 mg/dL（2.12-2.55 mmol/L）］\", \"血钠\": \"139 mmol/L［参考值：136-145 mmol/L］\", \"血钾\": \"4.2 mmol/L［参考值：3.5-5.0 mmol/L］\", \"血镁\": \"1.9 mg/dL［参考值：1.7-2.2 mg/dL（0.70-0.90 mmol/L）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血钙\"]}, \"甲状旁腺激素检测（PTH）\": {\"result\": {\"PTH参考范围\": \"20-75 pg/mL［参考值：通常为 20-75 pg/mL（2.1-8.0 pmol/L）；一般高于年轻成人］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者存在严重高钙血症、肾功能不全、贫血及高血糖，且PTH正常，临床高度怀疑多发性骨髓瘤。为明确诊断，急需进行血清蛋白电泳、免疫固定电泳、游离轻链检测以及全身骨骼影像学检查（如X线或CT）来寻找溶骨性病变和M蛋白。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"影像学检查 - X线\", \"reason\": \"患者主诉搬重物后腰背剧痛，且实验室检查提示高钙血症、肾功能不全及贫血，需优先通过X线检查排查病理性骨折（如压缩性骨折）或骨病变（如多发性骨髓瘤相关的骨质破坏），以明确疼痛原因并指导紧急处理。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"腰椎X线检查\"], \"reason\": \"患者主诉搬重物后腰背突然剧痛，站立加重，躺下缓解，且伴有高钙血症、肾功能不全及贫血。虽然PTH正常排除了原发性甲状旁腺功能亢进，但高钙血症合并骨痛需警惕多发性骨髓瘤或骨转移等骨质破坏性疾病。腰椎X线检查是初步评估是否存在病理性骨折、溶骨性病变或脊柱压缩性骨折的首选影像学手段，有助于明确腰痛原因并指导后续治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"腰椎X线检查\": {\"result\": {\"椎体排列\": \"L2椎体可见压缩性骨折，导致局部序列轻度异常。\", \"椎体滑脱\": \"未见明显椎弓峡部裂或明显椎体滑脱。\", \"椎体高度\": \"L2椎体前缘高度显著降低，呈楔形变。\", \"椎旁软组织\": \"椎旁软组织未见明显肿胀或异常阴影。\", \"脊柱压缩性骨折\": \"L2椎体可见急性压缩性骨折。\", \"脊柱椎间隙\": \"L1-L2及L2-L3椎间隙因椎体塌陷而轻度变窄。\", \"脊椎峡部裂\": \"未见椎弓峡部裂。\", \"腰椎曲度\": \"腰椎生理前凸在L2水平因骨折而局部变直。\", \"骨关节退行性改变\": \"可见轻度软骨赘形成及椎间隙轻度变窄。\", \"骨质减少\": \"可见轻度骨质减少。\", \"骶髂关节\": \"骶髂关节呈年龄相符的正常表现。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"椎体排列\", \"椎体高度\", \"脊柱压缩性骨折\", \"脊柱椎间隙\", \"腰椎曲度\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者存在贫血、高钙血症、肾功能不全及L2椎体压缩性骨折，结合病史需高度怀疑多发性骨髓瘤。已查PTH正常排除了甲旁亢，但尚未进行血清蛋白电泳、免疫固定电泳、游离轻链检测及骨髓穿刺等关键检查以明确诊断，故优先开具相关检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者目前存在贫血、高钙血症、肾功能不全及L2椎体压缩性骨折，结合病史中的多尿、口渴、便秘等症状，高度怀疑多发性骨髓瘤。已查PTH正常排除了甲状旁腺功能亢进，但尚未进行血清蛋白电泳、免疫固定电泳、游离轻链检测以及外周血涂片等关键血液学检查来明确是否存在单克隆免疫球蛋白或浆细胞异常，这些是确诊该疾病的核心依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"血清蛋白电泳（SPEP）\", \"骨髓检查\"], \"reason\": \"患者存在贫血、高钙血症、肾功能不全及L2椎体压缩性骨折，结合既往病史中多例类似表现（如高钙、肾损、骨痛），高度怀疑多发性骨髓瘤。血清蛋白电泳（SPEP）用于检测M蛋白，是诊断该病的关键初筛；骨髓检查可明确浆细胞比例及形态，确诊疾病性质。此外，患者有严重贫血和骨痛，需排除血液系统恶性肿瘤或浸润性疾病，故建议行骨髓检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"血清蛋白电泳（SPEP）\": {\"result\": {\"血清蛋白电泳γ球蛋白\": \"3.4 g/dL［参考范围：0.7-1.8 g/dL］\", \"白蛋白/球蛋白比值\": \"0.6［参考范围：0.9-2.2］\", \"补充描述\": \"伴有狭窄的单克隆M峰\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清蛋白电泳γ球蛋白\", \"白蛋白/球蛋白比值\"]}, \"骨髓检查\": {\"result\": {\"异常浸润\": \"可见大量克隆性浆细胞浸润，取代正常造血组织\", \"粒红比\": \"1:1［参考值：2:1 至 4:1］\", \"粒细胞系成熟\": \"受抑制，成熟比例减少\", \"红细胞系成熟\": \"受抑制，正成红细胞性成熟减少\", \"纤维化或坏死\": \"无显著纤维化\", \"骨髓原始细胞\": \"<5%［参考值：<5%］\", \"骨髓巨核细胞\": \"数量减少\", \"骨髓浆细胞\": \"42%［参考值：<4%］\", \"骨髓淋巴细胞\": \"10-20%（可见良性淋巴样聚集）［参考值：10-20%（可见良性淋巴样聚集）］\", \"骨髓细胞密度\": \"增生减低，细胞成分约占20%［参考值：较年轻成人减少，通常为 20-40%（骨髓脂肪逐渐增多）］\", \"骨髓铁储备\": \"存在\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异常浸润\", \"粒红比\", \"粒细胞系成熟\", \"红细胞系成熟\", \"骨髓巨核细胞\", \"骨髓浆细胞\", \"骨髓细胞密度\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者已出现贫血、高钙血症、肾功能不全、骨痛及L2压缩性骨折，实验室检查显示血清蛋白电泳有单克隆M峰，骨髓检查证实大量克隆性浆细胞浸润（42%），结合CRAB症状（高钙、肾损、贫血、骨病）及骨髓浆细胞比例>10%，多发性骨髓瘤诊断依据充分，可进入确诊和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为贫血、高钙血症、肾功能不全及骨痛（L2压缩性骨折），实验室检查显示血清蛋白电泳存在单克隆M峰，骨髓检查发现大量克隆性浆细胞浸润（42%）。这些特征符合多发性骨髓瘤的典型表现（CRAB症状：高钙、肾损、贫血、骨病），该疾病属于血液系统恶性肿瘤，需由血液科进行确诊和制定治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"多发性骨髓瘤\", \"treatment_plan\": \"1. **紧急处理与对症支持**：立即启动水化治疗（静脉补液）以纠正高钙血症，必要时使用降钙素或双膦酸盐（如唑来膦酸）快速降低血钙；针对L2椎体压缩性骨折进行卧床休息、镇痛管理，并评估是否需要骨科介入（如骨水泥成形术）以防神经压迫；监测肾功能，避免肾毒性药物。2. **诱导化疗方案**：鉴于患者存在贫血、肾功能不全及高钙血症，推荐采用“达雷妥尤单抗 + 硼替佐米 + 来那度胺 + 地塞米松”（DRd）或“硼替佐米 + 沙利度胺 + 地塞米松”（VTD）等不含大剂量激素冲击的联合方案，根据肾功能调整药物剂量（特别是来那度胺需根据eGFR减量）。3. **个体化考量**：患者年龄未提供但伴有严重骨质疏松和骨折，治疗中需强化骨骼保护（补充钙剂、维生素D，定期骨密度监测）；若后续评估适合自体造血干细胞移植，需在病情缓解后尽快进行。4. **安全性监测**：密切监测血常规（警惕骨髓抑制）、电解质（防低钙/高钾）、肾功能变化及周围神经病变（硼替佐米副作用）；告知患者若出现剧烈背痛加重、下肢无力或意识改变需立即就医。\", \"reasoning\": \"诊断依据：患者表现为典型的CRAB症状组合——高钙血症（血钙11.6 mg/dL）、肾功能不全（肌酐2.3 mg/dL，eGFR 32）、贫血（Hb 86 g/L）及骨病（L2椎体压缩性骨折伴剧痛）。实验室检查显示血清蛋白电泳有单克隆M峰且γ球蛋白升高，骨髓检查发现浆细胞异常浸润比例高达42%（正常<4%），符合多发性骨髓瘤的诊断标准。鉴别诊断已排除甲状旁腺功能亢进（PTH正常）及其他血液系统恶性肿瘤。治疗方案需兼顾控制肿瘤负荷、缓解骨痛、保护肾功能及纠正代谢紊乱。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_06317",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_08871's laboratory results showed anemia (Hemoglobin 92 g/L), thrombocytopenia (Platelets 118 x 10^9/L), hyperglycemia (Fasting Blood Glucose 12.5 mmol/L), renal insufficiency (Serum Creatinine 2.3 mg/dL, eGFR 34 mL/min/1.73m^2), hypercalcemia (Calcium 12.1 mg/dL), and hypophosphatemia (Phosphate 2.0 mg/dL).",
+      "Patient_00827's laboratory results showed anemia (Hemoglobin 88 g/L, RBC 3.0 × 10^12/L), hypercalcemia (Calcium 12.1 mg/dL), elevated total protein (9.4 g/dL), renal insufficiency (Creatinine 2.3 mg/dL, eGFR 28 mL/min/1.73m²), normal PTH, and mildly elevated CA-125 (42 U/mL).",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "User diagnosed Patient_00952 with Chronic Lymphocytic Leukemia (CLL) based on B symptoms (fatigue, night sweats, weight loss), painless lymphadenopathy, bleeding tendency, leukocytosis with lymphocytosis (WBC 68.4 x 10^9/L, 82% lymphocytes), anemia (Hgb 98 g/L), thrombocytopenia (PLT 92 x 10^9/L), smudge cells on peripheral smear, and biopsy confirmation of monoclonal B-cell infiltration.",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "User diagnosed Patient_02107 with iron deficiency anemia based on symptoms of progressive fatigue, dizziness, shortness of breath, pale complexion, heavy menstrual bleeding, and pica (craving ice), supported by lab results showing microcytic hypochromic anemia (Hgb 82 g/L, MCV 72 fL) and severe iron deficiency (serum iron 22 ug/dL, TIBC 452 ug/dL, transferrin saturation 5%, ferritin 6 ng/mL)",
+      "Patient_08308's CBC showed microcytic hypochromic anemia: Hemoglobin 82 g/L, Hematocrit 27%, MCV 68 fL, MCH 21 pg.",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_04911's CBC showed elevated hemoglobin at 162 g/L (high) and elevated RBC count at 5.8 x 10^12/L (high), indicating secondary polycythemia.",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "Patient_03943's CBC showed microcytic hypochromic anemia with hemoglobin 78 g/L, hematocrit 26%, MCV 68 fL, and MCH 21 pg."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，我主要是不舒服。两周来越来越乏力，走路气短。三天前搬重物后，腰背突然剧痛，站着走更疼，躺下能好点，现在疼得睡不着。最近还特别口渴、尿多，有点便秘，站起来会头晕。手脚偶尔发麻。没有发烧或出血。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "86 g/L［参考范围：120-170 g/L］",
+          "血液红细胞计数": "3.1 x 10^12/L［参考范围：4.0-5.3 x 10^12/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "血液红细胞计数"
+        ]
+      },
+      "空腹血糖（FBG）": {
+        "result": {
+          "空腹血糖": "12.8 mmol/L［参考值：3.9-6.1 mmol/L (70-110 mg/dL)］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "空腹血糖"
+        ]
+      },
+      "肾功能检查（RFTs）": {
+        "result": {
+          "血清肌酐": "2.3 mg/dL［参考范围：0.7-1.5 mg/dL］",
+          "估算肾小球滤过率": "32 mL/min/1.73m^2［参考范围：>=60 mL/min/1.73m^2］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清肌酐",
+          "估算肾小球滤过率"
+        ]
+      },
+      "血清电解质": {
+        "result": {
+          "磷酸盐": "2.8 mg/dL［参考值：2.3-4.1 mg/dL（0.74-1.32 mmol/L）］",
+          "血氯": "102 mmol/L［参考值：98-106 mmol/L］",
+          "血清碳酸氢盐": "24 mmol/L［参考值：22-29 mmol/L］",
+          "血钙": "11.6 mg/dL［参考值：8.5-10.2 mg/dL（2.12-2.55 mmol/L）］",
+          "血钠": "139 mmol/L［参考值：136-145 mmol/L］",
+          "血钾": "4.2 mmol/L［参考值：3.5-5.0 mmol/L］",
+          "血镁": "1.9 mg/dL［参考值：1.7-2.2 mg/dL（0.70-0.90 mmol/L）］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血钙"
+        ]
+      },
+      "甲状旁腺激素检测（PTH）": {
+        "result": {
+          "PTH参考范围": "20-75 pg/mL［参考值：通常为 20-75 pg/mL（2.1-8.0 pmol/L）；一般高于年轻成人］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "腰椎X线检查": {
+        "result": {
+          "椎体排列": "L2椎体可见压缩性骨折，导致局部序列轻度异常。",
+          "椎体滑脱": "未见明显椎弓峡部裂或明显椎体滑脱。",
+          "椎体高度": "L2椎体前缘高度显著降低，呈楔形变。",
+          "椎旁软组织": "椎旁软组织未见明显肿胀或异常阴影。",
+          "脊柱压缩性骨折": "L2椎体可见急性压缩性骨折。",
+          "脊柱椎间隙": "L1-L2及L2-L3椎间隙因椎体塌陷而轻度变窄。",
+          "脊椎峡部裂": "未见椎弓峡部裂。",
+          "腰椎曲度": "腰椎生理前凸在L2水平因骨折而局部变直。",
+          "骨关节退行性改变": "可见轻度软骨赘形成及椎间隙轻度变窄。",
+          "骨质减少": "可见轻度骨质减少。",
+          "骶髂关节": "骶髂关节呈年龄相符的正常表现。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "椎体排列",
+          "椎体高度",
+          "脊柱压缩性骨折",
+          "脊柱椎间隙",
+          "腰椎曲度"
+        ]
+      },
+      "血清蛋白电泳（SPEP）": {
+        "result": {
+          "血清蛋白电泳γ球蛋白": "3.4 g/dL［参考范围：0.7-1.8 g/dL］",
+          "白蛋白/球蛋白比值": "0.6［参考范围：0.9-2.2］",
+          "补充描述": "伴有狭窄的单克隆M峰"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清蛋白电泳γ球蛋白",
+          "白蛋白/球蛋白比值"
+        ]
+      },
+      "骨髓检查": {
+        "result": {
+          "异常浸润": "可见大量克隆性浆细胞浸润，取代正常造血组织",
+          "粒红比": "1:1［参考值：2:1 至 4:1］",
+          "粒细胞系成熟": "受抑制，成熟比例减少",
+          "红细胞系成熟": "受抑制，正成红细胞性成熟减少",
+          "纤维化或坏死": "无显著纤维化",
+          "骨髓原始细胞": "<5%［参考值：<5%］",
+          "骨髓巨核细胞": "数量减少",
+          "骨髓浆细胞": "42%［参考值：<4%］",
+          "骨髓淋巴细胞": "10-20%（可见良性淋巴样聚集）［参考值：10-20%（可见良性淋巴样聚集）］",
+          "骨髓细胞密度": "增生减低，细胞成分约占20%［参考值：较年轻成人减少，通常为 20-40%（骨髓脂肪逐渐增多）］",
+          "骨髓铁储备": "存在"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异常浸润",
+          "粒红比",
+          "粒细胞系成熟",
+          "红细胞系成熟",
+          "骨髓巨核细胞",
+          "骨髓浆细胞",
+          "骨髓细胞密度"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等？",
+        "reason": "当前没有任何病史信息和检查结果，无法进行诊断，首先需要询问患者的主要症状以明确诊疗方向。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为骨痛、乏力、口渴多尿、便秘及体位性头晕，结合记忆摘要中类似病例（如Patient_00827, Patient_08871）的病史，高度怀疑多发性骨髓瘤。目前缺乏关键的实验室检查数据（如血常规、肾功能、血钙、蛋白电泳等）来确诊，因此需要立即开具相关检查以明确诊断。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者存在严重高钙血症、肾功能不全、贫血及高血糖，且PTH正常，临床高度怀疑多发性骨髓瘤。为明确诊断，急需进行血清蛋白电泳、免疫固定电泳、游离轻链检测以及全身骨骼影像学检查（如X线或CT）来寻找溶骨性病变和M蛋白。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者存在贫血、高钙血症、肾功能不全及L2椎体压缩性骨折，结合病史需高度怀疑多发性骨髓瘤。已查PTH正常排除了甲旁亢，但尚未进行血清蛋白电泳、免疫固定电泳、游离轻链检测及骨髓穿刺等关键检查以明确诊断，故优先开具相关检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者已出现贫血、高钙血症、肾功能不全、骨痛及L2压缩性骨折，实验室检查显示血清蛋白电泳有单克隆M峰，骨髓检查证实大量克隆性浆细胞浸润（42%），结合CRAB症状（高钙、肾损、贫血、骨病）及骨髓浆细胞比例>10%，多发性骨髓瘤诊断依据充分，可进入确诊和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "空腹血糖（FBG）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "甲状旁腺激素检测（PTH）"
+        ],
+        "reason": "患者表现为搬重物后突发腰背痛、进行性乏力、气短、多饮多尿、便秘及体位性头晕，结合既往类似病例（如Patient_00827和Patient_08871）的病史特征，高度怀疑多发性骨髓瘤或高钙血症。需通过全血细胞计数（CBC）评估贫血及血小板情况；空腹血糖（FBG）排查糖尿病；肾功能检查（RFTs）评估肾损伤；血清电解质重点监测钙水平以确认高钙血症；甲状旁腺激素检测（PTH）鉴别高钙血症病因（原发性甲旁亢 vs 肿瘤相关）。这些是确诊该临床综合征的关键实验室检查。"
+      },
+      {
+        "category": "影像学检查 - X线",
+        "examinations": [
+          "腰椎X线检查"
+        ],
+        "reason": "患者主诉搬重物后腰背突然剧痛，站立加重，躺下缓解，且伴有高钙血症、肾功能不全及贫血。虽然PTH正常排除了原发性甲状旁腺功能亢进，但高钙血症合并骨痛需警惕多发性骨髓瘤或骨转移等骨质破坏性疾病。腰椎X线检查是初步评估是否存在病理性骨折、溶骨性病变或脊柱压缩性骨折的首选影像学手段，有助于明确腰痛原因并指导后续治疗。"
+      },
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "血清蛋白电泳（SPEP）",
+          "骨髓检查"
+        ],
+        "reason": "患者存在贫血、高钙血症、肾功能不全及L2椎体压缩性骨折，结合既往病史中多例类似表现（如高钙、肾损、骨痛），高度怀疑多发性骨髓瘤。血清蛋白电泳（SPEP）用于检测M蛋白，是诊断该病的关键初筛；骨髓检查可明确浆细胞比例及形态，确诊疾病性质。此外，患者有严重贫血和骨痛，需排除血液系统恶性肿瘤或浸润性疾病，故建议行骨髓检查。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "多发性骨髓瘤",
+      "treatment_plan": "1. **紧急处理与对症支持**：立即启动水化治疗（静脉补液）以纠正高钙血症，必要时使用降钙素或双膦酸盐（如唑来膦酸）快速降低血钙；针对L2椎体压缩性骨折进行卧床休息、镇痛管理，并评估是否需要骨科介入（如骨水泥成形术）以防神经压迫；监测肾功能，避免肾毒性药物。2. **诱导化疗方案**：鉴于患者存在贫血、肾功能不全及高钙血症，推荐采用“达雷妥尤单抗 + 硼替佐米 + 来那度胺 + 地塞米松”（DRd）或“硼替佐米 + 沙利度胺 + 地塞米松”（VTD）等不含大剂量激素冲击的联合方案，根据肾功能调整药物剂量（特别是来那度胺需根据eGFR减量）。3. **个体化考量**：患者年龄未提供但伴有严重骨质疏松和骨折，治疗中需强化骨骼保护（补充钙剂、维生素D，定期骨密度监测）；若后续评估适合自体造血干细胞移植，需在病情缓解后尽快进行。4. **安全性监测**：密切监测血常规（警惕骨髓抑制）、电解质（防低钙/高钾）、肾功能变化及周围神经病变（硼替佐米副作用）；告知患者若出现剧烈背痛加重、下肢无力或意识改变需立即就医。",
+      "reasoning": "诊断依据：患者表现为典型的CRAB症状组合——高钙血症（血钙11.6 mg/dL）、肾功能不全（肌酐2.3 mg/dL，eGFR 32）、贫血（Hb 86 g/L）及骨病（L2椎体压缩性骨折伴剧痛）。实验室检查显示血清蛋白电泳有单克隆M峰且γ球蛋白升高，骨髓检查发现浆细胞异常浸润比例高达42%（正常<4%），符合多发性骨髓瘤的诊断标准。鉴别诊断已排除甲状旁腺功能亢进（PTH正常）及其他血液系统恶性肿瘤。治疗方案需兼顾控制肿瘤负荷、缓解骨痛、保护肾功能及纠正代谢紊乱。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_06317",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.375,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "多发性骨髓瘤"
+        ],
+        "expected": [
+          "多发性骨髓瘤"
+        ],
+        "matched": [
+          "多发性骨髓瘤"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "空腹血糖（FBG）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "甲状旁腺激素检测（PTH）",
+          "腰椎X线检查",
+          "血清蛋白电泳（SPEP）",
+          "骨髓检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "综合代谢面板（CMP）",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "骨髓穿刺和活检（BMAB）",
+          "全身骨骼X线检查"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "血清蛋白电泳（SPEP）"
+        ],
+        "precision": 0.375,
+        "coverage": 0.3333333333333333,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **紧急处理与对症支持**：立即启动水化治疗（静脉补液）以纠正高钙血症，必要时使用降钙素或双膦酸盐（如唑来膦酸）快速降低血钙；针对L2椎体压缩性骨折进行卧床休息、镇痛管理，并评估是否需要骨科介入（如骨水泥成形术）以防神经压迫；监测肾功能，避免肾毒性药物。2. **诱导化疗方案**：鉴于患者存在贫血、肾功能不全及高钙血症，推荐采用“达雷妥尤单抗 + 硼替佐米 + 来那度胺 + 地塞米松”（DRd）或“硼替佐米 + 沙利度胺 + 地塞米松”（VTD）等不含大剂量激素冲击的联合方案，根据肾功能调整药物剂量（特别是来那度胺需根据eGFR减量）。3. **个体化考量**：患者年龄未提供但伴有严重骨质疏松和骨折，治疗中需强化骨骼保护（补充钙剂、维生素D，定期骨密度监测）；若后续评估适合自体造血干细胞移植，需在病情缓解后尽快进行。4. **安全性监测**：密切监测血常规（警惕骨髓抑制）、电解质（防低钙/高钾）、肾功能变化及周围神经病变（硼替佐米副作用）；告知患者若出现剧烈背痛加重、下肢无力或意识改变需立即就医。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全且覆盖主要治疗，但骨保护药物选择与参考标准存在差异，未针对神经病变细化给药策略。",
+        "reference": "针对有症状的多发性骨髓瘤，启动以硼替佐米和地塞米松为基础的治疗方案，采用皮下注射硼替佐米（考虑到基线已有间歇性麻木/刺痛，可考虑每周给药；记录基线神经病变检查及分级）和每周低剂量地塞米松，并根据肾功能调整剂量。若神经病变加重，需采用明确的剂量调整/暂停用药规则。按标准每周诱导治疗方案加入达雷妥尤单抗。骨保护方面，使用按肾功能调整剂量的静脉帕米膦酸盐替代唑来膦酸，并联合维生素D；在血清钙升高期间暂停/推迟钙补充，只有在钙降低时和/或高钙血症经治疗恢复正常后，才开始补钙并密切监测。L2压缩性骨折疼痛可采用规律使用对乙酰氨基酚，并短期给予低剂量阿片类药物如羟考酮；立即停用布洛芬，并因CKD/骨髓瘤肾损伤风险严格避免所有NSAIDs。鼓励充分口服补液，但补液目标应根据容量状态、电解质及心肾评估个体化制定，而非固定为2.5-3 L/天；如有需要（例如高钙血症），可考虑在严密监测液体负荷过多的情况下给予监护下静脉补液。安排脊柱MRI；若证实为不稳定性病理性骨折，则进行椎体成形术。每周通过实验室检查密切监测CBC、肌酐和钙，并指导患者一旦出现任何新的神经系统症状、发热或无法排尿，应立即报告。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "多发性骨髓瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "综合代谢面板（CMP）",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "骨髓穿刺和活检（BMAB）",
+          "全身骨骼X线检查"
+        ],
+        "contraindications": {
+          "drugs": [
+            "非甾体抗炎药（NSAIDs）"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "针对有症状的多发性骨髓瘤，启动以硼替佐米和地塞米松为基础的治疗方案，采用皮下注射硼替佐米（考虑到基线已有间歇性麻木/刺痛，可考虑每周给药；记录基线神经病变检查及分级）和每周低剂量地塞米松，并根据肾功能调整剂量。若神经病变加重，需采用明确的剂量调整/暂停用药规则。按标准每周诱导治疗方案加入达雷妥尤单抗。骨保护方面，使用按肾功能调整剂量的静脉帕米膦酸盐替代唑来膦酸，并联合维生素D；在血清钙升高期间暂停/推迟钙补充，只有在钙降低时和/或高钙血症经治疗恢复正常后，才开始补钙并密切监测。L2压缩性骨折疼痛可采用规律使用对乙酰氨基酚，并短期给予低剂量阿片类药物如羟考酮；立即停用布洛芬，并因CKD/骨髓瘤肾损伤风险严格避免所有NSAIDs。鼓励充分口服补液，但补液目标应根据容量状态、电解质及心肾评估个体化制定，而非固定为2.5-3 L/天；如有需要（例如高钙血症），可考虑在严密监测液体负荷过多的情况下给予监护下静脉补液。安排脊柱MRI；若证实为不稳定性病理性骨折，则进行椎体成形术。每周通过实验室检查密切监测CBC、肌酐和钙，并指导患者一旦出现任何新的神经系统症状、发热或无法排尿，应立即报告。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "中老年患者，主诉进行性乏力、气短伴搬重物后突发剧烈腰背痛（体位性），合并多饮多尿、便秘及体位性头晕，需警惕高钙血症与病理性骨折。",
+        "diagnosis_reflection": "诊断准确命中多发性骨髓瘤。经验在于：当患者出现不明原因骨痛（尤其是负重后）、贫血症状（乏力、气短）及高钙血症表现（口渴、多尿、便秘、意识改变风险）时，应高度怀疑该病并尽早确诊。",
+        "examination_reflection": "检查选择存在遗漏。已做CBC、RFTs、SPEP正确，但漏开了尿液分析（UA）、24小时尿蛋白、尿蛋白电泳（UPEP）以评估轻链肾病，且未安排全身骨骼X线或MRI来明确骨折性质。经验是：确诊MM必须完善尿检及全身骨骼影像，单纯腰椎X线不足以评估全身骨质破坏。",
+        "treatment_reflection": "治疗大方向正确，覆盖了水化、降钙、镇痛及诱导化疗方案，安全性评分高。但细节有欠缺：未针对基线神经病变细化硼替佐米给药策略（如改为皮下注射或调整频率），且骨保护药物选择（唑来膦酸 vs 帕米膦酸盐）及NSAIDs禁忌强调不够充分。经验是：MM治疗需严格根据肾功能调整药物剂量，并优先避免肾毒性药物及加重神经病变的用药方式。",
+        "future_strategy": "面对疑似MM病例：1. 立即完善尿检（含电泳）及全身骨骼影像；2. 治疗前评估肾功能与神经状态，据此定制化疗方案（优选含达雷妥尤单抗方案）；3. 严格规避NSAIDs，规范使用双膦酸盐并监测电解质；4. 对病理性骨折及时请骨科会诊评估手术指征。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:55:36.435072+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_06317",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "多发性骨髓瘤"
+    ],
+    "treatment_plan": "1. **紧急处理与对症支持**：立即启动水化治疗（静脉补液）以纠正高钙血症，必要时使用降钙素或双膦酸盐（如唑来膦酸）快速降低血钙；针对L2椎体压缩性骨折进行卧床休息、镇痛管理，并评估是否需要骨科介入（如骨水泥成形术）以防神经压迫；监测肾功能，避免肾毒性药物。2. **诱导化疗方案**：鉴于患者存在贫血、肾功能不全及高钙血症，推荐采用“达雷妥尤单抗 + 硼替佐米 + 来那度胺 + 地塞米松”（DRd）或“硼替佐米 + 沙利度胺 + 地塞米松”（VTD）等不含大剂量激素冲击的联合方案，根据肾功能调整药物剂量（特别是来那度胺需根据eGFR减量）。3. **个体化考量**：患者年龄未提供但伴有严重骨质疏松和骨折，治疗中需强化骨骼保护（补充钙剂、维生素D，定期骨密度监测）；若后续评估适合自体造血干细胞移植，需在病情缓解后尽快进行。4. **安全性监测**：密切监测血常规（警惕骨髓抑制）、电解质（防低钙/高钾）、肾功能变化及周围神经病变（硼替佐米副作用）；告知患者若出现剧烈背痛加重、下肢无力或意识改变需立即就医。",
+    "reasoning": "诊断依据：患者表现为典型的CRAB症状组合——高钙血症（血钙11.6 mg/dL）、肾功能不全（肌酐2.3 mg/dL，eGFR 32）、贫血（Hb 86 g/L）及骨病（L2椎体压缩性骨折伴剧痛）。实验室检查显示血清蛋白电泳有单克隆M峰且γ球蛋白升高，骨髓检查发现浆细胞异常浸润比例高达42%（正常<4%），符合多发性骨髓瘤的诊断标准。鉴别诊断已排除甲状旁腺功能亢进（PTH正常）及其他血液系统恶性肿瘤。治疗方案需兼顾控制肿瘤负荷、缓解骨痛、保护肾功能及纠正代谢紊乱。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "空腹血糖（FBG）",
+      "肾功能检查（RFTs）",
+      "血清电解质",
+      "甲状旁腺激素检测（PTH）",
+      "腰椎X线检查",
+      "血清蛋白电泳（SPEP）",
+      "骨髓检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_06317",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.375,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "多发性骨髓瘤"
+      ],
+      "expected": [
+        "多发性骨髓瘤"
+      ],
+      "matched": [
+        "多发性骨髓瘤"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "空腹血糖（FBG）",
+        "肾功能检查（RFTs）",
+        "血清电解质",
+        "甲状旁腺激素检测（PTH）",
+        "腰椎X线检查",
+        "血清蛋白电泳（SPEP）",
+        "骨髓检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "综合代谢面板（CMP）",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "骨髓穿刺和活检（BMAB）",
+        "全身骨骼X线检查"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "血清蛋白电泳（SPEP）"
+      ],
+      "precision": 0.375,
+      "coverage": 0.3333333333333333,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **紧急处理与对症支持**：立即启动水化治疗（静脉补液）以纠正高钙血症，必要时使用降钙素或双膦酸盐（如唑来膦酸）快速降低血钙；针对L2椎体压缩性骨折进行卧床休息、镇痛管理，并评估是否需要骨科介入（如骨水泥成形术）以防神经压迫；监测肾功能，避免肾毒性药物。2. **诱导化疗方案**：鉴于患者存在贫血、肾功能不全及高钙血症，推荐采用“达雷妥尤单抗 + 硼替佐米 + 来那度胺 + 地塞米松”（DRd）或“硼替佐米 + 沙利度胺 + 地塞米松”（VTD）等不含大剂量激素冲击的联合方案，根据肾功能调整药物剂量（特别是来那度胺需根据eGFR减量）。3. **个体化考量**：患者年龄未提供但伴有严重骨质疏松和骨折，治疗中需强化骨骼保护（补充钙剂、维生素D，定期骨密度监测）；若后续评估适合自体造血干细胞移植，需在病情缓解后尽快进行。4. **安全性监测**：密切监测血常规（警惕骨髓抑制）、电解质（防低钙/高钾）、肾功能变化及周围神经病变（硼替佐米副作用）；告知患者若出现剧烈背痛加重、下肢无力或意识改变需立即就医。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全且覆盖主要治疗，但骨保护药物选择与参考标准存在差异，未针对神经病变细化给药策略。",
+      "reference": "针对有症状的多发性骨髓瘤，启动以硼替佐米和地塞米松为基础的治疗方案，采用皮下注射硼替佐米（考虑到基线已有间歇性麻木/刺痛，可考虑每周给药；记录基线神经病变检查及分级）和每周低剂量地塞米松，并根据肾功能调整剂量。若神经病变加重，需采用明确的剂量调整/暂停用药规则。按标准每周诱导治疗方案加入达雷妥尤单抗。骨保护方面，使用按肾功能调整剂量的静脉帕米膦酸盐替代唑来膦酸，并联合维生素D；在血清钙升高期间暂停/推迟钙补充，只有在钙降低时和/或高钙血症经治疗恢复正常后，才开始补钙并密切监测。L2压缩性骨折疼痛可采用规律使用对乙酰氨基酚，并短期给予低剂量阿片类药物如羟考酮；立即停用布洛芬，并因CKD/骨髓瘤肾损伤风险严格避免所有NSAIDs。鼓励充分口服补液，但补液目标应根据容量状态、电解质及心肾评估个体化制定，而非固定为2.5-3 L/天；如有需要（例如高钙血症），可考虑在严密监测液体负荷过多的情况下给予监护下静脉补液。安排脊柱MRI；若证实为不稳定性病理性骨折，则进行椎体成形术。每周通过实验室检查密切监测CBC、肌酐和钙，并指导患者一旦出现任何新的神经系统症状、发热或无法排尿，应立即报告。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "多发性骨髓瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "综合代谢面板（CMP）",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "骨髓穿刺和活检（BMAB）",
+        "全身骨骼X线检查"
+      ],
+      "contraindications": {
+        "drugs": [
+          "非甾体抗炎药（NSAIDs）"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "针对有症状的多发性骨髓瘤，启动以硼替佐米和地塞米松为基础的治疗方案，采用皮下注射硼替佐米（考虑到基线已有间歇性麻木/刺痛，可考虑每周给药；记录基线神经病变检查及分级）和每周低剂量地塞米松，并根据肾功能调整剂量。若神经病变加重，需采用明确的剂量调整/暂停用药规则。按标准每周诱导治疗方案加入达雷妥尤单抗。骨保护方面，使用按肾功能调整剂量的静脉帕米膦酸盐替代唑来膦酸，并联合维生素D；在血清钙升高期间暂停/推迟钙补充，只有在钙降低时和/或高钙血症经治疗恢复正常后，才开始补钙并密切监测。L2压缩性骨折疼痛可采用规律使用对乙酰氨基酚，并短期给予低剂量阿片类药物如羟考酮；立即停用布洛芬，并因CKD/骨髓瘤肾损伤风险严格避免所有NSAIDs。鼓励充分口服补液，但补液目标应根据容量状态、电解质及心肾评估个体化制定，而非固定为2.5-3 L/天；如有需要（例如高钙血症），可考虑在严密监测液体负荷过多的情况下给予监护下静脉补液。安排脊柱MRI；若证实为不稳定性病理性骨折，则进行椎体成形术。每周通过实验室检查密切监测CBC、肌酐和钙，并指导患者一旦出现任何新的神经系统症状、发热或无法排尿，应立即报告。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "中老年患者，主诉进行性乏力、气短伴搬重物后突发剧烈腰背痛（体位性），合并多饮多尿、便秘及体位性头晕，需警惕高钙血症与病理性骨折。",
+      "diagnosis_reflection": "诊断准确命中多发性骨髓瘤。经验在于：当患者出现不明原因骨痛（尤其是负重后）、贫血症状（乏力、气短）及高钙血症表现（口渴、多尿、便秘、意识改变风险）时，应高度怀疑该病并尽早确诊。",
+      "examination_reflection": "检查选择存在遗漏。已做CBC、RFTs、SPEP正确，但漏开了尿液分析（UA）、24小时尿蛋白、尿蛋白电泳（UPEP）以评估轻链肾病，且未安排全身骨骼X线或MRI来明确骨折性质。经验是：确诊MM必须完善尿检及全身骨骼影像，单纯腰椎X线不足以评估全身骨质破坏。",
+      "treatment_reflection": "治疗大方向正确，覆盖了水化、降钙、镇痛及诱导化疗方案，安全性评分高。但细节有欠缺：未针对基线神经病变细化硼替佐米给药策略（如改为皮下注射或调整频率），且骨保护药物选择（唑来膦酸 vs 帕米膦酸盐）及NSAIDs禁忌强调不够充分。经验是：MM治疗需严格根据肾功能调整药物剂量，并优先避免肾毒性药物及加重神经病变的用药方式。",
+      "future_strategy": "面对疑似MM病例：1. 立即完善尿检（含电泳）及全身骨骼影像；2. 治疗前评估肾功能与神经状态，据此定制化疗方案（优选含达雷妥尤单抗方案）；3. 严格规避NSAIDs，规范使用双膦酸盐并监测电解质；4. 对病理性骨折及时请骨科会诊评估手术指征。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/041.json#/applied_memory"
+  }
+}

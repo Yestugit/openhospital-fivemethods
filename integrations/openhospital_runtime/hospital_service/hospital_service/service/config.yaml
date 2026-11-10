@@ -1,0 +1,22 @@
+server:
+  host: 127.0.0.1
+  port: 8001
+data_dir: data
+pg_dsn: null
+database:
+  pool_max_size: 10
+test_dataset: primary_test
+model:
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  model: qwen3.5-flash
+  timeout_seconds: 120
+  request_retries: 2
+exam_model: {}
+limits:
+  invoke_max_concurrency: 96
+  chat_max_concurrency: 96
+  evaluate_max_concurrency: 24
+llm:
+  max_concurrency: 96
+  http_max_connections: 200
+  http_max_keepalive: 50

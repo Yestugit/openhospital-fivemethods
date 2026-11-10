@@ -1,0 +1,125 @@
+{
+  "method_id": "memmachine",
+  "name": "MemMachine",
+  "summary": "MemMachine official native memory implementation with isolated storage and complete checkpoints.",
+  "interface_version": 3,
+  "version": "1",
+  "repository_url": "https://github.com/MemMachine/MemMachine",
+  "recommended_executor": "subprocess",
+  "fidelity": "upstream_native",
+  "implementation_strategy": "native_plugin",
+  "internal_token_tracking": "conditional",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "record",
+      "hierarchical"
+    ],
+    "operations": [
+      "index",
+      "add",
+      "search",
+      "episode_end",
+      "flush",
+      "save",
+      "load",
+      "reset"
+    ],
+    "integration_slots": [
+      "context"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "action",
+      "tool_result",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "supports_persistence": true,
+    "supports_async": true,
+    "requires_gpu": false,
+    "read_only_mode": "native"
+  },
+  "storage": {
+    "path_parameters": {
+      "storage_path": "auto"
+    },
+    "kind": "embedded_db",
+    "backend": "sqlite_usearch",
+    "supports_snapshot": true
+  },
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "top_k": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Optional native per-memory result limit. Omitted preserves upstream limit=None; streams are never globally truncated."
+      },
+      "storage_path": {
+        "type": "string",
+        "minLength": 1
+      },
+      "embedding_dims": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 1024
+      },
+      "flush_timeout_s": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "default": 300.0
+      }
+    },
+    "additionalProperties": false
+  },
+  "requirements": {
+    "python": [
+      "memmachine-server",
+      "memmachine-common",
+      "usearch"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "usage": {
+      "providers": "Public LLM and embedding providers; CPU or remote embedding is supported.",
+      "inputs": "Real MemoryUnit events/task/output/feedback; reward is optional.",
+      "learning": "add follows upstream extraction and updates. episode_end is only a boundary and accepts later experience.",
+      "storage": "Owned local SQLite relational/vector databases and USEARCH indexes."
+    }
+  },
+  "input_schemas": {
+    "search": {
+      "type": "object",
+      "properties": {
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "implementation_notes": [
+    "Pinned upstream MemMachine/MemMachine@377510d436dc81c3651502f2d5e36ff245650ce7",
+    "No offline substitute is provided. index lists views; add accepts real evidence.",
+    "Native event episodic memory, short-term summarization and semantic extraction; official SQLite/USEARCH backends.",
+    "Native event long-term memory + short-term summary + semantic profile_prompt categories; SQLite + USEARCH.",
+    "top_k applies independently to native memory streams; unset keeps native limit=None.",
+    "Normal writes retain native semantic 5-message/5-minute eligibility; explicit flush temporarily advances eligibility to drain accepted history and then restores it.",
+    "Native project/user semantic result streams merge asynchronously; there is no global reranking."
+  ],
+  "limitations": [
+    "Arbitrary REST deployments cannot provide the owned full-state snapshot contract."
+  ],
+  "commands": {}
+}

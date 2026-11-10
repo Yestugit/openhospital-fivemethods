@@ -1,0 +1,364 @@
+{
+  "patient_id": "Patient_00518",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如发热、乏力、出血倾向或骨痛等。\", \"reason\": \"当前没有任何病史信息、已开检查或检查结果，无法进行诊断，需要首先通过问诊了解患者的主要症状以指导后续检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如发热、乏力、出血倾向或骨痛等。"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "他最近六个月经常哭闹，说腿和胳膊疼。轻轻碰一下就不肯走路了。之前有两次局部肿了，X光显示骨头有点异常，恢复也慢。现在看起来越来越累，脸色也白了，吃东西也不香。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问孩子除了腿和胳膊疼、走路困难外，最近有没有出现发烧、牙龈出血、皮肤瘀斑或流鼻血的情况？另外，您提到之前X光显示骨头异常，具体是什么表现呢？\", \"reason\": \"患者表现为慢性骨痛、活动受限、面色苍白及食欲减退，病史中已提及X光异常但缺乏具体描述，且未明确是否存在发热、出血倾向等血液系统疾病的关键症状。目前信息不足以确诊，需进一步询问出血史、发热情况及既往影像学细节以指导后续检查方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问孩子除了腿和胳膊疼、走路困难外，最近有没有出现发烧、牙龈出血、皮肤瘀斑或流鼻血的情况？另外，您提到之前X光显示骨头异常，具体是什么表现呢？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发烧，也没有牙龈出血、皮肤瘀斑或流鼻血。X光显示骨头有点异常，医生怀疑有小骨折，但恢复比预期慢。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者为儿童，表现为反复骨痛、活动受限、局部肿胀、X光显示骨头异常且愈合缓慢，伴有乏力、面色苍白和食欲减退。虽然无发热和出血倾向，但症状高度提示骨骼疾病（如骨硬化症）或血液系统疾病（如白血病、再生障碍性贫血等）。目前缺乏关键的实验室检查（如血常规、骨髓象）和影像学评估（如全身骨骼X线、MRI）来明确诊断，因此需要优先开具相关检查以获取客观依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"影像学检查 - X线\", \"reason\": \"患者为儿童，主诉反复骨痛、活动受限及局部肿胀，且既往X光提示骨头异常但恢复缓慢。结合病史中提到的‘骨头有点异常’和‘恢复慢’，需通过影像学检查（特别是X线）进一步评估骨骼形态、密度及是否存在骨折或骨质硬化等特征，以鉴别如成骨不全、骨硬化症等骨骼疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全身骨骼X线检查\"], \"reason\": \"患者为儿童，主诉长期骨痛、活动受限、局部肿胀及骨折愈合缓慢，既往X光提示骨头异常。鉴于症状涉及四肢且怀疑存在多发性骨骼病变（如成骨不全或骨硬化症等），进行全身骨骼X线检查有助于全面评估骨骼形态、密度及是否存在隐匿性骨折或骨质改变，以辅助诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全身骨骼X线检查\": {\"result\": {\"继发骨化中心及骨突\": \"可见继发性骨化中心，与2岁年龄相符。\", \"胸廓\": \"肋骨完整；胸腺影可见。\", \"脊柱X线所见\": \"椎体排列及形态正常；神经中央软骨结合可见。\", \"长骨\": \"骨皮质弥漫性增厚，髓腔变窄，干骺端可见骨折愈合延迟改变及骨质异常致密表现。\", \"非意外性创伤征象\": \"未见典型的干骺端角骨折（桶柄样或角状损伤）或后肋骨骨折，但可见多处陈旧性及愈合中骨折伴骨膜反应。\", \"颅骨\": \"颅盖骨密度普遍增高，颅缝开放，前囟未闭。\", \"骨折脱位情况\": \"未见急性新鲜骨折或脱位证据，可见多发陈旧性骨折愈合痕迹。\", \"骨盆\": \"骨盆对称，骶髂关节形态正常，骨质密度增高。\", \"骨骺板\": \"生长板开放、规则且边界清晰，无增宽、毛糙或杯口样改变。\", \"骨骼矿化及骨密度\": \"全骨骼显示广泛骨质硬化，骨密度显著高于同龄儿童正常水平，骨髓腔狭窄。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"长骨\", \"非意外性创伤征象\", \"颅骨\", \"骨骼矿化及骨密度\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者为4岁儿童，有反复骨痛、骨折愈合延迟病史。全身骨骼X线显示广泛骨质硬化、髓腔狭窄、多发陈旧性骨折及骨膜反应，结合贫血和乏力症状，临床表现与影像学特征高度提示成骨不全或骨硬化症（如大理石骨病）。虽然缺乏基因检测确诊，但现有信息已足够支持初步诊断方向并进入诊疗流程，建议转诊至血液科或骨科进行进一步评估和治疗方案制定。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"骨科\", \"reason\": \"患者主要表现为骨痛、行走困难及骨折愈合延迟，全身骨骼X线检查显示广泛骨质硬化、骨髓腔狭窄及多发陈旧性骨折，这些是成骨不全或骨硬化症等骨骼系统疾病的典型特征。虽然存在贫血和乏力等血液系统受累表现（可能由骨髓腔狭窄导致），但原发病灶和核心诊断依据在于骨骼系统的结构性异常，因此首选骨科进行进一步评估和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"成骨不全症\", \"treatment_plan\": \"1. 主要治疗：针对反复骨折和骨痛，建议立即制动患肢并严格卧床休息，避免负重活动以防新发骨折。给予双膦酸盐类药物（如帕米膦酸二钠）静脉输注，以抑制破骨细胞活性、增加骨密度并缓解骨痛，需根据体重精确计算剂量。\\n2. 个性化调整：患儿为4岁儿童，处于骨骼快速生长期，治疗需兼顾生长需求。鉴于X线显示骨髓腔狭窄及骨质硬化，需警惕颅内高压或视神经受压风险，建议定期监测视力及听力。若存在贫血或血小板减少（虽本次未明确提及但病史中有类似表现），需联合血液科评估是否补充铁剂或进行造血支持。\\n3. 安全性与监测：双膦酸盐治疗期间需监测血钙水平，预防低钙血症；观察有无发热、恶心等急性期反应。告知家长避免剧烈碰撞，家中做好防跌倒措施。若出现剧烈头痛、呕吐、视力模糊或肢体麻木，提示可能并发颅高压或神经压迫，需立即就医。每3-6个月复查骨密度及全身骨骼X线，评估治疗效果及骨折愈合情况。\", \"reasoning\": \"诊断依据：患儿表现为反复骨痛、行走困难、既往骨折愈合延迟，且全身骨骼X线显示特征性的‘全骨骼广泛骨质硬化、骨密度显著增高、髓腔狭窄’及多发陈旧性骨折伴骨膜反应。虽然典型成骨不全症常表现为骨脆性增加和骨质疏松，但在部分亚型或特定病理阶段（如伴有骨硬化表现的变异型），可呈现骨质致密和髓腔狭窄，结合‘恢复慢’、‘哭闹’、‘脸色白’（提示贫血/骨髓受压）及X线所见，符合遗传性骨病特征。在给定科室标准疾病列表中，‘成骨不全症’是唯一涵盖此类复杂骨代谢异常及骨折易感性的疾病名称。其他选项如‘骨折畸形愈合’仅描述状态而非病因，‘骨髓炎’无感染征象，故选择成骨不全症作为最可能的诊断方向，需进一步基因检测确诊具体亚型。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_00518",
+    "mode": "train",
+    "memory_notes": [
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User evaluated Patient_09529, a patient with recurrent bone pain in long bones and back over several years, severe left wrist pain and swelling 3 weeks ago after lifting light boxes, decreased grip strength, shortness of breath on exertion, dizziness, and tingling fingertips.",
+      "Patient_01299's limb X-ray showed significantly increased bone density throughout long bones, blurred trabecular structure with diffuse sclerosis, and thickened cortical bone, while ruling out fractures or congenital skeletal abnormalities.",
+      "Patient_03544 underwent extensive testing including iron metabolism panel, TPO detection, anti-platelet antibody test, and bone marrow examination, all of which returned normal results excluding leukemia, aplastic anemia, and immune-mediated causes",
+      "User's child's bone marrow biopsy showed high cellularity (90%), normal trilineage hematopoiesis, <5% blasts, adequate megakaryocytes, and present iron stores, ruling out leukemia and aplastic anemia.",
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "Patient_09529's whole-body skeletal X-ray revealed diffuse osteosclerosis throughout the skeleton, narrowed or absent marrow cavities, significantly thickened cortical bone in long bones with obliterated marrow cavaries, diffusely increased skull density with narrowed internal auditory canals, and healed fractures in the left forearm and right tibia.",
+      "User's child (Patient_02800) presented with severe leg pain for two weeks, causing a limp and difficulty walking.",
+      "The diagnostic error for Patient_03614 involved missing key features of osteopetrosis: bone pain indicated by crying when held/changed, fracture risk, and marrow failure causing anemia, leading to inappropriate testing that omitted gene testing (TCIRG1), DEXA, and MRI.",
+      "User participated in a hematology diagnostic task for Patient_02800, a 4-year-old child presenting with bone pain, slow fracture healing, pancytopenia, and bleeding tendencies.",
+      "User's child's bone marrow examination showed massive infiltration by lymphoblasts replacing normal hematopoietic tissue, with 82% blast cells, significantly reduced myeloid and erythroid maturation, and abundant primitive B-lymphocytes.",
+      "User participated in a hematology diagnostic task for Patient_01299, a child presenting with sudden severe pain when held or changing diapers, refusal to walk on the left leg, left thigh swelling, poor appetite, fatigue, and pale complexion without fever or bleeding.",
+      "Patient_09529's CMP showed low calcium at 8.1 mg/dL (ref 8.5-10.5) and elevated alkaline phosphatase at 162 U/L (ref 44-147).",
+      "User's child has a history of slow bone fracture healing, including a previous arm fracture that healed slowly, followed by another fall.",
+      "Patient_07345's bone marrow examination revealed low cellularity consistent with age, increased megakaryocytes with maturation arrest, and no increase in blast cells (<5%).",
+      "User diagnosed Patient_09529 with Osteopetrosis (Marble Bone Disease) based on recurrent bone pain, fracture history, microcytic hypochromic anemia, elevated alkaline phosphatase, and characteristic X-ray findings of diffuse osteosclerosis with marrow cavity obliteration.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "Treatment plan for Patient_06317 included immediate hydration, calcitonin or bisphosphonates for hypercalcemia, bed rest and analgesia for L2 fracture, and induction chemotherapy with daratumumab, bortezomib, lenalidomide, and dexamethasone (DRd) or bortezomib, thalidomide, and dexamethasone (VTD) adjusted for renal function.",
+      "Patient_02057's bone marrow examination demonstrated hypercellular marrow with diffuse reticulin and collagen fibrosis, atypical megakaryocyte infiltration, normal granulocytic maturation, normal erythroid maturation, <5% blasts, adequate but atypical megakaryocytes, and iron stores of Grade 2-3."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如发热、乏力、出血倾向或骨痛等。"
+      },
+      {
+        "from": "patient",
+        "text": "他最近六个月经常哭闹，说腿和胳膊疼。轻轻碰一下就不肯走路了。之前有两次局部肿了，X光显示骨头有点异常，恢复也慢。现在看起来越来越累，脸色也白了，吃东西也不香。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问孩子除了腿和胳膊疼、走路困难外，最近有没有出现发烧、牙龈出血、皮肤瘀斑或流鼻血的情况？另外，您提到之前X光显示骨头异常，具体是什么表现呢？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发烧，也没有牙龈出血、皮肤瘀斑或流鼻血。X光显示骨头有点异常，医生怀疑有小骨折，但恢复比预期慢。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全身骨骼X线检查": {
+        "result": {
+          "继发骨化中心及骨突": "可见继发性骨化中心，与2岁年龄相符。",
+          "胸廓": "肋骨完整；胸腺影可见。",
+          "脊柱X线所见": "椎体排列及形态正常；神经中央软骨结合可见。",
+          "长骨": "骨皮质弥漫性增厚，髓腔变窄，干骺端可见骨折愈合延迟改变及骨质异常致密表现。",
+          "非意外性创伤征象": "未见典型的干骺端角骨折（桶柄样或角状损伤）或后肋骨骨折，但可见多处陈旧性及愈合中骨折伴骨膜反应。",
+          "颅骨": "颅盖骨密度普遍增高，颅缝开放，前囟未闭。",
+          "骨折脱位情况": "未见急性新鲜骨折或脱位证据，可见多发陈旧性骨折愈合痕迹。",
+          "骨盆": "骨盆对称，骶髂关节形态正常，骨质密度增高。",
+          "骨骺板": "生长板开放、规则且边界清晰，无增宽、毛糙或杯口样改变。",
+          "骨骼矿化及骨密度": "全骨骼显示广泛骨质硬化，骨密度显著高于同龄儿童正常水平，骨髓腔狭窄。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "长骨",
+          "非意外性创伤征象",
+          "颅骨",
+          "骨骼矿化及骨密度"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如发热、乏力、出血倾向或骨痛等。",
+        "reason": "当前没有任何病史信息、已开检查或检查结果，无法进行诊断，需要首先通过问诊了解患者的主要症状以指导后续检查。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问孩子除了腿和胳膊疼、走路困难外，最近有没有出现发烧、牙龈出血、皮肤瘀斑或流鼻血的情况？另外，您提到之前X光显示骨头异常，具体是什么表现呢？",
+        "reason": "患者表现为慢性骨痛、活动受限、面色苍白及食欲减退，病史中已提及X光异常但缺乏具体描述，且未明确是否存在发热、出血倾向等血液系统疾病的关键症状。目前信息不足以确诊，需进一步询问出血史、发热情况及既往影像学细节以指导后续检查方向。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者为儿童，表现为反复骨痛、活动受限、局部肿胀、X光显示骨头异常且愈合缓慢，伴有乏力、面色苍白和食欲减退。虽然无发热和出血倾向，但症状高度提示骨骼疾病（如骨硬化症）或血液系统疾病（如白血病、再生障碍性贫血等）。目前缺乏关键的实验室检查（如血常规、骨髓象）和影像学评估（如全身骨骼X线、MRI）来明确诊断，因此需要优先开具相关检查以获取客观依据。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者为4岁儿童，有反复骨痛、骨折愈合延迟病史。全身骨骼X线显示广泛骨质硬化、髓腔狭窄、多发陈旧性骨折及骨膜反应，结合贫血和乏力症状，临床表现与影像学特征高度提示成骨不全或骨硬化症（如大理石骨病）。虽然缺乏基因检测确诊，但现有信息已足够支持初步诊断方向并进入诊疗流程，建议转诊至血液科或骨科进行进一步评估和治疗方案制定。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "影像学检查 - X线",
+        "examinations": [
+          "全身骨骼X线检查"
+        ],
+        "reason": "患者为儿童，主诉长期骨痛、活动受限、局部肿胀及骨折愈合缓慢，既往X光提示骨头异常。鉴于症状涉及四肢且怀疑存在多发性骨骼病变（如成骨不全或骨硬化症等），进行全身骨骼X线检查有助于全面评估骨骼形态、密度及是否存在隐匿性骨折或骨质改变，以辅助诊断。"
+      }
+    ],
+    "final_plan": {
+      "department": "骨科",
+      "diagnosis": "成骨不全症",
+      "treatment_plan": "1. 主要治疗：针对反复骨折和骨痛，建议立即制动患肢并严格卧床休息，避免负重活动以防新发骨折。给予双膦酸盐类药物（如帕米膦酸二钠）静脉输注，以抑制破骨细胞活性、增加骨密度并缓解骨痛，需根据体重精确计算剂量。\n2. 个性化调整：患儿为4岁儿童，处于骨骼快速生长期，治疗需兼顾生长需求。鉴于X线显示骨髓腔狭窄及骨质硬化，需警惕颅内高压或视神经受压风险，建议定期监测视力及听力。若存在贫血或血小板减少（虽本次未明确提及但病史中有类似表现），需联合血液科评估是否补充铁剂或进行造血支持。\n3. 安全性与监测：双膦酸盐治疗期间需监测血钙水平，预防低钙血症；观察有无发热、恶心等急性期反应。告知家长避免剧烈碰撞，家中做好防跌倒措施。若出现剧烈头痛、呕吐、视力模糊或肢体麻木，提示可能并发颅高压或神经压迫，需立即就医。每3-6个月复查骨密度及全身骨骼X线，评估治疗效果及骨折愈合情况。",
+      "reasoning": "诊断依据：患儿表现为反复骨痛、行走困难、既往骨折愈合延迟，且全身骨骼X线显示特征性的‘全骨骼广泛骨质硬化、骨密度显著增高、髓腔狭窄’及多发陈旧性骨折伴骨膜反应。虽然典型成骨不全症常表现为骨脆性增加和骨质疏松，但在部分亚型或特定病理阶段（如伴有骨硬化表现的变异型），可呈现骨质致密和髓腔狭窄，结合‘恢复慢’、‘哭闹’、‘脸色白’（提示贫血/骨髓受压）及X线所见，符合遗传性骨病特征。在给定科室标准疾病列表中，‘成骨不全症’是唯一涵盖此类复杂骨代谢异常及骨折易感性的疾病名称。其他选项如‘骨折畸形愈合’仅描述状态而非病因，‘骨髓炎’无感染征象，故选择成骨不全症作为最可能的诊断方向，需进一步基因检测确诊具体亚型。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_00518",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.48,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "成骨不全症"
+        ],
+        "expected": [
+          "大理石骨病"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全身骨骼X线检查"
+        ],
+        "expected": [
+          "基因检测",
+          "磁共振成像（MRI）",
+          "双能X线吸收测定法（DEXA）",
+          "综合代谢面板（CMP）",
+          "维生素D检测",
+          "尿液分析（UA）"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：针对反复骨折和骨痛，建议立即制动患肢并严格卧床休息，避免负重活动以防新发骨折。给予双膦酸盐类药物（如帕米膦酸二钠）静脉输注，以抑制破骨细胞活性、增加骨密度并缓解骨痛，需根据体重精确计算剂量。\n2. 个性化调整：患儿为4岁儿童，处于骨骼快速生长期，治疗需兼顾生长需求。鉴于X线显示骨髓腔狭窄及骨质硬化，需警惕颅内高压或视神经受压风险，建议定期监测视力及听力。若存在贫血或血小板减少（虽本次未明确提及但病史中有类似表现），需联合血液科评估是否补充铁剂或进行造血支持。\n3. 安全性与监测：双膦酸盐治疗期间需监测血钙水平，预防低钙血症；观察有无发热、恶心等急性期反应。告知家长避免剧烈碰撞，家中做好防跌倒措施。若出现剧烈头痛、呕吐、视力模糊或肢体麻木，提示可能并发颅高压或神经压迫，需立即就医。每3-6个月复查骨密度及全身骨骼X线，评估治疗效果及骨折愈合情况。",
+        "overallScore": 0.48,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.6,
+        "reasoning": "未用禁忌药，但遗漏移植根治方案且误判年龄，仅对症处理。",
+        "reference": "应尽快在儿童移植中心进行造血干细胞移植评估，因为这是与 TCIRG1 突变相关的重度常染色体隐性大理石骨病唯一的根治性治疗。鉴于 CMP 显示低钙以及大理石骨病相关的骨重塑失调，应谨慎管理矿物质代谢：对于已证实的 25-OH 维生素D 缺乏，可考虑补充营养性维生素D（胆钙化醇），并频繁监测钙、磷和 PTH，同时进行肾脏监测；骨化三醇和/或钙补充的决定应根据 Ca/PTH 变化趋势及临床情况，在专科医生指导下进行。疼痛管理可按需使用对乙酰氨基酚，并在急性发作期间采用冷疗。参加以温和发育支持和关节活动度练习为重点的物理治疗，避免负重应力。定期监测生长、神经系统状态、听力和肾功能。指导家长预防跌倒、警惕感染、加强营养支持（包括富含铁的食物），并在出现任何新发或加重症状时及时随访。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "大理石骨病",
+        "necessary_examinations": [
+          "基因检测",
+          "磁共振成像（MRI）",
+          "双能X线吸收测定法（DEXA）",
+          "综合代谢面板（CMP）",
+          "维生素D检测",
+          "尿液分析（UA）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "可待因",
+            "曲马多",
+            "阿司匹林"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "应尽快在儿童移植中心进行造血干细胞移植评估，因为这是与 TCIRG1 突变相关的重度常染色体隐性大理石骨病唯一的根治性治疗。鉴于 CMP 显示低钙以及大理石骨病相关的骨重塑失调，应谨慎管理矿物质代谢：对于已证实的 25-OH 维生素D 缺乏，可考虑补充营养性维生素D（胆钙化醇），并频繁监测钙、磷和 PTH，同时进行肾脏监测；骨化三醇和/或钙补充的决定应根据 Ca/PTH 变化趋势及临床情况，在专科医生指导下进行。疼痛管理可按需使用对乙酰氨基酚，并在急性发作期间采用冷疗。参加以温和发育支持和关节活动度练习为重点的物理治疗，避免负重应力。定期监测生长、神经系统状态、听力和肾功能。指导家长预防跌倒、警惕感染、加强营养支持（包括富含铁的食物），并在出现任何新发或加重症状时及时随访。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "4岁患儿，主诉反复骨痛、活动受限及轻微外伤后骨折愈合缓慢，伴面色苍白和乏力，X线提示骨质异常但无典型出血症状。",
+        "diagnosis_reflection": "误诊为成骨不全症，未识别大理石骨病（Osteopetrosis）。关键遗漏点在于未将‘骨折恢复慢’与‘骨质硬化/骨髓腔狭窄’的影像学特征关联，且忽略了该病常伴发的贫血和颅神经受压风险。",
+        "examination_reflection": "仅开具全身骨骼X线检查，严重不足。漏做基因检测（确诊TCIRG1突变）、DEXA（评估骨密度）、CMP及维生素D检测等关键检查，导致无法区分代谢性骨病与遗传性骨病，延误了病因诊断。",
+        "treatment_reflection": "治疗方案仅针对症状进行保守处理（制动、双膦酸盐），完全遗漏了根治性手段。对于重度常染色体隐性大理石骨病，造血干细胞移植是唯一可能治愈的方法，且需警惕低钙血症和颅内高压的并发症管理。",
+        "future_strategy": "面对儿童反复骨折伴愈合延迟及贫血表现时，应优先排查大理石骨病而非单纯考虑成骨不全；必须完善基因检测和全面代谢评估，并尽早转诊至移植中心评估根治方案。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T13:25:48.741951+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_00518",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "成骨不全症"
+    ],
+    "treatment_plan": "1. 主要治疗：针对反复骨折和骨痛，建议立即制动患肢并严格卧床休息，避免负重活动以防新发骨折。给予双膦酸盐类药物（如帕米膦酸二钠）静脉输注，以抑制破骨细胞活性、增加骨密度并缓解骨痛，需根据体重精确计算剂量。\n2. 个性化调整：患儿为4岁儿童，处于骨骼快速生长期，治疗需兼顾生长需求。鉴于X线显示骨髓腔狭窄及骨质硬化，需警惕颅内高压或视神经受压风险，建议定期监测视力及听力。若存在贫血或血小板减少（虽本次未明确提及但病史中有类似表现），需联合血液科评估是否补充铁剂或进行造血支持。\n3. 安全性与监测：双膦酸盐治疗期间需监测血钙水平，预防低钙血症；观察有无发热、恶心等急性期反应。告知家长避免剧烈碰撞，家中做好防跌倒措施。若出现剧烈头痛、呕吐、视力模糊或肢体麻木，提示可能并发颅高压或神经压迫，需立即就医。每3-6个月复查骨密度及全身骨骼X线，评估治疗效果及骨折愈合情况。",
+    "reasoning": "诊断依据：患儿表现为反复骨痛、行走困难、既往骨折愈合延迟，且全身骨骼X线显示特征性的‘全骨骼广泛骨质硬化、骨密度显著增高、髓腔狭窄’及多发陈旧性骨折伴骨膜反应。虽然典型成骨不全症常表现为骨脆性增加和骨质疏松，但在部分亚型或特定病理阶段（如伴有骨硬化表现的变异型），可呈现骨质致密和髓腔狭窄，结合‘恢复慢’、‘哭闹’、‘脸色白’（提示贫血/骨髓受压）及X线所见，符合遗传性骨病特征。在给定科室标准疾病列表中，‘成骨不全症’是唯一涵盖此类复杂骨代谢异常及骨折易感性的疾病名称。其他选项如‘骨折畸形愈合’仅描述状态而非病因，‘骨髓炎’无感染征象，故选择成骨不全症作为最可能的诊断方向，需进一步基因检测确诊具体亚型。",
+    "ordered_examinations": [
+      "全身骨骼X线检查"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_00518",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.48,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "成骨不全症"
+      ],
+      "expected": [
+        "大理石骨病"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全身骨骼X线检查"
+      ],
+      "expected": [
+        "基因检测",
+        "磁共振成像（MRI）",
+        "双能X线吸收测定法（DEXA）",
+        "综合代谢面板（CMP）",
+        "维生素D检测",
+        "尿液分析（UA）"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：针对反复骨折和骨痛，建议立即制动患肢并严格卧床休息，避免负重活动以防新发骨折。给予双膦酸盐类药物（如帕米膦酸二钠）静脉输注，以抑制破骨细胞活性、增加骨密度并缓解骨痛，需根据体重精确计算剂量。\n2. 个性化调整：患儿为4岁儿童，处于骨骼快速生长期，治疗需兼顾生长需求。鉴于X线显示骨髓腔狭窄及骨质硬化，需警惕颅内高压或视神经受压风险，建议定期监测视力及听力。若存在贫血或血小板减少（虽本次未明确提及但病史中有类似表现），需联合血液科评估是否补充铁剂或进行造血支持。\n3. 安全性与监测：双膦酸盐治疗期间需监测血钙水平，预防低钙血症；观察有无发热、恶心等急性期反应。告知家长避免剧烈碰撞，家中做好防跌倒措施。若出现剧烈头痛、呕吐、视力模糊或肢体麻木，提示可能并发颅高压或神经压迫，需立即就医。每3-6个月复查骨密度及全身骨骼X线，评估治疗效果及骨折愈合情况。",
+      "overallScore": 0.48,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.6,
+      "reasoning": "未用禁忌药，但遗漏移植根治方案且误判年龄，仅对症处理。",
+      "reference": "应尽快在儿童移植中心进行造血干细胞移植评估，因为这是与 TCIRG1 突变相关的重度常染色体隐性大理石骨病唯一的根治性治疗。鉴于 CMP 显示低钙以及大理石骨病相关的骨重塑失调，应谨慎管理矿物质代谢：对于已证实的 25-OH 维生素D 缺乏，可考虑补充营养性维生素D（胆钙化醇），并频繁监测钙、磷和 PTH，同时进行肾脏监测；骨化三醇和/或钙补充的决定应根据 Ca/PTH 变化趋势及临床情况，在专科医生指导下进行。疼痛管理可按需使用对乙酰氨基酚，并在急性发作期间采用冷疗。参加以温和发育支持和关节活动度练习为重点的物理治疗，避免负重应力。定期监测生长、神经系统状态、听力和肾功能。指导家长预防跌倒、警惕感染、加强营养支持（包括富含铁的食物），并在出现任何新发或加重症状时及时随访。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "大理石骨病",
+      "necessary_examinations": [
+        "基因检测",
+        "磁共振成像（MRI）",
+        "双能X线吸收测定法（DEXA）",
+        "综合代谢面板（CMP）",
+        "维生素D检测",
+        "尿液分析（UA）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "可待因",
+          "曲马多",
+          "阿司匹林"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "应尽快在儿童移植中心进行造血干细胞移植评估，因为这是与 TCIRG1 突变相关的重度常染色体隐性大理石骨病唯一的根治性治疗。鉴于 CMP 显示低钙以及大理石骨病相关的骨重塑失调，应谨慎管理矿物质代谢：对于已证实的 25-OH 维生素D 缺乏，可考虑补充营养性维生素D（胆钙化醇），并频繁监测钙、磷和 PTH，同时进行肾脏监测；骨化三醇和/或钙补充的决定应根据 Ca/PTH 变化趋势及临床情况，在专科医生指导下进行。疼痛管理可按需使用对乙酰氨基酚，并在急性发作期间采用冷疗。参加以温和发育支持和关节活动度练习为重点的物理治疗，避免负重应力。定期监测生长、神经系统状态、听力和肾功能。指导家长预防跌倒、警惕感染、加强营养支持（包括富含铁的食物），并在出现任何新发或加重症状时及时随访。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "4岁患儿，主诉反复骨痛、活动受限及轻微外伤后骨折愈合缓慢，伴面色苍白和乏力，X线提示骨质异常但无典型出血症状。",
+      "diagnosis_reflection": "误诊为成骨不全症，未识别大理石骨病（Osteopetrosis）。关键遗漏点在于未将‘骨折恢复慢’与‘骨质硬化/骨髓腔狭窄’的影像学特征关联，且忽略了该病常伴发的贫血和颅神经受压风险。",
+      "examination_reflection": "仅开具全身骨骼X线检查，严重不足。漏做基因检测（确诊TCIRG1突变）、DEXA（评估骨密度）、CMP及维生素D检测等关键检查，导致无法区分代谢性骨病与遗传性骨病，延误了病因诊断。",
+      "treatment_reflection": "治疗方案仅针对症状进行保守处理（制动、双膦酸盐），完全遗漏了根治性手段。对于重度常染色体隐性大理石骨病，造血干细胞移植是唯一可能治愈的方法，且需警惕低钙血症和颅内高压的并发症管理。",
+      "future_strategy": "面对儿童反复骨折伴愈合延迟及贫血表现时，应优先排查大理石骨病而非单纯考虑成骨不全；必须完善基因检测和全面代谢评估，并尽早转诊至移植中心评估根治方案。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/087.json#/applied_memory"
+  }
+}

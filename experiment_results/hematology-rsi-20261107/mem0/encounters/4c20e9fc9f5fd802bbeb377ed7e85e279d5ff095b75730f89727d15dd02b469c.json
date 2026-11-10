@@ -1,0 +1,677 @@
+{
+  "patient_id": "Patient_05266",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛？\", \"reason\": \"当前病例信息缺失，没有具体的患者主诉和病史记录，无法进行初步判断。根据诊疗规范，在诊断开始阶段或缺少关键病史信息时，应优先通过问诊获取患者的症状表现。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，我最近四个月皮肤一直痒，有红斑，像荨麻疹一样在身上和手臂上。还有喘鸣、咳嗽，晚上更严重！肚子也痛，拉肚子，吃不下饭，瘦了。我很害怕，是不是因为家里穷或者我做了什么错事？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？\", \"reason\": \"患者有皮肤瘙痒、荨麻疹样皮疹、喘鸣、咳嗽及腹泻等症状，且伴有体重下降和夜间盗汗。结合记忆摘要中关于热带旅行史与嗜酸性粒细胞增多症关联的提示，需要确认旅行史以鉴别寄生虫感染或过敏反应，这是诊断的关键信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有去过热带！但我最近很害怕，是不是因为家里穷？我上网查了说可能是寄生虫。皮疹、咳嗽和拉肚子都是旅行后才开始的吗？不，它们是我在学校住校后慢慢加重的！我晚上喘得厉害，肚子也痛，我该怎么办？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？\", \"reason\": \"患者症状（皮疹、喘鸣、咳嗽、腹泻）持续加重且原因不明，已排除热带旅行史，但缺乏关于寄生虫感染风险因素（如生食、接触土壤）及全身症状（如发热）的关键信息，需进一步问诊以缩小鉴别诊断范围。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有养宠物，也没吃生肉或接触土壤。但我最近很害怕，是不是因为家里穷？皮疹没发烧，可肚子痛、拉肚子，晚上喘得厉害！我该怎么办？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？\", \"reason\": \"患者主诉皮肤瘙痒、红斑、喘鸣、咳嗽及腹泻等症状，虽然已排除热带旅行史，但为了进一步鉴别寄生虫感染（如钩虫、蛔虫等）或其他过敏原暴露，需要确认是否有养宠物、接触土壤或生食肉类/海鲜的病史，同时需明确皮疹是否伴有发热以辅助判断感染或炎症性质。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有养宠物，也没吃生肉或接触土壤。皮疹没发烧，可肚子痛、拉肚子，晚上喘得厉害！我该怎么办？是不是因为家里穷？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？\", \"reason\": \"患者主诉皮肤瘙痒、红斑、喘鸣、咳嗽及腹泻，但否认热带旅行史。为了鉴别诊断（如寄生虫感染、过敏或其他系统性疾病），需要进一步询问可能的暴露史（宠物、土壤、生食）以及症状伴随情况（发热），以补充病史信息并指导后续检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有养宠物，也没吃生肉或接触土壤。皮疹没发烧。但我肚子痛、拉肚子，晚上喘得厉害！是不是因为家里穷？我该怎么办？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？\", \"reason\": \"患者有皮疹、喘鸣、咳嗽和腹泻等症状，且怀疑寄生虫感染，但病史中未明确提及旅行史。根据诊疗规范，对于疑似寄生虫感染或嗜酸性粒细胞增多症的患者，必须详细询问热带/亚热带旅行史以评估风险，这是诊断的关键信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有去过热带！但我最近很害怕，是不是因为家里穷？我上网查了说可能是寄生虫。皮疹、咳嗽和拉肚子都是旅行后才开始的吗？不，它们是我在学校住校后慢慢加重的！我晚上喘得厉害，肚子也痛，我该怎么办？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？\", \"reason\": \"患者否认热带旅行史和生食史，但症状（皮疹、喘鸣、腹泻）与学校住校时间相关，需进一步排查过敏原（如尘螨、霉菌、新接触物）或环境因素，以区分寄生虫感染与其他过敏性疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "住校后换了新床单和洗涤用品，皮疹好像更痒了！还有花草。但我怕是因为家里穷才生病的，网上说可能是寄生虫，我该怎么办？肚子痛、拉肚子、晚上喘得厉害，我好害怕！"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？\", \"reason\": \"患者目前症状复杂（皮疹、喘鸣、咳嗽、腹泻），且已排除热带旅行史和生食史，但缺乏用药史和体温信息。在考虑寄生虫感染、过敏性疾病或其他系统性疾病前，必须明确是否有药物诱发因素以及是否存在发热以辅助鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我没吃处方药，就是痒的时候吃点抗过敏的，喘的时候用吸入剂。皮疹没发烧。但我肚子痛、拉肚子，晚上喘得厉害！是不是因为家里穷？我该怎么办？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？\", \"reason\": \"患者症状（皮疹、喘鸣、腹泻）与学校环境变化（新床单、洗涤用品、花草）时间相关，需进一步确认过敏原或环境因素以鉴别寄生虫感染与过敏性疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "换了新床单和洗涤用品，还有花草！皮疹更痒了。但我怕是因为家里穷才生病的，网上说可能是寄生虫。肚子痛、拉肚子、晚上喘得厉害，我好害怕！"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？\", \"reason\": \"患者目前症状复杂，涉及皮肤、呼吸和消化系统，且已排除热带旅行史。虽然怀疑寄生虫或过敏，但尚未进行任何实验室检查。为了鉴别诊断（如区分感染性、过敏性或药物反应），需要进一步询问用药史和确认有无发热等关键体征，以决定下一步是开检查还是直接诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我没吃处方药，痒的时候吃点抗过敏的，喘的时候用吸入剂。皮疹没发烧。但我肚子痛、拉肚子，晚上喘得厉害！是不是因为家里穷？我该怎么办？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有发热、夜间盗汗的情况？另外，您的体重在近期是否有明显下降？\", \"reason\": \"患者目前症状复杂（皮疹、喘鸣、腹痛腹泻），且病史中未明确提及发热和体重变化等关键全身性症状，这些信息对于鉴别寄生虫感染、过敏性疾病或其他系统性疾病至关重要，因此需要进一步问诊。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有发热、夜间盗汗的情况？另外，您的体重在近期是否有明显下降？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热，也没有夜间盗汗。体重确实轻了一点，大概瘦了。但我好害怕，是不是因为家里穷？网上说可能是寄生虫，我该怎么办？肚子痛、拉肚子，晚上喘得厉害！"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有皮疹、喘鸣、咳嗽、腹泻及体重下降等症状，且怀疑寄生虫感染或过敏。根据诊疗规范，需完善血常规（关注嗜酸性粒细胞）、粪便虫卵检查、过敏原检测、胸部CT等关键检查以明确病因，目前尚未开具任何检查，故优先选择开检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为多系统过敏症状（皮疹、喘鸣、咳嗽）伴消化道症状及体重下降，病史提示需鉴别寄生虫感染（如嗜酸性粒细胞增多症）、过敏性疾病或血液系统恶性肿瘤。首选血常规检查以评估白细胞计数及嗜酸性粒细胞水平，这是诊断嗜酸性粒细胞增多及相关病因的关键第一步，且目前尚未进行任何检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"C反应蛋白（CRP）\", \"红细胞沉降率（ESR）\"], \"reason\": \"患者表现为多系统过敏症状（皮疹、喘鸣、咳嗽）、消化道症状及体重下降，需通过全血细胞计数（CBC）和外周血涂片评估是否存在嗜酸性粒细胞增多以排查寄生虫感染或血液系统疾病；同时检测C反应蛋白（CRP）和红细胞沉降率（ESR）以评估体内炎症水平。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：16.2 x 10^9/L［参考范围：4.5-13.0 x 10^9/L］\", \"血液嗜酸性粒细胞\": \"绝对嗜酸性粒细胞：2.4 x 10^9/L［参考范围：0-0.5 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血液嗜酸性粒细胞\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"可见嗜酸性粒细胞增多，未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"未见异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞52%、淋巴细胞30%、单核细胞8%、嗜酸性粒细胞10%、嗜碱性粒细胞0%。［参考值：中性粒细胞40-70%、淋巴细胞20-40%、单核细胞2-8%、嗜酸性粒细胞1-4%、嗜碱性粒细胞0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。\", \"血小板形态与分布\": \"大小及形态正常，分布均匀。\", \"血小板数量\": \"数量充足（估计250,000/μL）。［参考值：数量充足（估计150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"外周血涂片其他异常所见\", \"白细胞分类计数\"]}, \"C反应蛋白（CRP）\": {\"result\": {\"C反应蛋白\": \"CRP：18 mg/L［参考范围：<10 mg/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"C反应蛋白\"]}, \"红细胞沉降率（ESR）\": {\"result\": {\"红细胞沉降率\": \"ESR：22 mm/hr［参考范围：0-10 mm/hr］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞沉降率\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为全身瘙痒、皮疹、喘息及消化道症状，但关键检查结果提示显著的外周血嗜酸性粒细胞增多（绝对值2.4 x 10^9/L，占比10%）伴白细胞总数升高。虽然患者否认热带旅行史，但临床表现高度疑似寄生虫感染（如类圆线虫等）或嗜酸性粒细胞相关疾病。根据诊疗规范，对于原因不明的显著嗜酸性粒细胞增多症，需首先由血液科进行鉴别诊断（排除白血病、淋巴瘤等血液系统恶性肿瘤），并指导进一步的寄生虫筛查（如粪便检查、血清学检测）及骨髓穿刺等检查，以明确病因并制定治疗方案（如抗寄生虫治疗或激素使用前的风险评估）。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"嗜酸性粒细胞增多症\", \"treatment_plan\": \"1. **病因排查与针对性治疗**：鉴于患者有皮疹、哮喘样症状（喘鸣、咳嗽）、腹痛腹泻及体重下降，且血象显示显著嗜酸性粒细胞增多，需高度怀疑寄生虫感染（如粪类圆线虫）或过敏性疾病。建议立即进行粪便寄生虫卵检查、血清寄生虫抗体检测及过敏原筛查。若确诊寄生虫感染，首选阿苯达唑（400mg，每日2次，连用3天）；若为严重过敏反应或特发性嗜酸性粒细胞增多，可短期使用糖皮质激素（如泼尼松40mg/日），但必须在排除活动性寄生虫感染后使用，以防诱发致命性类圆线虫超感染综合征。\\n2. **对症支持治疗**：针对皮肤瘙痒和荨麻疹，给予抗组胺药物（如氯雷他定或西替利嗪）；针对呼吸道症状，继续使用吸入性支气管扩张剂或吸入性糖皮质激素控制哮喘。\\n3. **监测与随访**：治疗期间需定期复查血常规（重点关注嗜酸性粒细胞计数）、肝肾功能及电解质。若出现高热、呼吸困难加重、剧烈腹痛或意识改变，提示可能病情恶化或出现并发症，需立即急诊就医。\", \"reasoning\": \"患者主要表现为多系统受累（皮肤、呼吸、消化道），伴有显著的白细胞升高和嗜酸性粒细胞绝对值及比例增高（WBC 16.2×10^9/L，嗜酸粒细胞10%，绝对值2.4×10^9/L），符合嗜酸性粒细胞增多症的诊断标准。外周血涂片未见原始细胞或异型细胞，基本排除了急性白血病等恶性血液肿瘤。结合患者住校后接触新环境、花草及洗涤用品的病史，以及皮疹、喘息等症状，首先考虑过敏性因素或寄生虫感染。考虑到记忆摘要中强调过在热带旅行史或疑似寄生虫感染时盲目使用激素的风险，治疗方案必须优先排查寄生虫并谨慎使用激素，确保安全性。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_05266",
+    "mode": "train",
+    "memory_notes": [
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "User is an adult patient presenting with low-grade fever, fatigue, and decreased appetite over the past 3 months, resulting in a 4 kg weight loss.",
+      "User received guidance on the proper treatment protocol for eosinophilia: start antiparasitics (Albendazole 400 mg BID x 3 days), then initiate Prednisone 40 mg daily for up to 4 weeks with gradual tapering, while monitoring for end-organ damage via ECG, troponin, and echocardiogram.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's patient had parasitology examinations showing positive results across all methods: morphological examination, component analysis, microscopic examination, direct wet mount, and concentration techniques all detected worm eggs in stool specimens.",
+      "User was warned about contraindications for purine analogs including allergy history and pregnancy/breastfeeding status, and instructed to seek immediate medical attention for high fever (>38.3°C), severe bleeding, or respiratory distress",
+      "User's patient (Patient_09288) has a history of travel to tropical regions, with symptoms worsening after the trip, including recurrent generalized itching, hives (urticaria), shortness of breath, dry cough, and diarrhea for the past two weeks, accompanied by night sweats.",
+      "User's child has elevated inflammatory markers: CRP 45.0 mg/L, high-sensitivity CRP 8.5 mg/L, and PCT 2.8 ng/mL.",
+      "User was informed that the correct workup for eosinophilia includes CBC, ESR, CRP, allergy testing, fecal O&P, parasitic serology, PFTs, Chest CT, skin biopsy, and bone marrow aspiration/biopsy, none of which were ordered in the erroneous case.",
+      "User's child has severe thrombocytopenia (platelet count 22×10^9/L) with signs of disseminated intravascular coagulation (DIC), including elevated D-dimer and low fibrinogen.",
+      "User's child's peripheral blood smear shows small cell hypochromic red blood cells with central pallor occupying half the diameter, marked anisocytosis, and target cells, but no parasites or abnormal cells.",
+      "User's patient does not have fever, bone pain, bleeding tendencies, abdominal pain, nausea, or vomiting, and denies eating raw freshwater fish/shrimp or drinking untreated water.",
+      "User participated in a hematology diagnostic task for Patient_01894, a patient presenting with low-grade fever, easy bruising, occasional gum bleeding, and bone pain.",
+      "User's case analysis highlighted a critical safety error: initiating chemotherapy and steroids without screening for parasitic infections (specifically Strongyloides) in a patient with travel history and eosinophilia, which carries a high risk of fatal hyperinfection syndrome.",
+      "User's child's peripheral blood smear showed microcytic hypochromic red blood cells with central pallor occupying half the cell diameter, marked anisocytosis, and target cells, but no parasites, inclusions, or abnormal cells.",
+      "The system evaluation revealed the diagnosis of ALL for Patient_00930 was incorrect; the correct diagnosis is Eosinophilia associated with travel exposure history, positive fecal worm eggs, and suspected Strongyloides hyperinfection risk."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，我最近四个月皮肤一直痒，有红斑，像荨麻疹一样在身上和手臂上。还有喘鸣、咳嗽，晚上更严重！肚子也痛，拉肚子，吃不下饭，瘦了。我很害怕，是不是因为家里穷或者我做了什么错事？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？"
+      },
+      {
+        "from": "patient",
+        "text": "没有去过热带！但我最近很害怕，是不是因为家里穷？我上网查了说可能是寄生虫。皮疹、咳嗽和拉肚子都是旅行后才开始的吗？不，它们是我在学校住校后慢慢加重的！我晚上喘得厉害，肚子也痛，我该怎么办？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "from": "patient",
+        "text": "没有养宠物，也没吃生肉或接触土壤。但我最近很害怕，是不是因为家里穷？皮疹没发烧，可肚子痛、拉肚子，晚上喘得厉害！我该怎么办？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "from": "patient",
+        "text": "没有养宠物，也没吃生肉或接触土壤。皮疹没发烧，可肚子痛、拉肚子，晚上喘得厉害！我该怎么办？是不是因为家里穷？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "from": "patient",
+        "text": "没有养宠物，也没吃生肉或接触土壤。皮疹没发烧。但我肚子痛、拉肚子，晚上喘得厉害！是不是因为家里穷？我该怎么办？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？"
+      },
+      {
+        "from": "patient",
+        "text": "没有去过热带！但我最近很害怕，是不是因为家里穷？我上网查了说可能是寄生虫。皮疹、咳嗽和拉肚子都是旅行后才开始的吗？不，它们是我在学校住校后慢慢加重的！我晚上喘得厉害，肚子也痛，我该怎么办？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？"
+      },
+      {
+        "from": "patient",
+        "text": "住校后换了新床单和洗涤用品，皮疹好像更痒了！还有花草。但我怕是因为家里穷才生病的，网上说可能是寄生虫，我该怎么办？肚子痛、拉肚子、晚上喘得厉害，我好害怕！"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "from": "patient",
+        "text": "我没吃处方药，就是痒的时候吃点抗过敏的，喘的时候用吸入剂。皮疹没发烧。但我肚子痛、拉肚子，晚上喘得厉害！是不是因为家里穷？我该怎么办？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？"
+      },
+      {
+        "from": "patient",
+        "text": "换了新床单和洗涤用品，还有花草！皮疹更痒了。但我怕是因为家里穷才生病的，网上说可能是寄生虫。肚子痛、拉肚子、晚上喘得厉害，我好害怕！"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？"
+      },
+      {
+        "from": "patient",
+        "text": "我没吃处方药，痒的时候吃点抗过敏的，喘的时候用吸入剂。皮疹没发烧。但我肚子痛、拉肚子，晚上喘得厉害！是不是因为家里穷？我该怎么办？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有发热、夜间盗汗的情况？另外，您的体重在近期是否有明显下降？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热，也没有夜间盗汗。体重确实轻了一点，大概瘦了。但我好害怕，是不是因为家里穷？网上说可能是寄生虫，我该怎么办？肚子痛、拉肚子，晚上喘得厉害！"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：16.2 x 10^9/L［参考范围：4.5-13.0 x 10^9/L］",
+          "血液嗜酸性粒细胞": "绝对嗜酸性粒细胞：2.4 x 10^9/L［参考范围：0-0.5 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血液嗜酸性粒细胞"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "可见嗜酸性粒细胞增多，未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "未见异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞52%、淋巴细胞30%、单核细胞8%、嗜酸性粒细胞10%、嗜碱性粒细胞0%。［参考值：中性粒细胞40-70%、淋巴细胞20-40%、单核细胞2-8%、嗜酸性粒细胞1-4%、嗜碱性粒细胞0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当。",
+          "红细胞形态": "正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。",
+          "血小板形态与分布": "大小及形态正常，分布均匀。",
+          "血小板数量": "数量充足（估计250,000/μL）。［参考值：数量充足（估计150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "外周血涂片其他异常所见",
+          "白细胞分类计数"
+        ]
+      },
+      "C反应蛋白（CRP）": {
+        "result": {
+          "C反应蛋白": "CRP：18 mg/L［参考范围：<10 mg/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "C反应蛋白"
+        ]
+      },
+      "红细胞沉降率（ESR）": {
+        "result": {
+          "红细胞沉降率": "ESR：22 mm/hr［参考范围：0-10 mm/hr］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "红细胞沉降率"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛？",
+        "reason": "当前病例信息缺失，没有具体的患者主诉和病史记录，无法进行初步判断。根据诊疗规范，在诊断开始阶段或缺少关键病史信息时，应优先通过问诊获取患者的症状表现。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？",
+        "reason": "患者有皮肤瘙痒、荨麻疹样皮疹、喘鸣、咳嗽及腹泻等症状，且伴有体重下降和夜间盗汗。结合记忆摘要中关于热带旅行史与嗜酸性粒细胞增多症关联的提示，需要确认旅行史以鉴别寄生虫感染或过敏反应，这是诊断的关键信息。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？",
+        "reason": "患者症状（皮疹、喘鸣、咳嗽、腹泻）持续加重且原因不明，已排除热带旅行史，但缺乏关于寄生虫感染风险因素（如生食、接触土壤）及全身症状（如发热）的关键信息，需进一步问诊以缩小鉴别诊断范围。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？",
+        "reason": "患者主诉皮肤瘙痒、红斑、喘鸣、咳嗽及腹泻等症状，虽然已排除热带旅行史，但为了进一步鉴别寄生虫感染（如钩虫、蛔虫等）或其他过敏原暴露，需要确认是否有养宠物、接触土壤或生食肉类/海鲜的病史，同时需明确皮疹是否伴有发热以辅助判断感染或炎症性质。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有养宠物、接触土壤或生食肉类/海鲜的经历？另外，您的皮疹是否伴有发热？",
+        "reason": "患者主诉皮肤瘙痒、红斑、喘鸣、咳嗽及腹泻，但否认热带旅行史。为了鉴别诊断（如寄生虫感染、过敏或其他系统性疾病），需要进一步询问可能的暴露史（宠物、土壤、生食）以及症状伴随情况（发热），以补充病史信息并指导后续检查。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有前往热带或亚热带地区旅行的经历？另外，您的症状（如皮疹、咳嗽、腹泻）是否在旅行后出现或加重？",
+        "reason": "患者有皮疹、喘鸣、咳嗽和腹泻等症状，且怀疑寄生虫感染，但病史中未明确提及旅行史。根据诊疗规范，对于疑似寄生虫感染或嗜酸性粒细胞增多症的患者，必须详细询问热带/亚热带旅行史以评估风险，这是诊断的关键信息。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？",
+        "reason": "患者否认热带旅行史和生食史，但症状（皮疹、喘鸣、腹泻）与学校住校时间相关，需进一步排查过敏原（如尘螨、霉菌、新接触物）或环境因素，以区分寄生虫感染与其他过敏性疾病。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？",
+        "reason": "患者目前症状复杂（皮疹、喘鸣、咳嗽、腹泻），且已排除热带旅行史和生食史，但缺乏用药史和体温信息。在考虑寄生虫感染、过敏性疾病或其他系统性疾病前，必须明确是否有药物诱发因素以及是否存在发热以辅助鉴别诊断。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您在学校住校期间，是否接触过新的环境、宠物、花草，或者更换了洗涤用品、床单被褥等？另外，您的皮疹在接触这些新事物后是否有加重？",
+        "reason": "患者症状（皮疹、喘鸣、腹泻）与学校环境变化（新床单、洗涤用品、花草）时间相关，需进一步确认过敏原或环境因素以鉴别寄生虫感染与过敏性疾病。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有服用过任何药物（包括处方药、非处方药或中草药）？另外，您的皮疹是否伴有发热？",
+        "reason": "患者目前症状复杂，涉及皮肤、呼吸和消化系统，且已排除热带旅行史。虽然怀疑寄生虫或过敏，但尚未进行任何实验室检查。为了鉴别诊断（如区分感染性、过敏性或药物反应），需要进一步询问用药史和确认有无发热等关键体征，以决定下一步是开检查还是直接诊断。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有发热、夜间盗汗的情况？另外，您的体重在近期是否有明显下降？",
+        "reason": "患者目前症状复杂（皮疹、喘鸣、腹痛腹泻），且病史中未明确提及发热和体重变化等关键全身性症状，这些信息对于鉴别寄生虫感染、过敏性疾病或其他系统性疾病至关重要，因此需要进一步问诊。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有皮疹、喘鸣、咳嗽、腹泻及体重下降等症状，且怀疑寄生虫感染或过敏。根据诊疗规范，需完善血常规（关注嗜酸性粒细胞）、粪便虫卵检查、过敏原检测、胸部CT等关键检查以明确病因，目前尚未开具任何检查，故优先选择开检查。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "C反应蛋白（CRP）",
+          "红细胞沉降率（ESR）"
+        ],
+        "reason": "患者表现为多系统过敏症状（皮疹、喘鸣、咳嗽）、消化道症状及体重下降，需通过全血细胞计数（CBC）和外周血涂片评估是否存在嗜酸性粒细胞增多以排查寄生虫感染或血液系统疾病；同时检测C反应蛋白（CRP）和红细胞沉降率（ESR）以评估体内炎症水平。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "嗜酸性粒细胞增多症",
+      "treatment_plan": "1. **病因排查与针对性治疗**：鉴于患者有皮疹、哮喘样症状（喘鸣、咳嗽）、腹痛腹泻及体重下降，且血象显示显著嗜酸性粒细胞增多，需高度怀疑寄生虫感染（如粪类圆线虫）或过敏性疾病。建议立即进行粪便寄生虫卵检查、血清寄生虫抗体检测及过敏原筛查。若确诊寄生虫感染，首选阿苯达唑（400mg，每日2次，连用3天）；若为严重过敏反应或特发性嗜酸性粒细胞增多，可短期使用糖皮质激素（如泼尼松40mg/日），但必须在排除活动性寄生虫感染后使用，以防诱发致命性类圆线虫超感染综合征。\n2. **对症支持治疗**：针对皮肤瘙痒和荨麻疹，给予抗组胺药物（如氯雷他定或西替利嗪）；针对呼吸道症状，继续使用吸入性支气管扩张剂或吸入性糖皮质激素控制哮喘。\n3. **监测与随访**：治疗期间需定期复查血常规（重点关注嗜酸性粒细胞计数）、肝肾功能及电解质。若出现高热、呼吸困难加重、剧烈腹痛或意识改变，提示可能病情恶化或出现并发症，需立即急诊就医。",
+      "reasoning": "患者主要表现为多系统受累（皮肤、呼吸、消化道），伴有显著的白细胞升高和嗜酸性粒细胞绝对值及比例增高（WBC 16.2×10^9/L，嗜酸粒细胞10%，绝对值2.4×10^9/L），符合嗜酸性粒细胞增多症的诊断标准。外周血涂片未见原始细胞或异型细胞，基本排除了急性白血病等恶性血液肿瘤。结合患者住校后接触新环境、花草及洗涤用品的病史，以及皮疹、喘息等症状，首先考虑过敏性因素或寄生虫感染。考虑到记忆摘要中强调过在热带旅行史或疑似寄生虫感染时盲目使用激素的风险，治疗方案必须优先排查寄生虫并谨慎使用激素，确保安全性。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_05266",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.75,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "expected": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "matched": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "C反应蛋白（CRP）",
+          "红细胞沉降率（ESR）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "肺功能检查（PFTs）",
+          "C反应蛋白（CRP）",
+          "红细胞沉降率（ESR）",
+          "肝功能检查（LFTs）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "C反应蛋白（CRP）",
+          "红细胞沉降率（ESR）"
+        ],
+        "precision": 0.75,
+        "coverage": 0.375,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **病因排查与针对性治疗**：鉴于患者有皮疹、哮喘样症状（喘鸣、咳嗽）、腹痛腹泻及体重下降，且血象显示显著嗜酸性粒细胞增多，需高度怀疑寄生虫感染（如粪类圆线虫）或过敏性疾病。建议立即进行粪便寄生虫卵检查、血清寄生虫抗体检测及过敏原筛查。若确诊寄生虫感染，首选阿苯达唑（400mg，每日2次，连用3天）；若为严重过敏反应或特发性嗜酸性粒细胞增多，可短期使用糖皮质激素（如泼尼松40mg/日），但必须在排除活动性寄生虫感染后使用，以防诱发致命性类圆线虫超感染综合征。\n2. **对症支持治疗**：针对皮肤瘙痒和荨麻疹，给予抗组胺药物（如氯雷他定或西替利嗪）；针对呼吸道症状，继续使用吸入性支气管扩张剂或吸入性糖皮质激素控制哮喘。\n3. **监测与随访**：治疗期间需定期复查血常规（重点关注嗜酸性粒细胞计数）、肝肾功能及电解质。若出现高热、呼吸困难加重、剧烈腹痛或意识改变，提示可能病情恶化或出现并发症，需立即急诊就医。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全未违禁忌，核心治疗与参考一致，但遗漏免疫缺陷随访及饮食细节。",
+        "reference": "粪便浓集显微镜检查对蠕虫虫卵/幼虫呈阳性；目前尚未记录物种鉴定结果，可能仍在等待中。应进一步明确寄生虫种类（如有可能，重复进行带物种鉴定的粪便虫卵和寄生虫检查，并根据暴露史考虑针对性血清学检测——尤其是粪类圆线虫——鉴于存在喘鸣以及未来可能使用激素的考虑）。一旦识别出最可能或已确认的蠕虫，应开始口服阿苯达唑，并根据其种类调整治疗方案；若物种仍不明确，则按当地指南采用标准经验性短疗程，并在明确病原体后调整。为缓解瘙痒性皮疹、喘鸣和过敏性鼻炎症状，在患者按需使用短效支气管扩张剂的同时，开始每日口服氯雷他定。在治疗前/治疗期间评估基线肝脏状态及转氨酶升高的其他原因，并在阿苯达唑治疗期间/治疗后安排肝功能监测（或者如果仅使用单次短疗程且基线酶正常，则记录无需监测）。继续保持营养充足的素食饮食和严格的手卫生，并确保卧室通风良好。安排4-6周后复诊，重复进行全血细胞计数（CBC）和粪便虫卵及寄生虫检查（O&P）；同时嘱患者如呼吸窘迫加重、出现严重腹痛，或皮疹变为广泛分布并出现水疱，应立即就诊。鉴于既往评估提示免疫球蛋白水平偏低/可能存在免疫缺陷，并伴有反复呼吸道感染，应将其视为合并症处理：协调儿科/免疫科随访，并在后续计划中考虑复核免疫球蛋白状态。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "嗜酸性粒细胞增多症",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "肺功能检查（PFTs）",
+          "C反应蛋白（CRP）",
+          "红细胞沉降率（ESR）",
+          "肝功能检查（LFTs）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "Codeine",
+            "Tramadol"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "粪便浓集显微镜检查对蠕虫虫卵/幼虫呈阳性；目前尚未记录物种鉴定结果，可能仍在等待中。应进一步明确寄生虫种类（如有可能，重复进行带物种鉴定的粪便虫卵和寄生虫检查，并根据暴露史考虑针对性血清学检测——尤其是粪类圆线虫——鉴于存在喘鸣以及未来可能使用激素的考虑）。一旦识别出最可能或已确认的蠕虫，应开始口服阿苯达唑，并根据其种类调整治疗方案；若物种仍不明确，则按当地指南采用标准经验性短疗程，并在明确病原体后调整。为缓解瘙痒性皮疹、喘鸣和过敏性鼻炎症状，在患者按需使用短效支气管扩张剂的同时，开始每日口服氯雷他定。在治疗前/治疗期间评估基线肝脏状态及转氨酶升高的其他原因，并在阿苯达唑治疗期间/治疗后安排肝功能监测（或者如果仅使用单次短疗程且基线酶正常，则记录无需监测）。继续保持营养充足的素食饮食和严格的手卫生，并确保卧室通风良好。安排4-6周后复诊，重复进行全血细胞计数（CBC）和粪便虫卵及寄生虫检查（O&P）；同时嘱患者如呼吸窘迫加重、出现严重腹痛，或皮疹变为广泛分布并出现水疱，应立即就诊。鉴于既往评估提示免疫球蛋白水平偏低/可能存在免疫缺陷，并伴有反复呼吸道感染，应将其视为合并症处理：协调儿科/免疫科随访，并在后续计划中考虑复核免疫球蛋白状态。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为住校青年，主诉皮疹伴荨麻疹、喘鸣咳嗽、腹痛腹泻及体重下降，无发热但嗜酸性粒细胞增多。关键线索包括接触新洗涤用品/花草后症状加重，且患者有严重焦虑及对寄生虫的过度担忧。",
+        "diagnosis_reflection": "诊断准确命中'嗜酸性粒细胞增多症'。经验在于需高度警惕多系统受累（皮肤、呼吸、消化道）合并体重下降时，优先考虑寄生虫感染（如粪类圆线虫）或过敏性疾病，而非单纯过敏。",
+        "examination_reflection": "检查选择存在明显遗漏。虽然完成了基础炎症指标（CBC, CRP, ESR），但漏开了关键的病因排查项目：粪便虫卵和寄生虫检查（O&P）、寄生虫血清学检测、过敏原筛查及肺功能检查。这导致无法直接确诊寄生虫种类或评估气道阻塞程度。",
+        "treatment_reflection": "治疗方案逻辑安全有效，强调了在排除活动性寄生虫感染前慎用激素以防超感染综合征，并给出了对症药物。但遗漏了针对免疫缺陷的随访建议（参考中提及免疫球蛋白偏低）及具体的饮食卫生指导细节。",
+        "future_strategy": "面对皮疹+哮喘+腹痛+消瘦的多系统症状，必须将'寄生虫感染'作为首要鉴别诊断。检查清单应强制包含粪便O&P、寄生虫抗体及过敏原检测；治疗决策前务必确认未使用激素掩盖寄生虫病情，并关注患者心理状态对诊疗依从性的影响。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T08:49:48.764020+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_05266",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "嗜酸性粒细胞增多症"
+    ],
+    "treatment_plan": "1. **病因排查与针对性治疗**：鉴于患者有皮疹、哮喘样症状（喘鸣、咳嗽）、腹痛腹泻及体重下降，且血象显示显著嗜酸性粒细胞增多，需高度怀疑寄生虫感染（如粪类圆线虫）或过敏性疾病。建议立即进行粪便寄生虫卵检查、血清寄生虫抗体检测及过敏原筛查。若确诊寄生虫感染，首选阿苯达唑（400mg，每日2次，连用3天）；若为严重过敏反应或特发性嗜酸性粒细胞增多，可短期使用糖皮质激素（如泼尼松40mg/日），但必须在排除活动性寄生虫感染后使用，以防诱发致命性类圆线虫超感染综合征。\n2. **对症支持治疗**：针对皮肤瘙痒和荨麻疹，给予抗组胺药物（如氯雷他定或西替利嗪）；针对呼吸道症状，继续使用吸入性支气管扩张剂或吸入性糖皮质激素控制哮喘。\n3. **监测与随访**：治疗期间需定期复查血常规（重点关注嗜酸性粒细胞计数）、肝肾功能及电解质。若出现高热、呼吸困难加重、剧烈腹痛或意识改变，提示可能病情恶化或出现并发症，需立即急诊就医。",
+    "reasoning": "患者主要表现为多系统受累（皮肤、呼吸、消化道），伴有显著的白细胞升高和嗜酸性粒细胞绝对值及比例增高（WBC 16.2×10^9/L，嗜酸粒细胞10%，绝对值2.4×10^9/L），符合嗜酸性粒细胞增多症的诊断标准。外周血涂片未见原始细胞或异型细胞，基本排除了急性白血病等恶性血液肿瘤。结合患者住校后接触新环境、花草及洗涤用品的病史，以及皮疹、喘息等症状，首先考虑过敏性因素或寄生虫感染。考虑到记忆摘要中强调过在热带旅行史或疑似寄生虫感染时盲目使用激素的风险，治疗方案必须优先排查寄生虫并谨慎使用激素，确保安全性。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "C反应蛋白（CRP）",
+      "红细胞沉降率（ESR）"
+    ],
+    "conversation_rounds": 11,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_05266",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.75,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "expected": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "matched": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "C反应蛋白（CRP）",
+        "红细胞沉降率（ESR）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "肺功能检查（PFTs）",
+        "C反应蛋白（CRP）",
+        "红细胞沉降率（ESR）",
+        "肝功能检查（LFTs）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "C反应蛋白（CRP）",
+        "红细胞沉降率（ESR）"
+      ],
+      "precision": 0.75,
+      "coverage": 0.375,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **病因排查与针对性治疗**：鉴于患者有皮疹、哮喘样症状（喘鸣、咳嗽）、腹痛腹泻及体重下降，且血象显示显著嗜酸性粒细胞增多，需高度怀疑寄生虫感染（如粪类圆线虫）或过敏性疾病。建议立即进行粪便寄生虫卵检查、血清寄生虫抗体检测及过敏原筛查。若确诊寄生虫感染，首选阿苯达唑（400mg，每日2次，连用3天）；若为严重过敏反应或特发性嗜酸性粒细胞增多，可短期使用糖皮质激素（如泼尼松40mg/日），但必须在排除活动性寄生虫感染后使用，以防诱发致命性类圆线虫超感染综合征。\n2. **对症支持治疗**：针对皮肤瘙痒和荨麻疹，给予抗组胺药物（如氯雷他定或西替利嗪）；针对呼吸道症状，继续使用吸入性支气管扩张剂或吸入性糖皮质激素控制哮喘。\n3. **监测与随访**：治疗期间需定期复查血常规（重点关注嗜酸性粒细胞计数）、肝肾功能及电解质。若出现高热、呼吸困难加重、剧烈腹痛或意识改变，提示可能病情恶化或出现并发症，需立即急诊就医。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全未违禁忌，核心治疗与参考一致，但遗漏免疫缺陷随访及饮食细节。",
+      "reference": "粪便浓集显微镜检查对蠕虫虫卵/幼虫呈阳性；目前尚未记录物种鉴定结果，可能仍在等待中。应进一步明确寄生虫种类（如有可能，重复进行带物种鉴定的粪便虫卵和寄生虫检查，并根据暴露史考虑针对性血清学检测——尤其是粪类圆线虫——鉴于存在喘鸣以及未来可能使用激素的考虑）。一旦识别出最可能或已确认的蠕虫，应开始口服阿苯达唑，并根据其种类调整治疗方案；若物种仍不明确，则按当地指南采用标准经验性短疗程，并在明确病原体后调整。为缓解瘙痒性皮疹、喘鸣和过敏性鼻炎症状，在患者按需使用短效支气管扩张剂的同时，开始每日口服氯雷他定。在治疗前/治疗期间评估基线肝脏状态及转氨酶升高的其他原因，并在阿苯达唑治疗期间/治疗后安排肝功能监测（或者如果仅使用单次短疗程且基线酶正常，则记录无需监测）。继续保持营养充足的素食饮食和严格的手卫生，并确保卧室通风良好。安排4-6周后复诊，重复进行全血细胞计数（CBC）和粪便虫卵及寄生虫检查（O&P）；同时嘱患者如呼吸窘迫加重、出现严重腹痛，或皮疹变为广泛分布并出现水疱，应立即就诊。鉴于既往评估提示免疫球蛋白水平偏低/可能存在免疫缺陷，并伴有反复呼吸道感染，应将其视为合并症处理：协调儿科/免疫科随访，并在后续计划中考虑复核免疫球蛋白状态。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "嗜酸性粒细胞增多症",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "肺功能检查（PFTs）",
+        "C反应蛋白（CRP）",
+        "红细胞沉降率（ESR）",
+        "肝功能检查（LFTs）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "Codeine",
+          "Tramadol"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "粪便浓集显微镜检查对蠕虫虫卵/幼虫呈阳性；目前尚未记录物种鉴定结果，可能仍在等待中。应进一步明确寄生虫种类（如有可能，重复进行带物种鉴定的粪便虫卵和寄生虫检查，并根据暴露史考虑针对性血清学检测——尤其是粪类圆线虫——鉴于存在喘鸣以及未来可能使用激素的考虑）。一旦识别出最可能或已确认的蠕虫，应开始口服阿苯达唑，并根据其种类调整治疗方案；若物种仍不明确，则按当地指南采用标准经验性短疗程，并在明确病原体后调整。为缓解瘙痒性皮疹、喘鸣和过敏性鼻炎症状，在患者按需使用短效支气管扩张剂的同时，开始每日口服氯雷他定。在治疗前/治疗期间评估基线肝脏状态及转氨酶升高的其他原因，并在阿苯达唑治疗期间/治疗后安排肝功能监测（或者如果仅使用单次短疗程且基线酶正常，则记录无需监测）。继续保持营养充足的素食饮食和严格的手卫生，并确保卧室通风良好。安排4-6周后复诊，重复进行全血细胞计数（CBC）和粪便虫卵及寄生虫检查（O&P）；同时嘱患者如呼吸窘迫加重、出现严重腹痛，或皮疹变为广泛分布并出现水疱，应立即就诊。鉴于既往评估提示免疫球蛋白水平偏低/可能存在免疫缺陷，并伴有反复呼吸道感染，应将其视为合并症处理：协调儿科/免疫科随访，并在后续计划中考虑复核免疫球蛋白状态。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为住校青年，主诉皮疹伴荨麻疹、喘鸣咳嗽、腹痛腹泻及体重下降，无发热但嗜酸性粒细胞增多。关键线索包括接触新洗涤用品/花草后症状加重，且患者有严重焦虑及对寄生虫的过度担忧。",
+      "diagnosis_reflection": "诊断准确命中'嗜酸性粒细胞增多症'。经验在于需高度警惕多系统受累（皮肤、呼吸、消化道）合并体重下降时，优先考虑寄生虫感染（如粪类圆线虫）或过敏性疾病，而非单纯过敏。",
+      "examination_reflection": "检查选择存在明显遗漏。虽然完成了基础炎症指标（CBC, CRP, ESR），但漏开了关键的病因排查项目：粪便虫卵和寄生虫检查（O&P）、寄生虫血清学检测、过敏原筛查及肺功能检查。这导致无法直接确诊寄生虫种类或评估气道阻塞程度。",
+      "treatment_reflection": "治疗方案逻辑安全有效，强调了在排除活动性寄生虫感染前慎用激素以防超感染综合征，并给出了对症药物。但遗漏了针对免疫缺陷的随访建议（参考中提及免疫球蛋白偏低）及具体的饮食卫生指导细节。",
+      "future_strategy": "面对皮疹+哮喘+腹痛+消瘦的多系统症状，必须将'寄生虫感染'作为首要鉴别诊断。检查清单应强制包含粪便O&P、寄生虫抗体及过敏原检测；治疗决策前务必确认未使用激素掩盖寄生虫病情，并关注患者心理状态对诊疗依从性的影响。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/019.json#/applied_memory"
+  }
+}

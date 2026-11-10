@@ -1,0 +1,440 @@
+{
+  "patient_id": "Patient_07050",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等表现？\", \"reason\": \"当前没有任何病史、检查结果或已开检查信息，为了明确诊断方向，首先需要询问患者的临床症状以收集关键病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等表现？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，我最近特别累，爬楼都喘，还老发烧、盗汗，体重也掉了。最吓人的是身上容易青一块紫一块，刷牙牙龈出血，小腿还有红点，肚子也觉得胀，骨头隐隐作痛。这不会是另一种癌症吧？您得给我定个积极的方案啊！"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者症状（发热、盗汗、乏力、出血倾向、骨痛、脾大迹象）高度提示血液系统恶性肿瘤，但尚未进行任何实验室检查以获取关键诊断依据（如血常规、外周血涂片等），因此需优先开具相关检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为发热、盗汗、体重下降（B症状），伴有明显的出血倾向（牙龈出血、皮肤瘀斑、红点）、乏力、骨痛及腹部胀满感，高度提示血液系统恶性肿瘤（如白血病或淋巴瘤）。首选进行血常规及外周血涂片检查，以评估全血细胞计数（贫血、血小板减少、白细胞异常）及是否存在原始细胞，这是确诊血液病最基础且关键的步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者表现为发热、乏力、盗汗、体重减轻等B症状，伴有明显的出血倾向（牙龈出血、皮肤瘀斑、红点）、骨痛及腹部胀满感，高度怀疑血液系统恶性肿瘤（如白血病）。首先需进行全血细胞计数（CBC）评估贫血、血小板减少及白细胞异常；外周血涂片可观察是否有原始细胞或异常细胞形态；凝血功能全套用于评估出血风险及是否存在凝血障碍。这些是初步诊断血液病最基础且关键的检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：26.4 x 10^9/L［参考范围：4.0-10.0 x 10^9/L］\", \"血红蛋白\": \"Hgb：86 g/L［参考范围：110-150 g/L］\", \"血小板计数\": \"PLT：62 x 10^9/L［参考范围：140-380 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"白细胞分类计数\": \"可见显著的单核细胞绝对增多［参考值：中性粒细胞40-70%，淋巴细胞20-40%（常因生理性免疫衰老而趋于下限），单核细胞2-8%，嗜酸性粒细胞1-4%，嗜碱性粒细胞0-1%。］\", \"白细胞形态\": \"伴中性粒细胞发育异常\", \"异型细胞或原始细胞\": \"循环中的前单核细胞、偶见原始细胞约3%\", \"血小板数量\": \"血小板减少［参考值：数量充足（估计150,000-400,000/μL）。］\", \"红细胞形态\": \"红细胞大小和形态不等\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"白细胞分类计数\", \"白细胞形态\", \"异型细胞或原始细胞\", \"血小板数量\", \"红细胞形态\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"1.85 mg/L FEU［参考值：建议对 >50 岁患者采用年龄校正截断值（年龄[岁] × 0.01 mg/L FEU）］\", \"凝血酶原时间\": \"14.2 秒［参考值：11-13.5 秒（肝功能下降时可能轻度延长）］\", \"凝血酶时间\": \"19.8 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.35［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"36.5 秒［参考值：25-35 秒（因凝血因子VIII升高可能轻度缩短）］\", \"血浆纤维蛋白原\": \"1.4 g/L［参考值：2.0-4.5 g/L（水平通常随年龄增长而升高）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"D-二聚体\", \"凝血酶原时间\", \"凝血酶时间\", \"国际标准化比值\", \"活化部分凝血活酶时间\", \"血浆纤维蛋白原\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为全血细胞减少伴白细胞显著升高，外周血涂片发现原始细胞及单核细胞增多，提示急性白血病可能。为明确分型（如AML-M4/M5等）并指导后续治疗，急需进行骨髓穿刺检查（包括骨髓象、流式细胞术、染色体及基因检测），这是确诊和制定治疗方案的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为全血细胞减少伴白细胞显著升高，外周血涂片发现原始细胞（约3%）及单核细胞增多，结合发热、盗汗、骨痛等B症状，高度怀疑急性白血病（如急性单核细胞白血病或M4/M5型AML）。为明确诊断、确定白血病类型及指导后续化疗方案，必须进行骨髓穿刺及活检以获取骨髓象、进行流式细胞术免疫分型、染色体核型分析及基因突变检测，这些均属于病理检查范畴。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有发热、盗汗、骨痛及出血倾向。外周血涂片显示原始细胞约3%且伴单核细胞增多，高度怀疑急性髓系白血病（特别是急性单核细胞白血病）或骨髓增生异常综合征等血液系统恶性肿瘤。骨髓穿刺和活检是确诊此类疾病、评估骨髓浸润程度及进行分型诊断的金标准检查，必须尽快进行以指导后续治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"骨髓穿刺和活检（BMAB）\": {\"result\": {\"骨髓细胞密度\": \"骨髓增生活跃约90%［参考值：降低（通常为20-50%，与年龄成反比）。］\", \"骨髓三系造血\": \"伴粒细胞/单核细胞增殖、多系发育异常、单核细胞增多\", \"骨髓原始细胞\": \"原始细胞8%［参考范围：<5%］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓细胞密度\", \"骨髓三系造血\", \"骨髓原始细胞\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者已出现发热、乏力、出血倾向等B症状，血常规显示全血细胞减少伴白细胞升高，外周血涂片见原始细胞及发育异常，骨髓穿刺活检证实原始细胞比例达8%（>5%）并伴有三系发育异常和单核细胞增多。这些关键检查结果已足以支持急性髓系白血病（AML）或相关骨髓增生异常综合征/急性白血病的诊断，无需进一步检查即可进入确诊和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为发热、乏力、盗汗、体重下降等B症状，伴有出血倾向（牙龈出血、皮肤瘀斑）和骨痛。实验室检查显示全血细胞减少（白细胞升高但伴发育异常、贫血、血小板减少），外周血涂片发现原始细胞及单核细胞增多，骨髓穿刺提示增生活跃、多系发育异常且原始细胞比例达8%。这些临床表现和检查结果高度提示急性髓系白血病（特别是伴单核细胞分化的亚型）或骨髓增生异常综合征/白血病转化，属于血液系统恶性肿瘤范畴，需由血液科进行确诊及制定化疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"慢性粒-单核细胞白血病\", \"treatment_plan\": \"1. 主要治疗：鉴于患者表现为全血细胞减少、外周血单核细胞显著增多、骨髓原始细胞8%（<20%）及多系发育异常，符合CMML特征。首选去甲基化药物（如阿扎胞苷或地西他滨）联合维奈托克进行诱导缓解治疗，以改善造血功能并控制疾病进展。若患者年轻且体能状态良好，可评估异基因造血干细胞移植作为潜在治愈手段。\\n2. 个性化调整：针对患者严重的贫血（Hgb 86g/L）和血小板减少（PLT 62x10^9/L），在化疗期间需密切监测，必要时输注红细胞和血小板以维持生命体征稳定；针对发热、盗汗等B症状，积极对症处理感染风险，避免过度使用激素掩盖病情。\\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及凝血功能，警惕肿瘤溶解综合征及严重骨髓抑制。告知患者若出现高热不退、活动性出血或呼吸困难等危险信号需立即就医。定期复查骨髓穿刺以评估疗效。\", \"reasoning\": \"诊断依据：患者有乏力、发热、盗汗、体重下降等全身症状，伴出血倾向。实验室检查显示白细胞升高（26.4）、贫血（86g/L）和血小板减少（62）。关键特征为外周血单核细胞显著增多、骨髓原始细胞比例8%（介于5%-20%之间，排除急性白血病但提示MDS/MPN重叠），且伴有粒细胞/单核细胞增殖和多系发育异常，符合慢性粒-单核细胞白血病（CMML）的诊断标准。治疗方案选择去甲基化药物旨在纠正克隆性造血异常，同时根据患者出血风险给予支持治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_07050",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "User diagnosed Patient_00952 with Chronic Lymphocytic Leukemia (CLL) based on B symptoms (fatigue, night sweats, weight loss), painless lymphadenopathy, bleeding tendency, leukocytosis with lymphocytosis (WBC 68.4 x 10^9/L, 82% lymphocytes), anemia (Hgb 98 g/L), thrombocytopenia (PLT 92 x 10^9/L), smudge cells on peripheral smear, and biopsy confirmation of monoclonal B-cell infiltration.",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User diagnosed Patient_02057 with myelofibrosis based on progressive fatigue, early satiety, left upper quadrant fullness, low-grade fever, night sweats, weight loss, gum bleeding, easy bruising, massive splenomegaly (8 cm below left costal margin), leukocytosis (18.6 x10^9/L), anemia (Hb 92 g/L), thrombocytopenia (92 x10^9/L), teardrop cells on peripheral smear, and bone marrow showing diffuse reticulin/collagen fibrosis with atypical megakaryocytes.",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等表现？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，我最近特别累，爬楼都喘，还老发烧、盗汗，体重也掉了。最吓人的是身上容易青一块紫一块，刷牙牙龈出血，小腿还有红点，肚子也觉得胀，骨头隐隐作痛。这不会是另一种癌症吧？您得给我定个积极的方案啊！"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：26.4 x 10^9/L［参考范围：4.0-10.0 x 10^9/L］",
+          "血红蛋白": "Hgb：86 g/L［参考范围：110-150 g/L］",
+          "血小板计数": "PLT：62 x 10^9/L［参考范围：140-380 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "白细胞分类计数": "可见显著的单核细胞绝对增多［参考值：中性粒细胞40-70%，淋巴细胞20-40%（常因生理性免疫衰老而趋于下限），单核细胞2-8%，嗜酸性粒细胞1-4%，嗜碱性粒细胞0-1%。］",
+          "白细胞形态": "伴中性粒细胞发育异常",
+          "异型细胞或原始细胞": "循环中的前单核细胞、偶见原始细胞约3%",
+          "血小板数量": "血小板减少［参考值：数量充足（估计150,000-400,000/μL）。］",
+          "红细胞形态": "红细胞大小和形态不等"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "白细胞分类计数",
+          "白细胞形态",
+          "异型细胞或原始细胞",
+          "血小板数量",
+          "红细胞形态"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "D-二聚体": "1.85 mg/L FEU［参考值：建议对 >50 岁患者采用年龄校正截断值（年龄[岁] × 0.01 mg/L FEU）］",
+          "凝血酶原时间": "14.2 秒［参考值：11-13.5 秒（肝功能下降时可能轻度延长）］",
+          "凝血酶时间": "19.8 秒［参考值：14-19 秒］",
+          "国际标准化比值": "1.35［参考值：0.8-1.2］",
+          "活化部分凝血活酶时间": "36.5 秒［参考值：25-35 秒（因凝血因子VIII升高可能轻度缩短）］",
+          "血浆纤维蛋白原": "1.4 g/L［参考值：2.0-4.5 g/L（水平通常随年龄增长而升高）］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "D-二聚体",
+          "凝血酶原时间",
+          "凝血酶时间",
+          "国际标准化比值",
+          "活化部分凝血活酶时间",
+          "血浆纤维蛋白原"
+        ]
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "骨髓细胞密度": "骨髓增生活跃约90%［参考值：降低（通常为20-50%，与年龄成反比）。］",
+          "骨髓三系造血": "伴粒细胞/单核细胞增殖、多系发育异常、单核细胞增多",
+          "骨髓原始细胞": "原始细胞8%［参考范围：<5%］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "骨髓细胞密度",
+          "骨髓三系造血",
+          "骨髓原始细胞"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等表现？",
+        "reason": "当前没有任何病史、检查结果或已开检查信息，为了明确诊断方向，首先需要询问患者的临床症状以收集关键病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者症状（发热、盗汗、乏力、出血倾向、骨痛、脾大迹象）高度提示血液系统恶性肿瘤，但尚未进行任何实验室检查以获取关键诊断依据（如血常规、外周血涂片等），因此需优先开具相关检查。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为全血细胞减少伴白细胞显著升高，外周血涂片发现原始细胞及单核细胞增多，提示急性白血病可能。为明确分型（如AML-M4/M5等）并指导后续治疗，急需进行骨髓穿刺检查（包括骨髓象、流式细胞术、染色体及基因检测），这是确诊和制定治疗方案的关键步骤。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者已出现发热、乏力、出血倾向等B症状，血常规显示全血细胞减少伴白细胞升高，外周血涂片见原始细胞及发育异常，骨髓穿刺活检证实原始细胞比例达8%（>5%）并伴有三系发育异常和单核细胞增多。这些关键检查结果已足以支持急性髓系白血病（AML）或相关骨髓增生异常综合征/急性白血病的诊断，无需进一步检查即可进入确诊和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者表现为发热、乏力、盗汗、体重减轻等B症状，伴有明显的出血倾向（牙龈出血、皮肤瘀斑、红点）、骨痛及腹部胀满感，高度怀疑血液系统恶性肿瘤（如白血病）。首先需进行全血细胞计数（CBC）评估贫血、血小板减少及白细胞异常；外周血涂片可观察是否有原始细胞或异常细胞形态；凝血功能全套用于评估出血风险及是否存在凝血障碍。这些是初步诊断血液病最基础且关键的检查。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有发热、盗汗、骨痛及出血倾向。外周血涂片显示原始细胞约3%且伴单核细胞增多，高度怀疑急性髓系白血病（特别是急性单核细胞白血病）或骨髓增生异常综合征等血液系统恶性肿瘤。骨髓穿刺和活检是确诊此类疾病、评估骨髓浸润程度及进行分型诊断的金标准检查，必须尽快进行以指导后续治疗。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "慢性粒-单核细胞白血病",
+      "treatment_plan": "1. 主要治疗：鉴于患者表现为全血细胞减少、外周血单核细胞显著增多、骨髓原始细胞8%（<20%）及多系发育异常，符合CMML特征。首选去甲基化药物（如阿扎胞苷或地西他滨）联合维奈托克进行诱导缓解治疗，以改善造血功能并控制疾病进展。若患者年轻且体能状态良好，可评估异基因造血干细胞移植作为潜在治愈手段。\n2. 个性化调整：针对患者严重的贫血（Hgb 86g/L）和血小板减少（PLT 62x10^9/L），在化疗期间需密切监测，必要时输注红细胞和血小板以维持生命体征稳定；针对发热、盗汗等B症状，积极对症处理感染风险，避免过度使用激素掩盖病情。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及凝血功能，警惕肿瘤溶解综合征及严重骨髓抑制。告知患者若出现高热不退、活动性出血或呼吸困难等危险信号需立即就医。定期复查骨髓穿刺以评估疗效。",
+      "reasoning": "诊断依据：患者有乏力、发热、盗汗、体重下降等全身症状，伴出血倾向。实验室检查显示白细胞升高（26.4）、贫血（86g/L）和血小板减少（62）。关键特征为外周血单核细胞显著增多、骨髓原始细胞比例8%（介于5%-20%之间，排除急性白血病但提示MDS/MPN重叠），且伴有粒细胞/单核细胞增殖和多系发育异常，符合慢性粒-单核细胞白血病（CMML）的诊断标准。治疗方案选择去甲基化药物旨在纠正克隆性造血异常，同时根据患者出血风险给予支持治疗。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_07050",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.75,
+      "treatmentOverallScore": 0.68,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "慢性粒-单核细胞白血病"
+        ],
+        "expected": [
+          "慢性粒-单核细胞白血病"
+        ],
+        "matched": [
+          "慢性粒-单核细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "细胞遗传学分析",
+          "基因突变分析（基因测序）",
+          "尿溶菌酶检测",
+          "血清酶分析"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "precision": 0.75,
+        "coverage": 0.375,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：鉴于患者表现为全血细胞减少、外周血单核细胞显著增多、骨髓原始细胞8%（<20%）及多系发育异常，符合CMML特征。首选去甲基化药物（如阿扎胞苷或地西他滨）联合维奈托克进行诱导缓解治疗，以改善造血功能并控制疾病进展。若患者年轻且体能状态良好，可评估异基因造血干细胞移植作为潜在治愈手段。\n2. 个性化调整：针对患者严重的贫血（Hgb 86g/L）和血小板减少（PLT 62x10^9/L），在化疗期间需密切监测，必要时输注红细胞和血小板以维持生命体征稳定；针对发热、盗汗等B症状，积极对症处理感染风险，避免过度使用激素掩盖病情。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及凝血功能，警惕肿瘤溶解综合征及严重骨髓抑制。告知患者若出现高热不退、活动性出血或呼吸困难等危险信号需立即就医。定期复查骨髓穿刺以评估疗效。",
+        "overallScore": 0.68,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.8,
+        "reasoning": "未违禁忌。方案偏离标准，增加维奈托克且忽略感染评估即启动治疗。",
+        "reference": "启动门诊去甲基化治疗，使用阿扎胞苷以针对克隆性疾病，并安排移植中心会诊以评估异基因造血干细胞移植。对于有症状性贫血，立即给予浓缩红细胞输注等支持治疗。当前PLT为62 x10^9/L时，不常规给予血小板输注；仅在存在临床显著/持续出血或血小板计数降至机构预防性阈值以下时才输注血小板（例如<10 x10^9/L，或在操作/活动性出血时采用更高阈值）。在门诊使用阿扎胞苷前，需记录临床状态稳定，并鉴于近期发热/盗汗评估是否存在活动性感染：复查当前生命体征并进行针对性感染评估/检查（如症状回顾和体格检查、发热时行血培养、必要时做尿常规/尿培养，以及如有肺部症状时进行胸部影像和呼吸道检测）；如怀疑或确认感染，应治疗感染和/或暂缓治疗。保持高热量、高蛋白饮食，并严格注意卫生以预防感染。一周后于血液科门诊随访，重新评估并启动阿扎胞苷治疗，同时密切监测血细胞计数。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "慢性粒-单核细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "细胞遗传学分析",
+          "基因突变分析（基因测序）",
+          "尿溶菌酶检测",
+          "血清酶分析"
+        ],
+        "contraindications": {
+          "drugs": [
+            "青霉素类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "启动门诊去甲基化治疗，使用阿扎胞苷以针对克隆性疾病，并安排移植中心会诊以评估异基因造血干细胞移植。对于有症状性贫血，立即给予浓缩红细胞输注等支持治疗。当前PLT为62 x10^9/L时，不常规给予血小板输注；仅在存在临床显著/持续出血或血小板计数降至机构预防性阈值以下时才输注血小板（例如<10 x10^9/L，或在操作/活动性出血时采用更高阈值）。在门诊使用阿扎胞苷前，需记录临床状态稳定，并鉴于近期发热/盗汗评估是否存在活动性感染：复查当前生命体征并进行针对性感染评估/检查（如症状回顾和体格检查、发热时行血培养、必要时做尿常规/尿培养，以及如有肺部症状时进行胸部影像和呼吸道检测）；如怀疑或确认感染，应治疗感染和/或暂缓治疗。保持高热量、高蛋白饮食，并严格注意卫生以预防感染。一周后于血液科门诊随访，重新评估并启动阿扎胞苷治疗，同时密切监测血细胞计数。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为乏力、发热盗汗、体重下降及明显出血倾向（牙龈出血、皮肤瘀斑），伴骨痛和腹胀，需高度警惕血液系统恶性肿瘤。",
+        "diagnosis_reflection": "诊断准确无误，成功识别出慢性粒 - 单核细胞白血病（CMML）特征，与预期完全匹配。",
+        "examination_reflection": "基础检查（血常规、涂片、骨髓穿刺）选择正确，但遗漏了流式细胞术、细胞遗传学分析及基因突变分析等关键分子分型检查，导致检查覆盖度不足。",
+        "treatment_reflection": "治疗方案偏离标准指南，在未明确排除活动性感染前即启动去甲基化治疗且联合维奈托克，同时忽略了针对当前血小板计数的输注指征评估；虽安全性评分高，但有效性对齐度较低。",
+        "future_strategy": "面对疑似 CMML 病例，确诊后必须完善流式、遗传及基因检测以指导分层；制定化疗方案前务必先排查并控制感染，严格遵循支持治疗指征，避免过度或不当用药。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:48:57.065857+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_07050",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "慢性粒-单核细胞白血病"
+    ],
+    "treatment_plan": "1. 主要治疗：鉴于患者表现为全血细胞减少、外周血单核细胞显著增多、骨髓原始细胞8%（<20%）及多系发育异常，符合CMML特征。首选去甲基化药物（如阿扎胞苷或地西他滨）联合维奈托克进行诱导缓解治疗，以改善造血功能并控制疾病进展。若患者年轻且体能状态良好，可评估异基因造血干细胞移植作为潜在治愈手段。\n2. 个性化调整：针对患者严重的贫血（Hgb 86g/L）和血小板减少（PLT 62x10^9/L），在化疗期间需密切监测，必要时输注红细胞和血小板以维持生命体征稳定；针对发热、盗汗等B症状，积极对症处理感染风险，避免过度使用激素掩盖病情。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及凝血功能，警惕肿瘤溶解综合征及严重骨髓抑制。告知患者若出现高热不退、活动性出血或呼吸困难等危险信号需立即就医。定期复查骨髓穿刺以评估疗效。",
+    "reasoning": "诊断依据：患者有乏力、发热、盗汗、体重下降等全身症状，伴出血倾向。实验室检查显示白细胞升高（26.4）、贫血（86g/L）和血小板减少（62）。关键特征为外周血单核细胞显著增多、骨髓原始细胞比例8%（介于5%-20%之间，排除急性白血病但提示MDS/MPN重叠），且伴有粒细胞/单核细胞增殖和多系发育异常，符合慢性粒-单核细胞白血病（CMML）的诊断标准。治疗方案选择去甲基化药物旨在纠正克隆性造血异常，同时根据患者出血风险给予支持治疗。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套",
+      "骨髓穿刺和活检（BMAB）"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_07050",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.75,
+    "treatmentOverallScore": 0.68,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "慢性粒-单核细胞白血病"
+      ],
+      "expected": [
+        "慢性粒-单核细胞白血病"
+      ],
+      "matched": [
+        "慢性粒-单核细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "细胞遗传学分析",
+        "基因突变分析（基因测序）",
+        "尿溶菌酶检测",
+        "血清酶分析"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "precision": 0.75,
+      "coverage": 0.375,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：鉴于患者表现为全血细胞减少、外周血单核细胞显著增多、骨髓原始细胞8%（<20%）及多系发育异常，符合CMML特征。首选去甲基化药物（如阿扎胞苷或地西他滨）联合维奈托克进行诱导缓解治疗，以改善造血功能并控制疾病进展。若患者年轻且体能状态良好，可评估异基因造血干细胞移植作为潜在治愈手段。\n2. 个性化调整：针对患者严重的贫血（Hgb 86g/L）和血小板减少（PLT 62x10^9/L），在化疗期间需密切监测，必要时输注红细胞和血小板以维持生命体征稳定；针对发热、盗汗等B症状，积极对症处理感染风险，避免过度使用激素掩盖病情。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及凝血功能，警惕肿瘤溶解综合征及严重骨髓抑制。告知患者若出现高热不退、活动性出血或呼吸困难等危险信号需立即就医。定期复查骨髓穿刺以评估疗效。",
+      "overallScore": 0.68,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.8,
+      "reasoning": "未违禁忌。方案偏离标准，增加维奈托克且忽略感染评估即启动治疗。",
+      "reference": "启动门诊去甲基化治疗，使用阿扎胞苷以针对克隆性疾病，并安排移植中心会诊以评估异基因造血干细胞移植。对于有症状性贫血，立即给予浓缩红细胞输注等支持治疗。当前PLT为62 x10^9/L时，不常规给予血小板输注；仅在存在临床显著/持续出血或血小板计数降至机构预防性阈值以下时才输注血小板（例如<10 x10^9/L，或在操作/活动性出血时采用更高阈值）。在门诊使用阿扎胞苷前，需记录临床状态稳定，并鉴于近期发热/盗汗评估是否存在活动性感染：复查当前生命体征并进行针对性感染评估/检查（如症状回顾和体格检查、发热时行血培养、必要时做尿常规/尿培养，以及如有肺部症状时进行胸部影像和呼吸道检测）；如怀疑或确认感染，应治疗感染和/或暂缓治疗。保持高热量、高蛋白饮食，并严格注意卫生以预防感染。一周后于血液科门诊随访，重新评估并启动阿扎胞苷治疗，同时密切监测血细胞计数。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "慢性粒-单核细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "细胞遗传学分析",
+        "基因突变分析（基因测序）",
+        "尿溶菌酶检测",
+        "血清酶分析"
+      ],
+      "contraindications": {
+        "drugs": [
+          "青霉素类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "启动门诊去甲基化治疗，使用阿扎胞苷以针对克隆性疾病，并安排移植中心会诊以评估异基因造血干细胞移植。对于有症状性贫血，立即给予浓缩红细胞输注等支持治疗。当前PLT为62 x10^9/L时，不常规给予血小板输注；仅在存在临床显著/持续出血或血小板计数降至机构预防性阈值以下时才输注血小板（例如<10 x10^9/L，或在操作/活动性出血时采用更高阈值）。在门诊使用阿扎胞苷前，需记录临床状态稳定，并鉴于近期发热/盗汗评估是否存在活动性感染：复查当前生命体征并进行针对性感染评估/检查（如症状回顾和体格检查、发热时行血培养、必要时做尿常规/尿培养，以及如有肺部症状时进行胸部影像和呼吸道检测）；如怀疑或确认感染，应治疗感染和/或暂缓治疗。保持高热量、高蛋白饮食，并严格注意卫生以预防感染。一周后于血液科门诊随访，重新评估并启动阿扎胞苷治疗，同时密切监测血细胞计数。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为乏力、发热盗汗、体重下降及明显出血倾向（牙龈出血、皮肤瘀斑），伴骨痛和腹胀，需高度警惕血液系统恶性肿瘤。",
+      "diagnosis_reflection": "诊断准确无误，成功识别出慢性粒 - 单核细胞白血病（CMML）特征，与预期完全匹配。",
+      "examination_reflection": "基础检查（血常规、涂片、骨髓穿刺）选择正确，但遗漏了流式细胞术、细胞遗传学分析及基因突变分析等关键分子分型检查，导致检查覆盖度不足。",
+      "treatment_reflection": "治疗方案偏离标准指南，在未明确排除活动性感染前即启动去甲基化治疗且联合维奈托克，同时忽略了针对当前血小板计数的输注指征评估；虽安全性评分高，但有效性对齐度较低。",
+      "future_strategy": "面对疑似 CMML 病例，确诊后必须完善流式、遗传及基因检测以指导分层；制定化疗方案前务必先排查并控制感染，严格遵循支持治疗指征，避免过度或不当用药。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/056.json#/applied_memory"
+  }
+}

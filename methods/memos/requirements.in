@@ -1,0 +1,6 @@
+MemoryOS[tree-mem] @ git+https://github.com/MemTensor/MemOS.git@d326a6419467c2205041b58533b0ebfdf4f38173
+# Native sentence reader for text/chat; document parser extras are not used.
+chonkie>=1.0.7,<2.0.0
+jieba>=0.38.1,<0.42.1
+rank-bm25>=0.2.2
+tiktoken>=0.7

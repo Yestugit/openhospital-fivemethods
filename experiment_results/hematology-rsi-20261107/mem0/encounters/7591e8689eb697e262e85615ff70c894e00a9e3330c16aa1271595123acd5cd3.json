@@ -1,0 +1,518 @@
+{
+  "patient_id": "Patient_00351",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要采集患者的临床症状信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "脖子左边有个硬块，越来越大。最近特别累，吃不下饭，晚上还出汗，衣服都松了。今早发现尿里有血，有点尿频，但没疼。就是觉得浑身不对劲，怪怪的。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"除了尿血和尿频，您最近有没有出现发烧、皮肤瘀斑或牙龈出血的情况？另外，您提到的脖子硬块大概有多大，是单个还是多个？\", \"reason\": \"患者主诉颈部肿块、乏力、盗汗及尿血，症状提示可能存在血液系统恶性肿瘤（如淋巴瘤）或泌尿系统疾病。目前缺乏关键的体格检查信息（如淋巴结具体大小、数量、质地）、伴随症状细节（发热、出血倾向）以及必要的实验室检查结果，需进一步问诊以完善病史，为后续开具针对性检查做准备。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "除了尿血和尿频，您最近有没有出现发烧、皮肤瘀斑或牙龈出血的情况？另外，您提到的脖子硬块大概有多大，是单个还是多个？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "发烧倒是有，晚上出汗把衣服都湿透了。至于瘀斑和牙龈出血，我没注意过。那个硬块嘛……大概像个大鸡蛋？还是好几个挤在一起？我也说不准，反正就是越来越大，怪得很。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您提到的尿血是肉眼可见的红色尿液吗？另外，除了脖子上的肿块，您的腋下或腹股沟等部位有没有摸到类似的肿块？最近体重下降了多少？\", \"reason\": \"患者主诉颈部肿块、发热、盗汗、乏力及尿血，症状提示血液系统恶性肿瘤（如淋巴瘤）可能，但缺乏对尿血性质、其他部位淋巴结情况及具体体重变化等关键信息的确认，需进一步问诊以完善病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您提到的尿血是肉眼可见的红色尿液吗？另外，除了脖子上的肿块，您的腋下或腹股沟等部位有没有摸到类似的肿块？最近体重下降了多少？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "是红色的，肉眼能看见。腋下和胯下我没摸过，不太清楚。体重嘛……衣服都松了，大概掉了十斤多吧？反正就是觉得浑身不对劲，怪得很。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为无痛性颈部肿块、发热、盗汗、体重下降及肉眼血尿，高度怀疑血液系统恶性肿瘤（如淋巴瘤）或泌尿系统肿瘤。目前尚未进行任何检查，需优先完善血常规、凝血功能、淋巴结超声/CT及尿液分析等检查以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"体格检查\", \"reason\": \"患者主诉颈部肿块、发热、盗汗、体重下降及肉眼血尿，但尚未进行系统的体格检查。为了明确淋巴结肿大的具体部位（如腋窝、腹股沟）、大小、质地、活动度，以及评估肝脾是否肿大（患者有乏力、食欲差等全身症状），首先需要完善全面的体格检查，以补充病史信息并指导后续针对性检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"体格检查\", \"腹部检查\", \"皮肤检查\"], \"reason\": \"患者主诉颈部肿块、发热、盗汗、体重下降及肉眼血尿，需进行全面的体格检查以评估淋巴结肿大情况（颈部、腋下等）、脾脏是否肿大（左腹不适）及全身状况。腹部检查用于评估腹部包块或脾大情况。皮肤检查用于观察是否有瘀斑、皮疹或其他出血倾向体征，辅助判断血液系统疾病可能。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"体格检查\": {\"result\": {\"一般外观\": \"患者呈消瘦状态，精神萎靡，表情焦虑，可见明显脊柱后凸，皮下脂肪显著减少。\", \"乳房\": \"腺体组织萎缩，被脂肪替代，乳房下垂且质地柔软，未触及明确肿块。\", \"体温\": \"37.8°C［参考值：常较低（36.0-36.9°C / 96.8-98.4°F）。］\", \"全身体格检查-皮肤状态\": \"皮肤变薄、干燥，弹性减退，可见散在老年斑及良性皮损。\", \"呼吸频率\": \"18 次/分［参考值：16-24 次/分］\", \"咽喉\": \"咽部黏膜无充血，扁桃体无肿大，未见溃疡或异常分泌物。\", \"头部查体\": \"头发稀疏且灰白，头皮无皮疹或结节。\", \"心率\": \"92 bpm［参考值：60-100 bpm］\", \"心血管查体\": \"心律齐，可闻及 S4 心音，胸骨左缘第 2-3 肋间可闻及轻度收缩期喷射性杂音。\", \"泌尿生殖系统\": \"尿道口无红肿及分泌物，耻骨上区轻压痛，未触及膀胱充盈。\", \"生长\": \"体型消瘦，肌肉量减少，四肢活动自如。\", \"盆腔\": \"外生殖器萎缩，阴道黏膜苍白、变薄且干燥，宫颈萎缩变小，子宫及附件未触及。\", \"盆腔检查\": \"直肠指检未触及肿物，指套无染血。\", \"眼部\": \"双眼视力下降（老视），角膜缘可见老年环，瞳孔对光反射灵敏，结膜稍干燥。\", \"神经系统\": \"意识清醒但定向力稍差，踝反射减弱，振动觉减退，步态略显不稳。\", \"耳部\": \"听力减退（老年性聋），外耳道通畅，鼓膜完整。\", \"肌肉骨骼\": \"四肢肌力正常，肌肉量减少，双手指间关节可见 Heberden 结节，活动度尚可。\", \"胸部\": \"胸廓前后径略增宽，胸壁活动度受限，双肺呼吸音清，未闻及干湿啰音。\", \"腹部\": \"腹壁较薄，肝脾肋下未触及，全腹软，无压痛及反跳痛，肠鸣音正常。\", \"血压\": \"145/70 mmHg\", \"身高和体重\": \"身高较既往下降，体重明显减轻（BMI 约 21 kg/m²）。［参考值：身高下降（骨质疏松/椎体压缩风险）；BMI 最佳范围通常略高（23-27 kg/m²）。］\", \"颈部\": \"颈部活动范围受限，左侧可触及一巨大、质硬、无痛性淋巴结肿块，纵隔区域触诊无法直接评估。\", \"鼻/咽喉\": \"嗅觉及味觉减退，鼻腔通畅，鼻咽部未见新生物。\", \"鼻部\": \"鼻梁无畸形，鼻翼无扇动，鼻黏膜无充血。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"一般外观\", \"体温\", \"身高和体重\", \"颈部\"]}, \"腹部检查\": {\"result\": {\"卵巢触诊\": \"萎缩，不能触及\", \"子宫触诊\": \"萎缩，不能触及\", \"肝浊音界/肝跨度\": \"因年龄相关性萎缩而缩小\", \"肝缘触诊\": \"触及位置较年轻成人略低\", \"肠鸣音\": \"正常\", \"腹主动脉搏动\": \"易于看见和触及\", \"腹股沟疝\": \"无疝\", \"腹膜刺激征\": \"阴性\", \"腹部压痛\": \"无压痛\", \"腹部叩诊音\": \"以鼓音为主\", \"腹部外观\": \"肌肉较薄且张力降低；脂肪堆积集中于下腹部和髋部；呈圆形或膨隆\", \"腹部肿块\": \"未触及明显肿块\", \"腹部触感\": \"腹壁较软、阻力较小\", \"血管杂音\": \"未闻及血管杂音\"}, \"status\": \"normal\", \"abnormal_indicators\": []}, \"皮肤检查\": {\"result\": {\"全身体格检查-皮肤状态\": \"皮肤温暖干燥，张力及弹性下降，可见明显皱纹和松弛，表皮变薄。\", \"指(趾)甲\": \"指（趾）甲较脆，可见纵嵴。\", \"毛发分布\": \"头发变灰或变白，弥漫性稀疏；腋毛和阴毛稀少，面部可见粗硬毛发。\", \"毛细血管再充盈时间\": \"小于3秒。\", \"水肿肿块及淋巴结\": \"左侧颈部可触及巨大无痛性肿块，质地硬，逐渐增大；未见病理性水肿。\", \"皮肤病变与出血点\": \"未见新发皮疹、溃疡或瘀斑出血点。\", \"肤色与发绀黄疸\": \"肤色较深，与种族背景相符，未见发绀或黄疸，可见日光性雀斑样痣。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"水肿肿块及淋巴结\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为无痛性颈部巨大肿块、发热、盗汗、体重显著下降及肉眼血尿，体格检查已确认左侧颈部巨大质硬淋巴结。为明确诊断（如淋巴瘤、白血病或其他恶性肿瘤），急需进行血液学检查（血常规、外周血涂片）及影像学检查（颈部超声/CT）来评估淋巴结性质及全身受累情况，目前缺乏关键实验室和影像学证据支持确诊。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为无痛性、进行性增大的巨大颈部淋巴结肿块，伴有发热、盗汗、体重显著下降（B症状）及肉眼血尿。体格检查已确认左侧颈部存在巨大质硬无痛性肿块。为明确该肿块的性质（如淋巴瘤、转移癌或其他恶性肿瘤），获取组织样本进行病理学检查（如淋巴结活检）是确诊的金标准，也是指导后续治疗的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"淋巴结活检\"], \"reason\": \"患者左侧颈部触及巨大、质硬、无痛性肿块，伴有发热、盗汗、体重明显下降及肉眼血尿等全身症状，高度怀疑淋巴瘤或转移性恶性肿瘤。为明确诊断，需对肿大的淋巴结进行组织病理学检查以获取确诊依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"淋巴结活检\": {\"result\": {\"恶性细胞或恶性浸润\": \"可见大片大型异型淋巴样细胞浸润，符合淋巴瘤累及\", \"淋巴结皮质厚度\": \"皮质结构破坏，无法测量正常皮质厚度\", \"淋巴结细胞分布\": \"正常多克隆B细胞和T细胞分布消失，被单克隆异型细胞取代\", \"病理坏死\": \"未见明显坏死证据\", \"病理淋巴结结构\": \"淋巴结正常结构完全消失\", \"皮质滤泡及生发中心\": \"淋巴滤泡及生发中心结构消失\", \"结构消失\": \"淋巴结正常组织结构完全消失\", \"肉芽肿性炎症\": \"未见肉芽肿性炎症证据\", \"脂肪替代\": \"未见明显的脂肪替代沉积\", \"退行性变化\": \"未见典型的年龄相关退行性萎缩征象，以肿瘤性改变为主\", \"间质纤维化或透明样变\": \"未见显著的间质纤维化或透明样变增加\", \"非典型性淋巴样增生\": \"可见大量非典型性淋巴样细胞增生\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"恶性细胞或恶性浸润\", \"淋巴结皮质厚度\", \"淋巴结细胞分布\", \"病理淋巴结结构\", \"皮质滤泡及生发中心\", \"结构消失\", \"非典型性淋巴样增生\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者已出现B症状（发热、盗汗、体重下降）、无痛性巨大淋巴结肿大，且淋巴结活检结果明确显示为恶性淋巴瘤（大片异型淋巴样细胞浸润，正常结构消失），诊断依据充分，可进入确诊和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为无痛性进行性增大的颈部巨大淋巴结肿块，伴有发热、盗汗、体重明显下降（B症状）及肉眼血尿。体格检查发现左侧颈部巨大质硬无痛性肿块。最关键的是淋巴结活检结果明确显示“恶性细胞或恶性浸润”，病理特征符合“淋巴瘤累及”（大片大型异型淋巴样细胞浸润，正常结构消失，单克隆异型细胞取代）。虽然患者有血尿，但结合全身消耗症状及明确的淋巴瘤病理诊断，原发病灶及主要诊疗方向为血液系统恶性肿瘤，故首选血液科进行进一步分期、化疗及综合治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"弥漫性大B细胞淋巴瘤\", \"treatment_plan\": \"1. 主要治疗：建议立即启动R-CHOP方案化疗（利妥昔单抗联合环磷酰胺、多柔比星、长春新碱和泼尼松），这是针对弥漫性大B细胞淋巴瘤的标准一线治疗方案，具有明确的治愈潜力。2. 个性化调整：患者为老年女性，存在消瘦、乏力及S4心音等心脏基础改变，需在心内科评估下谨慎使用蒽环类药物（多柔比星），必要时考虑剂量调整或换用脂质体剂型以降低心脏毒性；同时加强营养支持以改善恶液质状态。3. 安全性监测：治疗期间严密监测血常规、肝肾功能及心电图，警惕骨髓抑制、感染及心脏不良反应；若出现高热不退、严重出血或呼吸困难等危急症状，需立即就医。治疗后需定期复查PET-CT及骨髓检查评估疗效。\", \"reasoning\": \"诊断依据：患者表现为无痛性颈部巨大肿块、发热、盗汗、体重显著下降（B症状）及肉眼血尿（可能为肿瘤浸润或副肿瘤综合征）。体格检查发现左侧颈部巨大质硬淋巴结，腹部无脾大但全身消耗明显。最关键的是淋巴结活检结果明确显示‘大片大型异型淋巴样细胞浸润’、‘正常结构完全消失’且被‘单克隆异型细胞取代’，符合弥漫性大B细胞淋巴瘤的病理特征。排除其他血液病如白血病（无原始细胞增多证据）或多发性骨髓瘤（无骨痛/高钙血症典型表现）。治疗方案选择R-CHOP是基于该病种的国际标准，同时结合患者高龄及心脏杂音进行个体化风险管控。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_00351",
+    "mode": "train",
+    "memory_notes": [
+      "Physical examination of Patient_02851 revealed BMI 21.5 kg/m², temperature 37.6°C, conjunctival pallor, multiple ecchymoses on skin, spleen enlargement (palpable 3-4 cm below left costal margin, firm texture), and multiple painless, firm, slowly enlarging lymph nodes in the neck and left axilla.",
+      "Physical examination of Patient_06427 revealed BMI 24 kg/m², temperature 36.5°C, thin papery skin with decreased elasticity, sparse white hair, S4 heart sound, enlarged prostate, reduced vibration sense in feet, high-frequency hearing loss, hepatomegaly, splenomegaly, and a hard, immobile 3cm painless mass on the left neck.",
+      "Physical examination of Patient_00952 revealed BMI 18.2 kg/m², low-grade fever (37.6°C), pale conjunctiva, scattered skin ecchymoses, and multiple painless cervical/submandibular lymph nodes up to 2cm x 1.5cm.",
+      "User diagnosed Patient_01919 with Chronic Lymphocytic Leukemia (CLL) based on B symptoms (fatigue, night sweats, weight loss of ~5kg), painless cervical and axillary lymphadenopathy (1.5-3.0 cm), bleeding tendency (bruising), early satiety from splenomegaly, low-grade fever (37.2°C), and respiratory rate of 24/min.",
+      "Patient_09774's physical examination revealed bilateral rubbery, non-tender cervical lymphadenopathy (max 1.5cm), scattered ecchymoses on the arms, mild conjunctival pallor, and normal abdominal exam with no hepatosplenomegaly; vital signs included temperature 36.8°C, BP 124/78 mmHg, and HR 82 bpm.",
+      "User participated in a hematology diagnostic task for Patient_06427, a middle-aged male presenting with a progressively enlarging painless left neck mass (3cm), early satiety, upper abdominal discomfort, fatigue, night sweats, and weight loss of 4.5 kg over two months.",
+      "Physical examination of Patient_01919 revealed BMI indicators of skin laxity, brittle nails with longitudinal ridges, diffuse gray hair thinning, capillary refill time of 2 seconds, bilateral cervical and axillary lymph nodes (1.5-3.0 cm, rubbery texture), scattered forearm ecchymoses (0.5-1.5 cm), liver edge palpable 3 cm below right costal margin, and a hard, ill-defined mass in the left upper quadrant.",
+      "Patient_00827's laboratory results showed anemia (Hemoglobin 88 g/L, RBC 3.0 × 10^12/L), hypercalcemia (Calcium 12.1 mg/dL), elevated total protein (9.4 g/dL), renal insufficiency (Creatinine 2.3 mg/dL, eGFR 28 mL/min/1.73m²), normal PTH, and mildly elevated CA-125 (42 U/mL).",
+      "User diagnosed Patient_02057 with myelofibrosis based on progressive fatigue, early satiety, left upper quadrant fullness, low-grade fever, night sweats, weight loss, gum bleeding, easy bruising, massive splenomegaly (8 cm below left costal margin), leukocytosis (18.6 x10^9/L), anemia (Hb 92 g/L), thrombocytopenia (92 x10^9/L), teardrop cells on peripheral smear, and bone marrow showing diffuse reticulin/collagen fibrosis with atypical megakaryocytes.",
+      "User participated in a hematology diagnostic task for Patient_09977, presenting with 8 months of progressive left upper quadrant fullness, worsening fatigue, easy bruising, occasional gum bleeding, two episodes of nosebleeds, increased frequency of colds with slow recovery, and 4 kg weight loss.",
+      "User participated in a hematology diagnostic task for Patient_07426, presenting with progressive fatigue, early satiety, left upper quadrant pulling sensation, low-grade fever, night sweats, 5 kg weight loss, easy bruising, gum bleeding, and hip/back pain.",
+      "User participated in a hematology diagnostic task for Patient_04112, who presented with progressively enlarging painless neck and axillary masses, fatigue, early satiety, abdominal distension, night sweats, weight loss, and occasional low-grade fever.",
+      "User participated in a hematology diagnostic task for Patient_06532, a middle-aged male presenting with a painless left neck mass (walnut-sized), progressive fatigue, night sweats, loss of appetite, and weight loss of approximately 5-6 jin.",
+      "User participated in a hematology diagnostic task for Patient_09774, a patient presenting with painless bilateral neck lymphadenopathy (1.5cm rubbery nodes) discovered 10 days prior, progressive fatigue, decreased exercise tolerance, night sweats, low-grade evening fever, and easy bruising after minor trauma.",
+      "User participated in a hematology diagnostic task for Patient_02851, a 53-year-old female presenting with progressive fatigue (4 months), night sweats, low-grade fever (37.6°C), weight loss, painless bilateral cervical and left axillary lymphadenopathy, easy bruising after minor trauma, and left upper quadrant discomfort with early satiety.",
+      "Ultrasound revealed a hypoechoic mass in the left subcutaneous tissue with unclear boundaries, plus enlarged lymph nodes in the left neck and abdomen/spleen showing rich blood flow signals",
+      "Patient_01919 presented with progressive fatigue over three months, worsening in the last two weeks, accompanied by enlarging painless neck and armpit masses, severe night sweats, 5 kg weight loss, occasional low-grade fever, shortness of breath on exertion, easy bruising on forearms, and early satiety in the left upper quadrant.",
+      "User participated in a hematology diagnostic task for Patient_06243, presenting with 8 months of progressive left upper quadrant fullness/pressure (worse after eating), fatigue, dyspnea on exertion, pallor, gum bleeding during brushing, easy bruising, and dizziness.",
+      "User participated in a hematology diagnostic task for Patient_08330, presenting with 3 months of fatigue, shortness of breath on exertion, low-grade fever and night sweats for the past two weeks, poor appetite, weight loss, easy bruising, occasional gum bleeding, and left upper quadrant fullness.",
+      "User participated in a hematology diagnostic task for Patient_01539, who presented with fever (up to 38.8°C), chills, night sweats, fatigue, dyspnea on exertion, gum bleeding, bruising on forearms, recurrent epistaxis, sternal and thigh pain, and left upper abdominal distension."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "脖子左边有个硬块，越来越大。最近特别累，吃不下饭，晚上还出汗，衣服都松了。今早发现尿里有血，有点尿频，但没疼。就是觉得浑身不对劲，怪怪的。"
+      },
+      {
+        "from": "doctor",
+        "text": "除了尿血和尿频，您最近有没有出现发烧、皮肤瘀斑或牙龈出血的情况？另外，您提到的脖子硬块大概有多大，是单个还是多个？"
+      },
+      {
+        "from": "patient",
+        "text": "发烧倒是有，晚上出汗把衣服都湿透了。至于瘀斑和牙龈出血，我没注意过。那个硬块嘛……大概像个大鸡蛋？还是好几个挤在一起？我也说不准，反正就是越来越大，怪得很。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您提到的尿血是肉眼可见的红色尿液吗？另外，除了脖子上的肿块，您的腋下或腹股沟等部位有没有摸到类似的肿块？最近体重下降了多少？"
+      },
+      {
+        "from": "patient",
+        "text": "是红色的，肉眼能看见。腋下和胯下我没摸过，不太清楚。体重嘛……衣服都松了，大概掉了十斤多吧？反正就是觉得浑身不对劲，怪得很。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "体格检查": {
+        "result": {
+          "一般外观": "患者呈消瘦状态，精神萎靡，表情焦虑，可见明显脊柱后凸，皮下脂肪显著减少。",
+          "乳房": "腺体组织萎缩，被脂肪替代，乳房下垂且质地柔软，未触及明确肿块。",
+          "体温": "37.8°C［参考值：常较低（36.0-36.9°C / 96.8-98.4°F）。］",
+          "全身体格检查-皮肤状态": "皮肤变薄、干燥，弹性减退，可见散在老年斑及良性皮损。",
+          "呼吸频率": "18 次/分［参考值：16-24 次/分］",
+          "咽喉": "咽部黏膜无充血，扁桃体无肿大，未见溃疡或异常分泌物。",
+          "头部查体": "头发稀疏且灰白，头皮无皮疹或结节。",
+          "心率": "92 bpm［参考值：60-100 bpm］",
+          "心血管查体": "心律齐，可闻及 S4 心音，胸骨左缘第 2-3 肋间可闻及轻度收缩期喷射性杂音。",
+          "泌尿生殖系统": "尿道口无红肿及分泌物，耻骨上区轻压痛，未触及膀胱充盈。",
+          "生长": "体型消瘦，肌肉量减少，四肢活动自如。",
+          "盆腔": "外生殖器萎缩，阴道黏膜苍白、变薄且干燥，宫颈萎缩变小，子宫及附件未触及。",
+          "盆腔检查": "直肠指检未触及肿物，指套无染血。",
+          "眼部": "双眼视力下降（老视），角膜缘可见老年环，瞳孔对光反射灵敏，结膜稍干燥。",
+          "神经系统": "意识清醒但定向力稍差，踝反射减弱，振动觉减退，步态略显不稳。",
+          "耳部": "听力减退（老年性聋），外耳道通畅，鼓膜完整。",
+          "肌肉骨骼": "四肢肌力正常，肌肉量减少，双手指间关节可见 Heberden 结节，活动度尚可。",
+          "胸部": "胸廓前后径略增宽，胸壁活动度受限，双肺呼吸音清，未闻及干湿啰音。",
+          "腹部": "腹壁较薄，肝脾肋下未触及，全腹软，无压痛及反跳痛，肠鸣音正常。",
+          "血压": "145/70 mmHg",
+          "身高和体重": "身高较既往下降，体重明显减轻（BMI 约 21 kg/m²）。［参考值：身高下降（骨质疏松/椎体压缩风险）；BMI 最佳范围通常略高（23-27 kg/m²）。］",
+          "颈部": "颈部活动范围受限，左侧可触及一巨大、质硬、无痛性淋巴结肿块，纵隔区域触诊无法直接评估。",
+          "鼻/咽喉": "嗅觉及味觉减退，鼻腔通畅，鼻咽部未见新生物。",
+          "鼻部": "鼻梁无畸形，鼻翼无扇动，鼻黏膜无充血。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "一般外观",
+          "体温",
+          "身高和体重",
+          "颈部"
+        ]
+      },
+      "腹部检查": {
+        "result": {
+          "卵巢触诊": "萎缩，不能触及",
+          "子宫触诊": "萎缩，不能触及",
+          "肝浊音界/肝跨度": "因年龄相关性萎缩而缩小",
+          "肝缘触诊": "触及位置较年轻成人略低",
+          "肠鸣音": "正常",
+          "腹主动脉搏动": "易于看见和触及",
+          "腹股沟疝": "无疝",
+          "腹膜刺激征": "阴性",
+          "腹部压痛": "无压痛",
+          "腹部叩诊音": "以鼓音为主",
+          "腹部外观": "肌肉较薄且张力降低；脂肪堆积集中于下腹部和髋部；呈圆形或膨隆",
+          "腹部肿块": "未触及明显肿块",
+          "腹部触感": "腹壁较软、阻力较小",
+          "血管杂音": "未闻及血管杂音"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "皮肤检查": {
+        "result": {
+          "全身体格检查-皮肤状态": "皮肤温暖干燥，张力及弹性下降，可见明显皱纹和松弛，表皮变薄。",
+          "指(趾)甲": "指（趾）甲较脆，可见纵嵴。",
+          "毛发分布": "头发变灰或变白，弥漫性稀疏；腋毛和阴毛稀少，面部可见粗硬毛发。",
+          "毛细血管再充盈时间": "小于3秒。",
+          "水肿肿块及淋巴结": "左侧颈部可触及巨大无痛性肿块，质地硬，逐渐增大；未见病理性水肿。",
+          "皮肤病变与出血点": "未见新发皮疹、溃疡或瘀斑出血点。",
+          "肤色与发绀黄疸": "肤色较深，与种族背景相符，未见发绀或黄疸，可见日光性雀斑样痣。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "水肿肿块及淋巴结"
+        ]
+      },
+      "淋巴结活检": {
+        "result": {
+          "恶性细胞或恶性浸润": "可见大片大型异型淋巴样细胞浸润，符合淋巴瘤累及",
+          "淋巴结皮质厚度": "皮质结构破坏，无法测量正常皮质厚度",
+          "淋巴结细胞分布": "正常多克隆B细胞和T细胞分布消失，被单克隆异型细胞取代",
+          "病理坏死": "未见明显坏死证据",
+          "病理淋巴结结构": "淋巴结正常结构完全消失",
+          "皮质滤泡及生发中心": "淋巴滤泡及生发中心结构消失",
+          "结构消失": "淋巴结正常组织结构完全消失",
+          "肉芽肿性炎症": "未见肉芽肿性炎症证据",
+          "脂肪替代": "未见明显的脂肪替代沉积",
+          "退行性变化": "未见典型的年龄相关退行性萎缩征象，以肿瘤性改变为主",
+          "间质纤维化或透明样变": "未见显著的间质纤维化或透明样变增加",
+          "非典型性淋巴样增生": "可见大量非典型性淋巴样细胞增生"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "恶性细胞或恶性浸润",
+          "淋巴结皮质厚度",
+          "淋巴结细胞分布",
+          "病理淋巴结结构",
+          "皮质滤泡及生发中心",
+          "结构消失",
+          "非典型性淋巴样增生"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要采集患者的临床症状信息。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "除了尿血和尿频，您最近有没有出现发烧、皮肤瘀斑或牙龈出血的情况？另外，您提到的脖子硬块大概有多大，是单个还是多个？",
+        "reason": "患者主诉颈部肿块、乏力、盗汗及尿血，症状提示可能存在血液系统恶性肿瘤（如淋巴瘤）或泌尿系统疾病。目前缺乏关键的体格检查信息（如淋巴结具体大小、数量、质地）、伴随症状细节（发热、出血倾向）以及必要的实验室检查结果，需进一步问诊以完善病史，为后续开具针对性检查做准备。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您提到的尿血是肉眼可见的红色尿液吗？另外，除了脖子上的肿块，您的腋下或腹股沟等部位有没有摸到类似的肿块？最近体重下降了多少？",
+        "reason": "患者主诉颈部肿块、发热、盗汗、乏力及尿血，症状提示血液系统恶性肿瘤（如淋巴瘤）可能，但缺乏对尿血性质、其他部位淋巴结情况及具体体重变化等关键信息的确认，需进一步问诊以完善病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为无痛性颈部肿块、发热、盗汗、体重下降及肉眼血尿，高度怀疑血液系统恶性肿瘤（如淋巴瘤）或泌尿系统肿瘤。目前尚未进行任何检查，需优先完善血常规、凝血功能、淋巴结超声/CT及尿液分析等检查以明确诊断方向。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为无痛性颈部巨大肿块、发热、盗汗、体重显著下降及肉眼血尿，体格检查已确认左侧颈部巨大质硬淋巴结。为明确诊断（如淋巴瘤、白血病或其他恶性肿瘤），急需进行血液学检查（血常规、外周血涂片）及影像学检查（颈部超声/CT）来评估淋巴结性质及全身受累情况，目前缺乏关键实验室和影像学证据支持确诊。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者已出现B症状（发热、盗汗、体重下降）、无痛性巨大淋巴结肿大，且淋巴结活检结果明确显示为恶性淋巴瘤（大片异型淋巴样细胞浸润，正常结构消失），诊断依据充分，可进入确诊和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "体格检查",
+        "examinations": [
+          "体格检查",
+          "腹部检查",
+          "皮肤检查"
+        ],
+        "reason": "患者主诉颈部肿块、发热、盗汗、体重下降及肉眼血尿，需进行全面的体格检查以评估淋巴结肿大情况（颈部、腋下等）、脾脏是否肿大（左腹不适）及全身状况。腹部检查用于评估腹部包块或脾大情况。皮肤检查用于观察是否有瘀斑、皮疹或其他出血倾向体征，辅助判断血液系统疾病可能。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "淋巴结活检"
+        ],
+        "reason": "患者左侧颈部触及巨大、质硬、无痛性肿块，伴有发热、盗汗、体重明显下降及肉眼血尿等全身症状，高度怀疑淋巴瘤或转移性恶性肿瘤。为明确诊断，需对肿大的淋巴结进行组织病理学检查以获取确诊依据。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "弥漫性大B细胞淋巴瘤",
+      "treatment_plan": "1. 主要治疗：建议立即启动R-CHOP方案化疗（利妥昔单抗联合环磷酰胺、多柔比星、长春新碱和泼尼松），这是针对弥漫性大B细胞淋巴瘤的标准一线治疗方案，具有明确的治愈潜力。2. 个性化调整：患者为老年女性，存在消瘦、乏力及S4心音等心脏基础改变，需在心内科评估下谨慎使用蒽环类药物（多柔比星），必要时考虑剂量调整或换用脂质体剂型以降低心脏毒性；同时加强营养支持以改善恶液质状态。3. 安全性监测：治疗期间严密监测血常规、肝肾功能及心电图，警惕骨髓抑制、感染及心脏不良反应；若出现高热不退、严重出血或呼吸困难等危急症状，需立即就医。治疗后需定期复查PET-CT及骨髓检查评估疗效。",
+      "reasoning": "诊断依据：患者表现为无痛性颈部巨大肿块、发热、盗汗、体重显著下降（B症状）及肉眼血尿（可能为肿瘤浸润或副肿瘤综合征）。体格检查发现左侧颈部巨大质硬淋巴结，腹部无脾大但全身消耗明显。最关键的是淋巴结活检结果明确显示‘大片大型异型淋巴样细胞浸润’、‘正常结构完全消失’且被‘单克隆异型细胞取代’，符合弥漫性大B细胞淋巴瘤的病理特征。排除其他血液病如白血病（无原始细胞增多证据）或多发性骨髓瘤（无骨痛/高钙血症典型表现）。治疗方案选择R-CHOP是基于该病种的国际标准，同时结合患者高龄及心脏杂音进行个体化风险管控。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_00351",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.48,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "弥漫性大B细胞淋巴瘤"
+        ],
+        "expected": [
+          "弥漫性大B细胞淋巴瘤"
+        ],
+        "matched": [
+          "弥漫性大B细胞淋巴瘤"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "体格检查",
+          "腹部检查",
+          "皮肤检查",
+          "淋巴结活检"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "肝功能检查（LFTs）",
+          "人类免疫缺陷病毒（HIV）筛查",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：建议立即启动R-CHOP方案化疗（利妥昔单抗联合环磷酰胺、多柔比星、长春新碱和泼尼松），这是针对弥漫性大B细胞淋巴瘤的标准一线治疗方案，具有明确的治愈潜力。2. 个性化调整：患者为老年女性，存在消瘦、乏力及S4心音等心脏基础改变，需在心内科评估下谨慎使用蒽环类药物（多柔比星），必要时考虑剂量调整或换用脂质体剂型以降低心脏毒性；同时加强营养支持以改善恶液质状态。3. 安全性监测：治疗期间严密监测血常规、肝肾功能及心电图，警惕骨髓抑制、感染及心脏不良反应；若出现高热不退、严重出血或呼吸困难等危急症状，需立即就医。治疗后需定期复查PET-CT及骨髓检查评估疗效。",
+        "overallScore": 0.48,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.6,
+        "reasoning": "未违反禁忌，但方案落后且遗漏关键肿瘤溶解预防及血尿处理。",
+        "reference": "患者将开始一线Pola-R-CHP方案治疗（polatuzumab vedotin、利妥昔单抗、环磷酰胺、多柔比星、泼尼松），并根据肾功能受损情况调整给药剂量和支持治疗。在化疗前，需先稳定/评估肉眼血尿和肾功能异常：完善尿液分析加显微镜检查、尿培养及尿蛋白/肌酐比；通过复查肌酐并在可获得时回顾既往基线值，评估肾功能受损为急性还是慢性；如怀疑尿路感染（脓尿/亚硝酸盐阳性/全身症状），在等待培养结果期间按当地方案启动经验性抗生素治疗；如担心梗阻/结石或持续明显出血，应安排泌尿系统影像学检查，并在继续治疗前处理梗阻或出血来源。肿瘤溶解综合征预防与监测：在耐受情况下开始静脉补液，并根据eGFR约38启动经肾功能调整剂量的别嘌醇（例如按当地肾功能调整方案减少每日剂量）；在初始治疗期间至少每日监测一次TLS相关化验（K、磷、Ca、尿酸、肌酐/LDH），如属高危或数值上升则更频繁监测（如每8-12小时一次）；若存在高危TLS特征，或尽管已使用别嘌醇/补液仍出现尿酸或肌酐升高（或无法充分补液），则按机构标准升级使用rasburicase。鉴于基线细胞减少（Hgb 86 g/L、PLT 92 x10^9/L）以及骨髓受累/高发热性中性粒细胞减少风险，应实施支持治疗：频繁监测CBC（基线及至少在首个周期每周一次，或按方案要求），采取出血预防措施，对有症状性贫血或达到机构阈值时输注红细胞；如有出血或血小板低于机构阈值时输注血小板（尤其是在活动性血尿时）。考虑根据当地指南，在Pola-R-CHP方案中因年龄/合并症及骨髓受累给予一级G-CSF预防，并按机构方案给予感染预防（如有指征则进行抗病毒/PCP预防）。提供止吐支持。建议高蛋白、高热量饮食，少量多餐，以改善食欲差并支持治疗期间的营养状态。需严密监测发热性中性粒细胞减少，三周后返回进行下一周期化疗；如出现发热、乏力加重、血尿加重、尿量减少或感染迹象，应立即就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "弥漫性大B细胞淋巴瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "肝功能检查（LFTs）",
+          "人类免疫缺陷病毒（HIV）筛查",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "青霉素类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "患者将开始一线Pola-R-CHP方案治疗（polatuzumab vedotin、利妥昔单抗、环磷酰胺、多柔比星、泼尼松），并根据肾功能受损情况调整给药剂量和支持治疗。在化疗前，需先稳定/评估肉眼血尿和肾功能异常：完善尿液分析加显微镜检查、尿培养及尿蛋白/肌酐比；通过复查肌酐并在可获得时回顾既往基线值，评估肾功能受损为急性还是慢性；如怀疑尿路感染（脓尿/亚硝酸盐阳性/全身症状），在等待培养结果期间按当地方案启动经验性抗生素治疗；如担心梗阻/结石或持续明显出血，应安排泌尿系统影像学检查，并在继续治疗前处理梗阻或出血来源。肿瘤溶解综合征预防与监测：在耐受情况下开始静脉补液，并根据eGFR约38启动经肾功能调整剂量的别嘌醇（例如按当地肾功能调整方案减少每日剂量）；在初始治疗期间至少每日监测一次TLS相关化验（K、磷、Ca、尿酸、肌酐/LDH），如属高危或数值上升则更频繁监测（如每8-12小时一次）；若存在高危TLS特征，或尽管已使用别嘌醇/补液仍出现尿酸或肌酐升高（或无法充分补液），则按机构标准升级使用rasburicase。鉴于基线细胞减少（Hgb 86 g/L、PLT 92 x10^9/L）以及骨髓受累/高发热性中性粒细胞减少风险，应实施支持治疗：频繁监测CBC（基线及至少在首个周期每周一次，或按方案要求），采取出血预防措施，对有症状性贫血或达到机构阈值时输注红细胞；如有出血或血小板低于机构阈值时输注血小板（尤其是在活动性血尿时）。考虑根据当地指南，在Pola-R-CHP方案中因年龄/合并症及骨髓受累给予一级G-CSF预防，并按机构方案给予感染预防（如有指征则进行抗病毒/PCP预防）。提供止吐支持。建议高蛋白、高热量饮食，少量多餐，以改善食欲差并支持治疗期间的营养状态。需严密监测发热性中性粒细胞减少，三周后返回进行下一周期化疗；如出现发热、乏力加重、血尿加重、尿量减少或感染迹象，应立即就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "老年女性，主诉颈部无痛性进行性肿大淋巴结伴B症状（发热、盗汗、消瘦），合并肉眼血尿及尿频。",
+        "diagnosis_reflection": "诊断准确命中弥漫性大B细胞淋巴瘤，能结合颈部肿块、B症状及全身消耗表现做出正确判断。",
+        "examination_reflection": "检查选择严重偏离预期，遗漏了确诊及分期关键检查（如全血细胞计数、骨髓穿刺活检、PET-CT）及肾功能评估；仅开具了体格检查和淋巴结活检，未覆盖血液系统肿瘤的标准初筛与分期流程。",
+        "treatment_reflection": "治疗方案虽提及R-CHOP且考虑了心脏毒性，但方案落后（应为Pola-R-CHP），且完全遗漏了对患者当前危急症状的处理：未针对肉眼血尿进行泌尿系评估（排除梗阻/感染），未启动肿瘤溶解综合征（TLS）预防（如补液、别嘌醇/rasburicase），也未制定针对贫血和血小板减少的支持治疗计划。",
+        "future_strategy": "面对疑似淋巴瘤伴B症状及多系统受累（如血尿）患者，必须优先完善血常规、骨髓象、LDH及影像学分期；治疗前需同步处理并发症（血尿、肾功能不全），并严格执行高危患者的TLS预防及G-CSF支持策略，避免直接套用旧版化疗方案而忽视个体化风险管控。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T12:05:58.107604+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_00351",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "弥漫性大B细胞淋巴瘤"
+    ],
+    "treatment_plan": "1. 主要治疗：建议立即启动R-CHOP方案化疗（利妥昔单抗联合环磷酰胺、多柔比星、长春新碱和泼尼松），这是针对弥漫性大B细胞淋巴瘤的标准一线治疗方案，具有明确的治愈潜力。2. 个性化调整：患者为老年女性，存在消瘦、乏力及S4心音等心脏基础改变，需在心内科评估下谨慎使用蒽环类药物（多柔比星），必要时考虑剂量调整或换用脂质体剂型以降低心脏毒性；同时加强营养支持以改善恶液质状态。3. 安全性监测：治疗期间严密监测血常规、肝肾功能及心电图，警惕骨髓抑制、感染及心脏不良反应；若出现高热不退、严重出血或呼吸困难等危急症状，需立即就医。治疗后需定期复查PET-CT及骨髓检查评估疗效。",
+    "reasoning": "诊断依据：患者表现为无痛性颈部巨大肿块、发热、盗汗、体重显著下降（B症状）及肉眼血尿（可能为肿瘤浸润或副肿瘤综合征）。体格检查发现左侧颈部巨大质硬淋巴结，腹部无脾大但全身消耗明显。最关键的是淋巴结活检结果明确显示‘大片大型异型淋巴样细胞浸润’、‘正常结构完全消失’且被‘单克隆异型细胞取代’，符合弥漫性大B细胞淋巴瘤的病理特征。排除其他血液病如白血病（无原始细胞增多证据）或多发性骨髓瘤（无骨痛/高钙血症典型表现）。治疗方案选择R-CHOP是基于该病种的国际标准，同时结合患者高龄及心脏杂音进行个体化风险管控。",
+    "ordered_examinations": [
+      "体格检查",
+      "腹部检查",
+      "皮肤检查",
+      "淋巴结活检"
+    ],
+    "conversation_rounds": 3,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_00351",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.48,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "弥漫性大B细胞淋巴瘤"
+      ],
+      "expected": [
+        "弥漫性大B细胞淋巴瘤"
+      ],
+      "matched": [
+        "弥漫性大B细胞淋巴瘤"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "体格检查",
+        "腹部检查",
+        "皮肤检查",
+        "淋巴结活检"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "肝功能检查（LFTs）",
+        "人类免疫缺陷病毒（HIV）筛查",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：建议立即启动R-CHOP方案化疗（利妥昔单抗联合环磷酰胺、多柔比星、长春新碱和泼尼松），这是针对弥漫性大B细胞淋巴瘤的标准一线治疗方案，具有明确的治愈潜力。2. 个性化调整：患者为老年女性，存在消瘦、乏力及S4心音等心脏基础改变，需在心内科评估下谨慎使用蒽环类药物（多柔比星），必要时考虑剂量调整或换用脂质体剂型以降低心脏毒性；同时加强营养支持以改善恶液质状态。3. 安全性监测：治疗期间严密监测血常规、肝肾功能及心电图，警惕骨髓抑制、感染及心脏不良反应；若出现高热不退、严重出血或呼吸困难等危急症状，需立即就医。治疗后需定期复查PET-CT及骨髓检查评估疗效。",
+      "overallScore": 0.48,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.6,
+      "reasoning": "未违反禁忌，但方案落后且遗漏关键肿瘤溶解预防及血尿处理。",
+      "reference": "患者将开始一线Pola-R-CHP方案治疗（polatuzumab vedotin、利妥昔单抗、环磷酰胺、多柔比星、泼尼松），并根据肾功能受损情况调整给药剂量和支持治疗。在化疗前，需先稳定/评估肉眼血尿和肾功能异常：完善尿液分析加显微镜检查、尿培养及尿蛋白/肌酐比；通过复查肌酐并在可获得时回顾既往基线值，评估肾功能受损为急性还是慢性；如怀疑尿路感染（脓尿/亚硝酸盐阳性/全身症状），在等待培养结果期间按当地方案启动经验性抗生素治疗；如担心梗阻/结石或持续明显出血，应安排泌尿系统影像学检查，并在继续治疗前处理梗阻或出血来源。肿瘤溶解综合征预防与监测：在耐受情况下开始静脉补液，并根据eGFR约38启动经肾功能调整剂量的别嘌醇（例如按当地肾功能调整方案减少每日剂量）；在初始治疗期间至少每日监测一次TLS相关化验（K、磷、Ca、尿酸、肌酐/LDH），如属高危或数值上升则更频繁监测（如每8-12小时一次）；若存在高危TLS特征，或尽管已使用别嘌醇/补液仍出现尿酸或肌酐升高（或无法充分补液），则按机构标准升级使用rasburicase。鉴于基线细胞减少（Hgb 86 g/L、PLT 92 x10^9/L）以及骨髓受累/高发热性中性粒细胞减少风险，应实施支持治疗：频繁监测CBC（基线及至少在首个周期每周一次，或按方案要求），采取出血预防措施，对有症状性贫血或达到机构阈值时输注红细胞；如有出血或血小板低于机构阈值时输注血小板（尤其是在活动性血尿时）。考虑根据当地指南，在Pola-R-CHP方案中因年龄/合并症及骨髓受累给予一级G-CSF预防，并按机构方案给予感染预防（如有指征则进行抗病毒/PCP预防）。提供止吐支持。建议高蛋白、高热量饮食，少量多餐，以改善食欲差并支持治疗期间的营养状态。需严密监测发热性中性粒细胞减少，三周后返回进行下一周期化疗；如出现发热、乏力加重、血尿加重、尿量减少或感染迹象，应立即就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "弥漫性大B细胞淋巴瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "肝功能检查（LFTs）",
+        "人类免疫缺陷病毒（HIV）筛查",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "青霉素类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "患者将开始一线Pola-R-CHP方案治疗（polatuzumab vedotin、利妥昔单抗、环磷酰胺、多柔比星、泼尼松），并根据肾功能受损情况调整给药剂量和支持治疗。在化疗前，需先稳定/评估肉眼血尿和肾功能异常：完善尿液分析加显微镜检查、尿培养及尿蛋白/肌酐比；通过复查肌酐并在可获得时回顾既往基线值，评估肾功能受损为急性还是慢性；如怀疑尿路感染（脓尿/亚硝酸盐阳性/全身症状），在等待培养结果期间按当地方案启动经验性抗生素治疗；如担心梗阻/结石或持续明显出血，应安排泌尿系统影像学检查，并在继续治疗前处理梗阻或出血来源。肿瘤溶解综合征预防与监测：在耐受情况下开始静脉补液，并根据eGFR约38启动经肾功能调整剂量的别嘌醇（例如按当地肾功能调整方案减少每日剂量）；在初始治疗期间至少每日监测一次TLS相关化验（K、磷、Ca、尿酸、肌酐/LDH），如属高危或数值上升则更频繁监测（如每8-12小时一次）；若存在高危TLS特征，或尽管已使用别嘌醇/补液仍出现尿酸或肌酐升高（或无法充分补液），则按机构标准升级使用rasburicase。鉴于基线细胞减少（Hgb 86 g/L、PLT 92 x10^9/L）以及骨髓受累/高发热性中性粒细胞减少风险，应实施支持治疗：频繁监测CBC（基线及至少在首个周期每周一次，或按方案要求），采取出血预防措施，对有症状性贫血或达到机构阈值时输注红细胞；如有出血或血小板低于机构阈值时输注血小板（尤其是在活动性血尿时）。考虑根据当地指南，在Pola-R-CHP方案中因年龄/合并症及骨髓受累给予一级G-CSF预防，并按机构方案给予感染预防（如有指征则进行抗病毒/PCP预防）。提供止吐支持。建议高蛋白、高热量饮食，少量多餐，以改善食欲差并支持治疗期间的营养状态。需严密监测发热性中性粒细胞减少，三周后返回进行下一周期化疗；如出现发热、乏力加重、血尿加重、尿量减少或感染迹象，应立即就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "老年女性，主诉颈部无痛性进行性肿大淋巴结伴B症状（发热、盗汗、消瘦），合并肉眼血尿及尿频。",
+      "diagnosis_reflection": "诊断准确命中弥漫性大B细胞淋巴瘤，能结合颈部肿块、B症状及全身消耗表现做出正确判断。",
+      "examination_reflection": "检查选择严重偏离预期，遗漏了确诊及分期关键检查（如全血细胞计数、骨髓穿刺活检、PET-CT）及肾功能评估；仅开具了体格检查和淋巴结活检，未覆盖血液系统肿瘤的标准初筛与分期流程。",
+      "treatment_reflection": "治疗方案虽提及R-CHOP且考虑了心脏毒性，但方案落后（应为Pola-R-CHP），且完全遗漏了对患者当前危急症状的处理：未针对肉眼血尿进行泌尿系评估（排除梗阻/感染），未启动肿瘤溶解综合征（TLS）预防（如补液、别嘌醇/rasburicase），也未制定针对贫血和血小板减少的支持治疗计划。",
+      "future_strategy": "面对疑似淋巴瘤伴B症状及多系统受累（如血尿）患者，必须优先完善血常规、骨髓象、LDH及影像学分期；治疗前需同步处理并发症（血尿、肾功能不全），并严格执行高危患者的TLS预防及G-CSF支持策略，避免直接套用旧版化疗方案而忽视个体化风险管控。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/072.json#/applied_memory"
+  }
+}

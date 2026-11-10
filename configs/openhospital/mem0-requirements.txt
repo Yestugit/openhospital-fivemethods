@@ -1,0 +1,12 @@
+-r ../../integrations/openhospital_runtime/requirements.txt
+openai>=1,<4
+qdrant-client>=1.15,<2
+psutil>=6,<8
+spacy==3.8.18
+fastembed==0.9.1
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+transformers==4.57.6
+safetensors>=0.4
+huggingface-hub>=0.34,<1
+pytest>=8,<10
+pytest-asyncio>=0.25,<2

@@ -1,0 +1,453 @@
+{
+  "patient_id": "Patient_01590",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、鼻出血、皮肤瘀斑）或骨关节疼痛等？\", \"reason\": \"当前病例信息为空，缺乏患者的主诉和现病史，无法进行初步判断，需要通过问诊获取关键临床信息以决定后续检查或诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、鼻出血、皮肤瘀斑）或骨关节疼痛等？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "孩子主要症状是反复鼻出血，最近两个月更频繁，常在夜间发生，有时压迫很久才能止血。刷牙时牙龈也会出血，轻微碰撞后身上容易有瘀伤，小伤口渗血时间也较长。没有发热、骨痛或关节肿胀。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问孩子最近是否有发热、乏力、面色苍白或骨关节疼痛的情况？另外，您是否注意到孩子身上有不明原因的出血点（如针尖大小的红点）或瘀斑增多？\", \"reason\": \"患者主要表现为反复鼻出血和牙龈出血，但病史中未提及发热、乏力、贫血体征（如面色苍白）或骨痛等全身症状。为了鉴别是单纯的凝血功能障碍（如血小板减少性紫癜）、血液系统恶性肿瘤（如白血病）还是其他原因，需要进一步询问这些关键伴随症状以完善病史采集。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问孩子最近是否有发热、乏力、面色苍白或骨关节疼痛的情况？另外，您是否注意到孩子身上有不明原因的出血点（如针尖大小的红点）或瘀斑增多？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "孩子没有发热、乏力或骨关节疼痛。身上没有发现不明原因的出血点，但确实容易有瘀斑，刷牙时牙龈也会出血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为反复鼻出血、牙龈出血及易瘀伤，虽无发热骨痛，但需完善血常规（重点关注血小板计数）和凝血功能检查以鉴别血小板减少性紫癜、凝血功能障碍或其他血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主要表现为反复鼻出血、牙龈出血及易出现瘀斑，提示可能存在血小板减少或凝血功能障碍。在尚未进行任何检查的情况下，首选血常规（CBC）和凝血功能检查以评估红细胞、白细胞、血小板数量及凝血指标，这是明确出血原因最基础且关键的步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"凝血功能全套\", \"外周血涂片\"], \"reason\": \"患者为儿童，主要症状为反复鼻出血、牙龈出血及易出现瘀斑，提示存在出血倾向。首先需要进行全血细胞计数（CBC）以评估是否存在贫血、血小板减少或白细胞异常；进行凝血功能全套检查以排查凝血因子缺乏或功能障碍；进行外周血涂片观察血细胞形态，排除血液系统恶性疾病或血小板形态异常。这些检查是诊断出血性疾病的基础。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"98 g/L［参考范围：110-155 g/L］\", \"血小板计数\": \"280 x 10^9/L［参考范围：150-450 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血小板计数\"]}, \"凝血功能全套\": {\"result\": {\"活化部分凝血活酶时间\": \"46 s［参考范围：24-38 s］\", \"凝血酶原时间\": \"12.1 s［参考范围：10.0-14.0 s］\", \"国际标准化比值\": \"1.0［参考范围：0.8-1.2］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"活化部分凝血活酶时间\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见明显异常细胞或结构。\", \"异型细胞或原始细胞\": \"未见原始细胞。\", \"白细胞分类计数\": \"淋巴细胞比例约58%，中性粒细胞比例约38%。［参考值：约自出生后 2 周至 4-6 岁，存在生理性淋巴细胞优势（淋巴细胞 45-65%，中性粒细胞 25-45%）；较大儿童逐渐转为成人以中性粒细胞为主的模式。］\", \"白细胞形态\": \"形态正常。\", \"红细胞形态\": \"呈正细胞性、正色素性，无明显异形红细胞增多。\", \"血小板形态与分布\": \"大小和形态正常。\", \"血小板数量\": \"数量充足（约280,000/μL）。［参考值：数量充足（150,000-450,000/μL）。］\", \"血小板聚集\": \"未见明显聚集异常。\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有出血症状且凝血功能显示活化部分凝血活酶时间（aPTT）延长，但血小板计数正常。为明确出血原因并排除凝血因子缺乏（如血友病等），需要进一步进行凝血因子活性检测或相关特异性检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 免疫学\", \"reason\": \"患者表现为反复鼻出血、牙龈出血及易瘀斑，但血常规显示血小板计数正常（280 x 10^9/L），外周血涂片未见异常细胞或原始细胞，且无发热、骨痛等白血病典型症状。然而，凝血功能检查显示活化部分凝血活酶时间（aPTT）延长（46s）。在排除血小板减少和形态学异常后，aPTT延长提示可能存在凝血因子缺乏（如血友病、血管性血友病vWD等）或获得性凝血障碍。因此，下一步最合适的检查是进行免疫学相关的凝血因子活性测定及血管性血友病相关抗原检测，以明确出血原因。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"抗血小板抗体检测\"], \"reason\": \"患者为儿童，主要表现为反复鼻出血、牙龈出血及易出现瘀斑等出血倾向。虽然血常规显示血小板计数正常（280 x 10^9/L），但凝血功能检查发现活化部分凝血活酶时间（aPTT）延长（46s）。在排除凝血因子缺乏（如血友病，通常需结合家族史和特定因子测定）后，需考虑免疫性因素导致的出血。抗血小板抗体检测有助于排查免疫性血小板减少症（ITP）或其他自身免疫性血小板功能障碍，尽管目前血小板数量正常，但结合出血症状和aPTT延长，需进一步评估是否存在免疫介导的机制或假性血小板减少/消耗。此外，考虑到儿童出血性疾病中免疫因素的重要性，该检查具有鉴别诊断价值。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"抗血小板抗体检测\": {\"result\": {\"抗血小板抗体\": \"阴性［参考值：阴性（或 <10 U/mL，取决于检测方法）；未检测到针对血小板表面糖蛋白的抗血小板抗体（IgG、IgM、IgA）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有出血症状（鼻出血、牙龈出血、瘀斑），但血常规显示血小板计数正常（280 x 10^9/L），外周血涂片未见异常细胞，抗血小板抗体阴性，排除了免疫性血小板减少症和白血病。凝血功能检查显示活化部分凝血活酶时间（aPTT）延长（46s），而凝血酶原时间（PT）和国际标准化比值（INR）正常，提示可能存在内源性凝血途径异常（如血友病或血管性血友病等）。结合病史和现有检查结果，信息已足够进行初步诊断方向判断，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为反复鼻出血、牙龈出血及易出现瘀斑等出血倾向，检查结果显示血红蛋白降低（98 g/L）提示贫血，同时活化部分凝血活酶时间（aPTT）延长。虽然血小板计数在正常范围，但结合出血症状和凝血功能异常，需排除血小板功能障碍、血管性血友病或其他血液系统疾病，因此首选血液科进行进一步诊断和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"血管性血友病\", \"treatment_plan\": \"1. 主要治疗：针对反复鼻出血和牙龈出血症状，首选局部止血措施（如压迫、填塞）联合使用去氨加压素（DDAVP）静脉或皮下注射，以快速提升血浆中血管性血友病因子（vWF）水平。若为轻中度患者且对DDAVP反应良好，可考虑口服氨甲环酸等抗纤溶药物辅助止血。\\n2. 个性化调整：鉴于患儿无发热、骨痛及原始细胞，排除了急性白血病等恶性血液病，且血小板计数正常但存在aPTT延长，符合血管性血友病（vWD）特征。治疗方案需根据vWD分型（虽未做基因检测，但临床表现典型）调整剂量；若为重度或对DDAVP无效者，需输注含高浓度vWF的凝血因子浓缩物。\\n3. 安全性与监测：治疗期间需密切监测出血情况，避免使用阿司匹林等非甾体抗炎药以免加重出血。告知家长识别危险信号（如持续不止的鼻出血、呕血、黑便或剧烈头痛），一旦出现立即就医。建议完善vWF抗原、活性及凝血因子VIII水平检测以确诊分型，并定期随访评估疗效。\", \"reasoning\": \"诊断依据：患儿主要表现为黏膜出血（鼻出血、牙龈出血）和皮肤瘀斑，病程长达两个月，无发热、骨痛等全身症状，外周血涂片未见原始细胞，基本排除急性淋巴细胞白血病。实验室检查显示血红蛋白轻度降低（98g/L），提示慢性失血性贫血，但血小板计数正常（280x10^9/L），排除了特发性血小板减少性紫癜（ITP）。关键异常在于活化部分凝血活酶时间（aPTT）延长至46秒，而凝血酶原时间（PT）正常，这是血管性血友病（vWD）的典型表现（因vWF缺乏导致FVIII降解加速，引起内源性凝血途径异常）。抗血小板抗体阴性进一步支持非免疫性血小板破坏。综合临床表现（黏膜出血为主）和实验室特征（aPTT延长、血小板正常），最可能的诊断为血管性血友病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_01590",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User's child's coagulation profile shows an elevated activated partial thromboplastin time (aPTT) of 46 seconds, while platelet count is normal at 280,000/μL",
+      "Patient_04911's CBC showed elevated hemoglobin at 162 g/L (high) and elevated RBC count at 5.8 x 10^12/L (high), indicating secondary polycythemia.",
+      "User's child was prescribed oral iron therapy (sulfate or dextran iron) at 4-6 mg/kg/day of elemental iron, taken in 2-3 divided doses between meals, with dietary advice to increase iron-rich foods and vitamin C intake",
+      "User's child was prescribed oral iron therapy (sulfate or dextran iron) at 4-6 mg/kg/day of elemental iron, taken in 2-3 divided doses between meals, with dietary advice to increase iron-rich foods and vitamin C intake.",
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "Patient_04911's iron metabolism tests were normal with total iron binding capacity 320 μg/dL, serum iron 75 μg/dL, ferritin 45 ng/mL, and transferrin saturation 28%.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "Patient_06974's bone marrow examination showed reduced megakaryocyte numbers with low platelet production function, no abnormal infiltration, <5% blasts, and normal iron stores (Grade 1).",
+      "User's child's coagulation profile was normal, including D-dimer 0.35 mg/L FEU, PT 12.5s, PTT 32s, and fibrinogen 2.8 g/L.",
+      "Patient_04911's peripheral blood smear showed normal red cell morphology with mild polychromasia but no abnormal cells, lymphocytes at 58% consistent with age norms, and platelet count of 240,000/μL.",
+      "User participated in a hematology diagnostic task for Patient_04601, a 4-year-old girl presenting with microcytic hypochromic anemia (Hb 78-86 g/L, MCV 68 fL), target cells on smear, and absent bone marrow iron stores (Grade 0)"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、鼻出血、皮肤瘀斑）或骨关节疼痛等？"
+      },
+      {
+        "from": "patient",
+        "text": "孩子主要症状是反复鼻出血，最近两个月更频繁，常在夜间发生，有时压迫很久才能止血。刷牙时牙龈也会出血，轻微碰撞后身上容易有瘀伤，小伤口渗血时间也较长。没有发热、骨痛或关节肿胀。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问孩子最近是否有发热、乏力、面色苍白或骨关节疼痛的情况？另外，您是否注意到孩子身上有不明原因的出血点（如针尖大小的红点）或瘀斑增多？"
+      },
+      {
+        "from": "patient",
+        "text": "孩子没有发热、乏力或骨关节疼痛。身上没有发现不明原因的出血点，但确实容易有瘀斑，刷牙时牙龈也会出血。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "98 g/L［参考范围：110-155 g/L］",
+          "血小板计数": "280 x 10^9/L［参考范围：150-450 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "活化部分凝血活酶时间": "46 s［参考范围：24-38 s］",
+          "凝血酶原时间": "12.1 s［参考范围：10.0-14.0 s］",
+          "国际标准化比值": "1.0［参考范围：0.8-1.2］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "活化部分凝血活酶时间"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "未见明显异常细胞或结构。",
+          "异型细胞或原始细胞": "未见原始细胞。",
+          "白细胞分类计数": "淋巴细胞比例约58%，中性粒细胞比例约38%。［参考值：约自出生后 2 周至 4-6 岁，存在生理性淋巴细胞优势（淋巴细胞 45-65%，中性粒细胞 25-45%）；较大儿童逐渐转为成人以中性粒细胞为主的模式。］",
+          "白细胞形态": "形态正常。",
+          "红细胞形态": "呈正细胞性、正色素性，无明显异形红细胞增多。",
+          "血小板形态与分布": "大小和形态正常。",
+          "血小板数量": "数量充足（约280,000/μL）。［参考值：数量充足（150,000-450,000/μL）。］",
+          "血小板聚集": "未见明显聚集异常。"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "抗血小板抗体检测": {
+        "result": {
+          "抗血小板抗体": "阴性［参考值：阴性（或 <10 U/mL，取决于检测方法）；未检测到针对血小板表面糖蛋白的抗血小板抗体（IgG、IgM、IgA）］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、鼻出血、皮肤瘀斑）或骨关节疼痛等？",
+        "reason": "当前病例信息为空，缺乏患者的主诉和现病史，无法进行初步判断，需要通过问诊获取关键临床信息以决定后续检查或诊断方向。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问孩子最近是否有发热、乏力、面色苍白或骨关节疼痛的情况？另外，您是否注意到孩子身上有不明原因的出血点（如针尖大小的红点）或瘀斑增多？",
+        "reason": "患者主要表现为反复鼻出血和牙龈出血，但病史中未提及发热、乏力、贫血体征（如面色苍白）或骨痛等全身症状。为了鉴别是单纯的凝血功能障碍（如血小板减少性紫癜）、血液系统恶性肿瘤（如白血病）还是其他原因，需要进一步询问这些关键伴随症状以完善病史采集。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为反复鼻出血、牙龈出血及易瘀伤，虽无发热骨痛，但需完善血常规（重点关注血小板计数）和凝血功能检查以鉴别血小板减少性紫癜、凝血功能障碍或其他血液系统疾病。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有出血症状且凝血功能显示活化部分凝血活酶时间（aPTT）延长，但血小板计数正常。为明确出血原因并排除凝血因子缺乏（如血友病等），需要进一步进行凝血因子活性检测或相关特异性检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有出血症状（鼻出血、牙龈出血、瘀斑），但血常规显示血小板计数正常（280 x 10^9/L），外周血涂片未见异常细胞，抗血小板抗体阴性，排除了免疫性血小板减少症和白血病。凝血功能检查显示活化部分凝血活酶时间（aPTT）延长（46s），而凝血酶原时间（PT）和国际标准化比值（INR）正常，提示可能存在内源性凝血途径异常（如血友病或血管性血友病等）。结合病史和现有检查结果，信息已足够进行初步诊断方向判断，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片"
+        ],
+        "reason": "患者为儿童，主要症状为反复鼻出血、牙龈出血及易出现瘀斑，提示存在出血倾向。首先需要进行全血细胞计数（CBC）以评估是否存在贫血、血小板减少或白细胞异常；进行凝血功能全套检查以排查凝血因子缺乏或功能障碍；进行外周血涂片观察血细胞形态，排除血液系统恶性疾病或血小板形态异常。这些检查是诊断出血性疾病的基础。"
+      },
+      {
+        "category": "实验室检查 - 免疫学",
+        "examinations": [
+          "抗血小板抗体检测"
+        ],
+        "reason": "患者为儿童，主要表现为反复鼻出血、牙龈出血及易出现瘀斑等出血倾向。虽然血常规显示血小板计数正常（280 x 10^9/L），但凝血功能检查发现活化部分凝血活酶时间（aPTT）延长（46s）。在排除凝血因子缺乏（如血友病，通常需结合家族史和特定因子测定）后，需考虑免疫性因素导致的出血。抗血小板抗体检测有助于排查免疫性血小板减少症（ITP）或其他自身免疫性血小板功能障碍，尽管目前血小板数量正常，但结合出血症状和aPTT延长，需进一步评估是否存在免疫介导的机制或假性血小板减少/消耗。此外，考虑到儿童出血性疾病中免疫因素的重要性，该检查具有鉴别诊断价值。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "血管性血友病",
+      "treatment_plan": "1. 主要治疗：针对反复鼻出血和牙龈出血症状，首选局部止血措施（如压迫、填塞）联合使用去氨加压素（DDAVP）静脉或皮下注射，以快速提升血浆中血管性血友病因子（vWF）水平。若为轻中度患者且对DDAVP反应良好，可考虑口服氨甲环酸等抗纤溶药物辅助止血。\n2. 个性化调整：鉴于患儿无发热、骨痛及原始细胞，排除了急性白血病等恶性血液病，且血小板计数正常但存在aPTT延长，符合血管性血友病（vWD）特征。治疗方案需根据vWD分型（虽未做基因检测，但临床表现典型）调整剂量；若为重度或对DDAVP无效者，需输注含高浓度vWF的凝血因子浓缩物。\n3. 安全性与监测：治疗期间需密切监测出血情况，避免使用阿司匹林等非甾体抗炎药以免加重出血。告知家长识别危险信号（如持续不止的鼻出血、呕血、黑便或剧烈头痛），一旦出现立即就医。建议完善vWF抗原、活性及凝血因子VIII水平检测以确诊分型，并定期随访评估疗效。",
+      "reasoning": "诊断依据：患儿主要表现为黏膜出血（鼻出血、牙龈出血）和皮肤瘀斑，病程长达两个月，无发热、骨痛等全身症状，外周血涂片未见原始细胞，基本排除急性淋巴细胞白血病。实验室检查显示血红蛋白轻度降低（98g/L），提示慢性失血性贫血，但血小板计数正常（280x10^9/L），排除了特发性血小板减少性紫癜（ITP）。关键异常在于活化部分凝血活酶时间（aPTT）延长至46秒，而凝血酶原时间（PT）正常，这是血管性血友病（vWD）的典型表现（因vWF缺乏导致FVIII降解加速，引起内源性凝血途径异常）。抗血小板抗体阴性进一步支持非免疫性血小板破坏。综合临床表现（黏膜出血为主）和实验室特征（aPTT延长、血小板正常），最可能的诊断为血管性血友病。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_01590",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.5,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "血管性血友病"
+        ],
+        "expected": [
+          "血管性血友病"
+        ],
+        "matched": [
+          "血管性血友病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片",
+          "抗血小板抗体检测"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套"
+        ],
+        "precision": 0.5,
+        "coverage": 1.0,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：针对反复鼻出血和牙龈出血症状，首选局部止血措施（如压迫、填塞）联合使用去氨加压素（DDAVP）静脉或皮下注射，以快速提升血浆中血管性血友病因子（vWF）水平。若为轻中度患者且对DDAVP反应良好，可考虑口服氨甲环酸等抗纤溶药物辅助止血。\n2. 个性化调整：鉴于患儿无发热、骨痛及原始细胞，排除了急性白血病等恶性血液病，且血小板计数正常但存在aPTT延长，符合血管性血友病（vWD）特征。治疗方案需根据vWD分型（虽未做基因检测，但临床表现典型）调整剂量；若为重度或对DDAVP无效者，需输注含高浓度vWF的凝血因子浓缩物。\n3. 安全性与监测：治疗期间需密切监测出血情况，避免使用阿司匹林等非甾体抗炎药以免加重出血。告知家长识别危险信号（如持续不止的鼻出血、呕血、黑便或剧烈头痛），一旦出现立即就医。建议完善vWF抗原、活性及凝血因子VIII水平检测以确诊分型，并定期随访评估疗效。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全未违禁忌，核心治疗与标准一致，但缺失冬季鼻腔保湿等个性化生活建议。",
+        "reference": "首选静脉给予去氨加压素治疗，以提高血管性血友病因子水平，并密切监测液体潴留和电解质紊乱。对于黏膜出血，可使用氨甲环酸作为辅助止血治疗，尤其是在鼻出血发作或轻微外伤后，同时避免合并使用任何禁忌的抗血小板或抗凝药物。建议家长在家中使用生理盐水喷雾和加湿器保持鼻腔湿润，尤其是在冬季，并采取安全措施预防轻微损伤，包括在玩耍时使用防护装备。安排4周后复诊小儿血液科，以评估出血控制情况、回顾居家管理策略，并通过血液科/外部实验室安排确证性检查（血管性血友病因子多聚体分析和利斯托西汀辅因子活性检测）"
+      },
+      "ground_truth": {
+        "final_diagnosis": "血管性血友病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套"
+        ],
+        "contraindications": {
+          "drugs": [
+            "阿司匹林（乙酰水杨酸）",
+            "具有抗血小板作用的非甾体抗炎药（NSAIDs）（如布洛芬、萘普生）",
+            "氯吡格雷",
+            "普拉格雷",
+            "替卡格雷",
+            "噻氯匹定",
+            "双嘧达莫",
+            "糖蛋白IIb/IIIa抑制剂（依替巴肽、替罗非班、阿昔单抗）",
+            "华法林",
+            "肝素",
+            "低分子肝素（如依诺肝素）",
+            "磺达肝癸钠",
+            "直接口服抗凝药（阿哌沙班、利伐沙班、依度沙班、达比加群）"
+          ],
+          "treatments": [
+            "肌内注射（如可避免则避免）"
+          ]
+        },
+        "treatment_plan": "首选静脉给予去氨加压素治疗，以提高血管性血友病因子水平，并密切监测液体潴留和电解质紊乱。对于黏膜出血，可使用氨甲环酸作为辅助止血治疗，尤其是在鼻出血发作或轻微外伤后，同时避免合并使用任何禁忌的抗血小板或抗凝药物。建议家长在家中使用生理盐水喷雾和加湿器保持鼻腔湿润，尤其是在冬季，并采取安全措施预防轻微损伤，包括在玩耍时使用防护装备。安排4周后复诊小儿血液科，以评估出血控制情况、回顾居家管理策略，并通过血液科/外部实验室安排确证性检查（血管性血友病因子多聚体分析和利斯托西汀辅因子活性检测）"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患儿以反复鼻出血、牙龈出血及轻微碰撞后易瘀斑为主要表现，无发热骨痛，提示黏膜出血倾向。",
+        "diagnosis_reflection": "诊断准确命中血管性血友病，成功通过症状（黏膜出血为主、无血小板减少迹象）排除了急性白血病等恶性血液病。",
+        "examination_reflection": "检查覆盖了CBC和凝血功能全套核心项目，但多开了外周血涂片和抗血小板抗体检测，虽未影响确诊但增加了不必要的成本，应聚焦于vWF相关特异性检测。",
+        "treatment_reflection": "治疗方案安全有效，首选去氨加压素和局部止血措施符合指南，但遗漏了鼻腔保湿等生活护理建议及具体的复诊随访计划。",
+        "future_strategy": "面对儿童不明原因黏膜出血，优先排查vWD；完善检查时精简非特异性项目，治疗时需同步提供居家护理指导（如保湿、避免损伤）并明确随访节点。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:00:06.650994+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_01590",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "血管性血友病"
+    ],
+    "treatment_plan": "1. 主要治疗：针对反复鼻出血和牙龈出血症状，首选局部止血措施（如压迫、填塞）联合使用去氨加压素（DDAVP）静脉或皮下注射，以快速提升血浆中血管性血友病因子（vWF）水平。若为轻中度患者且对DDAVP反应良好，可考虑口服氨甲环酸等抗纤溶药物辅助止血。\n2. 个性化调整：鉴于患儿无发热、骨痛及原始细胞，排除了急性白血病等恶性血液病，且血小板计数正常但存在aPTT延长，符合血管性血友病（vWD）特征。治疗方案需根据vWD分型（虽未做基因检测，但临床表现典型）调整剂量；若为重度或对DDAVP无效者，需输注含高浓度vWF的凝血因子浓缩物。\n3. 安全性与监测：治疗期间需密切监测出血情况，避免使用阿司匹林等非甾体抗炎药以免加重出血。告知家长识别危险信号（如持续不止的鼻出血、呕血、黑便或剧烈头痛），一旦出现立即就医。建议完善vWF抗原、活性及凝血因子VIII水平检测以确诊分型，并定期随访评估疗效。",
+    "reasoning": "诊断依据：患儿主要表现为黏膜出血（鼻出血、牙龈出血）和皮肤瘀斑，病程长达两个月，无发热、骨痛等全身症状，外周血涂片未见原始细胞，基本排除急性淋巴细胞白血病。实验室检查显示血红蛋白轻度降低（98g/L），提示慢性失血性贫血，但血小板计数正常（280x10^9/L），排除了特发性血小板减少性紫癜（ITP）。关键异常在于活化部分凝血活酶时间（aPTT）延长至46秒，而凝血酶原时间（PT）正常，这是血管性血友病（vWD）的典型表现（因vWF缺乏导致FVIII降解加速，引起内源性凝血途径异常）。抗血小板抗体阴性进一步支持非免疫性血小板破坏。综合临床表现（黏膜出血为主）和实验室特征（aPTT延长、血小板正常），最可能的诊断为血管性血友病。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "凝血功能全套",
+      "外周血涂片",
+      "抗血小板抗体检测"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_01590",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.5,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "血管性血友病"
+      ],
+      "expected": [
+        "血管性血友病"
+      ],
+      "matched": [
+        "血管性血友病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套",
+        "外周血涂片",
+        "抗血小板抗体检测"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套"
+      ],
+      "precision": 0.5,
+      "coverage": 1.0,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：针对反复鼻出血和牙龈出血症状，首选局部止血措施（如压迫、填塞）联合使用去氨加压素（DDAVP）静脉或皮下注射，以快速提升血浆中血管性血友病因子（vWF）水平。若为轻中度患者且对DDAVP反应良好，可考虑口服氨甲环酸等抗纤溶药物辅助止血。\n2. 个性化调整：鉴于患儿无发热、骨痛及原始细胞，排除了急性白血病等恶性血液病，且血小板计数正常但存在aPTT延长，符合血管性血友病（vWD）特征。治疗方案需根据vWD分型（虽未做基因检测，但临床表现典型）调整剂量；若为重度或对DDAVP无效者，需输注含高浓度vWF的凝血因子浓缩物。\n3. 安全性与监测：治疗期间需密切监测出血情况，避免使用阿司匹林等非甾体抗炎药以免加重出血。告知家长识别危险信号（如持续不止的鼻出血、呕血、黑便或剧烈头痛），一旦出现立即就医。建议完善vWF抗原、活性及凝血因子VIII水平检测以确诊分型，并定期随访评估疗效。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全未违禁忌，核心治疗与标准一致，但缺失冬季鼻腔保湿等个性化生活建议。",
+      "reference": "首选静脉给予去氨加压素治疗，以提高血管性血友病因子水平，并密切监测液体潴留和电解质紊乱。对于黏膜出血，可使用氨甲环酸作为辅助止血治疗，尤其是在鼻出血发作或轻微外伤后，同时避免合并使用任何禁忌的抗血小板或抗凝药物。建议家长在家中使用生理盐水喷雾和加湿器保持鼻腔湿润，尤其是在冬季，并采取安全措施预防轻微损伤，包括在玩耍时使用防护装备。安排4周后复诊小儿血液科，以评估出血控制情况、回顾居家管理策略，并通过血液科/外部实验室安排确证性检查（血管性血友病因子多聚体分析和利斯托西汀辅因子活性检测）"
+    },
+    "ground_truth": {
+      "final_diagnosis": "血管性血友病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套"
+      ],
+      "contraindications": {
+        "drugs": [
+          "阿司匹林（乙酰水杨酸）",
+          "具有抗血小板作用的非甾体抗炎药（NSAIDs）（如布洛芬、萘普生）",
+          "氯吡格雷",
+          "普拉格雷",
+          "替卡格雷",
+          "噻氯匹定",
+          "双嘧达莫",
+          "糖蛋白IIb/IIIa抑制剂（依替巴肽、替罗非班、阿昔单抗）",
+          "华法林",
+          "肝素",
+          "低分子肝素（如依诺肝素）",
+          "磺达肝癸钠",
+          "直接口服抗凝药（阿哌沙班、利伐沙班、依度沙班、达比加群）"
+        ],
+        "treatments": [
+          "肌内注射（如可避免则避免）"
+        ]
+      },
+      "treatment_plan": "首选静脉给予去氨加压素治疗，以提高血管性血友病因子水平，并密切监测液体潴留和电解质紊乱。对于黏膜出血，可使用氨甲环酸作为辅助止血治疗，尤其是在鼻出血发作或轻微外伤后，同时避免合并使用任何禁忌的抗血小板或抗凝药物。建议家长在家中使用生理盐水喷雾和加湿器保持鼻腔湿润，尤其是在冬季，并采取安全措施预防轻微损伤，包括在玩耍时使用防护装备。安排4周后复诊小儿血液科，以评估出血控制情况、回顾居家管理策略，并通过血液科/外部实验室安排确证性检查（血管性血友病因子多聚体分析和利斯托西汀辅因子活性检测）"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患儿以反复鼻出血、牙龈出血及轻微碰撞后易瘀斑为主要表现，无发热骨痛，提示黏膜出血倾向。",
+      "diagnosis_reflection": "诊断准确命中血管性血友病，成功通过症状（黏膜出血为主、无血小板减少迹象）排除了急性白血病等恶性血液病。",
+      "examination_reflection": "检查覆盖了CBC和凝血功能全套核心项目，但多开了外周血涂片和抗血小板抗体检测，虽未影响确诊但增加了不必要的成本，应聚焦于vWF相关特异性检测。",
+      "treatment_reflection": "治疗方案安全有效，首选去氨加压素和局部止血措施符合指南，但遗漏了鼻腔保湿等生活护理建议及具体的复诊随访计划。",
+      "future_strategy": "面对儿童不明原因黏膜出血，优先排查vWD；完善检查时精简非特异性项目，治疗时需同步提供居家护理指导（如保湿、避免损伤）并明确随访节点。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/022.json#/applied_memory"
+  }
+}

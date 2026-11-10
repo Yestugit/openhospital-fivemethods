@@ -1,0 +1,144 @@
+{
+  "method_id": "emem",
+  "name": "EMem",
+  "summary": "Pinned official source wrapper preserving native memory construction, storage and retrieval.",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "record",
+      "graph"
+    ],
+    "operations": [
+      "index",
+      "add",
+      "search",
+      "episode_end",
+      "detail",
+      "flush",
+      "reset",
+      "save",
+      "load"
+    ],
+    "integration_slots": [
+      "context"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "action",
+      "tool_result",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "snapshot",
+    "supports_async": true
+  },
+  "version": "1",
+  "interface_version": 3,
+  "repository_url": "https://github.com/KevinSRR/EMem",
+  "source_subdir": "src",
+  "recommended_executor": "subprocess",
+  "fidelity": "upstream_wrapper",
+  "implementation_strategy": "source_adapter",
+  "internal_token_tracking": "conditional",
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "top_k": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 10
+      },
+      "storage_path": {
+        "type": "string",
+        "minLength": 1
+      },
+      "variant": {
+        "type": "string",
+        "enum": [
+          "emem",
+          "emem_g"
+        ],
+        "default": "emem"
+      },
+      "support_json_schema": {
+        "type": "boolean",
+        "default": false
+      },
+      "json_output_mode": {
+        "type": "string",
+        "enum": ["native", "json_unicode_v1"],
+        "default": "native"
+      }
+    },
+    "additionalProperties": false
+  },
+  "storage": {
+    "kind": "embedded_db",
+    "backend": "official_graph_parquet_pickle_sqlite",
+    "path_parameters": {
+      "storage_path": "auto"
+    },
+    "supports_snapshot": true
+  },
+  "requirements": {
+    "python": [
+      "numpy",
+      "scipy",
+      "pandas",
+      "pyarrow",
+      "igraph",
+      "torch",
+      "transformers",
+      "openai",
+      "pydantic",
+      "tiktoken",
+      "tenacity",
+      "nest-asyncio",
+      "filelock",
+      "packaging",
+      "tqdm",
+      "nltk",
+      "regex",
+      "httpx",
+      "aiohttp"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "usage": {
+      "source": "Pinned source.json files and revision required; select an isolated method Python environment.",
+      "inputs": "Text MemoryUnit with real events and timestamps; no reward required.",
+      "buffers": "Multiple units per task commit at task boundary, complete experience or flush. save/read_only preserve buffers; public Memory close automatically flushes.",
+      "providers": "Public providers only. No automatic local-model download.",
+      "snapshots": "Content-addressed exact native state, including embeddings; no model calls during restore."
+    }
+  },
+  "limitations": [
+    "Native algorithms and prompts retain upstream language and conversational assumptions.",
+    "No QA or trained GRPO checkpoint is used; original OpenHospital doctor controls answers."
+  ],
+  "commands": {},
+  "input_schemas": {
+    "search": {
+      "type": "object",
+      "properties": {
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

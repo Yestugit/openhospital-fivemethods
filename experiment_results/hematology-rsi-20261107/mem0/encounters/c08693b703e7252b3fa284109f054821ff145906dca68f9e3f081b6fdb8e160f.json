@@ -1,0 +1,390 @@
+{
+  "patient_id": "Patient_05191",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要向患者询问主要症状和既往病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我觉得很累，发烧断断续续的。身上容易有瘀伤，腿也疼，特别是晚上。有时候还会流鼻血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为发热、乏力、出血倾向（瘀伤、鼻衄）及骨痛，高度怀疑血液系统疾病（如白血病）。目前尚未进行任何检查，血常规是评估贫血、感染及血小板减少情况的最基础且关键的检查，必须优先开具以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为发热、乏力、出血倾向（瘀伤、鼻出血）及骨痛，这些症状高度提示血液系统疾病（如白血病、再生障碍性贫血等）。血常规是评估贫血、感染及血小板减少情况的首选且最关键的初步检查，能直接反映造血功能状态，为后续诊断提供核心依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者表现为发热、乏力、骨痛、易瘀伤及鼻出血，高度怀疑血液系统疾病（如白血病或再生障碍性贫血等）。全血细胞计数（CBC）可评估贫血、白细胞异常及血小板减少情况；外周血涂片有助于观察细胞形态及寻找原始细胞；凝血功能全套用于评估出血倾向的原因。这三项检查是初步筛查血液系统疾病的必要项目。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：28.6 x 10^9/L［参考范围：5.0-15.5 x 10^9/L］\", \"血红蛋白\": \"Hgb：82 g/L［参考范围：110-155 g/L］\", \"血小板计数\": \"PLT：38 x 10^9/L［参考范围：150-450 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"异型细胞或原始细胞\": \"可见大量循环淋巴母细胞，核浆比高\", \"血小板数量\": \"血小板显著减少［参考值：数量充足（150,000-450,000/μL）。］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异型细胞或原始细胞\", \"血小板数量\"]}, \"凝血功能全套\": {\"result\": {\"凝血酶原时间\": \"PT：16.8 s［参考范围：10.0-14.0 s］\", \"国际标准化比值\": \"INR：1.5［参考范围：0.8-1.2］\", \"血浆纤维蛋白原\": \"纤维蛋白原：1.4 g/L［参考范围：1.7-4.0 g/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"凝血酶原时间\", \"国际标准化比值\", \"血浆纤维蛋白原\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有发热、乏力、出血倾向及骨痛症状，血常规显示全血细胞减少伴白细胞显著升高，外周血涂片发现大量循环淋巴母细胞，凝血功能异常。这些关键信息已高度提示急性淋巴细胞白血病，足以支持进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为发热、乏力、出血倾向（瘀伤、鼻血）及骨痛，全血细胞计数显示白细胞显著升高、贫血和血小板减少（三系异常），外周血涂片发现大量循环淋巴母细胞，提示急性淋巴细胞白血病可能。凝血功能检查亦显示异常。这些表现属于血液系统恶性肿瘤的典型特征，需由血液科进行进一步确诊和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"急性淋巴细胞白血病\", \"treatment_plan\": \"1. **紧急处理与支持治疗**：鉴于患者血小板显著降低（38×10^9/L）且有出血倾向（瘀伤、鼻血），需立即输注血小板预防自发性出血；血红蛋白低（82g/L）伴乏力，酌情输注红细胞。监测凝血功能，纠正纤维蛋白原降低，预防DIC。严格隔离防护，预防感染（患者有发热史且白细胞高但可能为无效造血）。\\n2. **诱导缓解化疗**：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素、左旋门冬酰胺酶、泼尼松），目标是清除骨髓中大量淋巴母细胞，达到完全缓解。根据年龄及体能状态调整剂量。\\n3. **分层巩固与维持治疗**：缓解后进行中枢神经系统预防（鞘内注射甲氨蝶呤/阿糖胞苷）及全身强化疗。后续根据微小残留病（MRD）检测结果决定是否需要造血干细胞移植或靶向药物（如针对Ph+的酪氨酸激酶抑制剂）。\\n4. **个性化与安全监测**：密切监测肝肾功能、电解质及心脏毒性（蒽环类药物）。若患者有基础疾病或过敏史，需提前调整药物。出现高热不退、严重出血或意识改变等危险信号时，需立即就医。\", \"reasoning\": \"诊断依据：患者表现为发热、乏力、骨痛及出血倾向（典型白血病症状）。血常规显示全血细胞减少（贫血、血小板减少）伴白细胞升高，外周血涂片发现大量循环淋巴母细胞（核浆比高），这是急性淋巴细胞白血病的特征性表现。凝血功能异常提示可能存在消耗性凝血障碍。结合病史和检查结果，最可能的诊断为急性淋巴细胞白血病。治疗方案需以快速诱导缓解为核心，同时兼顾支持治疗以保障安全。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_05191",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_03827's complete blood count showed extreme thrombocytosis (platelet count: 1280 x 10^9/L), mild anemia (Hgb 104 g/L), and mild leukocytosis (WBC 14.6 x 10^9/L).",
+      "Patient_08107's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal white blood cell and hemoglobin levels.",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_07050's Complete Blood Count showed WBC 26.4 x 10^9/L, Hgb 86 g/L, and PLT 62 x 10^9/L; Peripheral blood smear revealed significant monocytosis, neutrophil dysplasia, 3% circulating promonocytes/blast cells, and thrombocytopenia.",
+      "Patient_09774's laboratory results showed leukocytosis (WBC 38.6 × 10^9/L), anemia (Hgb 104 g/L), and thrombocytopenia (PLT 118 × 10^9/L); peripheral smear demonstrated lymphocytosis (50% lymphocytes) with reduced platelet count but no circulating blasts or abnormal cells.",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_03614's CBC showed mild anemia (Hb 95 g/L) with microcytic hypochromic indices (MCV 72 fL, MCH 24 pg), normal platelets (280 × 10^9/L), and normal WBC count (10.5 × 10^9/L).",
+      "Laboratory results for Patient_09102 showed anemia (Hemoglobin 118 g/L) and thrombocytopenia (Platelets 112 x 10^9/L), with normal white blood cell differential counts.",
+      "Patient_06243's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 98 g/L (anemia), and PLT 42 x 10^9/L (thrombocytopenia).",
+      "Patient_03549's complete blood count revealed pancytopenia: WBC 2.1 x 10^9/L, Hemoglobin 96 g/L, and Platelets 58 x 10^9/L; peripheral smear confirmed thrombocytopenia with estimated platelet count of 45,000/μL.",
+      "Patient_07127's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal red and white blood cell morphology.",
+      "Patient_09977's complete blood count showed pancytopenia: WBC 2.6 x 10^9/L, Hemoglobin 92 g/L, and Platelets 58 x 10^9/L.",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_05291's CBC showed significant thrombocytosis (PLT: 1250 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 108 g/L). Peripheral blood smear revealed massive platelet increase, giant platelets, platelet aggregation, megakaryocyte fragments, and mild leukocytosis with left shift.",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_09476's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), hemoglobin 74 g/L (severe anemia), and platelet count 28 x 10^9/L (severe thrombocytopenia)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我觉得很累，发烧断断续续的。身上容易有瘀伤，腿也疼，特别是晚上。有时候还会流鼻血。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：28.6 x 10^9/L［参考范围：5.0-15.5 x 10^9/L］",
+          "血红蛋白": "Hgb：82 g/L［参考范围：110-155 g/L］",
+          "血小板计数": "PLT：38 x 10^9/L［参考范围：150-450 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "异型细胞或原始细胞": "可见大量循环淋巴母细胞，核浆比高",
+          "血小板数量": "血小板显著减少［参考值：数量充足（150,000-450,000/μL）。］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异型细胞或原始细胞",
+          "血小板数量"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "凝血酶原时间": "PT：16.8 s［参考范围：10.0-14.0 s］",
+          "国际标准化比值": "INR：1.5［参考范围：0.8-1.2］",
+          "血浆纤维蛋白原": "纤维蛋白原：1.4 g/L［参考范围：1.7-4.0 g/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "凝血酶原时间",
+          "国际标准化比值",
+          "血浆纤维蛋白原"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要向患者询问主要症状和既往病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为发热、乏力、出血倾向（瘀伤、鼻衄）及骨痛，高度怀疑血液系统疾病（如白血病）。目前尚未进行任何检查，血常规是评估贫血、感染及血小板减少情况的最基础且关键的检查，必须优先开具以明确诊断方向。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有发热、乏力、出血倾向及骨痛症状，血常规显示全血细胞减少伴白细胞显著升高，外周血涂片发现大量循环淋巴母细胞，凝血功能异常。这些关键信息已高度提示急性淋巴细胞白血病，足以支持进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者表现为发热、乏力、骨痛、易瘀伤及鼻出血，高度怀疑血液系统疾病（如白血病或再生障碍性贫血等）。全血细胞计数（CBC）可评估贫血、白细胞异常及血小板减少情况；外周血涂片有助于观察细胞形态及寻找原始细胞；凝血功能全套用于评估出血倾向的原因。这三项检查是初步筛查血液系统疾病的必要项目。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "急性淋巴细胞白血病",
+      "treatment_plan": "1. **紧急处理与支持治疗**：鉴于患者血小板显著降低（38×10^9/L）且有出血倾向（瘀伤、鼻血），需立即输注血小板预防自发性出血；血红蛋白低（82g/L）伴乏力，酌情输注红细胞。监测凝血功能，纠正纤维蛋白原降低，预防DIC。严格隔离防护，预防感染（患者有发热史且白细胞高但可能为无效造血）。\n2. **诱导缓解化疗**：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素、左旋门冬酰胺酶、泼尼松），目标是清除骨髓中大量淋巴母细胞，达到完全缓解。根据年龄及体能状态调整剂量。\n3. **分层巩固与维持治疗**：缓解后进行中枢神经系统预防（鞘内注射甲氨蝶呤/阿糖胞苷）及全身强化疗。后续根据微小残留病（MRD）检测结果决定是否需要造血干细胞移植或靶向药物（如针对Ph+的酪氨酸激酶抑制剂）。\n4. **个性化与安全监测**：密切监测肝肾功能、电解质及心脏毒性（蒽环类药物）。若患者有基础疾病或过敏史，需提前调整药物。出现高热不退、严重出血或意识改变等危险信号时，需立即就医。",
+      "reasoning": "诊断依据：患者表现为发热、乏力、骨痛及出血倾向（典型白血病症状）。血常规显示全血细胞减少（贫血、血小板减少）伴白细胞升高，外周血涂片发现大量循环淋巴母细胞（核浆比高），这是急性淋巴细胞白血病的特征性表现。凝血功能异常提示可能存在消耗性凝血障碍。结合病史和检查结果，最可能的诊断为急性淋巴细胞白血病。治疗方案需以快速诱导缓解为核心，同时兼顾支持治疗以保障安全。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_05191",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.8,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "急性淋巴细胞白血病"
+        ],
+        "expected": [
+          "急性淋巴细胞白血病"
+        ],
+        "matched": [
+          "急性淋巴细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "综合代谢面板（CMP）",
+          "凝血功能全套",
+          "脑脊液（CSF）分析",
+          "腰椎穿刺（LP）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "precision": 1.0,
+        "coverage": 0.3,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **紧急处理与支持治疗**：鉴于患者血小板显著降低（38×10^9/L）且有出血倾向（瘀伤、鼻血），需立即输注血小板预防自发性出血；血红蛋白低（82g/L）伴乏力，酌情输注红细胞。监测凝血功能，纠正纤维蛋白原降低，预防DIC。严格隔离防护，预防感染（患者有发热史且白细胞高但可能为无效造血）。\n2. **诱导缓解化疗**：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素、左旋门冬酰胺酶、泼尼松），目标是清除骨髓中大量淋巴母细胞，达到完全缓解。根据年龄及体能状态调整剂量。\n3. **分层巩固与维持治疗**：缓解后进行中枢神经系统预防（鞘内注射甲氨蝶呤/阿糖胞苷）及全身强化疗。后续根据微小残留病（MRD）检测结果决定是否需要造血干细胞移植或靶向药物（如针对Ph+的酪氨酸激酶抑制剂）。\n4. **个性化与安全监测**：密切监测肝肾功能、电解质及心脏毒性（蒽环类药物）。若患者有基础疾病或过敏史，需提前调整药物。出现高热不退、严重出血或意识改变等危险信号时，需立即就医。",
+        "overallScore": 0.8,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.8,
+        "reasoning": "方案安全未违禁，核心治疗与标准一致，但遗漏拉布立酶及具体防感染细节。",
+        "reference": "开始基于风险分层的儿童急性淋巴细胞白血病诱导治疗：基础方案为长春新碱 + 糖皮质激素（泼尼松/地塞米松）+ PEG-门冬酰胺酶；对于具有较高风险特征者，按方案加用蒽环类药物（如柔红霉素）。若风险分层和治疗反应提示需要，在后续适当阶段（如巩固/强化治疗）再使用环磷酰胺。鉴于脑脊液中存在原始细胞，继续进行中枢神经系统定向治疗，按照方案给予鞘内三联治疗（如诱导期每周一次），并计划重复腰椎穿刺以评估中枢神经系统反应。\n\n支持治疗：根据需要输注去白细胞血小板和浓缩红细胞；给予预防性补液和拉布立酶以预防肿瘤溶解综合征；持续进行感染监测。\n\n凝血异常/操作安全：密切动态监测 PT/INR 和纤维蛋白原；在腰椎穿刺等有创操作前，按照本机构阈值纠正凝血异常（例如，若纤维蛋白原低于阈值则以冷沉淀补充；如 PT/INR 延长，则按指征考虑新鲜冰冻血浆/维生素K）。在 PEG-门冬酰胺酶治疗期间密切监测止血情况，因为出血/血栓风险增加。\n\n发热处理：若怀疑发热性中性粒细胞减少，按方案立即启动经验性静脉注射抗假单胞菌 β-内酰胺类治疗（如头孢吡肟或哌拉西林-他唑巴坦；仅在符合临床指征时加用万古霉素），并明确避免使用氟喹诺酮类和四环素类，因为已有禁忌记录。\n\n在照护者支持下实施结构化的每日作息，使用提醒应用程序提示用药和就诊；尽管食欲下降，仍应强调均衡营养；保持口腔卫生以降低感染风险。安排密切的血液学监测，每周复查血常规，并于7天后进行肿瘤科随访；如出现发热、瘀斑加重或神经系统症状，应更早就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "急性淋巴细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "综合代谢面板（CMP）",
+          "凝血功能全套",
+          "脑脊液（CSF）分析",
+          "腰椎穿刺（LP）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "可待因",
+            "曲马多",
+            "阿司匹林",
+            "四环素类",
+            "氟喹诺酮类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "开始基于风险分层的儿童急性淋巴细胞白血病诱导治疗：基础方案为长春新碱 + 糖皮质激素（泼尼松/地塞米松）+ PEG-门冬酰胺酶；对于具有较高风险特征者，按方案加用蒽环类药物（如柔红霉素）。若风险分层和治疗反应提示需要，在后续适当阶段（如巩固/强化治疗）再使用环磷酰胺。鉴于脑脊液中存在原始细胞，继续进行中枢神经系统定向治疗，按照方案给予鞘内三联治疗（如诱导期每周一次），并计划重复腰椎穿刺以评估中枢神经系统反应。\n\n支持治疗：根据需要输注去白细胞血小板和浓缩红细胞；给予预防性补液和拉布立酶以预防肿瘤溶解综合征；持续进行感染监测。\n\n凝血异常/操作安全：密切动态监测 PT/INR 和纤维蛋白原；在腰椎穿刺等有创操作前，按照本机构阈值纠正凝血异常（例如，若纤维蛋白原低于阈值则以冷沉淀补充；如 PT/INR 延长，则按指征考虑新鲜冰冻血浆/维生素K）。在 PEG-门冬酰胺酶治疗期间密切监测止血情况，因为出血/血栓风险增加。\n\n发热处理：若怀疑发热性中性粒细胞减少，按方案立即启动经验性静脉注射抗假单胞菌 β-内酰胺类治疗（如头孢吡肟或哌拉西林-他唑巴坦；仅在符合临床指征时加用万古霉素），并明确避免使用氟喹诺酮类和四环素类，因为已有禁忌记录。\n\n在照护者支持下实施结构化的每日作息，使用提醒应用程序提示用药和就诊；尽管食欲下降，仍应强调均衡营养；保持口腔卫生以降低感染风险。安排密切的血液学监测，每周复查血常规，并于7天后进行肿瘤科随访；如出现发热、瘀斑加重或神经系统症状，应更早就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为发热、乏力、骨痛及出血倾向（瘀伤、鼻血），提示急性白血病可能，需警惕血小板减少导致的自发性出血风险。",
+        "diagnosis_reflection": "诊断准确，成功识别急性淋巴细胞白血病。症状组合（发热、骨痛、出血）与疾病特征高度吻合，是快速锁定诊断的关键线索。",
+        "examination_reflection": "检查选择精准度虽高但覆盖不足。正确开具了血常规、涂片和凝血功能等初筛项目，但遗漏了确诊必需的骨髓穿刺活检、流式细胞术及中枢神经系统评估（腰穿）。后续应优先完善骨髓及免疫分型以明确分型。",
+        "treatment_reflection": "治疗方案框架正确，涵盖了支持治疗（输血、隔离）和诱导化疗核心药物。主要遗漏在于未提及拉布立酶预防肿瘤溶解综合征，以及针对发热性中性粒细胞减少的具体经验性抗生素方案细节。",
+        "future_strategy": "面对疑似白血病患者，在确认初筛异常后，必须立即安排骨髓穿刺及免疫分型；制定治疗方案时，需同步考虑肿瘤溶解综合征预防（如拉布立酶）及感染防控的标准化流程。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T14:11:41.648170+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_05191",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "急性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. **紧急处理与支持治疗**：鉴于患者血小板显著降低（38×10^9/L）且有出血倾向（瘀伤、鼻血），需立即输注血小板预防自发性出血；血红蛋白低（82g/L）伴乏力，酌情输注红细胞。监测凝血功能，纠正纤维蛋白原降低，预防DIC。严格隔离防护，预防感染（患者有发热史且白细胞高但可能为无效造血）。\n2. **诱导缓解化疗**：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素、左旋门冬酰胺酶、泼尼松），目标是清除骨髓中大量淋巴母细胞，达到完全缓解。根据年龄及体能状态调整剂量。\n3. **分层巩固与维持治疗**：缓解后进行中枢神经系统预防（鞘内注射甲氨蝶呤/阿糖胞苷）及全身强化疗。后续根据微小残留病（MRD）检测结果决定是否需要造血干细胞移植或靶向药物（如针对Ph+的酪氨酸激酶抑制剂）。\n4. **个性化与安全监测**：密切监测肝肾功能、电解质及心脏毒性（蒽环类药物）。若患者有基础疾病或过敏史，需提前调整药物。出现高热不退、严重出血或意识改变等危险信号时，需立即就医。",
+    "reasoning": "诊断依据：患者表现为发热、乏力、骨痛及出血倾向（典型白血病症状）。血常规显示全血细胞减少（贫血、血小板减少）伴白细胞升高，外周血涂片发现大量循环淋巴母细胞（核浆比高），这是急性淋巴细胞白血病的特征性表现。凝血功能异常提示可能存在消耗性凝血障碍。结合病史和检查结果，最可能的诊断为急性淋巴细胞白血病。治疗方案需以快速诱导缓解为核心，同时兼顾支持治疗以保障安全。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_05191",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.8,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "急性淋巴细胞白血病"
+      ],
+      "expected": [
+        "急性淋巴细胞白血病"
+      ],
+      "matched": [
+        "急性淋巴细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "综合代谢面板（CMP）",
+        "凝血功能全套",
+        "脑脊液（CSF）分析",
+        "腰椎穿刺（LP）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "precision": 1.0,
+      "coverage": 0.3,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **紧急处理与支持治疗**：鉴于患者血小板显著降低（38×10^9/L）且有出血倾向（瘀伤、鼻血），需立即输注血小板预防自发性出血；血红蛋白低（82g/L）伴乏力，酌情输注红细胞。监测凝血功能，纠正纤维蛋白原降低，预防DIC。严格隔离防护，预防感染（患者有发热史且白细胞高但可能为无效造血）。\n2. **诱导缓解化疗**：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素、左旋门冬酰胺酶、泼尼松），目标是清除骨髓中大量淋巴母细胞，达到完全缓解。根据年龄及体能状态调整剂量。\n3. **分层巩固与维持治疗**：缓解后进行中枢神经系统预防（鞘内注射甲氨蝶呤/阿糖胞苷）及全身强化疗。后续根据微小残留病（MRD）检测结果决定是否需要造血干细胞移植或靶向药物（如针对Ph+的酪氨酸激酶抑制剂）。\n4. **个性化与安全监测**：密切监测肝肾功能、电解质及心脏毒性（蒽环类药物）。若患者有基础疾病或过敏史，需提前调整药物。出现高热不退、严重出血或意识改变等危险信号时，需立即就医。",
+      "overallScore": 0.8,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.8,
+      "reasoning": "方案安全未违禁，核心治疗与标准一致，但遗漏拉布立酶及具体防感染细节。",
+      "reference": "开始基于风险分层的儿童急性淋巴细胞白血病诱导治疗：基础方案为长春新碱 + 糖皮质激素（泼尼松/地塞米松）+ PEG-门冬酰胺酶；对于具有较高风险特征者，按方案加用蒽环类药物（如柔红霉素）。若风险分层和治疗反应提示需要，在后续适当阶段（如巩固/强化治疗）再使用环磷酰胺。鉴于脑脊液中存在原始细胞，继续进行中枢神经系统定向治疗，按照方案给予鞘内三联治疗（如诱导期每周一次），并计划重复腰椎穿刺以评估中枢神经系统反应。\n\n支持治疗：根据需要输注去白细胞血小板和浓缩红细胞；给予预防性补液和拉布立酶以预防肿瘤溶解综合征；持续进行感染监测。\n\n凝血异常/操作安全：密切动态监测 PT/INR 和纤维蛋白原；在腰椎穿刺等有创操作前，按照本机构阈值纠正凝血异常（例如，若纤维蛋白原低于阈值则以冷沉淀补充；如 PT/INR 延长，则按指征考虑新鲜冰冻血浆/维生素K）。在 PEG-门冬酰胺酶治疗期间密切监测止血情况，因为出血/血栓风险增加。\n\n发热处理：若怀疑发热性中性粒细胞减少，按方案立即启动经验性静脉注射抗假单胞菌 β-内酰胺类治疗（如头孢吡肟或哌拉西林-他唑巴坦；仅在符合临床指征时加用万古霉素），并明确避免使用氟喹诺酮类和四环素类，因为已有禁忌记录。\n\n在照护者支持下实施结构化的每日作息，使用提醒应用程序提示用药和就诊；尽管食欲下降，仍应强调均衡营养；保持口腔卫生以降低感染风险。安排密切的血液学监测，每周复查血常规，并于7天后进行肿瘤科随访；如出现发热、瘀斑加重或神经系统症状，应更早就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "急性淋巴细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "综合代谢面板（CMP）",
+        "凝血功能全套",
+        "脑脊液（CSF）分析",
+        "腰椎穿刺（LP）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "可待因",
+          "曲马多",
+          "阿司匹林",
+          "四环素类",
+          "氟喹诺酮类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "开始基于风险分层的儿童急性淋巴细胞白血病诱导治疗：基础方案为长春新碱 + 糖皮质激素（泼尼松/地塞米松）+ PEG-门冬酰胺酶；对于具有较高风险特征者，按方案加用蒽环类药物（如柔红霉素）。若风险分层和治疗反应提示需要，在后续适当阶段（如巩固/强化治疗）再使用环磷酰胺。鉴于脑脊液中存在原始细胞，继续进行中枢神经系统定向治疗，按照方案给予鞘内三联治疗（如诱导期每周一次），并计划重复腰椎穿刺以评估中枢神经系统反应。\n\n支持治疗：根据需要输注去白细胞血小板和浓缩红细胞；给予预防性补液和拉布立酶以预防肿瘤溶解综合征；持续进行感染监测。\n\n凝血异常/操作安全：密切动态监测 PT/INR 和纤维蛋白原；在腰椎穿刺等有创操作前，按照本机构阈值纠正凝血异常（例如，若纤维蛋白原低于阈值则以冷沉淀补充；如 PT/INR 延长，则按指征考虑新鲜冰冻血浆/维生素K）。在 PEG-门冬酰胺酶治疗期间密切监测止血情况，因为出血/血栓风险增加。\n\n发热处理：若怀疑发热性中性粒细胞减少，按方案立即启动经验性静脉注射抗假单胞菌 β-内酰胺类治疗（如头孢吡肟或哌拉西林-他唑巴坦；仅在符合临床指征时加用万古霉素），并明确避免使用氟喹诺酮类和四环素类，因为已有禁忌记录。\n\n在照护者支持下实施结构化的每日作息，使用提醒应用程序提示用药和就诊；尽管食欲下降，仍应强调均衡营养；保持口腔卫生以降低感染风险。安排密切的血液学监测，每周复查血常规，并于7天后进行肿瘤科随访；如出现发热、瘀斑加重或神经系统症状，应更早就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为发热、乏力、骨痛及出血倾向（瘀伤、鼻血），提示急性白血病可能，需警惕血小板减少导致的自发性出血风险。",
+      "diagnosis_reflection": "诊断准确，成功识别急性淋巴细胞白血病。症状组合（发热、骨痛、出血）与疾病特征高度吻合，是快速锁定诊断的关键线索。",
+      "examination_reflection": "检查选择精准度虽高但覆盖不足。正确开具了血常规、涂片和凝血功能等初筛项目，但遗漏了确诊必需的骨髓穿刺活检、流式细胞术及中枢神经系统评估（腰穿）。后续应优先完善骨髓及免疫分型以明确分型。",
+      "treatment_reflection": "治疗方案框架正确，涵盖了支持治疗（输血、隔离）和诱导化疗核心药物。主要遗漏在于未提及拉布立酶预防肿瘤溶解综合征，以及针对发热性中性粒细胞减少的具体经验性抗生素方案细节。",
+      "future_strategy": "面对疑似白血病患者，在确认初筛异常后，必须立即安排骨髓穿刺及免疫分型；制定治疗方案时，需同步考虑肿瘤溶解综合征预防（如拉布立酶）及感染防控的标准化流程。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/096.json#/applied_memory"
+  }
+}

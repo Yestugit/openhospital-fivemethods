@@ -1,0 +1,462 @@
+{
+  "patient_id": "Patient_06427",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史信息、检查结果或已开检查，无法进行诊断。为了明确病情方向，首先需要询问患者的临床症状以决定后续的检查策略。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "最近3周发现左侧颈部有个无痛肿块，还在变大。这10天食欲变差，吃一点就饱，上腹偶尔隐痛、腹胀，人也更累了，以前能打冰壶现在不行。夜里偶尔出汗，两个月瘦了大概4.5公斤。没有发热、咽痛或出血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有夜间盗汗、皮肤瘀斑或牙龈出血的情况？另外，您以前是否有过类似的淋巴结肿大或血液系统疾病史？\", \"reason\": \"患者主诉颈部无痛肿块进行性增大、早饱、腹胀、乏力及体重下降，症状高度提示淋巴瘤可能。目前缺乏关于全身B症状（如盗汗）、出血倾向及既往病史的关键信息，且尚未进行任何检查以明确诊断，因此需要先进一步问诊以完善病史采集。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有夜间盗汗、皮肤瘀斑或牙龈出血的情况？另外，您以前是否有过类似的淋巴结肿大或血液系统疾病史？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有皮肤瘀斑或牙龈出血。以前没得过血液病，但9年前做过肾移植，还有高血压和高血脂。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为无痛性颈部肿块进行性增大、食欲减退、早饱感、上腹隐痛、乏力及近期体重下降，结合既往肾移植史（免疫抑制状态），高度怀疑淋巴瘤。目前缺乏必要的影像学（如超声）和病理学证据来确诊，因此需要优先开具检查以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"体格检查\", \"reason\": \"患者主诉左侧颈部无痛肿块增大，伴有食欲减退、早饱感、上腹隐痛及近期体重下降，提示可能存在淋巴结肿大和脾脏肿大。虽然患者已描述部分症状，但尚未进行系统的体格检查以确认淋巴结的具体大小、质地、活动度以及是否触及肝脾肿大等体征。这是评估血液系统恶性肿瘤（如淋巴瘤）最基础且必要的步骤，有助于指导后续影像学或病理学检查的选择。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"体格检查\", \"腹部检查\"], \"reason\": \"患者主诉左侧颈部无痛肿块增大，伴有食欲减退、早饱感、上腹隐痛腹胀及近期体重明显下降，需进行全面的体格检查以评估淋巴结肿大情况（部位、大小、质地、活动度等）及脾脏是否肿大；同时针对上腹症状和早饱感，需重点进行腹部检查以排查肝脾肿大或腹部包块。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"体格检查\": {\"result\": {\"一般外观\": \"患者清醒，定向力正常；可见轻度脊柱后凸；皮下脂肪减少。\", \"乳房\": \"未见明显异常肿块或皮肤改变。\", \"体温\": \"36.5°C［参考值：常较低（36.0-36.9°C / 96.8-98.4°F），发热反应减弱。］\", \"全身体格检查-皮肤状态\": \"皮肤变薄呈羊皮纸样，弹性下降（帐篷征阳性），可见脂溢性角化和日光性雀斑样痣。\", \"呼吸频率\": \"18 次/分［参考值：16-24 次/分］\", \"咽喉\": \"咽部黏膜无充血，扁桃体无肿大。\", \"头部查体\": \"头发稀疏且发白。\", \"心率\": \"78 bpm［参考值：60-100 bpm（运动时最大心率下降）］\", \"心血管查体\": \"可闻及 S4 心音，主动脉瓣区可闻及收缩期杂音，外周脉搏存在但稍减弱。\", \"泌尿生殖系统\": \"前列腺触诊增大，表面光滑，无结节。\", \"生长\": \"身高较年轻时略有下降，体重近期减轻。\", \"盆腔检查\": \"未进行直肠指检发现异常包块。\", \"眼部\": \"存在老视，角膜缘可见老年环，瞳孔较小且对光反应稍慢。\", \"神经系统\": \"步态稍慢且步幅缩短，足部振动觉减弱，踝反射减弱。\", \"耳部\": \"高频听力减退。\", \"肌肉骨骼\": \"肌肉量减少，关节活动范围轻度受限，动作反应时间稍慢。\", \"胸部\": \"胸廓前后径略增加，胸壁顺应性下降。\", \"腹部\": \"腹壁肌层较薄，肝脏下界触及，脾脏肋下可触及。\", \"血压\": \"142/70 mmHg\", \"身高和体重\": \"身高较标准值下降，BMI 为 24 kg/m²。［参考值：因椎体压缩导致身高下降；为维持储备，BMI 最佳范围通常略高（23-27 kg/m²）。］\", \"颈部\": \"左侧颈部可触及一质硬、无痛性肿块，大小约 3cm，活动度差；颈部活动范围轻度受限。\", \"鼻/咽喉\": \"嗅觉和味觉减退。\", \"鼻部\": \"鼻腔通畅，黏膜无充血。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"腹部\", \"颈部\"]}, \"腹部检查\": {\"result\": {\"肝浊音界/肝跨度\": \"肝浊音界较正常范围略缩小\", \"肝缘触诊\": \"肝缘在肋缘下可触及，位置较年轻成人略低\", \"肠鸣音\": \"肠鸣音正常\", \"腹主动脉搏动\": \"腹主动脉搏动易于看见和触及\", \"腹股沟疝\": \"未触及腹股沟疝\", \"腹膜刺激征\": \"无腹膜刺激征\", \"腹部压痛\": \"上腹部有轻度压痛\", \"腹部叩诊音\": \"以鼓音为主\", \"腹部外观\": \"腹部呈圆形膨隆，肌肉较薄且张力降低\", \"腹部肿块\": \"未触及明确腹部肿块\", \"腹部触感\": \"腹壁较软、阻力较小\", \"血管杂音\": \"未闻及明显血管杂音\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"腹部压痛\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有无痛性颈部肿块、脾大、早饱感及体重下降，体格检查提示左侧颈部质硬无痛性肿块和脾脏肿大。虽然已进行初步体格检查，但缺乏关键的实验室和影像学证据（如血常规、淋巴结活检、腹部超声或CT）来明确肿块的性质（淋巴瘤、转移癌等）及评估全身受累情况。因此，需要开具相关检查以辅助诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者左侧颈部发现质硬、无痛性肿块，且伴有食欲减退、早饱感、体重下降及脾脏肿大等全身症状，高度怀疑淋巴瘤或转移性恶性肿瘤。体格检查和影像学检查（如超声）虽能提示占位，但确诊必须依赖组织学证据。因此，下一步最关键的步骤是对颈部肿块进行活检（如穿刺或切除活检），以明确病变性质、细胞类型及免疫表型，从而指导后续治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"淋巴结活检\"], \"reason\": \"患者左侧颈部发现质硬、无痛性肿块，且伴有食欲减退、早饱感、体重下降及脾脏肿大等B症状和腹部体征。体格检查提示该肿块活动度差，高度怀疑淋巴瘤或转移性肿瘤。为明确病理诊断（如套细胞淋巴瘤或其他恶性肿瘤），需对肿大的淋巴结进行组织学检查以观察细胞形态、免疫表型及克隆性。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"淋巴结活检\": {\"result\": {\"恶性细胞或恶性浸润\": \"可见非典型淋巴样细胞弥漫性浸润，符合淋巴瘤诊断\", \"淋巴结皮质厚度\": \"皮质显著增厚，正常结构被破坏\", \"淋巴结细胞分布\": \"单克隆B细胞和T细胞分布紊乱，失去正常多克隆特征\", \"病理坏死\": \"未见明显坏死证据\", \"病理淋巴结结构\": \"淋巴结正常结构消失，被肿瘤组织替代\", \"皮质滤泡及生发中心\": \"淋巴滤泡结构破坏，生发中心缺如\", \"结构消失\": \"淋巴结正常解剖结构完全消失\", \"肉芽肿性炎症\": \"未见肉芽肿性炎症证据\", \"脂肪替代\": \"未见明显的脂肪沉积替代现象\", \"退行性变化\": \"未见典型的年龄相关退行性萎缩征象，以肿瘤性改变为主\", \"间质纤维化或透明样变\": \"未见显著的间质纤维化或透明样变\", \"非典型性淋巴样增生\": \"可见非典型性淋巴样细胞增生，呈弥漫性分布\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"恶性细胞或恶性浸润\", \"淋巴结皮质厚度\", \"淋巴结细胞分布\", \"病理淋巴结结构\", \"皮质滤泡及生发中心\", \"结构消失\", \"非典型性淋巴样增生\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者已出现无痛性颈部肿块、脾大、消瘦及盗汗等B症状，且淋巴结活检结果明确显示非典型淋巴样细胞弥漫性浸润、正常结构消失，符合淋巴瘤诊断。关键病理信息已获取，可进入确诊及治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为无痛性颈部肿块进行性增大、消瘦、早饱及上腹不适，体格检查发现脾脏肿大。最关键的是淋巴结活检结果明确提示‘恶性细胞或恶性浸润’，符合淋巴瘤的病理诊断特征（非典型淋巴样细胞弥漫性浸润、正常结构消失、单克隆B/T细胞分布紊乱）。淋巴瘤属于血液系统恶性肿瘤，因此最负责的科室为血液科。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"套细胞淋巴瘤\", \"treatment_plan\": \"1. 主要治疗：鉴于患者为中老年男性，确诊套细胞淋巴瘤（Mantle Cell Lymphoma），且伴有脾大、体重下降及B症状（盗汗、消瘦），建议启动以化疗联合靶向药物为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者有肾移植史（9年前），需评估当前免疫抑制状态及肾功能，若肾功能允许，可考虑含利妥昔单抗方案；若存在严重感染风险或器官功能不全，可调整为强度较低的方案或单药靶向治疗。\\n2. 个性化调整：患者既往有高血压和高血脂，治疗期间需严密监测血压、血脂变化，特别是使用激素（泼尼松）时。针对脾大引起的早饱感，治疗有效后脾脏缩小将改善症状。对于肾移植术后患者，需警惕机会性感染（如肺孢子菌肺炎），预防性使用复方磺胺甲噁唑等药物。\\n3. 安全性与监测：治疗前进行心脏超声评估心功能（因蒽环类药物潜在毒性）。治疗期间每周监测血常规、肝肾功能及电解质。密切观察有无发热、出血倾向或严重感染迹象。若出现高热不退、呼吸困难或意识改变，需立即就医。治疗后每3个月复查一次，包括体格检查、影像学（CT/PET-CT）及血液学指标，长期随访以监测复发。\", \"reasoning\": \"诊断依据：患者左侧颈部无痛性肿块进行性增大，伴食欲减退、早饱、乏力、夜间盗汗及体重明显下降（B症状），查体发现质硬淋巴结及脾大。淋巴结活检病理显示非典型淋巴样细胞弥漫性浸润，正常结构消失，生发中心缺如，符合非霍奇金淋巴瘤特征。结合病史中提到的类似病例（如Patient_06532）及病理描述（单克隆B细胞浸润、结构破坏），高度提示套细胞淋巴瘤。治疗方案选择基于该病对化疗和利妥昔单抗敏感，同时必须兼顾患者高龄、肾移植史及基础疾病带来的特殊风险。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_06427",
+    "mode": "train",
+    "memory_notes": [
+      "User is an adult patient presenting with low-grade fever, fatigue, and decreased appetite over the past 3 months, resulting in a 4 kg weight loss.",
+      "Physical examination of Patient_00952 revealed BMI 18.2 kg/m², low-grade fever (37.6°C), pale conjunctiva, scattered skin ecchymoses, and multiple painless cervical/submandibular lymph nodes up to 2cm x 1.5cm.",
+      "Physical examination of Patient_02851 revealed BMI 21.5 kg/m², temperature 37.6°C, conjunctival pallor, multiple ecchymoses on skin, spleen enlargement (palpable 3-4 cm below left costal margin, firm texture), and multiple painless, firm, slowly enlarging lymph nodes in the neck and left axilla.",
+      "User participated in a hematology diagnostic task for Patient_07426, presenting with progressive fatigue, early satiety, left upper quadrant pulling sensation, low-grade fever, night sweats, 5 kg weight loss, easy bruising, gum bleeding, and hip/back pain.",
+      "Bone marrow biopsy of Patient_02851 showed hypercellularity (85%) with diffuse infiltration by small mature lymphocytes (>70%), resulting in trilineage hematopoietic suppression.",
+      "User participated in a hematology diagnostic task for Patient_04112, who presented with progressively enlarging painless neck and axillary masses, fatigue, early satiety, abdominal distension, night sweats, weight loss, and occasional low-grade fever.",
+      "User participated in a hematology diagnostic task for Patient_06532, a middle-aged male presenting with a painless left neck mass (walnut-sized), progressive fatigue, night sweats, loss of appetite, and weight loss of approximately 5-6 jin.",
+      "User is a middle-aged male patient diagnosed with Mantle Cell Lymphoma (套细胞淋巴瘤) around November 2026, presenting with a painless left neck mass the size of a large walnut discovered 10 days prior",
+      "Lymph node biopsy results showed complete loss of normal lymph node architecture, destruction of cortical follicles, absence of reactive germinal centers, and invasion by atypical CD20+ B-lymphoid cells forming a monoclonal population.",
+      "Patient_00634's bone marrow examination showed no abnormal infiltration, normal granulocytic and erythrocytic maturation, mild reticular fibrosis, 2% blasts, significantly hyperplastic megakaryocytes with enlargement and clustering, and increased cellularity (80%).",
+      "Patient_00827's laboratory results showed anemia (Hemoglobin 88 g/L, RBC 3.0 × 10^12/L), hypercalcemia (Calcium 12.1 mg/dL), elevated total protein (9.4 g/dL), renal insufficiency (Creatinine 2.3 mg/dL, eGFR 28 mL/min/1.73m²), normal PTH, and mildly elevated CA-125 (42 U/mL).",
+      "User participated in a hematology diagnostic task for Patient_02851, a 53-year-old female presenting with progressive fatigue (4 months), night sweats, low-grade fever (37.6°C), weight loss, painless bilateral cervical and left axillary lymphadenopathy, easy bruising after minor trauma, and left upper quadrant discomfort with early satiety.",
+      "Bone marrow examination of Patient_06317 revealed abnormal infiltration by clonal plasma cells replacing normal hematopoietic tissue, with plasma cells comprising 42% of marrow cells (normal <4%), suppressed granulocytic and erythroid maturation, and reduced megakaryocytes.",
+      "Ultrasound revealed a hypoechoic mass in the left subcutaneous tissue with unclear boundaries, plus enlarged lymph nodes in the left neck and abdomen/spleen showing rich blood flow signals",
+      "User diagnosed Patient_06532 with Mantle Cell Lymphoma based on clinical B symptoms (night sweats, weight loss), physical findings of splenomegaly, imaging showing enlarged lymph nodes with rich blood flow, and pathological evidence of expanded mantle zone infiltration.",
+      "User diagnosed Patient_02057 with myelofibrosis based on progressive fatigue, early satiety, left upper quadrant fullness, low-grade fever, night sweats, weight loss, gum bleeding, easy bruising, massive splenomegaly (8 cm below left costal margin), leukocytosis (18.6 x10^9/L), anemia (Hb 92 g/L), thrombocytopenia (92 x10^9/L), teardrop cells on peripheral smear, and bone marrow showing diffuse reticulin/collagen fibrosis with atypical megakaryocytes.",
+      "User participated in a hematology diagnostic task for Patient_02057, presenting with 8 months of worsening fatigue, dyspnea on exertion, early satiety, left upper quadrant pressure, intermittent low-grade fever, night sweats, weight loss, gum bleeding during brushing, and easy bruising.",
+      "User participated in a hematology diagnostic task for Patient_08330, presenting with 3 months of fatigue, shortness of breath on exertion, low-grade fever and night sweats for the past two weeks, poor appetite, weight loss, easy bruising, occasional gum bleeding, and left upper quadrant fullness.",
+      "Physical examination of User's child revealed no enlarged lymph nodes in the neck, axilla, or groin areas.",
+      "User participated in a hematology diagnostic task for Patient_09606, a patient presenting with six weeks of low-grade fever, severe fatigue, easy bruising, gum and nose bleeding, night sweats, significant bone pain (thighs and back), and bilateral neck lymph node swelling."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "最近3周发现左侧颈部有个无痛肿块，还在变大。这10天食欲变差，吃一点就饱，上腹偶尔隐痛、腹胀，人也更累了，以前能打冰壶现在不行。夜里偶尔出汗，两个月瘦了大概4.5公斤。没有发热、咽痛或出血。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有夜间盗汗、皮肤瘀斑或牙龈出血的情况？另外，您以前是否有过类似的淋巴结肿大或血液系统疾病史？"
+      },
+      {
+        "from": "patient",
+        "text": "没有皮肤瘀斑或牙龈出血。以前没得过血液病，但9年前做过肾移植，还有高血压和高血脂。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "体格检查": {
+        "result": {
+          "一般外观": "患者清醒，定向力正常；可见轻度脊柱后凸；皮下脂肪减少。",
+          "乳房": "未见明显异常肿块或皮肤改变。",
+          "体温": "36.5°C［参考值：常较低（36.0-36.9°C / 96.8-98.4°F），发热反应减弱。］",
+          "全身体格检查-皮肤状态": "皮肤变薄呈羊皮纸样，弹性下降（帐篷征阳性），可见脂溢性角化和日光性雀斑样痣。",
+          "呼吸频率": "18 次/分［参考值：16-24 次/分］",
+          "咽喉": "咽部黏膜无充血，扁桃体无肿大。",
+          "头部查体": "头发稀疏且发白。",
+          "心率": "78 bpm［参考值：60-100 bpm（运动时最大心率下降）］",
+          "心血管查体": "可闻及 S4 心音，主动脉瓣区可闻及收缩期杂音，外周脉搏存在但稍减弱。",
+          "泌尿生殖系统": "前列腺触诊增大，表面光滑，无结节。",
+          "生长": "身高较年轻时略有下降，体重近期减轻。",
+          "盆腔检查": "未进行直肠指检发现异常包块。",
+          "眼部": "存在老视，角膜缘可见老年环，瞳孔较小且对光反应稍慢。",
+          "神经系统": "步态稍慢且步幅缩短，足部振动觉减弱，踝反射减弱。",
+          "耳部": "高频听力减退。",
+          "肌肉骨骼": "肌肉量减少，关节活动范围轻度受限，动作反应时间稍慢。",
+          "胸部": "胸廓前后径略增加，胸壁顺应性下降。",
+          "腹部": "腹壁肌层较薄，肝脏下界触及，脾脏肋下可触及。",
+          "血压": "142/70 mmHg",
+          "身高和体重": "身高较标准值下降，BMI 为 24 kg/m²。［参考值：因椎体压缩导致身高下降；为维持储备，BMI 最佳范围通常略高（23-27 kg/m²）。］",
+          "颈部": "左侧颈部可触及一质硬、无痛性肿块，大小约 3cm，活动度差；颈部活动范围轻度受限。",
+          "鼻/咽喉": "嗅觉和味觉减退。",
+          "鼻部": "鼻腔通畅，黏膜无充血。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "腹部",
+          "颈部"
+        ]
+      },
+      "腹部检查": {
+        "result": {
+          "肝浊音界/肝跨度": "肝浊音界较正常范围略缩小",
+          "肝缘触诊": "肝缘在肋缘下可触及，位置较年轻成人略低",
+          "肠鸣音": "肠鸣音正常",
+          "腹主动脉搏动": "腹主动脉搏动易于看见和触及",
+          "腹股沟疝": "未触及腹股沟疝",
+          "腹膜刺激征": "无腹膜刺激征",
+          "腹部压痛": "上腹部有轻度压痛",
+          "腹部叩诊音": "以鼓音为主",
+          "腹部外观": "腹部呈圆形膨隆，肌肉较薄且张力降低",
+          "腹部肿块": "未触及明确腹部肿块",
+          "腹部触感": "腹壁较软、阻力较小",
+          "血管杂音": "未闻及明显血管杂音"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "腹部压痛"
+        ]
+      },
+      "淋巴结活检": {
+        "result": {
+          "恶性细胞或恶性浸润": "可见非典型淋巴样细胞弥漫性浸润，符合淋巴瘤诊断",
+          "淋巴结皮质厚度": "皮质显著增厚，正常结构被破坏",
+          "淋巴结细胞分布": "单克隆B细胞和T细胞分布紊乱，失去正常多克隆特征",
+          "病理坏死": "未见明显坏死证据",
+          "病理淋巴结结构": "淋巴结正常结构消失，被肿瘤组织替代",
+          "皮质滤泡及生发中心": "淋巴滤泡结构破坏，生发中心缺如",
+          "结构消失": "淋巴结正常解剖结构完全消失",
+          "肉芽肿性炎症": "未见肉芽肿性炎症证据",
+          "脂肪替代": "未见明显的脂肪沉积替代现象",
+          "退行性变化": "未见典型的年龄相关退行性萎缩征象，以肿瘤性改变为主",
+          "间质纤维化或透明样变": "未见显著的间质纤维化或透明样变",
+          "非典型性淋巴样增生": "可见非典型性淋巴样细胞增生，呈弥漫性分布"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "恶性细胞或恶性浸润",
+          "淋巴结皮质厚度",
+          "淋巴结细胞分布",
+          "病理淋巴结结构",
+          "皮质滤泡及生发中心",
+          "结构消失",
+          "非典型性淋巴样增生"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨关节疼痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史信息、检查结果或已开检查，无法进行诊断。为了明确病情方向，首先需要询问患者的临床症状以决定后续的检查策略。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有夜间盗汗、皮肤瘀斑或牙龈出血的情况？另外，您以前是否有过类似的淋巴结肿大或血液系统疾病史？",
+        "reason": "患者主诉颈部无痛肿块进行性增大、早饱、腹胀、乏力及体重下降，症状高度提示淋巴瘤可能。目前缺乏关于全身B症状（如盗汗）、出血倾向及既往病史的关键信息，且尚未进行任何检查以明确诊断，因此需要先进一步问诊以完善病史采集。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为无痛性颈部肿块进行性增大、食欲减退、早饱感、上腹隐痛、乏力及近期体重下降，结合既往肾移植史（免疫抑制状态），高度怀疑淋巴瘤。目前缺乏必要的影像学（如超声）和病理学证据来确诊，因此需要优先开具检查以明确诊断。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有无痛性颈部肿块、脾大、早饱感及体重下降，体格检查提示左侧颈部质硬无痛性肿块和脾脏肿大。虽然已进行初步体格检查，但缺乏关键的实验室和影像学证据（如血常规、淋巴结活检、腹部超声或CT）来明确肿块的性质（淋巴瘤、转移癌等）及评估全身受累情况。因此，需要开具相关检查以辅助诊断。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者已出现无痛性颈部肿块、脾大、消瘦及盗汗等B症状，且淋巴结活检结果明确显示非典型淋巴样细胞弥漫性浸润、正常结构消失，符合淋巴瘤诊断。关键病理信息已获取，可进入确诊及治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "体格检查",
+        "examinations": [
+          "体格检查",
+          "腹部检查"
+        ],
+        "reason": "患者主诉左侧颈部无痛肿块增大，伴有食欲减退、早饱感、上腹隐痛腹胀及近期体重明显下降，需进行全面的体格检查以评估淋巴结肿大情况（部位、大小、质地、活动度等）及脾脏是否肿大；同时针对上腹症状和早饱感，需重点进行腹部检查以排查肝脾肿大或腹部包块。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "淋巴结活检"
+        ],
+        "reason": "患者左侧颈部发现质硬、无痛性肿块，且伴有食欲减退、早饱感、体重下降及脾脏肿大等B症状和腹部体征。体格检查提示该肿块活动度差，高度怀疑淋巴瘤或转移性肿瘤。为明确病理诊断（如套细胞淋巴瘤或其他恶性肿瘤），需对肿大的淋巴结进行组织学检查以观察细胞形态、免疫表型及克隆性。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "套细胞淋巴瘤",
+      "treatment_plan": "1. 主要治疗：鉴于患者为中老年男性，确诊套细胞淋巴瘤（Mantle Cell Lymphoma），且伴有脾大、体重下降及B症状（盗汗、消瘦），建议启动以化疗联合靶向药物为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者有肾移植史（9年前），需评估当前免疫抑制状态及肾功能，若肾功能允许，可考虑含利妥昔单抗方案；若存在严重感染风险或器官功能不全，可调整为强度较低的方案或单药靶向治疗。\n2. 个性化调整：患者既往有高血压和高血脂，治疗期间需严密监测血压、血脂变化，特别是使用激素（泼尼松）时。针对脾大引起的早饱感，治疗有效后脾脏缩小将改善症状。对于肾移植术后患者，需警惕机会性感染（如肺孢子菌肺炎），预防性使用复方磺胺甲噁唑等药物。\n3. 安全性与监测：治疗前进行心脏超声评估心功能（因蒽环类药物潜在毒性）。治疗期间每周监测血常规、肝肾功能及电解质。密切观察有无发热、出血倾向或严重感染迹象。若出现高热不退、呼吸困难或意识改变，需立即就医。治疗后每3个月复查一次，包括体格检查、影像学（CT/PET-CT）及血液学指标，长期随访以监测复发。",
+      "reasoning": "诊断依据：患者左侧颈部无痛性肿块进行性增大，伴食欲减退、早饱、乏力、夜间盗汗及体重明显下降（B症状），查体发现质硬淋巴结及脾大。淋巴结活检病理显示非典型淋巴样细胞弥漫性浸润，正常结构消失，生发中心缺如，符合非霍奇金淋巴瘤特征。结合病史中提到的类似病例（如Patient_06532）及病理描述（单克隆B细胞浸润、结构破坏），高度提示套细胞淋巴瘤。治疗方案选择基于该病对化疗和利妥昔单抗敏感，同时必须兼顾患者高龄、肾移植史及基础疾病带来的特殊风险。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_06427",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "套细胞淋巴瘤"
+        ],
+        "expected": [
+          "弥漫性大B细胞淋巴瘤"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "体格检查",
+          "腹部检查",
+          "淋巴结活检"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "肝功能检查（LFTs）",
+          "肾功能检查（RFTs）",
+          "人类免疫缺陷病毒（HIV）筛查",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "增强CT扫描（CECT）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：鉴于患者为中老年男性，确诊套细胞淋巴瘤（Mantle Cell Lymphoma），且伴有脾大、体重下降及B症状（盗汗、消瘦），建议启动以化疗联合靶向药物为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者有肾移植史（9年前），需评估当前免疫抑制状态及肾功能，若肾功能允许，可考虑含利妥昔单抗方案；若存在严重感染风险或器官功能不全，可调整为强度较低的方案或单药靶向治疗。\n2. 个性化调整：患者既往有高血压和高血脂，治疗期间需严密监测血压、血脂变化，特别是使用激素（泼尼松）时。针对脾大引起的早饱感，治疗有效后脾脏缩小将改善症状。对于肾移植术后患者，需警惕机会性感染（如肺孢子菌肺炎），预防性使用复方磺胺甲噁唑等药物。\n3. 安全性与监测：治疗前进行心脏超声评估心功能（因蒽环类药物潜在毒性）。治疗期间每周监测血常规、肝肾功能及电解质。密切观察有无发热、出血倾向或严重感染迹象。若出现高热不退、呼吸困难或意识改变，需立即就医。治疗后每3个月复查一次，包括体格检查、影像学（CT/PET-CT）及血液学指标，长期随访以监测复发。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.6,
+        "reasoning": "方案完全忽略患者HIV阳性及移植史关键风险，未提及抗病毒治疗与免疫抑制调整，存在严重安全隐患。",
+        "reference": "将第4代HIV筛查反应性结果视为推定阳性，在同步推进淋巴瘤分期和治疗准备的同时，尽快进行确证检测（HIV-1/2抗体分型试验和HIV-1 RNA PCR）。在获得基线免疫及感染评估（CD4计数、HIV RNA水平、乙型/丙型肝炎筛查）并根据免疫状态实施适当的机会性感染预防后，在感染科参与下尽快启动ART。不要仅因等待HIV病毒抑制而推迟以治愈为目标的DLBCL治疗；在完成基线感染科/免疫评估并制定预防方案后，应及时开始免疫化疗。鉴于肾移植后的免疫抑制状态及对PTLD谱系疾病的担忧，应与移植团队协调评估EBV（如酌情进行EBV DNA/血清学检测），并结合肿瘤治疗管理审查/调整免疫抑制方案（可行时通常予以减量）。由于ART可与他克莫司发生显著相互作用（CYP3A4效应），应在移植肾病科/药学团队协调下选择ART方案，并在需要时预先调整他克莫司剂量，同时在ART启动期间及后续方案变更时进行非常频繁的谷浓度监测。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "弥漫性大B细胞淋巴瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "肝功能检查（LFTs）",
+          "肾功能检查（RFTs）",
+          "人类免疫缺陷病毒（HIV）筛查",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "增强CT扫描（CECT）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "将第4代HIV筛查反应性结果视为推定阳性，在同步推进淋巴瘤分期和治疗准备的同时，尽快进行确证检测（HIV-1/2抗体分型试验和HIV-1 RNA PCR）。在获得基线免疫及感染评估（CD4计数、HIV RNA水平、乙型/丙型肝炎筛查）并根据免疫状态实施适当的机会性感染预防后，在感染科参与下尽快启动ART。不要仅因等待HIV病毒抑制而推迟以治愈为目标的DLBCL治疗；在完成基线感染科/免疫评估并制定预防方案后，应及时开始免疫化疗。鉴于肾移植后的免疫抑制状态及对PTLD谱系疾病的担忧，应与移植团队协调评估EBV（如酌情进行EBV DNA/血清学检测），并结合肿瘤治疗管理审查/调整免疫抑制方案（可行时通常予以减量）。由于ART可与他克莫司发生显著相互作用（CYP3A4效应），应在移植肾病科/药学团队协调下选择ART方案，并在需要时预先调整他克莫司剂量，同时在ART启动期间及后续方案变更时进行非常频繁的谷浓度监测。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "中老年男性，无痛性颈部淋巴结进行性肿大伴B症状（盗汗、消瘦），既往肾移植史9年及高血压高血脂。",
+        "diagnosis_reflection": "误诊为套细胞淋巴瘤而漏诊弥漫性大B细胞淋巴瘤。需警惕肾移植后患者出现PTLD（移植后淋巴增殖性疾病）谱系疾病，其病理类型多样，不能仅凭经验预设单一亚型，必须依赖活检确诊。",
+        "examination_reflection": "遗漏关键检查：未开全血细胞计数、肝肾功能、HIV筛查、PET-CT及骨髓穿刺。对于疑似淋巴瘤且有免疫抑制背景的患者，必须完善分期检查（PET-CT/骨髓）及基础感染筛查（HIV/乙肝丙肝），以指导后续治疗安全。",
+        "treatment_reflection": "治疗方案严重脱离实际：完全忽略HIV阳性风险及肾移植后的免疫抑制状态，未提及抗病毒治疗（ART）与免疫抑制剂（如他克莫司）的相互作用管理，存在极高安全隐患。正确策略应是在启动抗淋巴瘤治疗前同步评估并处理HIV感染，协调移植科调整免疫抑制方案。",
+        "future_strategy": "面对免疫抑制人群（如移植术后）的淋巴瘤疑似病例：1. 优先排查HIV等机会性感染；2. 严格依据病理分型而非经验诊断；3. 制定化疗方案时必须联合移植科和感染科，重点评估药物相互作用及预防机会性感染。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:36:59.765958+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_06427",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "套细胞淋巴瘤"
+    ],
+    "treatment_plan": "1. 主要治疗：鉴于患者为中老年男性，确诊套细胞淋巴瘤（Mantle Cell Lymphoma），且伴有脾大、体重下降及B症状（盗汗、消瘦），建议启动以化疗联合靶向药物为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者有肾移植史（9年前），需评估当前免疫抑制状态及肾功能，若肾功能允许，可考虑含利妥昔单抗方案；若存在严重感染风险或器官功能不全，可调整为强度较低的方案或单药靶向治疗。\n2. 个性化调整：患者既往有高血压和高血脂，治疗期间需严密监测血压、血脂变化，特别是使用激素（泼尼松）时。针对脾大引起的早饱感，治疗有效后脾脏缩小将改善症状。对于肾移植术后患者，需警惕机会性感染（如肺孢子菌肺炎），预防性使用复方磺胺甲噁唑等药物。\n3. 安全性与监测：治疗前进行心脏超声评估心功能（因蒽环类药物潜在毒性）。治疗期间每周监测血常规、肝肾功能及电解质。密切观察有无发热、出血倾向或严重感染迹象。若出现高热不退、呼吸困难或意识改变，需立即就医。治疗后每3个月复查一次，包括体格检查、影像学（CT/PET-CT）及血液学指标，长期随访以监测复发。",
+    "reasoning": "诊断依据：患者左侧颈部无痛性肿块进行性增大，伴食欲减退、早饱、乏力、夜间盗汗及体重明显下降（B症状），查体发现质硬淋巴结及脾大。淋巴结活检病理显示非典型淋巴样细胞弥漫性浸润，正常结构消失，生发中心缺如，符合非霍奇金淋巴瘤特征。结合病史中提到的类似病例（如Patient_06532）及病理描述（单克隆B细胞浸润、结构破坏），高度提示套细胞淋巴瘤。治疗方案选择基于该病对化疗和利妥昔单抗敏感，同时必须兼顾患者高龄、肾移植史及基础疾病带来的特殊风险。",
+    "ordered_examinations": [
+      "体格检查",
+      "腹部检查",
+      "淋巴结活检"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_06427",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "套细胞淋巴瘤"
+      ],
+      "expected": [
+        "弥漫性大B细胞淋巴瘤"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "体格检查",
+        "腹部检查",
+        "淋巴结活检"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "肝功能检查（LFTs）",
+        "肾功能检查（RFTs）",
+        "人类免疫缺陷病毒（HIV）筛查",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "增强CT扫描（CECT）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：鉴于患者为中老年男性，确诊套细胞淋巴瘤（Mantle Cell Lymphoma），且伴有脾大、体重下降及B症状（盗汗、消瘦），建议启动以化疗联合靶向药物为主的方案。首选R-CHOP（利妥昔单抗+环磷酰胺+多柔比星+长春新碱+泼尼松）或BR（苯达莫司汀+利妥昔单抗）方案。考虑到患者有肾移植史（9年前），需评估当前免疫抑制状态及肾功能，若肾功能允许，可考虑含利妥昔单抗方案；若存在严重感染风险或器官功能不全，可调整为强度较低的方案或单药靶向治疗。\n2. 个性化调整：患者既往有高血压和高血脂，治疗期间需严密监测血压、血脂变化，特别是使用激素（泼尼松）时。针对脾大引起的早饱感，治疗有效后脾脏缩小将改善症状。对于肾移植术后患者，需警惕机会性感染（如肺孢子菌肺炎），预防性使用复方磺胺甲噁唑等药物。\n3. 安全性与监测：治疗前进行心脏超声评估心功能（因蒽环类药物潜在毒性）。治疗期间每周监测血常规、肝肾功能及电解质。密切观察有无发热、出血倾向或严重感染迹象。若出现高热不退、呼吸困难或意识改变，需立即就医。治疗后每3个月复查一次，包括体格检查、影像学（CT/PET-CT）及血液学指标，长期随访以监测复发。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.6,
+      "reasoning": "方案完全忽略患者HIV阳性及移植史关键风险，未提及抗病毒治疗与免疫抑制调整，存在严重安全隐患。",
+      "reference": "将第4代HIV筛查反应性结果视为推定阳性，在同步推进淋巴瘤分期和治疗准备的同时，尽快进行确证检测（HIV-1/2抗体分型试验和HIV-1 RNA PCR）。在获得基线免疫及感染评估（CD4计数、HIV RNA水平、乙型/丙型肝炎筛查）并根据免疫状态实施适当的机会性感染预防后，在感染科参与下尽快启动ART。不要仅因等待HIV病毒抑制而推迟以治愈为目标的DLBCL治疗；在完成基线感染科/免疫评估并制定预防方案后，应及时开始免疫化疗。鉴于肾移植后的免疫抑制状态及对PTLD谱系疾病的担忧，应与移植团队协调评估EBV（如酌情进行EBV DNA/血清学检测），并结合肿瘤治疗管理审查/调整免疫抑制方案（可行时通常予以减量）。由于ART可与他克莫司发生显著相互作用（CYP3A4效应），应在移植肾病科/药学团队协调下选择ART方案，并在需要时预先调整他克莫司剂量，同时在ART启动期间及后续方案变更时进行非常频繁的谷浓度监测。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "弥漫性大B细胞淋巴瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "肝功能检查（LFTs）",
+        "肾功能检查（RFTs）",
+        "人类免疫缺陷病毒（HIV）筛查",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "增强CT扫描（CECT）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "将第4代HIV筛查反应性结果视为推定阳性，在同步推进淋巴瘤分期和治疗准备的同时，尽快进行确证检测（HIV-1/2抗体分型试验和HIV-1 RNA PCR）。在获得基线免疫及感染评估（CD4计数、HIV RNA水平、乙型/丙型肝炎筛查）并根据免疫状态实施适当的机会性感染预防后，在感染科参与下尽快启动ART。不要仅因等待HIV病毒抑制而推迟以治愈为目标的DLBCL治疗；在完成基线感染科/免疫评估并制定预防方案后，应及时开始免疫化疗。鉴于肾移植后的免疫抑制状态及对PTLD谱系疾病的担忧，应与移植团队协调评估EBV（如酌情进行EBV DNA/血清学检测），并结合肿瘤治疗管理审查/调整免疫抑制方案（可行时通常予以减量）。由于ART可与他克莫司发生显著相互作用（CYP3A4效应），应在移植肾病科/药学团队协调下选择ART方案，并在需要时预先调整他克莫司剂量，同时在ART启动期间及后续方案变更时进行非常频繁的谷浓度监测。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "中老年男性，无痛性颈部淋巴结进行性肿大伴B症状（盗汗、消瘦），既往肾移植史9年及高血压高血脂。",
+      "diagnosis_reflection": "误诊为套细胞淋巴瘤而漏诊弥漫性大B细胞淋巴瘤。需警惕肾移植后患者出现PTLD（移植后淋巴增殖性疾病）谱系疾病，其病理类型多样，不能仅凭经验预设单一亚型，必须依赖活检确诊。",
+      "examination_reflection": "遗漏关键检查：未开全血细胞计数、肝肾功能、HIV筛查、PET-CT及骨髓穿刺。对于疑似淋巴瘤且有免疫抑制背景的患者，必须完善分期检查（PET-CT/骨髓）及基础感染筛查（HIV/乙肝丙肝），以指导后续治疗安全。",
+      "treatment_reflection": "治疗方案严重脱离实际：完全忽略HIV阳性风险及肾移植后的免疫抑制状态，未提及抗病毒治疗（ART）与免疫抑制剂（如他克莫司）的相互作用管理，存在极高安全隐患。正确策略应是在启动抗淋巴瘤治疗前同步评估并处理HIV感染，协调移植科调整免疫抑制方案。",
+      "future_strategy": "面对免疫抑制人群（如移植术后）的淋巴瘤疑似病例：1. 优先排查HIV等机会性感染；2. 严格依据病理分型而非经验诊断；3. 制定化疗方案时必须联合移植科和感染科，重点评估药物相互作用及预防机会性感染。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/053.json#/applied_memory"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "methods": [
+    {
+      "method": {
+        "method_id": "memora",
+        "params": {}
+      },
+      "runtime": {
+        "executor": "subprocess",
+        "artifact_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memora\\attempt-006\\memory",
+        "source_roots": {
+          "memora": "D:\\master_study\\MemAtlas\\.mematlas\\upstream\\memora"
+        },
+        "operation_timeout_s": null,
+        "python_executable": "D:\\master_study\\MemAtlas\\.venv-memora\\Scripts\\python.exe",
+        "resource_paths": [],
+        "service_url": null,
+        "service_headers": {},
+        "service_timeout_s": 30.0
+      },
+      "scope": {
+        "user_id": "rsi_0e46f8fadefb4a608c321890129c9de1:memora",
+        "agent_id": "doctor"
+      },
+      "metadata": {
+        "local_embedding": {
+          "model_dir": "D:\\master_study\\MemAtlas\\models\\Qwen3-Embedding-0.6B",
+          "model_id": "Qwen/Qwen3-Embedding-0.6B",
+          "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+          "fingerprint": "3e1181ea664dbf75585ae3c0a0d11df3a01ad3206a5f8c04b06b32476da9469a",
+          "dimensions": 1024,
+          "pooling": "last_non_padding_token",
+          "normalization": "l2",
+          "instruction": null,
+          "max_tokens": 32768
+        }
+      },
+      "providers": {
+        "llm": {
+          "model": "qwen3.5-flash",
+          "base_url": "https://cn-beijing.maas.qianwenaiapi.com/compatible-mode/v1",
+          "api_key_env": "MODEL_API_KEY",
+          "options": {
+            "max_tokens": 8192,
+            "extra_body": {
+              "enable_thinking": false
+            },
+            "prompt_cache": true,
+            "response_journal": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memora\\memory-responses.jsonl"
+          }
+        },
+        "embedding": {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "dimensions": 1024,
+          "base_url": "http://127.0.0.1:18768/v1",
+          "api_key_env": "LOCAL_EMBEDDING_API_KEY"
+        }
+      }
+    }
+  ],
+  "benchmark": {
+    "kind": "openhospital",
+    "condition": "novel_same_department",
+    "departments": [
+      "血液科"
+    ],
+    "evaluation_departments": [
+      "血液科"
+    ],
+    "cases_per_block": 20,
+    "blocks": 5,
+    "training_only": true,
+    "heldout_per_department": 0,
+    "advanced_per_department": 0,
+    "memory_top_k": null,
+    "doctor_config": "D:\\master_study\\MemAtlas\\configs\\openhospital\\efficiency-doctor.yaml",
+    "world_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memora\\world",
+    "service_port": 18003,
+    "feedback_timing": "immediate",
+    "snapshot_keep_recent": 2,
+    "snapshot_keep_every": 20
+  },
+  "protocol": "experience_learning_curve",
+  "answer_model": null,
+  "train_split": "train",
+  "split": "test",
+  "train_limit": null,
+  "test_limit": null,
+  "checkpoints": [],
+  "output_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memora\\attempt-006\\evaluation",
+  "train_benchmark": null,
+  "metrics": [],
+  "seed": 0
+}

@@ -1,0 +1,174 @@
+{
+  "case_id": "Patient_00948",
+  "output": {
+    "patient_id": "Patient_00948",
+    "team_id": "rsi_896d6e22b72f4eb7ad5d05a356ccff3a",
+    "diagnosis": [
+      "急性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. 紧急入院与隔离：立即收治血液科，实施保护性隔离，预防感染。2. 诱导缓解治疗：启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素、左旋门冬酰胺酶、泼尼松），目标是快速清除骨髓中的原始细胞，达到完全缓解。3. 支持治疗：针对贫血输注红细胞，针对血小板减少（PLT 42x10^9/L）及出血风险输注血小板；使用抗生素预防或治疗潜在感染；纠正电解质紊乱。4. 风险评估与分层：完善骨髓穿刺活检、流式细胞术免疫分型、染色体核型分析及融合基因检测，明确亚型及危险度分层，指导后续巩固化疗或造血干细胞移植决策。5. 安全性监测：严密监测肝肾功能、凝血功能及心脏毒性（特别是蒽环类药物）；警惕肿瘤溶解综合征，充分水化并碱化尿液；若出现高热、严重出血或意识改变，立即抢救。",
+    "reasoning": "患者为儿童，表现为左眼突出（髓外浸润/绿色瘤可能）、皮肤瘀斑（血小板减少）、乏力（贫血）。实验室检查显示全血细胞减少（WBC升高但分类以原始细胞为主，Hgb降低，PLT显著降低），外周血涂片见大量原始细胞（65%），符合急性白血病的典型表现。结合原始细胞形态特征（胞体大、核仁明显、无Auer小体提示非髓系）及临床急症表现，高度怀疑急性淋巴细胞白血病。需尽快确诊并启动化疗以挽救生命。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片"
+    ],
+    "conversation_rounds": 4,
+    "finished": true
+  },
+  "reference": null,
+  "applied_memory": [
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    },
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    },
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    },
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    },
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    },
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    },
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    },
+    {
+      "items": [],
+      "context": [],
+      "extensions": {
+        "memmachine": {
+          "level_ref": "default"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "department": "血液科",
+    "clinical_report": {
+      "patientId": "Patient_00948",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.5,
+      "treatmentOverallScore": 0.48,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "急性淋巴细胞白血病"
+        ],
+        "expected": [
+          "髓系肉瘤"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "磁共振成像（MRI）",
+          "骨髓穿刺和活检（BMAB）",
+          "组织病理学检查",
+          "免疫组织化学（IHC）",
+          "细胞遗传学分析"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）"
+        ],
+        "precision": 0.5,
+        "coverage": 0.16666666666666666,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 紧急入院与隔离：立即收治血液科，实施保护性隔离，预防感染。2. 诱导缓解治疗：启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素、左旋门冬酰胺酶、泼尼松），目标是快速清除骨髓中的原始细胞，达到完全缓解。3. 支持治疗：针对贫血输注红细胞，针对血小板减少（PLT 42x10^9/L）及出血风险输注血小板；使用抗生素预防或治疗潜在感染；纠正电解质紊乱。4. 风险评估与分层：完善骨髓穿刺活检、流式细胞术免疫分型、染色体核型分析及融合基因检测，明确亚型及危险度分层，指导后续巩固化疗或造血干细胞移植决策。5. 安全性监测：严密监测肝肾功能、凝血功能及心脏毒性（特别是蒽环类药物）；警惕肿瘤溶解综合征，充分水化并碱化尿液；若出现高热、严重出血或意识改变，立即抢救。",
+        "overallScore": 0.48,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.6,
+        "reasoning": "方案未选参考标准药物且误诊为急淋，但避开了禁忌药。",
+        "reference": "明确治疗方案包括立即启动儿童特异性的诱导化疗，使用阿糖胞苷和多柔比星，并由小儿肿瘤科协调治疗，以同时处理眶部肿块和潜在的急性髓系白血病。在血小板计数恢复至安全阈值以上之前，所有择期肌内注射和外科手术均应推迟。辅助治疗包括积极补液、止吐治疗，以及针对贫血和血小板减少的输血支持。营养支持重点为高热量、高蛋白饮食，并维持日常作息以提高舒适度。若出现发热或出血征象，则需住院监测，并随访评估化疗反应及按计划进行巩固治疗。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "髓系肉瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "磁共振成像（MRI）",
+          "骨髓穿刺和活检（BMAB）",
+          "组织病理学检查",
+          "免疫组织化学（IHC）",
+          "细胞遗传学分析"
+        ],
+        "contraindications": {
+          "drugs": [
+            "可待因",
+            "曲马多",
+            "阿司匹林（水杨酸盐类）",
+            "布洛芬",
+            "萘普生",
+            "酮咯酸"
+          ],
+          "treatments": [
+            "肌内注射（择期/非必要）",
+            "在未纠正血小板减少的情况下进行择期手术或侵入性操作"
+          ]
+        },
+        "treatment_plan": "明确治疗方案包括立即启动儿童特异性的诱导化疗，使用阿糖胞苷和多柔比星，并由小儿肿瘤科协调治疗，以同时处理眶部肿块和潜在的急性髓系白血病。在血小板计数恢复至安全阈值以上之前，所有择期肌内注射和外科手术均应推迟。辅助治疗包括积极补液、止吐治疗，以及针对贫血和血小板减少的输血支持。营养支持重点为高热量、高蛋白饮食，并维持日常作息以提高舒适度。若出现发热或出血征象，则需住院监测，并随访评估化疗反应及按计划进行巩固治疗。"
+      }
+    },
+    "response_time_s": 84.13585110008717
+  }
+}

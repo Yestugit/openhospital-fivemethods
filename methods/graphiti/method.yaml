@@ -1,0 +1,51 @@
+{
+  "method_id": "graphiti",
+  "name": "Graphiti / Zep",
+  "summary": "Incremental temporal knowledge graph with provenance and hybrid retrieval.",
+  "capabilities": {
+    "modalities": ["text"],
+    "forms": ["graph"],
+    "operations": ["observe", "retrieve", "learn", "commit", "reset", "save_state", "load_state"],
+    "integration_slots": ["context"],
+    "accepted_events": ["message", "observation", "tool_result"],
+    "scopes": ["user", "agent", "session"],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true
+  },
+  "version": "1",
+  "paper_url": "https://arxiv.org/abs/2501.13956",
+  "repository_url": "https://github.com/getzep/graphiti",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {"path_parameters": {"storage_path": "auto", "data_storage_path": "auto"}, "kind": "embedded_db", "backend": "kuzu_graph_database", "database_path": "graphiti.kuzu", "supports_snapshot": true},
+  "internal_token_tracking": "tracked",
+  "implementation_notes": ["Kuzu is a supported upstream backend. Entity relations and scoped graph candidates are queried from Kuzu, with semantic/lexical temporal ranking.", "Community detection, upstream cross-encoder reranking and distributed ingestion are not implemented."],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {"type": "string", "enum": ["standard", "offline"], "default": "standard"},
+      "llm_model": {"type": "string"},
+      "llm_base_url": {"type": "string"},
+      "llm_api_key_env": {"type": "string"},
+      "embedding_model": {"type": "string"},
+      "embedding_base_url": {"type": "string"},
+      "embedding_api_key_env": {"type": "string"},
+      "embedding_dims": {"type": "integer", "minimum": 1},
+      "build_indices": {"type": "boolean", "default": true},
+      "update_communities": {"type": "boolean", "default": false},
+      "store_raw_episode_content": {"type": "boolean", "default": true},
+      "max_concurrent_queries": {"type": "integer", "minimum": 1, "default": 1}
+    },
+    "additionalProperties": true
+  },
+  "limitations": ["The integrated core is ready for interface tests; full service-scale Graphiti validation is deferred."],
+  "tags": ["long-term", "temporal-graph", "hybrid-retrieval"],
+  "requirements": {"python": ["kuzu"], "services": ["llm", "embedding"], "offline_mode": "Explicit simplified smoke tests; results do not represent the standard algorithm."},
+  "route_hints": ["time-varying facts", "knowledge graph provenance and contradiction handling"]
+}

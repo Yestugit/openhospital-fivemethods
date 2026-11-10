@@ -1,0 +1,359 @@
+{
+  "patient_id": "Patient_07043",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？\", \"reason\": \"当前没有任何病史、检查结果或已开检查信息，无法进行诊断，必须首先通过问诊获取患者的主诉和症状以明确诊疗方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "最近主要是反复鼻出血，频率比以前高了。嘴唇和舌头上有小红点，指尖也有。经常觉得累，运动后容易胸闷气短，偶尔头晕。没有发热或咳血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为反复鼻出血、皮肤黏膜小红点（疑似瘀点）、乏力及活动后气短，高度怀疑血液系统疾病（如血小板减少或凝血功能障碍）。目前尚未进行任何检查，急需通过血常规等实验室检查来评估红细胞、白细胞和血小板水平，以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为反复鼻出血、皮肤黏膜小红点（疑似瘀点）、乏力、活动后气短及头晕，这些症状高度提示贫血、血小板减少或凝血功能障碍等血液系统疾病。进行血常规、外周血涂片及凝血功能等血液学检查是明确诊断病因（如白血病、再生障碍性贫血、血小板减少性紫癜等）的首选和关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者表现为反复鼻出血、皮肤黏膜小红点（疑似瘀点）、乏力、活动后气短及头晕，提示可能存在贫血、血小板减少或凝血功能障碍。全血细胞计数（CBC）可评估红细胞、白细胞及血小板数量以判断贫血和血小板减少情况；外周血涂片有助于观察血细胞形态，鉴别白血病等血液系统疾病；凝血功能全套用于排查凝血因子异常导致的出血倾向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"92 g/L［参考范围：120-160 g/L］\", \"平均红细胞体积\": \"71 fL［参考范围：78-100 fL］\", \"血小板计数\": \"512 x 10^9/L［参考范围：150-450 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"平均红细胞体积\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"未见异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞62%、淋巴细胞30%、单核细胞5%、嗜酸性粒细胞3%、嗜碱性粒细胞0%。［参考值：中性粒细胞40-70%、淋巴细胞20-40%、单核细胞2-8%、嗜酸性粒细胞1-4%、嗜碱性粒细胞0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"小细胞低色素性，中央淡染区扩大，约占细胞直径的二分之一；可见明显大小不等及靶形红细胞。\", \"血小板形态与分布\": \"体积增大，形态多样，分布不均。\", \"血小板数量\": \"数量充足（估计450,000/μL）。［参考值：数量充足（估计150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞形态\", \"血小板形态与分布\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"0.35 mg/L FEU［参考值：<0.5 mg/L FEU（或 <250 ng/mL DDU）］\", \"凝血酶原时间\": \"12.2 秒［参考值：11-13.5 秒］\", \"凝血酶时间\": \"16.5 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.05［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"29.8 秒［参考值：25-35 秒］\", \"血浆纤维蛋白原\": \"3.1 g/L［参考值：2.0-4.0 g/L］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有出血症状，检查结果显示小细胞低色素性贫血（血红蛋白92g/L，MCV71fL）和血小板增多症（512x10^9/L），外周血涂片提示靶形红细胞，凝血功能正常。综合病史、症状及实验室检查结果，已具备初步诊断缺铁性贫血伴反应性血小板增多的依据，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者主要表现为反复鼻出血、皮肤黏膜出血点（嘴唇、舌头、指尖）及乏力、胸闷气短等贫血症状。实验室检查显示小细胞低色素性贫血（血红蛋白92g/L，MCV 71fL）和血小板增多症（512x10^9/L），外周血涂片提示红细胞形态异常（小细胞低色素、靶形红细胞）及血小板体积增大、分布不均。虽然凝血功能正常，但结合出血倾向与血细胞形态学改变，需重点排查缺铁性贫血合并反应性血小板增多，或排除骨髓增殖性肿瘤等血液系统疾病，故首选血液科进行进一步诊治。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. 补充铁剂治疗：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），每日补充元素铁约150-200mg，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时联合维生素C（100-200mg/次）以促进铁吸收。\\n2. 病因排查与处理：患者表现为小细胞低色素性贫血伴血小板增多，需进一步排查慢性失血原因（如消化道溃疡、痔疮、月经过多等）。建议完善大便潜血试验、胃镜及肠镜检查，针对出血灶进行止血或手术治疗。\\n3. 随访监测：治疗2周后复查网织红细胞计数，预计上升；4周后复查血红蛋白及铁蛋白，评估疗效。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。治疗期间注意观察黑便（正常现象）与消化道出血症状的区别。\\n4. 生活指导：避免饮茶、咖啡及牛奶与铁剂同服，饮食中增加红肉、动物肝脏及深绿色蔬菜摄入。\", \"reasoning\": \"诊断依据：患者血常规显示血红蛋白92g/L（贫血），平均红细胞体积71fL（降低），呈小细胞低色素性改变；外周血涂片见红细胞中央淡染区扩大、靶形红细胞，符合缺铁性贫血形态学特征。同时血小板计数512x10^9/L升高，这是缺铁性贫血常见的反应性血小板增多表现。凝血功能正常，排除了凝血因子缺乏导致的出血倾向。结合患者反复鼻出血、黏膜小红点等症状，提示可能存在慢性失血导致铁丢失过多。综合判断为缺铁性贫血。治疗方案以补铁和寻找出血原因为核心，确保有效纠正贫血并预防复发。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_07043",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_03544's laboratory results showed mild anemia (Hgb 102 g/L) and isolated prolongation of activated partial thromboplastin time (aPTT 44 seconds), while platelet count was normal at 200,000/μL",
+      "Patient_03549's complete blood count revealed pancytopenia: WBC 2.1 x 10^9/L, Hemoglobin 96 g/L, and Platelets 58 x 10^9/L; peripheral smear confirmed thrombocytopenia with estimated platelet count of 45,000/μL.",
+      "Patient_05291's CBC showed significant thrombocytosis (PLT: 1250 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 108 g/L). Peripheral blood smear revealed massive platelet increase, giant platelets, platelet aggregation, megakaryocyte fragments, and mild leukocytosis with left shift.",
+      "Patient_06243's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 98 g/L (anemia), and PLT 42 x 10^9/L (thrombocytopenia).",
+      "Patient_08107's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal white blood cell and hemoglobin levels.",
+      "Patient_01590 has mild anemia with hemoglobin of 98 g/L, normal platelet count (280 x 10^9/L), and isolated prolonged activated partial thromboplastin time (aPTT) of 46 seconds.",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_03827's complete blood count showed extreme thrombocytosis (platelet count: 1280 x 10^9/L), mild anemia (Hgb 104 g/L), and mild leukocytosis (WBC 14.6 x 10^9/L).",
+      "Patient_09476's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), hemoglobin 74 g/L (severe anemia), and platelet count 28 x 10^9/L (severe thrombocytopenia).",
+      "Laboratory results for Patient_09102 showed anemia (Hemoglobin 118 g/L) and thrombocytopenia (Platelets 112 x 10^9/L), with normal white blood cell differential counts.",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_00783 presented with reactive thrombocytosis (platelet count 468 x 10^9/L) alongside iron deficiency anemia findings",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_07127's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal red and white blood cell morphology.",
+      "Laboratory results for Patient_00638 showed pancytopenia: WBC 2.6 x 10^9/L, Hgb 98 g/L, PLT 52 x 10^9/L; peripheral smear revealed large platelets and thrombocytopenia; bone marrow was hypercellular (80%) with normal megakaryocytes and no fibrosis or malignant infiltration.",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_03614's CBC showed mild anemia (Hb 95 g/L) with microcytic hypochromic indices (MCV 72 fL, MCH 24 pg), normal platelets (280 × 10^9/L), and normal WBC count (10.5 × 10^9/L).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "最近主要是反复鼻出血，频率比以前高了。嘴唇和舌头上有小红点，指尖也有。经常觉得累，运动后容易胸闷气短，偶尔头晕。没有发热或咳血。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "92 g/L［参考范围：120-160 g/L］",
+          "平均红细胞体积": "71 fL［参考范围：78-100 fL］",
+          "血小板计数": "512 x 10^9/L［参考范围：150-450 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "平均红细胞体积",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "未见异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞62%、淋巴细胞30%、单核细胞5%、嗜酸性粒细胞3%、嗜碱性粒细胞0%。［参考值：中性粒细胞40-70%、淋巴细胞20-40%、单核细胞2-8%、嗜酸性粒细胞1-4%、嗜碱性粒细胞0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当。",
+          "红细胞形态": "小细胞低色素性，中央淡染区扩大，约占细胞直径的二分之一；可见明显大小不等及靶形红细胞。",
+          "血小板形态与分布": "体积增大，形态多样，分布不均。",
+          "血小板数量": "数量充足（估计450,000/μL）。［参考值：数量充足（估计150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "红细胞形态",
+          "血小板形态与分布"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "D-二聚体": "0.35 mg/L FEU［参考值：<0.5 mg/L FEU（或 <250 ng/mL DDU）］",
+          "凝血酶原时间": "12.2 秒［参考值：11-13.5 秒］",
+          "凝血酶时间": "16.5 秒［参考值：14-19 秒］",
+          "国际标准化比值": "1.05［参考值：0.8-1.2］",
+          "活化部分凝血活酶时间": "29.8 秒［参考值：25-35 秒］",
+          "血浆纤维蛋白原": "3.1 g/L［参考值：2.0-4.0 g/L］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？",
+        "reason": "当前没有任何病史、检查结果或已开检查信息，无法进行诊断，必须首先通过问诊获取患者的主诉和症状以明确诊疗方向。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为反复鼻出血、皮肤黏膜小红点（疑似瘀点）、乏力及活动后气短，高度怀疑血液系统疾病（如血小板减少或凝血功能障碍）。目前尚未进行任何检查，急需通过血常规等实验室检查来评估红细胞、白细胞和血小板水平，以明确诊断方向。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有出血症状，检查结果显示小细胞低色素性贫血（血红蛋白92g/L，MCV71fL）和血小板增多症（512x10^9/L），外周血涂片提示靶形红细胞，凝血功能正常。综合病史、症状及实验室检查结果，已具备初步诊断缺铁性贫血伴反应性血小板增多的依据，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者表现为反复鼻出血、皮肤黏膜小红点（疑似瘀点）、乏力、活动后气短及头晕，提示可能存在贫血、血小板减少或凝血功能障碍。全血细胞计数（CBC）可评估红细胞、白细胞及血小板数量以判断贫血和血小板减少情况；外周血涂片有助于观察血细胞形态，鉴别白血病等血液系统疾病；凝血功能全套用于排查凝血因子异常导致的出血倾向。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "缺铁性贫血",
+      "treatment_plan": "1. 补充铁剂治疗：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），每日补充元素铁约150-200mg，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时联合维生素C（100-200mg/次）以促进铁吸收。\n2. 病因排查与处理：患者表现为小细胞低色素性贫血伴血小板增多，需进一步排查慢性失血原因（如消化道溃疡、痔疮、月经过多等）。建议完善大便潜血试验、胃镜及肠镜检查，针对出血灶进行止血或手术治疗。\n3. 随访监测：治疗2周后复查网织红细胞计数，预计上升；4周后复查血红蛋白及铁蛋白，评估疗效。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。治疗期间注意观察黑便（正常现象）与消化道出血症状的区别。\n4. 生活指导：避免饮茶、咖啡及牛奶与铁剂同服，饮食中增加红肉、动物肝脏及深绿色蔬菜摄入。",
+      "reasoning": "诊断依据：患者血常规显示血红蛋白92g/L（贫血），平均红细胞体积71fL（降低），呈小细胞低色素性改变；外周血涂片见红细胞中央淡染区扩大、靶形红细胞，符合缺铁性贫血形态学特征。同时血小板计数512x10^9/L升高，这是缺铁性贫血常见的反应性血小板增多表现。凝血功能正常，排除了凝血因子缺乏导致的出血倾向。结合患者反复鼻出血、黏膜小红点等症状，提示可能存在慢性失血导致铁丢失过多。综合判断为缺铁性贫血。治疗方案以补铁和寻找出血原因为核心，确保有效纠正贫血并预防复发。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_07043",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.3333,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.4,
+      "diagnosisDetail": {
+        "submitted": [
+          "缺铁性贫血"
+        ],
+        "expected": [
+          "遗传性出血性毛细血管扩张症"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "大便常规检查",
+          "超声心动图",
+          "胸部CT扫描（Chest CT）",
+          "脑MRI",
+          "基因检测"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）"
+        ],
+        "precision": 0.3333333333333333,
+        "coverage": 0.16666666666666666,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 补充铁剂治疗：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），每日补充元素铁约150-200mg，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时联合维生素C（100-200mg/次）以促进铁吸收。\n2. 病因排查与处理：患者表现为小细胞低色素性贫血伴血小板增多，需进一步排查慢性失血原因（如消化道溃疡、痔疮、月经过多等）。建议完善大便潜血试验、胃镜及肠镜检查，针对出血灶进行止血或手术治疗。\n3. 随访监测：治疗2周后复查网织红细胞计数，预计上升；4周后复查血红蛋白及铁蛋白，评估疗效。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。治疗期间注意观察黑便（正常现象）与消化道出血症状的区别。\n4. 生活指导：避免饮茶、咖啡及牛奶与铁剂同服，饮食中增加红肉、动物肝脏及深绿色蔬菜摄入。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.4,
+        "reasoning": "方案未提及肺动静脉畸形栓塞及防反常栓塞措施，存在致命风险且遗漏关键治疗。",
+        "reference": "缺铁性贫血：采用静脉注射蔗糖铁治疗，200 mg，隔日一次，共5次；在静脉治疗期间暂停常规口服铁剂，以减少胃肠道副作用并简化用药依从性；若耐受良好，随后转为每日一次口服铁剂维持治疗。监测：静脉疗程结束后2-4周复查全血细胞计数（CBC）和铁代谢检查（铁蛋白、转铁蛋白饱和度），并重新评估症状及鼻出血负担。\n\n遗传性出血性毛细血管扩张症中的隐匿性胃肠道失血：尽管无黑便或便血，FIT/FOBT阳性应解读为可能存在来自胃肠道毛细血管扩张灶的间歇性显微镜下出血；与检验科确认粪便检查方法，如结果持续阳性，则重复FIT/FOBT检查（并在有指征时进行确证性评估）。\n\n肺动静脉畸形/右向左分流：在未来两周内于适当麻醉/镇静下安排右下肺叶肺动静脉畸形经皮经导管栓塞治疗。分流防护措施：所有静脉输液管路均需严格排尽空气；根据本地流程考虑使用管路空气过滤器；避免不必要的中心静脉通路；宣教反常栓塞/脑脓肿风险。抗生素预防：对于存在菌血症风险的牙科/外科操作，遵循本地遗传性出血性毛细血管扩张症/肺动静脉畸形相关方案。活动：避免水肺潜水；在栓塞治疗完成并经专科医生批准前，避免需要明显Valsalva动作/用力的活动。\n\n居家监测：如使用脉搏血氧仪，在有症状时于静息状态和日常活动后测量；如出现新发/加重的呼吸困难、胸痛、咯血、晕厥，或SpO2持续降至<90%（或较其平时基线下降>3-4%），应立即就医，而不是维持固定目标值。\n\n出血管理：继续早晚使用生理盐水鼻腔凝胶；增加规范化鼻出血护理（加湿、局部保湿、牢固鼻压迫技术，以及在手机应用中记录持续时间/频率）。可根据出血负担考虑升级治疗（如耳鼻喉科评估行烧灼/激光或局部用药）。\n\n全身性抗血管生成治疗：在栓塞治疗后并重新评估出血/贫血负担后，如鼻出血/胃肠道出血仍具有临床意义，可考虑脉冲式静脉注射贝伐珠单抗5 mg/kg，每4周一次，共3个周期。\n\n脑动静脉畸形：安排转诊至神经外科/神经介入放射科进行评估（包括Spetzler-Martin分级），并讨论治疗与监测随访方案。宣教警示症状（突发剧烈头痛、新发局灶性无力/麻木、癫痫发作、视力或言语改变），如出现应立即急诊就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "遗传性出血性毛细血管扩张症",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "大便常规检查",
+          "超声心动图",
+          "胸部CT扫描（Chest CT）",
+          "脑MRI",
+          "基因检测"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "缺铁性贫血：采用静脉注射蔗糖铁治疗，200 mg，隔日一次，共5次；在静脉治疗期间暂停常规口服铁剂，以减少胃肠道副作用并简化用药依从性；若耐受良好，随后转为每日一次口服铁剂维持治疗。监测：静脉疗程结束后2-4周复查全血细胞计数（CBC）和铁代谢检查（铁蛋白、转铁蛋白饱和度），并重新评估症状及鼻出血负担。\n\n遗传性出血性毛细血管扩张症中的隐匿性胃肠道失血：尽管无黑便或便血，FIT/FOBT阳性应解读为可能存在来自胃肠道毛细血管扩张灶的间歇性显微镜下出血；与检验科确认粪便检查方法，如结果持续阳性，则重复FIT/FOBT检查（并在有指征时进行确证性评估）。\n\n肺动静脉畸形/右向左分流：在未来两周内于适当麻醉/镇静下安排右下肺叶肺动静脉畸形经皮经导管栓塞治疗。分流防护措施：所有静脉输液管路均需严格排尽空气；根据本地流程考虑使用管路空气过滤器；避免不必要的中心静脉通路；宣教反常栓塞/脑脓肿风险。抗生素预防：对于存在菌血症风险的牙科/外科操作，遵循本地遗传性出血性毛细血管扩张症/肺动静脉畸形相关方案。活动：避免水肺潜水；在栓塞治疗完成并经专科医生批准前，避免需要明显Valsalva动作/用力的活动。\n\n居家监测：如使用脉搏血氧仪，在有症状时于静息状态和日常活动后测量；如出现新发/加重的呼吸困难、胸痛、咯血、晕厥，或SpO2持续降至<90%（或较其平时基线下降>3-4%），应立即就医，而不是维持固定目标值。\n\n出血管理：继续早晚使用生理盐水鼻腔凝胶；增加规范化鼻出血护理（加湿、局部保湿、牢固鼻压迫技术，以及在手机应用中记录持续时间/频率）。可根据出血负担考虑升级治疗（如耳鼻喉科评估行烧灼/激光或局部用药）。\n\n全身性抗血管生成治疗：在栓塞治疗后并重新评估出血/贫血负担后，如鼻出血/胃肠道出血仍具有临床意义，可考虑脉冲式静脉注射贝伐珠单抗5 mg/kg，每4周一次，共3个周期。\n\n脑动静脉畸形：安排转诊至神经外科/神经介入放射科进行评估（包括Spetzler-Martin分级），并讨论治疗与监测随访方案。宣教警示症状（突发剧烈头痛、新发局灶性无力/麻木、癫痫发作、视力或言语改变），如出现应立即急诊就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为反复鼻出血伴皮肤黏膜毛细血管扩张点（唇、舌、指尖），并出现贫血症状（乏力、胸闷气短、头晕），需高度警惕遗传性出血性毛细血管扩张症及其并发症。",
+        "diagnosis_reflection": "本次误诊为缺铁性贫血，漏掉了核心病因遗传性出血性毛细血管扩张症。关键线索是‘反复鼻出血’合并‘特征性毛细血管扩张点’及‘运动后胸闷’，后者提示可能存在肺动静脉畸形导致的右向左分流或低氧血症，而非单纯失血。",
+        "examination_reflection": "检查选择遗漏严重。仅做了基础血常规，未安排针对本病的特异性筛查：如胸部CT排查肺动静脉畸形、脑MRI排查脑血管畸形、基因检测确诊，以及大便常规/潜血评估隐匿性消化道出血。全血细胞计数虽做对但不足以支撑诊断。",
+        "treatment_reflection": "治疗方案存在致命风险。仅按缺铁性贫血给予补铁和止血，完全遗漏了肺动静脉畸形的栓塞治疗、反常栓塞的预防措施（如输液排气、避免中心静脉置管）以及抗血管生成药物等关键干预，可能导致脑脓肿或卒中。",
+        "future_strategy": "遇到反复鼻出血伴皮肤黏膜红点及不明原因缺氧/胸闷的患者，必须将遗传性出血性毛细血管扩张症纳入首要鉴别诊断，立即完善心肺脑影像学检查以排除动静脉畸形，并在治疗前严格评估反常栓塞风险。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T14:16:02.675976+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_07043",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "缺铁性贫血"
+    ],
+    "treatment_plan": "1. 补充铁剂治疗：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），每日补充元素铁约150-200mg，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时联合维生素C（100-200mg/次）以促进铁吸收。\n2. 病因排查与处理：患者表现为小细胞低色素性贫血伴血小板增多，需进一步排查慢性失血原因（如消化道溃疡、痔疮、月经过多等）。建议完善大便潜血试验、胃镜及肠镜检查，针对出血灶进行止血或手术治疗。\n3. 随访监测：治疗2周后复查网织红细胞计数，预计上升；4周后复查血红蛋白及铁蛋白，评估疗效。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。治疗期间注意观察黑便（正常现象）与消化道出血症状的区别。\n4. 生活指导：避免饮茶、咖啡及牛奶与铁剂同服，饮食中增加红肉、动物肝脏及深绿色蔬菜摄入。",
+    "reasoning": "诊断依据：患者血常规显示血红蛋白92g/L（贫血），平均红细胞体积71fL（降低），呈小细胞低色素性改变；外周血涂片见红细胞中央淡染区扩大、靶形红细胞，符合缺铁性贫血形态学特征。同时血小板计数512x10^9/L升高，这是缺铁性贫血常见的反应性血小板增多表现。凝血功能正常，排除了凝血因子缺乏导致的出血倾向。结合患者反复鼻出血、黏膜小红点等症状，提示可能存在慢性失血导致铁丢失过多。综合判断为缺铁性贫血。治疗方案以补铁和寻找出血原因为核心，确保有效纠正贫血并预防复发。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_07043",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.3333,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.4,
+    "diagnosisDetail": {
+      "submitted": [
+        "缺铁性贫血"
+      ],
+      "expected": [
+        "遗传性出血性毛细血管扩张症"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "大便常规检查",
+        "超声心动图",
+        "胸部CT扫描（Chest CT）",
+        "脑MRI",
+        "基因检测"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）"
+      ],
+      "precision": 0.3333333333333333,
+      "coverage": 0.16666666666666666,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 补充铁剂治疗：首选口服铁剂（如硫酸亚铁、琥珀酸亚铁或多糖铁复合物），每日补充元素铁约150-200mg，建议空腹服用以促进吸收，若胃肠道反应明显可改为餐后服用。同时联合维生素C（100-200mg/次）以促进铁吸收。\n2. 病因排查与处理：患者表现为小细胞低色素性贫血伴血小板增多，需进一步排查慢性失血原因（如消化道溃疡、痔疮、月经过多等）。建议完善大便潜血试验、胃镜及肠镜检查，针对出血灶进行止血或手术治疗。\n3. 随访监测：治疗2周后复查网织红细胞计数，预计上升；4周后复查血红蛋白及铁蛋白，评估疗效。若口服不耐受或吸收障碍，可考虑静脉铁剂治疗。治疗期间注意观察黑便（正常现象）与消化道出血症状的区别。\n4. 生活指导：避免饮茶、咖啡及牛奶与铁剂同服，饮食中增加红肉、动物肝脏及深绿色蔬菜摄入。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.4,
+      "reasoning": "方案未提及肺动静脉畸形栓塞及防反常栓塞措施，存在致命风险且遗漏关键治疗。",
+      "reference": "缺铁性贫血：采用静脉注射蔗糖铁治疗，200 mg，隔日一次，共5次；在静脉治疗期间暂停常规口服铁剂，以减少胃肠道副作用并简化用药依从性；若耐受良好，随后转为每日一次口服铁剂维持治疗。监测：静脉疗程结束后2-4周复查全血细胞计数（CBC）和铁代谢检查（铁蛋白、转铁蛋白饱和度），并重新评估症状及鼻出血负担。\n\n遗传性出血性毛细血管扩张症中的隐匿性胃肠道失血：尽管无黑便或便血，FIT/FOBT阳性应解读为可能存在来自胃肠道毛细血管扩张灶的间歇性显微镜下出血；与检验科确认粪便检查方法，如结果持续阳性，则重复FIT/FOBT检查（并在有指征时进行确证性评估）。\n\n肺动静脉畸形/右向左分流：在未来两周内于适当麻醉/镇静下安排右下肺叶肺动静脉畸形经皮经导管栓塞治疗。分流防护措施：所有静脉输液管路均需严格排尽空气；根据本地流程考虑使用管路空气过滤器；避免不必要的中心静脉通路；宣教反常栓塞/脑脓肿风险。抗生素预防：对于存在菌血症风险的牙科/外科操作，遵循本地遗传性出血性毛细血管扩张症/肺动静脉畸形相关方案。活动：避免水肺潜水；在栓塞治疗完成并经专科医生批准前，避免需要明显Valsalva动作/用力的活动。\n\n居家监测：如使用脉搏血氧仪，在有症状时于静息状态和日常活动后测量；如出现新发/加重的呼吸困难、胸痛、咯血、晕厥，或SpO2持续降至<90%（或较其平时基线下降>3-4%），应立即就医，而不是维持固定目标值。\n\n出血管理：继续早晚使用生理盐水鼻腔凝胶；增加规范化鼻出血护理（加湿、局部保湿、牢固鼻压迫技术，以及在手机应用中记录持续时间/频率）。可根据出血负担考虑升级治疗（如耳鼻喉科评估行烧灼/激光或局部用药）。\n\n全身性抗血管生成治疗：在栓塞治疗后并重新评估出血/贫血负担后，如鼻出血/胃肠道出血仍具有临床意义，可考虑脉冲式静脉注射贝伐珠单抗5 mg/kg，每4周一次，共3个周期。\n\n脑动静脉畸形：安排转诊至神经外科/神经介入放射科进行评估（包括Spetzler-Martin分级），并讨论治疗与监测随访方案。宣教警示症状（突发剧烈头痛、新发局灶性无力/麻木、癫痫发作、视力或言语改变），如出现应立即急诊就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "遗传性出血性毛细血管扩张症",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "大便常规检查",
+        "超声心动图",
+        "胸部CT扫描（Chest CT）",
+        "脑MRI",
+        "基因检测"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "缺铁性贫血：采用静脉注射蔗糖铁治疗，200 mg，隔日一次，共5次；在静脉治疗期间暂停常规口服铁剂，以减少胃肠道副作用并简化用药依从性；若耐受良好，随后转为每日一次口服铁剂维持治疗。监测：静脉疗程结束后2-4周复查全血细胞计数（CBC）和铁代谢检查（铁蛋白、转铁蛋白饱和度），并重新评估症状及鼻出血负担。\n\n遗传性出血性毛细血管扩张症中的隐匿性胃肠道失血：尽管无黑便或便血，FIT/FOBT阳性应解读为可能存在来自胃肠道毛细血管扩张灶的间歇性显微镜下出血；与检验科确认粪便检查方法，如结果持续阳性，则重复FIT/FOBT检查（并在有指征时进行确证性评估）。\n\n肺动静脉畸形/右向左分流：在未来两周内于适当麻醉/镇静下安排右下肺叶肺动静脉畸形经皮经导管栓塞治疗。分流防护措施：所有静脉输液管路均需严格排尽空气；根据本地流程考虑使用管路空气过滤器；避免不必要的中心静脉通路；宣教反常栓塞/脑脓肿风险。抗生素预防：对于存在菌血症风险的牙科/外科操作，遵循本地遗传性出血性毛细血管扩张症/肺动静脉畸形相关方案。活动：避免水肺潜水；在栓塞治疗完成并经专科医生批准前，避免需要明显Valsalva动作/用力的活动。\n\n居家监测：如使用脉搏血氧仪，在有症状时于静息状态和日常活动后测量；如出现新发/加重的呼吸困难、胸痛、咯血、晕厥，或SpO2持续降至<90%（或较其平时基线下降>3-4%），应立即就医，而不是维持固定目标值。\n\n出血管理：继续早晚使用生理盐水鼻腔凝胶；增加规范化鼻出血护理（加湿、局部保湿、牢固鼻压迫技术，以及在手机应用中记录持续时间/频率）。可根据出血负担考虑升级治疗（如耳鼻喉科评估行烧灼/激光或局部用药）。\n\n全身性抗血管生成治疗：在栓塞治疗后并重新评估出血/贫血负担后，如鼻出血/胃肠道出血仍具有临床意义，可考虑脉冲式静脉注射贝伐珠单抗5 mg/kg，每4周一次，共3个周期。\n\n脑动静脉畸形：安排转诊至神经外科/神经介入放射科进行评估（包括Spetzler-Martin分级），并讨论治疗与监测随访方案。宣教警示症状（突发剧烈头痛、新发局灶性无力/麻木、癫痫发作、视力或言语改变），如出现应立即急诊就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为反复鼻出血伴皮肤黏膜毛细血管扩张点（唇、舌、指尖），并出现贫血症状（乏力、胸闷气短、头晕），需高度警惕遗传性出血性毛细血管扩张症及其并发症。",
+      "diagnosis_reflection": "本次误诊为缺铁性贫血，漏掉了核心病因遗传性出血性毛细血管扩张症。关键线索是‘反复鼻出血’合并‘特征性毛细血管扩张点’及‘运动后胸闷’，后者提示可能存在肺动静脉畸形导致的右向左分流或低氧血症，而非单纯失血。",
+      "examination_reflection": "检查选择遗漏严重。仅做了基础血常规，未安排针对本病的特异性筛查：如胸部CT排查肺动静脉畸形、脑MRI排查脑血管畸形、基因检测确诊，以及大便常规/潜血评估隐匿性消化道出血。全血细胞计数虽做对但不足以支撑诊断。",
+      "treatment_reflection": "治疗方案存在致命风险。仅按缺铁性贫血给予补铁和止血，完全遗漏了肺动静脉畸形的栓塞治疗、反常栓塞的预防措施（如输液排气、避免中心静脉置管）以及抗血管生成药物等关键干预，可能导致脑脓肿或卒中。",
+      "future_strategy": "遇到反复鼻出血伴皮肤黏膜红点及不明原因缺氧/胸闷的患者，必须将遗传性出血性毛细血管扩张症纳入首要鉴别诊断，立即完善心肺脑影像学检查以排除动静脉畸形，并在治疗前严格评估反常栓塞风险。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/097.json#/applied_memory"
+  }
+}

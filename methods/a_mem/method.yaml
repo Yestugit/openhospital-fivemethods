@@ -1,0 +1,139 @@
+{
+  "method_id": "a-mem",
+  "name": "A-MEM",
+  "summary": "Agentic Zettelkasten-style memory with linked notes and memory evolution.",
+  "capabilities": {
+    "max_scopes": 1,
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "record",
+      "graph"
+    ],
+    "operations": ["index", "add", "search", "episode_end", "reset", "save", "load", "detail", "update", "delete"],
+    "integration_slots": [
+      "context"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "tool_result",
+      "action",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true
+  },
+  "version": "1",
+  "paper_url": "https://arxiv.org/abs/2502.12110",
+  "repository_url": "https://github.com/agiresearch/A-mem",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {
+    "path_parameters": {
+      "storage_path": "directory"
+    },
+    "kind": "embedded_db",
+    "backend": "chromadb_persistent_client",
+    "database_path": ".",
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "conditional",
+  "implementation_notes": [
+    "Reference: agiresearch/A-mem ceffb860f0712bbae97b184d440df62bc910ca8d; method reimplementation, not paper-result reproduction.",
+    "Content analysis is performed before add_note, corresponding to an explicit analyze_content + add_note upstream composition; upstream add_note does not invoke analysis itself. Upstream prompts and JSON schemas are retained.",
+    "Default Chroma L2 nearest-neighbor order is preserved. Public scores are 1/(1+distance); raw distance is retained as metadata. A supplied Embedding service replaces the upstream default SentenceTransformer model.",
+    "Evolution strengthens directed links on the new note and updates neighbor context/tags. Updates use retrieved IDs, correcting the upstream retrieval-index/insertion-index mismatch, and persist immediately. Invalid model JSON never invents evolution.",
+    "Retrieval is side-effect free, matching upstream search; linked results are appended after direct results, then truncated to k, preserving the upstream result-budget limitation.",
+    "event is the note-per-event integration; episode merges a completed learning unit and is an integration variant. Source IDs, write deduplication, isolated persistent Chroma and portable snapshots are framework additions."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "offline"
+        ],
+        "default": "standard"
+      },
+      "evo_threshold": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 100
+      },
+      "neighbor_k": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 5
+      },
+      "link_threshold": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "default": 0.0
+      },
+      "agentic_search": {
+        "type": "boolean",
+        "default": true
+      },
+      "write_policy": {
+        "type": "string",
+        "enum": [
+          "event",
+          "episode"
+        ],
+        "default": "event"
+      },
+      "top_k": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 5,
+        "description": "Default result limit; retrieve(top_k=...) overrides it."
+      },
+      "storage_path": {
+        "type": "string",
+        "description": "Storage root; runtime allocates a fresh run subdirectory."
+      }
+    },
+    "additionalProperties": true
+  },
+  "limitations": [
+    "One Memory instance per scope.",
+    "Real-model acceptance and human review are separate from controlled provider tests.",
+    "No claim of reproducing the separate WujiangXu/AgenticMemory paper benchmark."
+  ],
+  "tags": [
+    "long-term",
+    "linked-notes",
+    "evolution"
+  ],
+  "requirements": {
+    "python": [
+      "chromadb"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "offline_mode": "Explicit simplified smoke tests; results do not represent the standard algorithm."
+  },
+  "route_hints": [
+    "linked note memory",
+    "memory evolution across related experiences"
+  ],
+  "interface_version": 3
+}

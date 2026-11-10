@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "case_id": "cedar-train-1",
+      "split": "train",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "history": [
+        {"event_id": "cedar-1-task", "kind": "message", "role": "user", "text": "Find the release code for the synthetic project Cedar."},
+        {"event_id": "cedar-1-answer", "kind": "message", "role": "assistant", "text": "I checked the synthetic release note: project Cedar has release code COBALT-42. The verified answer is COBALT-42."}
+      ],
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42",
+      "outcome": {"success": true, "reward": 1.0, "metadata": {"episode_id": "cedar-train-1", "task": "Find the release code for the synthetic project Cedar."}}
+    },
+    {
+      "case_id": "cedar-train-2",
+      "split": "train",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "history": [
+        {"event_id": "cedar-2-task", "kind": "message", "role": "user", "text": "Find the release code for the synthetic project Cedar."},
+        {"event_id": "cedar-2-answer", "kind": "message", "role": "assistant", "text": "I guessed the release code was GREEN-99 without checking the synthetic release note. Verification failed: the note actually says COBALT-42. The guess was wrong."}
+      ],
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42",
+      "outcome": {"success": false, "reward": -1.0, "metadata": {"episode_id": "cedar-train-2", "task": "Find the release code for the synthetic project Cedar."}}
+    },
+    {
+      "case_id": "cedar-test-1",
+      "split": "test",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42"
+    },
+    {
+      "case_id": "cedar-test-2",
+      "split": "test",
+      "scope": {"user_id": "cli-e2e", "session_id": "cedar"},
+      "query": "What is the release code for the synthetic project Cedar?",
+      "reference": "COBALT-42"
+    }
+  ]
+}

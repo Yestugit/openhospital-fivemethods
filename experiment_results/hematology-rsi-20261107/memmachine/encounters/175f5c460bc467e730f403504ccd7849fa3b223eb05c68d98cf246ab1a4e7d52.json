@@ -1,0 +1,590 @@
+{
+  "patient_id": "Patient_08330",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或脾功能亢进等）。目前缺乏关于B症状（发热、盗汗、消瘦）、浅表淋巴结肿大情况以及既往贫血具体类型的详细信息。这些关键信息对于鉴别诊断至关重要，需进一步问诊以指导后续开具血常规、凝血功能及腹部影像学等检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "发热和盗汗确实有，体重也轻了。淋巴结我没摸到肿大。去年贫血医生说是骨髓增生异常综合征引起的，具体类型我不太清楚。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输血，当时医生告知的具体类型是骨髓增生异常综合征吗？另外，除了左上腹胀满、体重下降和淤青，您最近是否有牙龈出血或鼻出血的情况？家族中是否有其他人患有血液系统疾病？\", \"reason\": \"患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及头晕，且有既往贫血输血史。虽然患者自述去年诊断为“骨髓增生异常综合征”，但缺乏对具体分型、有无消化道出血迹象以及家族遗传史的确认。这些信息对于鉴别诊断（如区分MDS复发、脾功能亢进或其他血液病）至关重要，需进一步问诊以指导后续开具血常规、腹部超声及骨髓穿刺等关键检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您好，您提到去年确诊过贫血并输血，当时医生告知的具体类型是骨髓增生异常综合征吗？另外，除了左上腹胀满、体重下降和淤青，您最近是否有牙龈出血或鼻出血的情况？家族中是否有其他人患有血液系统疾病？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "去年医生说是骨髓增生异常综合征，具体类型我不清楚。最近刷牙时确实有牙龈出血，但没有鼻出血。家族里没人得过血液病。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊为骨髓增生异常综合征（MDS），但目前的症状（左上腹胀满、体重下降、全身淤青、牙龈出血）和既往输血史需要进一步鉴别。请问您最近是否有黑便、呕血或尿色变深的情况？另外，除了乏力头晕，您是否感到明显的骨痛（如背部、四肢疼痛）？\", \"reason\": \"患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及牙龈出血，且有既往MDS病史，高度怀疑血液系统疾病进展或并发症（如脾功能亢进、消化道出血或急性转化）。目前缺乏关于消化道出血迹象、骨痛等关键体征的信息，且既往诊断细节模糊，需进一步问诊以指导后续开具血常规、腹部超声及骨髓穿刺等关键检查，明确病因并制定治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您好，您提到去年确诊为骨髓增生异常综合征（MDS），但目前的症状（左上腹胀满、体重下降、全身淤青、牙龈出血）和既往输血史需要进一步鉴别。请问您最近是否有黑便、呕血或尿色变深的情况？另外，除了乏力头晕，您是否感到明显的骨痛（如背部、四肢疼痛）？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有黑便、呕血或尿色变深。也没有明显的骨痛，就是觉得乏力头晕。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及牙龈出血，且有既往贫血输血史。虽然患者自述无黑便呕血，但结合体征和症状，必须立即完善全血细胞计数（CBC）以评估三系情况，外周血涂片寻找原始细胞，以及凝血功能检查。这些是鉴别诊断和制定治疗方案最基础且关键的信息，目前尚未开具任何检查，故优先选择开检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者有左上腹胀满（提示脾大可能）、体重下降、全身淤青及牙龈出血，且既往诊断为骨髓增生异常综合征（MDS），目前症状加重。虽然患者自述无黑便呕血，但结合体征和症状，必须立即完善全血细胞计数（CBC）以评估三系情况，外周血涂片寻找原始细胞或异常形态，以及凝血功能检查。这些是鉴别诊断血液恶性肿瘤与良性病变、评估出血风险最基础且关键的信息，目前尚未开具任何检查，故优先选择开检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有既往贫血输血史。虽然患者自述去年诊断为骨髓增生异常综合征（MDS），但目前的症状（特别是左上腹胀满提示脾大可能）和体征需要重新评估以鉴别是MDS复发、进展为急性白血病，还是其他原因（如脾功能亢进）。首先需进行全血细胞计数（CBC）评估三系减少情况；结合外周血涂片观察有无原始细胞或异常形态以鉴别白血病与再生障碍性贫血等；同时进行凝血功能全套检查，排除凝血功能障碍导致的出血倾向，为后续诊断提供关键依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：38.6 x 10^9/L［参考范围：4.0-10.0］\", \"血红蛋白\": \"Hgb：82 g/L［参考范围：110-150］\", \"血小板计数\": \"PLT：42 x 10^9/L［参考范围：140-380］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"异型细胞或原始细胞\": \"约32%循环原始细胞伴奥尔小体\", \"血小板数量\": \"显著血小板减少［参考值：数量充足（估计150,000-400,000/μL）。］\", \"红细胞形态\": \"正细胞性贫血；偶见有核红细胞\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异型细胞或原始细胞\", \"血小板数量\", \"红细胞形态\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"2.85 mg/L FEU［参考值：建议对 >50 岁患者采用年龄校正截断值（年龄[岁] × 0.01 mg/L FEU）］\", \"凝血酶原时间\": \"16.8 秒［参考值：11-13.5 秒（肝功能下降时可能轻度延长）］\", \"凝血酶时间\": \"21.5 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.45［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"38.2 秒［参考值：25-35 秒（因凝血因子VIII升高可能轻度缩短）］\", \"血浆纤维蛋白原\": \"1.6 g/L［参考值：2.0-4.5 g/L（水平通常随年龄增长而升高）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"D-二聚体\", \"凝血酶原时间\", \"凝血酶时间\", \"国际标准化比值\", \"活化部分凝血活酶时间\", \"血浆纤维蛋白原\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者表现为全血细胞减少（Hgb 82g/L, PLT 42x10^9/L）伴白细胞显著升高（WBC 38.6x10^9/L），外周血涂片发现约32%循环原始细胞伴奥尔小体，这是急性白血病的典型特征。同时凝血功能全套显示D-二聚体升高、PT/APTT延长及纤维蛋白原降低，提示合并弥散性血管内凝血（DIC）。结合既往“骨髓增生异常综合征”病史，高度怀疑MDS转化至急性白血病（AML-M7或伴DIC的AML）。现有信息已足够支持进入诊断和治疗阶段，需立即启动化疗及抗凝/支持治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为全血细胞减少（贫血、血小板减少）伴白细胞显著升高，外周血涂片发现约32%的循环原始细胞并伴有奥尔小体（Auer rods），这是急性髓系白血病（AML）的特征性表现。同时凝血功能异常提示可能存在弥散性血管内凝血（DIC）风险。结合既往骨髓增生异常综合征（MDS）病史，高度怀疑MDS转化为急性白血病或新发AML。此类疾病属于血液系统恶性肿瘤，需由血液科进行紧急评估、骨髓穿刺确诊及化疗方案制定。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"急性髓系白血病\", \"treatment_plan\": \"1. **紧急评估与风险分层**：\\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确AML分型（如M3型需紧急鉴别）。\\n   - 完善凝血功能动态监测，评估弥散性血管内凝血（DIC）风险；完善肝肾功能、电解质、尿酸水平。\\n   - 进行心脏超声评估心功能，为化疗做准备。\\n\\n2. **支持治疗与并发症管理**：\\n   - **纠正凝血障碍**：鉴于患者D-二聚体显著升高、纤维蛋白原降低及凝血时间延长，高度提示合并DIC。立即输注新鲜冰冻血浆（FFP）、冷沉淀或纤维蛋白原浓缩物以补充凝血因子，维持纤维蛋白原>1.5g/L，预防致命性出血。\\n   - **输血支持**：血红蛋白82g/L伴乏力头晕，输注去白细胞悬浮红细胞；血小板42x10^9/L伴淤青，避免剧烈运动，若PLT<20x10^9/L或有活动性出血则输注血小板。\\n   - **肿瘤溶解综合征（TLS）预防**：水化、碱化尿液，使用别嘌醇或拉布立酶降低尿酸，密切监测电解质。\\n   - **感染预防**：中性粒细胞减少（虽WBC高但多为原始细胞），严格无菌操作，发热时立即经验性使用广谱抗生素。\\n\\n3. **针对性药物治疗**：\\n   - **诱导缓解化疗**：确诊非M3型后，首选“7+3”方案（阿糖胞苷+蒽环类药物，如柔红霉素或伊达比星）。若为M3型（急性早幼粒细胞白血病），立即启动全反式维甲酸（ATRA）联合三氧化二砷（ATO）治疗，这是挽救生命的关键。\\n   - **靶向治疗**：根据基因检测结果，若存在FLT3突变，加用吉瑞替尼或米哚妥林；若存在IDH突变，考虑相应抑制剂。\\n   - **巩固治疗**：诱导缓解后进行高强度巩固化疗或异基因造血干细胞移植（尤其对于高危组患者）。\\n\\n4. **长期管理与随访**：\\n   - 每疗程后复查骨髓及血象，监测微小残留病（MRD）。\\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的焦虑，强调规范治疗的治愈希望。\\n   - 出院后定期随访，注意疫苗接种时机（化疗期间暂停活疫苗）。\", \"reasoning\": \"患者既往有“骨髓增生异常综合征（MDS）”病史，现出现高热、盗汗、体重下降等B症状，查体左上腹胀满（脾大可能）。实验室检查显示全血细胞减少（贫血、血小板减少）伴白细胞显著升高（38.6 x 10^9/L），外周血涂片发现约32%的循环原始细胞且伴有奥尔小体（Auer rods），这是急性髓系白血病（AML）的特异性形态学标志。同时，凝血功能全套显示D-二聚体升高、纤维蛋白原降低及多凝血指标异常，提示并发弥散性血管内凝血（DIC），这在AML（尤其是M3型）中常见且危及生命。结合既往MDS病史，符合MDS转化至AML的特征。诊断明确为急性髓系白血病，治疗方案需立即启动抗白血病化疗并紧急纠正凝血功能障碍。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_08330",
+    "mode": "train",
+    "memory_notes": [
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有既往贫血输血史，高度提示可能存在血液系统恶性肿瘤（如白血病、淋巴瘤）或严重的凝血功能障碍。目前缺乏对既往贫血具体病因、有无消化道/泌尿道出血以及家族遗传史的关键信息，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查，初步鉴别诊断方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重血小板减少），但缺乏对既往贫血具体类型、消化道出血迹象以及家族遗传史的关键信息。这些信息对于鉴别诊断（如区分骨髓增生异常综合征、急性白血病与单纯性缺铁性贫血复发）至关重要，需进一步问诊以指导后续开具血常规、凝血功能及腹部影像学等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有既往贫血输血史，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血复发）。目前缺乏关于贫血具体类型、消化道出血迹象以及家族遗传史的关键信息，这些对于鉴别诊断至关重要。需进一步问诊以指导后续开具血常规、凝血功能及骨髓穿刺等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有贫血输血史，高度提示血液系统疾病（如白血病、骨髓增生异常综合征或严重凝血功能障碍）。目前缺乏关于既往贫血具体类型、消化道出血迹象以及家族遗传史的关键信息，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查，初步鉴别诊断方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血），但缺乏关于既往贫血具体类型、有无消化道出血以及家族史的关键信息。这些信息对于鉴别诊断（如区分缺铁性贫血复发、再生障碍性贫血或血液恶性肿瘤）至关重要，需进一步问诊以指导后续开具血常规等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您刚才提到左上腹胀满、体重下降、全身淤青和刷牙出血，这些症状非常令人担忧。为了进一步判断，我需要确认：您提到的“身上全是淤青”具体分布在哪些部位（如四肢、躯干）？除了牙龈出血，是否有鼻出血或消化道出血（如黑便、呕血）的情况？另外，您之前是否做过血常规检查？如果有，结果如何？\", \"reason\": \"患者主诉出现体重下降、多部位淤青及黏膜出血（牙龈出血），结合既往病史中反复流鼻血的描述，高度提示可能存在血液系统疾病（如白血病、再生障碍性贫血或血小板减少性紫癜）。目前缺乏关键的实验室检查数据（如血常规）来评估贫血程度、血小板计数及白细胞形态，且对出血的具体表现和分布尚不明确。在确诊前，必须通过问诊补充关键细节并尽快安排血常规等检查以明确诊断方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，除了您提到的乏力、气短、盗汗和发热，最近有没有出现牙龈出血、皮肤不明原因的淤青或瘀斑？另外，您的颈部、腋下或腹股沟等部位有没有摸到肿大的淋巴结？\", \"reason\": \"患者主诉典型的B症状（发热、盗汗、体重下降）及贫血表现（乏力、气短），高度怀疑血液系统恶性肿瘤（如白血病或淋巴瘤）。为了进一步鉴别诊断，必须询问是否存在出血倾向（提示血小板减少）和淋巴结肿大（提示淋巴瘤或白血病浸润），这是决定后续检查方向（如血常规、骨髓穿刺或淋巴结活检）的关键信息。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及头晕，且有既往贫血输血史，高度提示血液系统疾病（如白血病、骨髓增生异常综合征或严重凝血功能障碍）。目前缺乏关于贫血具体类型、消化道出血迹象以及家族遗传史的关键信息，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到有持续乏力和体重下降。请问除了牙龈出血和皮肤瘀青，您最近有没有出现不明原因的发热、夜间盗汗或骨痛（如背部、四肢疼痛）的情况？另外，您的颈部、腋下或腹股沟等部位有没有摸到肿大的淋巴结？\", \"reason\": \"患者主诉乏力、体重下降及出血倾向（牙龈出血、瘀青），但缺乏关于贫血严重程度（面色苍白）、感染症状（发热）、B症状（盗汗、消瘦）以及是否存在淋巴结肿大等关键体征的信息。为了初步鉴别是单纯性贫血、血小板减少性紫癜还是血液系统恶性肿瘤（如白血病、淋巴瘤），需要进一步询问这些典型临床表现以决定后续检查方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到有持续乏力和体重下降。请问除了牙龈出血和皮肤瘀青，您最近有没有出现不明原因的发热、夜间盗汗或骨痛（如背部、四肢疼痛）的情况？另外，您的颈部、腋下或腹股沟等部位有没有摸到肿大的淋巴结？\", \"reason\": \"患者主诉乏力、体重下降及出血倾向（牙龈出血、皮肤瘀青），但缺乏关于贫血严重程度（面色苍白）、感染症状（发热）、B症状（盗汗、消瘦）以及淋巴结肿大等关键体征的信息。为了初步鉴别是单纯性贫血、血小板减少性紫癜还是血液系统恶性肿瘤（如白血病、淋巴瘤），需要进一步询问这些典型临床表现以决定后续检查方向。\"}}",
+      "诊疗任务（血液科）\n患者描述：是的，我最近四个月确实越来越乏力，活动后气短。体重也轻了3公斤。不过我没有夜间盗汗，也没有不明原因的发热。\n淋巴结我没摸到。皮肤瘀青和牙龈、鼻出血的情况确实有，最近刷牙时容易出血，身上也常出现不明原因的淤青。\n检查信息：{\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：2.1 x 10^9/L［参考范围：4.5-11.0 x 10^9/L］\", \"血红蛋白\": \"Hgb：86 g/L［参考范围：140-180 g/L］\", \"血小板计数\": \"PLT：48 x 10^9/L［参考范围：150-400 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"红细胞形态\": \"可见大卵圆形红细胞伴异形异大小红细胞\", \"白细胞形态\": \"低颗粒假Pelger-Huet中性粒细胞\", \"血小板形态与分布\": \"巨大低颗粒血小板，符合发育异常表现\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞形态\", \"白细胞形态\", \"血小板形态与分布\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"0.45 mg/L FEU［参考值：<0.5 mg/L FEU（或 <250 ng/mL DDU）］\", \"凝血酶原时间\": \"12.5 秒［参考值：11-13.5 秒］\", \"凝血酶时间\": \"16 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.0［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"30 秒［参考值：25-35 秒］\", \"血浆纤维蛋白原\": \"3.2 g/L［参考值：2.0-4.0 g/L］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}, \"C反应蛋白（CRP）\": {\"result\": {\"C反应蛋白\": \"18.5 mg/L［参考值：<10 mg/L（或 <1.0 mg/dL）］\", \"高敏C反应蛋白\": \"4.2 mg/L［参考值：<3.0 mg/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"C反应蛋白\", \"高敏C反应蛋白\"]}, \"红细胞沉降率（ESR）\": {\"result\": {\"红细胞沉降率\": \"45 mm/hr［参考值：0-15 mm/hr］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞沉降率\"]}, \"骨髓穿刺和活检（BMAB）\": {\"result\": {\"骨髓细胞密度\": \"骨髓增生活跃（约85%）［参考范围：30-70%］\", \"骨髓三系造血\": \"可见三系发育异常\", \"骨髓原始细胞\": \"原始细胞增多（约8%）［参考值：无增多（<5%）。］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓细胞密度\", \"骨髓三系造血\", \"骨髓原始细胞\"]}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到有乏力、面色苍白以及牙龈出血和皮肤瘀青。请问除了这些症状，您最近有没有出现不明原因的发热、夜间盗汗或骨痛（如背部、四肢疼痛）的情况？另外，您的颈部、腋下或腹股沟等部位有没有摸到肿大的淋巴结？\", \"reason\": \"患者主诉乏力、贫血体征（面色苍白）及出血倾向（牙龈出血、瘀青），并伴有体重下降。目前缺乏关于感染症状（发热）、B症状（盗汗、消瘦）以及是否存在淋巴结肿大或骨痛等关键信息。为了初步鉴别是单纯性贫血/血小板减少性紫癜还是血液系统恶性肿瘤（如白血病、淋巴瘤），需要进一步询问这些典型临床表现以决定后续检查方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到有持续乏力和体重下降。请问除了牙龈出血和皮肤瘀青，您最近有没有出现不明原因的发热、夜间盗汗或骨痛（如背部、四肢疼痛）的情况？另外，您的颈部、腋下或腹股沟等部位有没有摸到肿大的淋巴结？\", \"reason\": \"患者主诉乏力、体重下降及出血症状（牙龈出血、瘀青），但缺乏关于贫血严重程度（面色苍白）、感染症状（发热）、B症状（盗汗、消瘦）以及是否存在淋巴结肿大等关键体征的信息。为了初步鉴别是单纯性贫血、凝血功能障碍还是血液系统恶性肿瘤（如白血病、淋巴瘤），需要进一步询问这些典型临床表现以决定后续检查方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到有持续乏力和体重下降。请问除了牙龈出血和皮肤瘀青，您最近有没有出现不明原因的发热、夜间盗汗或骨痛（如背部、四肢疼痛）的情况？另外，您的颈部、腋下或腹股沟等部位有没有摸到肿大的淋巴结？\", \"reason\": \"患者主诉乏力、体重下降及出血倾向（牙龈出血、皮肤瘀青），目前缺乏关于贫血严重程度（面色苍白）、感染症状（发热）、B症状（盗汗、消瘦）以及淋巴结肿大等关键体征的信息。为了鉴别是单纯的血小板减少性紫癜（ITP）、再生障碍性贫血还是血液系统恶性肿瘤（如白血病、淋巴瘤），需要进一步询问这些典型临床表现以决定后续检查方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到有持续乏力和近期体重下降。请问除了牙龈出血和皮肤瘀青，您最近有没有出现不明原因的发热、夜间盗汗或骨痛（如背部、四肢疼痛）的情况？另外，您的颈部、腋下或腹股沟等部位有没有摸到肿大的淋巴结？\", \"reason\": \"患者主诉乏力、体重下降及出血症状（牙龈出血、瘀青），目前缺乏关于贫血严重程度、感染迹象（发热）、B症状（盗汗、消瘦）以及是否存在淋巴结肿大或骨痛的关键信息。这些信息对于鉴别是单纯的血小板减少性紫癜（ITP）、再生障碍性贫血还是血液系统恶性肿瘤（如白血病、淋巴瘤）至关重要，需进一步问诊以指导后续开具血常规等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血），但缺乏关于既往贫血具体类型、消化道出血迹象以及家族遗传史的关键信息。这些信息对于鉴别诊断至关重要，需进一步问诊以指导后续开具血常规、凝血功能及骨髓穿刺等关键检查。\"}}",
+      "您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、骨髓增生异常综合征或严重凝血功能障碍），但缺乏关键的既往病史细节（贫血具体类型）、消化道出血证据以及家族史信息。这些信息对于鉴别诊断至关重要，需进一步问诊以指导后续开具血常规、凝血功能及腹部影像学等关键检查。\"}}",
+      "您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血），但缺乏关于既往贫血具体类型、有无消化道出血以及家族史的关键信息。这些信息对于鉴别诊断（如区分缺铁性贫血复发、再生障碍性贫血或血液恶性肿瘤）至关重要，需进一步问诊以指导后续开具血常规等关键检查。\"}}",
+      "您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有贫血输血史，高度提示血液系统疾病（如白血病、淋巴瘤或骨髓增生异常综合征等）。虽然患者自述无黑便呕血，但结合体征和症状，必须立即完善全血细胞计数（CBC）以评估三系情况，外周血涂片寻找原始细胞，以及凝血功能检查。这些是鉴别诊断和制定治疗方案最基础且关键的信息，目前尚未开具任何检查，故优先选择开检查。\"}}",
+      "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及牙龈出血，且有贫血输血史，高度怀疑血液系统疾病（如白血病、淋巴瘤或骨髓增生异常综合征等）。虽然既往对话中未明确提及具体检查结果，但根据诊疗规范，面对不明原因的贫血、出血倾向及疑似脾大症状，必须优先进行全血细胞计数（CBC）和外周血涂片检查，以评估白细胞、血红蛋白及血小板水平，并观察有无原始细胞或异常形态，这是鉴别诊断血液恶性肿瘤与良性病变最基础且关键的步骤。\"}}",
+      "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及刷牙出血，且有贫血输血史，高度怀疑血液系统疾病。首先需进行全血细胞计数（CBC）评估贫血程度、白细胞及血小板情况；结合外周血涂片观察有无原始细胞或异常形态以鉴别白血病、再生障碍性贫血等；同时进行凝血功能全套检查，排除凝血功能障碍导致的出血倾向，为后续诊断提供关键依据。\"}}",
+      "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：2.3 x 10^9/L［参考范围：4.5-11.0］\", \"血红蛋白\": \"Hgb：92 g/L［参考范围：120-160］\", \"血小板计数\": \"PLT：48 x 10^9/L［参考范围：150-400］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"无异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 65%、淋巴细胞 28%、单核细胞 5%、嗜酸性粒细胞 2%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。\", \"血小板形态与分布\": \"可见散在大型血小板，分布欠均匀。\", \"血小板数量\": \"显著减少（估计约 48,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板形态与分布\", \"血小板数量\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"0.45 mg/L FEU［参考值：<0.5 mg/L FEU（或 <250 ng/mL DDU）］\", \"凝血酶原时间\": \"13.2 秒［参考值：11-13.5 秒］\", \"凝血酶时间\": \"16.5 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.05［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"29.8 秒［参考值：25-35 秒］\", \"血浆纤维蛋白原\": \"3.1 g/L［参考值：2.0-4.0 g/L］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}",
+      "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有明显的出血倾向（全身淤青、牙龈出血）和贫血症状（头晕、乏力）。外周血涂片显示显著血小板减少及大型血小板，而凝血功能正常，这高度提示骨髓造血功能障碍或免疫性破坏导致的血液系统疾病（如再生障碍性贫血、骨髓增生异常综合征或特发性血小板减少性紫癜等）。鉴于患者有明确的三系减少和出血表现，且需进一步排查骨髓病变，血液科是最合适的诊疗科室。\"}}",
+      "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"骨髓增生异常综合征\", \"treatment_plan\": \"1. **紧急评估与风险分层**：\\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确MDS分型（IPSS-R评分）。\\n   - 完善铁代谢指标（血清铁蛋白、转铁蛋白饱和度）、叶酸/维生素B12水平，排除营养性贫血。\\n   - 监测血常规变化频率，评估出血风险等级。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：鉴于患者血红蛋白92g/L且有头晕症状，若Hgb<70g/L或症状明显，输注去白细胞悬浮红细胞；血小板48x10^9/L且伴皮肤淤青，避免剧烈运动，必要时预防性输注血小板（若PLT<20x10^9/L或有活动性出血）。\\n   - **感染预防**：白细胞2.3x10^9/L属中性粒细胞减少，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **止血措施**：避免使用阿司匹林、布洛芬等抗血小板药物；使用软毛牙刷，防止牙龈出血。\\n\\n3. **针对性药物治疗**（根据骨髓结果调整）：\\n   - **去甲基化治疗**：若确诊为高危组或中危-2组，首选地西他滨（Decitabine）或阿扎胞苷（Azacitidine）诱导缓解，改善血象并延缓进展。\\n   - **促造血治疗**：对于低危组贫血为主者，可考虑重组人促红细胞生成素（EPO）联合粒细胞集落刺激因子（G-CSF）。\\n   - **免疫抑制治疗**：若存在特定克隆特征（如HLA-DR15阳性）或年轻患者，可考虑ATG+环孢素方案。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，监测疾病转化风险（向急性白血病转化）。\\n   - 若病情进展至高危或出现难治性血细胞减少，尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的过度焦虑，强调规范治疗的重要性。\", \"reasoning\": \"患者表现为全血细胞减少（WBC 2.3, Hgb 92, PLT 48），伴有体重下降和左上腹胀满（提示脾大可能）。外周血涂片未见原始细胞，排除了急性白血病；凝血功能正常，排除了DIC或严重凝血障碍。结合既往“贫血”病史及近期加重，且无典型ITP的孤立性血小板减少特征（合并白细胞和血红蛋白降低），高度怀疑骨髓造血功能衰竭性疾病。在血液科标准病名中，骨髓增生异常综合征（MDS）最符合三系减少、无原始细胞增多（<20%）、伴不明原因消瘦及脾大倾向的临床特征。需通过骨髓检查确诊分型，治疗方案需根据风险分层选择去甲基化药物或支持治疗，而非盲目化疗或单纯激素治疗。\"}}",
+      "{\"patient_id\": \"Patient_03960\", \"team_id\": \"rsi_896d6e22b72f4eb7ad5d05a356ccff3a\", \"diagnosis\": [\"骨髓增生异常综合征\"], \"treatment_plan\": \"1. **紧急评估与风险分层**：\\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确MDS分型（IPSS-R评分）。\\n   - 完善铁代谢指标（血清铁蛋白、转铁蛋白饱和度）、叶酸/维生素B12水平，排除营养性贫血。\\n   - 监测血常规变化频率，评估出血风险等级。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：鉴于患者血红蛋白92g/L且有头晕症状，若Hgb<70g/L或症状明显，输注去白细胞悬浮红细胞；血小板48x10^9/L且伴皮肤淤青，避免剧烈运动，必要时预防性输注血小板（若PLT<20x10^9/L或有活动性出血）。\\n   - **感染预防**：白细胞2.3x10^9/L属中性粒细胞减少，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **止血措施**：避免使用阿司匹林、布洛芬等抗血小板药物；使用软毛牙刷，防止牙龈出血。\\n\\n3. **针对性药物治疗**（根据骨髓结果调整）：\\n   - **去甲基化治疗**：若确诊为高危组或中危-2组，首选地西他滨（Decitabine）或阿扎胞苷（Azacitidine）诱导缓解，改善血象并延缓进展。\\n   - **促造血治疗**：对于低危组贫血为主者，可考虑重组人促红细胞生成素（EPO）联合粒细胞集落刺激因子（G-CSF）。\\n   - **免疫抑制治疗**：若存在特定克隆特征（如HLA-DR15阳性）或年轻患者，可考虑ATG+环孢素方案。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，监测疾病转化风险（向急性白血病转化）。\\n   - 若病情进展至高危或出现难治性血细胞减少，尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的过度焦虑，强调规范治疗的重要性。\", \"reasoning\": \"患者表现为全血细胞减少（WBC 2.3, Hgb 92, PLT 48），伴有体重下降和左上腹胀满（提示脾大可能）。外周血涂片未见原始细胞，排除了急性白血病；凝血功能正常，排除了DIC或严重凝血障碍。结合既往“贫血”病史及近期加重，且无典型ITP的孤立性血小板减少特征（合并白细胞和血红蛋白降低），高度怀疑骨髓造血功能衰竭性疾病。在血液科标准病名中，骨髓增生异常综合征（MDS）最符合三系减少、无原始细胞增多（<20%）、伴不明原因消瘦及脾大倾向的临床特征。需通过骨髓检查确诊分型，治疗方案需根据风险分层选择去甲基化药物或支持治疗，而非盲目化疗或单纯激素治疗。\", \"ordered_examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"conversation_rounds\": 11, \"finished\": true}",
+      "{\"reflection\": {\"reflection\": {\"profile\": \"患者有左上腹胀满、体重下降史，伴全身淤青、牙龈出血及头晕，去年确诊贫血并输血但类型不明，无家族血液病史。\", \"diagnosis_reflection\": \"误诊为骨髓增生异常综合征（MDS），漏诊脾功能亢进。未结合左上腹饱胀（提示脾大）和既往输血史深入鉴别外周血细胞破坏/滞留与骨髓生成障碍的区别。\", \"examination_reflection\": \"仅开具血常规、涂片及凝血检查，遗漏腹部超声（评估脾脏大小及门静脉高压）、骨髓穿刺活检（排除MDS或MPN）及核素显像（定位脾功能亢进）。\", \"treatment_reflection\": \"治疗方案基于错误的MDS诊断制定，推荐去甲基化药物等，完全忽略了针对脾功能亢进的脾切除术这一关键治疗策略，且未进行术前免疫接种及围手术期风险评估。\", \"future_strategy\": \"面对贫血伴脾大体征（左上腹胀）及多系减少时，优先排查脾功能亢进，必须完善腹部超声和骨髓检查以鉴别病因；治疗需根据病因选择手术或药物，避免盲目套用MDS方案。\"}}, \"evaluation\": {\"patientId\": \"Patient_03960\", \"status\": \"evaluated\", \"evaluationStatus\": \"evaluated\", \"diagnosisAccuracy\": 0.0, \"examinationPrecision\": 0.3333, \"treatmentOverallScore\": 0.48, \"treatmentSafety\": 1.0, \"treatmentEffectivenessAlignment\": 0.4, \"treatmentPersonalization\": 0.6, \"diagnosisDetail\": {\"submitted\": [\"骨髓增生异常综合征\"], \"expected\": [\"脾功能亢进\"], \"matched\": [], \"accuracy\": 0.0, \"status\": \"wrong\"}, \"examinationDetail\": {\"ordered\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"expected\": [\"全血细胞计数（CBC）\", \"腹部超声\", \"骨髓穿刺和活检（BMAB）\", \"放射性核素显像\", \"标记红细胞闪烁显像\"], \"matched\": [\"全血细胞计数（CBC）\"], \"precision\": 0.3333333333333333, \"coverage\": 0.2, \"precisionEligible\": true}, \"treatmentDetail\": {\"submitted\": \"1. **紧急评估与风险分层**：\\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确MDS分型（IPSS-R评分）。\\n   - 完善铁代谢指标（血清铁蛋白、转铁蛋白饱和度）、叶酸/维生素B12水平，排除营养性贫血。\\n   - 监测血常规变化频率，评估出血风险等级。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：鉴于患者血红蛋白92g/L且有头晕症状，若Hgb<70g/L或症状明显，输注去白细胞悬浮红细胞；血小板48x10^9/L且伴皮肤淤青，避免剧烈运动，必要时预防性输注血小板（若PLT<20x10^9/L或有活动性出血）。\\n   - **感染预防**：白细胞2.3x10^9/L属中性粒细胞减少，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **止血措施**：避免使用阿司匹林、布洛芬等抗血小板药物；使用软毛牙刷，防止牙龈出血。\\n\\n3. **针对性药物治疗**（根据骨髓结果调整）：\\n   - **去甲基化治疗**：若确诊为高危组或中危-2组，首选地西他滨（Decitabine）或阿扎胞苷（Azacitidine）诱导缓解，改善血象并延缓进展。\\n   - **促造血治疗**：对于低危组贫血为主者，可考虑重组人促红细胞生成素（EPO）联合粒细胞集落刺激因子（G-CSF）。\\n   - **免疫抑制治疗**：若存在特定克隆特征（如HLA-DR15阳性）或年轻患者，可考虑ATG+环孢素方案。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，监测疾病转化风险（向急性白血病转化）。\\n   - 若病情进展至高危或出现难治性血细胞减少，尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的过度焦虑，强调规范治疗的重要性。\", \"overallScore\": 0.48, \"safety\": 1.0, \"effectivenessAlignment\": 0.4, \"personalization\": 0.6, \"reasoning\": \"方案未采纳参考标准推荐的脾切除术，误诊为MDS而忽略脾亢主因，策略完全偏离。\", \"reference\": \"启动脾切除术，以处理门静脉高压背景下的重度血细胞减少和有症状的脾大，并考虑骨髓增殖性肿瘤（MPN）相关脾内滞留的可能贡献。骨髓穿刺和活检（BMAB）显示骨髓细胞增生活跃，三系增生/巨核细胞增多，且无发育异常或恶性浸润，支持骨髓生成保留，并提示外周滞留（脾功能亢进）是导致血细胞减少的直接原因。脾切除术前，请肝病科与外科联合评估门静脉高压相关手术风险；评估并优化出血/血栓风险（包括凝血参数及必要时的血小板策略），并制定围手术期管理方案，注意门静脉高压/腹水及静脉曲张出血风险。仅当贫血出现临床症状（如疲劳伴运动耐量下降、劳力性心悸/头晕）和/或血流动力学不稳定，或血红蛋白进一步下降时，才输注浓缩红细胞，而不是仅因血红蛋白92 g/L即输血。进行术前无脾免疫接种：给予肺炎球菌疫苗和脑膜炎球菌疫苗（如尚未接种），在条件允许时最好于计划脾切除术前至少2周完成。实施高蛋白、少量多餐饮食，以缓解早饱和体重下降，同时继续使用替诺福韦、普萘洛尔和羟氯喹治疗基础疾病。安排出院后两周内于血液科随访，并嘱如出现体温高于38.3°C、严重腹痛或出血，应立即就医。\"}, \"ground_truth\": {\"final_diagnosis\": \"脾功能亢进\", \"necessary_examinations\": [\"全血细胞计数（CBC）\", \"腹部超声\", \"骨髓穿刺和活检（BMAB）\", \"放射性核素显像\", \"标记红细胞闪烁显像\"], \"contraindications\": {\"drugs\": [\"青霉素\"], \"treatments\": []}, \"treatment_plan\": \"启动脾切除术，以处理门静脉高压背景下的重度血细胞减少和有症状的脾大，并考虑骨髓增殖性肿瘤（MPN）相关脾内滞留的可能贡献。骨髓穿刺和活检（BMAB）显示骨髓细胞增生活跃，三系增生/巨核细胞增多，且无发育异常或恶性浸润，支持骨髓生成保留，并提示外周滞留（脾功能亢进）是导致血细胞减少的直接原因。脾切除术前，请肝病科与外科联合评估门静脉高压相关手术风险；评估并优化出血/血栓风险（包括凝血参数及必要时的血小板策略），并制定围手术期管理方案，注意门静脉高压/腹水及静脉曲张出血风险。仅当贫血出现临床症状（如疲劳伴运动耐量下降、劳力性心悸/头晕）和/或血流动力学不稳定，或血红蛋白进一步下降时，才输注浓缩红细胞，而不是仅因血红蛋白92 g/L即输血。进行术前无脾免疫接种：给予肺炎球菌疫苗和脑膜炎球菌疫苗（如尚未接种），在条件允许时最好于计划脾切除术前至少2周完成。实施高蛋白、少量多餐饮食，以缓解早饱和体重下降，同时继续使用替诺福韦、普萘洛尔和羟氯喹治疗基础疾病。安排出院后两周内于血液科随访，并嘱如出现体温高于38.3°C、严重腹痛或出血，应立即就医。\"}}}",
+      "诊疗任务（血液科）\n患者描述：鼻子附近？其实我没觉得鼻子怪，主要是左上腹像塞满了东西，吃一点就胀。最近确实很怕，我体重掉了四公斤，身上全是淤青，刷牙也出血，还老头晕。家里没人这样，但我好担心是不是得了什么大病，能不能让我快点好起来回去工作？\n淤青主要在四肢，特别是小腿，一碰就青。没流鼻血，也没黑便或呕血。去年做过血常规，医生说是贫血，让我输了两次血，但最近又头晕乏力了，我很怕是不是又要出大事？\n去年医生只说是贫血，让我输了血，具体类型真没细说，我也不清楚。最近没有黑便或呕血，尿色也没变深。家里没人有血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n去年医生只说是贫血，具体类型真没细说，我也不清楚。最近没有黑便、呕血或尿色变深，家里也没人得血液病。但我好怕，这会不会是那个骨髓肿瘤又恶化了？我能不能快点好起来回去工作啊？\n检查信息：{\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：2.3 x 10^9/L［参考范围：4.5-11.0］\", \"血红蛋白\": \"Hgb：92 g/L［参考范围：120-160］\", \"血小板计数\": \"PLT：48 x 10^9/L［参考范围：150-400］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"无异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 65%、淋巴细胞 28%、单核细胞 5%、嗜酸性粒细胞 2%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；无明显红细胞大小不等或形态异常。\", \"血小板形态与分布\": \"可见散在大型血小板，分布欠均匀。\", \"血小板数量\": \"显著减少（估计约 48,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板形态与分布\", \"血小板数量\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"0.45 mg/L FEU［参考值：<0.5 mg/L FEU（或 <250 ng/mL DDU）］\", \"凝血酶原时间\": \"13.2 秒［参考值：11-13.5 秒］\", \"凝血酶时间\": \"16.5 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.05［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"29.8 秒［参考值：25-35 秒］\", \"血浆纤维蛋白原\": \"3.1 g/L［参考值：2.0-4.0 g/L］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}",
+      "{\"conversation_rounds\": 11, \"diagnosis\": [\"骨髓增生异常综合征\"], \"finished\": true, \"ordered_examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"patient_id\": \"Patient_03960\", \"reasoning\": \"患者表现为全血细胞减少（WBC 2.3, Hgb 92, PLT 48），伴有体重下降和左上腹胀满（提示脾大可能）。外周血涂片未见原始细胞，排除了急性白血病；凝血功能正常，排除了DIC或严重凝血障碍。结合既往“贫血”病史及近期加重，且无典型ITP的孤立性血小板减少特征（合并白细胞和血红蛋白降低），高度怀疑骨髓造血功能衰竭性疾病。在血液科标准病名中，骨髓增生异常综合征（MDS）最符合三系减少、无原始细胞增多（<20%）、伴不明原因消瘦及脾大倾向的临床特征。需通过骨髓检查确诊分型，治疗方案需根据风险分层选择去甲基化药物或支持治疗，而非盲目化疗或单纯激素治疗。\", \"team_id\": \"rsi_896d6e22b72f4eb7ad5d05a356ccff3a\", \"treatment_plan\": \"1. **紧急评估与风险分层**：\\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确MDS分型（IPSS-R评分）。\\n   - 完善铁代谢指标（血清铁蛋白、转铁蛋白饱和度）、叶酸/维生素B12水平，排除营养性贫血。\\n   - 监测血常规变化频率，评估出血风险等级。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：鉴于患者血红蛋白92g/L且有头晕症状，若Hgb<70g/L或症状明显，输注去白细胞悬浮红细胞；血小板48x10^9/L且伴皮肤淤青，避免剧烈运动，必要时预防性输注血小板（若PLT<20x10^9/L或有活动性出血）。\\n   - **感染预防**：白细胞2.3x10^9/L属中性粒细胞减少，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **止血措施**：避免使用阿司匹林、布洛芬等抗血小板药物；使用软毛牙刷，防止牙龈出血。\\n\\n3. **针对性药物治疗**（根据骨髓结果调整）：\\n   - **去甲基化治疗**：若确诊为高危组或中危-2组，首选地西他滨（Decitabine）或阿扎胞苷（Azacitidine）诱导缓解，改善血象并延缓进展。\\n   - **促造血治疗**：对于低危组贫血为主者，可考虑重组人促红细胞生成素（EPO）联合粒细胞集落刺激因子（G-CSF）。\\n   - **免疫抑制治疗**：若存在特定克隆特征（如HLA-DR15阳性）或年轻患者，可考虑ATG+环孢素方案。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，监测疾病转化风险（向急性白血病转化）。\\n   - 若病情进展至高危或出现难治性血细胞减少，尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的过度焦虑，强调规范治疗的重要性。\"}",
+      "{\"reward\": 0.27109999999999995, \"success\": false, \"text\": \"{\\\"reflection\\\": {\\\"profile\\\": \\\"患者有左上腹胀满、体重下降史，伴全身淤青、牙龈出血及头晕，去年确诊贫血并输血但类型不明，无家族血液病史。\\\", \\\"diagnosis_reflection\\\": \\\"误诊为骨髓增生异常综合征（MDS），漏诊脾功能亢进。未结合左上腹饱胀（提示脾大）和既往输血史深入鉴别外周血细胞破坏/滞留与骨髓生成障碍的区别。\\\", \\\"examination_reflection\\\": \\\"仅开具血常规、涂片及凝血检查，遗漏腹部超声（评估脾脏大小及门静脉高压）、骨髓穿刺活检（排除MDS或MPN）及核素显像（定位脾功能亢进）。\\\", \\\"treatment_reflection\\\": \\\"治疗方案基于错误的MDS诊断制定，推荐去甲基化药物等，完全忽略了针对脾功能亢进的脾切除术这一关键治疗策略，且未进行术前免疫接种及围手术期风险评估。\\\", \\\"future_strategy\\\": \\\"面对贫血伴脾大体征（左上腹胀）及多系减少时，优先排查脾功能亢进，必须完善腹部超声和骨髓检查以鉴别病因；治疗需根据病因选择手术或药物，避免盲目套用MDS方案。\\\"}}\"}",
+      "**Rolling Summary of Blood Department Consultations (Updated: November 08, 2026)**\n\n**Overview:**\nThis summary consolidates **23 completed cases** and **7 active/incomplete cases** from the Blood Department consultations on Sunday, November 08, 2026. The dataset highlights critical diagnostic pitfalls in hematologic malignancies (AML vs. ALL misclassification, CLL staging errors, CMML vs. AML), metabolic bone diseases (Osteopetrosis vs. OI), parasitic infections mimicking malignancy, bleeding disorders (vWD, ITP), plasma cell dyscrasias, Myeloproliferative Neoplasms (MPN), and acute leukemias in adolescents. Key recurring failures include: misdiagnosing Myeloid Sarcoma as ALL; overlooking parasites (*Strongyloides*) before immunosuppression/chemotherapy; confusing Osteopetrosis with Osteogenesis Imperfecta (OI) leading to contraindicated bisphosphonate use; misclassifying Mantle Cell Lymphoma (MCL) as DLBCL; failing to distinguish Fanconi Anemia from Acute Leukemia; missing secondary causes of thrombocytopenia/anemia (e.g., vWD, GI/Gyn sources); misinterpreting B-symptoms in CLL as \"early stage\" requiring observation rather than immediate FCR chemotherapy; mistaking Multiple Myeloma for mechanical back pain; safety errors in MPN treatment (prescribing aspirin during active bleeding/thrombocytosis); and performing unsafe procedures (Lumbar Puncture) in patients with severe thrombocytopenia/coagulopathy. Critical lessons emphasize mandatory tissue biopsy for masses, flow cytometry/FISH for lymphoid disorders, genetic testing for MDS/CLL/Fanconi/Osteopetrosis/MPN, strict adherence to contraindications (bisphosphonates in osteopetrosis, steroids without antiparasitics, aspirin in vWD or uncontrolled thrombocytosis with bleeding, NSAIDs in renal failure/myeloma, LP in thrombocytopenia), and comprehensive workups for anemia (GI/Gyn sources + coagulation).\n\n---\n\n### **Completed Cases (Diagnoses & Outcomes)**\n\n**Patient 1: Pediatric Case (ID: Patient_00948)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:41 PM\n*   **Profile:** Child.\n*   **Complaints:** 5-day sudden left eye proptosis, eyelid swelling, painless mass near left temple. Later fatigue, poor appetite, spontaneous bruising. Mother suspected leukemia.\n*   **Negatives:** No fever, lymphadenopathy, URI, trauma, or insect bites.\n*   **Labs:** WBC 28.6 x 10^9/L (High), Hgb 86 g/L (Anemia), PLT 42 x 10^9/L (Severe Thrombocytopenia). Smear: 65% Blasts (myeloid morphology).\n*   **Diagnosis:** Initially ALL; Corrected to **Myeloid Sarcoma (Granulocytic Sarcoma)**.\n*   **Plan:** Emergency admission, protective isolation, VDLP induction (Vincristine, Daunorubicin, L-Asparaginase, Prednisone), transfusions, antibiotics. Risk stratification via BM biopsy, flow, karyotype, fusion genes.\n*   **Evaluation:** Diagnosis incorrect (missed Myeloid Sarcoma). Exams missed MRI/BM/tissue pathology. Treatment ineffective (VDLP vs AML protocols). Lesson: Orbital masses + bruising require tissue biopsy.\n\n**Patient 2: Adult Female Case (ID: Patient_00278)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:43 PM\n*   **Profile:** Adult female (reproductive age).\n*   **Complaints:** Progressive fatigue (4 months), dyspnea, palpitations, orthostatic dizziness, pale lips/nails.\n*   **Negatives:** No chest pain, cough, edema, bleeding, or abnormal menses.\n*   **Labs:** Hgb 86 g/L, Hct 28%, MCV 68 fL, MCH 20 pg. Iron: Serum 18 ug/dL, TIBC 460 ug/dL, Ferritin 6 ng/mL, Saturation 4%.\n*   **Diagnosis:** Iron Deficiency Anemia (IDA).\n*   **Plan:** Oral iron (150-200mg elemental/day + Vit C), dietary heme iron, avoid tea/coffee/calcium. Workup for GI/Gyn bleeding (FOBT, gastroscopy). Monitor retics/Hgb/Iron.\n*   **Evaluation:** Diagnosis correct. Exam precision high but etiology workup (FOBT/Gastroscopy) not initially ordered. Treatment personalization low (generic diet, ignored constraints).\n\n**Patient 3: Pediatric/Adolescent Case (ID: Patient_01332)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:45 PM\n*   **Profile:** Child/Adolescent.\n*   **Complaints:** Painless neck mass (8 weeks, enlarging), recurrent low-grade fever (1 month), night sweats, weight loss (5.4 kg in 3 months).\n*   **Findings:** Hard, immobile neck mass.\n*   **Negatives:** No fatigue/pallor/bleeding.\n*   **Labs:** Hgb 112 g/L (Mild Anemia), PLT 118 x 10^9/L (Mild Thrombocytopenia), WBC 13.6 x 10^9/L. Smear: Atypical lymphoid cells. ESR 85 mm/hr.\n*   **Diagnosis:** Diffuse Large B-Cell Lymphoma (DLBCL).\n*   **Plan:** Neck node biopsy, PET-CT, Bone Marrow Biopsy. R-CHOP regimen. Supportive care (TLS prophylaxis, cardiac eval).\n*   **Evaluation:** Diagnosis correct. Exam precision poor (missed HIV screen, Liver/Kidney function, initial imaging/BMB). Treatment personalization poor (ignored Penicillin allergy, renal function, HIV status).\n\n**Patient 4: Adult Case (ID: Patient_04339)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:47 PM\n*   **Profile:** Adult (likely male).\n*   **Complaints:** 4-month fatigue/SOB. Last 2 weeks: worsening dizziness/palpitations. Yesterday: High fever, dehydration, chills/rigors.\n*   **Negatives:** No bleeding, cough, urinary symptoms.\n*   **Labs:** Cultures Negative. Hgb 86 g/L, RBC 3.10 x 10^12/L, MCV 72 fL (Microcytic). CRP 185 mg/L, PCT 2.8 ng/mL.\n*   **Diagnosis:** Initially Sepsis; Corrected to **Iron Deficiency Anemia** masked by acute decompensation from GI bleed.\n*   **Plan:** Empiric IV antibiotics (Cefoperazone/Sulbactam + Levofloxacin/Meropenem), fluid resuscitation, oral iron.\n*   **Evaluation:** Diagnosis incorrect (missed underlying anemia/bleed). Exam poor (over-emphasized infection, missed Iron studies/Endoscopy). Treatment safety low (oral iron during active bleeding/dehydration without source control).\n\n**Patient 5: Adult Male Case (ID: Patient_01666)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:51 PM\n*   **Profile:** Middle-aged male.\n*   **Complaints:** Recurrent low-grade fever, night sweats, fatigue, weight loss (4 kg in 3 months).\n*   **Negatives:** No palpable neck mass, no bleeding.\n*   **Diagnosis:** Initially DLBCL; Corrected to **Eosinophilia** (Parasitic infection, e.g., Strongyloides).\n*   **Plan:** Planned R-CHOP, biopsy, steroids.\n*   **Evaluation:** Diagnosis incorrect. Exam zero (no labs). Treatment critical failure (prescribed chemo/steroids for parasite; risk of fatal disseminated strongyloidiasis). Lesson: Fever + weight loss requires ruling out parasites before chemo/steroids.\n\n**Patient 6: Pregnant/Reproductive Age Female Case (ID: Patient_03281)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:53 PM\n*   **Profile:** Reproductive age female (pregnant).\n*   **Complaints:** Fatigue, dizziness, SOB (3 months). Pale lips/nails. History of heavy menses (6-7 days).\n*   **Labs:** Hgb 92 g/L, Hct 29%, MCV 72 fL (Microcytic). Iron: Serum 22 ug/dL, TIBC 445 ug/dL, Ferritin 6 ng/mL, Saturation 5%.\n*   **Diagnosis:** Iron Deficiency Anemia.\n*   **Plan:** Gyn ultrasound, FOBT. Oral iron (150-200mg elemental), diet advice, follow-up.\n*   **Evaluation:** Diagnosis correct. Exam good for type but missed initial ordering of FOBT/Ultrasound. Treatment personalization low (generic diet, missed OB collaboration/PPI interaction).\n\n**Patient 7: Adult Case (ID: Patient_04641)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:56 PM\n*   **Profile:** Adult (treated as high-risk/pediatric context).\n*   **Complaints:** Severe fatigue, leg pain (bone pain), easy bruising. Hard, immobile neck mass. Recurrent fever, night sweats, weight loss.\n*   **Labs:** WBC 28.4 x 10^9/L, Hgb 82 g/L, PLT 22 x 10^9/L. Smear: Circulating lymphoblasts. Coagulation: D-Dimer 2.8, PT 19.5s, PTT 48s, INR 1.6, Fibrinogen 0.9 g/L (DIC signs).\n*   **Diagnosis:** Acute Lymphoblastic Leukemia (ALL).\n*   **Plan:** Confirmatory BM biopsy, Flow, Karyotype, Fusion genes, CNS evaluation (LP), CT/MRI. VDLP induction. Platelet transfusion prior to chemo. TLS prophylaxis.\n*   **Evaluation:** Diagnosis correct. Exam partial (missed initial BM/LP orders though planned). Treatment moderate (correct regimen but missed specific Intrathecal Chemotherapy mention and psych support).\n\n**Patient 8: Pediatric Case (ID: Patient_00554)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:58 PM\n*   **Profile:** Pediatric patient.\n*   **Complaints:** Fatigue, leg pain (bone pain), easy bruising. Weight loss. Right-sided neck mass (hard, fixed). Evening low fever, night sweats. Recent bruising/nasal bleeding (2 episodes).\n*   **Labs:** WBC 28.4 x 10^9/L, Hgb 78 g/L, PLT 32 x 10^9/L. Smear: Large number of circulating lymphoblasts. Coagulation: PT 16.8 s, INR 1.5, aPTT 46 s.\n*   **Diagnosis:** Acute Lymphoblastic Leukemia (ALL).\n*   **Plan:** Immediate BM biopsy (Flow, Karyotype, Fusion genes), Chest CT/Abd US/CT, Lumbar puncture (CNS-L check). Infectious screening (Hep B/C, HIV). VDLP induction (Vincristine, Daunorubicin, Peg-Asparaginase, Prednisone). Platelet transfusion pre-chemo. TLS prevention (hydration, allopurinol/rasburicase). Cardiac/Pancreatic monitoring. Avoid NSAIDs/Codeine.\n*   **Evaluation:** Diagnosis accurate (1.0). Exam precision high (covered CBC/Smear/Coags) but coverage low (missed initial BM/LP order). Treatment safety high (1.0), effectiveness alignment 0.8. Lesson: Need immediate BM confirmation and CNS assessment; manage coagulopathy before procedures.\n\n**Patient 9: Adult Male Case (ID: Patient_00930)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:02 PM\n*   **Profile:** Adult male, returned from **Nigeria**.\n*   **Complaints:** Fatigue, weight loss (3kg in 2 months), night sweats, low-grade fever. Initially reported right supraclavicular hard, fixed, tender mass; corrected to **No neck mass**. Symptoms: **Urticarial rash (itchy), wheezing (activity/night), diarrhea (watery, 2-3x/day)**. No gum bleeding/bruising. Shellfish allergy history.\n*   **Labs:** WBC 15.2 x 10^9/L, **Eosinophils 2.6 x 10^9/L (17%)**. Smear: Large eosinophils, no blasts. CRP 18 mg/L, ESR 34 mm/hr. Stool: O&P positive for worm eggs.\n*   **Diagnosis:** Initially misdiagnosed as DLBCL; Corrected to **Eosinophilia** (Parasitic infection, likely *Strongyloides* or hookworm).\n*   **Plan:** Antiparasitic therapy (Albendazole 400mg BID x 3 days OR Ivermectin). Symptomatic control (Antihistamines). Hydration. **Contraindication:** Do NOT use systemic steroids alone (risk of hyperinfection syndrome). Monitor liver function.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.67 (missed serology/lung function/biopsy). Treatment safety 1.0 but effectiveness 0.4 (missed oral steroids for inflammation and shellfish avoidance instruction). Lesson: Travel history + eosinophilia = Parasite until proven otherwise; avoid steroids without antiparasitic coverage.\n\n**Patient 10: Pediatric Case (ID: Patient_03252)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:08 PM\n*   **Profile:** Child.\n*   **Complaints:** Fatigue, pallor, occasional nosebleeds, occasional gum bleeding (brushing). Slow growth. Right lower neck mass (hard, slightly mobile). No fever, no spontaneous bruising.\n*   **Labs:** Hgb 78 g/L, MCV 68 fL (Low), RDW 18.9% (High). Smear: Microcytic hypochromic, Target cells, Polychromasia. Normal platelets (240k).\n*   **Diagnosis:** Iron Deficiency Anemia (IDA). (Differential: Thalassemia, but high RDW favors IDA).\n*   **Plan:** Confirm with Iron studies (Ferritin, Fe, TIBC) and Hemoglobin Electrophoresis. Rule out chronic blood loss (FOBT, parasites). Oral Iron (4-6 mg/kg/day elemental, post-meal + Vit C). Diet: Red meat, liver; avoid tea/milk. Continue 3-6 months after normalization. Follow-up: CBC in 2 weeks.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.5 (missed Iron studies/Coags/Stool initially). Treatment safety 1.0, personalization 0.4 (missed pediatric syrup formulation, blood consult for neck mass/bleeding, deworming for hookworm). Lesson: Pediatric anemia + bleeding needs full workup (Iron, Coags, Stool) and specialist review for masses.\n\n**Patient 11: Adult Male Case (ID: Patient_06460)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:11 PM\n*   **Profile:** Middle-aged male.\n*   **Complaints:** Progressive fatigue, weight loss. Self-suspects lymphoma based on TikTok.\n*   **History:** Right neck mass, later left and axillary. **Rubbery, soft, movable** (\"rubber-like\"). Easy bruising, occasional dizziness. Denies gum/nasal bleeding.\n*   **Labs:** WBC 22.4 x 10^9/L, Hgb 92 g/L, PLT 88 x 10^9/L. Smear: Significant lymphocytosis, atypical small-to-medium lymphoid cells, irregular nuclear contours.\n*   **Initial Diagnosis:** Diffuse Large B-Cell Lymphoma (DLBCL).\n*   **Actual Diagnosis:** **Mantle Cell Lymphoma (MCL)**.\n*   **Plan Submitted:** R-CHOP regimen.\n*   **Evaluation:** Diagnosis incorrect (DLBCL vs MCL). Exam insufficient (missed lymph node excisional biopsy, flow cytometry, FISH, LDH, β2-microglobulin, bone marrow). Treatment incorrect (R-CHOP vs R-Bendamustine). Critical error: Failed to account for underlying **Chronic Kidney Disease** and **Penicillin allergy** (implied in reflection regarding drug selection). Reflection noted need for FISH/Cyclin D1 testing.\n*   **Lesson:** \"Rubbery\" nodes suggest lymphoma but require immunophenotyping/FISH to distinguish subtypes (MCL vs DLBCL). Always consider comorbidities (CKD) and allergies in treatment planning.\n\n**Patient 12: Adult Case (ID: Patient_04601)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:13 PM\n*   **Profile:** Adult.\n*   **Complaints:** Severe fatigue, weight loss, severe bone pain (legs/back). **Pathological fractures** (fracture from minor bump). Left neck mass (hard, fixed). No bleeding, fever, or night sweats.\n*   **Labs:** X-ray: Diffuse osteosclerosis (\"Ivory vertebrae\"), cortical thickening, narrowed medullary cavities.\n*   **Initial Diagnosis:** Osteogenesis Imperfecta.\n*   **Actual Diagnosis:** **Osteopetrosis (Marble Bone Disease)**.\n*   **Plan Submitted:** Bisphosphonates (Pamidronate/Zoledronic acid), Calcium/Vit D, physical rehab.\n*   **Evaluation:** Diagnosis incorrect (OI vs Osteopetrosis). Exam insufficient (missed genetic testing, DEXA, MRI, CMP, Urinalysis). Treatment dangerous (Bisphosphonates are contraindicated in Osteopetrosis as they inhibit osteoclasts which are already defective; Osteopetrosis requires different management). Missed urine analysis showing microscopic hematuria (renal risk).\n*   **Lesson:** Differentiate between brittle bone disease (OI) and osteosclerotic diseases (Osteopetrosis). Pathological fracture + osteosclerosis suggests Osteopetrosis. Bisphosphonates are contraindicated in Osteopetrosis.\n\n**Patient 13: Adult Case (ID: Patient_01894)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:16 PM\n*   **Profile:** Elderly adult.\n*   **Complaints:** Progressive fatigue, low fever, night sweats, weight loss (4kg), skin ecchymosis, gum bleeding. Occasional bone pain.\n*   **Labs:** WBC 24.6 x 10^9/L, Hgb 86 g/L, PLT 88 x 10^9/L. Smear: Neutrophil dysplasia, circulating promonocytes, significant absolute monocytosis. Coags: Elevated D-dimer. CRP 48.5 mg/L, ESR 68 mm/hr. BM: Hypercellular, multilineage dysplasia, 8% blasts/promonocytes. Node biopsy: Abnormal monocyte-like cells, diffuse infiltration.\n*   **Initial Diagnosis:** Acute Lymphoblastic Leukemia (ALL).\n*   **Actual Diagnosis:** **Chronic Myelomonocytic Leukemia (CMML)**.\n*   **Plan Submitted:** \"7+3\" induction chemotherapy (Cytarabine + Anthracycline).\n*   **Evaluation:** Diagnosis incorrect (ALL vs CMML). Exam missed Flow cytometry, cytogenetics, gene mutation analysis, uric acid/soluble lysozyme. Treatment incorrect (Aggressive chemo for CMML is toxic; preferred: Hypomethylating agents like Decitabine + supportive care).\n*   **Lesson:** Adult unexplained cytopenias with monocytosis and dysplasia should raise suspicion for CMML/MDS, not just acute leukemia. Avoid aggressive induction if CMML is suspected; use hypomethylating agents.\n\n**Patient 14: Adult Male Case (ID: Patient_09281)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:19 PM\n*   **Profile:** Middle-aged male.\n*   **Complaints:** Progressive fatigue, weight loss, night sweats. **Left neck painless hard mass** (fixed, non-tender). Early satiety (1 week duration). Diarrhea (no blood). No fever/bleeding.\n*   **Labs:** WBC 14.6 x 10^9/L, Hgb 108 g/L, PLT 118 x 10^9/L. Smear: Atypical small-to-medium lymphocytes. CRP 45.2 mg/L, ESR 65 mm/hr.\n*   **Node Biopsy:** Single population of small-to-medium lymphoid cells disrupting nodal architecture in a mantle zone pattern.\n*   **Diagnosis:** **Mantle Cell Lymphoma (MCL)**.\n*   **Plan:** R-CHOP or BR (Bendamustine-Rituximab).\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.6 (missed Flow, IHC, FISH, Bone Marrow, PET-CT). Treatment score 0.72 (Safety 1.0, Effectiveness 0.8, Personalization 0.6). Deviation: Preferred BR over R-CHOP for MCL. Missed consideration of **Rheumatoid Arthritis** background (drug interactions with MTX/Prednisone, vaccination timing, HBV screening).\n*   **Lesson:** Mantle zone pattern on biopsy confirms MCL. While R-CHOP is acceptable, BR is often preferred. Must coordinate with Rheumatology for RA patients on immunosuppressants.\n\n**Patient 15: Young Female Case (ID: Patient_03943)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:23 PM\n*   **Profile:** Young female.\n*   **Complaints:** Fatigue, dyspnea on exertion (climbing stairs), early satiety (months), weight loss (approx. 2.5 kg/5 lbs). Initially described a left neck mass (peanut-sized, hard, mobile, non-tender), later denied presence of mass. No fever, night sweats, or bleeding.\n*   **Labs:** Not provided initially; diagnosis made based on clinical reasoning.\n*   **Initial Diagnosis:** Diffuse Large B-Cell Lymphoma (DLBCL).\n*   **Actual Diagnosis:** **Iron Deficiency Anemia (IDA)** secondary to menorrhagia (heavy menstrual bleeding) and/or GI issues.\n*   **Plan Submitted:** R-CHOP chemotherapy, lymph node biopsy, PET-CT.\n*   **Evaluation:** Diagnosis incorrect. Examination missed (no labs ordered). Treatment dangerous (chemo for benign condition).\n*   **Correct Approach:** Order CBC, Iron studies, FOBT, Pelvic Ultrasound, Gastroscopy. Treat with oral iron (ferrous sulfate) + Vitamin C, address menorrhagia (gyn consult), adjust diet.\n*   **Lesson:** \"Fatigue + Dyspnea + Early Satiety\" in women often indicates anemia (iron deficiency) rather than malignancy. Do not assume lymphoma without CBC/Iron studies.\n\n**Patient 16: Young Female Case (ID: Patient_06974)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:26 PM\n*   **Profile:** Young female.\n*   **Complaints:** Extreme fatigue, palpitations (fast/irregular heart rate), dizziness, anxiety (\"heart fluttering\"), emotional distress (\"want to cry\"). Denies neck mass, fever, night sweats, weight loss. Reports recent increased menstrual volume. Lips appear pale.\n*   **Labs:**\n    *   CBC: WBC 7.8 x 10^9/L (Normal), Hgb 128 g/L (Normal), **PLT 12 x 10^9/L (Severe Thrombocytopenia)**.\n    *   Iron Studies: Normal.\n    *   Peripheral Smear: Severe thrombocytopenia, occasional large platelets, no blasts.\n    *   Coags: PT 12.2s, INR 1.0, **aPTT 40s (Mildly elevated)**.\n*   **Diagnosis:** **Immune Thrombocytopenia (ITP)**.\n*   **Plan:**\n    1.  **First-line:** Oral Prednisone (1 mg/kg/day ~60mg) for 4 weeks, tapering slowly. Consider IVIG (400mg/kg/day x 5 days) if rapid rise needed.\n    2.  **Second-line:** Rituximab or Splenectomy if refractory.\n    3.  **Support:** Strict avoidance of aspirin/NSAIDs, soft toothbrush, bowel regulation. Daily CBC monitoring.\n    4.  **Workup:** H. pylori, Autoimmune panel (ANA), HIV/HCV.\n    5.  **Psych:** Address anxiety.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.75 (missed Capillary fragility test, Anti-platelet antibodies, DAT, TPO levels). Treatment safety 1.0, effectiveness 0.6 (missed Tranexamic acid for menorrhagia, hydroxychloroquine, GI protection/calcium details).\n*   **Lesson:** Isolated severe thrombocytopenia with normal Hgb/WBC suggests ITP. In young females with menorrhagia, add tranexamic acid. Always rule out secondary causes (autoimmune, viral).\n\n**Patient 17: Young Female Case (ID: Patient_03774)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:28 PM\n*   **Profile:** Young female.\n*   **Complaints:** Night sweats, weight loss, extreme fatigue, palpitations, dizziness, early satiety. Bleeding gums, easy bruising. High anxiety about leukemia.\n*   **Labs:**\n    *   CBC: **WBC 2.1 x 10^9/L (Leukopenia)**, Hgb 112 g/L (Mild Anemia), **PLT 78 x 10^9/L (Thrombocytopenia)**.\n    *   Smear: **\"Hairy Cells\"** (lymphocytes with fine cytoplasmic projections/hairy edges). No blasts.\n*   **Diagnosis:** **Hairy Cell Leukemia (HCL)**.\n*   **Plan:**\n    1.  **Induction:** Cladribine (2-CdA) 5.25 mg/m²/day IV/SC x 7 days OR Fludarabine + Rituximab.\n    2.  **Support:** PCP prophylaxis (TMP-SMX), antibiotic coverage for fever, platelet transfusion if bleeding.\n    3.  **Monitoring:** Weekly CBC, assess spleen size (US), watch for TLS (low risk).\n    4.  **Nutrition:** High-calorie density diet for early satiety.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.5 (missed Abdominal US for splenomegaly, Bone Marrow Biopsy, BRAF V600E). Treatment safety 1.0, effectiveness 0.8, personalization 0.6 (missed specific nutrition plan for vegan diet, support group referral).\n*   **Lesson:** Pancytopenia + \"Hairy Cells\" on smear = HCL. Cladribine is curative. Always confirm with BM and BRAF testing. Manage splenomegaly-related early satiety.\n\n**Patient 18: Middle-Aged Female Case (ID: Patient_05266)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:31 PM\n*   **Profile:** Middle-aged female.\n*   **Complaints:** Severe skin itching, shortness of breath (wheezing), palpitations, abdominal bloating/gas. Duration: 4 months. Weight loss (due to poor intake). Denies fever, night sweats, travel to tropics, raw seafood, or allergies. High anxiety about leukemia.\n*   **Labs:**\n    *   CBC: **WBC 16.2 x 10^9/L**, **Absolute Eosinophils 2.4 x 10^9/L (18%)**.\n    *   Smear: Marked eosinophilia, no parasites, no blasts.\n*   **Diagnosis:** **Hypereosinophilia** (Suspected parasitic or allergic etiology, pending further workup).\n*   **Plan:**\n    1.  **Parasite Screen:** Stool O&P, Serology (Strongyloides, etc.). Treat empirically with Albendazole/Ivermectin if suspected.\n    2.  **Allergy/Autoimmune:** Total IgE, Specific IgE, ANA. Treat with Antihistamines (Loratadine) + Steroids if allergic.\n    3.  **Symptom Control:** Bronchodilators (Salbutamol) for wheeze, topical calamine for itch.\n    4.  **Monitoring:** Weekly CBC, Echocardiogram (cardiac involvement), Chest CT, Liver function.\n    5.  **Psych:** Reassure against leukemia.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.5 (missed Lung Function Tests, CRP/ESR, detailed serology). Treatment safety 1.0, effectiveness 0.8, personalization 0.6 (missed immune defect follow-up, specific dietary advice).\n*   **Lesson:** Eosinophilia + respiratory/dermatologic symptoms requires ruling out parasites (even without travel history) and allergies. Avoid steroids without covering parasites (risk of hyperinfection). Evaluate for organ damage (heart/lungs).\n\n**Patient 19: Pediatric Case (ID: Patient_01539)**\n*   **Date/Time:** Sunday, November 08, 2026, 04:22 PM\n*   **Profile:** Patient presenting with fatigue, dizziness, dyspnea, intermittent fever, night sweats, weight loss (2.5 kg/month), gingival bleeding, petechiae/ecchymosis, and bone pain (sternum/thighs).\n*   **Labs:**\n    *   CBC: WBC 48.6 x 10^9/L (High), Hgb 86 g/L, PLT 28 x 10^9/L.\n    *   Smear: 35% circulating blasts.\n    *   BM: 55% blasts, granulocytic maturation arrest, erythroid suppression, megakaryocyte reduction.\n*   **Diagnosis:** **Acute Myeloid Leukemia (AML)** (Ground Truth). AI diagnosed ALL.\n*   **Plan Submitted:** VDLP induction (for ALL).\n*   **Evaluation:** Diagnosis incorrect (ALL vs AML). Treatment incorrect (VDLP vs Azo-cytarabine/Anthracycline). Missed necessary tests: Flow cytometry (MPO+, CD34+, CD117+), FISH, molecular genetics. Treatment failed to address specific AML risks (e.g., coagulopathy management, specific supportive care).\n*   **Lesson:** Blast percentage >20% requires immediate differentiation (AML vs ALL) via immunophenotyping before initiating chemo. VDLP is contraindicated for AML; standard induction is Cytarabine + Anthracycline.\n\n**Patient 20: Adult Case (ID: Patient_08256)**\n*   **Date/Time:** Sunday, November 08, 2026, 04:26 PM\n*   **Profile:** Adult with painless, continuous pink urine (hematuria) for 2 weeks. No pain, fever, or stones.\n*   **Labs:** UA: RBC 30/HPF, negative leukocytes/nitrites. Stool: Negative. Renal US: Normal (no stones/tumors).\n*   **Diagnosis:** **Von Willebrand Disease (vWD)** (Ground Truth). AI diagnosed Chronic Kidney Disease.\n*   **Plan Submitted:** CTU, cystoscopy, hydration, observation.\n*   **Evaluation:** Diagnosis incorrect. Missed CBC and Coagulation profile (vWF antigen/activity, Factor VIII). Treatment incorrect (failed to use Desmopressin, avoid NSAIDs/Anticoagulants, refer to Hematology).\n*   **Lesson:** Unexplained painless hematuria with normal renal imaging requires immediate hemostasis workup (CBC, Coags) to rule out vWD. Do not default to renal imaging first.\n\n**Patient 21: Adult Case (ID: Patient_00952)**\n*   **Date/Time:** Sunday, November 08, 2026, 04:29 PM\n*   **Profile:** Patient with 5-month fatigue, evening low fever, night sweats, weight loss (10 jin/5kg), painless bilateral cervical/submandibular lymphadenopathy (hard, mobile), gingival bleeding, ecchymosis.\n*   **Labs:** WBC 68.4 x 10^9/L (Lymphocytosis 82%), Hgb 98 g/L, PLT 92 x 10^9/L. Smear: Mature small lymphocytes, **Smudge cells**. ESR 65 mm/hr.\n*   **Diagnosis:** **Chronic Lymphocytic Leukemia (CLL)**.\n*   **Plan Submitted:** \"Watch and Wait\" strategy, 3-month follow-up.\n*   **Evaluation:** Diagnosis correct. Treatment incorrect (Observation vs Immediate FCR: Fludarabine/Cyclophosphamide/Rituximab). Missed urgent tests: Flow cytometry (CD5+/CD23+), FISH (del17p, del13q), IgVH, DAT (for autoimmune hemolysis), Immunoglobulin levels. Patient has active B-symptoms and cytopenias, requiring immediate intervention.\n*   **Lesson:** CLL with B-symptoms (fever, sweat, weight loss) and cytopenias requires immediate chemo-immunotherapy (FCR), not observation. Must rule out autoimmune complications (DAT).\n\n---\n\n### **New/Active Cases (November 08, 2026)**\n\n**Patient 06317 (Geriatric - Multiple Myeloma)**\n",
+      "profile / Demographic Information / fear_of_cancer_relapse: User expresses fear that their condition might be a worsening bone marrow tumor (lymphoma) despite previous anemia diagnosis.",
+      "profile / Psychological Profile / fear_of_cancer_relapse: User expresses strong fear that their condition might be a worsening bone marrow tumor (lymphoma) despite previous anemia diagnosis.",
+      "profile / Demographic Information / previous_anemia_type_unknown: User had a previous anemia diagnosis and blood transfusion but the specific type was not disclosed or is unknown to them.",
+      "profile / Demographic Information / medical_test_results_pancytopenia: User has received CBC results showing pancytopenia: WBC 2.3, Hgb 92, PLT 48.",
+      "profile / Demographic Information / past_anemia_diagnosis_unclear_type: User had a previous diagnosis of anemia but does not know the specific type.",
+      "profile / Assistant Usage Patterns / responds_to_medical_intake_protocol: User is responding to detailed medical intake questions regarding anemia type, specific symptoms (black stools, vomiting blood, dark urine), and family history.",
+      "profile / Demographic Information / previous_anemia_diagnosis_unclear_type: User confirms previous anemia diagnosis but lacks specific type details, stating the doctor only mentioned 'anemia' without specifics.",
+      "profile / Assistant Response Preferences / bilingual_communication: User or system context uses Chinese medical terminology and responses are expected in Chinese (e.g., '您好', '血液科').",
+      "profile / Assistant Usage Patterns / follows_medical_intake_protocol: User is following a structured medical intake process, responding to detailed symptom queries regarding lymph node characteristics and B-symptoms.",
+      "profile / Demographic Information / symptom_abdominal_distension: User reports left upper abdominal distension, suggesting possible splenomegaly.",
+      "profile / Demographic Information / family_history_no_blood_disease: User reports no family history of blood diseases.",
+      "profile / Platform Behavior / engages_in_detailed_symptom_discussion: User actively participates in a multi-turn conversation focusing on specific physical symptoms and diagnostic details.",
+      "profile / Assistant Response Preferences / preferred_language: User prefers responses in Chinese, as evidenced by the medical history and treatment plan provided in Chinese.",
+      "profile / Demographic Information / symptom_gum_bleeding: User reports gum bleeding",
+      "profile / Communication Style / formal_medical_inquiry: User initiates conversation with formal medical questioning regarding symptoms and physical examination details.",
+      "profile / Career & Work Preferences / employment_continuity_guidance_needed: User requires guidance on managing work intensity during stable disease phases to avoid symptom exacerbation.",
+      "profile / Demographic Information / symptom_ecchymosis: User reports bruising (ecchymosis) primarily on limbs, especially lower legs, occurring easily upon contact.",
+      "profile / Psychological Profile / anxiety_level: User appears nervous and anxious during examination",
+      "profile / Demographic Information / age_estimated: User appears to be around 14 years old based on Tanner stage II hair distribution and mixed dentition.",
+      "profile / Assistant Usage Patterns / undergoes_medical_evaluation: User is undergoing a formal medical evaluation process where past diagnostic errors are being analyzed and corrected.",
+      "profile / Assistant Usage Patterns / undergoes_medical_evaluation: User is undergoing a formal medical evaluation process where past diagnostic errors are being analyzed and corrected.",
+      "profile / Assistant Response Preferences / language_preference: User responds to and is addressed in Chinese, consistent with previous profile data.",
+      "profile / Demographic Information / employment_desire: User expresses strong desire to return to work quickly after illness.",
+      "profile / Demographic Information / employment_status: User is currently unable to work due to illness and expresses strong desire to return to work.",
+      "profile / Demographic Information / employment_status: User is currently unable to work due to illness and expresses strong desire to return to work.",
+      "profile / Demographic Information / symptom_weight_loss: User reports experiencing weight loss",
+      "profile / Psychological Profile / anxiety_regarding_illness: User exhibits anxiety related to their diagnosis, requiring psychological counseling and reassurance.",
+      "profile / Assistant Response Preferences / preferred_language: User prefers responses in Chinese, as evidenced by the assistant's previous and current communication in Chinese.",
+      "profile / Assistant Response Preferences / bilingual_communication: true",
+      "profile / Assistant Response Preferences / bilingual_communication: true",
+      "profile / Health & Wellness / acute_leukemia_symptoms_present: User presents with abnormal CBC showing leukocytosis (28.6), anemia (Hgb 88), and thrombocytopenia (PLT 32), plus peripheral blood smear showing lymphoblasts, indicating acute leukemia symptoms.",
+      "profile / Notable Past Conversation Topic Highlights / shift_from_itp_to_lymphoma_fear: User's focus has shifted from previous concerns about ITP/anemia/leukemia to a firm belief in lymphoma diagnosis based on new physical findings.",
+      "profile / Demographic Information / previous_anemia_diagnosis_vague: User was previously diagnosed with anemia by a doctor but the specific type was not detailed.",
+      "profile / Demographic Information / previous_anemia_diagnosis_vague: User was previously diagnosed with anemia by a doctor last year, but the specific type was not explained or detailed.",
+      "profile / Communication Style / explicit_negation_of_cancer_symptoms: User explicitly states absence of fever, fatigue, pallor, weight loss, and lymphadenopathy to rule out cancer/leukemia symptoms.",
+      "profile / Psychological Profile / symptom_misinterpretation_or_conflation: User attributes a hard, immobile neck lump to lymphoma; while consistent with malignancy, they may be conflating symptoms or misinterpreting the nature of the lump compared to previous ITP/anemia context.",
+      "profile / Psychological Profile / anxiety_about_diagnostic_clarity: User expresses frustration and uncertainty about the lack of specific anemia type diagnosis from a doctor last year.",
+      "profile / Health & Wellness / bleeding_symptoms: User reports gum bleeding, skin bruising (purpura), and nosebleeds worsening over the last 2 weeks.",
+      "profile / Assistant Usage Patterns / provides_symptom_negation_list: User explicitly lists negative symptoms (no bleeding, no lymphadenopathy) to help rule out malignancy.",
+      "profile / Psychological Profile / anxiety_regarding_itching_diagnosis: User expresses anxiety about the diagnosis of ITP (Immune Thrombocytopenic Purpura) and potential underlying causes.",
+      "profile / Psychological Profile / fear_of_cancer_progression: User expresses intense fear that their condition might be a 'bone marrow tumor' (likely referring to previous lymphoma) worsening, despite lack of specific confirmation.",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User explicitly lists negative symptoms (no gum bleeding, no bruising, no nosebleeds, no increased menstrual flow, no fever, no weight loss) to actively rule out serious conditions like leukemia or lymphoma, indicating persistent health anxiety despite reassurance.",
+      "profile / Health & Wellness / no_recent_bleeding_signs: User explicitly reports no black stools, vomiting blood, or dark urine recently.",
+      "profile / Communication Style / structured_symptom_negation: User explicitly lists negative symptoms (no fever, night sweats, bone pain) and absence of lymphadenopathy to rule out conditions.",
+      "profile / Assistant Usage Patterns / repeats_symptom_negations: User repeatedly lists negative symptoms (no fever, night sweats, bone pain) and positive symptoms (fatigue, weight loss, gum bleeding) in multiple turns.",
+      "profile / Assistant Usage Patterns / repeats_symptom_negations: User repeatedly lists negative symptoms (no fever, night sweats, bone pain) and positive symptoms (fatigue, weight loss, gum bleeding) in multiple turns.",
+      "profile / Health & Wellness / absence_of_b_symptoms: User explicitly states no fever, night sweats, or significant weight loss beyond the noted 3kg.",
+      "profile / Psychological Profile / persistent_health_anxiety_despite_reassurance: User continues to exhibit high anxiety about blood disorders (leukemia) even after receiving medical reassurance and a confirmed diagnosis of eosinophilia.",
+      "profile / Demographic Information / family_history_of_blood_disorders: No family history of blood diseases reported.",
+      "profile / Hard Skills / medical_data_analysis: Proficient; basis: user provides detailed, structured medical lab reports (CBC, blood smear, bone marrow) with specific abnormal indicators and reference ranges for analysis.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User provides explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_diagnostic_correction: User context involves a previous misdiagnosis (DLBCL vs MCL) and expects accurate differential diagnosis and correction of treatment plans.",
+      "profile / Health & Wellness / nasal_symptoms: User reports increased nosebleeds (epistaxis) and occasional dizziness.",
+      "profile / Assistant Response Preferences / expects_diagnostic_correction: User context involves a previous misdiagnosis (Chronic Kidney Disease vs. von Willebrand disease) and expects accurate differential diagnosis.",
+      "profile / Hard Skills / genetic_testing_interpretation: Proficient; basis: user provides and references detailed cytogenetic analysis (46,XY,del(20q)) and gene mutation sequencing results (JAK2 V617F heterozygous mutation, 38% VAF) for medical context.",
+      "profile / Psychological Profile / fear_of_leukemia_diagnosis: User explicitly expresses intense fear of having leukemia based on online information, despite previous focus on lymphoma.",
+      "profile / Psychological Profile / strong_conviction_in_self_diagnosis: User expresses strong conviction that their symptoms indicate lymphoma based on TikTok videos, rejecting uncertainty.",
+      "profile / Psychological Profile / strong_conviction_in_self_diagnosis_lymphoma: User is certain their condition is lymphoma based on self-research, rejecting uncertainty despite previous medical context.",
+      "profile / Demographic Information / patient_role: User is a patient presenting with nasal discomfort and recurrent nosebleeds",
+      "profile / Health & Wellness / palpable_mass: User reports a lump/mass present for approximately two weeks.",
+      "profile / Communication Style / informal_medical_inquiry: User uses colloquial terms like '那个骨髓肿瘤' (that bone marrow tumor) rather than precise medical terminology when expressing fears.",
+      "profile / Psychological Profile / concern_about_diagnostic_accuracy: User scenario implies concern regarding diagnostic precision following a previous incorrect diagnosis of DLBCL instead of MCL.",
+      "profile / Health & Wellness / nasal_symptoms: User reports frequent nosebleeds and occasional dizziness.",
+      "profile / Health & Wellness / nasal_symptoms: User reports frequent nosebleeds and occasional dizziness.",
+      "profile / Psychological Profile / fear_of_leukemia_despite_reassurance: User expresses intense fear of leukemia ('好怕') based on online information, despite having no bleeding symptoms and previous reassurance.",
+      "profile / Health & Wellness / nasal_bleeding_increase: User reports increased frequency of nosebleeds recently.",
+      "profile / Health & Wellness / nasal_bleeding_frequency: User reports increased frequency of nosebleeds recently.",
+      "profile / Health & Wellness / nasal_bleeding_frequency: User reports increased frequency of nosebleeds recently.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User provides explicit negations of specific symptoms (no fever, no swollen lymph nodes) to help rule out conditions.",
+      "profile / Psychological Profile / seeking_medical_clarity: User is actively seeking a diagnosis for persistent symptoms despite previous medical visits",
+      "profile / Health & Wellness / palpable_cervical_mass: User describes a hard, immobile lump on the left side of the neck.",
+      "profile / Psychological Profile / self_diagnosis_via_social_media: User actively researches symptoms on TikTok and self-diagnoses lymphoma based on videos, showing strong conviction in their internet findings.",
+      "profile / Psychological Profile / self_diagnosis_via_social_media: User actively researches symptoms on TikTok and self-diagnoses lymphoma based on videos, showing strong conviction in their internet findings.",
+      "profile / Health & Wellness / nasal_symptoms: User reports frequent nosebleeds and occasional dizziness, with a strange sensation near the nose.",
+      "profile / Emotional Drivers / anxiety_regarding_weight_loss: User notes weight loss of 3-4 pounds, which may be a source of concern given their history of health anxiety.",
+      "profile / Emotional Drivers / anxiety_regarding_weight_loss: User notes weight loss of 3-4 pounds, which may be a source of concern given their history of health anxiety.",
+      "profile / Health & Wellness / nasal_symptoms: User reports strange sensation in nose area, increased frequency of nosebleeds, and occasional dizziness.",
+      "profile / Psychological Profile / strong_conviction_in_self_diagnosis_lymphoma: User explicitly states 'This is definitely lymphoma' based on self-research, showing strong conviction and rejecting uncertainty.",
+      "profile / Demographic Information / family_history_of_blood_disorders: User states no family members have blood diseases",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User reports new symptoms (night sweats, intermittent low fever) which may trigger health anxiety given previous history.",
+      "profile / Assistant Response Preferences / expects_medical_treatment_guidance: User expects guidance on treatment protocols (e.g., Cladribine) and supportive care measures.",
+      "profile / Geographic & Cultural Context / location_uncertainty: User is unsure of the exact location of a physical symptom, only noting it is near the nose.",
+      "profile / Health & Wellness / left_upper_abdominal_distension: User reports history of distension/fullness in the left upper abdomen.",
+      "profile / Health & Wellness / reported_symptoms_night_sweats_fatigue: User confirms severe night sweats and fatigue as primary symptoms driving their current concern.",
+      "profile / Demographic Information / family_history_of_blood_disorders: User states no family members have blood diseases.",
+      "profile / Social Identity / family_history_negative: User states no family members have blood diseases.",
+      "profile / Psychological Profile / anxiety_regarding_diagnosis: User previously exhibited high anxiety and fear regarding cancer diagnosis (lymphoma), though now has a confirmed diagnosis.",
+      "profile / Geographic & Cultural Context / location_uncertainty: User is uncertain about the exact location of symptoms, only describing them as 'near the nose'.",
+      "profile / Emotional Drivers / acute_health_anxiety_trigger: User exhibits high anxiety and urgency ('hurry up', 'give me') triggered by perceived cancer symptoms (neck lump, weight loss, night sweats).",
+      "profile / Assistant Response Preferences / expects_diagnostic_reflection: User expects detailed reflection on diagnostic accuracy and missing examinations based on provided medical case analysis.",
+      "profile / Health & Wellness / abdominal_distension: User reports feeling like the upper left abdomen is full/blocked and feels bloated after eating small amounts.",
+      "profile / Assistant Usage Patterns / provides_case_summary_for_analysis: User provides a concise case summary (symptoms, duration, negations) to facilitate diagnostic and treatment strategy reflection.",
+      "profile / Geographic & Cultural Context / recent_travel_to_nigeria: User recently returned from Nigeria, a context previously associated with tropical disease anxiety.",
+      "profile / Communication Style / formal_medical_context: User engages in a formal medical consultation context, likely using professional terminology",
+      "profile / Assistant Usage Patterns / reviews_medical_imaging_results: User shares detailed ultrasound report results with the assistant for analysis.",
+      "profile / Emotional Drivers / demand_for_clear_explanation: User explicitly demands a clear explanation and rejects perfunctory answers regarding their symptoms.",
+      "profile / Health & Wellness / abdominal_bloating: User reports feeling like their upper left abdomen is stuffed/full after eating a small amount.",
+      "profile / Assistant Response Preferences / expects_treatment_safety_review: User expects review of treatment plans for safety issues like renal function adjustments and complication prevention.",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User reports fatigue and shortness of breath, explicitly states they try not to overthink but feels 'too tired', indicating ongoing health anxiety despite reassurance attempts.",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User explicitly states they try not to overthink but feels 'too tired', indicating ongoing health anxiety despite reassurance attempts.",
+      "profile / Communication Style / informal_uncertainty: User expresses uncertainty about physical symptoms ('don't know if hard', 'haven't tried to push') and location ('not too clear').",
+      "profile / Emotional Drivers / frustration_with_symptom_disruption: User expresses frustration that symptoms are disrupting their daily schedule.",
+      "profile / Health & Wellness / recurrent_bruising_extremities: User reports bruising primarily on limbs, especially shins, occurring easily with minor contact.",
+      "profile / Psychological Profile / anxiety_regarding_child_diagnosis: User exhibits high anxiety regarding child's diagnosis, seeking reassurance and clarity after previous misdiagnosis.",
+      "profile / Psychological Profile / strong_conviction_in_self_diagnosis: User expresses absolute certainty ('definitely lymphoma') based on self-research, rejecting uncertainty.",
+      "profile / Demographic Information / age_estimate: User is approximately 14 years old, based on Tanner stage II hair distribution and mixed dentition.",
+      "profile / Emotional Drivers / parental_anxiety: User expresses high concern and worry about child's health condition",
+      "profile / Geographic & Cultural Context / uncertain_location_of_symptom: User is unsure of the exact location of a physical sensation, describing it vaguely as 'near the nose'.",
+      "profile / Geographic & Cultural Context / no_recent_tropical_travel: User explicitly states they have not traveled to tropical regions recently.",
+      "profile / Emotional Drivers / general_body_anxiety: User expresses fear due to feeling 'weird' or strange in their body despite lack of specific symptoms",
+      "profile / Communication Style / informal_uncertainty: User expresses uncertainty about physical symptoms ('not sure where exactly', 'don't know if hard', 'haven't tried pushing') using casual language.",
+      "profile / Emotional Drivers / general_body_anxiety: User expresses fear due to feeling 'weird' or strange in their body despite lack of specific symptoms.",
+      "profile / Psychological Profile / low_tolerance_for_vagueness: User states 'don't treat me perfunctorily', indicating low tolerance for vague or dismissive medical explanations.",
+      "profile / Assistant Response Preferences / expects_immediate_testing_arrangement: User explicitly demands immediate scheduling of specific scans for confirmation rather than further discussion or analysis.",
+      "profile / Emotional Drivers / fear_of_unexplained_weight_loss: User expresses anxiety about losing 3kg in two months and demands a clear explanation, rejecting vague answers.",
+      "profile / Communication Style / uses_mom_address: User addresses assistant as 'Mom' (implied by previous profile context of addressing assistant as 'Mom' while identifying as a boy)",
+      "profile / Emotional Drivers / desire_for_rapid_recovery: User explicitly asks if they can get better quickly to return to work.",
+      "profile / Demographic Information / age: 14 years old",
+      "profile / Communication Style / demanding_clarity: User explicitly demands a clear explanation ('give me a clear explanation') and rejects perfunctory responses.",
+      "profile / Communication Style / imperative_directive_tone: User uses commanding language ('hurry up', 'arrange for me'), indicating high stress and demand for immediate action.",
+      "profile / Demographic Information / smoking_history: User quit smoking decades ago",
+      "profile / Demographic Information / smoking_history: User quit smoking decades ago",
+      "profile / Demographic Information / former_smoker: User quit smoking decades ago",
+      "profile / Demographic Information / smoking_history: User quit smoking decades ago",
+      "profile / Demographic Information / smoking_history: User quit smoking decades ago",
+      "profile / Demographic Information / smoking_history: User quit smoking decades ago",
+      "profile / Demographic Information / smoking_history: User quit smoking decades ago",
+      "profile / Demographic Information / smoking_history: User quit smoking decades ago",
+      "profile / Demographic Information / former_smoker: User quit smoking decades ago",
+      "profile / Demographic Information / gender: Male",
+      "profile / Demographic Information / employment_status: User is eager to return to work, implying current employment or strong desire to resume work."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？"
+      },
+      {
+        "from": "patient",
+        "text": "发热和盗汗确实有，体重也轻了。淋巴结我没摸到肿大。去年贫血医生说是骨髓增生异常综合征引起的，具体类型我不太清楚。"
+      },
+      {
+        "from": "doctor",
+        "text": "您好，您提到去年确诊过贫血并输血，当时医生告知的具体类型是骨髓增生异常综合征吗？另外，除了左上腹胀满、体重下降和淤青，您最近是否有牙龈出血或鼻出血的情况？家族中是否有其他人患有血液系统疾病？"
+      },
+      {
+        "from": "patient",
+        "text": "去年医生说是骨髓增生异常综合征，具体类型我不清楚。最近刷牙时确实有牙龈出血，但没有鼻出血。家族里没人得过血液病。"
+      },
+      {
+        "from": "doctor",
+        "text": "您好，您提到去年确诊为骨髓增生异常综合征（MDS），但目前的症状（左上腹胀满、体重下降、全身淤青、牙龈出血）和既往输血史需要进一步鉴别。请问您最近是否有黑便、呕血或尿色变深的情况？另外，除了乏力头晕，您是否感到明显的骨痛（如背部、四肢疼痛）？"
+      },
+      {
+        "from": "patient",
+        "text": "没有黑便、呕血或尿色变深。也没有明显的骨痛，就是觉得乏力头晕。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：38.6 x 10^9/L［参考范围：4.0-10.0］",
+          "血红蛋白": "Hgb：82 g/L［参考范围：110-150］",
+          "血小板计数": "PLT：42 x 10^9/L［参考范围：140-380］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "异型细胞或原始细胞": "约32%循环原始细胞伴奥尔小体",
+          "血小板数量": "显著血小板减少［参考值：数量充足（估计150,000-400,000/μL）。］",
+          "红细胞形态": "正细胞性贫血；偶见有核红细胞"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异型细胞或原始细胞",
+          "血小板数量",
+          "红细胞形态"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "D-二聚体": "2.85 mg/L FEU［参考值：建议对 >50 岁患者采用年龄校正截断值（年龄[岁] × 0.01 mg/L FEU）］",
+          "凝血酶原时间": "16.8 秒［参考值：11-13.5 秒（肝功能下降时可能轻度延长）］",
+          "凝血酶时间": "21.5 秒［参考值：14-19 秒］",
+          "国际标准化比值": "1.45［参考值：0.8-1.2］",
+          "活化部分凝血活酶时间": "38.2 秒［参考值：25-35 秒（因凝血因子VIII升高可能轻度缩短）］",
+          "血浆纤维蛋白原": "1.6 g/L［参考值：2.0-4.5 g/L（水平通常随年龄增长而升高）］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "D-二聚体",
+          "凝血酶原时间",
+          "凝血酶时间",
+          "国际标准化比值",
+          "活化部分凝血活酶时间",
+          "血浆纤维蛋白原"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？",
+        "reason": "患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或脾功能亢进等）。目前缺乏关于B症状（发热、盗汗、消瘦）、浅表淋巴结肿大情况以及既往贫血具体类型的详细信息。这些关键信息对于鉴别诊断至关重要，需进一步问诊以指导后续开具血常规、凝血功能及腹部影像学等检查。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "您好，您提到去年确诊过贫血并输血，当时医生告知的具体类型是骨髓增生异常综合征吗？另外，除了左上腹胀满、体重下降和淤青，您最近是否有牙龈出血或鼻出血的情况？家族中是否有其他人患有血液系统疾病？",
+        "reason": "患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及头晕，且有既往贫血输血史。虽然患者自述去年诊断为“骨髓增生异常综合征”，但缺乏对具体分型、有无消化道出血迹象以及家族遗传史的确认。这些信息对于鉴别诊断（如区分MDS复发、脾功能亢进或其他血液病）至关重要，需进一步问诊以指导后续开具血常规、腹部超声及骨髓穿刺等关键检查。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "您好，您提到去年确诊为骨髓增生异常综合征（MDS），但目前的症状（左上腹胀满、体重下降、全身淤青、牙龈出血）和既往输血史需要进一步鉴别。请问您最近是否有黑便、呕血或尿色变深的情况？另外，除了乏力头晕，您是否感到明显的骨痛（如背部、四肢疼痛）？",
+        "reason": "患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及牙龈出血，且有既往MDS病史，高度怀疑血液系统疾病进展或并发症（如脾功能亢进、消化道出血或急性转化）。目前缺乏关于消化道出血迹象、骨痛等关键体征的信息，且既往诊断细节模糊，需进一步问诊以指导后续开具血常规、腹部超声及骨髓穿刺等关键检查，明确病因并制定治疗方案。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及牙龈出血，且有既往贫血输血史。虽然患者自述无黑便呕血，但结合体征和症状，必须立即完善全血细胞计数（CBC）以评估三系情况，外周血涂片寻找原始细胞，以及凝血功能检查。这些是鉴别诊断和制定治疗方案最基础且关键的信息，目前尚未开具任何检查，故优先选择开检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者表现为全血细胞减少（Hgb 82g/L, PLT 42x10^9/L）伴白细胞显著升高（WBC 38.6x10^9/L），外周血涂片发现约32%循环原始细胞伴奥尔小体，这是急性白血病的典型特征。同时凝血功能全套显示D-二聚体升高、PT/APTT延长及纤维蛋白原降低，提示合并弥散性血管内凝血（DIC）。结合既往“骨髓增生异常综合征”病史，高度怀疑MDS转化至急性白血病（AML-M7或伴DIC的AML）。现有信息已足够支持进入诊断和治疗阶段，需立即启动化疗及抗凝/支持治疗。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有既往贫血输血史。虽然患者自述去年诊断为骨髓增生异常综合征（MDS），但目前的症状（特别是左上腹胀满提示脾大可能）和体征需要重新评估以鉴别是MDS复发、进展为急性白血病，还是其他原因（如脾功能亢进）。首先需进行全血细胞计数（CBC）评估三系减少情况；结合外周血涂片观察有无原始细胞或异常形态以鉴别白血病与再生障碍性贫血等；同时进行凝血功能全套检查，排除凝血功能障碍导致的出血倾向，为后续诊断提供关键依据。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "急性淋巴细胞白血病",
+      "treatment_plan": "1. **紧急评估与风险分层**：\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确AML分型（如M3型需紧急鉴别）。\n   - 完善凝血功能动态监测，评估弥散性血管内凝血（DIC）风险；完善肝肾功能、电解质、尿酸水平。\n   - 进行心脏超声评估心功能，为化疗做准备。\n\n2. **支持治疗与并发症管理**：\n   - **纠正凝血障碍**：鉴于患者D-二聚体显著升高、纤维蛋白原降低及凝血时间延长，高度提示合并DIC。立即输注新鲜冰冻血浆（FFP）、冷沉淀或纤维蛋白原浓缩物以补充凝血因子，维持纤维蛋白原>1.5g/L，预防致命性出血。\n   - **输血支持**：血红蛋白82g/L伴乏力头晕，输注去白细胞悬浮红细胞；血小板42x10^9/L伴淤青，避免剧烈运动，若PLT<20x10^9/L或有活动性出血则输注血小板。\n   - **肿瘤溶解综合征（TLS）预防**：水化、碱化尿液，使用别嘌醇或拉布立酶降低尿酸，密切监测电解质。\n   - **感染预防**：中性粒细胞减少（虽WBC高但多为原始细胞），严格无菌操作，发热时立即经验性使用广谱抗生素。\n\n3. **针对性药物治疗**：\n   - **诱导缓解化疗**：确诊非M3型后，首选“7+3”方案（阿糖胞苷+蒽环类药物，如柔红霉素或伊达比星）。若为M3型（急性早幼粒细胞白血病），立即启动全反式维甲酸（ATRA）联合三氧化二砷（ATO）治疗，这是挽救生命的关键。\n   - **靶向治疗**：根据基因检测结果，若存在FLT3突变，加用吉瑞替尼或米哚妥林；若存在IDH突变，考虑相应抑制剂。\n   - **巩固治疗**：诱导缓解后进行高强度巩固化疗或异基因造血干细胞移植（尤其对于高危组患者）。\n\n4. **长期管理与随访**：\n   - 每疗程后复查骨髓及血象，监测微小残留病（MRD）。\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的焦虑，强调规范治疗的治愈希望。\n   - 出院后定期随访，注意疫苗接种时机（化疗期间暂停活疫苗）。",
+      "reasoning": "患者既往有“骨髓增生异常综合征（MDS）”病史，现出现高热、盗汗、体重下降等B症状，查体左上腹胀满（脾大可能）。实验室检查显示全血细胞减少（贫血、血小板减少）伴白细胞显著升高（38.6 x 10^9/L），外周血涂片发现约32%的循环原始细胞且伴有奥尔小体（Auer rods），这是急性髓系白血病（AML）的特异性形态学标志。同时，凝血功能全套显示D-二聚体升高、纤维蛋白原降低及多凝血指标异常，提示并发弥散性血管内凝血（DIC），这在AML（尤其是M3型）中常见且危及生命。结合既往MDS病史，符合MDS转化至AML的特征。诊断明确为急性髓系白血病，治疗方案需立即启动抗白血病化疗并紧急纠正凝血功能障碍。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_08330",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.32,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.2,
+      "diagnosisDetail": {
+        "submitted": [
+          "急性淋巴细胞白血病"
+        ],
+        "expected": [
+          "白血病"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "综合代谢面板（CMP）",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "分子遗传学检测"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.25,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **紧急评估与风险分层**：\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确AML分型（如M3型需紧急鉴别）。\n   - 完善凝血功能动态监测，评估弥散性血管内凝血（DIC）风险；完善肝肾功能、电解质、尿酸水平。\n   - 进行心脏超声评估心功能，为化疗做准备。\n\n2. **支持治疗与并发症管理**：\n   - **纠正凝血障碍**：鉴于患者D-二聚体显著升高、纤维蛋白原降低及凝血时间延长，高度提示合并DIC。立即输注新鲜冰冻血浆（FFP）、冷沉淀或纤维蛋白原浓缩物以补充凝血因子，维持纤维蛋白原>1.5g/L，预防致命性出血。\n   - **输血支持**：血红蛋白82g/L伴乏力头晕，输注去白细胞悬浮红细胞；血小板42x10^9/L伴淤青，避免剧烈运动，若PLT<20x10^9/L或有活动性出血则输注血小板。\n   - **肿瘤溶解综合征（TLS）预防**：水化、碱化尿液，使用别嘌醇或拉布立酶降低尿酸，密切监测电解质。\n   - **感染预防**：中性粒细胞减少（虽WBC高但多为原始细胞），严格无菌操作，发热时立即经验性使用广谱抗生素。\n\n3. **针对性药物治疗**：\n   - **诱导缓解化疗**：确诊非M3型后，首选“7+3”方案（阿糖胞苷+蒽环类药物，如柔红霉素或伊达比星）。若为M3型（急性早幼粒细胞白血病），立即启动全反式维甲酸（ATRA）联合三氧化二砷（ATO）治疗，这是挽救生命的关键。\n   - **靶向治疗**：根据基因检测结果，若存在FLT3突变，加用吉瑞替尼或米哚妥林；若存在IDH突变，考虑相应抑制剂。\n   - **巩固治疗**：诱导缓解后进行高强度巩固化疗或异基因造血干细胞移植（尤其对于高危组患者）。\n\n4. **长期管理与随访**：\n   - 每疗程后复查骨髓及血象，监测微小残留病（MRD）。\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的焦虑，强调规范治疗的治愈希望。\n   - 出院后定期随访，注意疫苗接种时机（化疗期间暂停活疫苗）。",
+        "overallScore": 0.32,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.2,
+        "reasoning": "方案未遵循参考标准，采用高强度化疗且忽视高龄与肾功能，存在严重风险。",
+        "reference": "开始低强度阿扎胞苷 75 mg/m² 皮下注射，每28天为一个周期，连续用药7天，并每日预防性使用左氧氟沙星和泊沙康唑，以降低感染风险；诱导期间当 Hgb <80 g/L 时输注1单位去白细胞红细胞，如有任何出血或血小板 <10 × 10⁹/L 时输注单采血小板。加入肿瘤溶解综合征预防措施：积极补液（在耐受情况下鼓励每日约2 L口服液体，必要时静脉补液）并使用别嘌醇 100 mg 每日2次（如为高风险 TLS 或尿酸升高，可考虑使用拉布立酶）。鉴于肾功能受损，避免常规尿液碱化/碳酸氢钠；仅在有明确指征时使用碳酸氢盐，例如严重代谢性酸中毒，并密切监测电解质和肾功能。限制访客，使用软毛牙刷，避免生食，家庭步行每次控制在10分钟并有扶手支撑。每7–10天复查全血细胞计数和肌酐；如出现体温≥38 °C、自发性瘀斑、血尿或气短加重，立即就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "综合代谢面板（CMP）",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "分子遗传学检测"
+        ],
+        "contraindications": {
+          "drugs": [
+            "Penicillin"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "开始低强度阿扎胞苷 75 mg/m² 皮下注射，每28天为一个周期，连续用药7天，并每日预防性使用左氧氟沙星和泊沙康唑，以降低感染风险；诱导期间当 Hgb <80 g/L 时输注1单位去白细胞红细胞，如有任何出血或血小板 <10 × 10⁹/L 时输注单采血小板。加入肿瘤溶解综合征预防措施：积极补液（在耐受情况下鼓励每日约2 L口服液体，必要时静脉补液）并使用别嘌醇 100 mg 每日2次（如为高风险 TLS 或尿酸升高，可考虑使用拉布立酶）。鉴于肾功能受损，避免常规尿液碱化/碳酸氢钠；仅在有明确指征时使用碳酸氢盐，例如严重代谢性酸中毒，并密切监测电解质和肾功能。限制访客，使用软毛牙刷，避免生食，家庭步行每次控制在10分钟并有扶手支撑。每7–10天复查全血细胞计数和肌酐；如出现体温≥38 °C、自发性瘀斑、血尿或气短加重，立即就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "老年患者，既往确诊骨髓增生异常综合征（MDS），近期出现发热、盗汗、体重下降、左上腹胀满、全身淤青及牙龈出血，伴乏力头晕，无骨痛及家族血液病史。",
+        "diagnosis_reflection": "诊断错误：将疑似MDS转化为白血病时，具体分型误判为急性淋巴细胞白血病（实际应为急性髓系白血病等）。需警惕MDS向AML转化的临床特征（如进行性血细胞减少、原始细胞增多），避免仅凭症状直接锁定ALL而忽略AML的常见性。",
+        "examination_reflection": "检查遗漏严重：仅开具了CBC和外周血涂片，漏掉了确诊白血病的关键检查——骨髓穿刺和活检（含细胞遗传学、分子检测）及流式细胞术。对于疑似白血病患者，必须通过骨髓检查明确分型和风险分层，不能仅靠外周血推断。",
+        "treatment_reflection": "治疗方案不当：参考方案推荐低强度去甲基化药物（阿扎胞苷）联合抗感染预防，适用于高龄或体能较差的MDS/AML患者；而提交方案采用了高强度的'7+3'化疗且未充分评估肾功能与年龄风险，存在严重安全隐患。治疗策略应基于风险分层，优先选择低毒有效的诱导方案。",
+        "future_strategy": "面对MDS转化疑似病例，首要完善骨髓穿刺及基因检测以明确分型；治疗决策需严格依据患者年龄、体能状态及合并症，优先选择低强度方案（如阿扎胞苷）而非盲目使用高强度化疗，并同步做好感染预防与支持治疗。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T17:32:56.340378+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_08330",
+    "team_id": "rsi_896d6e22b72f4eb7ad5d05a356ccff3a",
+    "diagnosis": [
+      "急性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. **紧急评估与风险分层**：\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确AML分型（如M3型需紧急鉴别）。\n   - 完善凝血功能动态监测，评估弥散性血管内凝血（DIC）风险；完善肝肾功能、电解质、尿酸水平。\n   - 进行心脏超声评估心功能，为化疗做准备。\n\n2. **支持治疗与并发症管理**：\n   - **纠正凝血障碍**：鉴于患者D-二聚体显著升高、纤维蛋白原降低及凝血时间延长，高度提示合并DIC。立即输注新鲜冰冻血浆（FFP）、冷沉淀或纤维蛋白原浓缩物以补充凝血因子，维持纤维蛋白原>1.5g/L，预防致命性出血。\n   - **输血支持**：血红蛋白82g/L伴乏力头晕，输注去白细胞悬浮红细胞；血小板42x10^9/L伴淤青，避免剧烈运动，若PLT<20x10^9/L或有活动性出血则输注血小板。\n   - **肿瘤溶解综合征（TLS）预防**：水化、碱化尿液，使用别嘌醇或拉布立酶降低尿酸，密切监测电解质。\n   - **感染预防**：中性粒细胞减少（虽WBC高但多为原始细胞），严格无菌操作，发热时立即经验性使用广谱抗生素。\n\n3. **针对性药物治疗**：\n   - **诱导缓解化疗**：确诊非M3型后，首选“7+3”方案（阿糖胞苷+蒽环类药物，如柔红霉素或伊达比星）。若为M3型（急性早幼粒细胞白血病），立即启动全反式维甲酸（ATRA）联合三氧化二砷（ATO）治疗，这是挽救生命的关键。\n   - **靶向治疗**：根据基因检测结果，若存在FLT3突变，加用吉瑞替尼或米哚妥林；若存在IDH突变，考虑相应抑制剂。\n   - **巩固治疗**：诱导缓解后进行高强度巩固化疗或异基因造血干细胞移植（尤其对于高危组患者）。\n\n4. **长期管理与随访**：\n   - 每疗程后复查骨髓及血象，监测微小残留病（MRD）。\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的焦虑，强调规范治疗的治愈希望。\n   - 出院后定期随访，注意疫苗接种时机（化疗期间暂停活疫苗）。",
+    "reasoning": "患者既往有“骨髓增生异常综合征（MDS）”病史，现出现高热、盗汗、体重下降等B症状，查体左上腹胀满（脾大可能）。实验室检查显示全血细胞减少（贫血、血小板减少）伴白细胞显著升高（38.6 x 10^9/L），外周血涂片发现约32%的循环原始细胞且伴有奥尔小体（Auer rods），这是急性髓系白血病（AML）的特异性形态学标志。同时，凝血功能全套显示D-二聚体升高、纤维蛋白原降低及多凝血指标异常，提示并发弥散性血管内凝血（DIC），这在AML（尤其是M3型）中常见且危及生命。结合既往MDS病史，符合MDS转化至AML的特征。诊断明确为急性髓系白血病，治疗方案需立即启动抗白血病化疗并紧急纠正凝血功能障碍。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套"
+    ],
+    "conversation_rounds": 3,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_08330",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.32,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.2,
+    "diagnosisDetail": {
+      "submitted": [
+        "急性淋巴细胞白血病"
+      ],
+      "expected": [
+        "白血病"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "综合代谢面板（CMP）",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "分子遗传学检测"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.25,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **紧急评估与风险分层**：\n   - 立即进行骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序），明确AML分型（如M3型需紧急鉴别）。\n   - 完善凝血功能动态监测，评估弥散性血管内凝血（DIC）风险；完善肝肾功能、电解质、尿酸水平。\n   - 进行心脏超声评估心功能，为化疗做准备。\n\n2. **支持治疗与并发症管理**：\n   - **纠正凝血障碍**：鉴于患者D-二聚体显著升高、纤维蛋白原降低及凝血时间延长，高度提示合并DIC。立即输注新鲜冰冻血浆（FFP）、冷沉淀或纤维蛋白原浓缩物以补充凝血因子，维持纤维蛋白原>1.5g/L，预防致命性出血。\n   - **输血支持**：血红蛋白82g/L伴乏力头晕，输注去白细胞悬浮红细胞；血小板42x10^9/L伴淤青，避免剧烈运动，若PLT<20x10^9/L或有活动性出血则输注血小板。\n   - **肿瘤溶解综合征（TLS）预防**：水化、碱化尿液，使用别嘌醇或拉布立酶降低尿酸，密切监测电解质。\n   - **感染预防**：中性粒细胞减少（虽WBC高但多为原始细胞），严格无菌操作，发热时立即经验性使用广谱抗生素。\n\n3. **针对性药物治疗**：\n   - **诱导缓解化疗**：确诊非M3型后，首选“7+3”方案（阿糖胞苷+蒽环类药物，如柔红霉素或伊达比星）。若为M3型（急性早幼粒细胞白血病），立即启动全反式维甲酸（ATRA）联合三氧化二砷（ATO）治疗，这是挽救生命的关键。\n   - **靶向治疗**：根据基因检测结果，若存在FLT3突变，加用吉瑞替尼或米哚妥林；若存在IDH突变，考虑相应抑制剂。\n   - **巩固治疗**：诱导缓解后进行高强度巩固化疗或异基因造血干细胞移植（尤其对于高危组患者）。\n\n4. **长期管理与随访**：\n   - 每疗程后复查骨髓及血象，监测微小残留病（MRD）。\n   - 心理疏导，缓解对“骨髓肿瘤”恶化的焦虑，强调规范治疗的治愈希望。\n   - 出院后定期随访，注意疫苗接种时机（化疗期间暂停活疫苗）。",
+      "overallScore": 0.32,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.2,
+      "reasoning": "方案未遵循参考标准，采用高强度化疗且忽视高龄与肾功能，存在严重风险。",
+      "reference": "开始低强度阿扎胞苷 75 mg/m² 皮下注射，每28天为一个周期，连续用药7天，并每日预防性使用左氧氟沙星和泊沙康唑，以降低感染风险；诱导期间当 Hgb <80 g/L 时输注1单位去白细胞红细胞，如有任何出血或血小板 <10 × 10⁹/L 时输注单采血小板。加入肿瘤溶解综合征预防措施：积极补液（在耐受情况下鼓励每日约2 L口服液体，必要时静脉补液）并使用别嘌醇 100 mg 每日2次（如为高风险 TLS 或尿酸升高，可考虑使用拉布立酶）。鉴于肾功能受损，避免常规尿液碱化/碳酸氢钠；仅在有明确指征时使用碳酸氢盐，例如严重代谢性酸中毒，并密切监测电解质和肾功能。限制访客，使用软毛牙刷，避免生食，家庭步行每次控制在10分钟并有扶手支撑。每7–10天复查全血细胞计数和肌酐；如出现体温≥38 °C、自发性瘀斑、血尿或气短加重，立即就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "综合代谢面板（CMP）",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "分子遗传学检测"
+      ],
+      "contraindications": {
+        "drugs": [
+          "Penicillin"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "开始低强度阿扎胞苷 75 mg/m² 皮下注射，每28天为一个周期，连续用药7天，并每日预防性使用左氧氟沙星和泊沙康唑，以降低感染风险；诱导期间当 Hgb <80 g/L 时输注1单位去白细胞红细胞，如有任何出血或血小板 <10 × 10⁹/L 时输注单采血小板。加入肿瘤溶解综合征预防措施：积极补液（在耐受情况下鼓励每日约2 L口服液体，必要时静脉补液）并使用别嘌醇 100 mg 每日2次（如为高风险 TLS 或尿酸升高，可考虑使用拉布立酶）。鉴于肾功能受损，避免常规尿液碱化/碳酸氢钠；仅在有明确指征时使用碳酸氢盐，例如严重代谢性酸中毒，并密切监测电解质和肾功能。限制访客，使用软毛牙刷，避免生食，家庭步行每次控制在10分钟并有扶手支撑。每7–10天复查全血细胞计数和肌酐；如出现体温≥38 °C、自发性瘀斑、血尿或气短加重，立即就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "老年患者，既往确诊骨髓增生异常综合征（MDS），近期出现发热、盗汗、体重下降、左上腹胀满、全身淤青及牙龈出血，伴乏力头晕，无骨痛及家族血液病史。",
+      "diagnosis_reflection": "诊断错误：将疑似MDS转化为白血病时，具体分型误判为急性淋巴细胞白血病（实际应为急性髓系白血病等）。需警惕MDS向AML转化的临床特征（如进行性血细胞减少、原始细胞增多），避免仅凭症状直接锁定ALL而忽略AML的常见性。",
+      "examination_reflection": "检查遗漏严重：仅开具了CBC和外周血涂片，漏掉了确诊白血病的关键检查——骨髓穿刺和活检（含细胞遗传学、分子检测）及流式细胞术。对于疑似白血病患者，必须通过骨髓检查明确分型和风险分层，不能仅靠外周血推断。",
+      "treatment_reflection": "治疗方案不当：参考方案推荐低强度去甲基化药物（阿扎胞苷）联合抗感染预防，适用于高龄或体能较差的MDS/AML患者；而提交方案采用了高强度的'7+3'化疗且未充分评估肾功能与年龄风险，存在严重安全隐患。治疗策略应基于风险分层，优先选择低毒有效的诱导方案。",
+      "future_strategy": "面对MDS转化疑似病例，首要完善骨髓穿刺及基因检测以明确分型；治疗决策需严格依据患者年龄、体能状态及合并症，优先选择低强度方案（如阿扎胞苷）而非盲目使用高强度化疗，并同步做好感染预防与支持治疗。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/052.json#/applied_memory"
+  }
+}

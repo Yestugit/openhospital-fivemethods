@@ -1,0 +1,177 @@
+{
+  "method_id": "langmem",
+  "name": "LangMem",
+  "summary": "Background extraction, consolidation, and searchable long-term agent memory.",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "record",
+      "procedural"
+    ],
+    "operations": [
+      "observe",
+      "retrieve",
+      "learn",
+      "commit",
+      "reset",
+      "save_state",
+      "load_state"
+    ],
+    "integration_slots": [
+      "context",
+      "episode"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "action",
+      "tool_result"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true,
+    "history_ingestion": "commit"
+  },
+  "version": "1",
+  "paper_url": null,
+  "repository_url": "https://github.com/langchain-ai/langmem",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {
+    "path_parameters": {
+      "storage_path": "auto",
+      "data_storage_path": "auto"
+    },
+    "kind": "embedded_db",
+    "backend": "langgraph_store",
+    "database_path": "langgraph_store.db",
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "conditional",
+  "implementation_notes": [
+    "Reference: langchain-ai/langmem 9d033b47d9ce53e37e92c92241b0496c0278932e, memory-store-manager path.",
+    "Before extraction, search exponentially widening recent-message windows through LangGraph Store, deduplicate and keep query_limit candidates. Updates/deletes are restricted to those candidate IDs.",
+    "Configurable max_steps performs iterative memory refinement with a done signal; default one pass matches the source.",
+    "SQLite snapshots provide durability around the native LangGraph InMemoryStore."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "implementation_mode": {
+        "type": "string",
+        "enum": [
+          "standard",
+          "offline"
+        ],
+        "default": "standard"
+      },
+      "llm_model": {
+        "type": "string"
+      },
+      "llm_base_url": {
+        "type": "string"
+      },
+      "llm_api_key_env": {
+        "type": "string"
+      },
+      "embedding_model": {
+        "type": "string"
+      },
+      "embedding_base_url": {
+        "type": "string"
+      },
+      "embedding_api_key_env": {
+        "type": "string"
+      },
+      "embedding_dims": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "query_limit": {
+        "type": "integer",
+        "default": 5
+      },
+      "flush_on_roles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": [
+          "assistant"
+        ]
+      },
+      "flush_before_search": {
+        "type": "boolean",
+        "default": false
+      },
+      "max_buffer_messages": {
+        "type": "integer",
+        "default": 12
+      },
+      "instructions": {
+        "type": "string",
+        "default": ""
+      },
+      "enable_inserts": {
+        "type": "boolean",
+        "default": true
+      },
+      "enable_updates": {
+        "type": "boolean",
+        "default": true
+      },
+      "enable_deletes": {
+        "type": "boolean",
+        "default": false
+      },
+      "reset_limit": {
+        "type": "integer",
+        "default": 10000
+      },
+      "snapshot_limit": {
+        "type": "integer",
+        "default": 10000
+      },
+      "max_steps": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 1
+      }
+    },
+    "additionalProperties": true
+  },
+  "limitations": [
+    "JSON operation messages implement the extraction loop through the framework LLM protocol; arbitrary Pydantic schema/tool providers and prompt-optimization products are outside this memory-store profile."
+  ],
+  "tags": [
+    "long-term",
+    "semantic",
+    "procedural"
+  ],
+  "requirements": {
+    "python": [
+      "langgraph"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "offline_mode": "Explicit simplified smoke tests; results do not represent the standard algorithm."
+  },
+  "route_hints": [
+    "background memory consolidation",
+    "namespace-scoped semantic memory"
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "patient_id": "Patient_04112",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或关节疼痛等？\", \"reason\": \"当前病例信息为空，缺乏患者的主诉和病史，无法进行诊断或开具针对性检查，需先通过问诊收集关键临床信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或关节疼痛等？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "有颈部和腋下肿块，无痛但越来越大。最近特别累，运动耐力下降，容易饿饱，肚子胀，还有盗汗和体重减轻。偶尔觉得有点低热，但没发烧。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为无痛性淋巴结肿大、B症状（盗汗、体重减轻、低热）及脾大，高度怀疑淋巴瘤。目前尚未进行任何检查，需优先完善血常规、外周血涂片、腹部超声及颈部/腋窝淋巴结超声等检查以评估病情并指导后续活检。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为无痛性淋巴结肿大、B症状（发热、盗汗、体重减轻）及脾大，高度怀疑淋巴瘤（如套细胞淋巴瘤）。确诊淋巴瘤的金标准是获取组织进行病理学检查（包括形态学、免疫组化及分子遗传学检测），以明确病变性质和分型，从而指导后续治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"淋巴结活检\", \"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为无痛性颈部及腋下肿块、盗汗、体重减轻等B症状，结合既往套细胞淋巴瘤病史及脾大表现，需通过淋巴结活检获取组织进行病理确诊及分型；同时需行骨髓穿刺和活检以评估骨髓受累情况及排除其他血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"淋巴结活检\": {\"result\": {\"结构消失\": \"弥漫性/结节性结构破坏\", \"淋巴结细胞分布\": \"由单一形态的小到中等大小淋巴样细胞构成\", \"补充描述\": \"细胞核不规则，套区扩大。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"结构消失\", \"淋巴结细胞分布\"]}, \"骨髓穿刺和活检（BMAB）\": {\"result\": {\"骨髓细胞密度\": \"骨髓增生活跃［参考值：30-70%（与年龄相关，随年龄增长而降低）。］\", \"异常浸润或纤维化\": \"可见间质性/小梁旁淋巴样细胞聚集，约占骨髓细胞成分的35%，符合骨髓受累。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"骨髓细胞密度\", \"异常浸润或纤维化\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者已出现淋巴结活检和骨髓穿刺结果异常，提示淋巴瘤可能，但尚未进行免疫组化、流式细胞术及分子遗传学检测以明确具体分型（如套细胞淋巴瘤等），这些是确诊和制定治疗方案的关键依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者淋巴结活检和骨髓穿刺结果提示淋巴瘤可能，但尚未进行免疫组化、流式细胞术或基因重排等分子病理学检测以明确具体亚型（如套细胞淋巴瘤、慢性淋巴细胞白血病等），这是确诊和指导后续治疗的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"免疫组织化学（IHC）\", \"特殊染色\"], \"reason\": \"患者已进行淋巴结活检和骨髓穿刺活检，结果显示存在淋巴样细胞异常浸润及结构破坏。为了明确淋巴瘤的具体亚型（如套细胞淋巴瘤、弥漫大B细胞淋巴瘤等）、评估增殖指数（Ki-67）以及确定细胞来源和分子特征，必须对已有的组织标本进行免疫组织化学（IHC）检测。此外，特殊染色有助于进一步鉴别细胞类型或排除其他病变（如真菌感染或淀粉样变），是确诊和指导后续治疗的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"免疫组织化学（IHC）\": {\"result\": {\"阳性染色\": \"Cyclin D1细胞核强阳性；SOX11阳性；CD20阳性；CD5阳性\", \"阴性染色\": \"CD23阴性\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"阳性染色\"]}, \"特殊染色\": {\"result\": {\"Masson三色染色\": \"胶原纤维呈蓝色/绿色，肌纤维呈红色，细胞核呈深棕色/黑色，未见异常纤维化改变。\", \"PAS染色\": \"糖原和黏多糖在相应部位呈洋红色/粉红色，分布符合正常组织特征。\", \"其他异常沉积或病原体证据\": \"无异常积聚、沉积或病原性生物的证据。\", \"刚果红染色\": \"偏振光下无苹果绿双折射，提示无淀粉样蛋白沉积。\", \"组织结构\": \"淋巴结结构消失，被单一形态的小到中等大小淋巴样细胞弥漫性浸润，套区扩大。\", \"网状纤维染色\": \"网状纤维支架模式在肿瘤浸润区域显示破坏，但在非受累区域保留正常模式。\", \"铁染色\": \"无异常铁沉积，含铁血黄素积聚极少或无。\", \"阿利新蓝染色\": \"相应组织中黏蛋白分布正常，未见异常酸性黏多糖积聚。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"组织结构\", \"网状纤维染色\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有颈部和腋下无痛性肿块、乏力、盗汗、体重减轻等B症状。淋巴结活检显示结构破坏，由单一形态的小到中等大小淋巴样细胞浸润，套区扩大。免疫组化结果Cyclin D1强阳性、SOX11阳性、CD20阳性、CD5阳性且CD23阴性，结合骨髓受累证据，已具备确诊套细胞淋巴瘤（Mantle Cell Lymphoma）的关键病理和免疫表型依据，无需进一步检查即可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为无痛性淋巴结肿大、乏力、盗汗及体重减轻等B症状，结合淋巴结活检显示结构破坏、套区扩大，骨髓活检提示淋巴样细胞浸润，且免疫组化结果（Cyclin D1强阳性、SOX11阳性、CD5阳性、CD23阴性）高度提示套细胞淋巴瘤（Mantle Cell Lymphoma）。该病属于恶性血液肿瘤，主要诊疗科室为血液科。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"套细胞淋巴瘤\", \"treatment_plan\": \"1. 主要治疗方案：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、体重减轻）、淋巴结肿大及骨髓受累，建议启动以化疗联合靶向治疗为主的诱导方案。首选方案为BR方案（苯达莫司汀 + 利妥昔单抗）或R-CHOP方案（利妥昔单抗 + 环磷酰胺 + 多柔比星 + 长春新碱 + 泼尼松）。对于年轻且体能状态良好的患者，可考虑含阿糖胞苷的强化疗方案（如DA-EPOCH-R）以获得更深缓解。\\n2. 个性化调整：患者目前表现为无痛性肿块增大、乏力及低热，需评估其年龄及合并症。若患者对蒽环类药物心脏毒性敏感或有基础心脏病史，应优先选择非蒽环类方案（如BR方案）。若存在TP53突变（虽未检测但需警惕），则需避免单纯依赖传统化疗，尽早引入BTK抑制剂（如伊布替尼、泽布替尼）或CAR-T细胞疗法作为挽救或一线治疗的一部分。\\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心脏功能（超声心动图）。使用利妥昔单抗时需预防输液反应及乙肝病毒再激活；使用烷化剂需注意骨髓抑制及感染风险。若出现高热不退、严重出血倾向或呼吸困难，需立即就医。治疗后每3个月进行PET-CT及骨髓活检评估疗效，长期随访监测复发迹象。\", \"reasoning\": \"诊断依据：患者有颈部及腋下无痛性肿块、盗汗、体重减轻等B症状。淋巴结活检显示结构消失，由单一形态的小到中等大小淋巴样细胞弥漫浸润，且套区扩大。免疫组化结果具有高度特异性：Cyclin D1核强阳性、SOX11阳性、CD5阳性、CD20阳性，而CD23阴性，这是套细胞淋巴瘤的典型免疫表型。骨髓活检证实骨髓受累（35%异常浸润）。综合临床表现、病理形态及免疫表型，符合套细胞淋巴瘤诊断。治疗考虑：该病侵袭性强，需积极系统治疗。根据NCCN指南，针对有症状及广泛受累的患者，免疫化疗是标准一线治疗，同时结合分子特征制定个体化策略以确保疗效并降低毒性风险。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_04112",
+    "mode": "train",
+    "memory_notes": [
+      "User is an adult patient presenting with low-grade fever, fatigue, and decreased appetite over the past 3 months, resulting in a 4 kg weight loss.",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "The evaluation identified that Patient_02851 required specific examinations including Complete Blood Count (CBC), flow cytometry immunophenotyping, FISH genetic testing, serum immunoglobulin levels, Direct Antiglobulin Test (DAT), and gene mutation analysis to correctly diagnose CLL and assess TP53 status.",
+      "Bone marrow biopsy of Patient_02851 showed hypercellularity (85%) with diffuse infiltration by small mature lymphocytes (>70%), resulting in trilineage hematopoietic suppression.",
+      "Lymph node biopsy results showed complete loss of normal lymph node architecture, destruction of cortical follicles, absence of reactive germinal centers, and invasion by atypical CD20+ B-lymphoid cells forming a monoclonal population.",
+      "User is a middle-aged male patient diagnosed with Mantle Cell Lymphoma (套细胞淋巴瘤) around November 2026, presenting with a painless left neck mass the size of a large walnut discovered 10 days prior",
+      "User's peripheral blood smear revealed hairy cells (abundant pale blue cytoplasm with irregular fringed edges) and abnormal lymphocytes with large cell bodies, abundant cytoplasm, fine fringed projections, and loose chromatin; platelets were estimated at 80,000/μL",
+      "Patient_06974's bone marrow examination showed reduced megakaryocyte numbers with low platelet production function, no abnormal infiltration, <5% blasts, and normal iron stores (Grade 1).",
+      "Physical examination of Patient_02851 revealed BMI 21.5 kg/m², temperature 37.6°C, conjunctival pallor, multiple ecchymoses on skin, spleen enlargement (palpable 3-4 cm below left costal margin, firm texture), and multiple painless, firm, slowly enlarging lymph nodes in the neck and left axilla.",
+      "Lymph node biopsy of Patient_02851 demonstrated complete destruction of normal architecture, diffuse infiltration by small mature malignant lymphocytes, a monoclonal B-cell population with light chain restriction, inverted CD4:CD8 ratio, and atypical lymphoid hyperplasia.",
+      "User's bone marrow biopsy showed 'dry tap' on aspiration, diffuse hairy cell infiltration in a honeycomb pattern, increased reticulin fibrosis, and reduced trilineage hematopoiesis",
+      "User was diagnosed with Hairy Cell Leukemia based on clinical symptoms (fever, night sweats, bleeding, bone pain), pancytopenia, characteristic hairy cells on blood smear, dry tap on bone marrow aspiration, and honeycomb-pattern infiltration with fibrosis on biopsy",
+      "Patient_04911's peripheral blood smear showed normal red cell morphology with mild polychromasia but no abnormal cells, lymphocytes at 58% consistent with age norms, and platelet count of 240,000/μL.",
+      "Patient_01894's bone marrow biopsy showed hypercellular marrow (85%), granulomonocytic proliferation with dysplasia across multiple lineages, and 8% blasts/promonocytes.",
+      "User's child has B-cell ALL confirmed by bone marrow showing 82% lymphoblasts and CD20+ B-lymphocyte monoclonal infiltration on biopsy.",
+      "User's child's bone marrow examination showed massive infiltration by lymphoblasts replacing normal hematopoietic tissue, with 82% blast cells, significantly reduced myeloid and erythroid maturation, and abundant primitive B-lymphocytes.",
+      "Patient_07426's bone marrow biopsy showed hypocellularity (20%), significant reticulin and collagen fibrosis, cluster formation of atypical megakaryocytes, dysplastic maturation, and reduced trilineage hematopoiesis.",
+      "Patient_06974's peripheral blood smear revealed significant thrombocytopenia with occasional large platelets, but no abnormal cells or blast cells were observed.",
+      "Patient_01894's peripheral blood smear revealed abnormal neutrophil development (hypogranulation), circulating promonocytes, large platelets, and significant absolute monocytosis.",
+      "Ultrasound revealed a hypoechoic mass in the left subcutaneous tissue with unclear boundaries, plus enlarged lymph nodes in the left neck and abdomen/spleen showing rich blood flow signals"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或关节疼痛等？"
+      },
+      {
+        "from": "patient",
+        "text": "有颈部和腋下肿块，无痛但越来越大。最近特别累，运动耐力下降，容易饿饱，肚子胀，还有盗汗和体重减轻。偶尔觉得有点低热，但没发烧。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "淋巴结活检": {
+        "result": {
+          "结构消失": "弥漫性/结节性结构破坏",
+          "淋巴结细胞分布": "由单一形态的小到中等大小淋巴样细胞构成",
+          "补充描述": "细胞核不规则，套区扩大。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "结构消失",
+          "淋巴结细胞分布"
+        ]
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "骨髓细胞密度": "骨髓增生活跃［参考值：30-70%（与年龄相关，随年龄增长而降低）。］",
+          "异常浸润或纤维化": "可见间质性/小梁旁淋巴样细胞聚集，约占骨髓细胞成分的35%，符合骨髓受累。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "骨髓细胞密度",
+          "异常浸润或纤维化"
+        ]
+      },
+      "免疫组织化学（IHC）": {
+        "result": {
+          "阳性染色": "Cyclin D1细胞核强阳性；SOX11阳性；CD20阳性；CD5阳性",
+          "阴性染色": "CD23阴性"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "阳性染色"
+        ]
+      },
+      "特殊染色": {
+        "result": {
+          "Masson三色染色": "胶原纤维呈蓝色/绿色，肌纤维呈红色，细胞核呈深棕色/黑色，未见异常纤维化改变。",
+          "PAS染色": "糖原和黏多糖在相应部位呈洋红色/粉红色，分布符合正常组织特征。",
+          "其他异常沉积或病原体证据": "无异常积聚、沉积或病原性生物的证据。",
+          "刚果红染色": "偏振光下无苹果绿双折射，提示无淀粉样蛋白沉积。",
+          "组织结构": "淋巴结结构消失，被单一形态的小到中等大小淋巴样细胞弥漫性浸润，套区扩大。",
+          "网状纤维染色": "网状纤维支架模式在肿瘤浸润区域显示破坏，但在非受累区域保留正常模式。",
+          "铁染色": "无异常铁沉积，含铁血黄素积聚极少或无。",
+          "阿利新蓝染色": "相应组织中黏蛋白分布正常，未见异常酸性黏多糖积聚。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "组织结构",
+          "网状纤维染色"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或关节疼痛等？",
+        "reason": "当前病例信息为空，缺乏患者的主诉和病史，无法进行诊断或开具针对性检查，需先通过问诊收集关键临床信息。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为无痛性淋巴结肿大、B症状（盗汗、体重减轻、低热）及脾大，高度怀疑淋巴瘤。目前尚未进行任何检查，需优先完善血常规、外周血涂片、腹部超声及颈部/腋窝淋巴结超声等检查以评估病情并指导后续活检。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者已出现淋巴结活检和骨髓穿刺结果异常，提示淋巴瘤可能，但尚未进行免疫组化、流式细胞术及分子遗传学检测以明确具体分型（如套细胞淋巴瘤等），这些是确诊和制定治疗方案的关键依据。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有颈部和腋下无痛性肿块、乏力、盗汗、体重减轻等B症状。淋巴结活检显示结构破坏，由单一形态的小到中等大小淋巴样细胞浸润，套区扩大。免疫组化结果Cyclin D1强阳性、SOX11阳性、CD20阳性、CD5阳性且CD23阴性，结合骨髓受累证据，已具备确诊套细胞淋巴瘤（Mantle Cell Lymphoma）的关键病理和免疫表型依据，无需进一步检查即可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "病理检查",
+        "examinations": [
+          "淋巴结活检",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为无痛性颈部及腋下肿块、盗汗、体重减轻等B症状，结合既往套细胞淋巴瘤病史及脾大表现，需通过淋巴结活检获取组织进行病理确诊及分型；同时需行骨髓穿刺和活检以评估骨髓受累情况及排除其他血液系统疾病。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "免疫组织化学（IHC）",
+          "特殊染色"
+        ],
+        "reason": "患者已进行淋巴结活检和骨髓穿刺活检，结果显示存在淋巴样细胞异常浸润及结构破坏。为了明确淋巴瘤的具体亚型（如套细胞淋巴瘤、弥漫大B细胞淋巴瘤等）、评估增殖指数（Ki-67）以及确定细胞来源和分子特征，必须对已有的组织标本进行免疫组织化学（IHC）检测。此外，特殊染色有助于进一步鉴别细胞类型或排除其他病变（如真菌感染或淀粉样变），是确诊和指导后续治疗的关键步骤。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "套细胞淋巴瘤",
+      "treatment_plan": "1. 主要治疗方案：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、体重减轻）、淋巴结肿大及骨髓受累，建议启动以化疗联合靶向治疗为主的诱导方案。首选方案为BR方案（苯达莫司汀 + 利妥昔单抗）或R-CHOP方案（利妥昔单抗 + 环磷酰胺 + 多柔比星 + 长春新碱 + 泼尼松）。对于年轻且体能状态良好的患者，可考虑含阿糖胞苷的强化疗方案（如DA-EPOCH-R）以获得更深缓解。\n2. 个性化调整：患者目前表现为无痛性肿块增大、乏力及低热，需评估其年龄及合并症。若患者对蒽环类药物心脏毒性敏感或有基础心脏病史，应优先选择非蒽环类方案（如BR方案）。若存在TP53突变（虽未检测但需警惕），则需避免单纯依赖传统化疗，尽早引入BTK抑制剂（如伊布替尼、泽布替尼）或CAR-T细胞疗法作为挽救或一线治疗的一部分。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心脏功能（超声心动图）。使用利妥昔单抗时需预防输液反应及乙肝病毒再激活；使用烷化剂需注意骨髓抑制及感染风险。若出现高热不退、严重出血倾向或呼吸困难，需立即就医。治疗后每3个月进行PET-CT及骨髓活检评估疗效，长期随访监测复发迹象。",
+      "reasoning": "诊断依据：患者有颈部及腋下无痛性肿块、盗汗、体重减轻等B症状。淋巴结活检显示结构消失，由单一形态的小到中等大小淋巴样细胞弥漫浸润，且套区扩大。免疫组化结果具有高度特异性：Cyclin D1核强阳性、SOX11阳性、CD5阳性、CD20阳性，而CD23阴性，这是套细胞淋巴瘤的典型免疫表型。骨髓活检证实骨髓受累（35%异常浸润）。综合临床表现、病理形态及免疫表型，符合套细胞淋巴瘤诊断。治疗考虑：该病侵袭性强，需积极系统治疗。根据NCCN指南，针对有症状及广泛受累的患者，免疫化疗是标准一线治疗，同时结合分子特征制定个体化策略以确保疗效并降低毒性风险。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_04112",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.75,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "套细胞淋巴瘤"
+        ],
+        "expected": [
+          "套细胞淋巴瘤"
+        ],
+        "matched": [
+          "套细胞淋巴瘤"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "淋巴结活检",
+          "骨髓穿刺和活检（BMAB）",
+          "免疫组织化学（IHC）",
+          "特殊染色"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "流式细胞术免疫分型",
+          "β2-微球蛋白检测",
+          "淋巴结活检",
+          "免疫组织化学（IHC）",
+          "荧光原位杂交（FISH）",
+          "骨髓穿刺和活检（BMAB）",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "结肠镜检查"
+        ],
+        "matched": [
+          "淋巴结活检",
+          "骨髓穿刺和活检（BMAB）",
+          "免疫组织化学（IHC）"
+        ],
+        "precision": 0.75,
+        "coverage": 0.3,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗方案：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、体重减轻）、淋巴结肿大及骨髓受累，建议启动以化疗联合靶向治疗为主的诱导方案。首选方案为BR方案（苯达莫司汀 + 利妥昔单抗）或R-CHOP方案（利妥昔单抗 + 环磷酰胺 + 多柔比星 + 长春新碱 + 泼尼松）。对于年轻且体能状态良好的患者，可考虑含阿糖胞苷的强化疗方案（如DA-EPOCH-R）以获得更深缓解。\n2. 个性化调整：患者目前表现为无痛性肿块增大、乏力及低热，需评估其年龄及合并症。若患者对蒽环类药物心脏毒性敏感或有基础心脏病史，应优先选择非蒽环类方案（如BR方案）。若存在TP53突变（虽未检测但需警惕），则需避免单纯依赖传统化疗，尽早引入BTK抑制剂（如伊布替尼、泽布替尼）或CAR-T细胞疗法作为挽救或一线治疗的一部分。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心脏功能（超声心动图）。使用利妥昔单抗时需预防输液反应及乙肝病毒再激活；使用烷化剂需注意骨髓抑制及感染风险。若出现高热不退、严重出血倾向或呼吸困难，需立即就医。治疗后每3个月进行PET-CT及骨髓活检评估疗效，长期随访监测复发迹象。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全无禁忌，包含参考标准但首选非推荐方案，未针对患者认知特点做沟通调整。",
+        "reference": "启动R-CHOP化疗作为主要诱导治疗，随后考虑行自体造血干细胞移植巩固治疗，适用于该晚期套细胞淋巴瘤患者。在治疗周期中给予止吐药和生长因子支持等支持治疗。建议保持充足水化和高蛋白饮食，以帮助缓解疲劳并在治疗期间维持营养状态。每个化疗周期后安排随访，以监测血细胞计数和治疗反应；如出现体温超过38.3°C发热或感染征象，应立即就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "套细胞淋巴瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "流式细胞术免疫分型",
+          "β2-微球蛋白检测",
+          "淋巴结活检",
+          "免疫组织化学（IHC）",
+          "荧光原位杂交（FISH）",
+          "骨髓穿刺和活检（BMAB）",
+          "正电子发射断层显像-计算机断层扫描（PET-CT）",
+          "结肠镜检查"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "启动R-CHOP化疗作为主要诱导治疗，随后考虑行自体造血干细胞移植巩固治疗，适用于该晚期套细胞淋巴瘤患者。在治疗周期中给予止吐药和生长因子支持等支持治疗。建议保持充足水化和高蛋白饮食，以帮助缓解疲劳并在治疗期间维持营养状态。每个化疗周期后安排随访，以监测血细胞计数和治疗反应；如出现体温超过38.3°C发热或感染征象，应立即就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为无痛性颈部及腋下肿块进行性增大，伴乏力、盗汗、体重减轻及低热等B症状。",
+        "diagnosis_reflection": "诊断准确（套细胞淋巴瘤），成功识别了无痛性淋巴结肿大与全身消耗症状的关联。",
+        "examination_reflection": "检查选择存在遗漏：虽完成了关键的淋巴结活检、骨髓穿刺及免疫组化，但缺失全血细胞计数、流式细胞术、FISH检测及PET-CT分期评估，导致对疾病分型和全身负荷评估不足。",
+        "treatment_reflection": "治疗方案涵盖了化疗联合靶向治疗原则，但首选方案未完全遵循指南推荐（如R-CHOP或含阿糖胞苷强化疗），且缺乏针对TP53突变风险的具体应对策略及自体移植巩固治疗的明确规划。",
+        "future_strategy": "面对疑似淋巴瘤伴B症状患者，需完善血液学、分子遗传学及全身影像学分期检查；制定方案时应严格参照最新指南，优先考虑标准一线方案并尽早规划巩固治疗。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:19:15.811974+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_04112",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "套细胞淋巴瘤"
+    ],
+    "treatment_plan": "1. 主要治疗方案：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、体重减轻）、淋巴结肿大及骨髓受累，建议启动以化疗联合靶向治疗为主的诱导方案。首选方案为BR方案（苯达莫司汀 + 利妥昔单抗）或R-CHOP方案（利妥昔单抗 + 环磷酰胺 + 多柔比星 + 长春新碱 + 泼尼松）。对于年轻且体能状态良好的患者，可考虑含阿糖胞苷的强化疗方案（如DA-EPOCH-R）以获得更深缓解。\n2. 个性化调整：患者目前表现为无痛性肿块增大、乏力及低热，需评估其年龄及合并症。若患者对蒽环类药物心脏毒性敏感或有基础心脏病史，应优先选择非蒽环类方案（如BR方案）。若存在TP53突变（虽未检测但需警惕），则需避免单纯依赖传统化疗，尽早引入BTK抑制剂（如伊布替尼、泽布替尼）或CAR-T细胞疗法作为挽救或一线治疗的一部分。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心脏功能（超声心动图）。使用利妥昔单抗时需预防输液反应及乙肝病毒再激活；使用烷化剂需注意骨髓抑制及感染风险。若出现高热不退、严重出血倾向或呼吸困难，需立即就医。治疗后每3个月进行PET-CT及骨髓活检评估疗效，长期随访监测复发迹象。",
+    "reasoning": "诊断依据：患者有颈部及腋下无痛性肿块、盗汗、体重减轻等B症状。淋巴结活检显示结构消失，由单一形态的小到中等大小淋巴样细胞弥漫浸润，且套区扩大。免疫组化结果具有高度特异性：Cyclin D1核强阳性、SOX11阳性、CD5阳性、CD20阳性，而CD23阴性，这是套细胞淋巴瘤的典型免疫表型。骨髓活检证实骨髓受累（35%异常浸润）。综合临床表现、病理形态及免疫表型，符合套细胞淋巴瘤诊断。治疗考虑：该病侵袭性强，需积极系统治疗。根据NCCN指南，针对有症状及广泛受累的患者，免疫化疗是标准一线治疗，同时结合分子特征制定个体化策略以确保疗效并降低毒性风险。",
+    "ordered_examinations": [
+      "淋巴结活检",
+      "骨髓穿刺和活检（BMAB）",
+      "免疫组织化学（IHC）",
+      "特殊染色"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_04112",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.75,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "套细胞淋巴瘤"
+      ],
+      "expected": [
+        "套细胞淋巴瘤"
+      ],
+      "matched": [
+        "套细胞淋巴瘤"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "淋巴结活检",
+        "骨髓穿刺和活检（BMAB）",
+        "免疫组织化学（IHC）",
+        "特殊染色"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "流式细胞术免疫分型",
+        "β2-微球蛋白检测",
+        "淋巴结活检",
+        "免疫组织化学（IHC）",
+        "荧光原位杂交（FISH）",
+        "骨髓穿刺和活检（BMAB）",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "结肠镜检查"
+      ],
+      "matched": [
+        "淋巴结活检",
+        "骨髓穿刺和活检（BMAB）",
+        "免疫组织化学（IHC）"
+      ],
+      "precision": 0.75,
+      "coverage": 0.3,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗方案：鉴于患者确诊为套细胞淋巴瘤（MCL），且伴有B症状（盗汗、体重减轻）、淋巴结肿大及骨髓受累，建议启动以化疗联合靶向治疗为主的诱导方案。首选方案为BR方案（苯达莫司汀 + 利妥昔单抗）或R-CHOP方案（利妥昔单抗 + 环磷酰胺 + 多柔比星 + 长春新碱 + 泼尼松）。对于年轻且体能状态良好的患者，可考虑含阿糖胞苷的强化疗方案（如DA-EPOCH-R）以获得更深缓解。\n2. 个性化调整：患者目前表现为无痛性肿块增大、乏力及低热，需评估其年龄及合并症。若患者对蒽环类药物心脏毒性敏感或有基础心脏病史，应优先选择非蒽环类方案（如BR方案）。若存在TP53突变（虽未检测但需警惕），则需避免单纯依赖传统化疗，尽早引入BTK抑制剂（如伊布替尼、泽布替尼）或CAR-T细胞疗法作为挽救或一线治疗的一部分。\n3. 安全性与监测：治疗期间需严密监测血常规、肝肾功能及心脏功能（超声心动图）。使用利妥昔单抗时需预防输液反应及乙肝病毒再激活；使用烷化剂需注意骨髓抑制及感染风险。若出现高热不退、严重出血倾向或呼吸困难，需立即就医。治疗后每3个月进行PET-CT及骨髓活检评估疗效，长期随访监测复发迹象。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全无禁忌，包含参考标准但首选非推荐方案，未针对患者认知特点做沟通调整。",
+      "reference": "启动R-CHOP化疗作为主要诱导治疗，随后考虑行自体造血干细胞移植巩固治疗，适用于该晚期套细胞淋巴瘤患者。在治疗周期中给予止吐药和生长因子支持等支持治疗。建议保持充足水化和高蛋白饮食，以帮助缓解疲劳并在治疗期间维持营养状态。每个化疗周期后安排随访，以监测血细胞计数和治疗反应；如出现体温超过38.3°C发热或感染征象，应立即就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "套细胞淋巴瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "流式细胞术免疫分型",
+        "β2-微球蛋白检测",
+        "淋巴结活检",
+        "免疫组织化学（IHC）",
+        "荧光原位杂交（FISH）",
+        "骨髓穿刺和活检（BMAB）",
+        "正电子发射断层显像-计算机断层扫描（PET-CT）",
+        "结肠镜检查"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "启动R-CHOP化疗作为主要诱导治疗，随后考虑行自体造血干细胞移植巩固治疗，适用于该晚期套细胞淋巴瘤患者。在治疗周期中给予止吐药和生长因子支持等支持治疗。建议保持充足水化和高蛋白饮食，以帮助缓解疲劳并在治疗期间维持营养状态。每个化疗周期后安排随访，以监测血细胞计数和治疗反应；如出现体温超过38.3°C发热或感染征象，应立即就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为无痛性颈部及腋下肿块进行性增大，伴乏力、盗汗、体重减轻及低热等B症状。",
+      "diagnosis_reflection": "诊断准确（套细胞淋巴瘤），成功识别了无痛性淋巴结肿大与全身消耗症状的关联。",
+      "examination_reflection": "检查选择存在遗漏：虽完成了关键的淋巴结活检、骨髓穿刺及免疫组化，但缺失全血细胞计数、流式细胞术、FISH检测及PET-CT分期评估，导致对疾病分型和全身负荷评估不足。",
+      "treatment_reflection": "治疗方案涵盖了化疗联合靶向治疗原则，但首选方案未完全遵循指南推荐（如R-CHOP或含阿糖胞苷强化疗），且缺乏针对TP53突变风险的具体应对策略及自体移植巩固治疗的明确规划。",
+      "future_strategy": "面对疑似淋巴瘤伴B症状患者，需完善血液学、分子遗传学及全身影像学分期检查；制定方案时应严格参照最新指南，优先考虑标准一线方案并尽早规划巩固治疗。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/029.json#/applied_memory"
+  }
+}

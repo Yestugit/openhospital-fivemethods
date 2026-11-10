@@ -1,0 +1,27 @@
+{
+  "method": {
+    "method_id": "awm",
+    "params": {
+      "profile": "webarena",
+      "induction_mode": "online"
+    }
+  },
+  "scope": {
+    "user_id": "alice"
+  },
+  "runtime": {
+    "artifact_dir": ".mematlas/awm-real"
+  },
+  "providers": {
+    "llm": {
+      "model": "qwen-flash",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "options": {
+        "extra_body": {
+          "enable_thinking": false
+        }
+      }
+    }
+  }
+}

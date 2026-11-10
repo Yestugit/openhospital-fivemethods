@@ -1,0 +1,372 @@
+{
+  "patient_id": "Patient_07127",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要临床症状。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "孩子最近一周感冒好了后，腿上突然出了很多针尖样的红点和瘀青。这两天刷牙时牙龈会出血，还流过一次鼻血，止血比较慢。虽然孩子还能玩，但一刷牙就特别烦躁。没有发烧，也没有肚子痛或关节肿。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者为儿童，出现感冒后突发皮肤瘀点、瘀斑、牙龈出血及鼻出血等典型出血倾向症状，高度怀疑血液系统疾病（如血小板减少性紫癜或白血病）。目前尚未进行任何检查，急需通过血常规等实验室检查明确血小板计数及血细胞形态，以指导后续诊断和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者为儿童，主要表现为感冒后出现的皮肤瘀点、瘀斑、牙龈出血及鼻出血，伴有烦躁情绪，无发热和关节肿痛。这些症状高度提示血小板减少性紫癜（如ITP）或其他血液系统疾病。血常规检查是评估血小板计数、红细胞及白细胞情况的首选且最关键的初步检查，能够直接帮助确认是否存在血小板减少及其程度，从而指导后续诊断和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者为儿童，表现为感冒后出现皮肤瘀点、瘀斑、牙龈出血及鼻出血，提示可能存在血小板减少或凝血功能障碍。首先需要进行全血细胞计数（CBC）以评估血小板数量及有无贫血、白细胞异常；进行外周血涂片以观察血小板形态及排除其他血液病；进行凝血功能全套检查以鉴别是血小板问题还是凝血因子异常导致的出血倾向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血小板计数\": \"血小板计数（PLT）：12 x 10^9/L［参考范围：150-450 x 10^9/L］。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"血小板数量\": \"明显血小板减少［参考值：数量充足（150,000-450,000/μL）。］\", \"血小板形态与分布\": \"偶见大型血小板\", \"红细胞形态\": \"红细胞形态其余无明显异常\", \"白细胞形态\": \"白细胞形态其余无明显异常\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血小板数量\", \"血小板形态与分布\"]}, \"凝血功能全套\": {\"result\": {\"活化部分凝血活酶时间\": \"aPTT：28 s［参考范围：24-38 s］\", \"凝血酶原时间\": \"PT：12.1 s［参考范围：10.0-14.0 s］\", \"国际标准化比值\": \"INR：1.0［参考范围：0.8-1.2］。\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者为儿童，有典型出血症状（皮肤瘀点、牙龈出血、鼻出血），血常规显示血小板严重减少（12 x 10^9/L），外周血涂片仅见血小板减少伴偶见大型血小板，凝血功能正常。结合病史和检查结果，已具备诊断免疫性血小板减少症（ITP）的关键依据，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为皮肤瘀点、瘀斑及黏膜出血（牙龈出血、鼻衄），实验室检查显示血小板计数极低（12 x 10^9/L），符合严重血小板减少症的诊断。外周血涂片证实血小板减少且形态异常，而凝血功能正常，白细胞和红细胞基本正常，提示病变主要局限于血小板系统，最可能的诊断为免疫性血小板减少症（ITP）或其他血液系统疾病。此类疾病的诊断与治疗属于血液科的诊疗范围，需进一步排查病因并制定治疗方案（如激素治疗等）。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"特发性血小板减少性紫癜\", \"treatment_plan\": \"1. 主要治疗：鉴于患者为儿童，血小板计数极低（12 x 10^9/L）且伴有活动性出血症状（牙龈出血、鼻血），首选静脉注射免疫球蛋白（IVIG）联合糖皮质激素（如泼尼松或地塞米松）进行紧急升板治疗。IVIG可快速阻断单核-巨噬细胞系统对血小板的破坏，激素可抑制自身免疫反应。2. 个性化调整：考虑到患儿无发热及感染迹象，暂不联合抗生素；若对激素有禁忌或疗效不佳，后续可考虑利妥昔单抗或促血小板生成药物（TPO受体激动剂）。3. 安全性与监测：治疗期间需严密监测血压、血糖及电解质变化，警惕激素副作用（如情绪波动、消化道不适）。告知家长观察有无新发出血点、黑便或剧烈头痛（警惕颅内出血），一旦出现立即急诊。治疗后需定期复查血常规，直至血小板稳定回升至安全范围（>50 x 10^9/L）。\", \"reasoning\": \"诊断依据：患儿为儿童，急性起病，表现为皮肤黏膜出血（瘀点、瘀斑、鼻衄、牙龈出血），实验室检查显示孤立性严重血小板减少（PLT 12 x 10^9/L），红细胞和白细胞计数正常，外周血涂片未见异常细胞（排除白血病等恶性血液病），凝血功能正常（排除凝血因子缺乏）。结合病史（感冒后诱发）及典型临床表现，符合特发性血小板减少性紫癜（ITP）的诊断标准。治疗方案针对儿童急性ITP伴活动性出血的高危情况，采用指南推荐的IVIG+激素联合疗法以迅速提升血小板并控制出血风险。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_07127",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_08107's complete blood count showed severe thrombocytopenia (platelet count: 12 x 10^9/L) with normal white blood cell and hemoglobin levels.",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_03614's CBC showed mild anemia (Hb 95 g/L) with microcytic hypochromic indices (MCV 72 fL, MCH 24 pg), normal platelets (280 × 10^9/L), and normal WBC count (10.5 × 10^9/L).",
+      "Patient_08888's complete blood count showed pancytopenia: WBC 2.4 × 10^9/L (leukopenia), Hgb 82 g/L (anemia), and PLT 38 × 10^9/L (thrombocytopenia).",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_06243's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 98 g/L (anemia), and PLT 42 x 10^9/L (thrombocytopenia).",
+      "Patient_00783 presented with reactive thrombocytosis (platelet count 468 x 10^9/L) alongside iron deficiency anemia findings",
+      "Patient_03549's complete blood count revealed pancytopenia: WBC 2.1 x 10^9/L, Hemoglobin 96 g/L, and Platelets 58 x 10^9/L; peripheral smear confirmed thrombocytopenia with estimated platelet count of 45,000/μL.",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_09548's complete blood count showed leukocytosis (WBC: 28.4 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 22 x 10^9/L).",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_03135's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 78 g/L), and severe thrombocytopenia (PLT: 34 x 10^9/L).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_03827's complete blood count showed extreme thrombocytosis (platelet count: 1280 x 10^9/L), mild anemia (Hgb 104 g/L), and mild leukocytosis (WBC 14.6 x 10^9/L).",
+      "Patient_07050's Complete Blood Count showed WBC 26.4 x 10^9/L, Hgb 86 g/L, and PLT 62 x 10^9/L; Peripheral blood smear revealed significant monocytosis, neutrophil dysplasia, 3% circulating promonocytes/blast cells, and thrombocytopenia.",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_05345's complete blood count showed leukocytosis (WBC: 42.8 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 24 x 10^9/L).",
+      "Patient_05291's CBC showed significant thrombocytosis (PLT: 1250 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 108 g/L). Peripheral blood smear revealed massive platelet increase, giant platelets, platelet aggregation, megakaryocyte fragments, and mild leukocytosis with left shift.",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？"
+      },
+      {
+        "from": "patient",
+        "text": "孩子最近一周感冒好了后，腿上突然出了很多针尖样的红点和瘀青。这两天刷牙时牙龈会出血，还流过一次鼻血，止血比较慢。虽然孩子还能玩，但一刷牙就特别烦躁。没有发烧，也没有肚子痛或关节肿。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血小板计数": "血小板计数（PLT）：12 x 10^9/L［参考范围：150-450 x 10^9/L］。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "血小板数量": "明显血小板减少［参考值：数量充足（150,000-450,000/μL）。］",
+          "血小板形态与分布": "偶见大型血小板",
+          "红细胞形态": "红细胞形态其余无明显异常",
+          "白细胞形态": "白细胞形态其余无明显异常"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血小板数量",
+          "血小板形态与分布"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "活化部分凝血活酶时间": "aPTT：28 s［参考范围：24-38 s］",
+          "凝血酶原时间": "PT：12.1 s［参考范围：10.0-14.0 s］",
+          "国际标准化比值": "INR：1.0［参考范围：0.8-1.2］。"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等表现？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要临床症状。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者为儿童，出现感冒后突发皮肤瘀点、瘀斑、牙龈出血及鼻出血等典型出血倾向症状，高度怀疑血液系统疾病（如血小板减少性紫癜或白血病）。目前尚未进行任何检查，急需通过血常规等实验室检查明确血小板计数及血细胞形态，以指导后续诊断和治疗。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者为儿童，有典型出血症状（皮肤瘀点、牙龈出血、鼻出血），血常规显示血小板严重减少（12 x 10^9/L），外周血涂片仅见血小板减少伴偶见大型血小板，凝血功能正常。结合病史和检查结果，已具备诊断免疫性血小板减少症（ITP）的关键依据，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者为儿童，表现为感冒后出现皮肤瘀点、瘀斑、牙龈出血及鼻出血，提示可能存在血小板减少或凝血功能障碍。首先需要进行全血细胞计数（CBC）以评估血小板数量及有无贫血、白细胞异常；进行外周血涂片以观察血小板形态及排除其他血液病；进行凝血功能全套检查以鉴别是血小板问题还是凝血因子异常导致的出血倾向。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "特发性血小板减少性紫癜",
+      "treatment_plan": "1. 主要治疗：鉴于患者为儿童，血小板计数极低（12 x 10^9/L）且伴有活动性出血症状（牙龈出血、鼻血），首选静脉注射免疫球蛋白（IVIG）联合糖皮质激素（如泼尼松或地塞米松）进行紧急升板治疗。IVIG可快速阻断单核-巨噬细胞系统对血小板的破坏，激素可抑制自身免疫反应。2. 个性化调整：考虑到患儿无发热及感染迹象，暂不联合抗生素；若对激素有禁忌或疗效不佳，后续可考虑利妥昔单抗或促血小板生成药物（TPO受体激动剂）。3. 安全性与监测：治疗期间需严密监测血压、血糖及电解质变化，警惕激素副作用（如情绪波动、消化道不适）。告知家长观察有无新发出血点、黑便或剧烈头痛（警惕颅内出血），一旦出现立即急诊。治疗后需定期复查血常规，直至血小板稳定回升至安全范围（>50 x 10^9/L）。",
+      "reasoning": "诊断依据：患儿为儿童，急性起病，表现为皮肤黏膜出血（瘀点、瘀斑、鼻衄、牙龈出血），实验室检查显示孤立性严重血小板减少（PLT 12 x 10^9/L），红细胞和白细胞计数正常，外周血涂片未见异常细胞（排除白血病等恶性血液病），凝血功能正常（排除凝血因子缺乏）。结合病史（感冒后诱发）及典型临床表现，符合特发性血小板减少性紫癜（ITP）的诊断标准。治疗方案针对儿童急性ITP伴活动性出血的高危情况，采用指南推荐的IVIG+激素联合疗法以迅速提升血小板并控制出血风险。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_07127",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.92,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 1.0,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "特发性血小板减少性紫癜"
+        ],
+        "expected": [
+          "特发性血小板减少性紫癜"
+        ],
+        "matched": [
+          "特发性血小板减少性紫癜"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "毛细血管脆性试验（止血带试验）",
+          "抗血小板抗体检测",
+          "促血小板生成素（TPO）检测",
+          "直接抗人球蛋白试验（DAT）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "precision": 1.0,
+        "coverage": 0.42857142857142855,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：鉴于患者为儿童，血小板计数极低（12 x 10^9/L）且伴有活动性出血症状（牙龈出血、鼻血），首选静脉注射免疫球蛋白（IVIG）联合糖皮质激素（如泼尼松或地塞米松）进行紧急升板治疗。IVIG可快速阻断单核-巨噬细胞系统对血小板的破坏，激素可抑制自身免疫反应。2. 个性化调整：考虑到患儿无发热及感染迹象，暂不联合抗生素；若对激素有禁忌或疗效不佳，后续可考虑利妥昔单抗或促血小板生成药物（TPO受体激动剂）。3. 安全性与监测：治疗期间需严密监测血压、血糖及电解质变化，警惕激素副作用（如情绪波动、消化道不适）。告知家长观察有无新发出血点、黑便或剧烈头痛（警惕颅内出血），一旦出现立即急诊。治疗后需定期复查血常规，直至血小板稳定回升至安全范围（>50 x 10^9/L）。",
+        "overallScore": 0.92,
+        "safety": 1.0,
+        "effectivenessAlignment": 1.0,
+        "personalization": 0.8,
+        "reasoning": "方案安全合规，核心治疗与标准一致。虽提及监测电解质但非必须，且未针对家长焦虑提供沟通策略。",
+        "reference": "鉴于患儿年龄小、血小板计数低，并有皮肤黏膜出血表现，一线治疗为静脉注射免疫球蛋白（IVIG），以迅速提升血小板计数并降低出血风险。可加用儿科标准糖皮质激素方案，如泼尼松/泼尼松龙短程治疗（按儿科血液科指导进行基于体重的剂量调整），并监测常见激素不良反应（睡眠/行为改变、血压，以及临床需要时监测血糖）。严格避免使用阿司匹林和NSAIDs。患儿应避免接触性运动和剧烈玩耍，谨慎使用软毛牙刷，并保持软食饮食以防止黏膜损伤。其父母应在一周后带其复查CBC；如出现任何新发的严重头痛、持续呕吐或意识改变，应立即就医；并确保所有照护者知晓用药禁忌。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "特发性血小板减少性紫癜",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套",
+          "毛细血管脆性试验（止血带试验）",
+          "抗血小板抗体检测",
+          "促血小板生成素（TPO）检测",
+          "直接抗人球蛋白试验（DAT）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "阿司匹林",
+            "非甾体抗炎药（NSAIDs）"
+          ],
+          "treatments": [
+            "肌内注射（非必要时避免）",
+            "高冲击性接触运动/高创伤风险活动"
+          ]
+        },
+        "treatment_plan": "鉴于患儿年龄小、血小板计数低，并有皮肤黏膜出血表现，一线治疗为静脉注射免疫球蛋白（IVIG），以迅速提升血小板计数并降低出血风险。可加用儿科标准糖皮质激素方案，如泼尼松/泼尼松龙短程治疗（按儿科血液科指导进行基于体重的剂量调整），并监测常见激素不良反应（睡眠/行为改变、血压，以及临床需要时监测血糖）。严格避免使用阿司匹林和NSAIDs。患儿应避免接触性运动和剧烈玩耍，谨慎使用软毛牙刷，并保持软食饮食以防止黏膜损伤。其父母应在一周后带其复查CBC；如出现任何新发的严重头痛、持续呕吐或意识改变，应立即就医；并确保所有照护者知晓用药禁忌。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "儿童患者，感冒后出现皮肤针尖样红点、瘀斑及黏膜出血（牙龈、鼻血），无发热骨痛，提示血小板减少性紫癜风险。",
+        "diagnosis_reflection": "诊断准确匹配特发性血小板减少性紫癜（ITP）。经验：抓住‘感染后’、‘单纯出血倾向’、‘无其他系统症状’的三联征可快速锁定ITP。",
+        "examination_reflection": "检查选择精准覆盖了确诊核心（CBC、涂片、凝血），但遗漏了评估免疫机制和排除其他病因的辅助检查（如毛细血管脆性试验、抗血小板抗体等）。经验：基础检查用于确诊，完善免疫学检查有助于鉴别诊断和制定长期方案。",
+        "treatment_reflection": "治疗方案安全有效，正确选择了IVIG联合激素作为一线紧急治疗，并强调了监测和禁忌。经验：针对低血小板伴活动性出血的儿童，应果断启动升板治疗，同时必须包含对家长的安全教育和随访计划。",
+        "future_strategy": "面对疑似ITP患儿，优先完善血常规和涂片确诊；若血小板极低且有出血，立即启动IVIG+激素治疗；务必补充免疫学相关检查以完善诊疗闭环，并强化家庭护理指导。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T13:16:56.768492+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_07127",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "特发性血小板减少性紫癜"
+    ],
+    "treatment_plan": "1. 主要治疗：鉴于患者为儿童，血小板计数极低（12 x 10^9/L）且伴有活动性出血症状（牙龈出血、鼻血），首选静脉注射免疫球蛋白（IVIG）联合糖皮质激素（如泼尼松或地塞米松）进行紧急升板治疗。IVIG可快速阻断单核-巨噬细胞系统对血小板的破坏，激素可抑制自身免疫反应。2. 个性化调整：考虑到患儿无发热及感染迹象，暂不联合抗生素；若对激素有禁忌或疗效不佳，后续可考虑利妥昔单抗或促血小板生成药物（TPO受体激动剂）。3. 安全性与监测：治疗期间需严密监测血压、血糖及电解质变化，警惕激素副作用（如情绪波动、消化道不适）。告知家长观察有无新发出血点、黑便或剧烈头痛（警惕颅内出血），一旦出现立即急诊。治疗后需定期复查血常规，直至血小板稳定回升至安全范围（>50 x 10^9/L）。",
+    "reasoning": "诊断依据：患儿为儿童，急性起病，表现为皮肤黏膜出血（瘀点、瘀斑、鼻衄、牙龈出血），实验室检查显示孤立性严重血小板减少（PLT 12 x 10^9/L），红细胞和白细胞计数正常，外周血涂片未见异常细胞（排除白血病等恶性血液病），凝血功能正常（排除凝血因子缺乏）。结合病史（感冒后诱发）及典型临床表现，符合特发性血小板减少性紫癜（ITP）的诊断标准。治疗方案针对儿童急性ITP伴活动性出血的高危情况，采用指南推荐的IVIG+激素联合疗法以迅速提升血小板并控制出血风险。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_07127",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.92,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 1.0,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "特发性血小板减少性紫癜"
+      ],
+      "expected": [
+        "特发性血小板减少性紫癜"
+      ],
+      "matched": [
+        "特发性血小板减少性紫癜"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "毛细血管脆性试验（止血带试验）",
+        "抗血小板抗体检测",
+        "促血小板生成素（TPO）检测",
+        "直接抗人球蛋白试验（DAT）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "precision": 1.0,
+      "coverage": 0.42857142857142855,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：鉴于患者为儿童，血小板计数极低（12 x 10^9/L）且伴有活动性出血症状（牙龈出血、鼻血），首选静脉注射免疫球蛋白（IVIG）联合糖皮质激素（如泼尼松或地塞米松）进行紧急升板治疗。IVIG可快速阻断单核-巨噬细胞系统对血小板的破坏，激素可抑制自身免疫反应。2. 个性化调整：考虑到患儿无发热及感染迹象，暂不联合抗生素；若对激素有禁忌或疗效不佳，后续可考虑利妥昔单抗或促血小板生成药物（TPO受体激动剂）。3. 安全性与监测：治疗期间需严密监测血压、血糖及电解质变化，警惕激素副作用（如情绪波动、消化道不适）。告知家长观察有无新发出血点、黑便或剧烈头痛（警惕颅内出血），一旦出现立即急诊。治疗后需定期复查血常规，直至血小板稳定回升至安全范围（>50 x 10^9/L）。",
+      "overallScore": 0.92,
+      "safety": 1.0,
+      "effectivenessAlignment": 1.0,
+      "personalization": 0.8,
+      "reasoning": "方案安全合规，核心治疗与标准一致。虽提及监测电解质但非必须，且未针对家长焦虑提供沟通策略。",
+      "reference": "鉴于患儿年龄小、血小板计数低，并有皮肤黏膜出血表现，一线治疗为静脉注射免疫球蛋白（IVIG），以迅速提升血小板计数并降低出血风险。可加用儿科标准糖皮质激素方案，如泼尼松/泼尼松龙短程治疗（按儿科血液科指导进行基于体重的剂量调整），并监测常见激素不良反应（睡眠/行为改变、血压，以及临床需要时监测血糖）。严格避免使用阿司匹林和NSAIDs。患儿应避免接触性运动和剧烈玩耍，谨慎使用软毛牙刷，并保持软食饮食以防止黏膜损伤。其父母应在一周后带其复查CBC；如出现任何新发的严重头痛、持续呕吐或意识改变，应立即就医；并确保所有照护者知晓用药禁忌。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "特发性血小板减少性紫癜",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套",
+        "毛细血管脆性试验（止血带试验）",
+        "抗血小板抗体检测",
+        "促血小板生成素（TPO）检测",
+        "直接抗人球蛋白试验（DAT）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "阿司匹林",
+          "非甾体抗炎药（NSAIDs）"
+        ],
+        "treatments": [
+          "肌内注射（非必要时避免）",
+          "高冲击性接触运动/高创伤风险活动"
+        ]
+      },
+      "treatment_plan": "鉴于患儿年龄小、血小板计数低，并有皮肤黏膜出血表现，一线治疗为静脉注射免疫球蛋白（IVIG），以迅速提升血小板计数并降低出血风险。可加用儿科标准糖皮质激素方案，如泼尼松/泼尼松龙短程治疗（按儿科血液科指导进行基于体重的剂量调整），并监测常见激素不良反应（睡眠/行为改变、血压，以及临床需要时监测血糖）。严格避免使用阿司匹林和NSAIDs。患儿应避免接触性运动和剧烈玩耍，谨慎使用软毛牙刷，并保持软食饮食以防止黏膜损伤。其父母应在一周后带其复查CBC；如出现任何新发的严重头痛、持续呕吐或意识改变，应立即就医；并确保所有照护者知晓用药禁忌。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "儿童患者，感冒后出现皮肤针尖样红点、瘀斑及黏膜出血（牙龈、鼻血），无发热骨痛，提示血小板减少性紫癜风险。",
+      "diagnosis_reflection": "诊断准确匹配特发性血小板减少性紫癜（ITP）。经验：抓住‘感染后’、‘单纯出血倾向’、‘无其他系统症状’的三联征可快速锁定ITP。",
+      "examination_reflection": "检查选择精准覆盖了确诊核心（CBC、涂片、凝血），但遗漏了评估免疫机制和排除其他病因的辅助检查（如毛细血管脆性试验、抗血小板抗体等）。经验：基础检查用于确诊，完善免疫学检查有助于鉴别诊断和制定长期方案。",
+      "treatment_reflection": "治疗方案安全有效，正确选择了IVIG联合激素作为一线紧急治疗，并强调了监测和禁忌。经验：针对低血小板伴活动性出血的儿童，应果断启动升板治疗，同时必须包含对家长的安全教育和随访计划。",
+      "future_strategy": "面对疑似ITP患儿，优先完善血常规和涂片确诊；若血小板极低且有出血，立即启动IVIG+激素治疗；务必补充免疫学相关检查以完善诊疗闭环，并强化家庭护理指导。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/085.json#/applied_memory"
+  }
+}

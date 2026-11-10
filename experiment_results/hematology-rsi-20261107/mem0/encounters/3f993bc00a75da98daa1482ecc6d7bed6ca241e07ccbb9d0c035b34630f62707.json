@@ -1,0 +1,599 @@
+{
+  "patient_id": "Patient_01666",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？\", \"reason\": \"虽然已有部分检查结果和病史摘要，但患者信息中存在矛盾（如既往诊断铁缺乏性贫血与淋巴结活检提示淋巴瘤/白血病），且缺乏当前症状（如发热、盗汗、体重变化）及肿块具体性质的详细描述，需要进一步问诊以明确病情并指导后续检查或治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我有低热、乏力，食欲也下降了，3个月瘦了4公斤。颈部肿块我没摸到，但最近两周身上起了很痒的皮疹。这些症状和网上查到的寄生虫感染很像，我怀疑是不是那次吃生鱼或喝生水引起的，您觉得呢？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？\", \"reason\": \"患者描述的症状（低热、乏力、体重下降、皮疹）与记忆摘要中提到的儿童病史存在显著差异，且缺乏关键的体格检查信息（如颈部肿块的具体性质），需要进一步问诊以明确当前患儿的真实症状和体征，避免误诊。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热，也没有乏力或食欲减退。体重确实降了4公斤。颈部肿块我没摸到，也不疼。但我最近两周身上起了很痒的皮疹，这和我网上查到的寄生虫感染很像，是不是吃生鱼引起的？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？\", \"reason\": \"患者主诉皮疹和体重下降，但病史记录中存在关于发热、颈部肿块及寄生虫感染的矛盾信息，且缺乏关键的体格检查和实验室数据。为了明确诊断方向（如排除血液系统恶性肿瘤、感染或寄生虫病），需要进一步询问症状细节并确认体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热，也没有乏力或食欲减退。体重确实降了4公斤。颈部肿块我没摸到，也不疼。但我最近两周身上起了很痒的皮疹，这和我网上查到的寄生虫感染很像，是不是吃生鱼引起的？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？皮疹的具体形态和分布部位是怎样的？\", \"reason\": \"患者主诉存在体重下降和皮疹，但病史描述中关于发热、乏力及颈部肿块的细节与记忆摘要中的部分记录存在不一致（如记忆中有颈部肿块而患者否认），且皮疹性质不明。需要进一步问诊以明确症状的准确性、排除寄生虫感染或其他血液系统疾病的可能，为后续诊断提供关键依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热，也没有乏力或食欲减退。体重确实降了4公斤。颈部肿块我没摸到，也不疼。但我最近两周身上起了很痒的皮疹，这和我网上查到的寄生虫感染很像，是不是吃生鱼引起的？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？\", \"reason\": \"患者主诉有体重下降和瘙痒性皮疹，怀疑寄生虫感染，但缺乏皮疹的具体特征描述及其他伴随症状信息，且既往病史中存在矛盾信息（如发热史），需要进一步问诊以鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？\", \"reason\": \"患者描述了皮疹、体重下降和消化道症状，但缺乏对皮疹具体形态、分布以及伴随症状的详细描述，同时需要排除寄生虫感染或其他系统性疾病，因此需要先进一步问诊以完善病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？\", \"reason\": \"患者描述了皮疹、体重下降及消化道症状，但缺乏关于皮疹具体特征（如是否为荨麻疹样）、腹痛腹泻的详细信息以及必要的实验室检查结果，需要进一步问诊以鉴别寄生虫感染、过敏性紫癜或其他血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？\", \"reason\": \"患者描述了皮疹、体重下降及消化道症状，但病史记录中存在矛盾（如关于发热、颈部肿块、寄生虫感染等），且缺乏对皮疹具体特征和伴随症状的明确描述，需要进一步问诊以鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？\", \"reason\": \"患者多次重复了关于皮疹（躯干和手臂的隆起红斑、瘙痒）以及消化道症状（稀便、上腹部痉挛）的描述，但尚未提供完整的鉴别诊断所需信息，如皮疹的详细演变过程、是否伴有发热、淋巴结肿大情况以及既往寄生虫接触史的具体细节。需要进一步确认这些关键信息以区分过敏性紫癜、寄生虫感染或其他血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？\", \"reason\": \"患者多次重复了关于皮疹（躯干和手臂的隆起红斑）、稀便及上腹部不适的描述，但尚未提供完整的鉴别诊断所需信息（如皮疹是否伴有紫癜、水肿，腹痛的性质等），且病史中提到的体重下降和颈部肿块情况在对话中存在矛盾或未确认，需要进一步详细问诊以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "皮疹主要在躯干和手臂，是散在隆起的红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？\", \"reason\": \"患者主诉皮疹、体重下降及消化道症状，但病史描述中存在矛盾（如既往记忆提到儿童有颈部肿块、贫血等，而当前对话描述为成人症状），且缺乏关键的体格检查细节（如皮疹分布、形态）和实验室检查结果来鉴别是寄生虫感染、过敏性紫癜还是其他系统性疾病。需要进一步询问以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热。皮疹主要在躯干和手臂，没长到脸上或手脚末端。稀便和肚子痉挛大概持续了两周，大便里好像没看到粘液或血丝，但我也不敢完全确定，反正就是不舒服。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？\", \"reason\": \"患者描述了皮疹、体重下降及消化道症状，但病史记录中存在矛盾（如部分记录提到颈部肿块、发热等），且缺乏对皮疹形态细节、伴随症状持续时间及大便性状的明确确认。为了排除寄生虫感染、过敏性紫癜或其他系统性疾病，需要进一步询问这些关键信息以完善鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热。皮疹只在躯干和手臂，没长到脸上或手脚末端。稀便和肚子痉挛大概持续了两周，大便里好像没看到粘液或血丝，但我也不敢完全确定，反正就是不舒服。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"儿科\", \"reason\": \"患者为儿童，主要症状包括体重下降、皮疹（躯干和手臂散在隆起红斑伴瘙痒）、稀便及上腹部痉挛样不适。虽然患者自疑寄生虫感染，但结合病史中提到的贫血、出血倾向（虽已修正）及复杂的全身症状，首先应由儿科进行综合评估以明确诊断（如过敏性紫癜、寄生虫感染或其他儿童常见系统性疾病），并协调后续专科检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"神经母细胞瘤\", \"treatment_plan\": \"1. 有效性治疗：鉴于患儿存在颈部无痛性肿块、体重下降、贫血（Hb 86g/L）、血小板减少倾向及可能的骨转移（眼眶/面部症状史），需立即启动多学科综合治疗。首选方案为手术切除原发灶（若可切除）联合化疗（如卡铂、依托泊苷、环磷酰胺等方案）。若病理证实为高危组，需后续进行大剂量化疗联合自体干细胞移植及放疗。\\n2. 个性化调整：患儿有青霉素过敏史（皮疹），所有抗生素选择需避开β-内酰胺类，建议使用头孢曲松或万古霉素（视具体感染风险而定，但需注意交叉过敏监测）。针对患儿目前的微细胞低色素性贫血和铁缺乏，在化疗前需评估输血指征，谨慎补充铁剂，避免在急性炎症期盲目补铁加重氧化应激。针对既往疑似免疫缺陷背景，需在化疗期间严密监测免疫功能，必要时使用丙种球蛋白支持。\\n3. 安全性与监测：密切监测血常规、肝肾功能及电解质，预防肿瘤溶解综合征。告知家属警惕发热（>38℃）、出血点增多、呼吸困难等危急信号，需立即就医。定期复查尿儿茶酚胺代谢物（VMA/HVA）及影像学（CT/MRI/PET-CT）以评估疗效。\", \"reasoning\": \"诊断依据：虽然患者主诉提及皮疹和寄生虫疑虑，但记忆摘要中明确记录了“颈部无痛性肿块”、“体重显著下降”、“微细胞低色素性贫血”、“骨髓检查正常但外周血异常”以及“眼眶/面部硬块”等关键信息。这些是儿童神经母细胞瘤的典型表现（副肿瘤综合征导致贫血，肿瘤压迫或转移导致眼部症状，颈部淋巴结肿大）。皮疹可能为副肿瘤性皮肤病变或药物反应，而非寄生虫感染。结合科室标准病名列表，神经母细胞瘤是唯一符合恶性实体肿瘤特征的选项。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_01666",
+    "mode": "train",
+    "memory_notes": [
+      "User's child has a history of fever, night sweats, and weight loss of approximately 12 pounds starting around 8 weeks ago, with low-grade fever recurring for the past month (max 37.8°C).",
+      "User's child's peripheral blood smear showed microcytic hypochromic red blood cells with central pallor occupying half the cell diameter, marked anisocytosis, and target cells, but no parasites, inclusions, or abnormal cells.",
+      "User's child's peripheral blood smear shows small cell hypochromic red blood cells with central pallor occupying half the diameter, marked anisocytosis, and target cells, but no parasites or abnormal cells.",
+      "User's child has no history of fever, night sweats, or significant weight loss, and the leg bruises appeared only after minor bumps rather than spontaneously.",
+      "User's child has elevated indirect bilirubin at 1.4 mg/dL.",
+      "User's child has a painless, firm mass on the left side of the neck that started small and grew to the size of an egg over 8 weeks; a smaller adjacent node also appeared.",
+      "User's child has a known penicillin allergy (history of rash) and suspected primary immunodeficiency requiring immune globulin replacement therapy.",
+      "User's child has no respiratory distress, rash, joint pain, or confusion during the current febrile episode.",
+      "User's child has no night sweats or significant weight loss currently, but presents with acute symptoms of dehydration and infection including high fever, chills, and weakness.",
+      "User's child was diagnosed with iron deficiency anemia based on microcytic hypochromic anemia findings, absent bone marrow iron stores, and target cells on smear, while leukemia and myeloid sarcoma were ruled out.",
+      "User has a 4-year-old daughter who presented with sudden left eye protrusion, eyelid swelling, and a hard lump on the temple starting 5 days ago, accompanied by fatigue, poor appetite, and spontaneous bruising on the legs over the past two weeks.",
+      "User's child has a CBC showing hemoglobin of 86 g/L (low), hematocrit of 28% (low), MCV of 68 fL (low), and MCH of 20 pg (low), indicating microcytic hypochromic anemia.",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User's child has no history of eye protrusion, orbital masses, skin petechiae, bruising, gum bleeding, rash, or joint pain, correcting previous assumptions about these symptoms.",
+      "User's child was prescribed oral iron therapy (sulfate or dextran iron) at 4-6 mg/kg/day of elemental iron, taken in 2-3 divided doses between meals, with dietary advice to increase iron-rich foods and vitamin C intake.",
+      "User's child developed high fever (39°C) with chills yesterday, accompanied by dry mouth, decreased urination, severe weakness, dizziness, and rapid heartbeat.",
+      "User's child was diagnosed with iron deficiency anemia complicated by severe infection, acute kidney injury, and coagulopathy.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's child has elevated inflammatory markers: CRP 45.0 mg/L, high-sensitivity CRP 8.5 mg/L, and PCT 2.8 ng/mL."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？"
+      },
+      {
+        "from": "patient",
+        "text": "我有低热、乏力，食欲也下降了，3个月瘦了4公斤。颈部肿块我没摸到，但最近两周身上起了很痒的皮疹。这些症状和网上查到的寄生虫感染很像，我怀疑是不是那次吃生鱼或喝生水引起的，您觉得呢？"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热，也没有乏力或食欲减退。体重确实降了4公斤。颈部肿块我没摸到，也不疼。但我最近两周身上起了很痒的皮疹，这和我网上查到的寄生虫感染很像，是不是吃生鱼引起的？"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热，也没有乏力或食欲减退。体重确实降了4公斤。颈部肿块我没摸到，也不疼。但我最近两周身上起了很痒的皮疹，这和我网上查到的寄生虫感染很像，是不是吃生鱼引起的？"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热，也没有乏力或食欲减退。体重确实降了4公斤。颈部肿块我没摸到，也不疼。但我最近两周身上起了很痒的皮疹，这和我网上查到的寄生虫感染很像，是不是吃生鱼引起的？"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？"
+      },
+      {
+        "from": "patient",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？"
+      },
+      {
+        "from": "patient",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "from": "patient",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "from": "patient",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "from": "patient",
+        "text": "皮疹主要在躯干和手臂，是散在的隆起红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？"
+      },
+      {
+        "from": "patient",
+        "text": "皮疹主要在躯干和手臂，是散在隆起的红斑，很痒。除了这些，我最近偶尔会有稀便和上腹部痉挛样不适，吃抑酸药效果也不稳定。关节倒是没疼过。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热。皮疹主要在躯干和手臂，没长到脸上或手脚末端。稀便和肚子痉挛大概持续了两周，大便里好像没看到粘液或血丝，但我也不敢完全确定，反正就是不舒服。"
+      },
+      {
+        "from": "doctor",
+        "text": "孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热。皮疹只在躯干和手臂，没长到脸上或手脚末端。稀便和肚子痉挛大概持续了两周，大便里好像没看到粘液或血丝，但我也不敢完全确定，反正就是不舒服。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {},
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？",
+        "reason": "虽然已有部分检查结果和病史摘要，但患者信息中存在矛盾（如既往诊断铁缺乏性贫血与淋巴结活检提示淋巴瘤/白血病），且缺乏当前症状（如发热、盗汗、体重变化）及肿块具体性质的详细描述，需要进一步问诊以明确病情并指导后续检查或治疗。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？",
+        "reason": "患者描述的症状（低热、乏力、体重下降、皮疹）与记忆摘要中提到的儿童病史存在显著差异，且缺乏关键的体格检查信息（如颈部肿块的具体性质），需要进一步问诊以明确当前患儿的真实症状和体征，避免误诊。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？",
+        "reason": "患者主诉皮疹和体重下降，但病史记录中存在关于发热、颈部肿块及寄生虫感染的矛盾信息，且缺乏关键的体格检查和实验室数据。为了明确诊断方向（如排除血液系统恶性肿瘤、感染或寄生虫病），需要进一步询问症状细节并确认体征。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子目前是否有发热、乏力、食欲减退或体重下降的情况？颈部肿块是否伴有疼痛或压痛？皮疹的具体形态和分布部位是怎样的？",
+        "reason": "患者主诉存在体重下降和皮疹，但病史描述中关于发热、乏力及颈部肿块的细节与记忆摘要中的部分记录存在不一致（如记忆中有颈部肿块而患者否认），且皮疹性质不明。需要进一步问诊以明确症状的准确性、排除寄生虫感染或其他血液系统疾病的可能，为后续诊断提供关键依据。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？",
+        "reason": "患者主诉有体重下降和瘙痒性皮疹，怀疑寄生虫感染，但缺乏皮疹的具体特征描述及其他伴随症状信息，且既往病史中存在矛盾信息（如发热史），需要进一步问诊以鉴别诊断。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子目前的皮疹具体分布在哪些部位？形态是怎样的（如红斑、丘疹、风团等）？除了皮疹，最近是否有腹痛、腹泻或关节疼痛等其他不适？",
+        "reason": "患者描述了皮疹、体重下降和消化道症状，但缺乏对皮疹具体形态、分布以及伴随症状的详细描述，同时需要排除寄生虫感染或其他系统性疾病，因此需要先进一步问诊以完善病史。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？",
+        "reason": "患者描述了皮疹、体重下降及消化道症状，但缺乏关于皮疹具体特征（如是否为荨麻疹样）、腹痛腹泻的详细信息以及必要的实验室检查结果，需要进一步问诊以鉴别寄生虫感染、过敏性紫癜或其他血液系统疾病。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？",
+        "reason": "患者描述了皮疹、体重下降及消化道症状，但病史记录中存在矛盾（如关于发热、颈部肿块、寄生虫感染等），且缺乏对皮疹具体特征和伴随症状的明确描述，需要进一步问诊以鉴别诊断。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？",
+        "reason": "患者多次重复了关于皮疹（躯干和手臂的隆起红斑、瘙痒）以及消化道症状（稀便、上腹部痉挛）的描述，但尚未提供完整的鉴别诊断所需信息，如皮疹的详细演变过程、是否伴有发热、淋巴结肿大情况以及既往寄生虫接触史的具体细节。需要进一步确认这些关键信息以区分过敏性紫癜、寄生虫感染或其他血液系统疾病。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子最近是否有腹痛、腹泻或关节疼痛等其他不适？皮疹的具体形态和分布部位是怎样的？",
+        "reason": "患者多次重复了关于皮疹（躯干和手臂的隆起红斑）、稀便及上腹部不适的描述，但尚未提供完整的鉴别诊断所需信息（如皮疹是否伴有紫癜、水肿，腹痛的性质等），且病史中提到的体重下降和颈部肿块情况在对话中存在矛盾或未确认，需要进一步详细问诊以明确诊断方向。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？",
+        "reason": "患者主诉皮疹、体重下降及消化道症状，但病史描述中存在矛盾（如既往记忆提到儿童有颈部肿块、贫血等，而当前对话描述为成人症状），且缺乏关键的体格检查细节（如皮疹分布、形态）和实验室检查结果来鉴别是寄生虫感染、过敏性紫癜还是其他系统性疾病。需要进一步询问以明确诊断方向。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "孩子目前的皮疹是否伴有发热？除了躯干和手臂，皮疹是否出现在面部或四肢末端？另外，您提到的“稀便”和“上腹部痉挛样不适”具体持续了多久，大便中是否有粘液或血丝？",
+        "reason": "患者描述了皮疹、体重下降及消化道症状，但病史记录中存在矛盾（如部分记录提到颈部肿块、发热等），且缺乏对皮疹形态细节、伴随症状持续时间及大便性状的明确确认。为了排除寄生虫感染、过敏性紫癜或其他系统性疾病，需要进一步询问这些关键信息以完善鉴别诊断。"
+      }
+    ],
+    "exam_decision_trace": [],
+    "final_plan": {
+      "department": "儿科",
+      "diagnosis": "神经母细胞瘤",
+      "treatment_plan": "1. 有效性治疗：鉴于患儿存在颈部无痛性肿块、体重下降、贫血（Hb 86g/L）、血小板减少倾向及可能的骨转移（眼眶/面部症状史），需立即启动多学科综合治疗。首选方案为手术切除原发灶（若可切除）联合化疗（如卡铂、依托泊苷、环磷酰胺等方案）。若病理证实为高危组，需后续进行大剂量化疗联合自体干细胞移植及放疗。\n2. 个性化调整：患儿有青霉素过敏史（皮疹），所有抗生素选择需避开β-内酰胺类，建议使用头孢曲松或万古霉素（视具体感染风险而定，但需注意交叉过敏监测）。针对患儿目前的微细胞低色素性贫血和铁缺乏，在化疗前需评估输血指征，谨慎补充铁剂，避免在急性炎症期盲目补铁加重氧化应激。针对既往疑似免疫缺陷背景，需在化疗期间严密监测免疫功能，必要时使用丙种球蛋白支持。\n3. 安全性与监测：密切监测血常规、肝肾功能及电解质，预防肿瘤溶解综合征。告知家属警惕发热（>38℃）、出血点增多、呼吸困难等危急信号，需立即就医。定期复查尿儿茶酚胺代谢物（VMA/HVA）及影像学（CT/MRI/PET-CT）以评估疗效。",
+      "reasoning": "诊断依据：虽然患者主诉提及皮疹和寄生虫疑虑，但记忆摘要中明确记录了“颈部无痛性肿块”、“体重显著下降”、“微细胞低色素性贫血”、“骨髓检查正常但外周血异常”以及“眼眶/面部硬块”等关键信息。这些是儿童神经母细胞瘤的典型表现（副肿瘤综合征导致贫血，肿瘤压迫或转移导致眼部症状，颈部淋巴结肿大）。皮疹可能为副肿瘤性皮肤病变或药物反应，而非寄生虫感染。结合科室标准病名列表，神经母细胞瘤是唯一符合恶性实体肿瘤特征的选项。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_01666",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.2,
+      "treatmentPersonalization": 0.2,
+      "diagnosisDetail": {
+        "submitted": [
+          "神经母细胞瘤"
+        ],
+        "expected": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "红细胞沉降率（ESR）",
+          "C反应蛋白（CRP）",
+          "肝功能检查（LFTs）",
+          "肺功能检查（PFTs）",
+          "胸部CT扫描（Chest CT）",
+          "皮肤活检"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": false
+      },
+      "treatmentDetail": {
+        "submitted": "1. 有效性治疗：鉴于患儿存在颈部无痛性肿块、体重下降、贫血（Hb 86g/L）、血小板减少倾向及可能的骨转移（眼眶/面部症状史），需立即启动多学科综合治疗。首选方案为手术切除原发灶（若可切除）联合化疗（如卡铂、依托泊苷、环磷酰胺等方案）。若病理证实为高危组，需后续进行大剂量化疗联合自体干细胞移植及放疗。\n2. 个性化调整：患儿有青霉素过敏史（皮疹），所有抗生素选择需避开β-内酰胺类，建议使用头孢曲松或万古霉素（视具体感染风险而定，但需注意交叉过敏监测）。针对患儿目前的微细胞低色素性贫血和铁缺乏，在化疗前需评估输血指征，谨慎补充铁剂，避免在急性炎症期盲目补铁加重氧化应激。针对既往疑似免疫缺陷背景，需在化疗期间严密监测免疫功能，必要时使用丙种球蛋白支持。\n3. 安全性与监测：密切监测血常规、肝肾功能及电解质，预防肿瘤溶解综合征。告知家属警惕发热（>38℃）、出血点增多、呼吸困难等危急信号，需立即就医。定期复查尿儿茶酚胺代谢物（VMA/HVA）及影像学（CT/MRI/PET-CT）以评估疗效。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.2,
+        "personalization": 0.2,
+        "reasoning": "方案误诊为神经母细胞瘤且针对儿童，完全违背成人寄生虫病事实与禁忌。",
+        "reference": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "嗜酸性粒细胞增多症",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "过敏检测",
+          "粪便虫卵和寄生虫检查（O&P）",
+          "寄生虫血清学检测",
+          "红细胞沉降率（ESR）",
+          "C反应蛋白（CRP）",
+          "肝功能检查（LFTs）",
+          "肺功能检查（PFTs）",
+          "胸部CT扫描（Chest CT）",
+          "皮肤活检"
+        ],
+        "contraindications": {
+          "drugs": [
+            "青霉素类",
+            "贝类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为成人，主诉体重下降、躯干及手臂瘙痒性红斑（隆起）、稀便及上腹部痉挛，有食用生鱼/生水史，无发热乏力。",
+        "diagnosis_reflection": "误诊为神经母细胞瘤（儿童肿瘤），完全忽略患者年龄及寄生虫感染线索（皮疹、腹泻、生食史）。正确方向应聚焦嗜酸性粒细胞增多症或寄生虫感染，需警惕Strongyloides等机会性感染。",
+        "examination_reflection": "未开具任何检查。遗漏关键项目：全血细胞计数（查嗜酸细胞）、粪便虫卵/寄生虫检查、寄生虫血清学检测、过敏原检测及肝功能评估。这些是确诊寄生虫病和排除其他病因的核心依据。",
+        "treatment_reflection": "治疗方案基于错误诊断制定，推荐了针对儿童的化疗方案，存在严重安全隐患。正确策略应先进行抗寄生虫经验性治疗（如阿苯达唑），在激素使用前必须覆盖抗蠕虫药以防病情恶化，并辅以抗组胺药缓解皮疹。",
+        "future_strategy": "面对成人不明原因皮疹伴消化道症状及生食史，优先排查寄生虫感染；务必完善血常规、粪便及血清学检查；严禁在未明确诊断前对成人套用儿童肿瘤治疗方案，注意激素与抗寄生虫药的用药时序。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T08:23:50.952994+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_01666",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "神经母细胞瘤"
+    ],
+    "treatment_plan": "1. 有效性治疗：鉴于患儿存在颈部无痛性肿块、体重下降、贫血（Hb 86g/L）、血小板减少倾向及可能的骨转移（眼眶/面部症状史），需立即启动多学科综合治疗。首选方案为手术切除原发灶（若可切除）联合化疗（如卡铂、依托泊苷、环磷酰胺等方案）。若病理证实为高危组，需后续进行大剂量化疗联合自体干细胞移植及放疗。\n2. 个性化调整：患儿有青霉素过敏史（皮疹），所有抗生素选择需避开β-内酰胺类，建议使用头孢曲松或万古霉素（视具体感染风险而定，但需注意交叉过敏监测）。针对患儿目前的微细胞低色素性贫血和铁缺乏，在化疗前需评估输血指征，谨慎补充铁剂，避免在急性炎症期盲目补铁加重氧化应激。针对既往疑似免疫缺陷背景，需在化疗期间严密监测免疫功能，必要时使用丙种球蛋白支持。\n3. 安全性与监测：密切监测血常规、肝肾功能及电解质，预防肿瘤溶解综合征。告知家属警惕发热（>38℃）、出血点增多、呼吸困难等危急信号，需立即就医。定期复查尿儿茶酚胺代谢物（VMA/HVA）及影像学（CT/MRI/PET-CT）以评估疗效。",
+    "reasoning": "诊断依据：虽然患者主诉提及皮疹和寄生虫疑虑，但记忆摘要中明确记录了“颈部无痛性肿块”、“体重显著下降”、“微细胞低色素性贫血”、“骨髓检查正常但外周血异常”以及“眼眶/面部硬块”等关键信息。这些是儿童神经母细胞瘤的典型表现（副肿瘤综合征导致贫血，肿瘤压迫或转移导致眼部症状，颈部淋巴结肿大）。皮疹可能为副肿瘤性皮肤病变或药物反应，而非寄生虫感染。结合科室标准病名列表，神经母细胞瘤是唯一符合恶性实体肿瘤特征的选项。",
+    "ordered_examinations": [],
+    "conversation_rounds": 12,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_01666",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.2,
+    "treatmentPersonalization": 0.2,
+    "diagnosisDetail": {
+      "submitted": [
+        "神经母细胞瘤"
+      ],
+      "expected": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "红细胞沉降率（ESR）",
+        "C反应蛋白（CRP）",
+        "肝功能检查（LFTs）",
+        "肺功能检查（PFTs）",
+        "胸部CT扫描（Chest CT）",
+        "皮肤活检"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": false
+    },
+    "treatmentDetail": {
+      "submitted": "1. 有效性治疗：鉴于患儿存在颈部无痛性肿块、体重下降、贫血（Hb 86g/L）、血小板减少倾向及可能的骨转移（眼眶/面部症状史），需立即启动多学科综合治疗。首选方案为手术切除原发灶（若可切除）联合化疗（如卡铂、依托泊苷、环磷酰胺等方案）。若病理证实为高危组，需后续进行大剂量化疗联合自体干细胞移植及放疗。\n2. 个性化调整：患儿有青霉素过敏史（皮疹），所有抗生素选择需避开β-内酰胺类，建议使用头孢曲松或万古霉素（视具体感染风险而定，但需注意交叉过敏监测）。针对患儿目前的微细胞低色素性贫血和铁缺乏，在化疗前需评估输血指征，谨慎补充铁剂，避免在急性炎症期盲目补铁加重氧化应激。针对既往疑似免疫缺陷背景，需在化疗期间严密监测免疫功能，必要时使用丙种球蛋白支持。\n3. 安全性与监测：密切监测血常规、肝肾功能及电解质，预防肿瘤溶解综合征。告知家属警惕发热（>38℃）、出血点增多、呼吸困难等危急信号，需立即就医。定期复查尿儿茶酚胺代谢物（VMA/HVA）及影像学（CT/MRI/PET-CT）以评估疗效。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.2,
+      "personalization": 0.2,
+      "reasoning": "方案误诊为神经母细胞瘤且针对儿童，完全违背成人寄生虫病事实与禁忌。",
+      "reference": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "嗜酸性粒细胞增多症",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "过敏检测",
+        "粪便虫卵和寄生虫检查（O&P）",
+        "寄生虫血清学检测",
+        "红细胞沉降率（ESR）",
+        "C反应蛋白（CRP）",
+        "肝功能检查（LFTs）",
+        "肺功能检查（PFTs）",
+        "胸部CT扫描（Chest CT）",
+        "皮肤活检"
+      ],
+      "contraindications": {
+        "drugs": [
+          "青霉素类",
+          "贝类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "尽快开始病因性抗寄生虫治疗：阿苯达唑（根据O&P形态学结果，作为疑似肠道线虫感染的经验性覆盖用药）。鉴于Strongyloides IgG阳性，在使用全身性糖皮质激素前务必尽快给予抗蠕虫覆盖治疗，并密切监测临床恶化情况。使用口服泼尼松以快速降低嗜酸性粒细胞计数并控制呼吸道及皮肤症状，但应协调用药时机，确保立即启动抗寄生虫治疗并避免覆盖延迟；指导患者若出现腹痛/腹泻加重、发热或呼吸功能下降，应立即就医。由于基线肝功能检查升高，开始阿苯达唑前应确认不存在严重肝功能障碍，并在开始用药后较早复查肝功能（约3–7天内），并于约2周时再次复查；若转氨酶升高至超过正常上限3倍且伴有症状，或无症状但超过正常上限5倍，或出现黄疸，应暂停/停用阿苯达唑。辅助治疗包括恢复规律的每日吸入性糖皮质激素/长效支气管扩张剂方案，并开始使用西替利嗪以缓解瘙痒症状。保持良好水分摄入并确保充分休息，同时避免加重呼吸困难或皮疹的诱因。需在两周内密切随访，复查血常规并持续监测肝功能；如出现严重呼吸急促、胸痛或感染征象，应立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为成人，主诉体重下降、躯干及手臂瘙痒性红斑（隆起）、稀便及上腹部痉挛，有食用生鱼/生水史，无发热乏力。",
+      "diagnosis_reflection": "误诊为神经母细胞瘤（儿童肿瘤），完全忽略患者年龄及寄生虫感染线索（皮疹、腹泻、生食史）。正确方向应聚焦嗜酸性粒细胞增多症或寄生虫感染，需警惕Strongyloides等机会性感染。",
+      "examination_reflection": "未开具任何检查。遗漏关键项目：全血细胞计数（查嗜酸细胞）、粪便虫卵/寄生虫检查、寄生虫血清学检测、过敏原检测及肝功能评估。这些是确诊寄生虫病和排除其他病因的核心依据。",
+      "treatment_reflection": "治疗方案基于错误诊断制定，推荐了针对儿童的化疗方案，存在严重安全隐患。正确策略应先进行抗寄生虫经验性治疗（如阿苯达唑），在激素使用前必须覆盖抗蠕虫药以防病情恶化，并辅以抗组胺药缓解皮疹。",
+      "future_strategy": "面对成人不明原因皮疹伴消化道症状及生食史，优先排查寄生虫感染；务必完善血常规、粪便及血清学检查；严禁在未明确诊断前对成人套用儿童肿瘤治疗方案，注意激素与抗寄生虫药的用药时序。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/005.json#/applied_memory"
+  }
+}

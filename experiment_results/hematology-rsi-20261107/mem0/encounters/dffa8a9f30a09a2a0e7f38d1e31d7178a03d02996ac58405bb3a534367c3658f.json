@@ -1,0 +1,345 @@
+{
+  "patient_id": "Patient_01050",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要临床症状和体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "最近五天特别累，爬楼梯都喘，站起来会头晕眼前发黑。嘴唇和皮肤看着也苍白，偶尔头痛、注意力不集中。怀孕有点恶心吃得少，指甲也脆了。其他像发热、出血或骨痛都没有。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为明显的贫血症状（乏力、气短、头晕、苍白），且为产后状态，需优先完善血常规检查以明确贫血程度及类型，同时排查血小板减少等血液系统异常。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者为孕妇，主诉乏力、活动后气促、头晕、面色苍白及指甲脆等典型贫血症状，且无发热、出血或骨痛等提示血液系统恶性肿瘤的表现。首选血常规检查以明确是否存在贫血及其严重程度（如血红蛋白水平），并进一步评估红细胞形态（如MCV）以初步判断贫血类型（如缺铁性贫血在孕期常见），从而指导后续治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"铁代谢检查\"], \"reason\": \"患者为孕妇，主诉乏力、活动后气促、头晕、面色苍白及指甲脆等贫血症状，需首先通过全血细胞计数（CBC）评估血红蛋白水平及贫血程度；结合其孕期营养摄入减少及指甲改变，高度怀疑缺铁性贫血，故加做铁代谢检查以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"86 g/L［参考范围：120-160］\", \"红细胞压积\": \"28%［参考范围：36-48］\", \"平均红细胞体积\": \"72 fL［参考范围：80-100］\", \"平均红细胞血红蛋白含量\": \"22 pg［参考范围：27-34］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"红细胞压积\", \"平均红细胞体积\", \"平均红细胞血红蛋白含量\"]}, \"铁代谢检查\": {\"result\": {\"血清铁\": \"22 ug/dL［参考范围：50-170］\", \"总铁结合力\": \"460 ug/dL［参考范围：250-370］\", \"转铁蛋白饱和度\": \"5%［参考范围：15-50］\", \"血清铁蛋白\": \"6 ng/mL［参考范围：15-150］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清铁\", \"总铁结合力\", \"转铁蛋白饱和度\", \"血清铁蛋白\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者症状（乏力、头晕、苍白等）与实验室检查结果（小细胞低色素性贫血，血清铁、转铁蛋白饱和度、铁蛋白均显著降低，总铁结合力升高）高度一致，已明确诊断为缺铁性贫血，且无其他需要进一步鉴别诊断的复杂情况，信息充足，可直接进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为进行性乏力、头晕、气短及面色苍白，结合全血细胞计数显示小细胞低色素性贫血（Hgb 86 g/L, MCV 72 fL）及铁代谢检查证实的严重缺铁（血清铁蛋白 6 ng/mL），临床诊断为缺铁性贫血。虽然患者有妊娠背景可能涉及妇产科，但针对贫血本身的病因排查、严重程度评估及规范化治疗（如排除其他血液系统疾病、制定补铁方案），血液科是最直接负责该诊断的科室。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. 药物治疗：鉴于患者处于妊娠期且血红蛋白为86g/L（中度贫血），首选口服铁剂治疗。推荐每日补充元素铁150-200mg，可选用硫酸亚铁、琥珀酸亚铁或多糖铁复合物。建议餐后服用以减少胃肠道刺激，同时配合维生素C（如橙汁）以促进铁吸收。若口服不耐受或吸收不良，可考虑静脉铁剂，但需评估妊娠安全性。\\n2. 饮食调整：增加富含血红素铁的食物摄入，如红肉（牛肉、羊肉）、动物肝脏（适量，注意维生素A摄入）及血制品；同时搭配富含维生素C的蔬菜水果，避免与茶、咖啡同服以免影响吸收。\\n3. 监测与随访：治疗2周后复查血常规，观察网织红细胞及血红蛋白变化；治疗3个月后复查血清铁蛋白，目标值应>50ng/mL以补足储存铁。整个孕期需密切监测胎儿发育及母体耐受情况。\\n4. 安全警示：若出现严重黑便、剧烈腹痛、皮疹或呼吸困难等过敏反应，应立即停药就医。若血红蛋白持续下降或出现心悸气促加重，需及时就诊排除其他病因。\", \"reasoning\": \"诊断依据：患者表现为进行性乏力、头晕、气短、面色苍白、指甲脆等典型缺铁症状，结合妊娠期生理特点。实验室检查显示小细胞低色素性贫血（Hb 86g/L, MCV 72fL, MCH 22pg），铁代谢指标证实严重缺铁（血清铁22ug/dL降低，总铁结合力460ug/dL升高，转铁蛋白饱和度5%降低，铁蛋白6ng/mL显著降低）。综合病史与检查结果，符合缺铁性贫血诊断。治疗方案针对妊娠期特殊性，优先选择安全性高、疗效确切的口服铁剂，并强调饮食干预与定期监测，确保母婴安全。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_01050",
+    "mode": "train",
+    "memory_notes": [
+      "User diagnosed Patient_02107 with iron deficiency anemia based on symptoms of progressive fatigue, dizziness, shortness of breath, pale complexion, heavy menstrual bleeding, and pica (craving ice), supported by lab results showing microcytic hypochromic anemia (Hgb 82 g/L, MCV 72 fL) and severe iron deficiency (serum iron 22 ug/dL, TIBC 452 ug/dL, transferrin saturation 5%, ferritin 6 ng/mL)",
+      "Patient_08308's iron metabolism tests confirmed severe iron deficiency: Serum Iron 18 ug/dL (low), Total Iron Binding Capacity 460 ug/dL (high), Transferrin Saturation 4% (low), and Ferritin 6 ng/mL (very low).",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL.",
+      "Patient_03943's iron metabolism tests confirmed severe iron deficiency with serum iron 22 ug/dL (low), total iron binding capacity 462 ug/dL (high), transferrin saturation 5% (low), and ferritin 6 ng/mL (very low).",
+      "Patient_06317's laboratory results showed anemia (Hemoglobin 86 g/L, RBC 3.1 × 10^12/L), hyperglycemia (Fasting Blood Glucose 12.8 mmol/L), renal insufficiency (Serum Creatinine 2.3 mg/dL, eGFR 32 mL/min/1.73m²), hypercalcemia (Calcium 11.6 mg/dL), normal phosphate (2.8 mg/dL), and normal PTH (20-75 pg/mL).",
+      "User's child's iron metabolism tests confirm severe iron deficiency with serum iron of 22 ug/dL (low), total iron binding capacity of 462 ug/dL (high), and ferritin of 5 ng/mL (very low)",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User diagnosed Patient_08308 with iron deficiency anemia based on microcytic hypochromic anemia findings, absent bone marrow iron stores (ferritin 6 ng/mL), and target cells on smear, while excluding thalassemia via hemoglobin electrophoresis.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User recommended a treatment plan for Patient_02107 including oral iron supplementation (ferrous sulfate, succinate, or polysaccharide-iron complex) providing 150-200 mg elemental iron daily taken after meals with vitamin C, dietary adjustments to increase heme iron intake (red meat, liver, blood products), referral to gynecology to evaluate the cause of menorrhagia, and follow-up CBC in 2 weeks with continued iron therapy for 3-6 months to replenish stores (target ferritin >50 ng/mL)",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "Patient_00827's laboratory results showed anemia (Hemoglobin 88 g/L, RBC 3.0 × 10^12/L), hypercalcemia (Calcium 12.1 mg/dL), elevated total protein (9.4 g/dL), renal insufficiency (Creatinine 2.3 mg/dL, eGFR 28 mL/min/1.73m²), normal PTH, and mildly elevated CA-125 (42 U/mL).",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_08871's laboratory results showed anemia (Hemoglobin 92 g/L), thrombocytopenia (Platelets 118 x 10^9/L), hyperglycemia (Fasting Blood Glucose 12.5 mmol/L), renal insufficiency (Serum Creatinine 2.3 mg/dL, eGFR 34 mL/min/1.73m^2), hypercalcemia (Calcium 12.1 mg/dL), and hypophosphatemia (Phosphate 2.0 mg/dL).",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "User's child has a CBC showing hemoglobin of 86 g/L (low), hematocrit of 28% (low), MCV of 68 fL (low), and MCH of 20 pg (low), indicating microcytic hypochromic anemia."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "最近五天特别累，爬楼梯都喘，站起来会头晕眼前发黑。嘴唇和皮肤看着也苍白，偶尔头痛、注意力不集中。怀孕有点恶心吃得少，指甲也脆了。其他像发热、出血或骨痛都没有。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "86 g/L［参考范围：120-160］",
+          "红细胞压积": "28%［参考范围：36-48］",
+          "平均红细胞体积": "72 fL［参考范围：80-100］",
+          "平均红细胞血红蛋白含量": "22 pg［参考范围：27-34］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "红细胞压积",
+          "平均红细胞体积",
+          "平均红细胞血红蛋白含量"
+        ]
+      },
+      "铁代谢检查": {
+        "result": {
+          "血清铁": "22 ug/dL［参考范围：50-170］",
+          "总铁结合力": "460 ug/dL［参考范围：250-370］",
+          "转铁蛋白饱和度": "5%［参考范围：15-50］",
+          "血清铁蛋白": "6 ng/mL［参考范围：15-150］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清铁",
+          "总铁结合力",
+          "转铁蛋白饱和度",
+          "血清铁蛋白"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要临床症状和体征。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为明显的贫血症状（乏力、气短、头晕、苍白），且为产后状态，需优先完善血常规检查以明确贫血程度及类型，同时排查血小板减少等血液系统异常。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者症状（乏力、头晕、苍白等）与实验室检查结果（小细胞低色素性贫血，血清铁、转铁蛋白饱和度、铁蛋白均显著降低，总铁结合力升高）高度一致，已明确诊断为缺铁性贫血，且无其他需要进一步鉴别诊断的复杂情况，信息充足，可直接进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "reason": "患者为孕妇，主诉乏力、活动后气促、头晕、面色苍白及指甲脆等贫血症状，需首先通过全血细胞计数（CBC）评估血红蛋白水平及贫血程度；结合其孕期营养摄入减少及指甲改变，高度怀疑缺铁性贫血，故加做铁代谢检查以明确诊断。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "缺铁性贫血",
+      "treatment_plan": "1. 药物治疗：鉴于患者处于妊娠期且血红蛋白为86g/L（中度贫血），首选口服铁剂治疗。推荐每日补充元素铁150-200mg，可选用硫酸亚铁、琥珀酸亚铁或多糖铁复合物。建议餐后服用以减少胃肠道刺激，同时配合维生素C（如橙汁）以促进铁吸收。若口服不耐受或吸收不良，可考虑静脉铁剂，但需评估妊娠安全性。\n2. 饮食调整：增加富含血红素铁的食物摄入，如红肉（牛肉、羊肉）、动物肝脏（适量，注意维生素A摄入）及血制品；同时搭配富含维生素C的蔬菜水果，避免与茶、咖啡同服以免影响吸收。\n3. 监测与随访：治疗2周后复查血常规，观察网织红细胞及血红蛋白变化；治疗3个月后复查血清铁蛋白，目标值应>50ng/mL以补足储存铁。整个孕期需密切监测胎儿发育及母体耐受情况。\n4. 安全警示：若出现严重黑便、剧烈腹痛、皮疹或呼吸困难等过敏反应，应立即停药就医。若血红蛋白持续下降或出现心悸气促加重，需及时就诊排除其他病因。",
+      "reasoning": "诊断依据：患者表现为进行性乏力、头晕、气短、面色苍白、指甲脆等典型缺铁症状，结合妊娠期生理特点。实验室检查显示小细胞低色素性贫血（Hb 86g/L, MCV 72fL, MCH 22pg），铁代谢指标证实严重缺铁（血清铁22ug/dL降低，总铁结合力460ug/dL升高，转铁蛋白饱和度5%降低，铁蛋白6ng/mL显著降低）。综合病史与检查结果，符合缺铁性贫血诊断。治疗方案针对妊娠期特殊性，优先选择安全性高、疗效确切的口服铁剂，并强调饮食干预与定期监测，确保母婴安全。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_01050",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.52,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.4,
+      "diagnosisDetail": {
+        "submitted": [
+          "缺铁性贫血"
+        ],
+        "expected": [
+          "缺铁性贫血"
+        ],
+        "matched": [
+          "缺铁性贫血"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "食管胃十二指肠镜检查（EGD）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "precision": 1.0,
+        "coverage": 0.4,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 药物治疗：鉴于患者处于妊娠期且血红蛋白为86g/L（中度贫血），首选口服铁剂治疗。推荐每日补充元素铁150-200mg，可选用硫酸亚铁、琥珀酸亚铁或多糖铁复合物。建议餐后服用以减少胃肠道刺激，同时配合维生素C（如橙汁）以促进铁吸收。若口服不耐受或吸收不良，可考虑静脉铁剂，但需评估妊娠安全性。\n2. 饮食调整：增加富含血红素铁的食物摄入，如红肉（牛肉、羊肉）、动物肝脏（适量，注意维生素A摄入）及血制品；同时搭配富含维生素C的蔬菜水果，避免与茶、咖啡同服以免影响吸收。\n3. 监测与随访：治疗2周后复查血常规，观察网织红细胞及血红蛋白变化；治疗3个月后复查血清铁蛋白，目标值应>50ng/mL以补足储存铁。整个孕期需密切监测胎儿发育及母体耐受情况。\n4. 安全警示：若出现严重黑便、剧烈腹痛、皮疹或呼吸困难等过敏反应，应立即停药就医。若血红蛋白持续下降或出现心悸气促加重，需及时就诊排除其他病因。",
+        "overallScore": 0.52,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.4,
+        "reasoning": "方案未针对胃切除及PPI史优化服药时间，忽视出血源处理与产科协作，个体化不足。",
+        "reference": "开始口服铁剂治疗，同时注意既往部分胃切除术及长期使用PPI带来的吸收风险。若能耐受，优先选择空腹服用硫酸亚铁（如出现恶心/胃肠不适，可与少量不含钙的食物同服）；避免铁剂与产前维生素、含钙食物/补充剂、茶/咖啡同时服用——至少间隔2–4小时。如符合当地指南，可考虑与维生素C同服（如用水/果汁送服）。对于EGD所见糜烂性胃炎/渗血，继续抑酸治疗，但应优化服药时间以减少对铁吸收的干扰（例如PPI与铁剂在一天中的不同时间服用），并在临床合适时与消化科/产科共同评估其必要性和剂量，考虑其难治风险。\n\n由于FOBT阳性且EGD显示胃切除术后吻合口接触性渗血，应明确处理并监测出血来源：安排消化科随访评估吻合口糜烂/糜烂性胃炎，并宣教胃肠道出血的相关症状；临床监测是否有再次出血，并在症状持续或贫血未改善时，根据消化科意见考虑复查粪便检测和/或重复内镜评估。\n\n妊娠合并有症状的中重度贫血（Hgb 86 g/L）：应让产科参与贫血管理并进行更密切监测（如症状持续/加重，应在早于2周时复查CBC/铁代谢指标）。如果经过短期优化口服治疗后血红蛋白升幅不足、不能耐受、口服摄入差，或担心吸收不良/持续出血，应升级为静脉补铁（并根据症状、血流动力学状态及孕周情况，在临床指征下考虑输血）。继续进行饮食指导，在恶心情况下尽量增加富含铁的食物摄入；同时继续补充妊娠所需的产前维生素，但不要与铁剂同时服用。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "缺铁性贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "食管胃十二指肠镜检查（EGD）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "开始口服铁剂治疗，同时注意既往部分胃切除术及长期使用PPI带来的吸收风险。若能耐受，优先选择空腹服用硫酸亚铁（如出现恶心/胃肠不适，可与少量不含钙的食物同服）；避免铁剂与产前维生素、含钙食物/补充剂、茶/咖啡同时服用——至少间隔2–4小时。如符合当地指南，可考虑与维生素C同服（如用水/果汁送服）。对于EGD所见糜烂性胃炎/渗血，继续抑酸治疗，但应优化服药时间以减少对铁吸收的干扰（例如PPI与铁剂在一天中的不同时间服用），并在临床合适时与消化科/产科共同评估其必要性和剂量，考虑其难治风险。\n\n由于FOBT阳性且EGD显示胃切除术后吻合口接触性渗血，应明确处理并监测出血来源：安排消化科随访评估吻合口糜烂/糜烂性胃炎，并宣教胃肠道出血的相关症状；临床监测是否有再次出血，并在症状持续或贫血未改善时，根据消化科意见考虑复查粪便检测和/或重复内镜评估。\n\n妊娠合并有症状的中重度贫血（Hgb 86 g/L）：应让产科参与贫血管理并进行更密切监测（如症状持续/加重，应在早于2周时复查CBC/铁代谢指标）。如果经过短期优化口服治疗后血红蛋白升幅不足、不能耐受、口服摄入差，或担心吸收不良/持续出血，应升级为静脉补铁（并根据症状、血流动力学状态及孕周情况，在临床指征下考虑输血）。继续进行饮食指导，在恶心情况下尽量增加富含铁的食物摄入；同时继续补充妊娠所需的产前维生素，但不要与铁剂同时服用。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "妊娠期女性，主诉乏力、气促、头晕及面色苍白等贫血症状，伴恶心纳差。既往有胃切除术史及长期服用质子泵抑制剂（PPI）病史，需警惕吸收不良及潜在消化道出血风险。",
+        "diagnosis_reflection": "诊断准确，成功识别缺铁性贫血。经验：对于妊娠期合并乏力、苍白及头晕的患者，应高度怀疑缺铁性贫血，并结合既往手术史和用药史进行综合判断。",
+        "examination_reflection": "检查选择存在遗漏。本次仅开具了血常规和铁代谢，漏掉了针对病因排查的粪便隐血试验（FOBT）、食管胃十二指肠镜检查（EGD）以及骨髓穿刺（BMAB）。经验：面对有胃切除史且疑似难治性或缺血性贫血的孕妇，必须完善消化道出血筛查（如FOBT、EGD）以明确失血原因，必要时评估骨髓造血功能。",
+        "treatment_reflection": "治疗方案安全性达标但个体化不足。本次方案未充分考虑患者胃切除及PPI使用对铁吸收的负面影响，也未提及处理潜在的吻合口渗血及产科协作。经验：此类患者口服铁剂需优化服药时间（避开PPI），若吸收不良或持续出血，应尽早考虑静脉补铁，并联合消化科与产科共同管理。",
+        "future_strategy": "接诊妊娠期贫血患者时，务必详细询问消化道手术史及抑酸药使用情况；一旦确诊缺铁性贫血，立即启动病因排查（重点排除消化道出血），并根据吸收障碍风险动态调整补铁途径（口服vs静脉），强化多学科协作。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:09:49.544916+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_01050",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "缺铁性贫血"
+    ],
+    "treatment_plan": "1. 药物治疗：鉴于患者处于妊娠期且血红蛋白为86g/L（中度贫血），首选口服铁剂治疗。推荐每日补充元素铁150-200mg，可选用硫酸亚铁、琥珀酸亚铁或多糖铁复合物。建议餐后服用以减少胃肠道刺激，同时配合维生素C（如橙汁）以促进铁吸收。若口服不耐受或吸收不良，可考虑静脉铁剂，但需评估妊娠安全性。\n2. 饮食调整：增加富含血红素铁的食物摄入，如红肉（牛肉、羊肉）、动物肝脏（适量，注意维生素A摄入）及血制品；同时搭配富含维生素C的蔬菜水果，避免与茶、咖啡同服以免影响吸收。\n3. 监测与随访：治疗2周后复查血常规，观察网织红细胞及血红蛋白变化；治疗3个月后复查血清铁蛋白，目标值应>50ng/mL以补足储存铁。整个孕期需密切监测胎儿发育及母体耐受情况。\n4. 安全警示：若出现严重黑便、剧烈腹痛、皮疹或呼吸困难等过敏反应，应立即停药就医。若血红蛋白持续下降或出现心悸气促加重，需及时就诊排除其他病因。",
+    "reasoning": "诊断依据：患者表现为进行性乏力、头晕、气短、面色苍白、指甲脆等典型缺铁症状，结合妊娠期生理特点。实验室检查显示小细胞低色素性贫血（Hb 86g/L, MCV 72fL, MCH 22pg），铁代谢指标证实严重缺铁（血清铁22ug/dL降低，总铁结合力460ug/dL升高，转铁蛋白饱和度5%降低，铁蛋白6ng/mL显著降低）。综合病史与检查结果，符合缺铁性贫血诊断。治疗方案针对妊娠期特殊性，优先选择安全性高、疗效确切的口服铁剂，并强调饮食干预与定期监测，确保母婴安全。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "铁代谢检查"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_01050",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.52,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.4,
+    "diagnosisDetail": {
+      "submitted": [
+        "缺铁性贫血"
+      ],
+      "expected": [
+        "缺铁性贫血"
+      ],
+      "matched": [
+        "缺铁性贫血"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "食管胃十二指肠镜检查（EGD）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查"
+      ],
+      "precision": 1.0,
+      "coverage": 0.4,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 药物治疗：鉴于患者处于妊娠期且血红蛋白为86g/L（中度贫血），首选口服铁剂治疗。推荐每日补充元素铁150-200mg，可选用硫酸亚铁、琥珀酸亚铁或多糖铁复合物。建议餐后服用以减少胃肠道刺激，同时配合维生素C（如橙汁）以促进铁吸收。若口服不耐受或吸收不良，可考虑静脉铁剂，但需评估妊娠安全性。\n2. 饮食调整：增加富含血红素铁的食物摄入，如红肉（牛肉、羊肉）、动物肝脏（适量，注意维生素A摄入）及血制品；同时搭配富含维生素C的蔬菜水果，避免与茶、咖啡同服以免影响吸收。\n3. 监测与随访：治疗2周后复查血常规，观察网织红细胞及血红蛋白变化；治疗3个月后复查血清铁蛋白，目标值应>50ng/mL以补足储存铁。整个孕期需密切监测胎儿发育及母体耐受情况。\n4. 安全警示：若出现严重黑便、剧烈腹痛、皮疹或呼吸困难等过敏反应，应立即停药就医。若血红蛋白持续下降或出现心悸气促加重，需及时就诊排除其他病因。",
+      "overallScore": 0.52,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.4,
+      "reasoning": "方案未针对胃切除及PPI史优化服药时间，忽视出血源处理与产科协作，个体化不足。",
+      "reference": "开始口服铁剂治疗，同时注意既往部分胃切除术及长期使用PPI带来的吸收风险。若能耐受，优先选择空腹服用硫酸亚铁（如出现恶心/胃肠不适，可与少量不含钙的食物同服）；避免铁剂与产前维生素、含钙食物/补充剂、茶/咖啡同时服用——至少间隔2–4小时。如符合当地指南，可考虑与维生素C同服（如用水/果汁送服）。对于EGD所见糜烂性胃炎/渗血，继续抑酸治疗，但应优化服药时间以减少对铁吸收的干扰（例如PPI与铁剂在一天中的不同时间服用），并在临床合适时与消化科/产科共同评估其必要性和剂量，考虑其难治风险。\n\n由于FOBT阳性且EGD显示胃切除术后吻合口接触性渗血，应明确处理并监测出血来源：安排消化科随访评估吻合口糜烂/糜烂性胃炎，并宣教胃肠道出血的相关症状；临床监测是否有再次出血，并在症状持续或贫血未改善时，根据消化科意见考虑复查粪便检测和/或重复内镜评估。\n\n妊娠合并有症状的中重度贫血（Hgb 86 g/L）：应让产科参与贫血管理并进行更密切监测（如症状持续/加重，应在早于2周时复查CBC/铁代谢指标）。如果经过短期优化口服治疗后血红蛋白升幅不足、不能耐受、口服摄入差，或担心吸收不良/持续出血，应升级为静脉补铁（并根据症状、血流动力学状态及孕周情况，在临床指征下考虑输血）。继续进行饮食指导，在恶心情况下尽量增加富含铁的食物摄入；同时继续补充妊娠所需的产前维生素，但不要与铁剂同时服用。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "缺铁性贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "食管胃十二指肠镜检查（EGD）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "开始口服铁剂治疗，同时注意既往部分胃切除术及长期使用PPI带来的吸收风险。若能耐受，优先选择空腹服用硫酸亚铁（如出现恶心/胃肠不适，可与少量不含钙的食物同服）；避免铁剂与产前维生素、含钙食物/补充剂、茶/咖啡同时服用——至少间隔2–4小时。如符合当地指南，可考虑与维生素C同服（如用水/果汁送服）。对于EGD所见糜烂性胃炎/渗血，继续抑酸治疗，但应优化服药时间以减少对铁吸收的干扰（例如PPI与铁剂在一天中的不同时间服用），并在临床合适时与消化科/产科共同评估其必要性和剂量，考虑其难治风险。\n\n由于FOBT阳性且EGD显示胃切除术后吻合口接触性渗血，应明确处理并监测出血来源：安排消化科随访评估吻合口糜烂/糜烂性胃炎，并宣教胃肠道出血的相关症状；临床监测是否有再次出血，并在症状持续或贫血未改善时，根据消化科意见考虑复查粪便检测和/或重复内镜评估。\n\n妊娠合并有症状的中重度贫血（Hgb 86 g/L）：应让产科参与贫血管理并进行更密切监测（如症状持续/加重，应在早于2周时复查CBC/铁代谢指标）。如果经过短期优化口服治疗后血红蛋白升幅不足、不能耐受、口服摄入差，或担心吸收不良/持续出血，应升级为静脉补铁（并根据症状、血流动力学状态及孕周情况，在临床指征下考虑输血）。继续进行饮食指导，在恶心情况下尽量增加富含铁的食物摄入；同时继续补充妊娠所需的产前维生素，但不要与铁剂同时服用。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "妊娠期女性，主诉乏力、气促、头晕及面色苍白等贫血症状，伴恶心纳差。既往有胃切除术史及长期服用质子泵抑制剂（PPI）病史，需警惕吸收不良及潜在消化道出血风险。",
+      "diagnosis_reflection": "诊断准确，成功识别缺铁性贫血。经验：对于妊娠期合并乏力、苍白及头晕的患者，应高度怀疑缺铁性贫血，并结合既往手术史和用药史进行综合判断。",
+      "examination_reflection": "检查选择存在遗漏。本次仅开具了血常规和铁代谢，漏掉了针对病因排查的粪便隐血试验（FOBT）、食管胃十二指肠镜检查（EGD）以及骨髓穿刺（BMAB）。经验：面对有胃切除史且疑似难治性或缺血性贫血的孕妇，必须完善消化道出血筛查（如FOBT、EGD）以明确失血原因，必要时评估骨髓造血功能。",
+      "treatment_reflection": "治疗方案安全性达标但个体化不足。本次方案未充分考虑患者胃切除及PPI使用对铁吸收的负面影响，也未提及处理潜在的吻合口渗血及产科协作。经验：此类患者口服铁剂需优化服药时间（避开PPI），若吸收不良或持续出血，应尽早考虑静脉补铁，并联合消化科与产科共同管理。",
+      "future_strategy": "接诊妊娠期贫血患者时，务必详细询问消化道手术史及抑酸药使用情况；一旦确诊缺铁性贫血，立即启动病因排查（重点排除消化道出血），并根据吸收障碍风险动态调整补铁途径（口服vs静脉），强化多学科协作。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/045.json#/applied_memory"
+  }
+}

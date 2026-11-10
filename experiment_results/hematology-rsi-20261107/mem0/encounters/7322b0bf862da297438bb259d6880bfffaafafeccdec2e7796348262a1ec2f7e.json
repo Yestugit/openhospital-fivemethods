@@ -1,0 +1,495 @@
+{
+  "patient_id": "Patient_08247",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有什么不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？\", \"reason\": \"当前没有任何病史、检查结果或已开检查信息，无法进行诊断。作为诊疗的第一步，需要通过问诊了解患者的临床症状以初步判断病情方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有什么不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，我最近半年越来越没力气，爬楼梯都喘，而且吃一点就饱。这三个月老感冒，还容易流鼻血、身上有淤青，肚子也胀。我查过资料，觉得这些症状很吻合，想确认一下是不是需要做个骨髓穿刺或者用点特定的药？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有夜间盗汗、不明原因的体重下降或发热？另外，您提到的肚子胀和吃一点就饱，是否伴有左上腹的疼痛或摸到肿块？\", \"reason\": \"患者主诉乏力、气短、早饱、反复感冒、鼻出血及皮肤淤青，这些症状高度提示血液系统疾病（如白血病），但缺乏关键的全身症状（如发热、盗汗、消瘦）和体征细节（如淋巴结肿大、肝脾肿大情况），目前尚未开具任何检查，需进一步问诊以完善病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有夜间盗汗、不明原因的体重下降或发热？另外，您提到的肚子胀和吃一点就饱，是否伴有左上腹的疼痛或摸到肿块？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "是的，最近三个月确实有夜间盗汗和不明原因的体重下降。关于肚子胀和早饱，我偶尔会感觉左上腹有点不舒服，但没摸到明显的肿块。医生，这些症状是不是说明需要做骨髓穿刺了？"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为进行性乏力、早饱、盗汗、体重下降及出血倾向，高度怀疑血液系统恶性肿瘤（如骨髓纤维化或白血病）。目前尚未进行任何检查，为明确诊断，必须优先安排血常规、外周血涂片及骨髓穿刺/活检等关键检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"体格检查\", \"reason\": \"患者主诉左上腹不适、早饱及全身症状（乏力、盗汗、体重下降、出血倾向），高度提示脾脏肿大或淋巴结肿大等体征。在进行骨髓穿刺等有创检查前，必须首先通过体格检查确认是否存在脾大、肝大或浅表淋巴结肿大，以评估病情严重程度并指导后续检查方案的选择。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"腹部检查\", \"皮肤检查\", \"口腔检查\", \"生命体征\"], \"reason\": \"患者主诉乏力、早饱、左上腹不适，需进行腹部检查以评估脾脏大小及有无肿块；有易出血倾向（鼻血、淤青），需进行皮肤检查观察瘀斑、出血点情况；有牙龈出血史，需进行口腔检查评估出血来源；同时需监测体温、脉搏等生命体征以评估是否存在发热及全身状况。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"腹部检查\": {\"result\": {\"可见肠蠕动\": \"无可见肠蠕动\", \"移动性浊音\": \"无移动性浊音\", \"肋脊角压痛\": \"无肋脊角压痛\", \"肝浊音界/肝跨度\": \"右锁骨中线肝浊音界 13 cm［参考值：右锁骨中线肝浊音界 6-12 cm］\", \"肝缘触诊\": \"肝缘光滑，于右肋缘下可触及 2 cm\", \"肝脾区叩诊音\": \"肝脾区呈浊音\", \"肠鸣音\": \"肠鸣音正常活跃（每分钟 5-30 次）［参考值：肠鸣音正常活跃（每分钟 5-30 次）］\", \"肾脏触诊\": \"肾脏未触及\", \"脐部\": \"脐位于中央且内陷\", \"脾脏触诊\": \"脾脏于左肋缘下可触及 4 cm，质地中等\", \"腹壁静脉/蜘蛛痣\": \"无海蛇头样静脉曲张或蜘蛛状血管瘤\", \"腹肌情况\": \"腹肌柔软，无肌卫\", \"腹股沟疝\": \"无腹股沟疝\", \"腹膜刺激征\": \"无肌紧张、强直或反跳痛\", \"腹部压痛\": \"左上腹轻度压痛，其余部位无压痛\", \"腹部叩诊音\": \"胃区及肠道呈鼓音\", \"腹部外观\": \"腹部平坦对称，未见明显膨隆或搏动\", \"腹部瘢痕\": \"无瘢痕\", \"腹部皮纹\": \"无皮纹\", \"腹部肿块\": \"未触及明确包块，但脾区饱满感明显\", \"腹部触感\": \"腹部柔软\", \"血管杂音\": \"主动脉、肾动脉或髂动脉区域未闻及血管杂音\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"肝浊音界/肝跨度\", \"肝缘触诊\", \"脾脏触诊\", \"腹部压痛\"]}, \"皮肤检查\": {\"result\": {\"全身体格检查-皮肤状态\": \"皮肤温暖、干燥，但弹性稍差。\", \"指(趾)甲\": \"指（趾）甲光滑、粉红。\", \"毛发分布\": \"毛发分布正常，呈典型男性型。\", \"毛细血管再充盈时间\": \"毛细血管再充盈时间为 2.5 秒。\", \"水肿肿块及淋巴结\": \"未触及明显水肿或肿块，浅表淋巴结未触及肿大。\", \"皮肤病变与出血点\": \"可见散在瘀斑，无皮疹、溃疡或异常色素沉着。\", \"皮肤质地\": \"皮肤质地略显粗糙，弹性减退。\", \"肤色与发绀黄疸\": \"肤色苍白，无发绀或黄疸。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"全身体格检查-皮肤状态\", \"毛细血管再充盈时间\", \"皮肤病变与出血点\", \"皮肤质地\", \"肤色与发绀黄疸\"]}, \"口腔检查\": {\"result\": {\"口唇\": \"粉红、湿润，无发绀，无病变或皲裂。\", \"口气\": \"无口臭。\", \"口腔软腭\": \"发音时对称上抬，无裂隙或病变。\", \"口腔黏膜\": \"粉红、湿润、完整，无溃疡，无白斑或红斑。\", \"咽部\": \"粉红，无红斑、渗出物或肿块。\", \"唾液\": \"分泌量正常，性状清亮。\", \"唾液腺导管\": \"通畅，可见清亮唾液排出。\", \"悬雍垂\": \"居中，大小正常，对称上抬。\", \"扁桃体\": \"1-2度，无红斑、渗出物或不对称。［参考值：1-2度，无红斑、渗出物或不对称。］\", \"牙齿\": \"牙列完整，与年龄相符，无可见龋齿，无过度松动，无咬合不正。\", \"牙龈\": \"牙龈轻度充血，刷牙时可诱发少量渗血，无肿胀或萎缩。\", \"硬腭\": \"完整、粉红，无病变或肿块。\", \"舌\": \"粉红、湿润，大小和活动度正常，无舌苔异常，舌乳头完整，伸舌时无肌束颤动或偏斜。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"牙龈\"]}, \"生命体征\": {\"result\": {\"体温\": \"37.1°C［参考值：36.1-37.2°C（97.0-99.0°F）］\", \"呼吸频率\": \"16次/分钟，规律且不费力［参考值：12-20次/分钟，规律且不费力］\", \"心率\": \"82次/分钟，节律规则［参考值：60-100次/分钟，节律规则］\", \"血压\": \"115/75 mmHg［参考值：收缩压90-120 mmHg，舒张压60-80 mmHg］\", \"血氧饱和度\": \"98%［参考值：室内空气下95-100%］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者有乏力、早饱、盗汗、体重下降、出血倾向及脾脏肿大等典型症状，腹部检查已发现脾大和肝大，但尚未进行血液学关键检查（如血常规）和骨髓检查以明确病因（如骨髓纤维化或白血病），需优先完善相关检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者表现为进行性乏力、早饱、左上腹不适、盗汗、体重下降，查体发现脾脏肿大（左肋缘下4cm）及皮肤瘀斑、牙龈渗血等出血倾向。结合病史中提到的骨髓穿刺需求，目前最关键的确诊步骤是进行骨髓穿刺及活检（属于病理检查），以评估骨髓细胞形态、纤维化程度及排除血液系统恶性肿瘤（如骨髓纤维化或白血病），这是明确诊断和指导后续治疗的金标准。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"骨髓穿刺和活检（BMAB）\"], \"reason\": \"患者表现为进行性乏力、早饱、左上腹不适，伴有夜间盗汗、体重下降及出血倾向（鼻出血、皮肤瘀斑），查体发现脾脏肿大（左肋缘下4cm）及牙龈渗血。结合病史中提到的疑似血液系统疾病症状（如类似骨髓纤维化或白血病的表现），且既往检查未包含骨髓评估，为明确诊断（如排除白血病、骨髓增生异常综合征或骨髓纤维化等），必须进行骨髓穿刺和活检以获取细胞学和组织学证据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"骨髓穿刺和活检（BMAB）\": {\"result\": {\"补充描述\": \"骨髓穿刺干抽\", \"异常浸润或纤维化\": \"活检显示间质性毛细胞浸润\", \"网状纤维化\": \"网状纤维化增加［参考值：0-1级（轻微）。］\", \"骨髓三系造血\": \"三系造血减少\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异常浸润或纤维化\", \"网状纤维化\", \"骨髓三系造血\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有乏力、早饱、盗汗、体重下降等典型症状，查体发现脾大和皮肤瘀斑。骨髓穿刺干抽，活检显示间质性毛细胞浸润、网状纤维化增加及三系造血减少，这些特征性检查结果结合临床表现已足以支持毛细胞白血病的诊断，可进入确诊和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为进行性乏力、早饱（脾大所致）、盗汗、体重下降及出血倾向（瘀斑、鼻衄），查体发现脾脏肿大。骨髓穿刺显示“干抽”，活检提示“间质性毛细胞浸润”、“网状纤维化增加”及“三系造血减少”。这些临床表现与骨髓检查特征高度符合毛细胞白血病的诊断，该病属于血液系统恶性肿瘤，需由血液科进行确诊及制定治疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"毛细胞白血病\", \"treatment_plan\": \"1. 主要治疗：建议立即启动针对毛细胞白血病的靶向化疗，首选克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续静脉输注5-7天方案，该方案对毛细胞白血病具有极高的完全缓解率（>90%），且疗程短、副作用相对可控。对于脾脏显著肿大（本例左肋缘下4cm）导致压迫症状的患者，若药物疗效不佳或无法耐受，可考虑行脾切除术作为辅助治疗以改善血细胞减少和早饱症状。\\n2. 个性化调整：患者表现为全血细胞减少（贫血、出血倾向）、脾大及骨髓“干抽”现象，符合典型毛细胞白血病特征。鉴于患者有牙龈渗血和皮肤瘀斑，提示血小板功能或数量严重受损，治疗初期需密切监测血常规，必要时在化疗前或化疗期间进行血小板输注支持。患者无发热但近期易感冒，提示免疫功能低下，治疗期间需预防性使用抗感染药物，并避免接触人群。\\n3. 安全性与监测：治疗期间需严密监测肝肾功能、电解质及骨髓抑制情况（特别是中性粒细胞减少导致的感染风险）。告知患者若出现高热（>38.3°C）、严重出血不止、呼吸困难或意识改变等危险信号，需立即就医。治疗后需定期复查骨髓穿刺及流式细胞术以评估微小残留病灶（MRD），指导后续随访频率。\", \"reasoning\": \"诊断依据：患者临床表现为进行性乏力、早饱（脾大压迫）、反复感染、出血倾向（鼻衄、瘀斑、牙龈渗血）及盗汗、体重下降。体格检查发现脾脏肿大（左肋缘下4cm）及皮肤瘀斑。关键检查结果为骨髓穿刺“干抽”，活检显示“间质性毛细胞浸润”伴网状纤维化增加及三系造血减少，这是毛细胞白血病的特征性病理改变（“干抽”因纤维化所致，“毛细胞浸润”为确诊金标准）。结合病史中的脾大和全血细胞减少，高度怀疑毛细胞白血病。治疗方案选择克拉屈滨是因为其对B细胞恶性肿瘤（特别是毛细胞白血病）具有高度特异性且疗效确切，同时需根据患者脾大程度和出血风险进行个体化支持治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_08247",
+    "mode": "train",
+    "memory_notes": [
+      "Bone marrow examination for Patient_03960 showed hypercellularity (80%), increased megakaryocytes with normal morphology, 2% blasts, and no malignant infiltration or fibrosis.",
+      "Patient_00634's bone marrow examination showed no abnormal infiltration, normal granulocytic and erythrocytic maturation, mild reticular fibrosis, 2% blasts, significantly hyperplastic megakaryocytes with enlargement and clustering, and increased cellularity (80%).",
+      "Patient_06974's bone marrow examination showed reduced megakaryocyte numbers with low platelet production function, no abnormal infiltration, <5% blasts, and normal iron stores (Grade 1).",
+      "Bone marrow examination of Patient_06317 revealed abnormal infiltration by clonal plasma cells replacing normal hematopoietic tissue, with plasma cells comprising 42% of marrow cells (normal <4%), suppressed granulocytic and erythroid maturation, and reduced megakaryocytes.",
+      "Patient_02057's bone marrow examination demonstrated hypercellular marrow with diffuse reticulin and collagen fibrosis, atypical megakaryocyte infiltration, normal granulocytic maturation, normal erythroid maturation, <5% blasts, adequate but atypical megakaryocytes, and iron stores of Grade 2-3.",
+      "Patient_05572's bone marrow biopsy showed trilineage hematopoiesis with orderly maturation, no abnormal infiltration or fibrosis, <5% blasts, and significantly decreased megakaryocytes with maturation arrest and occasional large platelets.",
+      "Physical examination of Patient_00952 revealed BMI 18.2 kg/m², low-grade fever (37.6°C), pale conjunctiva, scattered skin ecchymoses, and multiple painless cervical/submandibular lymph nodes up to 2cm x 1.5cm.",
+      "User participated in a hematology diagnostic task for Patient_06532, a middle-aged male presenting with a painless left neck mass (walnut-sized), progressive fatigue, night sweats, loss of appetite, and weight loss of approximately 5-6 jin.",
+      "Physical examination of Patient_02851 revealed BMI 21.5 kg/m², temperature 37.6°C, conjunctival pallor, multiple ecchymoses on skin, spleen enlargement (palpable 3-4 cm below left costal margin, firm texture), and multiple painless, firm, slowly enlarging lymph nodes in the neck and left axilla.",
+      "User's child's bone marrow biopsy showed high cellularity (90%), normal trilineage hematopoiesis, <5% blasts, adequate megakaryocytes, and present iron stores, ruling out leukemia and aplastic anemia.",
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_08330's bone marrow biopsy showed hypercellularity (approximately 80%), approximately 45% blast cells, and significantly reduced megakaryocytes.",
+      "Patient_04985's bone marrow examination revealed hypercellularity (90%), replacement by abnormal infiltration of blasts (68%), significantly increased myeloid-to-erythroid ratio, maturation arrest in granulocytes, suppressed erythroid series, and significantly reduced megakaryocytes.",
+      "User was recommended to order fecal occult blood test (FOBT), pelvic ultrasound, esophagogastroduodenoscopy (EGD), colonoscopy, and bone marrow aspiration/biopsy (BMAB) to investigate the cause of iron deficiency anemia in Patient_00783, specifically to screen for chronic bleeding sources such as menorrhagia or gastrointestinal lesions",
+      "User diagnosed Patient_02057 with myelofibrosis based on progressive fatigue, early satiety, left upper quadrant fullness, low-grade fever, night sweats, weight loss, gum bleeding, easy bruising, massive splenomegaly (8 cm below left costal margin), leukocytosis (18.6 x10^9/L), anemia (Hb 92 g/L), thrombocytopenia (92 x10^9/L), teardrop cells on peripheral smear, and bone marrow showing diffuse reticulin/collagen fibrosis with atypical megakaryocytes.",
+      "User was recommended to order additional examinations for Patient_01050 including fecal occult blood test (FOBT), esophagogastroduodenoscopy (EGD), and bone marrow aspiration/biopsy (BMAB) to investigate the cause of iron deficiency anemia given the patient's history of gastric surgery and potential bleeding sources",
+      "User noted that the evaluation missed critical examinations including bone marrow biopsy confirmation, molecular genetic testing (JAK2/CALR/MPL mutations), MRI/CT imaging, serum erythropoietin levels, CMP, LFTs, and calcium assessment.",
+      "User was recommended to order fecal occult blood test (FOBT), pelvic ultrasound, and esophagogastroduodenoscopy (EGD) to investigate the cause of iron deficiency anemia in Patient_03943.",
+      "User was diagnosed with Hairy Cell Leukemia based on clinical symptoms (fever, night sweats, bleeding, bone pain), pancytopenia, characteristic hairy cells on blood smear, dry tap on bone marrow aspiration, and honeycomb-pattern infiltration with fibrosis on biopsy"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有什么不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，我最近半年越来越没力气，爬楼梯都喘，而且吃一点就饱。这三个月老感冒，还容易流鼻血、身上有淤青，肚子也胀。我查过资料，觉得这些症状很吻合，想确认一下是不是需要做个骨髓穿刺或者用点特定的药？"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有夜间盗汗、不明原因的体重下降或发热？另外，您提到的肚子胀和吃一点就饱，是否伴有左上腹的疼痛或摸到肿块？"
+      },
+      {
+        "from": "patient",
+        "text": "是的，最近三个月确实有夜间盗汗和不明原因的体重下降。关于肚子胀和早饱，我偶尔会感觉左上腹有点不舒服，但没摸到明显的肿块。医生，这些症状是不是说明需要做骨髓穿刺了？"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "腹部检查": {
+        "result": {
+          "可见肠蠕动": "无可见肠蠕动",
+          "移动性浊音": "无移动性浊音",
+          "肋脊角压痛": "无肋脊角压痛",
+          "肝浊音界/肝跨度": "右锁骨中线肝浊音界 13 cm［参考值：右锁骨中线肝浊音界 6-12 cm］",
+          "肝缘触诊": "肝缘光滑，于右肋缘下可触及 2 cm",
+          "肝脾区叩诊音": "肝脾区呈浊音",
+          "肠鸣音": "肠鸣音正常活跃（每分钟 5-30 次）［参考值：肠鸣音正常活跃（每分钟 5-30 次）］",
+          "肾脏触诊": "肾脏未触及",
+          "脐部": "脐位于中央且内陷",
+          "脾脏触诊": "脾脏于左肋缘下可触及 4 cm，质地中等",
+          "腹壁静脉/蜘蛛痣": "无海蛇头样静脉曲张或蜘蛛状血管瘤",
+          "腹肌情况": "腹肌柔软，无肌卫",
+          "腹股沟疝": "无腹股沟疝",
+          "腹膜刺激征": "无肌紧张、强直或反跳痛",
+          "腹部压痛": "左上腹轻度压痛，其余部位无压痛",
+          "腹部叩诊音": "胃区及肠道呈鼓音",
+          "腹部外观": "腹部平坦对称，未见明显膨隆或搏动",
+          "腹部瘢痕": "无瘢痕",
+          "腹部皮纹": "无皮纹",
+          "腹部肿块": "未触及明确包块，但脾区饱满感明显",
+          "腹部触感": "腹部柔软",
+          "血管杂音": "主动脉、肾动脉或髂动脉区域未闻及血管杂音"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "肝浊音界/肝跨度",
+          "肝缘触诊",
+          "脾脏触诊",
+          "腹部压痛"
+        ]
+      },
+      "皮肤检查": {
+        "result": {
+          "全身体格检查-皮肤状态": "皮肤温暖、干燥，但弹性稍差。",
+          "指(趾)甲": "指（趾）甲光滑、粉红。",
+          "毛发分布": "毛发分布正常，呈典型男性型。",
+          "毛细血管再充盈时间": "毛细血管再充盈时间为 2.5 秒。",
+          "水肿肿块及淋巴结": "未触及明显水肿或肿块，浅表淋巴结未触及肿大。",
+          "皮肤病变与出血点": "可见散在瘀斑，无皮疹、溃疡或异常色素沉着。",
+          "皮肤质地": "皮肤质地略显粗糙，弹性减退。",
+          "肤色与发绀黄疸": "肤色苍白，无发绀或黄疸。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "全身体格检查-皮肤状态",
+          "毛细血管再充盈时间",
+          "皮肤病变与出血点",
+          "皮肤质地",
+          "肤色与发绀黄疸"
+        ]
+      },
+      "口腔检查": {
+        "result": {
+          "口唇": "粉红、湿润，无发绀，无病变或皲裂。",
+          "口气": "无口臭。",
+          "口腔软腭": "发音时对称上抬，无裂隙或病变。",
+          "口腔黏膜": "粉红、湿润、完整，无溃疡，无白斑或红斑。",
+          "咽部": "粉红，无红斑、渗出物或肿块。",
+          "唾液": "分泌量正常，性状清亮。",
+          "唾液腺导管": "通畅，可见清亮唾液排出。",
+          "悬雍垂": "居中，大小正常，对称上抬。",
+          "扁桃体": "1-2度，无红斑、渗出物或不对称。［参考值：1-2度，无红斑、渗出物或不对称。］",
+          "牙齿": "牙列完整，与年龄相符，无可见龋齿，无过度松动，无咬合不正。",
+          "牙龈": "牙龈轻度充血，刷牙时可诱发少量渗血，无肿胀或萎缩。",
+          "硬腭": "完整、粉红，无病变或肿块。",
+          "舌": "粉红、湿润，大小和活动度正常，无舌苔异常，舌乳头完整，伸舌时无肌束颤动或偏斜。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "牙龈"
+        ]
+      },
+      "生命体征": {
+        "result": {
+          "体温": "37.1°C［参考值：36.1-37.2°C（97.0-99.0°F）］",
+          "呼吸频率": "16次/分钟，规律且不费力［参考值：12-20次/分钟，规律且不费力］",
+          "心率": "82次/分钟，节律规则［参考值：60-100次/分钟，节律规则］",
+          "血压": "115/75 mmHg［参考值：收缩压90-120 mmHg，舒张压60-80 mmHg］",
+          "血氧饱和度": "98%［参考值：室内空气下95-100%］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "骨髓穿刺和活检（BMAB）": {
+        "result": {
+          "补充描述": "骨髓穿刺干抽",
+          "异常浸润或纤维化": "活检显示间质性毛细胞浸润",
+          "网状纤维化": "网状纤维化增加［参考值：0-1级（轻微）。］",
+          "骨髓三系造血": "三系造血减少"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异常浸润或纤维化",
+          "网状纤维化",
+          "骨髓三系造血"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有什么不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等情况？",
+        "reason": "当前没有任何病史、检查结果或已开检查信息，无法进行诊断。作为诊疗的第一步，需要通过问诊了解患者的临床症状以初步判断病情方向。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有夜间盗汗、不明原因的体重下降或发热？另外，您提到的肚子胀和吃一点就饱，是否伴有左上腹的疼痛或摸到肿块？",
+        "reason": "患者主诉乏力、气短、早饱、反复感冒、鼻出血及皮肤淤青，这些症状高度提示血液系统疾病（如白血病），但缺乏关键的全身症状（如发热、盗汗、消瘦）和体征细节（如淋巴结肿大、肝脾肿大情况），目前尚未开具任何检查，需进一步问诊以完善病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为进行性乏力、早饱、盗汗、体重下降及出血倾向，高度怀疑血液系统恶性肿瘤（如骨髓纤维化或白血病）。目前尚未进行任何检查，为明确诊断，必须优先安排血常规、外周血涂片及骨髓穿刺/活检等关键检查。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者有乏力、早饱、盗汗、体重下降、出血倾向及脾脏肿大等典型症状，腹部检查已发现脾大和肝大，但尚未进行血液学关键检查（如血常规）和骨髓检查以明确病因（如骨髓纤维化或白血病），需优先完善相关检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有乏力、早饱、盗汗、体重下降等典型症状，查体发现脾大和皮肤瘀斑。骨髓穿刺干抽，活检显示间质性毛细胞浸润、网状纤维化增加及三系造血减少，这些特征性检查结果结合临床表现已足以支持毛细胞白血病的诊断，可进入确诊和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "体格检查",
+        "examinations": [
+          "腹部检查",
+          "皮肤检查",
+          "口腔检查",
+          "生命体征"
+        ],
+        "reason": "患者主诉乏力、早饱、左上腹不适，需进行腹部检查以评估脾脏大小及有无肿块；有易出血倾向（鼻血、淤青），需进行皮肤检查观察瘀斑、出血点情况；有牙龈出血史，需进行口腔检查评估出血来源；同时需监测体温、脉搏等生命体征以评估是否存在发热及全身状况。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "reason": "患者表现为进行性乏力、早饱、左上腹不适，伴有夜间盗汗、体重下降及出血倾向（鼻出血、皮肤瘀斑），查体发现脾脏肿大（左肋缘下4cm）及牙龈渗血。结合病史中提到的疑似血液系统疾病症状（如类似骨髓纤维化或白血病的表现），且既往检查未包含骨髓评估，为明确诊断（如排除白血病、骨髓增生异常综合征或骨髓纤维化等），必须进行骨髓穿刺和活检以获取细胞学和组织学证据。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "毛细胞白血病",
+      "treatment_plan": "1. 主要治疗：建议立即启动针对毛细胞白血病的靶向化疗，首选克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续静脉输注5-7天方案，该方案对毛细胞白血病具有极高的完全缓解率（>90%），且疗程短、副作用相对可控。对于脾脏显著肿大（本例左肋缘下4cm）导致压迫症状的患者，若药物疗效不佳或无法耐受，可考虑行脾切除术作为辅助治疗以改善血细胞减少和早饱症状。\n2. 个性化调整：患者表现为全血细胞减少（贫血、出血倾向）、脾大及骨髓“干抽”现象，符合典型毛细胞白血病特征。鉴于患者有牙龈渗血和皮肤瘀斑，提示血小板功能或数量严重受损，治疗初期需密切监测血常规，必要时在化疗前或化疗期间进行血小板输注支持。患者无发热但近期易感冒，提示免疫功能低下，治疗期间需预防性使用抗感染药物，并避免接触人群。\n3. 安全性与监测：治疗期间需严密监测肝肾功能、电解质及骨髓抑制情况（特别是中性粒细胞减少导致的感染风险）。告知患者若出现高热（>38.3°C）、严重出血不止、呼吸困难或意识改变等危险信号，需立即就医。治疗后需定期复查骨髓穿刺及流式细胞术以评估微小残留病灶（MRD），指导后续随访频率。",
+      "reasoning": "诊断依据：患者临床表现为进行性乏力、早饱（脾大压迫）、反复感染、出血倾向（鼻衄、瘀斑、牙龈渗血）及盗汗、体重下降。体格检查发现脾脏肿大（左肋缘下4cm）及皮肤瘀斑。关键检查结果为骨髓穿刺“干抽”，活检显示“间质性毛细胞浸润”伴网状纤维化增加及三系造血减少，这是毛细胞白血病的特征性病理改变（“干抽”因纤维化所致，“毛细胞浸润”为确诊金标准）。结合病史中的脾大和全血细胞减少，高度怀疑毛细胞白血病。治疗方案选择克拉屈滨是因为其对B细胞恶性肿瘤（特别是毛细胞白血病）具有高度特异性且疗效确切，同时需根据患者脾大程度和出血风险进行个体化支持治疗。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_08247",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.2,
+      "treatmentOverallScore": 0.68,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "毛细胞白血病"
+        ],
+        "expected": [
+          "毛细胞白血病"
+        ],
+        "matched": [
+          "毛细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "腹部检查",
+          "皮肤检查",
+          "口腔检查",
+          "生命体征",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测",
+          "腹部超声",
+          "细胞遗传学分析"
+        ],
+        "matched": [
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "precision": 0.2,
+        "coverage": 0.2,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：建议立即启动针对毛细胞白血病的靶向化疗，首选克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续静脉输注5-7天方案，该方案对毛细胞白血病具有极高的完全缓解率（>90%），且疗程短、副作用相对可控。对于脾脏显著肿大（本例左肋缘下4cm）导致压迫症状的患者，若药物疗效不佳或无法耐受，可考虑行脾切除术作为辅助治疗以改善血细胞减少和早饱症状。\n2. 个性化调整：患者表现为全血细胞减少（贫血、出血倾向）、脾大及骨髓“干抽”现象，符合典型毛细胞白血病特征。鉴于患者有牙龈渗血和皮肤瘀斑，提示血小板功能或数量严重受损，治疗初期需密切监测血常规，必要时在化疗前或化疗期间进行血小板输注支持。患者无发热但近期易感冒，提示免疫功能低下，治疗期间需预防性使用抗感染药物，并避免接触人群。\n3. 安全性与监测：治疗期间需严密监测肝肾功能、电解质及骨髓抑制情况（特别是中性粒细胞减少导致的感染风险）。告知患者若出现高热（>38.3°C）、严重出血不止、呼吸困难或意识改变等危险信号，需立即就医。治疗后需定期复查骨髓穿刺及流式细胞术以评估微小残留病灶（MRD），指导后续随访频率。",
+        "overallScore": 0.68,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.8,
+        "reasoning": "方案安全未违禁忌，但遗漏关键预防用药及监测细节，个体化建议较通用。",
+        "reference": "开始单药克拉屈滨 0.1 mg/kg/天，持续静脉输注 7 天，作为一线核苷类似物治疗；同时给予别嘌醇 300 mg 每日一次以预防肿瘤溶解，并给予阿昔洛韦 400 mg 每日两次以预防疱疹；如血小板降至 20×10⁹/L 以下，增加经照射的单供者血小板支持；如 ANC <0.5×10⁹/L，给予非格司亭 300 µg 每日皮下注射。每月静脉给予免疫球蛋白 400 mg/kg，直至外周 B 细胞恢复，以降低感染风险；开具左氧氟沙星 500 mg 每日一次及氟康唑 200 mg 每周三次，作为抗菌/抗真菌预防；并确认今后任何抗生素均使用不含青霉素的替代方案。保持补液 ≥2 L/天，使用电动剃须刀和软毛牙刷以减少出血，化疗后 3 个月内避免去人群密集场所及食用生食，并每周复诊进行 CBC/代谢检查；如出现体温 ≥38 °C、出血、呼吸困难或腹痛，请立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "毛细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "骨髓穿刺和活检（BMAB）",
+          "分子遗传学检测",
+          "腹部超声",
+          "细胞遗传学分析"
+        ],
+        "contraindications": {
+          "drugs": [
+            "青霉素类抗生素"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "开始单药克拉屈滨 0.1 mg/kg/天，持续静脉输注 7 天，作为一线核苷类似物治疗；同时给予别嘌醇 300 mg 每日一次以预防肿瘤溶解，并给予阿昔洛韦 400 mg 每日两次以预防疱疹；如血小板降至 20×10⁹/L 以下，增加经照射的单供者血小板支持；如 ANC <0.5×10⁹/L，给予非格司亭 300 µg 每日皮下注射。每月静脉给予免疫球蛋白 400 mg/kg，直至外周 B 细胞恢复，以降低感染风险；开具左氧氟沙星 500 mg 每日一次及氟康唑 200 mg 每周三次，作为抗菌/抗真菌预防；并确认今后任何抗生素均使用不含青霉素的替代方案。保持补液 ≥2 L/天，使用电动剃须刀和软毛牙刷以减少出血，化疗后 3 个月内避免去人群密集场所及食用生食，并每周复诊进行 CBC/代谢检查；如出现体温 ≥38 °C、出血、呼吸困难或腹痛，请立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为中年男性，主诉半年乏力、早饱伴近期反复感染、出血倾向（鼻衄、瘀斑），查体提示脾大及左上腹不适，伴盗汗和体重下降。",
+        "diagnosis_reflection": "诊断准确命中毛细胞白血病，成功识别了全血细胞减少、脾大、骨痛/盗汗/体重下降等典型三联征组合。",
+        "examination_reflection": "仅开具骨髓穿刺正确，但遗漏了关键的初筛检查（全血细胞计数）及确诊必需的辅助检查（腹部超声评估脾脏、分子遗传学及细胞遗传学分析），导致检查覆盖率和精确度较低。",
+        "treatment_reflection": "治疗方案选择了正确的靶向药物（克拉屈滨）并提及了脾切除指征，但严重缺乏预防性用药细节（如肿瘤溶解综合征预防、抗感染预防）及具体的支持治疗措施（如血小板输注阈值、G-CSF使用），个性化不足。",
+        "future_strategy": "面对疑似血液系统恶性肿瘤，需按标准流程先完善血常规和影像学筛查，再行骨髓及基因检测；制定化疗方案时务必同步规划预防性用药（抗感染、抗肿瘤溶解）及并发症监测支持策略。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:58:24.253392+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_08247",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "毛细胞白血病"
+    ],
+    "treatment_plan": "1. 主要治疗：建议立即启动针对毛细胞白血病的靶向化疗，首选克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续静脉输注5-7天方案，该方案对毛细胞白血病具有极高的完全缓解率（>90%），且疗程短、副作用相对可控。对于脾脏显著肿大（本例左肋缘下4cm）导致压迫症状的患者，若药物疗效不佳或无法耐受，可考虑行脾切除术作为辅助治疗以改善血细胞减少和早饱症状。\n2. 个性化调整：患者表现为全血细胞减少（贫血、出血倾向）、脾大及骨髓“干抽”现象，符合典型毛细胞白血病特征。鉴于患者有牙龈渗血和皮肤瘀斑，提示血小板功能或数量严重受损，治疗初期需密切监测血常规，必要时在化疗前或化疗期间进行血小板输注支持。患者无发热但近期易感冒，提示免疫功能低下，治疗期间需预防性使用抗感染药物，并避免接触人群。\n3. 安全性与监测：治疗期间需严密监测肝肾功能、电解质及骨髓抑制情况（特别是中性粒细胞减少导致的感染风险）。告知患者若出现高热（>38.3°C）、严重出血不止、呼吸困难或意识改变等危险信号，需立即就医。治疗后需定期复查骨髓穿刺及流式细胞术以评估微小残留病灶（MRD），指导后续随访频率。",
+    "reasoning": "诊断依据：患者临床表现为进行性乏力、早饱（脾大压迫）、反复感染、出血倾向（鼻衄、瘀斑、牙龈渗血）及盗汗、体重下降。体格检查发现脾脏肿大（左肋缘下4cm）及皮肤瘀斑。关键检查结果为骨髓穿刺“干抽”，活检显示“间质性毛细胞浸润”伴网状纤维化增加及三系造血减少，这是毛细胞白血病的特征性病理改变（“干抽”因纤维化所致，“毛细胞浸润”为确诊金标准）。结合病史中的脾大和全血细胞减少，高度怀疑毛细胞白血病。治疗方案选择克拉屈滨是因为其对B细胞恶性肿瘤（特别是毛细胞白血病）具有高度特异性且疗效确切，同时需根据患者脾大程度和出血风险进行个体化支持治疗。",
+    "ordered_examinations": [
+      "腹部检查",
+      "皮肤检查",
+      "口腔检查",
+      "生命体征",
+      "骨髓穿刺和活检（BMAB）"
+    ],
+    "conversation_rounds": 2,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_08247",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.2,
+    "treatmentOverallScore": 0.68,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "毛细胞白血病"
+      ],
+      "expected": [
+        "毛细胞白血病"
+      ],
+      "matched": [
+        "毛细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "腹部检查",
+        "皮肤检查",
+        "口腔检查",
+        "生命体征",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测",
+        "腹部超声",
+        "细胞遗传学分析"
+      ],
+      "matched": [
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "precision": 0.2,
+      "coverage": 0.2,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：建议立即启动针对毛细胞白血病的靶向化疗，首选克拉屈滨（Cladribine）或喷司他丁（Pentostatin）。克拉屈滨通常采用连续静脉输注5-7天方案，该方案对毛细胞白血病具有极高的完全缓解率（>90%），且疗程短、副作用相对可控。对于脾脏显著肿大（本例左肋缘下4cm）导致压迫症状的患者，若药物疗效不佳或无法耐受，可考虑行脾切除术作为辅助治疗以改善血细胞减少和早饱症状。\n2. 个性化调整：患者表现为全血细胞减少（贫血、出血倾向）、脾大及骨髓“干抽”现象，符合典型毛细胞白血病特征。鉴于患者有牙龈渗血和皮肤瘀斑，提示血小板功能或数量严重受损，治疗初期需密切监测血常规，必要时在化疗前或化疗期间进行血小板输注支持。患者无发热但近期易感冒，提示免疫功能低下，治疗期间需预防性使用抗感染药物，并避免接触人群。\n3. 安全性与监测：治疗期间需严密监测肝肾功能、电解质及骨髓抑制情况（特别是中性粒细胞减少导致的感染风险）。告知患者若出现高热（>38.3°C）、严重出血不止、呼吸困难或意识改变等危险信号，需立即就医。治疗后需定期复查骨髓穿刺及流式细胞术以评估微小残留病灶（MRD），指导后续随访频率。",
+      "overallScore": 0.68,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.8,
+      "reasoning": "方案安全未违禁忌，但遗漏关键预防用药及监测细节，个体化建议较通用。",
+      "reference": "开始单药克拉屈滨 0.1 mg/kg/天，持续静脉输注 7 天，作为一线核苷类似物治疗；同时给予别嘌醇 300 mg 每日一次以预防肿瘤溶解，并给予阿昔洛韦 400 mg 每日两次以预防疱疹；如血小板降至 20×10⁹/L 以下，增加经照射的单供者血小板支持；如 ANC <0.5×10⁹/L，给予非格司亭 300 µg 每日皮下注射。每月静脉给予免疫球蛋白 400 mg/kg，直至外周 B 细胞恢复，以降低感染风险；开具左氧氟沙星 500 mg 每日一次及氟康唑 200 mg 每周三次，作为抗菌/抗真菌预防；并确认今后任何抗生素均使用不含青霉素的替代方案。保持补液 ≥2 L/天，使用电动剃须刀和软毛牙刷以减少出血，化疗后 3 个月内避免去人群密集场所及食用生食，并每周复诊进行 CBC/代谢检查；如出现体温 ≥38 °C、出血、呼吸困难或腹痛，请立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "毛细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "骨髓穿刺和活检（BMAB）",
+        "分子遗传学检测",
+        "腹部超声",
+        "细胞遗传学分析"
+      ],
+      "contraindications": {
+        "drugs": [
+          "青霉素类抗生素"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "开始单药克拉屈滨 0.1 mg/kg/天，持续静脉输注 7 天，作为一线核苷类似物治疗；同时给予别嘌醇 300 mg 每日一次以预防肿瘤溶解，并给予阿昔洛韦 400 mg 每日两次以预防疱疹；如血小板降至 20×10⁹/L 以下，增加经照射的单供者血小板支持；如 ANC <0.5×10⁹/L，给予非格司亭 300 µg 每日皮下注射。每月静脉给予免疫球蛋白 400 mg/kg，直至外周 B 细胞恢复，以降低感染风险；开具左氧氟沙星 500 mg 每日一次及氟康唑 200 mg 每周三次，作为抗菌/抗真菌预防；并确认今后任何抗生素均使用不含青霉素的替代方案。保持补液 ≥2 L/天，使用电动剃须刀和软毛牙刷以减少出血，化疗后 3 个月内避免去人群密集场所及食用生食，并每周复诊进行 CBC/代谢检查；如出现体温 ≥38 °C、出血、呼吸困难或腹痛，请立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为中年男性，主诉半年乏力、早饱伴近期反复感染、出血倾向（鼻衄、瘀斑），查体提示脾大及左上腹不适，伴盗汗和体重下降。",
+      "diagnosis_reflection": "诊断准确命中毛细胞白血病，成功识别了全血细胞减少、脾大、骨痛/盗汗/体重下降等典型三联征组合。",
+      "examination_reflection": "仅开具骨髓穿刺正确，但遗漏了关键的初筛检查（全血细胞计数）及确诊必需的辅助检查（腹部超声评估脾脏、分子遗传学及细胞遗传学分析），导致检查覆盖率和精确度较低。",
+      "treatment_reflection": "治疗方案选择了正确的靶向药物（克拉屈滨）并提及了脾切除指征，但严重缺乏预防性用药细节（如肿瘤溶解综合征预防、抗感染预防）及具体的支持治疗措施（如血小板输注阈值、G-CSF使用），个性化不足。",
+      "future_strategy": "面对疑似血液系统恶性肿瘤，需按标准流程先完善血常规和影像学筛查，再行骨髓及基因检测；制定化疗方案时务必同步规划预防性用药（抗感染、抗肿瘤溶解）及并发症监测支持策略。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/058.json#/applied_memory"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "method_id": "memos",
+  "name": "MemOS",
+  "summary": "MemOS official native memory implementation with isolated storage and complete checkpoints.",
+  "interface_version": 3,
+  "version": "1",
+  "repository_url": "https://github.com/MemTensor/MemOS",
+  "recommended_executor": "subprocess",
+  "fidelity": "upstream_native",
+  "implementation_strategy": "native_plugin",
+  "internal_token_tracking": "conditional",
+  "capabilities": {
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "record",
+      "hierarchical",
+      "graph"
+    ],
+    "operations": [
+      "index",
+      "add",
+      "search",
+      "episode_end",
+      "flush",
+      "save",
+      "load",
+      "reset"
+    ],
+    "integration_slots": [
+      "context"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "action",
+      "tool_result",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "supports_persistence": true,
+    "supports_async": true,
+    "requires_gpu": false,
+    "read_only_mode": "native"
+  },
+  "storage": {
+    "path_parameters": {
+      "storage_path": "auto"
+    },
+    "kind": "graph_db",
+    "backend": "neo4j_native_vector",
+    "supports_snapshot": true
+  },
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "top_k": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 10
+      },
+      "storage_path": {
+        "type": "string",
+        "minLength": 1
+      },
+      "embedding_dims": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 1024
+      },
+      "neo4j_uri": {
+        "type": "string",
+        "default": "bolt://127.0.0.1:7687"
+      },
+      "neo4j_user": {
+        "type": "string",
+        "default": "neo4j"
+      },
+      "neo4j_password_env": {
+        "type": "string",
+        "default": "NEO4J_PASSWORD"
+      },
+      "neo4j_database": {
+        "type": "string",
+        "default": "neo4j"
+      },
+      "search_mode": {
+        "type": "string",
+        "enum": [
+          "fast",
+          "fine"
+        ],
+        "default": "fast"
+      }
+    },
+    "additionalProperties": false
+  },
+  "requirements": {
+    "python": [
+      "MemoryOS",
+      "neo4j"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ],
+    "usage": {
+      "providers": "Public LLM and embedding providers; CPU or remote embedding is supported.",
+      "inputs": "Real MemoryUnit events/task/output/feedback; reward is optional.",
+      "learning": "add follows upstream extraction and updates. episode_end is only a boundary and accepts later experience.",
+      "storage": "Dedicated per-run namespace; Neo4j >=5.18 required."
+    }
+  },
+  "input_schemas": {
+    "search": {
+      "type": "object",
+      "properties": {
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "implementation_notes": [
+    "Pinned upstream MemTensor/MemOS@d326a6419467c2205041b58533b0ebfdf4f38173",
+    "No offline substitute is provided. index lists views; add accepts real evidence.",
+    "Synchronous tree_text, native Neo4j backend with use_multi_db=False; no cloud product or scheduler.",
+    "Fine SimpleStruct reader and native sentence chunker for text/chat; upstream default reorganize=False and top_k=10."
+  ],
+  "limitations": [
+    "Real Neo4j validation requires a separately managed Neo4j service; no system service is installed."
+  ],
+  "commands": {}
+}

@@ -1,0 +1,6 @@
+# Optional public LoCoMo scoring regression dependencies; no NLTK data downloads.
+-r requirements-lock.txt
+nltk==3.9.2
+joblib==1.6.0
+cloudpickle==3.1.2
+regex==2026.9.29

@@ -1,0 +1,46 @@
+{
+  "memos": {
+    "unassigned_requests": 0,
+    "rounds": {
+      "1": 540,
+      "2": 1321,
+      "3": 1312,
+      "4": 1277,
+      "5": 1226
+    }
+  },
+  "mem0": {
+    "unassigned_requests": 0,
+    "rounds": {
+      "1": 831,
+      "2": 806,
+      "3": 781,
+      "4": 802,
+      "5": 702
+    }
+  },
+  "memmachine": {
+    "unassigned_requests": 0,
+    "rounds": {
+      "1": 3126,
+      "2": 2815,
+      "3": 3212,
+      "4": 2741,
+      "5": 2631
+    }
+  },
+  "emem": {
+    "unassigned_requests": 0,
+    "rounds": {}
+  },
+  "memora": {
+    "unassigned_requests": 0,
+    "rounds": {
+      "1": 7558,
+      "2": 7099,
+      "3": 7970,
+      "4": 7987,
+      "5": 7738
+    }
+  }
+}

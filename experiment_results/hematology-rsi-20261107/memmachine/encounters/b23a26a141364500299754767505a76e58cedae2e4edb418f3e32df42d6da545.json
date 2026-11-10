@@ -1,0 +1,568 @@
+{
+  "patient_id": "Patient_00783",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？\", \"reason\": \"患者主诉乏力、气短及面色苍白，高度提示贫血。虽然患者否认出血倾向和B症状（发热、盗汗、体重下降），但缺乏关于贫血严重程度、红细胞形态及病因的关键信息。目前尚未进行任何实验室检查，必须立即开具全血细胞计数（CBC）和外周血涂片以明确贫血类型（如缺铁性、巨幼细胞性或再生障碍性等），并初步排除血液系统恶性肿瘤，这是制定后续诊疗方案的基础。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发烧、盗汗或体重明显下降。颈部、腋下和腹股沟没摸到肿块。去年贫血时医生说是缺铁性贫血，我后来也输血了。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊为缺铁性贫血并输过血。请问当时医生是否告知了具体的贫血类型（如缺铁性、再生障碍性贫血等）？另外，除了左上腹胀满，您最近是否有牙龈出血、皮肤容易淤青或鼻出血的情况？家族中是否有其他人患有血液系统疾病？\", \"reason\": \"患者主诉左上腹胀满，虽否认近期发热、盗汗及体重下降，但既往有贫血输血史，需进一步确认贫血的具体类型以鉴别是单纯缺铁性贫血复发还是其他血液系统疾病（如骨髓增生异常综合征、淋巴瘤等）。同时，了解有无出血倾向及家族史对于评估血小板功能和遗传风险至关重要，目前缺乏这些关键信息，需先完善问诊再决定检查项目。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您好，您提到去年确诊为缺铁性贫血并输过血。请问当时医生是否告知了具体的贫血类型（如缺铁性、再生障碍性贫血等）？另外，除了左上腹胀满，您最近是否有牙龈出血、皮肤容易淤青或鼻出血的情况？家族中是否有其他人患有血液系统疾病？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生说是缺铁性贫血。最近没有牙龈出血、皮肤淤青或鼻血。我妈妈月经过多，中年时也贫血过，家里没其他人有血液病。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊为缺铁性贫血并输过血。请问当时是否有做过骨髓穿刺或铁代谢检查来明确诊断？另外，除了左上腹胀满和体重下降，您最近是否有发热、夜间盗汗的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降及既往贫血输血史，虽然自述无出血症状，但缺乏对既往贫血确诊依据（是否仅为缺铁性）、有无B症状（发热、盗汗）以及家族遗传史的关键信息。这些信息对于鉴别诊断（如区分缺铁性贫血复发、再生障碍性贫血、骨髓增生异常综合征或淋巴瘤等）至关重要，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您好，您提到去年确诊为缺铁性贫血并输过血。请问当时是否有做过骨髓穿刺或铁代谢检查来明确诊断？另外，除了左上腹胀满和体重下降，您最近是否有发热、夜间盗汗的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "当时没做骨髓穿刺，只做了铁代谢检查确诊缺铁性贫血。最近没有发热或盗汗。家族里只有妈妈有贫血和月经过多，没其他人患血液病。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到左上腹胀满和体重下降，请问这种胀满感是否伴有早饱（吃一点就饱）？另外，您去年确诊缺铁性贫血后，是否规律服药并复查过血常规确认贫血已纠正？近期是否有乏力加重、皮肤出现新淤青或牙龈出血的情况？\", \"reason\": \"患者主诉左上腹胀满、体重下降及既往贫血史，目前缺乏关于是否存在脾大相关症状（如早饱）、贫血是否复发或治疗无效、以及有无新发出血倾向的关键信息。这些细节对于鉴别诊断（如区分单纯缺铁性贫血复发、骨髓增生异常综合征、淋巴瘤或脾功能亢进等）至关重要，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "您好，您提到左上腹胀满和体重下降，请问这种胀满感是否伴有早饱（吃一点就饱）？另外，您去年确诊缺铁性贫血后，是否规律服药并复查过血常规确认贫血已纠正？近期是否有乏力加重、皮肤出现新淤青或牙龈出血的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "吃一点就饱，胀得难受。去年确诊缺铁性贫血后没规律吃药复查，贫血好像没完全好。最近乏力更重了，但没发现新淤青或牙龈出血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者主诉左上腹胀满伴早饱感（提示脾大可能）、近期乏力加重，且有缺铁性贫血输血史。虽然既往自述无出血症状，但结合贫血未纠正及可能的脾功能亢进或血液系统疾病风险，急需通过全血细胞计数（CBC）评估三系情况，外周血涂片观察细胞形态以排除白血病或异常细胞，以及铁代谢检查明确贫血性质，为后续诊断提供关键依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主诉左上腹胀满伴早饱感（提示脾大可能）、近期乏力加重，且有缺铁性贫血输血史。虽然既往诊断为缺铁性贫血，但症状复发且伴有体重下降和脾大迹象，需高度警惕骨髓增生异常综合征（MDS）、淋巴瘤或再生障碍性贫血等血液系统疾病。首选“实验室检查 - 血液”中的全血细胞计数（CBC）和外周血涂片，以评估贫血程度、白细胞及血小板情况，并观察有无原始细胞或异型淋巴细胞，这是鉴别诊断血液系统恶性肿瘤与单纯贫血复发的关键第一步。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"铁代谢检查\"], \"reason\": \"患者主诉左上腹胀满伴早饱感（提示脾大可能）、乏力加重，且有缺铁性贫血输血史。虽然既往诊断为缺铁性贫血，但近期症状（体重下降、早饱）及贫血未纠正需高度警惕血液系统恶性肿瘤（如淋巴瘤、白血病）或骨髓增生异常综合征（MDS）。全血细胞计数（CBC）可评估三系情况（贫血、血小板减少、白细胞异常）；外周血涂片用于观察红细胞形态及寻找异型淋巴细胞或原始细胞以鉴别恶性疾病；铁代谢检查用于明确是否存在缺铁复发或铁利用障碍，排除单纯缺铁性贫血复发的可能性。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"86 g/L [参考范围：120-160]\", \"红细胞压积\": \"28% [参考范围：36-48]\", \"平均红细胞体积\": \"72 fL [参考范围：80-100]\", \"血小板计数\": \"468 x 10^9/L [参考范围：150-400]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"红细胞压积\", \"平均红细胞体积\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"未见寄生虫、包涵体或异常细胞。\", \"异型细胞或原始细胞\": \"无异型细胞或原始细胞。\", \"白细胞分类计数\": \"中性粒细胞 62%、淋巴细胞 30%、单核细胞 5%、嗜酸性粒细胞 3%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］\", \"白细胞形态\": \"形态正常，核浆比例适当。\", \"红细胞形态\": \"小细胞低色素性，中央淡染区扩大至约占细胞直径的二分之一；可见明显大小不等及异形红细胞。\", \"血小板形态与分布\": \"体积增大，形态多样，分布不均。\", \"血小板数量\": \"数量充足（估计 468,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］\", \"血小板聚集\": \"无聚集。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞形态\", \"血小板形态与分布\"]}, \"铁代谢检查\": {\"result\": {\"血清铁\": \"18 ug/dL [参考范围：50-170]\", \"总铁结合力\": \"442 ug/dL [参考范围：250-370]\", \"转铁蛋白饱和度\": \"4% [参考范围：15-50]\", \"血清铁蛋白\": \"6 ng/mL [参考范围：15-150]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清铁\", \"总铁结合力\", \"转铁蛋白饱和度\", \"血清铁蛋白\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者主诉左上腹胀满伴早饱感、乏力，既往有缺铁性贫血史。实验室检查显示小细胞低色素性贫血（Hgb 86g/L, MCV 72fL），血小板反应性升高（468x10^9/L），外周血涂片证实红细胞形态异常（小细胞低色素），铁代谢检查明确提示缺铁（血清铁蛋白6ng/mL，转铁蛋白饱和度4%）。结合病史和检查结果，诊断缺铁性贫血依据充分，无需进一步问诊或开检查即可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为小细胞低色素性贫血（血红蛋白86g/L，MCV 72fL），铁代谢检查明确提示缺铁性贫血（血清铁蛋白6ng/mL，转铁蛋白饱和度4%）。同时伴有反应性血小板增多（468x10^9/L）及左上腹胀满伴早饱感。虽然缺铁性贫血常见于消化或妇科出血，但鉴于患者有贫血输血史、症状持续且伴有脾大可能（左上腹胀满），需由血液科进一步评估贫血病因（如排除地中海贫血、MDS等）、监测血小板变化并制定补铁及寻找出血源的综合诊疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"缺铁性贫血\", \"treatment_plan\": \"1. **病因排查与止血**：\\n   - 鉴于患者为中年男性且存在严重缺铁（血清铁蛋白6 ng/mL），必须立即排查消化道慢性失血。建议尽快安排胃镜和结肠镜检查，必要时进行胶囊内镜检查，以排除消化道溃疡、肿瘤或血管畸形等出血源。\\n   - 同时询问并评估是否有痔疮、鼻出血等其他出血情况。\\n\\n2. **铁剂补充治疗**：\\n   - **首选口服铁剂**：给予元素铁150-200mg/天（如硫酸亚铁、富马酸亚铁或多糖铁复合物），分次服用。建议餐后或随餐服用以减少胃肠道刺激，同时配合维生素C（100-200mg）促进吸收。\\n   - **静脉铁剂备选**：若患者口服不耐受、吸收障碍或贫血症状严重（Hgb 86g/L伴明显乏力、气短），可考虑静脉输注右旋糖酐铁或羧基麦芽糖铁，起效更快。\\n   - **疗程**：血红蛋白恢复正常后，需继续补铁3-6个月以补足储存铁（目标铁蛋白>50 ng/mL）。\\n\\n3. **对症支持与监测**：\\n   - 针对左上腹胀满和早饱感，建议少量多餐，避免产气食物。若腹胀由脾脏肿大引起（虽目前血小板升高不支持典型脾亢，但需超声确认），需密切观察。\\n   - 定期复查血常规（每2周一次）及网织红细胞计数，评估治疗反应。若2-4周内血红蛋白无上升，需重新评估诊断或依从性。\\n\\n4. **生活方式指导**：\\n   - 增加富含血红素铁的食物摄入（红肉、动物肝脏、血制品），避免饮茶、咖啡或钙片与铁剂同服。\\n\\n5. **安全警示**：\\n   - 若出现黑便、呕血、剧烈腹痛或晕厥，立即急诊就医。\\n   - 注意区分药物副作用（便秘、黑便）与病情进展。\", \"reasoning\": \"患者表现为小细胞低色素性贫血（MCV 72 fL, Hgb 86 g/L），铁代谢检查显示典型的缺铁特征（血清铁降低、总铁结合力升高、转铁蛋白饱和度极低、血清铁蛋白显著降低）。外周血涂片证实小细胞低色素改变。虽然患者有左上腹胀满和体重下降史，但目前的实验室数据强烈支持缺铁性贫血。患者既往有输血史但未规律复查，此次复发可能与未纠正的潜在失血有关。血小板轻度升高（468 x 10^9/L）符合缺铁性贫血的反应性血小板增多表现，而非原发性血小板增多症。因此，首要任务是确诊缺铁并寻找失血原因，而非按血液肿瘤处理。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_00783",
+    "mode": "train",
+    "memory_notes": [
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有贫血输血史，高度提示血液系统疾病（如白血病、骨髓增生异常综合征或严重凝血功能障碍）。目前缺乏关于既往贫血具体类型、消化道出血迹象以及家族遗传史的关键信息，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查，初步鉴别诊断方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重血小板减少），但缺乏对既往贫血具体类型、消化道出血迹象以及家族遗传史的关键信息。这些信息对于鉴别诊断（如区分骨髓增生异常综合征、急性白血病与单纯性缺铁性贫血复发）至关重要，需进一步问诊以指导后续开具血常规、凝血功能及腹部影像学等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有既往贫血输血史，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血复发）。目前缺乏关于贫血具体类型、消化道出血迹象以及家族遗传史的关键信息，这些对于鉴别诊断至关重要。需进一步问诊以指导后续开具血常规、凝血功能及骨髓穿刺等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血），但缺乏关于既往贫血具体类型、有无消化道出血以及家族史的关键信息。这些信息对于鉴别诊断（如区分缺铁性贫血复发、再生障碍性贫血或血液恶性肿瘤）至关重要，需进一步问诊以指导后续开具血常规等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血），但缺乏关于既往贫血具体类型、有无消化道出血以及家族史的关键信息。这些信息对于鉴别诊断（如区分缺铁性贫血复发、再生障碍性贫血或血液恶性肿瘤）至关重要，需进一步问诊以指导后续开具血常规等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或脾功能亢进等）。目前缺乏关于B症状（发热、盗汗、消瘦）、浅表淋巴结肿大情况以及既往贫血具体类型的详细信息。这些关键信息对于鉴别诊断至关重要，需进一步问诊以指导后续开具血常规、凝血功能及腹部影像学等检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，且有既往贫血输血史，高度提示可能存在血液系统恶性肿瘤（如白血病、淋巴瘤）或严重的凝血功能障碍。目前缺乏对既往贫血具体病因、有无消化道/泌尿道出血以及家族遗传史的关键信息，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查，初步鉴别诊断方向。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、骨髓增生异常综合征或严重凝血功能障碍），但缺乏关键的既往病史细节（贫血具体类型）、消化道出血证据以及家族史信息。这些信息对于鉴别诊断至关重要，需进一步问诊以指导后续开具血常规、凝血功能及腹部影像学等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及牙龈出血，高度提示血液系统疾病（如白血病、淋巴瘤或严重贫血），但缺乏关于既往贫血具体类型、消化道出血迹象以及家族遗传史的关键信息。这些信息对于鉴别诊断至关重要，需进一步问诊以指导后续开具血常规、凝血功能及骨髓穿刺等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满、体重下降、全身淤青及头晕，且有既往贫血输血史，高度提示血液系统疾病（如白血病、骨髓增生异常综合征或严重凝血功能障碍）。目前缺乏关于贫血具体类型、消化道出血迹象以及家族遗传史的关键信息，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？\", \"reason\": \"患者主诉乏力、气短及面色苍白，高度提示贫血。虽然患者否认出血倾向和B症状（发热、盗汗、体重下降），但缺乏关于贫血严重程度、红细胞形态及病因的关键信息。目前尚未进行任何实验室检查，必须立即开具全血细胞计数（CBC）和外周血涂片以明确贫血类型（如缺铁性、巨幼细胞性或再生障碍性等），并初步排除血液系统恶性肿瘤，这是制定后续诊疗方案的基础。\"}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到去年确诊过贫血并输血，当时医生告知的具体类型是骨髓增生异常综合征吗？另外，除了左上腹胀满、体重下降和淤青，您最近是否有牙龈出血或鼻出血的情况？家族中是否有其他人患有血液系统疾病？\", \"reason\": \"患者主诉左上腹胀满（提示脾大可能）、体重下降、全身淤青及头晕，且有既往贫血输血史。虽然患者自述去年诊断为“骨髓增生异常综合征”，但缺乏对具体分型、有无消化道出血迹象以及家族遗传史的确认。这些信息对于鉴别诊断（如区分MDS复发、脾功能亢进或其他血液病）至关重要，需进一步问诊以指导后续开具血常规、腹部超声及骨髓穿刺等关键检查。\"}}",
+      "您好，您提到去年确诊过贫血并输血，当时医生告知的具体类型是骨髓增生异常综合征吗？另外，除了左上腹胀满、体重下降和淤青，您最近是否有牙龈出血或鼻出血的情况？家族中是否有其他人患有血液系统疾病？",
+      "您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "您好，您提到去年确诊过贫血并输过血，当时医生有没有告知具体的贫血类型（如缺铁性贫血、再生障碍性贫血等）？另外，除了左上腹胀满和体重下降，您最近是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？",
+      "没有发热，但偶尔有夜间盗汗，两个月瘦了4.5公斤。颈部、腋下和腹股沟没摸到别的肿块。去年贫血输血时医生说是缺铁性贫血，但我记不太清药名，需要书面清单确认。",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到有夜间盗汗和体重下降（两个月瘦了4.5公斤），这属于血液系统疾病的“B症状”。请问除了乏力，您最近是否有牙龈出血、皮肤容易淤青或鼻出血的情况？另外，您提到的左上腹胀满是否伴有早饱感（吃一点就饱）？\", \"reason\": \"患者主诉乏力、夜间盗汗及明显体重下降，虽自述既往为缺铁性贫血，但目前的消耗性症状需高度警惕血液系统恶性肿瘤（如淋巴瘤、白血病）或MDS转化。目前缺乏关于出血倾向（贫血加重、血小板减少表现）及脾大相关症状（左上腹胀满、早饱感）的关键信息，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等检查。\"}}",
+      "您好，您提到有夜间盗汗和体重下降（两个月瘦了4.5公斤），这属于血液系统疾病的“B症状”。请问除了乏力，您最近是否有牙龈出血、皮肤容易淤青或鼻出血的情况？另外，您提到的左上腹胀满是否伴有早饱感（吃一点就饱）？",
+      "没有牙龈出血、皮肤淤青或鼻出血。左上腹胀满确实伴有早饱感，吃一点就饱了，最近食欲也不好。",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"您好，您提到左上腹胀满伴有早饱感，这提示可能存在脾脏肿大。请问您最近是否有发热、乏力加重或皮肤出现新的淤青？另外，您去年确诊的缺铁性贫血是否经过铁代谢检查（如血清铁蛋白）确认？近期是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？\", \"reason\": \"患者主诉左上腹胀满伴早饱感（提示脾大）、体重下降及夜间盗汗，虽自述无牙龈出血和淤青，但需进一步排查贫血复发原因（是否为单纯缺铁性还是合并其他血液病）、有无消化道出血迹象以及家族遗传史。这些信息对于鉴别诊断（如淋巴瘤、白血病、骨髓增生异常综合征等）至关重要，需完善问诊以指导后续开具血常规、腹部影像学及铁代谢等关键检查。\"}}",
+      "您好，您提到左上腹胀满伴有早饱感，这提示可能存在脾脏肿大。请问您最近是否有发热、乏力加重或皮肤出现新的淤青？另外，您去年确诊的缺铁性贫血是否经过铁代谢检查（如血清铁蛋白）确认？近期是否有黑便、呕血或尿色变深的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+      "没有发热，也没有皮肤新淤青。去年贫血医生说是缺铁性的，但我记不清具体检查细节。近期没有黑便、呕血或尿色变深。家族里没人得过血液病或出血病。",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者主诉左上腹胀满伴早饱感（提示脾大）、夜间盗汗、体重明显下降，虽否认近期出血，但结合既往贫血史及B症状，高度怀疑血液系统疾病（如淋巴瘤、白血病或骨髓增生异常综合征等）。目前缺乏血常规、外周血涂片及凝血功能等关键实验室检查数据以评估三系情况及排除急性白血病或DIC风险，需立即完善检查以明确诊断方向。\"}}",
+      "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者主诉左上腹胀满伴早饱感（提示脾大）、体重下降、夜间盗汗，且有既往贫血史。虽然患者自述无出血症状，但结合B症状和可能的脾功能亢进或血液系统恶性肿瘤（如淋巴瘤、白血病或MDS转化），急需通过全血细胞计数（CBC）评估三系情况（特别是白细胞、血红蛋白和血小板），并配合外周血涂片寻找异常细胞形态。这是鉴别诊断血液系统疾病最基础且关键的检查，能直接指导后续是否需要进行骨髓穿刺或影像学检查。\"}}",
+      "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"铁代谢检查\"], \"reason\": \"患者主诉左上腹胀满伴早饱感（提示脾大可能）、夜间盗汗、体重明显下降，且有既往缺铁性贫血病史。虽然患者否认近期出血，但需通过全血细胞计数（CBC）评估是否存在贫血复发或三系减少；外周血涂片用于观察红细胞形态及排除血液系统恶性肿瘤（如白血病或淋巴瘤）的原始细胞；铁代谢检查则用于明确既往缺铁性贫血是否纠正或复发，鉴别诊断方向包括脾功能亢进、骨髓增生异常综合征或恶性血液病。\"}}",
+      "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"98 g/L [参考范围：120-170 g/L]\", \"血白细胞计数\": \"12.8 x 10^9/L [参考范围：4.0-10.0 x 10^9/L]\", \"血小板计数\": \"118 x 10^9/L [参考范围：140-380 x 10^9/L]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血白细胞计数\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"可见异型淋巴细胞及原始细胞样细胞，背景中见核浆分离现象。\", \"异型细胞或原始细胞\": \"可见散在分布的异型淋巴细胞及少量原始细胞样细胞。\", \"白细胞分类计数\": \"中性粒细胞58%，淋巴细胞32%（其中异型淋巴细胞占比约15%），单核细胞7%，嗜酸性粒细胞2%，嗜碱性粒细胞1%。［参考值：中性粒细胞40-70%，淋巴细胞20-40%（常因生理性免疫衰老而趋于下限），单核细胞2-8%，嗜酸性粒细胞1-4%，嗜碱性粒细胞0-1%。］\", \"白细胞形态\": \"部分中性粒细胞胞质内可见中毒颗粒，淋巴细胞体积增大、核染色质疏松且核仁隐约可见。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；可见轻度大小不等及异形红细胞增多，未见明显靶形细胞。\", \"血小板形态与分布\": \"部分血小板体积增大，形态不规则，分布欠均匀。\", \"血小板数量\": \"估计100,000-120,000/μL。［参考值：数量充足（估计150,000-400,000/μL）。］\", \"血小板聚集\": \"可见散在的小簇状聚集现象。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"外周血涂片其他异常所见\", \"异型细胞或原始细胞\", \"白细胞分类计数\", \"白细胞形态\", \"红细胞形态\", \"血小板形态与分布\", \"血小板数量\", \"血小板聚集\"]}, \"铁代谢检查\": {\"result\": {\"总铁结合力\": \"310 μg/dL［参考值：220-360 μg/dL（39-64 μmol/L）］\", \"血清铁\": \"45 μg/dL［参考值：40-160 μg/dL（7.2-28.6 μmol/L）］\", \"血清铁蛋白\": \"280 ng/mL［参考值：50-500 ng/mL（μg/L）］\", \"转铁蛋白饱和度\": \"14.5%［参考值：15-50%］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"转铁蛋白饱和度\"]}}}",
+      "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有左上腹胀满伴早饱感（提示脾大）、盗汗、体重下降及贫血、血小板减少病史。实验室检查显示全血细胞减少（Hgb 98g/L, PLT 118x10^9/L），白细胞轻度升高，外周血涂片发现异型淋巴细胞及原始细胞样细胞，铁代谢检查提示转铁蛋白饱和度降低但铁蛋白正常（非典型缺铁）。结合既往“缺铁性贫血”诊断存疑及当前血液学异常表现，高度怀疑血液系统恶性肿瘤（如淋巴瘤或白血病）或骨髓增生异常综合征（MDS）转化。现有信息已足以支持进入诊断阶段，需明确具体疾病类型并制定治疗方案。\"}}",
+      "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为全血细胞减少（贫血、血小板减少）伴白细胞轻度升高，且外周血涂片发现异型淋巴细胞及原始细胞样细胞，结合左上腹胀满（提示脾大）、早饱感、盗汗及体重下降等B症状，高度怀疑血液系统恶性肿瘤（如淋巴瘤或白血病）或骨髓增生异常综合征。铁代谢检查虽显示转铁蛋白饱和度偏低，但不足以解释全血细胞减少及涂片中的原始细胞，需由血液科进一步行骨髓穿刺、流式细胞术及基因检测以明确诊断并制定治疗方案。\"}}",
+      "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"骨髓增生异常综合征\", \"treatment_plan\": \"1. **确诊与风险分层**：\\n   - 立即安排骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序）和流式细胞术免疫分型，以明确MDS分型（WHO/ICC标准）及IPSS-R风险评分。这是制定治疗方案的金标准。\\n   - 完善腹部超声评估脾脏大小及门静脉情况，排除脾功能亢进或肝硬化等继发因素。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：患者血红蛋白98g/L伴早饱感、食欲差，若出现明显乏力、心悸或活动耐量下降，可输注去白细胞悬浮红细胞；血小板118x10^9/L暂不需预防性输注，但需避免剧烈运动和外伤，监测出血倾向。\\n   - **感染预防**：外周血可见异型淋巴细胞及原始细胞样细胞，提示可能存在中性粒细胞功能障碍或减少风险。建议每日监测体温，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **营养支持**：针对左上腹胀满和早饱感，建议少量多餐，选择高蛋白、高热量易消化食物，必要时咨询营养师使用肠内营养制剂。\\n\\n3. **针对性药物治疗**（基于风险分层）：\\n   - **低危组**（如IPSS-R低危/中危-1）：首选去甲基化药物（如阿扎胞苷或地西他滨）进行诱导治疗，改善血象并延缓疾病进展。若伴有贫血且EPO水平低，可联合促红细胞生成素（EPO）。\\n   - **高危组**（如IPSS-R高危/极高危）：考虑去甲基化药物联合靶向药（如FLT3抑制剂，若存在相应突变），或尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - **对症处理**：若铁代谢检查提示转铁蛋白饱和度持续偏低（目前14.5%），在排除铁过载前谨慎补铁，避免加重氧化应激。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，根据病情调整频率。\\n   - 定期评估疾病转化风险（向急性白血病转化）。\\n   - 心理疏导，缓解对“血液肿瘤”恶化的焦虑。\\n   - 出院后遵医嘱定期复诊，若出现高热（>38.3°C）、严重出血、呼吸困难或意识改变，立即急诊就医。\", \"reasoning\": \"患者为老年男性（推测），既往有贫血史，近期出现B症状（盗汗、体重下降）、左上腹胀满（提示脾大可能）及全血细胞减少（Hgb 98, WBC 12.8, PLT 118）。外周血涂片发现异型淋巴细胞及原始细胞样细胞，虽WBC计数偏高，但结合贫血、血小板减少及形态学异常，高度怀疑骨髓增生异常综合征（MDS）伴原始细胞增多，而非单纯的缺铁性贫血复发或急性白血病（需骨髓确认）。铁代谢显示转铁蛋白饱和度降低，但铁蛋白正常，不支持单纯缺铁。诊断需依赖骨髓检查明确是否为MDS及其亚型。治疗上需根据风险分层选择去甲基化药物或强化疗/移植，同时加强支持治疗。\"}}",
+      "{\"patient_id\": \"Patient_06427\", \"team_id\": \"rsi_896d6e22b72f4eb7ad5d05a356ccff3a\", \"diagnosis\": [\"骨髓增生异常综合征\"], \"treatment_plan\": \"1. **确诊与风险分层**：\\n   - 立即安排骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序）和流式细胞术免疫分型，以明确MDS分型（WHO/ICC标准）及IPSS-R风险评分。这是制定治疗方案的金标准。\\n   - 完善腹部超声评估脾脏大小及门静脉情况，排除脾功能亢进或肝硬化等继发因素。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：患者血红蛋白98g/L伴早饱感、食欲差，若出现明显乏力、心悸或活动耐量下降，可输注去白细胞悬浮红细胞；血小板118x10^9/L暂不需预防性输注，但需避免剧烈运动和外伤，监测出血倾向。\\n   - **感染预防**：外周血可见异型淋巴细胞及原始细胞样细胞，提示可能存在中性粒细胞功能障碍或减少风险。建议每日监测体温，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **营养支持**：针对左上腹胀满和早饱感，建议少量多餐，选择高蛋白、高热量易消化食物，必要时咨询营养师使用肠内营养制剂。\\n\\n3. **针对性药物治疗**（基于风险分层）：\\n   - **低危组**（如IPSS-R低危/中危-1）：首选去甲基化药物（如阿扎胞苷或地西他滨）进行诱导治疗，改善血象并延缓疾病进展。若伴有贫血且EPO水平低，可联合促红细胞生成素（EPO）。\\n   - **高危组**（如IPSS-R高危/极高危）：考虑去甲基化药物联合靶向药（如FLT3抑制剂，若存在相应突变），或尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - **对症处理**：若铁代谢检查提示转铁蛋白饱和度持续偏低（目前14.5%），在排除铁过载前谨慎补铁，避免加重氧化应激。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，根据病情调整频率。\\n   - 定期评估疾病转化风险（向急性白血病转化）。\\n   - 心理疏导，缓解对“血液肿瘤”恶化的焦虑。\\n   - 出院后遵医嘱定期复诊，若出现高热（>38.3°C）、严重出血、呼吸困难或意识改变，立即急诊就医。\", \"reasoning\": \"患者为老年男性（推测），既往有贫血史，近期出现B症状（盗汗、体重下降）、左上腹胀满（提示脾大可能）及全血细胞减少（Hgb 98, WBC 12.8, PLT 118）。外周血涂片发现异型淋巴细胞及原始细胞样细胞，虽WBC计数偏高，但结合贫血、血小板减少及形态学异常，高度怀疑骨髓增生异常综合征（MDS）伴原始细胞增多，而非单纯的缺铁性贫血复发或急性白血病（需骨髓确认）。铁代谢显示转铁蛋白饱和度降低，但铁蛋白正常，不支持单纯缺铁。诊断需依赖骨髓检查明确是否为MDS及其亚型。治疗上需根据风险分层选择去甲基化药物或强化疗/移植，同时加强支持治疗。\", \"ordered_examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"铁代谢检查\"], \"conversation_rounds\": 3, \"finished\": true}",
+      "{\"reflection\": {\"reflection\": {\"profile\": \"患者为中年男性，主诉左上腹胀满伴早饱感、夜间盗汗及近期不明原因体重下降（2个月4.5kg），既往有缺铁性贫血输血史，需警惕淋巴瘤或血液系统恶性肿瘤。\", \"diagnosis_reflection\": \"诊断失误：将疑似弥漫性大B细胞淋巴瘤（DLBCL）误诊为骨髓增生异常综合征（MDS）。遗漏了‘盗汗+消瘦+脾大’这一典型的淋巴瘤B症状组合，未考虑到HIV阳性背景下的机会性感染或肿瘤风险，导致方向完全错误。\", \"examination_reflection\": \"检查严重不足：仅开具了基础血常规和铁代谢，漏掉了确诊淋巴瘤的关键检查（如PET-CT、增强CT、骨髓穿刺活检）以及针对高危人群的HIV筛查和肝肾功能评估。全血细胞计数是唯一匹配项，但缺乏分期和定性检查。\", \"treatment_reflection\": \"治疗方案基于错误诊断制定：使用了针对MDS的去甲基化药物方案，完全忽略了淋巴瘤所需的免疫化疗（如R-CHOP）及抗病毒治疗（ART）。未处理潜在的HIV合并症及移植后免疫抑制状态，存在严重医疗安全隐患。\", \"future_strategy\": \"面对‘盗汗、消瘦、脾大’三联征时，优先排查淋巴瘤而非单纯贫血；必须完善全身影像学（PET-CT/增强CT）及淋巴结/骨髓病理检查；对于有输血史或特殊背景患者，务必同步进行HIV等传染病筛查以指导综合治疗。\"}}, \"evaluation\": {\"patientId\": \"Patient_06427\", \"status\": \"evaluated\", \"evaluationStatus\": \"evaluated\", \"diagnosisAccuracy\": 0.0, \"examinationPrecision\": 0.3333, \"treatmentOverallScore\": 0.2, \"treatmentSafety\": 0.2, \"treatmentEffectivenessAlignment\": 0.2, \"treatmentPersonalization\": 0.2, \"diagnosisDetail\": {\"submitted\": [\"骨髓增生异常综合征\"], \"expected\": [\"弥漫性大B细胞淋巴瘤\"], \"matched\": [], \"accuracy\": 0.0, \"status\": \"wrong\"}, \"examinationDetail\": {\"ordered\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"铁代谢检查\"], \"expected\": [\"全血细胞计数（CBC）\", \"肝功能检查（LFTs）\", \"肾功能检查（RFTs）\", \"人类免疫缺陷病毒（HIV）筛查\", \"正电子发射断层显像-计算机断层扫描（PET-CT）\", \"增强CT扫描（CECT）\", \"骨髓穿刺和活检（BMAB）\"], \"matched\": [\"全血细胞计数（CBC）\"], \"precision\": 0.3333333333333333, \"coverage\": 0.14285714285714285, \"precisionEligible\": true}, \"treatmentDetail\": {\"submitted\": \"1. **确诊与风险分层**：\\n   - 立即安排骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序）和流式细胞术免疫分型，以明确MDS分型（WHO/ICC标准）及IPSS-R风险评分。这是制定治疗方案的金标准。\\n   - 完善腹部超声评估脾脏大小及门静脉情况，排除脾功能亢进或肝硬化等继发因素。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：患者血红蛋白98g/L伴早饱感、食欲差，若出现明显乏力、心悸或活动耐量下降，可输注去白细胞悬浮红细胞；血小板118x10^9/L暂不需预防性输注，但需避免剧烈运动和外伤，监测出血倾向。\\n   - **感染预防**：外周血可见异型淋巴细胞及原始细胞样细胞，提示可能存在中性粒细胞功能障碍或减少风险。建议每日监测体温，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **营养支持**：针对左上腹胀满和早饱感，建议少量多餐，选择高蛋白、高热量易消化食物，必要时咨询营养师使用肠内营养制剂。\\n\\n3. **针对性药物治疗**（基于风险分层）：\\n   - **低危组**（如IPSS-R低危/中危-1）：首选去甲基化药物（如阿扎胞苷或地西他滨）进行诱导治疗，改善血象并延缓疾病进展。若伴有贫血且EPO水平低，可联合促红细胞生成素（EPO）。\\n   - **高危组**（如IPSS-R高危/极高危）：考虑去甲基化药物联合靶向药（如FLT3抑制剂，若存在相应突变），或尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - **对症处理**：若铁代谢检查提示转铁蛋白饱和度持续偏低（目前14.5%），在排除铁过载前谨慎补铁，避免加重氧化应激。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，根据病情调整频率。\\n   - 定期评估疾病转化风险（向急性白血病转化）。\\n   - 心理疏导，缓解对“血液肿瘤”恶化的焦虑。\\n   - 出院后遵医嘱定期复诊，若出现高热（>38.3°C）、严重出血、呼吸困难或意识改变，立即急诊就医。\", \"overallScore\": 0.2, \"safety\": 0.2, \"effectivenessAlignment\": 0.2, \"personalization\": 0.2, \"reasoning\": \"方案完全误诊为MDS，忽略HIV阳性及淋巴瘤事实，未提及关键抗病毒治疗与移植协调，存在严重医疗错误。\", \"reference\": \"将第4代HIV筛查反应性结果视为推定阳性，在同步推进淋巴瘤分期和治疗准备的同时，尽快进行确证检测（HIV-1/2抗体分型试验和HIV-1 RNA PCR）。在获得基线免疫及感染评估（CD4计数、HIV RNA水平、乙型/丙型肝炎筛查）并根据免疫状态实施适当的机会性感染预防后，在感染科参与下尽快启动ART。不要仅因等待HIV病毒抑制而推迟以治愈为目标的DLBCL治疗；在完成基线感染科/免疫评估并制定预防方案后，应及时开始免疫化疗。鉴于肾移植后的免疫抑制状态及对PTLD谱系疾病的担忧，应与移植团队协调评估EBV（如酌情进行EBV DNA/血清学检测），并结合肿瘤治疗管理审查/调整免疫抑制方案（可行时通常予以减量）。由于ART可与他克莫司发生显著相互作用（CYP3A4效应），应在移植肾病科/药学团队协调下选择ART方案，并在需要时预先调整他克莫司剂量，同时在ART启动期间及后续方案变更时进行非常频繁的谷浓度监测。\"}, \"ground_truth\": {\"final_diagnosis\": \"弥漫性大B细胞淋巴瘤\", \"necessary_examinations\": [\"全血细胞计数（CBC）\", \"肝功能检查（LFTs）\", \"肾功能检查（RFTs）\", \"人类免疫缺陷病毒（HIV）筛查\", \"正电子发射断层显像-计算机断层扫描（PET-CT）\", \"增强CT扫描（CECT）\", \"骨髓穿刺和活检（BMAB）\"], \"contraindications\": {\"drugs\": [], \"treatments\": []}, \"treatment_plan\": \"将第4代HIV筛查反应性结果视为推定阳性，在同步推进淋巴瘤分期和治疗准备的同时，尽快进行确证检测（HIV-1/2抗体分型试验和HIV-1 RNA PCR）。在获得基线免疫及感染评估（CD4计数、HIV RNA水平、乙型/丙型肝炎筛查）并根据免疫状态实施适当的机会性感染预防后，在感染科参与下尽快启动ART。不要仅因等待HIV病毒抑制而推迟以治愈为目标的DLBCL治疗；在完成基线感染科/免疫评估并制定预防方案后，应及时开始免疫化疗。鉴于肾移植后的免疫抑制状态及对PTLD谱系疾病的担忧，应与移植团队协调评估EBV（如酌情进行EBV DNA/血清学检测），并结合肿瘤治疗管理审查/调整免疫抑制方案（可行时通常予以减量）。由于ART可与他克莫司发生显著相互作用（CYP3A4效应），应在移植肾病科/药学团队协调下选择ART方案，并在需要时预先调整他克莫司剂量，同时在ART启动期间及后续方案变更时进行非常频繁的谷浓度监测。\"}}}",
+      "诊疗任务（血液科）\n患者描述：没有发热，但偶尔有夜间盗汗，两个月瘦了4.5公斤。颈部、腋下和腹股沟没摸到别的肿块。去年贫血输血时医生说是缺铁性贫血，但我记不太清药名，需要书面清单确认。\n没有牙龈出血、皮肤淤青或鼻出血。左上腹胀满确实伴有早饱感，吃一点就饱了，最近食欲也不好。\n没有发热，也没有皮肤新淤青。去年贫血医生说是缺铁性的，但我记不清具体检查细节。近期没有黑便、呕血或尿色变深。家族里没人得过血液病或出血病。\n检查信息：{\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"98 g/L [参考范围：120-170 g/L]\", \"血白细胞计数\": \"12.8 x 10^9/L [参考范围：4.0-10.0 x 10^9/L]\", \"血小板计数\": \"118 x 10^9/L [参考范围：140-380 x 10^9/L]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血白细胞计数\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"外周血涂片其他异常所见\": \"可见异型淋巴细胞及原始细胞样细胞，背景中见核浆分离现象。\", \"异型细胞或原始细胞\": \"可见散在分布的异型淋巴细胞及少量原始细胞样细胞。\", \"白细胞分类计数\": \"中性粒细胞58%，淋巴细胞32%（其中异型淋巴细胞占比约15%），单核细胞7%，嗜酸性粒细胞2%，嗜碱性粒细胞1%。［参考值：中性粒细胞40-70%，淋巴细胞20-40%（常因生理性免疫衰老而趋于下限），单核细胞2-8%，嗜酸性粒细胞1-4%，嗜碱性粒细胞0-1%。］\", \"白细胞形态\": \"部分中性粒细胞胞质内可见中毒颗粒，淋巴细胞体积增大、核染色质疏松且核仁隐约可见。\", \"红细胞形态\": \"正细胞性、正色素性，中央淡染区约占细胞直径的三分之一；可见轻度大小不等及异形红细胞增多，未见明显靶形细胞。\", \"血小板形态与分布\": \"部分血小板体积增大，形态不规则，分布欠均匀。\", \"血小板数量\": \"估计100,000-120,000/μL。［参考值：数量充足（估计150,000-400,000/μL）。］\", \"血小板聚集\": \"可见散在的小簇状聚集现象。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"外周血涂片其他异常所见\", \"异型细胞或原始细胞\", \"白细胞分类计数\", \"白细胞形态\", \"红细胞形态\", \"血小板形态与分布\", \"血小板数量\", \"血小板聚集\"]}, \"铁代谢检查\": {\"result\": {\"总铁结合力\": \"310 μg/dL［参考值：220-360 μg/dL（39-64 μmol/L）］\", \"血清铁\": \"45 μg/dL［参考值：40-160 μg/dL（7.2-28.6 μmol/L）］\", \"血清铁蛋白\": \"280 ng/mL［参考值：50-500 ng/mL（μg/L）］\", \"转铁蛋白饱和度\": \"14.5%［参考值：15-50%］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"转铁蛋白饱和度\"]}}",
+      "{\"conversation_rounds\": 3, \"diagnosis\": [\"骨髓增生异常综合征\"], \"finished\": true, \"ordered_examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"铁代谢检查\"], \"patient_id\": \"Patient_06427\", \"reasoning\": \"患者为老年男性（推测），既往有贫血史，近期出现B症状（盗汗、体重下降）、左上腹胀满（提示脾大可能）及全血细胞减少（Hgb 98, WBC 12.8, PLT 118）。外周血涂片发现异型淋巴细胞及原始细胞样细胞，虽WBC计数偏高，但结合贫血、血小板减少及形态学异常，高度怀疑骨髓增生异常综合征（MDS）伴原始细胞增多，而非单纯的缺铁性贫血复发或急性白血病（需骨髓确认）。铁代谢显示转铁蛋白饱和度降低，但铁蛋白正常，不支持单纯缺铁。诊断需依赖骨髓检查明确是否为MDS及其亚型。治疗上需根据风险分层选择去甲基化药物或强化疗/移植，同时加强支持治疗。\", \"team_id\": \"rsi_896d6e22b72f4eb7ad5d05a356ccff3a\", \"treatment_plan\": \"1. **确诊与风险分层**：\\n   - 立即安排骨髓穿刺及活检（含细胞遗传学分析、FISH、基因突变测序）和流式细胞术免疫分型，以明确MDS分型（WHO/ICC标准）及IPSS-R风险评分。这是制定治疗方案的金标准。\\n   - 完善腹部超声评估脾脏大小及门静脉情况，排除脾功能亢进或肝硬化等继发因素。\\n\\n2. **支持治疗与并发症管理**：\\n   - **输血支持**：患者血红蛋白98g/L伴早饱感、食欲差，若出现明显乏力、心悸或活动耐量下降，可输注去白细胞悬浮红细胞；血小板118x10^9/L暂不需预防性输注，但需避免剧烈运动和外伤，监测出血倾向。\\n   - **感染预防**：外周血可见异型淋巴细胞及原始细胞样细胞，提示可能存在中性粒细胞功能障碍或减少风险。建议每日监测体温，注意个人卫生，避免去人群密集处，发热时立即就医。\\n   - **营养支持**：针对左上腹胀满和早饱感，建议少量多餐，选择高蛋白、高热量易消化食物，必要时咨询营养师使用肠内营养制剂。\\n\\n3. **针对性药物治疗**（基于风险分层）：\\n   - **低危组**（如IPSS-R低危/中危-1）：首选去甲基化药物（如阿扎胞苷或地西他滨）进行诱导治疗，改善血象并延缓疾病进展。若伴有贫血且EPO水平低，可联合促红细胞生成素（EPO）。\\n   - **高危组**（如IPSS-R高危/极高危）：考虑去甲基化药物联合靶向药（如FLT3抑制剂，若存在相应突变），或尽早评估异基因造血干细胞移植（唯一根治手段）的可行性。\\n   - **对症处理**：若铁代谢检查提示转铁蛋白饱和度持续偏低（目前14.5%），在排除铁过载前谨慎补铁，避免加重氧化应激。\\n\\n4. **长期管理与随访**：\\n   - 每2-4周复查血常规，根据病情调整频率。\\n   - 定期评估疾病转化风险（向急性白血病转化）。\\n   - 心理疏导，缓解对“血液肿瘤”恶化的焦虑。\\n   - 出院后遵医嘱定期复诊，若出现高热（>38.3°C）、严重出血、呼吸困难或意识改变，立即急诊就医。\"}",
+      "{\"reward\": 0.17776666666666666, \"success\": false, \"text\": \"{\\\"reflection\\\": {\\\"profile\\\": \\\"患者为中年男性，主诉左上腹胀满伴早饱感、夜间盗汗及近期不明原因体重下降（2个月4.5kg），既往有缺铁性贫血输血史，需警惕淋巴瘤或血液系统恶性肿瘤。\\\", \\\"diagnosis_reflection\\\": \\\"诊断失误：将疑似弥漫性大B细胞淋巴瘤（DLBCL）误诊为骨髓增生异常综合征（MDS）。遗漏了‘盗汗+消瘦+脾大’这一典型的淋巴瘤B症状组合，未考虑到HIV阳性背景下的机会性感染或肿瘤风险，导致方向完全错误。\\\", \\\"examination_reflection\\\": \\\"检查严重不足：仅开具了基础血常规和铁代谢，漏掉了确诊淋巴瘤的关键检查（如PET-CT、增强CT、骨髓穿刺活检）以及针对高危人群的HIV筛查和肝肾功能评估。全血细胞计数是唯一匹配项，但缺乏分期和定性检查。\\\", \\\"treatment_reflection\\\": \\\"治疗方案基于错误诊断制定：使用了针对MDS的去甲基化药物方案，完全忽略了淋巴瘤所需的免疫化疗（如R-CHOP）及抗病毒治疗（ART）。未处理潜在的HIV合并症及移植后免疫抑制状态，存在严重医疗安全隐患。\\\", \\\"future_strategy\\\": \\\"面对‘盗汗、消瘦、脾大’三联征时，优先排查淋巴瘤而非单纯贫血；必须完善全身影像学（PET-CT/增强CT）及淋巴结/骨髓病理检查；对于有输血史或特殊背景患者，务必同步进行HIV等传染病筛查以指导综合治疗。\\\"}}\"}",
+      "**Rolling Summary of Blood Department Consultations (Updated: November 08, 2026)**\n\n**Overview:**\nThis summary consolidates **23 completed cases** and **9 active/incomplete cases** from the Blood Department consultations on Sunday, November 08, 2026. The dataset highlights critical diagnostic pitfalls in hematologic malignancies (AML vs. ALL misclassification, CLL staging errors, CMML vs. AML), metabolic bone diseases (Osteopetrosis vs. OI), parasitic infections mimicking malignancy, bleeding disorders (vWD, ITP, HHT), plasma cell dyscrasias, Myeloproliferative Neoplasms (MPN), acute leukemias in adolescents, and MDS transformation. Key recurring failures include: misdiagnosing Myeloid Sarcoma as ALL; overlooking parasites (*Strongyloides*) before immunosuppression/chemotherapy; confusing Osteopetrosis with Osteogenesis Imperfecta (OI) leading to contraindicated bisphosphonate use; misclassifying Mantle Cell Lymphoma (MCL) as DLBCL; failing to distinguish Fanconi Anemia from Acute Leukemia; missing secondary causes of thrombocytopenia/anemia (e.g., vWD, GI/Gyn sources); misinterpreting B-symptoms in CLL as \"early stage\" requiring observation rather than immediate FCR chemotherapy; mistaking Multiple Myeloma for mechanical back pain; safety errors in MPN treatment (prescribing aspirin during active bleeding/thrombocytosis); performing unsafe procedures (Lumbar Puncture) in patients with severe thrombocytopenia/coagulopathy; misdiagnosing Hereditary Hemorrhagic Telangiectasia (HHT) as ITP; misdiagnosing Hypersplenism as MDS; and misidentifying MDS transformation to Acute Myeloid Leukemia (AML) as Acute Lymphoblastic Leukemia (ALL). Critical lessons emphasize mandatory tissue biopsy for masses, flow cytometry/FISH for lymphoid disorders, genetic testing for MDS/CLL/Fanconi/Osteopetrosis/MPN/HHT, strict adherence to contraindications (bisphosphonates in osteopetrosis, steroids without antiparasitics, aspirin in vWD or uncontrolled thrombocytosis with bleeding, NSAIDs in renal failure/myeloma, LP in thrombocytopenia), comprehensive workups for anemia (GI/Gyn sources + coagulation), and prioritizing low-intensity therapy (Azacitidine) over high-intensity (\"7+3\") in elderly MDS/AML patients.\n\n---\n\n### **Completed Cases (Diagnoses & Outcomes)**\n\n**Patient 1: Pediatric Case (ID: Patient_00948)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:41 PM\n*   **Profile:** Child.\n*   **Complaints:** 5-day sudden left eye proptosis, eyelid swelling, painless mass near left temple. Later fatigue, poor appetite, spontaneous bruising. Mother suspected leukemia.\n*   **Negatives:** No fever, lymphadenopathy, URI, trauma, or insect bites.\n*   **Labs:** WBC 28.6 x 10^9/L (High), Hgb 86 g/L (Anemia), PLT 42 x 10^9/L (Severe Thrombocytopenia). Smear: 65% Blasts (myeloid morphology).\n*   **Diagnosis:** Initially ALL; Corrected to **Myeloid Sarcoma (Granulocytic Sarcoma)**.\n*   **Plan:** Emergency admission, protective isolation, VDLP induction (Vincristine, Daunorubicin, L-Asparaginase, Prednisone), transfusions, antibiotics. Risk stratification via BM biopsy, flow, karyotype, fusion genes.\n*   **Evaluation:** Diagnosis incorrect (missed Myeloid Sarcoma). Exams missed MRI/BM/tissue pathology. Treatment ineffective (VDLP vs AML protocols). Lesson: Orbital masses + bruising require tissue biopsy.\n\n**Patient 2: Adult Female Case (ID: Patient_00278)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:43 PM\n*   **Profile:** Adult female (reproductive age).\n*   **Complaints:** Progressive fatigue (4 months), dyspnea, palpitations, orthostatic dizziness, pale lips/nails.\n*   **Negatives:** No chest pain, cough, edema, bleeding, or abnormal menses.\n*   **Labs:** Hgb 86 g/L, Hct 28%, MCV 68 fL, MCH 20 pg. Iron: Serum 18 ug/dL, TIBC 460 ug/dL, Ferritin 6 ng/mL, Saturation 4%.\n*   **Diagnosis:** Iron Deficiency Anemia (IDA).\n*   **Plan:** Oral iron (150-200mg elemental/day + Vit C), dietary heme iron, avoid tea/coffee/calcium. Workup for GI/Gyn bleeding (FOBT, gastroscopy). Monitor retics/Hgb/Iron.\n*   **Evaluation:** Diagnosis correct. Exam precision high but etiology workup (FOBT/Gastroscopy) not initially ordered. Treatment personalization low (generic diet, ignored constraints).\n\n**Patient 3: Pediatric/Adolescent Case (ID: Patient_01332)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:45 PM\n*   **Profile:** Child/Adolescent.\n*   **Complaints:** Painless neck mass (8 weeks, enlarging), recurrent low-grade fever (1 month), night sweats, weight loss (5.4 kg in 3 months).\n*   **Findings:** Hard, immobile neck mass.\n*   **Negatives:** No fatigue/pallor/bleeding.\n*   **Labs:** Hgb 112 g/L (Mild Anemia), PLT 118 x 10^9/L (Mild Thrombocytopenia), WBC 13.6 x 10^9/L. Smear: Atypical lymphoid cells. ESR 85 mm/hr.\n*   **Diagnosis:** Diffuse Large B-Cell Lymphoma (DLBCL).\n*   **Plan:** Neck node biopsy, PET-CT, Bone Marrow Biopsy. R-CHOP regimen. Supportive care (TLS prophylaxis, cardiac eval).\n*   **Evaluation:** Diagnosis correct. Exam precision poor (missed HIV screen, Liver/Kidney function, initial imaging/BMB). Treatment personalization poor (ignored Penicillin allergy, renal function, HIV status).\n\n**Patient 4: Adult Case (ID: Patient_04339)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:47 PM\n*   **Profile:** Adult (likely male).\n*   **Complaints:** 4-month fatigue/SOB. Last 2 weeks: worsening dizziness/palpitations. Yesterday: High fever, dehydration, chills/rigors.\n*   **Negatives:** No bleeding, cough, urinary symptoms.\n*   **Labs:** Cultures Negative. Hgb 86 g/L, RBC 3.10 x 10^12/L, MCV 72 fL (Microcytic). CRP 185 mg/L, PCT 2.8 ng/mL.\n*   **Diagnosis:** Initially Sepsis; Corrected to **Iron Deficiency Anemia** masked by acute decompensation from GI bleed.\n*   **Plan:** Empiric IV antibiotics (Cefoperazone/Sulbactam + Levofloxacin/Meropenem), fluid resuscitation, oral iron.\n*   **Evaluation:** Diagnosis incorrect (missed underlying anemia/bleed). Exam poor (over-emphasized infection, missed Iron studies/Endoscopy). Treatment safety low (oral iron during active bleeding/dehydration without source control).\n\n**Patient 5: Adult Male Case (ID: Patient_01666)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:51 PM\n*   **Profile:** Middle-aged male.\n*   **Complaints:** Recurrent low-grade fever, night sweats, fatigue, weight loss (4 kg in 3 months).\n*   **Negatives:** No palpable neck mass, no bleeding.\n*   **Diagnosis:** Initially DLBCL; Corrected to **Eosinophilia** (Parasitic infection, e.g., Strongyloides).\n*   **Plan:** Planned R-CHOP, biopsy, steroids.\n*   **Evaluation:** Diagnosis incorrect. Exam zero (no labs). Treatment critical failure (prescribed chemo/steroids for parasite; risk of fatal disseminated strongyloidiasis). Lesson: Fever + weight loss requires ruling out parasites before chemo/steroids.\n\n**Patient 6: Pregnant/Reproductive Age Female Case (ID: Patient_03281)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:53 PM\n*   **Profile:** Reproductive age female (pregnant).\n*   **Complaints:** Fatigue, dizziness, SOB (3 months). Pale lips/nails. History of heavy menses (6-7 days).\n*   **Labs:** Hgb 92 g/L, Hct 29%, MCV 72 fL (Microcytic). Iron: Serum 22 ug/dL, TIBC 445 ug/dL, Ferritin 6 ng/mL, Saturation 5%.\n*   **Diagnosis:** Iron Deficiency Anemia.\n*   **Plan:** Gyn ultrasound, FOBT. Oral iron (150-200mg elemental), diet advice, follow-up.\n*   **Evaluation:** Diagnosis correct. Exam good for type but missed initial ordering of FOBT/Ultrasound. Treatment personalization low (generic diet, missed OB collaboration/PPI interaction).\n\n**Patient 7: Adult Case (ID: Patient_04641)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:56 PM\n*   **Profile:** Adult (treated as high-risk/pediatric context).\n*   **Complaints:** Severe fatigue, leg pain (bone pain), easy bruising. Hard, immobile neck mass. Recurrent fever, night sweats, weight loss.\n*   **Labs:** WBC 28.4 x 10^9/L, Hgb 82 g/L, PLT 22 x 10^9/L. Smear: Circulating lymphoblasts. Coagulation: D-Dimer 2.8, PT 19.5s, PTT 48s, INR 1.6, Fibrinogen 0.9 g/L (DIC signs).\n*   **Diagnosis:** Acute Lymphoblastic Leukemia (ALL).\n*   **Plan:** Confirmatory BM biopsy, Flow, Karyotype, Fusion genes, CNS evaluation (LP), CT/MRI. VDLP induction. Platelet transfusion prior to chemo. TLS prophylaxis.\n*   **Evaluation:** Diagnosis correct. Exam partial (missed initial BM/LP orders though planned). Treatment moderate (correct regimen but missed specific Intrathecal Chemotherapy mention and psych support).\n\n**Patient 8: Pediatric Case (ID: Patient_00554)**\n*   **Date/Time:** Sunday, November 08, 2026, 02:58 PM\n*   **Profile:** Pediatric patient.\n*   **Complaints:** Fatigue, leg pain (bone pain), easy bruising. Weight loss. Right-sided neck mass (hard, fixed). Evening low fever, night sweats. Recent bruising/nasal bleeding (2 episodes).\n*   **Labs:** WBC 28.4 x 10^9/L, Hgb 78 g/L, PLT 32 x 10^9/L. Smear: Large number of circulating lymphoblasts. Coagulation: PT 16.8 s, INR 1.5, aPTT 46 s.\n*   **Diagnosis:** Acute Lymphoblastic Leukemia (ALL).\n*   **Plan:** Immediate BM biopsy (Flow, Karyotype, Fusion genes), Chest CT/Abd US/CT, Lumbar puncture (CNS-L check). Infectious screening (Hep B/C, HIV). VDLP induction (Vincristine, Daunorubicin, Peg-Asparaginase, Prednisone). Platelet transfusion pre-chemo. TLS prevention (hydration, allopurinol/rasburicase). Cardiac/Pancreatic monitoring. Avoid NSAIDs/Codeine.\n*   **Evaluation:** Diagnosis accurate (1.0). Exam precision high (covered CBC/Smear/Coags) but coverage low (missed initial BM/LP order). Treatment safety high (1.0), effectiveness alignment 0.8. Lesson: Need immediate BM confirmation and CNS assessment; manage coagulopathy before procedures.\n\n**Patient 9: Adult Male Case (ID: Patient_00930)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:02 PM\n*   **Profile:** Adult male, returned from **Nigeria**.\n*   **Complaints:** Fatigue, weight loss (3kg in 2 months), night sweats, low-grade fever. Initially reported right supraclavicular hard, fixed, tender mass; corrected to **No neck mass**. Symptoms: **Urticarial rash (itchy), wheezing (activity/night), diarrhea (watery, 2-3x/day)**. No gum bleeding/bruising. Shellfish allergy history.\n*   **Labs:** WBC 15.2 x 10^9/L, **Eosinophils 2.6 x 10^9/L (17%)**. Smear: Large eosinophils, no blasts. CRP 18 mg/L, ESR 34 mm/hr. Stool: O&P positive for worm eggs.\n*   **Diagnosis:** Initially misdiagnosed as DLBCL; Corrected to **Eosinophilia** (Parasitic infection, likely *Strongyloides* or hookworm).\n*   **Plan:** Antiparasitic therapy (Albendazole 400mg BID x 3 days OR Ivermectin). Symptomatic control (Antihistamines). Hydration. **Contraindication:** Do NOT use systemic steroids alone (risk of hyperinfection syndrome). Monitor liver function.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.67 (missed serology/lung function/biopsy). Treatment safety 1.0 but effectiveness 0.4 (missed oral steroids for inflammation and shellfish avoidance instruction). Lesson: Travel history + eosinophilia = Parasite until proven otherwise; avoid steroids without antiparasitic coverage.\n\n**Patient 10: Pediatric Case (ID: Patient_03252)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:08 PM\n*   **Profile:** Child.\n*   **Complaints:** Fatigue, pallor, occasional nosebleeds, occasional gum bleeding (brushing). Slow growth. Right lower neck mass (hard, slightly mobile). No fever, no spontaneous bruising.\n*   **Labs:** Hgb 78 g/L, MCV 68 fL (Low), RDW 18.9% (High). Smear: Microcytic hypochromic, Target cells, Polychromasia. Normal platelets (240k).\n*   **Diagnosis:** Iron Deficiency Anemia (IDA). (Differential: Thalassemia, but high RDW favors IDA).\n*   **Plan:** Confirm with Iron studies (Ferritin, Fe, TIBC) and Hemoglobin Electrophoresis. Rule out chronic blood loss (FOBT, parasites). Oral Iron (4-6 mg/kg/day elemental, post-meal + Vit C). Diet: Red meat, liver; avoid tea/milk. Continue 3-6 months after normalization. Follow-up: CBC in 2 weeks.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.5 (missed Iron studies/Coags/Stool initially). Treatment safety 1.0, personalization 0.4 (missed pediatric syrup formulation, blood consult for neck mass/bleeding, deworming for hookworm). Lesson: Pediatric anemia + bleeding needs full workup (Iron, Coags, Stool) and specialist review for masses.\n\n**Patient 11: Adult Male Case (ID: Patient_06460)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:11 PM\n*   **Profile:** Middle-aged male.\n*   **Complaints:** Progressive fatigue, weight loss. Self-suspects lymphoma based on TikTok.\n*   **History:** Right neck mass, later left and axillary. **Rubbery, soft, movable** (\"rubber-like\"). Easy bruising, occasional dizziness. Denies gum/nasal bleeding.\n*   **Labs:** WBC 22.4 x 10^9/L, Hgb 92 g/L, PLT 88 x 10^9/L. Smear: Significant lymphocytosis, atypical small-to-medium lymphoid cells, irregular nuclear contours.\n*   **Initial Diagnosis:** Diffuse Large B-Cell Lymphoma (DLBCL).\n*   **Actual Diagnosis:** **Mantle Cell Lymphoma (MCL)**.\n*   **Plan Submitted:** R-CHOP regimen.\n*   **Evaluation:** Diagnosis incorrect (DLBCL vs MCL). Exam insufficient (missed lymph node excisional biopsy, flow cytometry, FISH, LDH, β2-microglobulin, bone marrow). Treatment incorrect (R-CHOP vs R-Bendamustine). Critical error: Failed to account for underlying **Chronic Kidney Disease** and **Penicillin allergy** (implied in reflection regarding drug selection). Reflection noted need for FISH/Cyclin D1 testing.\n*   **Lesson:** \"Rubbery\" nodes suggest lymphoma but require immunophenotyping/FISH to distinguish subtypes (MCL vs DLBCL). Always consider comorbidities (CKD) and allergies in treatment planning.\n\n**Patient 12: Adult Case (ID: Patient_04601)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:13 PM\n*   **Profile:** Adult.\n*   **Complaints:** Severe fatigue, weight loss, severe bone pain (legs/back). **Pathological fractures** (fracture from minor bump). Left neck mass (hard, fixed). No bleeding, fever, or night sweats.\n*   **Labs:** X-ray: Diffuse osteosclerosis (\"Ivory vertebrae\"), cortical thickening, narrowed medullary cavities.\n*   **Initial Diagnosis:** Osteogenesis Imperfecta.\n*   **Actual Diagnosis:** **Osteopetrosis (Marble Bone Disease)**.\n*   **Plan Submitted:** Bisphosphonates (Pamidronate/Zoledronic acid), Calcium/Vit D, physical rehab.\n*   **Evaluation:** Diagnosis incorrect (OI vs Osteopetrosis). Exam insufficient (missed genetic testing, DEXA, MRI, CMP, Urinalysis). Treatment dangerous (Bisphosphonates are contraindicated in Osteopetrosis as they inhibit osteoclasts which are already defective; Osteopetrosis requires different management). Missed urine analysis showing microscopic hematuria (renal risk).\n*   **Lesson:** Differentiate between brittle bone disease (OI) and osteosclerotic diseases (Osteopetrosis). Pathological fracture + osteosclerosis suggests Osteopetrosis. Bisphosphonates are contraindicated in Osteopetrosis.\n\n**Patient 13: Adult Case (ID: Patient_01894)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:16 PM\n*   **Profile:** Elderly adult.\n*   **Complaints:** Progressive fatigue, low fever, night sweats, weight loss (4kg), skin ecchymosis, gum bleeding. Occasional bone pain.\n*   **Labs:** WBC 24.6 x 10^9/L, Hgb 86 g/L, PLT 88 x 10^9/L. Smear: Neutrophil dysplasia, circulating promonocytes, significant absolute monocytosis. Coags: Elevated D-dimer. CRP 48.5 mg/L, ESR 68 mm/hr. BM: Hypercellular, multilineage dysplasia, 8% blasts/promonocytes. Node biopsy: Abnormal monocyte-like cells, diffuse infiltration.\n*   **Initial Diagnosis:** Acute Lymphoblastic Leukemia (ALL).\n*   **Actual Diagnosis:** **Chronic Myelomonocytic Leukemia (CMML)**.\n*   **Plan Submitted:** \"7+3\" induction chemotherapy (Cytarabine + Anthracycline).\n*   **Evaluation:** Diagnosis incorrect (ALL vs CMML). Exam missed Flow cytometry, cytogenetics, gene mutation analysis, uric acid/soluble lysozyme. Treatment incorrect (Aggressive chemo for CMML is toxic; preferred: Hypomethylating agents like Decitabine + supportive care).\n*   **Lesson:** Adult unexplained cytopenias with monocytosis and dysplasia should raise suspicion for CMML/MDS, not just acute leukemia. Avoid aggressive induction if CMML is suspected; use hypomethylating agents.\n\n**Patient 14: Adult Male Case (ID: Patient_09281)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:19 PM\n*   **Profile:** Middle-aged male.\n*   **Complaints:** Progressive fatigue, weight loss, night sweats. **Left neck painless hard mass** (fixed, non-tender). Early satiety (1 week duration). Diarrhea (no blood). No fever/bleeding.\n*   **Labs:** WBC 14.6 x 10^9/L, Hgb 108 g/L, PLT 118 x 10^9/L. Smear: Atypical small-to-medium lymphocytes. CRP 45.2 mg/L, ESR 65 mm/hr.\n*   **Node Biopsy:** Single population of small-to-medium lymphoid cells disrupting nodal architecture in a mantle zone pattern.\n*   **Diagnosis:** **Mantle Cell Lymphoma (MCL)**.\n*   **Plan:** R-CHOP or BR (Bendamustine-Rituximab).\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.6 (missed Flow, IHC, FISH, Bone Marrow, PET-CT). Treatment score 0.72 (Safety 1.0, Effectiveness 0.8, Personalization 0.6). Deviation: Preferred BR over R-CHOP for MCL. Missed consideration of **Rheumatoid Arthritis** background (drug interactions with MTX/Prednisone, vaccination timing, HBV screening).\n*   **Lesson:** Mantle zone pattern on biopsy confirms MCL. While R-CHOP is acceptable, BR is often preferred. Must coordinate with Rheumatology for RA patients on immunosuppressants.\n\n**Patient 15: Young Female Case (ID: Patient_03943)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:23 PM\n*   **Profile:** Young female.\n*   **Complaints:** Fatigue, dyspnea on exertion (climbing stairs), early satiety (months), weight loss (approx. 2.5 kg/5 lbs). Initially described a left neck mass (peanut-sized, hard, mobile, non-tender), later denied presence of mass. No fever, night sweats, or bleeding.\n*   **Labs:** Not provided initially; diagnosis made based on clinical reasoning.\n*   **Initial Diagnosis:** Diffuse Large B-Cell Lymphoma (DLBCL).\n*   **Actual Diagnosis:** **Iron Deficiency Anemia (IDA)** secondary to menorrhagia (heavy menstrual bleeding) and/or GI issues.\n*   **Plan Submitted:** R-CHOP chemotherapy, lymph node biopsy, PET-CT.\n*   **Evaluation:** Diagnosis incorrect. Examination missed (no labs ordered). Treatment dangerous (chemo for benign condition).\n*   **Correct Approach:** Order CBC, Iron studies, FOBT, Pelvic Ultrasound, Gastroscopy. Treat with oral iron (ferrous sulfate) + Vitamin C, address menorrhagia (gyn consult), adjust diet.\n*   **Lesson:** \"Fatigue + Dyspnea + Early Satiety\" in women often indicates anemia (iron deficiency) rather than malignancy. Do not assume lymphoma without CBC/Iron studies.\n\n**Patient 16: Young Female Case (ID: Patient_06974)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:26 PM\n*   **Profile:** Young female.\n*   **Complaints:** Extreme fatigue, palpitations (fast/irregular heart rate), dizziness, anxiety (\"heart fluttering\"), emotional distress (\"want to cry\"). Denies neck mass, fever, night sweats, weight loss. Reports recent increased menstrual volume. Lips appear pale.\n*   **Labs:**\n    *   CBC: WBC 7.8 x 10^9/L (Normal), Hgb 128 g/L (Normal), **PLT 12 x 10^9/L (Severe Thrombocytopenia)**.\n    *   Iron Studies: Normal.\n    *   Peripheral Smear: Severe thrombocytopenia, occasional large platelets, no blasts.\n    *   Coags: PT 12.2s, INR 1.0, **aPTT 40s (Mildly elevated)**.\n*   **Diagnosis:** **Immune Thrombocytopenia (ITP)**.\n*   **Plan:**\n    1.  **First-line:** Oral Prednisone (1 mg/kg/day ~60mg) for 4 weeks, tapering slowly. Consider IVIG (400mg/kg/day x 5 days) if rapid rise needed.\n    2.  **Second-line:** Rituximab or Splenectomy if refractory.\n    3.  **Support:** Strict avoidance of aspirin/NSAIDs, soft toothbrush, bowel regulation. Daily CBC monitoring.\n    4.  **Workup:** H. pylori, Autoimmune panel (ANA), HIV/HCV.\n    5.  **Psych:** Address anxiety.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.75 (missed Capillary fragility test, Anti-platelet antibodies, DAT, TPO levels). Treatment safety 1.0, effectiveness 0.6 (missed Tranexamic acid for menorrhagia, hydroxychloroquine, GI protection/calcium details).\n*   **Lesson:** Isolated severe thrombocytopenia with normal Hgb/WBC suggests ITP. In young females with menorrhagia, add tranexamic acid. Always rule out secondary causes (autoimmune, viral).\n\n**Patient 17: Young Female Case (ID: Patient_03774)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:28 PM\n*   **Profile:** Young female.\n*   **Complaints:** Night sweats, weight loss, extreme fatigue, palpitations, dizziness, early satiety. Bleeding gums, easy bruising. High anxiety about leukemia.\n*   **Labs:**\n    *   CBC: **WBC 2.1 x 10^9/L (Leukopenia)**, Hgb 112 g/L (Mild Anemia), **PLT 78 x 10^9/L (Thrombocytopenia)**.\n    *   Smear: **\"Hairy Cells\"** (lymphocytes with fine cytoplasmic projections/hairy edges). No blasts.\n*   **Diagnosis:** **Hairy Cell Leukemia (HCL)**.\n*   **Plan:**\n    1.  **Induction:** Cladribine (2-CdA) 5.25 mg/m²/day IV/SC x 7 days OR Fludarabine + Rituximab.\n    2.  **Support:** PCP prophylaxis (TMP-SMX), antibiotic coverage for fever, platelet transfusion if bleeding.\n    3.  **Monitoring:** Weekly CBC, assess spleen size (US), watch for TLS (low risk).\n    4.  **Nutrition:** High-calorie density diet for early satiety.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.5 (missed Abdominal US for splenomegaly, Bone Marrow Biopsy, BRAF V600E). Treatment safety 1.0, effectiveness 0.8, personalization 0.6 (missed specific nutrition plan for vegan diet, support group referral).\n*   **Lesson:** Pancytopenia + \"Hairy Cells\" on smear = HCL. Cladribine is curative. Always confirm with BM and BRAF testing. Manage splenomegaly-related early satiety.\n\n**Patient 18: Middle-Aged Female Case (ID: Patient_05266)**\n*   **Date/Time:** Sunday, November 08, 2026, 03:31 PM\n*   **Profile:** Middle-aged female.\n*   **Complaints:** Severe skin itching, shortness of breath (wheezing), palpitations, abdominal bloating/gas. Duration: 4 months. Weight loss (due to poor intake). Denies fever, night sweats, travel to tropics, raw seafood, or allergies. High anxiety about leukemia.\n*   **Labs:**\n    *   CBC: **WBC 16.2 x 10^9/L**, **Absolute Eosinophils 2.4 x 10^9/L (18%)**.\n    *   Smear: Marked eosinophilia, no parasites, no blasts.\n*   **Diagnosis:** **Hypereosinophilia** (Suspected parasitic or allergic etiology, pending further workup).\n*   **Plan:**\n    1.  **Parasite Screen:** Stool O&P, Serology (Strongyloides, etc.). Treat empirically with Albendazole/Ivermectin if suspected.\n    2.  **Allergy/Autoimmune:** Total IgE, Specific IgE, ANA. Treat with Antihistamines (Loratadine) + Steroids if allergic.\n    3.  **Symptom Control:** Bronchodilators (Salbutamol) for wheeze, topical calamine for itch.\n    4.  **Monitoring:** Weekly CBC, Echocardiogram (cardiac involvement), Chest CT, Liver function.\n    5.  **Psych:** Reassure against leukemia.\n*   **Evaluation:** Diagnosis correct (1.0). Exam precision 0.5 (missed Lung Function Tests, CRP/ESR, detailed serology). Treatment safety 1.0, effectiveness 0.8, personalization 0.6 (missed immune defect follow-up, specific dietary advice).\n*   **Lesson:** Eosinophilia + respiratory/dermatologic symptoms requires ruling out parasites (even without travel history) and allergies. Avoid steroids without covering parasites (risk of hyperinfection). Evaluate for organ damage (heart/lungs).\n\n**Patient 19: Pediatric Case (ID: Patient_01539)**\n*   **Date/Time:** Sunday, November 08, 2026, 04:22 PM\n*   **Profile:** Patient presenting with fatigue, dizziness, dyspnea, intermittent fever, night sweats, weight loss (2.5 kg/month), gingival bleeding, petechiae/ecchymosis, and bone pain (sternum/thighs).\n*   **Labs:**\n    *   CBC: WBC 48.6 x 10^9/L (High), Hgb 86 g/L, PLT 28 x 10^9/L.\n    *   Smear: 35% circulating blasts.\n    *   BM: 55% blasts, granulocytic maturation arrest, erythroid suppression, megakaryocyte reduction.\n*   **Diagnosis:** **Acute Myeloid Leukemia (AML)** (Ground Truth). AI diagnosed ALL.\n*   **Plan Submitted:** VDLP induction (for ALL).\n*   **Evaluation:** Diagnosis incorrect (ALL vs AML). Treatment incorrect (VDLP vs Azo-cytarabine/Anthracycline). Missed necessary tests: Flow cytometry (MPO+, CD34+, CD117+), FISH, molecular genetics. Treatment failed to address specific AML risks (e.g., coagulopathy management, specific supportive care).\n*   **Lesson:** Blast percentage >20% requires immediate differentiation (AML vs ALL) via immunophenotyping before initiating chemo. VDLP is contraindicated for AML; standard induction is Cytarabine + Anthracycline.\n\n**Patient 20: Adult Case (ID: Patient_08256)**\n*   **Date/Time:** Sunday, November 08, 2026, 04:26 PM\n*   **Profile:** Adult with painless, continuous pink urine (hematuria) for 2 weeks. No pain, fever, or stones.\n*   **Labs:** UA: RBC 30/HPF, negative leukocytes/nitrites. Stool: Negative. Renal US: Normal (no stones/tumors).\n*   **Diagnosis:** **Von Willebrand Disease (vWD)** (Ground Truth). AI diagnosed Chronic Kidney Disease.\n*   **Plan Submitted:** CTU, cystoscopy, hydration, observation.\n*   **Evaluation:** Diagnosis incorrect. Missed CBC and Coagulation profile (vWF antigen/activity, Factor VIII). Treatment incorrect (failed to use Desmopressin, avoid NSAIDs/Anticoagulants, refer to Hematology).\n*   **Lesson:** Unexplained painless hematuria with normal renal imaging requires immediate hemostasis workup (CBC, Coags) to rule out vWD. Do not default to renal imaging first.\n\n**Patient 21: Adult Case (ID: Patient_00952)**\n*   **Date/Time:** Sunday, November 08, 2026, 04:29 PM\n*   **Profile:** Patient with 5-month fatigue, evening low fever, night sweats, weight loss (10 jin/5kg), painless bilateral cervical/submandibular lymphadenopathy (hard, mobile), gingival bleeding, ecchymosis.\n*   **Labs:** WBC 68.4 x 10^9/L (Lymphocytosis 82%), Hgb 98 g/L, PLT 92 x 10^9/L. Smear: Mature small lymphocytes, **Smudge cells**. ESR 65 mm/hr.\n*   **Diagnosis:** **Chronic Lymphocytic Leukemia (CLL)**.\n*   **Plan Submitted:** \"Watch and Wait\" strategy, 3-month follow-up.\n*   **Evaluation:** Diagnosis correct. Treatment incorrect (Observation vs Immediate FCR: Fludarabine/Cyclophosphamide/Rituximab). Missed urgent tests: Flow cytometry (CD5+/CD23+), FISH (del17p, del13q), IgVH, DAT (for autoimmune hemolysis), Immunoglobulin levels. Patient",
+      "profile / Demographic Information / history_of_anemia: User had anemia last year, diagnosed as iron deficiency by a doctor",
+      "profile / Demographic Information / medical_history_mds: User has a history of anemia diagnosed as Myelodysplastic Syndrome (MDS) last year, though the specific type is unknown to them.",
+      "profile / Assistant Usage Patterns / provides_negative_symptom_history: User explicitly states absence of melena, hematemesis, or dark urine to rule out upper GI bleeding.",
+      "profile / Notable Past Conversation Topic Highlights / shift_from_itp_to_lymphoma_fear: User's focus has shifted from previous concerns about ITP/anemia/leukemia to a firm belief in lymphoma diagnosis based on new physical findings.",
+      "profile / Hard Skills / medical_lab_data_interpretation: Proficient; basis: user provides and interprets detailed CBC, blood smear, and coagulation profile results with specific abnormal indicators (elevated WBC, low Hgb/PLT, circulating blasts) for medical analysis.",
+      "profile / Communication Style / symptom_negation_in_chinese: User explicitly lists negative symptoms (no black stool, no hematemesis, no dark urine, no obvious bone pain) in Chinese to rule out conditions.",
+      "profile / Demographic Information / medical_history_mds: User was previously diagnosed with Myelodysplastic Syndromes (MDS) by a doctor last year",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User expresses concern about weight loss (4.5kg in 2 months) and night sweats, actively checking for other masses to rule out serious conditions.",
+      "profile / Assistant Usage Patterns / provides_symptom_negation_list: User explicitly lists negative symptoms (no bleeding, no lymphadenopathy) to help rule out malignancy.",
+      "profile / Hard Skills / medical_data_analysis: Proficient; basis: user provides detailed, structured medical lab reports (CBC, blood smear, bone marrow) with specific abnormal indicators and reference ranges for analysis.",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User explicitly lists negative symptoms (no gum bleeding, no bruising, no nosebleeds, no increased menstrual flow, no fever, no weight loss) to actively rule out serious conditions like leukemia or lymphoma, indicating persistent health anxiety despite reassurance.",
+      "profile / Demographic Information / symptom_location: User reports upper left abdominal fullness",
+      "profile / Communication Style / structured_symptom_negation: User explicitly lists negative symptoms (no fever, night sweats, bone pain) and absence of lymphadenopathy to rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User provides explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User continues to provide explicit negations of specific symptoms (no fever, night sweats, bone pain) and absence of enlarged lymph nodes to help rule out conditions.",
+      "profile / Assistant Response Preferences / expects_diagnostic_correction: User context involves a previous misdiagnosis (Chronic Kidney Disease vs. von Willebrand disease) and expects accurate differential diagnosis.",
+      "profile / Assistant Usage Patterns / repeats_symptom_negations: User repeatedly lists negative symptoms (no fever, night sweats, bone pain) and positive symptoms (fatigue, weight loss, gum bleeding) in multiple turns.",
+      "profile / Assistant Usage Patterns / repeats_symptom_negations: User repeatedly lists negative symptoms (no fever, night sweats, bone pain) and positive symptoms (fatigue, weight loss, gum bleeding) in multiple turns.",
+      "profile / Emotional Drivers / confirmed_symptoms_fever_night_sweats: User confirms experiencing fever and night sweats, correcting previous uncertainty or negation in prior context.",
+      "profile / Emotional Drivers / anxiety_regarding_weight_loss: User notes weight loss of 3-4 pounds, which may be a source of concern given their history of health anxiety.",
+      "profile / Emotional Drivers / anxiety_regarding_weight_loss: User notes weight loss of 3-4 pounds, which may be a source of concern given their history of health anxiety.",
+      "profile / Assistant Response Preferences / expects_diagnostic_correction: User context involves a previous misdiagnosis (DLBCL vs MCL) and expects accurate differential diagnosis and correction of treatment plans.",
+      "profile / Assistant Response Preferences / expects_symptom_negation_analysis: User provides explicit negations of specific symptoms (no fever, no swollen lymph nodes) to help rule out conditions.",
+      "profile / Hard Skills / genetic_testing_interpretation: Proficient; basis: user provides and references detailed cytogenetic analysis (46,XY,del(20q)) and gene mutation sequencing results (JAK2 V617F heterozygous mutation, 38% VAF) for medical context.",
+      "profile / Communication Style / informal_medical_inquiry: User uses colloquial terms like '那个骨髓肿瘤' (that bone marrow tumor) rather than precise medical terminology when expressing fears.",
+      "profile / Assistant Response Preferences / expects_medical_treatment_guidance: User expects guidance on treatment protocols (e.g., Cladribine) and supportive care measures.",
+      "profile / Social Identity / no_family_history_of_blood_disease: User reports no family members with blood diseases.",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User reports new symptoms (night sweats, intermittent low fever) which may trigger health anxiety given previous history.",
+      "profile / Social Identity / family_history_negative: User states no family members have blood diseases.",
+      "profile / Assistant Response Preferences / expects_diagnostic_reflection: User expects detailed reflection on diagnostic accuracy and missing examinations based on provided medical case analysis.",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User reports fatigue and shortness of breath, explicitly states they try not to overthink but feels 'too tired', indicating ongoing health anxiety despite reassurance attempts.",
+      "profile / Communication Style / informal_conversational_tone: User uses colloquial language ('好怕', '那个骨髓肿瘤', '快点好起来') expressing emotional distress.",
+      "profile / Demographic Information / age_group: User is an elderly patient (implied by 'elderly' in history context)",
+      "profile / Assistant Usage Patterns / provides_case_summary_for_analysis: User provides a concise case summary (symptoms, duration, negations) to facilitate diagnostic and treatment strategy reflection.",
+      "profile / Communication Style / formal_medical_context: User engages in a formal medical consultation context, likely using professional terminology",
+      "profile / Emotional Drivers / acute_health_anxiety_trigger: User exhibits high anxiety and urgency ('hurry up', 'give me') triggered by perceived cancer symptoms (neck lump, weight loss, night sweats).",
+      "profile / Assistant Usage Patterns / reviews_medical_imaging_results: User shares detailed ultrasound report results with the assistant for analysis.",
+      "profile / Emotional Drivers / demand_for_clear_explanation: User explicitly demands a clear explanation and rejects perfunctory answers regarding their symptoms.",
+      "profile / Geographic & Cultural Context / recent_travel_to_nigeria: User recently returned from Nigeria, a context previously associated with tropical disease anxiety.",
+      "profile / Communication Style / informal_uncertainty: User expresses uncertainty about physical symptoms ('don't know if hard', 'haven't tried to push') and location ('not too clear').",
+      "profile / Geographic & Cultural Context / uncertain_location_of_symptom: User is unsure of the exact location of a physical sensation, describing it vaguely as 'near the nose'.",
+      "profile / Emotional Drivers / anxiety_regarding_symptom_progression: User explicitly states they try not to overthink but feels 'too tired', indicating ongoing health anxiety despite reassurance attempts.",
+      "profile / Emotional Drivers / parental_anxiety: User expresses high concern and worry about child's health condition",
+      "profile / Emotional Drivers / frustration_with_symptom_disruption: User expresses frustration that symptoms are disrupting their daily schedule.",
+      "profile / Assistant Response Preferences / expects_treatment_safety_review: User expects review of treatment plans for safety issues like renal function adjustments and complication prevention.",
+      "profile / Geographic & Cultural Context / no_recent_tropical_travel: User explicitly states they have not traveled to tropical regions recently.",
+      "profile / Communication Style / informal_uncertainty: User expresses uncertainty about physical symptoms ('not sure where exactly', 'don't know if hard', 'haven't tried pushing') using casual language.",
+      "profile / Communication Style / uses_mom_address: User addresses assistant as 'Mom' (implied by previous profile context of addressing assistant as 'Mom' while identifying as a boy)",
+      "profile / Emotional Drivers / fear_of_unexplained_weight_loss: User expresses anxiety about losing 3kg in two months and demands a clear explanation, rejecting vague answers.",
+      "profile / Emotional Drivers / general_body_anxiety: User expresses fear due to feeling 'weird' or strange in their body despite lack of specific symptoms.",
+      "profile / Emotional Drivers / general_body_anxiety: User expresses fear due to feeling 'weird' or strange in their body despite lack of specific symptoms",
+      "profile / Geographic & Cultural Context / chinese_speaking: User communicates in Chinese.",
+      "profile / Emotional Drivers / desire_for_rapid_recovery: User explicitly asks if they can get better quickly to return to work.",
+      "profile / Demographic Information / gender: Male (implied by reference to 'boy' in old profile context and medical context)",
+      "profile / Communication Style / demanding_clarity: User explicitly demands a clear explanation ('give me a clear explanation') and rejects perfunctory responses.",
+      "profile / Communication Style / imperative_directive_tone: User uses commanding language ('hurry up', 'arrange for me'), indicating high stress and demand for immediate action.",
+      "profile / Demographic Information / iron_deficiency_anemia_history: User has a history of iron deficiency anemia requiring blood transfusion",
+      "profile / Demographic Information / current_hematology_status: User has pancytopenia with leukocytosis, low hemoglobin (98 g/L), and thrombocytopenia (118 x 10^9/L).",
+      "profile / Demographic Information / assigned_medical_department: User has been assigned to the Hematology Department (血液科) due to pancytopenia and bleeding symptoms.",
+      "profile / Demographic Information / symptom_left_upper_abdominal_distension: User reports left upper abdominal distension, suggesting possible splenomegaly.",
+      "profile / Demographic Information / symptom_left_upper_abdominal_distension: User reports left upper abdominal distension, suggesting possible splenomegaly.",
+      "profile / Demographic Information / no_family_history_of_hematologic_diseases: User explicitly states no family history of blood disorders or bleeding disorders.",
+      "profile / Demographic Information / prior_mds_diagnosis: User previously diagnosed with Myelodysplastic Syndromes (MDS)",
+      "profile / Demographic Information / family_history_of_blood_disorders: User reports no family history of blood disorders",
+      "profile / Demographic Information / symptom_abdominal_fullness: User reports left upper abdominal distension with early satiety",
+      "profile / Assistant Response Preferences / preferred_language: User prefers responses in Chinese, as evidenced by the medical history and treatment plan provided in Chinese.",
+      "profile / Demographic Information / symptom_night_sweats: User reports night sweats as a presenting symptom",
+      "profile / Communication Style / formal_medical_inquiry: User initiates conversation with formal medical questioning regarding symptoms and physical examination details.",
+      "profile / Demographic Information / symptom_weight_loss: User experienced significant unintentional weight loss of 4.5kg over 2 months",
+      "profile / Psychological Profile / anxiety_level: User appears nervous and anxious during examination",
+      "profile / Career & Work Preferences / employment_continuity_guidance_needed: User requires guidance on managing work intensity during stable disease phases to avoid symptom exacerbation.",
+      "profile / Assistant Response Preferences / language_preference: User responds to and is addressed in Chinese, consistent with previous profile data.",
+      "profile / Assistant Usage Patterns / undergoes_medical_evaluation: User is undergoing a formal medical evaluation process where past diagnostic errors are being analyzed and corrected.",
+      "profile / Assistant Usage Patterns / undergoes_medical_evaluation: User is undergoing a formal medical evaluation process where past diagnostic errors are being analyzed and corrected.",
+      "profile / Demographic Information / symptom_early_satiety: User reports early satiety (feeling full quickly after eating)",
+      "profile / Demographic Information / employment_desire: User expresses strong desire to return to work quickly after illness.",
+      "profile / Demographic Information / employment_status: User is currently unable to work due to illness and expresses strong desire to return to work.",
+      "profile / Demographic Information / employment_status: User is currently unable to work due to illness and expresses strong desire to return to work.",
+      "profile / Assistant Response Preferences / preferred_language: User prefers responses in Chinese, as evidenced by the assistant's previous and current communication in Chinese.",
+      "profile / Demographic Information / gender: Male"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发烧、盗汗或体重明显下降。颈部、腋下和腹股沟没摸到肿块。去年贫血时医生说是缺铁性贫血，我后来也输血了。"
+      },
+      {
+        "from": "doctor",
+        "text": "您好，您提到去年确诊为缺铁性贫血并输过血。请问当时医生是否告知了具体的贫血类型（如缺铁性、再生障碍性贫血等）？另外，除了左上腹胀满，您最近是否有牙龈出血、皮肤容易淤青或鼻出血的情况？家族中是否有其他人患有血液系统疾病？"
+      },
+      {
+        "from": "patient",
+        "text": "医生说是缺铁性贫血。最近没有牙龈出血、皮肤淤青或鼻血。我妈妈月经过多，中年时也贫血过，家里没其他人有血液病。"
+      },
+      {
+        "from": "doctor",
+        "text": "您好，您提到去年确诊为缺铁性贫血并输过血。请问当时是否有做过骨髓穿刺或铁代谢检查来明确诊断？另外，除了左上腹胀满和体重下降，您最近是否有发热、夜间盗汗的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？"
+      },
+      {
+        "from": "patient",
+        "text": "当时没做骨髓穿刺，只做了铁代谢检查确诊缺铁性贫血。最近没有发热或盗汗。家族里只有妈妈有贫血和月经过多，没其他人患血液病。"
+      },
+      {
+        "from": "doctor",
+        "text": "您好，您提到左上腹胀满和体重下降，请问这种胀满感是否伴有早饱（吃一点就饱）？另外，您去年确诊缺铁性贫血后，是否规律服药并复查过血常规确认贫血已纠正？近期是否有乏力加重、皮肤出现新淤青或牙龈出血的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "吃一点就饱，胀得难受。去年确诊缺铁性贫血后没规律吃药复查，贫血好像没完全好。最近乏力更重了，但没发现新淤青或牙龈出血。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "86 g/L [参考范围：120-160]",
+          "红细胞压积": "28% [参考范围：36-48]",
+          "平均红细胞体积": "72 fL [参考范围：80-100]",
+          "血小板计数": "468 x 10^9/L [参考范围：150-400]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "红细胞压积",
+          "平均红细胞体积",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "外周血涂片其他异常所见": "未见寄生虫、包涵体或异常细胞。",
+          "异型细胞或原始细胞": "无异型细胞或原始细胞。",
+          "白细胞分类计数": "中性粒细胞 62%、淋巴细胞 30%、单核细胞 5%、嗜酸性粒细胞 3%、嗜碱性粒细胞 0%。［参考值：中性粒细胞 40-70%、淋巴细胞 20-40%、单核细胞 2-8%、嗜酸性粒细胞 1-4%、嗜碱性粒细胞 0-1%。］",
+          "白细胞形态": "形态正常，核浆比例适当。",
+          "红细胞形态": "小细胞低色素性，中央淡染区扩大至约占细胞直径的二分之一；可见明显大小不等及异形红细胞。",
+          "血小板形态与分布": "体积增大，形态多样，分布不均。",
+          "血小板数量": "数量充足（估计 468,000/μL）。［参考值：数量充足（估计 150,000-400,000/μL）。］",
+          "血小板聚集": "无聚集。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "红细胞形态",
+          "血小板形态与分布"
+        ]
+      },
+      "铁代谢检查": {
+        "result": {
+          "血清铁": "18 ug/dL [参考范围：50-170]",
+          "总铁结合力": "442 ug/dL [参考范围：250-370]",
+          "转铁蛋白饱和度": "4% [参考范围：15-50]",
+          "血清铁蛋白": "6 ng/mL [参考范围：15-150]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清铁",
+          "总铁结合力",
+          "转铁蛋白饱和度",
+          "血清铁蛋白"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "您好，请问您最近是否有发热、夜间盗汗或不明原因的体重明显下降？除了左上腹胀满和淤青，您是否注意到颈部、腋下或腹股沟有肿大的淋巴结？另外，您去年确诊贫血并输血时，医生有没有告知具体的贫血类型（如缺铁性、再生障碍性贫血等）？",
+        "reason": "患者主诉乏力、气短及面色苍白，高度提示贫血。虽然患者否认出血倾向和B症状（发热、盗汗、体重下降），但缺乏关于贫血严重程度、红细胞形态及病因的关键信息。目前尚未进行任何实验室检查，必须立即开具全血细胞计数（CBC）和外周血涂片以明确贫血类型（如缺铁性、巨幼细胞性或再生障碍性等），并初步排除血液系统恶性肿瘤，这是制定后续诊疗方案的基础。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "您好，您提到去年确诊为缺铁性贫血并输过血。请问当时医生是否告知了具体的贫血类型（如缺铁性、再生障碍性贫血等）？另外，除了左上腹胀满，您最近是否有牙龈出血、皮肤容易淤青或鼻出血的情况？家族中是否有其他人患有血液系统疾病？",
+        "reason": "患者主诉左上腹胀满，虽否认近期发热、盗汗及体重下降，但既往有贫血输血史，需进一步确认贫血的具体类型以鉴别是单纯缺铁性贫血复发还是其他血液系统疾病（如骨髓增生异常综合征、淋巴瘤等）。同时，了解有无出血倾向及家族史对于评估血小板功能和遗传风险至关重要，目前缺乏这些关键信息，需先完善问诊再决定检查项目。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "您好，您提到去年确诊为缺铁性贫血并输过血。请问当时是否有做过骨髓穿刺或铁代谢检查来明确诊断？另外，除了左上腹胀满和体重下降，您最近是否有发热、夜间盗汗的情况？家族中是否有其他人患有血液系统疾病或出血性疾病？",
+        "reason": "患者主诉左上腹胀满、体重下降及既往贫血输血史，虽然自述无出血症状，但缺乏对既往贫血确诊依据（是否仅为缺铁性）、有无B症状（发热、盗汗）以及家族遗传史的关键信息。这些信息对于鉴别诊断（如区分缺铁性贫血复发、再生障碍性贫血、骨髓增生异常综合征或淋巴瘤等）至关重要，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等关键检查。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "您好，您提到左上腹胀满和体重下降，请问这种胀满感是否伴有早饱（吃一点就饱）？另外，您去年确诊缺铁性贫血后，是否规律服药并复查过血常规确认贫血已纠正？近期是否有乏力加重、皮肤出现新淤青或牙龈出血的情况？",
+        "reason": "患者主诉左上腹胀满、体重下降及既往贫血史，目前缺乏关于是否存在脾大相关症状（如早饱）、贫血是否复发或治疗无效、以及有无新发出血倾向的关键信息。这些细节对于鉴别诊断（如区分单纯缺铁性贫血复发、骨髓增生异常综合征、淋巴瘤或脾功能亢进等）至关重要，需进一步问诊以指导后续开具血常规、外周血涂片及腹部影像学等检查。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者主诉左上腹胀满伴早饱感（提示脾大可能）、近期乏力加重，且有缺铁性贫血输血史。虽然既往自述无出血症状，但结合贫血未纠正及可能的脾功能亢进或血液系统疾病风险，急需通过全血细胞计数（CBC）评估三系情况，外周血涂片观察细胞形态以排除白血病或异常细胞，以及铁代谢检查明确贫血性质，为后续诊断提供关键依据。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者主诉左上腹胀满伴早饱感、乏力，既往有缺铁性贫血史。实验室检查显示小细胞低色素性贫血（Hgb 86g/L, MCV 72fL），血小板反应性升高（468x10^9/L），外周血涂片证实红细胞形态异常（小细胞低色素），铁代谢检查明确提示缺铁（血清铁蛋白6ng/mL，转铁蛋白饱和度4%）。结合病史和检查结果，诊断缺铁性贫血依据充分，无需进一步问诊或开检查即可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "铁代谢检查"
+        ],
+        "reason": "患者主诉左上腹胀满伴早饱感（提示脾大可能）、乏力加重，且有缺铁性贫血输血史。虽然既往诊断为缺铁性贫血，但近期症状（体重下降、早饱）及贫血未纠正需高度警惕血液系统恶性肿瘤（如淋巴瘤、白血病）或骨髓增生异常综合征（MDS）。全血细胞计数（CBC）可评估三系情况（贫血、血小板减少、白细胞异常）；外周血涂片用于观察红细胞形态及寻找异型淋巴细胞或原始细胞以鉴别恶性疾病；铁代谢检查用于明确是否存在缺铁复发或铁利用障碍，排除单纯缺铁性贫血复发的可能性。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "缺铁性贫血",
+      "treatment_plan": "1. **病因排查与止血**：\n   - 鉴于患者为中年男性且存在严重缺铁（血清铁蛋白6 ng/mL），必须立即排查消化道慢性失血。建议尽快安排胃镜和结肠镜检查，必要时进行胶囊内镜检查，以排除消化道溃疡、肿瘤或血管畸形等出血源。\n   - 同时询问并评估是否有痔疮、鼻出血等其他出血情况。\n\n2. **铁剂补充治疗**：\n   - **首选口服铁剂**：给予元素铁150-200mg/天（如硫酸亚铁、富马酸亚铁或多糖铁复合物），分次服用。建议餐后或随餐服用以减少胃肠道刺激，同时配合维生素C（100-200mg）促进吸收。\n   - **静脉铁剂备选**：若患者口服不耐受、吸收障碍或贫血症状严重（Hgb 86g/L伴明显乏力、气短），可考虑静脉输注右旋糖酐铁或羧基麦芽糖铁，起效更快。\n   - **疗程**：血红蛋白恢复正常后，需继续补铁3-6个月以补足储存铁（目标铁蛋白>50 ng/mL）。\n\n3. **对症支持与监测**：\n   - 针对左上腹胀满和早饱感，建议少量多餐，避免产气食物。若腹胀由脾脏肿大引起（虽目前血小板升高不支持典型脾亢，但需超声确认），需密切观察。\n   - 定期复查血常规（每2周一次）及网织红细胞计数，评估治疗反应。若2-4周内血红蛋白无上升，需重新评估诊断或依从性。\n\n4. **生活方式指导**：\n   - 增加富含血红素铁的食物摄入（红肉、动物肝脏、血制品），避免饮茶、咖啡或钙片与铁剂同服。\n\n5. **安全警示**：\n   - 若出现黑便、呕血、剧烈腹痛或晕厥，立即急诊就医。\n   - 注意区分药物副作用（便秘、黑便）与病情进展。",
+      "reasoning": "患者表现为小细胞低色素性贫血（MCV 72 fL, Hgb 86 g/L），铁代谢检查显示典型的缺铁特征（血清铁降低、总铁结合力升高、转铁蛋白饱和度极低、血清铁蛋白显著降低）。外周血涂片证实小细胞低色素改变。虽然患者有左上腹胀满和体重下降史，但目前的实验室数据强烈支持缺铁性贫血。患者既往有输血史但未规律复查，此次复发可能与未纠正的潜在失血有关。血小板轻度升高（468 x 10^9/L）符合缺铁性贫血的反应性血小板增多表现，而非原发性血小板增多症。因此，首要任务是确诊缺铁并寻找失血原因，而非按血液肿瘤处理。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_00783",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.2,
+      "diagnosisDetail": {
+        "submitted": [
+          "缺铁性贫血"
+        ],
+        "expected": [
+          "缺铁性贫血"
+        ],
+        "matched": [
+          "缺铁性贫血"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "铁代谢检查"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "盆腔超声",
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.2857142857142857,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **病因排查与止血**：\n   - 鉴于患者为中年男性且存在严重缺铁（血清铁蛋白6 ng/mL），必须立即排查消化道慢性失血。建议尽快安排胃镜和结肠镜检查，必要时进行胶囊内镜检查，以排除消化道溃疡、肿瘤或血管畸形等出血源。\n   - 同时询问并评估是否有痔疮、鼻出血等其他出血情况。\n\n2. **铁剂补充治疗**：\n   - **首选口服铁剂**：给予元素铁150-200mg/天（如硫酸亚铁、富马酸亚铁或多糖铁复合物），分次服用。建议餐后或随餐服用以减少胃肠道刺激，同时配合维生素C（100-200mg）促进吸收。\n   - **静脉铁剂备选**：若患者口服不耐受、吸收障碍或贫血症状严重（Hgb 86g/L伴明显乏力、气短），可考虑静脉输注右旋糖酐铁或羧基麦芽糖铁，起效更快。\n   - **疗程**：血红蛋白恢复正常后，需继续补铁3-6个月以补足储存铁（目标铁蛋白>50 ng/mL）。\n\n3. **对症支持与监测**：\n   - 针对左上腹胀满和早饱感，建议少量多餐，避免产气食物。若腹胀由脾脏肿大引起（虽目前血小板升高不支持典型脾亢，但需超声确认），需密切观察。\n   - 定期复查血常规（每2周一次）及网织红细胞计数，评估治疗反应。若2-4周内血红蛋白无上升，需重新评估诊断或依从性。\n\n4. **生活方式指导**：\n   - 增加富含血红素铁的食物摄入（红肉、动物肝脏、血制品），避免饮茶、咖啡或钙片与铁剂同服。\n\n5. **安全警示**：\n   - 若出现黑便、呕血、剧烈腹痛或晕厥，立即急诊就医。\n   - 注意区分药物副作用（便秘、黑便）与病情进展。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.2,
+        "reasoning": "方案误判患者为男性且重复已做检查，忽视母乳喂养及胃切除史，存在严重安全与适配错误。",
+        "reference": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "缺铁性贫血",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "铁代谢检查",
+          "粪便隐血试验（FOBT）",
+          "盆腔超声",
+          "食管胃十二指肠镜检查（EGD）",
+          "结肠镜检查",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "中年女性患者，有缺铁性贫血及输血史，近期出现左上腹胀满、早饱感及乏力加重，家族中有母亲贫血史。",
+        "diagnosis_reflection": "诊断准确锁定为缺铁性贫血，但需警惕既往仅凭铁代谢检查确诊而缺乏骨髓穿刺等深入评估的潜在风险，特别是当贫血纠正不佳且伴有消化道症状时。",
+        "examination_reflection": "已开具全血细胞计数和铁代谢检查是正确的起点，但严重遗漏了针对病因排查的关键检查：未安排粪便隐血试验（FOBT）以筛查消化道出血，也未计划胃镜/肠镜或盆腔超声来寻找慢性失血源（如消化道溃疡、肿瘤或妇科问题）。",
+        "treatment_reflection": "治疗反思显示存在严重误判：方案错误假设患者为男性且重复已做检查，忽视了患者实际存在的月经过多史及可能的消化道出血风险；正确的策略应包含转诊妇科处理月经过多、消化科排查出血源，并制定个体化的口服或静脉补铁方案。",
+        "future_strategy": "面对缺铁性贫血伴消化道症状或复发病例，必须同步启动‘找出血点’策略：常规结合FOBT、胃肠镜及妇科超声检查，避免仅关注补铁而忽略病因治疗，同时严格核对患者性别及病史细节以防方案偏差。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T17:40:30.159408+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_00783",
+    "team_id": "rsi_896d6e22b72f4eb7ad5d05a356ccff3a",
+    "diagnosis": [
+      "缺铁性贫血"
+    ],
+    "treatment_plan": "1. **病因排查与止血**：\n   - 鉴于患者为中年男性且存在严重缺铁（血清铁蛋白6 ng/mL），必须立即排查消化道慢性失血。建议尽快安排胃镜和结肠镜检查，必要时进行胶囊内镜检查，以排除消化道溃疡、肿瘤或血管畸形等出血源。\n   - 同时询问并评估是否有痔疮、鼻出血等其他出血情况。\n\n2. **铁剂补充治疗**：\n   - **首选口服铁剂**：给予元素铁150-200mg/天（如硫酸亚铁、富马酸亚铁或多糖铁复合物），分次服用。建议餐后或随餐服用以减少胃肠道刺激，同时配合维生素C（100-200mg）促进吸收。\n   - **静脉铁剂备选**：若患者口服不耐受、吸收障碍或贫血症状严重（Hgb 86g/L伴明显乏力、气短），可考虑静脉输注右旋糖酐铁或羧基麦芽糖铁，起效更快。\n   - **疗程**：血红蛋白恢复正常后，需继续补铁3-6个月以补足储存铁（目标铁蛋白>50 ng/mL）。\n\n3. **对症支持与监测**：\n   - 针对左上腹胀满和早饱感，建议少量多餐，避免产气食物。若腹胀由脾脏肿大引起（虽目前血小板升高不支持典型脾亢，但需超声确认），需密切观察。\n   - 定期复查血常规（每2周一次）及网织红细胞计数，评估治疗反应。若2-4周内血红蛋白无上升，需重新评估诊断或依从性。\n\n4. **生活方式指导**：\n   - 增加富含血红素铁的食物摄入（红肉、动物肝脏、血制品），避免饮茶、咖啡或钙片与铁剂同服。\n\n5. **安全警示**：\n   - 若出现黑便、呕血、剧烈腹痛或晕厥，立即急诊就医。\n   - 注意区分药物副作用（便秘、黑便）与病情进展。",
+    "reasoning": "患者表现为小细胞低色素性贫血（MCV 72 fL, Hgb 86 g/L），铁代谢检查显示典型的缺铁特征（血清铁降低、总铁结合力升高、转铁蛋白饱和度极低、血清铁蛋白显著降低）。外周血涂片证实小细胞低色素改变。虽然患者有左上腹胀满和体重下降史，但目前的实验室数据强烈支持缺铁性贫血。患者既往有输血史但未规律复查，此次复发可能与未纠正的潜在失血有关。血小板轻度升高（468 x 10^9/L）符合缺铁性贫血的反应性血小板增多表现，而非原发性血小板增多症。因此，首要任务是确诊缺铁并寻找失血原因，而非按血液肿瘤处理。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "铁代谢检查"
+    ],
+    "conversation_rounds": 4,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_00783",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.2,
+    "diagnosisDetail": {
+      "submitted": [
+        "缺铁性贫血"
+      ],
+      "expected": [
+        "缺铁性贫血"
+      ],
+      "matched": [
+        "缺铁性贫血"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "铁代谢检查"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "盆腔超声",
+        "食管胃十二指肠镜检查（EGD）",
+        "结肠镜检查",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.2857142857142857,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **病因排查与止血**：\n   - 鉴于患者为中年男性且存在严重缺铁（血清铁蛋白6 ng/mL），必须立即排查消化道慢性失血。建议尽快安排胃镜和结肠镜检查，必要时进行胶囊内镜检查，以排除消化道溃疡、肿瘤或血管畸形等出血源。\n   - 同时询问并评估是否有痔疮、鼻出血等其他出血情况。\n\n2. **铁剂补充治疗**：\n   - **首选口服铁剂**：给予元素铁150-200mg/天（如硫酸亚铁、富马酸亚铁或多糖铁复合物），分次服用。建议餐后或随餐服用以减少胃肠道刺激，同时配合维生素C（100-200mg）促进吸收。\n   - **静脉铁剂备选**：若患者口服不耐受、吸收障碍或贫血症状严重（Hgb 86g/L伴明显乏力、气短），可考虑静脉输注右旋糖酐铁或羧基麦芽糖铁，起效更快。\n   - **疗程**：血红蛋白恢复正常后，需继续补铁3-6个月以补足储存铁（目标铁蛋白>50 ng/mL）。\n\n3. **对症支持与监测**：\n   - 针对左上腹胀满和早饱感，建议少量多餐，避免产气食物。若腹胀由脾脏肿大引起（虽目前血小板升高不支持典型脾亢，但需超声确认），需密切观察。\n   - 定期复查血常规（每2周一次）及网织红细胞计数，评估治疗反应。若2-4周内血红蛋白无上升，需重新评估诊断或依从性。\n\n4. **生活方式指导**：\n   - 增加富含血红素铁的食物摄入（红肉、动物肝脏、血制品），避免饮茶、咖啡或钙片与铁剂同服。\n\n5. **安全警示**：\n   - 若出现黑便、呕血、剧烈腹痛或晕厥，立即急诊就医。\n   - 注意区分药物副作用（便秘、黑便）与病情进展。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.2,
+      "reasoning": "方案误判患者为男性且重复已做检查，忽视母乳喂养及胃切除史，存在严重安全与适配错误。",
+      "reference": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "缺铁性贫血",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "铁代谢检查",
+        "粪便隐血试验（FOBT）",
+        "盆腔超声",
+        "食管胃十二指肠镜检查（EGD）",
+        "结肠镜检查",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "开始口服硫酸亚铁补充治疗，并提供优化吸收的用药指导：如能耐受，空腹服用（或与影响吸收的餐食分开），并与维生素C同服；避免与茶/咖啡及含钙食物或补充剂同服，并至少间隔2小时。继续使用质子泵抑制剂以保护胃黏膜，但在可行情况下应与铁剂错开服用；如疗效欠佳或出现不耐受，可考虑选择对pH依赖性较低的制剂和/或静脉补铁。鉴于患者存在子宫肌瘤及痔疮活动性出血，必须转诊妇科处理月经过多问题，并转诊消化科/结直肠专科对痔疮进行根治性治疗，以解决持续失铁。增加富含铁的食物摄入，如瘦红肉和深绿色叶菜，并减少进餐时饮茶，以改善铁吸收；同时保证充分休息和水分摄入以促进恢复。将FOBT阳性结果与已明确的出血来源（痔疮接触性出血及EGD所见胃黏膜渗血）相结合分析；鉴于结肠镜检查/EGD其余评估基本正常，除非贫血/出血未见改善，目前无需进一步胃肠道检查。安排4周后复诊，复查血红蛋白和铁蛋白水平；若乏力加重、静息时气短、黑便或出现明显消化道出血征象，应及时返诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "中年女性患者，有缺铁性贫血及输血史，近期出现左上腹胀满、早饱感及乏力加重，家族中有母亲贫血史。",
+      "diagnosis_reflection": "诊断准确锁定为缺铁性贫血，但需警惕既往仅凭铁代谢检查确诊而缺乏骨髓穿刺等深入评估的潜在风险，特别是当贫血纠正不佳且伴有消化道症状时。",
+      "examination_reflection": "已开具全血细胞计数和铁代谢检查是正确的起点，但严重遗漏了针对病因排查的关键检查：未安排粪便隐血试验（FOBT）以筛查消化道出血，也未计划胃镜/肠镜或盆腔超声来寻找慢性失血源（如消化道溃疡、肿瘤或妇科问题）。",
+      "treatment_reflection": "治疗反思显示存在严重误判：方案错误假设患者为男性且重复已做检查，忽视了患者实际存在的月经过多史及可能的消化道出血风险；正确的策略应包含转诊妇科处理月经过多、消化科排查出血源，并制定个体化的口服或静脉补铁方案。",
+      "future_strategy": "面对缺铁性贫血伴消化道症状或复发病例，必须同步启动‘找出血点’策略：常规结合FOBT、胃肠镜及妇科超声检查，避免仅关注补铁而忽略病因治疗，同时严格核对患者性别及病史细节以防方案偏差。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/054.json#/applied_memory"
+  }
+}

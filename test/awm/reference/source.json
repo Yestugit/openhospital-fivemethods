@@ -1,0 +1,90 @@
+{
+  "repository": "https://github.com/zorazrw/agent-workflow-memory",
+  "commit": "8c0ff8cd11d648c8fceb99e4e42f37e3b75381b1",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "dd2cc4823b2a0b913f44fbaecf9f2cea98257871bdf974de6979459e49cb7b63"
+    },
+    {
+      "path": "mind2web/README.md",
+      "sha256": "e047de93e1c73a39ab6bbf310f02e6023d15c2b06a2b1e80ad4a0875181a9533"
+    },
+    {
+      "path": "mind2web/memory.py",
+      "sha256": "187dca50af02581ff8db76f01329a63793ddbfcf2998757b2a778dca9b07d42c"
+    },
+    {
+      "path": "mind2web/offline_induction.py",
+      "sha256": "5c3db5cdff9df711eaa0a2d8a7f8cdcc1d0925fa2f6f674e2898eb230405e6a6"
+    },
+    {
+      "path": "mind2web/online_induction.py",
+      "sha256": "a0be7f368d39dff3a486c6c8bbe32879165c0028092a6a29373eef146696cca1"
+    },
+    {
+      "path": "mind2web/pipeline.py",
+      "sha256": "5853f72e24a9a5cccff12711533aec85913e5e98e98329877f9b3d08f77e1c16"
+    },
+    {
+      "path": "mind2web/utils/env.py",
+      "sha256": "f3449ffdcbc899789dc36cd5d620c217a8e30521091013b7adc46d9156f96b32"
+    },
+    {
+      "path": "mind2web/workflow/retrieve.py",
+      "sha256": "e87a116718dcfdc8f33c01ce6e764b10af1f4f9b2af7fda24b712f12c41156b2"
+    },
+    {
+      "path": "mind2web/prompt/instruction_action.txt",
+      "sha256": "a061d3a084a7588cf4816947ca06af2c740008844676c995b38cb96718a3cdf3"
+    },
+    {
+      "path": "mind2web/prompt/one_shot_action.txt",
+      "sha256": "d5bc9dc615f5db2e5c2cb9df77d56448f24ca40d9ed88443181060691a177d26"
+    },
+    {
+      "path": "webarena/README.md",
+      "sha256": "1e504b3bd326f7858b39e7f2bedf5ff55d69ffb126e11af364b4184fb980882e"
+    },
+    {
+      "path": "webarena/induce_prompt.py",
+      "sha256": "2ccbb8b74dd5a446b2b25922473e2aa531d0893ce7b7c3d778bca3e6ef34227b"
+    },
+    {
+      "path": "webarena/pipeline.py",
+      "sha256": "c9fc1dc7d9970c50b04f47933cb22c0977038aa6e3d054ff55c74e5b417083c0"
+    },
+    {
+      "path": "webarena/agents/basic/agent.py",
+      "sha256": "1e987a40a5c44b6a2d45365e5a01d3a94f9e1bd7a95b4adcdf44cab394715f5e"
+    },
+    {
+      "path": "webarena/prompt/instruction.txt",
+      "sha256": "e05a424931cba5ea442c37f1c9a23d18f3e6c4b959646383eadc662a6d2a3ce9"
+    },
+    {
+      "path": "webarena/prompt/one_shot.txt",
+      "sha256": "256e1d5c96ebef4a152915df393e3381bf0a9221e62307eb17df0c84006414ca"
+    },
+    {
+      "path": "mind2web/utils/data.py",
+      "sha256": "cf90e49bf27748a0331f9f2320a281cdbbe31dec00ac7a3ba77775022b18804a"
+    },
+    {
+      "path": "webarena/agents/legacy/dynamic_prompting.py",
+      "sha256": "5fff35f96a2fa715cf7b575eeddf6f5c08299d48712fdee27574f0751493b626"
+    },
+    {
+      "path": "mind2web/prompt/instruction_abstract.txt",
+      "sha256": "2dad2c786d5f842c3d8a8ef653fa1a72e6c00c1bff407a6e1cf733a7cd46f2e7"
+    },
+    {
+      "path": "mind2web/utils/llm.py",
+      "sha256": "c6de562fa0318724d9595268f34970024b8d41e937cd74c59accb00cf88903d6"
+    }
+  ]
+}

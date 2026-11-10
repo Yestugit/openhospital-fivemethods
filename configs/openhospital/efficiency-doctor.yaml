@@ -1,0 +1,14 @@
+# Shared doctor policy for the five-method RSI efficiency study.
+max_decision_steps: 12
+log_llm_prompts: true
+rsi_strict_outputs: true
+json_exam_fallback: true
+prompt_cache: ephemeral
+train:
+  selection: forward
+  patient_count: 2
+  patient_ids: []
+test:
+  selection: forward
+  patient_count: 1
+  patient_ids: []

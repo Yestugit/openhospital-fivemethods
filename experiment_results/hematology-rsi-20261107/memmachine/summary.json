@@ -1,0 +1,850 @@
+{
+  "method_id": "memmachine",
+  "status": "completed",
+  "benchmark_id": "openhospital",
+  "metrics": {
+    "diagnosis_accuracy": 0.64,
+    "examination_precision": 0.444396,
+    "treatment_overall_score": 0.4834,
+    "treatment_safety": 0.826,
+    "treatment_effectiveness_alignment": 0.524,
+    "treatment_personalization": 0.528,
+    "evaluated_cases": 100,
+    "failed_evaluations": 0,
+    "pending_evaluations": 0,
+    "expected_cases": 100,
+    "evaluation_coverage": 1.0,
+    "metric_counts": {
+      "diagnosis_accuracy": 100,
+      "examination_precision": 100,
+      "treatment_overall_score": 100,
+      "treatment_safety": 100,
+      "treatment_effectiveness_alignment": 100,
+      "treatment_personalization": 100
+    },
+    "no_examination_rate": 0.09,
+    "examination_recall": 0.24601587301587302,
+    "official_examination_precision": 0.4883472527472527,
+    "overall_clinical_score": 0.5225986666666667,
+    "metric_missing_counts": {
+      "diagnosis_accuracy": 0,
+      "examination_precision": 0,
+      "treatment_overall_score": 0,
+      "treatment_safety": 0,
+      "treatment_effectiveness_alignment": 0,
+      "treatment_personalization": 0
+    },
+    "complete_clinical_coverage": true,
+    "per_department": {
+      "血液科": {
+        "diagnosis_accuracy": 0.64,
+        "examination_precision": 0.444396,
+        "treatment_overall_score": 0.4834,
+        "treatment_safety": 0.826,
+        "treatment_effectiveness_alignment": 0.524,
+        "treatment_personalization": 0.528,
+        "evaluated_cases": 100,
+        "failed_evaluations": 0,
+        "pending_evaluations": 0,
+        "expected_cases": 100,
+        "evaluation_coverage": 1.0,
+        "metric_counts": {
+          "diagnosis_accuracy": 100,
+          "examination_precision": 100,
+          "treatment_overall_score": 100,
+          "treatment_safety": 100,
+          "treatment_effectiveness_alignment": 100,
+          "treatment_personalization": 100
+        },
+        "no_examination_rate": 0.09,
+        "examination_recall": 0.24601587301587302,
+        "official_examination_precision": 0.4883472527472527,
+        "overall_clinical_score": 0.5225986666666667,
+        "metric_missing_counts": {
+          "diagnosis_accuracy": 0,
+          "examination_precision": 0,
+          "treatment_overall_score": 0,
+          "treatment_safety": 0,
+          "treatment_effectiveness_alignment": 0,
+          "treatment_personalization": 0
+        },
+        "complete_clinical_coverage": true
+      }
+    }
+  },
+  "resource_metrics": {
+    "common.process_baseline_rss_bytes": 97931264,
+    "common.process_peak_rss_bytes": 3332702208,
+    "common.process_peak_rss_mib": 3178.3125,
+    "common.process_peak_rss_delta_bytes": 3234770944,
+    "common.process_memory_sample_count": 26294,
+    "common.process_memory_monitor_error": null,
+    "common.tracked_calls": 13407,
+    "common.cached_prompt_tokens": null,
+    "common.known_cached_prompt_tokens": 15874770,
+    "common.known_cache_creation_prompt_tokens": 23522968,
+    "common.cache_reported_calls": 7209,
+    "common.cache_reported_prompt_tokens": 49347381,
+    "common.cache_token_coverage": "partial",
+    "common.prompt_cache_hit_rate": 0.32169427593330635,
+    "common.llm_calls": 7352,
+    "common.embedding_calls": 6055,
+    "common.prompt_tokens": 52735813,
+    "common.completion_tokens": 948028,
+    "common.total_tokens": 53683841,
+    "common.known_total_tokens": 53683841,
+    "common.costed_calls": 6055,
+    "common.uncosted_calls": 7352,
+    "common.untracked_calls": 0,
+    "common.token_coverage": "complete",
+    "common.estimated_calls": 0,
+    "common.failed_calls": 0,
+    "common.known_prompt_tokens": 52735813,
+    "common.known_completion_tokens": 948028,
+    "common.total_evaluation_tokens": 55357065,
+    "common.memory_tracked_calls": 12245,
+    "common.memory_cached_prompt_tokens": null,
+    "common.memory_known_cached_prompt_tokens": 15862484,
+    "common.memory_known_cache_creation_prompt_tokens": 40416,
+    "common.memory_cache_reported_calls": 6162,
+    "common.memory_cache_reported_prompt_tokens": 24755468,
+    "common.memory_cache_token_coverage": "partial",
+    "common.memory_prompt_cache_hit_rate": 0.6407668802706538,
+    "common.memory_llm_calls": 6190,
+    "common.memory_embedding_calls": 6055,
+    "common.memory_prompt_tokens": 27922779,
+    "common.memory_completion_tokens": 698416,
+    "common.memory_total_tokens": 28621195,
+    "common.memory_known_total_tokens": 28621195,
+    "common.memory_costed_calls": 6055,
+    "common.memory_uncosted_calls": 6190,
+    "common.memory_untracked_calls": 0,
+    "common.memory_token_coverage": "complete",
+    "common.memory_estimated_calls": 0,
+    "common.memory_failed_calls": 0,
+    "common.memory_known_prompt_tokens": 27922779,
+    "common.memory_known_completion_tokens": 698416,
+    "common.memory_calls": 12245,
+    "common.memory_llm_prompt_tokens": 25815605,
+    "common.memory_llm_completion_tokens": 698416,
+    "common.memory_llm_total_tokens": 26514021,
+    "common.memory_llm_token_coverage": "complete",
+    "common.memory_embedding_prompt_tokens": 2107174,
+    "common.memory_embedding_completion_tokens": 0,
+    "common.memory_embedding_total_tokens": 2107174,
+    "common.memory_embedding_token_coverage": "complete",
+    "common.agent_tracked_calls": 1162,
+    "common.agent_cached_prompt_tokens": null,
+    "common.agent_known_cached_prompt_tokens": 12286,
+    "common.agent_known_cache_creation_prompt_tokens": 23482552,
+    "common.agent_cache_reported_calls": 1047,
+    "common.agent_cache_reported_prompt_tokens": 24591913,
+    "common.agent_cache_token_coverage": "partial",
+    "common.agent_prompt_cache_hit_rate": 0.0004995951311311162,
+    "common.agent_llm_calls": 1162,
+    "common.agent_embedding_calls": 0,
+    "common.agent_prompt_tokens": 24813034,
+    "common.agent_completion_tokens": 249612,
+    "common.agent_total_tokens": 25062646,
+    "common.agent_known_total_tokens": 25062646,
+    "common.agent_costed_calls": 0,
+    "common.agent_uncosted_calls": 1162,
+    "common.agent_untracked_calls": 0,
+    "common.agent_token_coverage": "complete",
+    "common.agent_estimated_calls": 0,
+    "common.agent_failed_calls": 0,
+    "common.agent_known_prompt_tokens": 24813034,
+    "common.agent_known_completion_tokens": 249612,
+    "common.agent_calls": 1162,
+    "common.agent_llm_prompt_tokens": 24813034,
+    "common.agent_llm_completion_tokens": 249612,
+    "common.agent_llm_total_tokens": 25062646,
+    "common.agent_llm_token_coverage": "complete",
+    "common.agent_embedding_prompt_tokens": 0,
+    "common.agent_embedding_completion_tokens": 0,
+    "common.agent_embedding_total_tokens": 0,
+    "common.agent_embedding_token_coverage": "complete",
+    "common.judge_tracked_calls": 100,
+    "common.judge_cached_prompt_tokens": null,
+    "common.judge_known_cached_prompt_tokens": 0,
+    "common.judge_known_cache_creation_prompt_tokens": 0,
+    "common.judge_cache_reported_calls": 0,
+    "common.judge_cache_reported_prompt_tokens": 0,
+    "common.judge_cache_token_coverage": "unknown",
+    "common.judge_prompt_cache_hit_rate": null,
+    "common.judge_llm_calls": 100,
+    "common.judge_embedding_calls": 0,
+    "common.judge_prompt_tokens": 319654,
+    "common.judge_completion_tokens": 6103,
+    "common.judge_total_tokens": 325757,
+    "common.judge_known_total_tokens": 325757,
+    "common.judge_costed_calls": 0,
+    "common.judge_uncosted_calls": 100,
+    "common.judge_untracked_calls": 0,
+    "common.judge_token_coverage": "complete",
+    "common.judge_estimated_calls": 0,
+    "common.judge_failed_calls": 0,
+    "common.judge_known_prompt_tokens": 319654,
+    "common.judge_known_completion_tokens": 6103,
+    "common.judge_calls": 100,
+    "common.judge_llm_prompt_tokens": 319654,
+    "common.judge_llm_completion_tokens": 6103,
+    "common.judge_llm_total_tokens": 325757,
+    "common.judge_llm_token_coverage": "complete",
+    "common.judge_embedding_prompt_tokens": 0,
+    "common.judge_embedding_completion_tokens": 0,
+    "common.judge_embedding_total_tokens": 0,
+    "common.judge_embedding_token_coverage": "complete",
+    "common.retrieval_count": 838,
+    "common.retrieval_failures": 0,
+    "common.retrieval_time_ms": 2960532.1356027853,
+    "common.retrieval_mean_ms": 3532.8545770916294,
+    "common.retrieval_median_ms": 2719.6157501311973,
+    "common.retrieval_max_ms": 14211.622100090608,
+    "common.memory_construction_time_s": 26.16125030000694,
+    "common.memory_learning_time_s": 5020.1370219003875,
+    "common.judging_time_s": 0.0,
+    "common.add_count": 100,
+    "common.add_failures": 0,
+    "common.episode_end_count": 100,
+    "common.episode_end_failures": 0,
+    "common.update_count": 0,
+    "common.update_failures": 0,
+    "common.delete_count": 0,
+    "common.delete_failures": 0,
+    "common.flush_count": 7,
+    "common.flush_failures": 0,
+    "common.reset_count": 0,
+    "common.reset_failures": 0,
+    "current_process_usage": {
+      "tracked_calls": 1638,
+      "cached_prompt_tokens": null,
+      "known_cached_prompt_tokens": 1735960,
+      "known_cache_creation_prompt_tokens": 2914086,
+      "cache_reported_calls": 798,
+      "cache_reported_prompt_tokens": 6015188,
+      "cache_token_coverage": "partial",
+      "prompt_cache_hit_rate": 0.288596133653678,
+      "llm_calls": 937,
+      "embedding_calls": 701,
+      "prompt_tokens": 6561684,
+      "completion_tokens": 107718,
+      "total_tokens": 6669402,
+      "known_total_tokens": 6669402,
+      "costed_calls": 701,
+      "uncosted_calls": 937,
+      "untracked_calls": 0,
+      "token_coverage": "complete",
+      "estimated_calls": 0,
+      "failed_calls": 0
+    },
+    "common.run_wall_time_ms": 3024021.1272998713,
+    "common.process_memory_scope": "current_process_and_descendants_excludes_external_services",
+    "common.storage_bytes": 33514549,
+    "common.memory_storage_mib": 31.96196460723877,
+    "common.storage_scope": "live_method_data_excludes_logs_and_recovery_snapshots",
+    "common.response_count": 100,
+    "common.response_time_s": 15057.169701898005,
+    "common.response_mean_s": 150.57169701898005,
+    "common.response_timing_coverage": 1.0
+  },
+  "failures": [],
+  "run_metadata": {
+    "run_id": "6ccece932fd345e3b22111ddf7523d2b",
+    "started_at": "2026-11-09T05:41:20.723632+00:00",
+    "completed_at": "2026-11-09T06:31:44.345072+00:00",
+    "config": {
+      "method": {
+        "method_id": "memmachine",
+        "params": {}
+      },
+      "runtime": {
+        "executor": "subprocess",
+        "artifact_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\memory\\runs\\6ccece932fd345e3b22111ddf7523d2b",
+        "source_roots": {},
+        "operation_timeout_s": null,
+        "python_executable": "D:\\master_study\\MemAtlas\\.venv-memmachine\\Scripts\\python.exe",
+        "resource_paths": [],
+        "service_url": null,
+        "service_headers": {},
+        "service_timeout_s": 30.0
+      },
+      "scope": {
+        "user_id": "rsi_0e46f8fadefb4a608c321890129c9de1:memmachine",
+        "agent_id": "doctor"
+      },
+      "metadata": {
+        "local_embedding": {
+          "model_dir": "D:\\master_study\\MemAtlas\\models\\Qwen3-Embedding-0.6B",
+          "model_id": "Qwen/Qwen3-Embedding-0.6B",
+          "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+          "fingerprint": "3e1181ea664dbf75585ae3c0a0d11df3a01ad3206a5f8c04b06b32476da9469a",
+          "dimensions": 1024,
+          "pooling": "last_non_padding_token",
+          "normalization": "l2",
+          "instruction": null,
+          "max_tokens": 32768
+        }
+      },
+      "providers": {
+        "llm": {
+          "model": "qwen3.5-flash",
+          "base_url": "https://cn-beijing.maas.qianwenaiapi.com/compatible-mode/v1",
+          "api_key_env": "MODEL_API_KEY",
+          "options": {
+            "max_tokens": 8192,
+            "extra_body": {
+              "enable_thinking": false
+            },
+            "prompt_cache": true,
+            "response_journal": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\memory-responses.jsonl"
+          }
+        },
+        "embedding": {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "dimensions": 1024,
+          "base_url": "http://127.0.0.1:18766/v1",
+          "api_key_env": "LOCAL_EMBEDDING_API_KEY"
+        }
+      }
+    },
+    "method": {
+      "method_id": "memmachine",
+      "name": "MemMachine",
+      "summary": "MemMachine official native memory implementation with isolated storage and complete checkpoints.",
+      "capabilities": {
+        "modalities": [
+          "text"
+        ],
+        "forms": [
+          "hierarchical",
+          "record"
+        ],
+        "operations": [
+          "add",
+          "episode_end",
+          "flush",
+          "index",
+          "load",
+          "reset",
+          "save",
+          "search"
+        ],
+        "integration_slots": [
+          "context"
+        ],
+        "accepted_events": [
+          "action",
+          "feedback",
+          "message",
+          "observation",
+          "tool_result"
+        ],
+        "scopes": [
+          "agent",
+          "session",
+          "user"
+        ],
+        "default_scope": "user",
+        "requires_training": false,
+        "requires_gpu": false,
+        "supports_persistence": true,
+        "supports_async": true,
+        "read_only_mode": "native",
+        "read_only_commands": [],
+        "required_episode_fields": [],
+        "max_scopes": null
+      },
+      "manifest_version": 1,
+      "version": "1",
+      "paper_url": null,
+      "repository_url": "https://github.com/MemMachine/MemMachine",
+      "source_subdir": null,
+      "recommended_executor": "subprocess",
+      "fidelity": "upstream_native",
+      "implementation_strategy": "native_plugin",
+      "internal_token_tracking": "conditional",
+      "implementation_notes": [
+        "Pinned upstream MemMachine/MemMachine@377510d436dc81c3651502f2d5e36ff245650ce7",
+        "No offline substitute is provided. index lists views; add accepts real evidence.",
+        "Native event episodic memory, short-term summarization and semantic extraction; official SQLite/USEARCH backends.",
+        "Native event long-term memory + short-term summary + semantic profile_prompt categories; SQLite + USEARCH.",
+        "top_k applies independently to native memory streams; unset keeps native limit=None.",
+        "Normal writes retain native semantic 5-message/5-minute eligibility; explicit flush temporarily advances eligibility to drain accepted history and then restores it.",
+        "Native project/user semantic result streams merge asynchronously; there is no global reranking."
+      ],
+      "config_schema": {
+        "type": "object",
+        "properties": {
+          "top_k": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Optional native per-memory result limit. Omitted preserves upstream limit=None; streams are never globally truncated."
+          },
+          "storage_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "embedding_dims": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1024
+          },
+          "flush_timeout_s": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "default": 300.0
+          }
+        },
+        "additionalProperties": false
+      },
+      "limitations": [
+        "Arbitrary REST deployments cannot provide the owned full-state snapshot contract."
+      ],
+      "tags": [],
+      "requirements": {
+        "python": [
+          "memmachine-server",
+          "memmachine-common",
+          "usearch"
+        ],
+        "services": [
+          "llm",
+          "embedding"
+        ],
+        "usage": {
+          "providers": "Public LLM and embedding providers; CPU or remote embedding is supported.",
+          "inputs": "Real MemoryUnit events/task/output/feedback; reward is optional.",
+          "learning": "add follows upstream extraction and updates. episode_end is only a boundary and accepts later experience.",
+          "storage": "Owned local SQLite relational/vector databases and USEARCH indexes."
+        }
+      },
+      "route_hints": [],
+      "storage": {
+        "path_parameters": {
+          "storage_path": "auto"
+        },
+        "kind": "embedded_db",
+        "backend": "sqlite_usearch",
+        "supports_snapshot": true
+      },
+      "interface_version": 3,
+      "commands": {},
+      "input_schemas": {
+        "search": {
+          "type": "object",
+          "properties": {
+            "read_only": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "protocol": {
+      "id": "openhospital_memory_rsi",
+      "department": "血液科",
+      "schedule": "explicit_task_stream",
+      "stream": {
+        "condition": "novel_same_department",
+        "seed": 0,
+        "cases_per_block": 20,
+        "blocks": 5,
+        "departments": [
+          "血液科"
+        ],
+        "evaluation_departments": [],
+        "feedback_timing": "immediate",
+        "primary_per_department": 0,
+        "advanced_per_department": 0,
+        "feedback_delay": 0,
+        "reward_policy": {
+          "rule": "weighted_complete_clinical_scores",
+          "weights": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "threshold": 0.5
+        }
+      },
+      "feedback_boundaries": [
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "checkpoint_basis": "completed",
+      "failure_policy": "stop",
+      "snapshot_every": 1,
+      "batch_count": 5,
+      "checkpoints": [],
+      "split_counts": {
+        "train": 100,
+        "primary_test": 0,
+        "advanced_test": 0
+      },
+      "train_exposure_count": 100,
+      "training_batches_sha256": "94c0e72d21dbb1d2a9e281154c0c7e9e681c027d39a3ed24c8717b22e772f819",
+      "split_id_sha256": {
+        "train": "6c68e828c59af64eb515345ae22d39308e995e664901afba96cbb854f6e0c53a",
+        "primary_test": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "advanced_test": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    },
+    "framework": {
+      "version": "0.1.0+source",
+      "git_revision": "50f392087e2bd495d2d95831308a1b4c0434f16e"
+    },
+    "method_source": {
+      "path": null,
+      "git_revision": null
+    },
+    "artifacts": {
+      "batch_clinical_csv": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\curves\\batch_clinical.csv",
+      "batch_clinical_svg": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\curves\\batch_clinical.svg",
+      "batch_input_tokens_csv": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\curves\\batch_input_tokens.csv",
+      "batch_input_tokens_svg": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\curves\\batch_input_tokens.svg",
+      "checkpoint_learning_csv": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\curves\\checkpoint_learning.csv",
+      "checkpoint_learning_svg": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\curves\\checkpoint_learning.svg",
+      "memory_traces_jsonl": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\memory_traces.jsonl",
+      "usage_jsonl": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation\\runs\\001-memmachine\\usage.jsonl"
+    },
+    "execution": {
+      "case_resume": true,
+      "protocol_fingerprint": "69b3d782413a3ece3e2223c7df74ff4baff58646e605b38856174986a91f93cd",
+      "snapshot_keep_recent": 2,
+      "snapshot_keep_every": 20,
+      "resume_contract": {
+        "team_id": "rsi_896d6e22b72f4eb7ad5d05a356ccff3a",
+        "services": {
+          "train": {
+            "world_id": "422ba4e6d78771b51555b940c8245b586e8080048166cc6e9e11bef907caea29",
+            "contract": {
+              "dataset": "train",
+              "model": [
+                "qwen3.5-flash"
+              ],
+              "base_url": "https://cn-beijing.maas.qianwenaiapi.com/compatible-mode/v1",
+              "local_adapter": "cd16ad0710696d2a04384239d2ddb9b80ff07204371716eae50c601d2cb10ebe",
+              "world_adapter": "55cb9d5089ada469495564a3f3b4f2f3917775f5a3457a4530c46ac94132ce99",
+              "exam_retries": 8,
+              "failure_policy": "raise",
+              "files": {
+                "service\\asgi.py": "2992c3780525d0cb73d23b935e1c3095dc1c7427823ae485f99f2ac67defacf0",
+                "service\\auth.py": "dab0b1db8a0fd12824cf67e02306858adbaf8f24c928bafb49f0d8e1175c1800",
+                "service\\config.py": "66227abc805e179a3181ced2caafd2b3d11b171ebc19742d52815e7851583311",
+                "service\\doctor_llm.py": "446a488a86bc0124bbdab97800322c227eb6be641ad45947c3ff2c0788ebf23c",
+                "service\\limits.py": "203f8c6d0c8f618c50cd5d02ad5f1f91a47c390afccca40b7a35d7f56c601a31",
+                "service\\llm_client.py": "aa17191be049d44293eb67ef0c2f6e610efbf0c7e66a37b10f5cf7ae095621ba",
+                "service\\public_model_keys.py": "7a71e56aac7e7616bf0f67ce3fffc1617f389a0154f2a17fdfdfb31a2753d7a8",
+                "service\\repository.py": "f6cebcbdf5ee7cef44bcfb7a3277ac8d02bb6ba6378e20a4862bdd3573dbc827",
+                "service\\server.py": "4953246414c4e70bea93936e9f0f4c93bee9de2261fbabb970a5741bcd305bf7",
+                "service\\token_usage.py": "f0ce4ab7f3f80f7b7543fa10123d5e378531425b708a83c44839d6714925910b",
+                "service\\usage_events.py": "45e85b4294177cb82a5a42e2a3e69fdbe1384bff09d968f9e987100b2fcbe58c",
+                "service\\__init__.py": "38711f44c50d7fc0be5b8f460414a5324af83c20f9448c6adceadf298e4723c8",
+                "service\\evaluation\\evaluator.py": "8696ea1876e369571cc9cd17d4252531e59a8cd4168bbb14d2abdd28d6c7d27c",
+                "service\\evaluation\\service.py": "280afc7971126b1832996775eea0d93012a8796dac8a0c4a76f72329c3654967",
+                "service\\evaluation\\__init__.py": "98474acb567ab1387439d6289bd3d4037135e2f85da84cfc09679aa8d4d88f34",
+                "service\\exam\\assessment.py": "dd3f16a1925044245f0156eaabb50b18290a036022b2334862005aad2979d891",
+                "service\\exam\\catalog.py": "d4d261022c559a5f1d0f91759c1d199739995b7892b4526f7f9dc8fba0cd3aa0",
+                "service\\exam\\generator.py": "16f5ae8eac486a8f16b20c66f02c530abbb361ad569b9398cdca178322cb58a6",
+                "service\\exam\\names.py": "9fecb49b1ac0ac635b0f39fa22e4ad8d03e8dee54c0bfc97a66f2a41a3f354cb",
+                "service\\exam\\result_store.py": "4c3aaed1effb21e9e9944cc7184c28e3a937300f605c368efe6322df171f0bab",
+                "service\\exam\\service.py": "42be7fe25737c57f863bd1dda694041c869e62e26e49e3ae436fbae0bc0d46af",
+                "service\\exam\\__init__.py": "f06aa372b3ecb7bbba37b3c4544ea63d60b20878bad344aa3ff189fae56f7c74",
+                "service\\patients\\patient_data.py": "10449fe6d4c352b57d8df7eb7ebdc05bf01f53e43e89dd97b74bc23596ae7099",
+                "service\\patients\\prompt_builder.py": "9d86b71c6a60d00128948f95313355298355f2c53216794003c49db5e40cd5a9",
+                "service\\patients\\service.py": "f312ffc215665620aaa38193bfbbce863a56703740e182e8e3176c5839903b10",
+                "service\\patients\\__init__.py": "242549f7709e3632c865f2ac37997f90eec92f29b9d3a38837413bb8fe56cf88",
+                "service\\scripts\\audit_examination_results.py": "a351906d146321aa2a6fb2392c16b6e8892285774aaf760744bef723ba660ff5",
+                "service\\scripts\\build_examination_indicators.py": "67568cc618441bcba51b198c99c147dc6d61e03baac4127fb34ed5b7025b5e7a",
+                "service\\scripts\\examination_terminology_rules.py": "c0a536f375daa1fe9c0bc9f647540f168c4555a3fbdfbe10f606bc4fa529cbd1",
+                "service\\scripts\\extract_patient_departments.py": "328394c5a7cd530576d99058db42bfe187d03be800f0487e8e496f2cd68605d9",
+                "service\\scripts\\import_examination_results.py": "b48687e692c9e6f82e17848040e1f99a46f7d638cfe36ecee59adb4ac4b15a3a",
+                "service\\scripts\\split_patients_dataset.py": "9ccca45f1cc8954b3b7999e1d2ab8670c6533682588146ebd027a9a95cf23bd6",
+                "service\\data\\patients_data\\train\\examination_data.json": "5611132f49f36a06f4ff3e404e73c58d712b3dd6e5a2c22fd4c5d1fc5ef619fe",
+                "service\\data\\patients_data\\train\\ground_truth.json": "e73042bca0d68458a56a655956cc45e633fa6324b6b3f097dfe55e7ff5af1c37",
+                "service\\data\\patients_data\\train\\patient_departments.json": "0e8efa76c324357f250d9e86f7ccb9ef5032dde08ea3b0390171036b73f3a862",
+                "service\\data\\patients_data\\train\\profiles.jsonl": "a89172d7a085007b888d892137019b39b5f581c27a96f8c5f2822855362a5332"
+              }
+            }
+          }
+        },
+        "doctor_model": {
+          "model": "qwen3.5-flash",
+          "base_url": "https://cn-beijing.maas.qianwenaiapi.com/compatible-mode/v1"
+        },
+        "doctor_config": "e443a4d9f7d9c7ce028ed64e7a0b359734a48e3c0abca7f60785c2fb977e75a3",
+        "scene_sources": {
+          "hospital_agent_example\\agent\\agent.py": "d43a4323da670f53890cd21ea53d7c33fed99bf3147ebccb8c3ed8204404bf6b",
+          "hospital_agent_example\\agent\\memory.py": "e36ee0126dcf9f764e3138c6036606dd37a9516be3ab3102140de5f84a5d8e20",
+          "hospital_agent_example\\agent\\prompt.py": "0f063a8a98c4cfc752a904169de0f564d8c8c0e9d71d1b80e5bd7c96e2655a28",
+          "hospital_agent_example\\agent\\__init__.py": "5591c42e035ee61f0cbd93460f257d3c385c4c0e7bb3af237205e1b995b315f5",
+          "hospital-agent-sdk\\hospital_agent_sdk\\actions.py": "f031fed16ae9dc20acf2ce9ba870d3c09b78336ecda40a8ae081240aa2896e5b",
+          "hospital-agent-sdk\\hospital_agent_sdk\\agent.py": "2359c7dfcbfe2f04e4ca6b968ec140263b2a0b6a1c8ec9a6d33e6bda81a6fff0",
+          "hospital-agent-sdk\\hospital_agent_sdk\\builder.py": "8f44fce44576676636cbe2d00ad7ce856b9f3687e4e8b8f5ff0af0bdd69b4e48",
+          "hospital-agent-sdk\\hospital_agent_sdk\\client.py": "a58d3eab81bdbbef742bc7dddcf88e1010d3b4ed53cbbad72ded8ef151a0e8c5",
+          "hospital-agent-sdk\\hospital_agent_sdk\\event_logger.py": "9f4702fcf657dc1fd5a8ba82d4a1fc9a7221b8564e21eb73cfad64ab03e753b9",
+          "hospital-agent-sdk\\hospital_agent_sdk\\llm.py": "e46e1284910ebe5eeb8db7c66dd364d824fe074a89d5554116fbeefccd974e77",
+          "hospital-agent-sdk\\hospital_agent_sdk\\protocols.py": "3571d2859e4ce957246254f78493a2ec5fb763dd3a2998df96b8cfdd2e7bf480",
+          "hospital-agent-sdk\\hospital_agent_sdk\\runtime.py": "57435b9e684839f7a4d51cdfca4e6b148fdf17eca3f8a6404145859e713fbf24",
+          "hospital-agent-sdk\\hospital_agent_sdk\\server.py": "dba4f6f48b0c7cf2ddd277ec2c2d81652c6e5290098a6b014c88c3521119c8dc",
+          "hospital-agent-sdk\\hospital_agent_sdk\\_version.py": "7f4e39a552a2d81d472e95b86478fd5ca0cadbd19aac3d975a9a1c3b22f29f3c",
+          "hospital-agent-sdk\\hospital_agent_sdk\\__init__.py": "13046e6a178482c3b68cd984c92994e08c5f0645afbde7501814437ee9c12e13"
+        },
+        "feedback": {
+          "timing": "immediate",
+          "delay": 0,
+          "every": null
+        },
+        "method_adapter": {
+          "retrieve": "75d366c58b2e5884b9bd524f51dce5a47936aa7dcc20b513d8bf7f55415926fd",
+          "retrieval_extensions": "379f8d88075c156d3f47c2b8ac3c2389479fcb695f420b58ad759a71e14cf923",
+          "prepare_episode": "c9efc7b2e72ab44f38be8467c3592e4d216b9b6b6990e610cf3748a0a5f31260"
+        },
+        "local_embedding": {
+          "status": "ready",
+          "model_dir": "D:\\master_study\\MemAtlas\\models\\Qwen3-Embedding-0.6B",
+          "model_id": "Qwen/Qwen3-Embedding-0.6B",
+          "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+          "fingerprint": "3e1181ea664dbf75585ae3c0a0d11df3a01ad3206a5f8c04b06b32476da9469a",
+          "dimensions": 1024,
+          "pooling": "last_non_padding_token",
+          "normalization": "l2",
+          "instruction": null,
+          "max_tokens": 32768,
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "attention": "mematlas_efficient_sdpa",
+          "use_cache": false,
+          "torch_version": "2.8.0+cpu",
+          "transformers_version": "4.56.2",
+          "implementation_sha256": "d971fa265d9cbc7396782df7cda837019f1dad694e6a160a58860fef3916cd9d"
+        },
+        "framework_sources": {
+          "core\\activity.py": "134811c235fa677a64dcc9f74d7b207d12249ddd27c6e06126529a0fd1749ae3",
+          "core\\capabilities.py": "3605697d60c99f34ce43a409598d513d55e1374d5a2809f07593a5ec50be21e5",
+          "core\\config.py": "1e60c59a03e7ed75649969a2bdbb70b7041cb89813594f13b7e87e4f1fa1df25",
+          "core\\contracts.py": "f706068d5dc375c0fcac2384c9a2991f7c84bc01c961bebca198f39751abe125",
+          "core\\contributions.py": "3071e60c61604554c95965abae0dea1c05454c0013a7702cf95ee8f27084b176",
+          "core\\episodes.py": "e24d6128187dd3d247760e33c8dd7f413cf3fbfde53ee63ae507a423d78b1c77",
+          "core\\errors.py": "07599e78548248fd146399c8b0972356924d87e7a91c9af35e29ee33b15e2356",
+          "core\\evaluation.py": "61ed58dc71f70d9dd1ee02fbed609600ea617848a96410e81ceb5ac41990a736",
+          "core\\files.py": "56a78ad877cf5ac827775c3bea1ba0e68c132da13c54059af34d18ebd7674a80",
+          "core\\models.py": "d29b573e96af621e7fb3fbfbe297d83110f2c04e2f6ba4c80c424c909d9b0829",
+          "core\\plugin.py": "4766c8a7a796ac6f2933b8713995b38e8740a8129d40dd1b6adb8c55977d214c",
+          "core\\provenance.py": "df52be2d95585c485f52c90b43ebf732b1dd20ed243e096ac07273e31c3fe342",
+          "core\\provider_config.py": "ab8a8c407a0ad67d886961ef807e2cad77190ce0e456a5feb405d040416328e3",
+          "core\\recovery.py": "d486ea7a0c3828a27c12398c2e3a81fd849f1cbad1b73c5280aae621df9411aa",
+          "core\\registry.py": "938b61cef5b4163f9f152f89fad6085b35fb84fabaf843dec26dbf347eed7d25",
+          "core\\scope.py": "43441a1d82a9ad706ab0280e404521d0f3d4f44c2b6c205e1fa84e6cb300a1ba",
+          "core\\serialization.py": "7efafed3ffe6aa737cd435b5f71645ff9887a30acd665dab3950a838e2842b10",
+          "core\\state_files.py": "2055c900701a09a3de85197d4e1268b4e2fc79586c62d72017c151747614c7a0",
+          "core\\telemetry.py": "274df7e15ee8a158ada75085e506e46276785266318613b78cfda8e43057be1d",
+          "core\\validation.py": "1d58ad1ae369d328e6c899802fb6bbea5c1d4596adc0dd6ad2c4b0fbaa6e7084",
+          "core\\__init__.py": "31a44faca7e333d72b2fe2c2758601206c1bd5557ee25a91ba2ecf308634f31a",
+          "runtime\\configuration.py": "4531b8648d57984111167bab3674bab81d19b490a99a700190234ae124ccaf61",
+          "runtime\\contract.py": "fc95d98110c3be1faf85c27ecdfc738137d621d03ad1a98bf99af70d61b4f5f5",
+          "runtime\\history.py": "26a50e5ce612e11d437021f91b9f9448022a067f674e4d69fdcb5fc98faba5fb",
+          "runtime\\memory.py": "1af5d363ff3f62b21424f809d46174b5f6ba6e8f413a40b2c406d652439e26ff",
+          "runtime\\workspace.py": "de399b50eb6c18bca713ae77b0c32dd2463916c2168e4b3aaf4f257cd6015325",
+          "runtime\\__init__.py": "e2fd5cac5dbbe6f077de3ceca85420f825709a1a05c20e793fd9714035ea872a",
+          "runtime\\execution\\base.py": "f998a95f1de837021c99dd8d55409f5fc8ef280a0a157e40319442656506723e",
+          "runtime\\execution\\service.py": "56dad51504a686f9c5718ce5e63e69362c02d6cad044392a36b81651d17748ef",
+          "runtime\\execution\\subprocess.py": "8651691c753808fc5b43e832d2d27c9832cfa0b9d820f39643de386b4059b32d",
+          "runtime\\execution\\worker.py": "933d53fec4097f199713ed3b70b046ff7667b60a08d6deafbb61e37939be829e",
+          "runtime\\execution\\__init__.py": "734cb0654f464d6d25a32b74edaeed7bc2e9e3c633a648c83333b37c35343e50",
+          "evaluation\\accounting.py": "0b7ea31043534cd8d986bd72482ff3b9b48a9462252f61a76a7db23fecda34bc",
+          "evaluation\\artifacts.py": "ac150ea307682ffa4bb1864d7970bacc06504cc898143fd61875403d79edecb6",
+          "evaluation\\execution.py": "a12ef6fa325acf3c676bae92cdee2b0f9ec2daf11821f730d8131c53fdb8dc79",
+          "evaluation\\experience.py": "b966763c197636e852baf1bf583a69483188cdee504d6c5655c394a42956f745",
+          "evaluation\\experience_memory.py": "9477846923bf9242522d97594e925365a2e514aa7b8a5f90c4fe787a2a763505",
+          "evaluation\\experiment.py": "a07c0faddc8eb04b798872e09103d5eb151dd60b6ec5b9ee0f9f7763786c5795",
+          "evaluation\\feedback.py": "b88a665da6e3affd127470ef3b08c34e968b8c8b2b127b0193f41703ed4042a3",
+          "evaluation\\qa.py": "9a3a1006dd0daf9bb79ad3da8073a54950095eb69310658fc04b49410c515815",
+          "evaluation\\scenes.py": "8b39580d6816ddc2427e17f0fd790a7769d011b5f510551d33d610ffb701430a",
+          "evaluation\\streams.py": "7100f8683eb29eb9020018f762bda0f3975275c7351b0382e4e6ec33107d09e3",
+          "evaluation\\validation.py": "ea7d95b9e0b65f605458d041ff4f6588a92d57fa817f8e7bb5ffcbe0ddc102ed",
+          "evaluation\\__init__.py": "ccdb575188760f33d47baad5c4deff1f1c55bcec4920fae8ee6bba415ef8bd3f",
+          "evaluation\\metrics\\common.py": "0708a171432fe33ef5af5418be3efe9d6b5b510936bfcded2b6d0473b32f734c",
+          "evaluation\\metrics\\__init__.py": "4f26c5362673c894cc0cd0d5471d2f12a7b6570181207e002f949f0735e5fdc0",
+          "evaluation\\reporting\\writer.py": "c150984aade3ed5e99d01e4e555df8d16ac26291c23e777d73a7c7c73ec04ca4",
+          "evaluation\\reporting\\__init__.py": "95317f78b43a6653f1b3f62775c22c068c585c632f7d16836f381081b498e8c0",
+          "integrations\\openhospital\\accounting.py": "c72691288a4e6d585a40cd34c76445ff29fc382273a610d090b078edaf1d4360",
+          "integrations\\openhospital\\application.py": "1272c467c2c5403d3ca9775fe09e01c847e12de4a2c6825e23fd8ab8347ff9b4",
+          "integrations\\openhospital\\bridge.py": "b275b3874e903a362e7aa9e56c0fc71de3adcbd028fe71e19b745c1a506d4a91",
+          "integrations\\openhospital\\cli.py": "f077128b5deb511c0e1d118a10ecba07a342ddc68089df44eff0f72e3d30ff94",
+          "integrations\\openhospital\\cohort.py": "3be788d7a36550e327246da250d7a12801743a0abc56b0b76b4e78bc61315035",
+          "integrations\\openhospital\\config.py": "e1bff35f5d0e6fa17ed9b7245684a2163593a945435c55e834c6d59339cf2e68",
+          "integrations\\openhospital\\context.py": "e4f92c6fd255fd75c1b3c637da58978ac0a293a2f6eb73c61629febdb4e6854a",
+          "integrations\\openhospital\\curves.py": "7f88713f1ce9875b771077999d71e995e739904de0cea0847d9ad9f580e31a68",
+          "integrations\\openhospital\\dashboard.py": "0bdec8a0044ec8c5bbfaf47f4007fe201b56d963a48c1bc06b3a62347b5804c8",
+          "integrations\\openhospital\\efficiency.py": "52d9e55a86ae7e6af777e8088e743e485b1a0ed616792943d593a67b6241e82e",
+          "integrations\\openhospital\\efficiency_metrics.py": "74f85e29c60adb7f3f886ca31bc7caaba6fbb1140a9ff13f97c5d76cca629d88",
+          "integrations\\openhospital\\encounter.py": "39e4a983a3eb63edb1d6c27515b471b2d7e19160894dcb219853db306a0e2c4c",
+          "integrations\\openhospital\\execution.py": "a2b55c77fff98e4cb255900e0b1bb679d342f20d5123590de3cf0b4b24c27647",
+          "integrations\\openhospital\\feedback.py": "20974ce77785ac9e1c5e6125f48dca6e7754951d28c2a3aad0bfcc2c38e6aad4",
+          "integrations\\openhospital\\inspection.py": "3a870afa09341f11250fd0185fe8657dd2fa2e48059d28b87fd3aee79fc30843",
+          "integrations\\openhospital\\metrics.py": "d0f3987acf70d9eb67d01137378631d49bc0e3a44828b7dbca422206e6e8a810",
+          "integrations\\openhospital\\monitor.py": "a37471c715fa69e75660add4c8b199893e0fd5670ce1c5b926757b74f43c28eb",
+          "integrations\\openhospital\\pilot_report.py": "c5ed074349ba5909c2cb3f806bfd4bd66e2119c55c105d35e002b133395e87b3",
+          "integrations\\openhospital\\planning.py": "086fb58eb15749ec640f8449e26e7b1bd37a20d90ce8e770ed60321bb125fdd4",
+          "integrations\\openhospital\\progress.py": "a4a147a7893875a527004047af78dca03036e638c6f7aed5c4aeeada7692c01c",
+          "integrations\\openhospital\\rsi.py": "779d737640b5d0496499e379103c65b03d00edf0ed483711ec49b179063127b7",
+          "integrations\\openhospital\\services.py": "7c0d198392d9d306514438c49a0eff97d02d394563e378241fea1786689a379f",
+          "integrations\\openhospital\\streams.py": "8685dcaf01f1cacc02baf85e1f3333c0af1eaf8e8593298203268b187472c3e3",
+          "integrations\\openhospital\\suite.py": "de9f896d221b0bbb752afbfeb6c07ef0b656af97fda657651764ddb419bf308d",
+          "integrations\\openhospital\\__init__.py": "e752f091ea4f76ea2f18f3dcbac3f0597554a823ce26627cfb24d79dac1defef",
+          "integrations\\openhospital\\__main__.py": "6ef6746d0a9752d7d249075f0de1e46076cdcb75580425e42a4b53a8519b7528",
+          "methods\\memmachine\\config.py": "b35d5548a11f9ba3e51c1cc6ae00571d9d92dd9f98a8ed5b4bca9197f0db1d98",
+          "methods\\memmachine\\core.py": "9be8546f769e4ee0db2e940e128da5b48c0516a42244a7ae11f393988bcba023",
+          "methods\\memmachine\\example.py": "97fbc93e195abd319f09352eab710ba00acb24b3ff8f186170c9bb4bddac2ed1",
+          "methods\\memmachine\\method.py": "ffa14f578ba503b217d1532893593abb71fe0703fce882adab74e8a0dc968476",
+          "methods\\memmachine\\method.yaml": "f35dc421e30efe88126e836505226e442ab23c0c9e227c078de639b0476b63ec",
+          "methods\\memmachine\\utils.py": "618b05190558a5383631479bf546990d41fd3a22139e61ef64775dbae0ebef5a",
+          "methods\\memmachine\\__init__.py": "a3fedcf9cdd9c739b0cf6ec71831108860ee7f9074a17c6ea6735df9dbaa0b4e"
+        }
+      }
+    },
+    "resume_from": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-001\\evaluation\\runs\\001-memmachine",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "protocol_id": "experience_learning_curve",
+    "metrics_split": "train",
+    "progress": {
+      "attempted_exposures": 100,
+      "completed_exposures": 100,
+      "valid_feedback_exposures": 100,
+      "learned_exposures": 100,
+      "failed_exposures": 0,
+      "pending_feedback": 0,
+      "scheduled_exposures": 100
+    },
+    "memory_reuse": {
+      "learned_encounters": 100,
+      "encounters_with_applied_memory": 99,
+      "distinct_applied_memories": 4145,
+      "cross_encounter_reuses": 11459,
+      "interpretation": "observed_application_frequency_not_causal_effect"
+    },
+    "learning_curve_summary": {
+      "checkpoint_count": 0,
+      "diagnosis_accuracy.curve_complete": true,
+      "diagnosis_accuracy.gain": null,
+      "diagnosis_accuracy.gain_per_100_cases": null,
+      "diagnosis_accuracy.normalized_auc": null,
+      "examination_precision.curve_complete": true,
+      "examination_precision.gain": null,
+      "examination_precision.gain_per_100_cases": null,
+      "examination_precision.normalized_auc": null,
+      "treatment_overall_score.curve_complete": true,
+      "treatment_overall_score.gain": null,
+      "treatment_overall_score.gain_per_100_cases": null,
+      "treatment_overall_score.normalized_auc": null,
+      "overall_clinical_score.curve_complete": true,
+      "overall_clinical_score.gain": null,
+      "overall_clinical_score.gain_per_100_cases": null,
+      "overall_clinical_score.normalized_auc": null
+    },
+    "unreached_checkpoints": [],
+    "output_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation",
+    "experiment": {
+      "methods": [
+        {
+          "method": {
+            "method_id": "memmachine",
+            "params": {}
+          },
+          "runtime": {
+            "executor": "subprocess",
+            "artifact_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\memory",
+            "source_roots": {},
+            "operation_timeout_s": null,
+            "python_executable": "D:\\master_study\\MemAtlas\\.venv-memmachine\\Scripts\\python.exe",
+            "resource_paths": [],
+            "service_url": null,
+            "service_headers": {},
+            "service_timeout_s": 30.0
+          },
+          "scope": {
+            "user_id": "rsi_0e46f8fadefb4a608c321890129c9de1:memmachine",
+            "agent_id": "doctor"
+          },
+          "metadata": {
+            "local_embedding": {
+              "model_dir": "D:\\master_study\\MemAtlas\\models\\Qwen3-Embedding-0.6B",
+              "model_id": "Qwen/Qwen3-Embedding-0.6B",
+              "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+              "fingerprint": "3e1181ea664dbf75585ae3c0a0d11df3a01ad3206a5f8c04b06b32476da9469a",
+              "dimensions": 1024,
+              "pooling": "last_non_padding_token",
+              "normalization": "l2",
+              "instruction": null,
+              "max_tokens": 32768
+            }
+          },
+          "providers": {
+            "llm": {
+              "model": "qwen3.5-flash",
+              "base_url": "https://cn-beijing.maas.qianwenaiapi.com/compatible-mode/v1",
+              "api_key_env": "MODEL_API_KEY",
+              "options": {
+                "max_tokens": 8192,
+                "extra_body": {
+                  "enable_thinking": false
+                },
+                "prompt_cache": true,
+                "response_journal": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\memory-responses.jsonl"
+              }
+            },
+            "embedding": {
+              "model": "Qwen/Qwen3-Embedding-0.6B",
+              "dimensions": 1024,
+              "base_url": "http://127.0.0.1:18766/v1",
+              "api_key_env": "LOCAL_EMBEDDING_API_KEY"
+            }
+          }
+        }
+      ],
+      "benchmark": {
+        "kind": "openhospital",
+        "condition": "novel_same_department",
+        "departments": [
+          "血液科"
+        ],
+        "evaluation_departments": [
+          "血液科"
+        ],
+        "cases_per_block": 20,
+        "blocks": 5,
+        "training_only": true,
+        "heldout_per_department": 0,
+        "advanced_per_department": 0,
+        "memory_top_k": null,
+        "doctor_config": "D:\\master_study\\MemAtlas\\configs\\openhospital\\efficiency-doctor.yaml",
+        "world_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\world",
+        "service_port": 18001,
+        "feedback_timing": "immediate",
+        "snapshot_keep_recent": 2,
+        "snapshot_keep_every": 20,
+        "hospital_root": "D:\\master_study\\MemAtlas\\integrations\\openhospital_runtime",
+        "path": "D:\\master_study\\MemAtlas\\integrations\\openhospital_runtime\\department_patient_ids.json"
+      },
+      "protocol": "experience_learning_curve",
+      "answer_model": null,
+      "train_split": "train",
+      "split": "test",
+      "train_limit": null,
+      "test_limit": null,
+      "checkpoints": [],
+      "output_dir": "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memmachine\\attempt-002\\evaluation",
+      "train_benchmark": null,
+      "metrics": [],
+      "seed": 0
+    }
+  },
+  "learning_curve": []
+}

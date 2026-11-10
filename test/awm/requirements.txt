@@ -1,0 +1,7 @@
+pytest
+pytest-asyncio
+lxml
+tiktoken
+# Real provider path only, not used by controlled checks:
+openai
+python-dotenv

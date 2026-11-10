@@ -1,0 +1,222 @@
+{
+  "method_id": "expel",
+  "name": "ExpeL",
+  "summary": "Learns counted rules from successful and failed trials and retrieves successful experiences as few-shot memory.",
+  "capabilities": {
+    "required_episode_fields": [
+      "success",
+      "task",
+      "trajectory"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "forms": [
+      "procedural"
+    ],
+    "operations": ["index", "add", "search", "episode_end", "reset", "save", "load"],
+    "integration_slots": [
+      "context",
+      "episode"
+    ],
+    "accepted_events": [
+      "message",
+      "observation",
+      "action",
+      "tool_result",
+      "feedback"
+    ],
+    "scopes": [
+      "user",
+      "agent",
+      "session"
+    ],
+    "default_scope": "user",
+    "requires_training": false,
+    "requires_gpu": false,
+    "supports_persistence": true,
+    "read_only_mode": "native",
+    "supports_async": true,
+    "max_scopes": 1
+  },
+  "version": "1",
+  "paper_url": "https://arxiv.org/abs/2308.10144",
+  "repository_url": "https://github.com/LeapLabTHU/ExpeL",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "method_reimplementation",
+  "implementation_strategy": "integrated_method",
+  "storage": {
+    "path_parameters": {},
+    "kind": "local_files",
+    "backend": "expel_json_plus_faiss",
+    "database_paths": [
+      "expel.json",
+      "expel.faiss"
+    ],
+    "supports_snapshot": true
+  },
+  "internal_token_tracking": "tracked",
+  "implementation_notes": [
+    "Reference: LeapLabTHU/ExpeL e41ec9a24823e7b560c561ab191441b56d9bcefc.",
+    "Built-in benchmark-specific comparison/success prompts and rule operations. FAISS retrieves the selected task/thought/action/step/reflection field.",
+    "Candidate buffering precedes token-limit filtering; return the shortest successful trajectory per selected task. Dynamic task/thought and rotation strategies select the corresponding vector field.",
+    "Optional length/thought/task reranking and WebShop invalid-trajectory filtering follow the source. Token limits use the source exemplar maxima and cl100k_base tokenization.",
+    "Explicit medicine profile is a clinical adaptation: hospital trajectories and conditional clinical prompts replace the original benchmark-specific input. Workflow induction (AWM) and counted rule evolution plus successful-trial retrieval (ExpeL) retain their respective method mechanisms; this profile is reported separately from source benchmarks."
+  ],
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "benchmark": {
+        "type": "string",
+        "enum": [
+          "hotpotqa",
+          "alfworld",
+          "webshop",
+          "medicine"
+        ]
+      },
+      "max_num_rules": {
+        "type": "integer",
+        "default": 20,
+        "minimum": 1
+      },
+      "success_critique_num": {
+        "type": "integer",
+        "default": 8,
+        "minimum": 1
+      },
+      "fewshot_strategy": {
+        "type": "string",
+        "enum": [
+          "task_similarity",
+          "thought_similarity",
+          "action_similarity",
+          "step_similarity",
+          "reflection_similarity",
+          "task_thought_similarity",
+          "rotation",
+          "random",
+          "none"
+        ],
+        "default": "task_similarity"
+      },
+      "num_fewshots": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "buffer_retrieve_ratio": {
+        "type": "integer",
+        "default": 4,
+        "minimum": 1
+      },
+      "max_fewshot_tokens": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "seed": {
+        "type": "integer",
+        "default": 0,
+        "minimum": 0
+      },
+      "reranker": {
+        "type": "string",
+        "enum": [
+          "none",
+          "len",
+          "thought",
+          "task"
+        ],
+        "default": "none"
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "benchmark"
+    ]
+  },
+  "limitations": [
+    "Requires real success/task/trajectory feedback. Ordinary unlabeled LoCoMo/LongMemEval history is incompatible.",
+    "One Memory per scope. No upstream environment, reflective agent or static handwritten fewshots are injected.",
+    "reflection_similarity explicitly extends an upstream advertised strategy without a dispatch branch.",
+    "top_k limits successful examples only; all learned rules are retained. Random retrieval uses a local deterministic seed for frozen reads."
+  ],
+  "tags": [
+    "procedural",
+    "reflection",
+    "experience"
+  ],
+  "requirements": {
+    "python": [
+      "faiss-cpu",
+      "tiktoken"
+    ],
+    "services": [
+      "llm",
+      "embedding"
+    ]
+  },
+  "route_hints": [
+    "learn rules from successful and failed trials",
+    "task-level experience retrieval"
+  ],
+  "interface_version": 3,
+  "commands": {},
+  "input_schemas": {
+    "add": {
+      "type": "object",
+      "properties": {
+        "expel": {
+          "type": "object",
+          "properties": {
+            "end_of_training": {
+              "type": "boolean",
+              "default": false
+            },
+            "reflections": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "env_name": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "search": {
+      "type": "object",
+      "properties": {
+        "expel": {
+          "type": "object",
+          "properties": {
+            "thought": {
+              "type": "string"
+            },
+            "action": {
+              "type": "string"
+            },
+            "step": {
+              "type": "string"
+            },
+            "last_step_type": {
+              "type": "string"
+            },
+            "env_name": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "read_only": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

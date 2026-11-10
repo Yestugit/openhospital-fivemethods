@@ -1,0 +1,497 @@
+{
+  "patient_id": "Patient_03511",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？\", \"reason\": \"当前没有任何病史、检查结果或已开检查信息，无法进行诊断，必须首先通过问诊收集患者的临床症状以明确诊疗方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "左眼周围有个疼痛肿块，大概6周了，最近10天更严重。感觉眼睛发胀、干涩发红，偶尔头痛和乏力，但没发烧也没出血。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您是否有视力下降、复视（看东西重影）、眼球活动受限或面部麻木的情况？另外，肿块的具体位置是在眼眶内还是眼睑皮肤表面？\", \"reason\": \"患者主诉左眼周围疼痛肿块伴眼部症状，但病史描述尚不完整，缺乏对视力、眼球运动及肿块具体解剖位置的详细询问，且尚未进行任何检查。为进一步鉴别是眼眶肿瘤、炎症还是其他病变，需要先补充关键问诊信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您是否有视力下降、复视（看东西重影）、眼球活动受限或面部麻木的情况？另外，肿块的具体位置是在眼眶内还是眼睑皮肤表面？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有复视，视力也没下降，眼球活动正常，面部不麻。肿块就在左上眼睑皮肤表面，是硬的，按着疼。我上网查过觉得就是那个问题，赶紧给我安排检查吧。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者主诉左上眼睑疼痛性肿块伴眼部症状，病史6周且近期加重。虽然患者未提及出血或发热，但结合记忆摘要中关于儿童眼眶/颈部肿块及血液系统恶性肿瘤的关联提示，以及患者对检查的迫切需求，目前缺乏影像学证据来明确肿块的性质（如炎症、良性肿瘤或恶性肿瘤）。因此，优先开具眼部及头颈部的影像学检查（如超声或CT）以评估肿块范围、深度及与周围组织的关系，为后续诊断提供依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"影像学检查 - 超声\", \"reason\": \"患者主诉左上眼睑皮肤表面有疼痛性硬肿块，伴有眼部不适症状。超声检查是评估浅表软组织肿块（如眼睑）的首选无创影像学手段，能够清晰显示肿块的边界、形态、内部回声、血流信号以及与周围组织的关系，有助于初步鉴别炎症、囊肿、良性肿瘤或恶性肿瘤，为后续是否需要病理活检提供重要依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"眼部超声\", \"软组织超声\"], \"reason\": \"患者主诉左上眼睑皮肤表面有疼痛性硬肿块，病程6周且近期加重，伴有眼胀、干涩发红。为明确肿块的性质（如炎症、囊肿或肿瘤）、位置深度及内部结构，首选眼部超声以评估眼眶及眼睑情况；同时选择软组织超声对眼睑及周围皮下组织进行详细检查，以鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"眼部超声\": {\"result\": {\"影像学视神经\": \"视盘正常，视神经鞘直径（ONSD）4.2 mm。［参考值：视盘正常，视神经鞘直径（ONSD）< 5.0 mm。］\", \"玻璃体\": \"无回声，均质，未见飞蚊或出血。\", \"眶脂肪\": \"回声异常，可见低回声区伴占位效应。\", \"眼内肿块或异物\": \"未见眼内肿块或异物。\", \"眼前房深度\": \"3.2 mm。［参考值：2.5-4.0 mm。］\", \"眼外肌\": \"厚度及回声正常。\", \"眼晶状体\": \"位置正常，厚度 4.1 mm，无混浊。［参考值：位置正常，厚度 3.5-5.0 mm，无混浊。］\", \"眼球形态\": \"轮廓光滑，轻度前突。\", \"眼轴长度\": \"23.5 mm。［参考值：21-24 mm。］\", \"视网膜情况\": \"光滑，附着良好，无脱离。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"眶脂肪\"]}, \"软组织超声\": {\"result\": {\"局灶性肿块及积液\": \"左侧眼眶眶外上外侧可见一大小约2.6cm的低回声实性肿块，边界不清，内部回声不均，未见明显液性暗区。\", \"水肿血肿脓肿及异物\": \"肿块周围软组织呈弥漫性低回声改变，提示局部水肿；未探及明确血肿、脓肿腔隙或异物强回声影。\", \"淋巴结\": \"扫查区域内未见病理性肿大淋巴结。\", \"皮下脂肪层\": \"病变区域皮下脂肪层结构紊乱，回声减低，与周围正常组织分界不清。\", \"皮下软组织回声及层次\": \"病变区皮下软组织层次结构模糊，回声增强且分布不均，正常解剖层次消失。\", \"筋膜层\": \"邻近病灶处的筋膜层连续性中断，界限模糊不清。\", \"肌纤维回声及纹理\": \"受累区域肌纤维纹理紊乱，呈杂乱的高回声与低回声混合表现，正常平行结构消失。\", \"软组织彩色多普勒血流\": \"肿块内部及周边可见丰富点状及条状血流信号，阻力指数偏高，呈异常充血状态。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"局灶性肿块及积液\", \"水肿血肿脓肿及异物\", \"皮下脂肪层\", \"皮下软组织回声及层次\", \"筋膜层\", \"肌纤维回声及纹理\", \"软组织彩色多普勒血流\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您最近是否有发热、夜间盗汗、不明原因的体重下降或全身乏力等症状？另外，您的皮肤上是否出现过瘀斑、出血点或牙龈出血的情况？\", \"reason\": \"患者眼部超声和软组织超声已发现眼眶及皮下占位性病变伴丰富血流，提示可能存在恶性肿瘤（如淋巴瘤、肉瘤）或严重感染。为了鉴别诊断并评估全身状况，需要补充询问B症状（发热、盗汗、消瘦）及出血倾向等关键病史信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您最近是否有发热、夜间盗汗、不明原因的体重下降或全身乏力等症状？另外，您的皮肤上是否出现过瘀斑、出血点或牙龈出血的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "没有发热、盗汗或牙龈出血。但最近两个月体重掉了3公斤，人也越来越乏力，睡眠也不好。我上网查过觉得就是那个问题，赶紧给我安排检查吧。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者左眼睑肿块伴全身症状（乏力、体重下降），超声提示眶外实性肿块且血流丰富，高度怀疑恶性肿瘤（如淋巴瘤或转移瘤）。目前缺乏血液学检查（如血常规）和病理学检查（如活检）结果以明确诊断，需立即完善相关检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"病理检查\", \"reason\": \"患者左上眼睑存在疼痛性硬肿块，伴有体重下降和乏力，且超声显示为边界不清、血流丰富的实性占位，提示可能存在恶性肿瘤（如淋巴瘤或转移癌）。影像学检查已明确病变性质为实性肿块，但无法确定具体病理类型。为了确诊并指导后续治疗，必须获取组织样本进行病理学检查（如穿刺活检或切除活检），这是目前最关键的诊断步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"皮肤活检\", \"细针穿刺细胞学检查（FNAC）\"], \"reason\": \"患者左上眼睑皮肤表面有硬痛性肿块，且超声显示为边界不清、血流丰富的实性占位，伴有全身乏力及体重下降等B症状。为明确肿块性质（如淋巴瘤、肉瘤或感染性病变），必须获取组织或细胞进行病理学诊断。皮肤活检可直接获取病变组织进行组织病理学检查；细针穿刺细胞学检查（FNAC）可作为快速初步评估细胞学特征的手段，两者结合有助于确诊。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"皮肤活检\": {\"result\": {\"感染\": \"无感染证据\", \"沉积物\": \"无沉积物证据\", \"炎性浸润\": \"未见炎性浸润\", \"病理肿瘤性改变\": \"未见肿瘤性改变\", \"皮肤活检血管病理\": \"血管结构完整，管壁清晰，未见异常增生或破坏\", \"皮肤病理表皮结构\": \"表皮完整，层次分明且分层规则（基底层、棘层、颗粒层和角质层）\", \"皮肤结构\": \"皮肤结构正常\", \"皮肤附属器\": \"皮肤附属结构（毛囊、皮脂腺、小汗腺）未见异常\", \"真皮胶原和弹力纤维\": \"真皮层显示正常的胶原和弹力纤维排列\", \"真表皮交界\": \"真表皮连接处连续，无裂隙或分离\", \"组织发育异常\": \"未见发育不良\", \"肉芽肿\": \"无肉芽肿证据\", \"血管和神经\": \"血管和神经外观正常\", \"角质形成细胞\": \"显示正常成熟模式，无异型性\", \"黑色素细胞\": \"沿基底层均匀分布，形态正常\"}, \"status\": \"normal\", \"abnormal_indicators\": []}, \"细针穿刺细胞学检查（FNAC）\": {\"result\": {\"异型细胞、恶性细胞或发育不良特征\": \"可见大量未成熟髓系母细胞，呈弥漫片状分布，核浆比显著增高，核仁明显，染色质疏松，符合急性髓系白血病细胞形态特征。\", \"淋巴结取材所见\": \"本次标本为眼眶软组织细针穿刺，未涉及淋巴结组织，故无淋巴结取材所见。\", \"细胞大小和形态\": \"细胞大小不一，形态极不规则，可见原始细胞及幼稚细胞混合存在，胞体较大且边界不清。\", \"细胞学标本细胞量\": \"涂片细胞量充足，细胞分布密集，满足诊断要求。\", \"细胞学背景\": \"背景较清洁，未见明显坏死碎片或大量中性粒细胞浸润，偶见少量红细胞。\", \"细胞形态学\": \"细胞形态学表现为恶性，以未成熟髓系母细胞为主，不符合良性病变特征。\", \"细胞核浆比\": \"细胞核浆比显著增高，核大胞浆少，部分细胞核仁清晰可见。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异型细胞、恶性细胞或发育不良特征\", \"细胞大小和形态\", \"细胞形态学\", \"细胞核浆比\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有眼睑肿块、乏力、体重下降症状，眼部及软组织超声提示占位性病变。关键检查细针穿刺细胞学检查（FNAC）已明确发现大量未成熟髓系母细胞，符合急性髓系白血病特征。结合病史和确诊的病理结果，诊断信息已足够，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为眼睑肿块、乏力及体重下降，细针穿刺细胞学检查（FNAC）结果显示可见大量未成熟髓系母细胞，符合急性髓系白血病（AML）的形态学特征。虽然病变位于眼眶软组织，但病理性质为恶性血液肿瘤，需由血液科进行确诊、分期及制定化疗方案。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"髓系肉瘤\", \"treatment_plan\": \"1. **主要治疗**：确诊为髓系肉瘤（粒细胞肉瘤）后，需立即启动全身化疗以控制白血病进程。首选方案通常为“阿糖胞苷 + 蒽环类药物”诱导缓解治疗（如DA方案），若患者年龄较大或体能状态较差，可考虑去甲基化药物联合低剂量阿糖胞苷。针对眼眶局部肿块，在全身化疗起效前或化疗后残留病灶，可评估是否联合局部放疗以提高局部控制率。\\n2. **个性化调整**：鉴于患者表现为孤立性眼眶肿块伴乏力、体重下降，且细针穿刺提示大量未成熟髓系母细胞，需紧急完善骨髓穿刺及流式细胞术以明确是否合并急性髓系白血病（AML）。若骨髓中原始细胞<20%且无其他部位受累，按单纯髓系肉瘤处理；若骨髓符合AML诊断，则按AML标准方案治疗。同时需根据患者年龄、肝肾功能及心脏功能（蒽环类药物心脏毒性）调整药物剂量。\\n3. **安全性与监测**：治疗期间需严密监测血常规、肝肾功能及凝血功能，预防感染、出血及肿瘤溶解综合征。化疗期间若出现高热、严重出血、呼吸困难或意识改变，需立即就医。定期复查眼部超声及MRI评估肿块消退情况，并警惕中枢神经系统受累风险。\", \"reasoning\": \"患者为中年男性，主诉左上眼睑疼痛性肿块伴乏力、消瘦。影像学显示眶外软组织实性占位伴丰富血流，但皮肤活检未见肿瘤性改变，排除了表皮来源肿瘤。关键证据在于细针穿刺细胞学检查（FNAC）发现大量未成熟髓系母细胞，形态符合急性髓系白血病特征。结合临床表现（无痛/痛性肿块、B症状）及病理结果，最可能的诊断为髓系肉瘤（即粒细胞肉瘤），这是急性髓系白血病在骨髓外的常见表现，常首发于眼眶等部位。因此诊断定为髓系肉瘤，治疗需参照急性髓系白血病进行全身化疗，并兼顾局部病灶处理。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_03511",
+    "mode": "train",
+    "memory_notes": [
+      "Bone marrow examination of Patient_06317 revealed abnormal infiltration by clonal plasma cells replacing normal hematopoietic tissue, with plasma cells comprising 42% of marrow cells (normal <4%), suppressed granulocytic and erythroid maturation, and reduced megakaryocytes.",
+      "Patient_00634's bone marrow examination showed no abnormal infiltration, normal granulocytic and erythrocytic maturation, mild reticular fibrosis, 2% blasts, significantly hyperplastic megakaryocytes with enlargement and clustering, and increased cellularity (80%).",
+      "Patient_05291's bone marrow examination showed hypercellularity (80%), significantly hyperplastic megakaryocytes with enlargement and excessive nuclear lobulation, mild reticular fibrosis, 2% blasts, and absent iron stores (Grade 0). Granulocytic and erythroid maturation were normal without abnormal infiltration.",
+      "Patient_05345's bone marrow examination revealed diffuse infiltration by abnormal blasts replacing normal hematopoietic tissue, with 65% blast cells, significantly increased myeloid-to-erythroid ratio (>10:1), maturation arrest in granulocytes, erythroid suppression with megaloblastic changes, and significantly reduced megakaryocytes with dysplastic morphology.",
+      "Patient_03549's bone marrow biopsy showed hypercellular marrow (80% cellularity) with trilineage hyperplasia and increased megakaryocytes, but no dysplasia or abnormal infiltration.",
+      "Bone marrow aspiration and biopsy of Patient_01886 showed hypercellular marrow with approximately 40% interstitial and paratrabecular infiltration by atypical lymphoid cells",
+      "User is a middle-aged male patient diagnosed with Mantle Cell Lymphoma (套细胞淋巴瘤) around November 2026, presenting with a painless left neck mass the size of a large walnut discovered 10 days prior",
+      "Patient_07050's bone marrow biopsy showed hypercellularity (~90%), granulocytic/monocytic proliferation with multilineage dysplasia, and 8% blast cells.",
+      "Patient_07426's bone marrow biopsy showed hypocellularity (20%), significant reticulin and collagen fibrosis, cluster formation of atypical megakaryocytes, dysplastic maturation, and reduced trilineage hematopoiesis.",
+      "Patient_04112's bone marrow biopsy revealed active cellularity with interstitial/paratrabecular lymphoid cell aggregates occupying approximately 35% of marrow components, indicating bone marrow involvement.",
+      "User was advised that their child's symptoms (eye protrusion, hard lump, spontaneous bruising, fatigue) are highly suggestive of a hematologic malignancy such as leukemia or severe infection, requiring immediate blood tests.",
+      "Patient_09606's bone marrow examination revealed diffuse infiltration by lymphoblasts replacing normal hematopoietic tissue, with 85% blast cells, significantly reduced myeloid and erythroid maturation, decreased megakaryocytes, and hypercellularity (>90%).",
+      "Patient_07345's bone marrow examination revealed low cellularity consistent with age, increased megakaryocytes with maturation arrest, and no increase in blast cells (<5%).",
+      "User diagnosed Patient_02057 with myelofibrosis based on progressive fatigue, early satiety, left upper quadrant fullness, low-grade fever, night sweats, weight loss, gum bleeding, easy bruising, massive splenomegaly (8 cm below left costal margin), leukocytosis (18.6 x10^9/L), anemia (Hb 92 g/L), thrombocytopenia (92 x10^9/L), teardrop cells on peripheral smear, and bone marrow showing diffuse reticulin/collagen fibrosis with atypical megakaryocytes.",
+      "User participated in a hematology diagnostic task for Patient_06532, a middle-aged male presenting with a painless left neck mass (walnut-sized), progressive fatigue, night sweats, loss of appetite, and weight loss of approximately 5-6 jin.",
+      "User's child's bone marrow examination showed massive infiltration by lymphoblasts replacing normal hematopoietic tissue, with 82% blast cells, significantly reduced myeloid and erythroid maturation, and abundant primitive B-lymphocytes.",
+      "User participated in a hematology diagnostic task for Patient_09102, a middle-aged male presenting with a painless left neck mass that enlarged over 3 weeks, early satiety, fatigue, decreased exercise tolerance, and night sweats.",
+      "Patient_08508's bone marrow biopsy showed hypercellularity (85%), dysplasia in all three hematopoietic lineages, 8% blast cells, and decreased megakaryocytes.",
+      "Physical examination of Patient_02851 revealed BMI 21.5 kg/m², temperature 37.6°C, conjunctival pallor, multiple ecchymoses on skin, spleen enlargement (palpable 3-4 cm below left costal margin, firm texture), and multiple painless, firm, slowly enlarging lymph nodes in the neck and left axilla.",
+      "User has a 4-year-old daughter who presented with sudden left eye protrusion, eyelid swelling, and a hard lump on the temple starting 5 days ago, accompanied by fatigue, poor appetite, and spontaneous bruising on the legs over the past two weeks."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "左眼周围有个疼痛肿块，大概6周了，最近10天更严重。感觉眼睛发胀、干涩发红，偶尔头痛和乏力，但没发烧也没出血。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您是否有视力下降、复视（看东西重影）、眼球活动受限或面部麻木的情况？另外，肿块的具体位置是在眼眶内还是眼睑皮肤表面？"
+      },
+      {
+        "from": "patient",
+        "text": "没有复视，视力也没下降，眼球活动正常，面部不麻。肿块就在左上眼睑皮肤表面，是硬的，按着疼。我上网查过觉得就是那个问题，赶紧给我安排检查吧。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问您最近是否有发热、夜间盗汗、不明原因的体重下降或全身乏力等症状？另外，您的皮肤上是否出现过瘀斑、出血点或牙龈出血的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "没有发热、盗汗或牙龈出血。但最近两个月体重掉了3公斤，人也越来越乏力，睡眠也不好。我上网查过觉得就是那个问题，赶紧给我安排检查吧。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "眼部超声": {
+        "result": {
+          "影像学视神经": "视盘正常，视神经鞘直径（ONSD）4.2 mm。［参考值：视盘正常，视神经鞘直径（ONSD）< 5.0 mm。］",
+          "玻璃体": "无回声，均质，未见飞蚊或出血。",
+          "眶脂肪": "回声异常，可见低回声区伴占位效应。",
+          "眼内肿块或异物": "未见眼内肿块或异物。",
+          "眼前房深度": "3.2 mm。［参考值：2.5-4.0 mm。］",
+          "眼外肌": "厚度及回声正常。",
+          "眼晶状体": "位置正常，厚度 4.1 mm，无混浊。［参考值：位置正常，厚度 3.5-5.0 mm，无混浊。］",
+          "眼球形态": "轮廓光滑，轻度前突。",
+          "眼轴长度": "23.5 mm。［参考值：21-24 mm。］",
+          "视网膜情况": "光滑，附着良好，无脱离。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "眶脂肪"
+        ]
+      },
+      "软组织超声": {
+        "result": {
+          "局灶性肿块及积液": "左侧眼眶眶外上外侧可见一大小约2.6cm的低回声实性肿块，边界不清，内部回声不均，未见明显液性暗区。",
+          "水肿血肿脓肿及异物": "肿块周围软组织呈弥漫性低回声改变，提示局部水肿；未探及明确血肿、脓肿腔隙或异物强回声影。",
+          "淋巴结": "扫查区域内未见病理性肿大淋巴结。",
+          "皮下脂肪层": "病变区域皮下脂肪层结构紊乱，回声减低，与周围正常组织分界不清。",
+          "皮下软组织回声及层次": "病变区皮下软组织层次结构模糊，回声增强且分布不均，正常解剖层次消失。",
+          "筋膜层": "邻近病灶处的筋膜层连续性中断，界限模糊不清。",
+          "肌纤维回声及纹理": "受累区域肌纤维纹理紊乱，呈杂乱的高回声与低回声混合表现，正常平行结构消失。",
+          "软组织彩色多普勒血流": "肿块内部及周边可见丰富点状及条状血流信号，阻力指数偏高，呈异常充血状态。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "局灶性肿块及积液",
+          "水肿血肿脓肿及异物",
+          "皮下脂肪层",
+          "皮下软组织回声及层次",
+          "筋膜层",
+          "肌纤维回声及纹理",
+          "软组织彩色多普勒血流"
+        ]
+      },
+      "皮肤活检": {
+        "result": {
+          "感染": "无感染证据",
+          "沉积物": "无沉积物证据",
+          "炎性浸润": "未见炎性浸润",
+          "病理肿瘤性改变": "未见肿瘤性改变",
+          "皮肤活检血管病理": "血管结构完整，管壁清晰，未见异常增生或破坏",
+          "皮肤病理表皮结构": "表皮完整，层次分明且分层规则（基底层、棘层、颗粒层和角质层）",
+          "皮肤结构": "皮肤结构正常",
+          "皮肤附属器": "皮肤附属结构（毛囊、皮脂腺、小汗腺）未见异常",
+          "真皮胶原和弹力纤维": "真皮层显示正常的胶原和弹力纤维排列",
+          "真表皮交界": "真表皮连接处连续，无裂隙或分离",
+          "组织发育异常": "未见发育不良",
+          "肉芽肿": "无肉芽肿证据",
+          "血管和神经": "血管和神经外观正常",
+          "角质形成细胞": "显示正常成熟模式，无异型性",
+          "黑色素细胞": "沿基底层均匀分布，形态正常"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "细针穿刺细胞学检查（FNAC）": {
+        "result": {
+          "异型细胞、恶性细胞或发育不良特征": "可见大量未成熟髓系母细胞，呈弥漫片状分布，核浆比显著增高，核仁明显，染色质疏松，符合急性髓系白血病细胞形态特征。",
+          "淋巴结取材所见": "本次标本为眼眶软组织细针穿刺，未涉及淋巴结组织，故无淋巴结取材所见。",
+          "细胞大小和形态": "细胞大小不一，形态极不规则，可见原始细胞及幼稚细胞混合存在，胞体较大且边界不清。",
+          "细胞学标本细胞量": "涂片细胞量充足，细胞分布密集，满足诊断要求。",
+          "细胞学背景": "背景较清洁，未见明显坏死碎片或大量中性粒细胞浸润，偶见少量红细胞。",
+          "细胞形态学": "细胞形态学表现为恶性，以未成熟髓系母细胞为主，不符合良性病变特征。",
+          "细胞核浆比": "细胞核浆比显著增高，核大胞浆少，部分细胞核仁清晰可见。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异型细胞、恶性细胞或发育不良特征",
+          "细胞大小和形态",
+          "细胞形态学",
+          "细胞核浆比"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向或骨痛等情况？",
+        "reason": "当前没有任何病史、检查结果或已开检查信息，无法进行诊断，必须首先通过问诊收集患者的临床症状以明确诊疗方向。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您是否有视力下降、复视（看东西重影）、眼球活动受限或面部麻木的情况？另外，肿块的具体位置是在眼眶内还是眼睑皮肤表面？",
+        "reason": "患者主诉左眼周围疼痛肿块伴眼部症状，但病史描述尚不完整，缺乏对视力、眼球运动及肿块具体解剖位置的详细询问，且尚未进行任何检查。为进一步鉴别是眼眶肿瘤、炎症还是其他病变，需要先补充关键问诊信息。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者主诉左上眼睑疼痛性肿块伴眼部症状，病史6周且近期加重。虽然患者未提及出血或发热，但结合记忆摘要中关于儿童眼眶/颈部肿块及血液系统恶性肿瘤的关联提示，以及患者对检查的迫切需求，目前缺乏影像学证据来明确肿块的性质（如炎症、良性肿瘤或恶性肿瘤）。因此，优先开具眼部及头颈部的影像学检查（如超声或CT）以评估肿块范围、深度及与周围组织的关系，为后续诊断提供依据。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问您最近是否有发热、夜间盗汗、不明原因的体重下降或全身乏力等症状？另外，您的皮肤上是否出现过瘀斑、出血点或牙龈出血的情况？",
+        "reason": "患者眼部超声和软组织超声已发现眼眶及皮下占位性病变伴丰富血流，提示可能存在恶性肿瘤（如淋巴瘤、肉瘤）或严重感染。为了鉴别诊断并评估全身状况，需要补充询问B症状（发热、盗汗、消瘦）及出血倾向等关键病史信息。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者左眼睑肿块伴全身症状（乏力、体重下降），超声提示眶外实性肿块且血流丰富，高度怀疑恶性肿瘤（如淋巴瘤或转移瘤）。目前缺乏血液学检查（如血常规）和病理学检查（如活检）结果以明确诊断，需立即完善相关检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有眼睑肿块、乏力、体重下降症状，眼部及软组织超声提示占位性病变。关键检查细针穿刺细胞学检查（FNAC）已明确发现大量未成熟髓系母细胞，符合急性髓系白血病特征。结合病史和确诊的病理结果，诊断信息已足够，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "影像学检查 - 超声",
+        "examinations": [
+          "眼部超声",
+          "软组织超声"
+        ],
+        "reason": "患者主诉左上眼睑皮肤表面有疼痛性硬肿块，病程6周且近期加重，伴有眼胀、干涩发红。为明确肿块的性质（如炎症、囊肿或肿瘤）、位置深度及内部结构，首选眼部超声以评估眼眶及眼睑情况；同时选择软组织超声对眼睑及周围皮下组织进行详细检查，以鉴别诊断。"
+      },
+      {
+        "category": "病理检查",
+        "examinations": [
+          "皮肤活检",
+          "细针穿刺细胞学检查（FNAC）"
+        ],
+        "reason": "患者左上眼睑皮肤表面有硬痛性肿块，且超声显示为边界不清、血流丰富的实性占位，伴有全身乏力及体重下降等B症状。为明确肿块性质（如淋巴瘤、肉瘤或感染性病变），必须获取组织或细胞进行病理学诊断。皮肤活检可直接获取病变组织进行组织病理学检查；细针穿刺细胞学检查（FNAC）可作为快速初步评估细胞学特征的手段，两者结合有助于确诊。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "髓系肉瘤",
+      "treatment_plan": "1. **主要治疗**：确诊为髓系肉瘤（粒细胞肉瘤）后，需立即启动全身化疗以控制白血病进程。首选方案通常为“阿糖胞苷 + 蒽环类药物”诱导缓解治疗（如DA方案），若患者年龄较大或体能状态较差，可考虑去甲基化药物联合低剂量阿糖胞苷。针对眼眶局部肿块，在全身化疗起效前或化疗后残留病灶，可评估是否联合局部放疗以提高局部控制率。\n2. **个性化调整**：鉴于患者表现为孤立性眼眶肿块伴乏力、体重下降，且细针穿刺提示大量未成熟髓系母细胞，需紧急完善骨髓穿刺及流式细胞术以明确是否合并急性髓系白血病（AML）。若骨髓中原始细胞<20%且无其他部位受累，按单纯髓系肉瘤处理；若骨髓符合AML诊断，则按AML标准方案治疗。同时需根据患者年龄、肝肾功能及心脏功能（蒽环类药物心脏毒性）调整药物剂量。\n3. **安全性与监测**：治疗期间需严密监测血常规、肝肾功能及凝血功能，预防感染、出血及肿瘤溶解综合征。化疗期间若出现高热、严重出血、呼吸困难或意识改变，需立即就医。定期复查眼部超声及MRI评估肿块消退情况，并警惕中枢神经系统受累风险。",
+      "reasoning": "患者为中年男性，主诉左上眼睑疼痛性肿块伴乏力、消瘦。影像学显示眶外软组织实性占位伴丰富血流，但皮肤活检未见肿瘤性改变，排除了表皮来源肿瘤。关键证据在于细针穿刺细胞学检查（FNAC）发现大量未成熟髓系母细胞，形态符合急性髓系白血病特征。结合临床表现（无痛/痛性肿块、B症状）及病理结果，最可能的诊断为髓系肉瘤（即粒细胞肉瘤），这是急性髓系白血病在骨髓外的常见表现，常首发于眼眶等部位。因此诊断定为髓系肉瘤，治疗需参照急性髓系白血病进行全身化疗，并兼顾局部病灶处理。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_03511",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.72,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.8,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "髓系肉瘤"
+        ],
+        "expected": [
+          "髓系肉瘤"
+        ],
+        "matched": [
+          "髓系肉瘤"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "眼部超声",
+          "软组织超声",
+          "皮肤活检",
+          "细针穿刺细胞学检查（FNAC）"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "磁共振成像（MRI）",
+          "组织病理学检查",
+          "免疫组织化学（IHC）",
+          "骨髓穿刺和活检（BMAB）",
+          "细胞遗传学分析"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. **主要治疗**：确诊为髓系肉瘤（粒细胞肉瘤）后，需立即启动全身化疗以控制白血病进程。首选方案通常为“阿糖胞苷 + 蒽环类药物”诱导缓解治疗（如DA方案），若患者年龄较大或体能状态较差，可考虑去甲基化药物联合低剂量阿糖胞苷。针对眼眶局部肿块，在全身化疗起效前或化疗后残留病灶，可评估是否联合局部放疗以提高局部控制率。\n2. **个性化调整**：鉴于患者表现为孤立性眼眶肿块伴乏力、体重下降，且细针穿刺提示大量未成熟髓系母细胞，需紧急完善骨髓穿刺及流式细胞术以明确是否合并急性髓系白血病（AML）。若骨髓中原始细胞<20%且无其他部位受累，按单纯髓系肉瘤处理；若骨髓符合AML诊断，则按AML标准方案治疗。同时需根据患者年龄、肝肾功能及心脏功能（蒽环类药物心脏毒性）调整药物剂量。\n3. **安全性与监测**：治疗期间需严密监测血常规、肝肾功能及凝血功能，预防感染、出血及肿瘤溶解综合征。化疗期间若出现高热、严重出血、呼吸困难或意识改变，需立即就医。定期复查眼部超声及MRI评估肿块消退情况，并警惕中枢神经系统受累风险。",
+        "overallScore": 0.72,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.8,
+        "personalization": 0.6,
+        "reasoning": "方案安全且符合标准，但遗漏心脏评估、生育咨询及具体输血阈值等关键细节。",
+        "reference": "对此例眼眶髓系肉瘤启动阿糖胞苷和多柔比星诱导化疗；根据髓外髓系肉瘤的标准肿瘤学实践/指南，无论骨髓原始细胞百分比如何，均按等同AML处理。记录其血液学背景为伴原始细胞增多的MDS并发髓系肉瘤。在使用多柔比星前，进行基线心脏风险评估，包括心脏病史回顾和超声心动图以记录LVEF；如心功能受损，则调整剂量或改用替代方案。开始诱导治疗前，视情况进行化疗前妊娠检测，并提供避孕及生育力保存咨询。提供积极的支持治疗，包括当血红蛋白<80 g/L时输注浓缩红细胞、当血小板计数<20×10⁹/L时输注血小板，同时给予止吐治疗和感染预防。紧急转诊血液科会诊，鉴于高危细胞遗传学异常，评估是否适合同种异体造血干细胞移植。安排每周CBC监测和眼科随访以观察症状进展；如出现视力改变、发热或出血，立即进行急诊评估。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "髓系肉瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "磁共振成像（MRI）",
+          "组织病理学检查",
+          "免疫组织化学（IHC）",
+          "骨髓穿刺和活检（BMAB）",
+          "细胞遗传学分析"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "对此例眼眶髓系肉瘤启动阿糖胞苷和多柔比星诱导化疗；根据髓外髓系肉瘤的标准肿瘤学实践/指南，无论骨髓原始细胞百分比如何，均按等同AML处理。记录其血液学背景为伴原始细胞增多的MDS并发髓系肉瘤。在使用多柔比星前，进行基线心脏风险评估，包括心脏病史回顾和超声心动图以记录LVEF；如心功能受损，则调整剂量或改用替代方案。开始诱导治疗前，视情况进行化疗前妊娠检测，并提供避孕及生育力保存咨询。提供积极的支持治疗，包括当血红蛋白<80 g/L时输注浓缩红细胞、当血小板计数<20×10⁹/L时输注血小板，同时给予止吐治疗和感染预防。紧急转诊血液科会诊，鉴于高危细胞遗传学异常，评估是否适合同种异体造血干细胞移植。安排每周CBC监测和眼科随访以观察症状进展；如出现视力改变、发热或出血，立即进行急诊评估。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者为左上眼睑硬痛性肿块伴乏力及近期体重下降，无发热出血，需警惕髓系肉瘤等血液系统恶性肿瘤。",
+        "diagnosis_reflection": "诊断准确命中髓系肉瘤，成功识别了眼眶肿块与全身消耗症状（乏力、消瘦）的关联，未受患者网络自查干扰。",
+        "examination_reflection": "检查选择严重偏离预期，错误依赖局部影像和细针穿刺，遗漏了确诊及分期关键的全血细胞计数、骨髓穿刺活检、MRI及免疫组化等系统性检查。",
+        "treatment_reflection": "治疗方案框架正确（化疗+放疗），但缺乏心脏功能评估、生育力保存咨询及具体的输血阈值支持治疗细节，导致个性化评分不足。",
+        "future_strategy": "面对疑似髓外肿瘤伴全身症状时，应优先完善血常规、骨髓及全身影像学以明确是否合并白血病；制定方案时需同步纳入器官功能评估与支持治疗标准。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T14:32:34.966717+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_03511",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "髓系肉瘤"
+    ],
+    "treatment_plan": "1. **主要治疗**：确诊为髓系肉瘤（粒细胞肉瘤）后，需立即启动全身化疗以控制白血病进程。首选方案通常为“阿糖胞苷 + 蒽环类药物”诱导缓解治疗（如DA方案），若患者年龄较大或体能状态较差，可考虑去甲基化药物联合低剂量阿糖胞苷。针对眼眶局部肿块，在全身化疗起效前或化疗后残留病灶，可评估是否联合局部放疗以提高局部控制率。\n2. **个性化调整**：鉴于患者表现为孤立性眼眶肿块伴乏力、体重下降，且细针穿刺提示大量未成熟髓系母细胞，需紧急完善骨髓穿刺及流式细胞术以明确是否合并急性髓系白血病（AML）。若骨髓中原始细胞<20%且无其他部位受累，按单纯髓系肉瘤处理；若骨髓符合AML诊断，则按AML标准方案治疗。同时需根据患者年龄、肝肾功能及心脏功能（蒽环类药物心脏毒性）调整药物剂量。\n3. **安全性与监测**：治疗期间需严密监测血常规、肝肾功能及凝血功能，预防感染、出血及肿瘤溶解综合征。化疗期间若出现高热、严重出血、呼吸困难或意识改变，需立即就医。定期复查眼部超声及MRI评估肿块消退情况，并警惕中枢神经系统受累风险。",
+    "reasoning": "患者为中年男性，主诉左上眼睑疼痛性肿块伴乏力、消瘦。影像学显示眶外软组织实性占位伴丰富血流，但皮肤活检未见肿瘤性改变，排除了表皮来源肿瘤。关键证据在于细针穿刺细胞学检查（FNAC）发现大量未成熟髓系母细胞，形态符合急性髓系白血病特征。结合临床表现（无痛/痛性肿块、B症状）及病理结果，最可能的诊断为髓系肉瘤（即粒细胞肉瘤），这是急性髓系白血病在骨髓外的常见表现，常首发于眼眶等部位。因此诊断定为髓系肉瘤，治疗需参照急性髓系白血病进行全身化疗，并兼顾局部病灶处理。",
+    "ordered_examinations": [
+      "眼部超声",
+      "软组织超声",
+      "皮肤活检",
+      "细针穿刺细胞学检查（FNAC）"
+    ],
+    "conversation_rounds": 3,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_03511",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.72,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.8,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "髓系肉瘤"
+      ],
+      "expected": [
+        "髓系肉瘤"
+      ],
+      "matched": [
+        "髓系肉瘤"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "眼部超声",
+        "软组织超声",
+        "皮肤活检",
+        "细针穿刺细胞学检查（FNAC）"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "磁共振成像（MRI）",
+        "组织病理学检查",
+        "免疫组织化学（IHC）",
+        "骨髓穿刺和活检（BMAB）",
+        "细胞遗传学分析"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. **主要治疗**：确诊为髓系肉瘤（粒细胞肉瘤）后，需立即启动全身化疗以控制白血病进程。首选方案通常为“阿糖胞苷 + 蒽环类药物”诱导缓解治疗（如DA方案），若患者年龄较大或体能状态较差，可考虑去甲基化药物联合低剂量阿糖胞苷。针对眼眶局部肿块，在全身化疗起效前或化疗后残留病灶，可评估是否联合局部放疗以提高局部控制率。\n2. **个性化调整**：鉴于患者表现为孤立性眼眶肿块伴乏力、体重下降，且细针穿刺提示大量未成熟髓系母细胞，需紧急完善骨髓穿刺及流式细胞术以明确是否合并急性髓系白血病（AML）。若骨髓中原始细胞<20%且无其他部位受累，按单纯髓系肉瘤处理；若骨髓符合AML诊断，则按AML标准方案治疗。同时需根据患者年龄、肝肾功能及心脏功能（蒽环类药物心脏毒性）调整药物剂量。\n3. **安全性与监测**：治疗期间需严密监测血常规、肝肾功能及凝血功能，预防感染、出血及肿瘤溶解综合征。化疗期间若出现高热、严重出血、呼吸困难或意识改变，需立即就医。定期复查眼部超声及MRI评估肿块消退情况，并警惕中枢神经系统受累风险。",
+      "overallScore": 0.72,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.8,
+      "personalization": 0.6,
+      "reasoning": "方案安全且符合标准，但遗漏心脏评估、生育咨询及具体输血阈值等关键细节。",
+      "reference": "对此例眼眶髓系肉瘤启动阿糖胞苷和多柔比星诱导化疗；根据髓外髓系肉瘤的标准肿瘤学实践/指南，无论骨髓原始细胞百分比如何，均按等同AML处理。记录其血液学背景为伴原始细胞增多的MDS并发髓系肉瘤。在使用多柔比星前，进行基线心脏风险评估，包括心脏病史回顾和超声心动图以记录LVEF；如心功能受损，则调整剂量或改用替代方案。开始诱导治疗前，视情况进行化疗前妊娠检测，并提供避孕及生育力保存咨询。提供积极的支持治疗，包括当血红蛋白<80 g/L时输注浓缩红细胞、当血小板计数<20×10⁹/L时输注血小板，同时给予止吐治疗和感染预防。紧急转诊血液科会诊，鉴于高危细胞遗传学异常，评估是否适合同种异体造血干细胞移植。安排每周CBC监测和眼科随访以观察症状进展；如出现视力改变、发热或出血，立即进行急诊评估。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "髓系肉瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "磁共振成像（MRI）",
+        "组织病理学检查",
+        "免疫组织化学（IHC）",
+        "骨髓穿刺和活检（BMAB）",
+        "细胞遗传学分析"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "对此例眼眶髓系肉瘤启动阿糖胞苷和多柔比星诱导化疗；根据髓外髓系肉瘤的标准肿瘤学实践/指南，无论骨髓原始细胞百分比如何，均按等同AML处理。记录其血液学背景为伴原始细胞增多的MDS并发髓系肉瘤。在使用多柔比星前，进行基线心脏风险评估，包括心脏病史回顾和超声心动图以记录LVEF；如心功能受损，则调整剂量或改用替代方案。开始诱导治疗前，视情况进行化疗前妊娠检测，并提供避孕及生育力保存咨询。提供积极的支持治疗，包括当血红蛋白<80 g/L时输注浓缩红细胞、当血小板计数<20×10⁹/L时输注血小板，同时给予止吐治疗和感染预防。紧急转诊血液科会诊，鉴于高危细胞遗传学异常，评估是否适合同种异体造血干细胞移植。安排每周CBC监测和眼科随访以观察症状进展；如出现视力改变、发热或出血，立即进行急诊评估。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者为左上眼睑硬痛性肿块伴乏力及近期体重下降，无发热出血，需警惕髓系肉瘤等血液系统恶性肿瘤。",
+      "diagnosis_reflection": "诊断准确命中髓系肉瘤，成功识别了眼眶肿块与全身消耗症状（乏力、消瘦）的关联，未受患者网络自查干扰。",
+      "examination_reflection": "检查选择严重偏离预期，错误依赖局部影像和细针穿刺，遗漏了确诊及分期关键的全血细胞计数、骨髓穿刺活检、MRI及免疫组化等系统性检查。",
+      "treatment_reflection": "治疗方案框架正确（化疗+放疗），但缺乏心脏功能评估、生育力保存咨询及具体的输血阈值支持治疗细节，导致个性化评分不足。",
+      "future_strategy": "面对疑似髓外肿瘤伴全身症状时，应优先完善血常规、骨髓及全身影像学以明确是否合并白血病；制定方案时需同步纳入器官功能评估与支持治疗标准。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/100.json#/applied_memory"
+  }
+}

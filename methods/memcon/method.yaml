@@ -1,0 +1,64 @@
+{
+  "interface_version": 3,
+  "method_id": "memcon",
+  "name": "MemCon",
+  "summary": "Event-driven task context, G-Memory experiences, insights, and policy feedback.",
+  "version": "2",
+  "paper_url": null,
+  "repository_url": "https://github.com/amazon-science/MemCon",
+  "source_subdir": null,
+  "recommended_executor": "in_process",
+  "fidelity": "native_memory_policy_adapter",
+  "implementation_strategy": "g_memory_policy_boundary",
+  "capabilities": {
+    "modalities": ["text"],
+    "forms": ["procedural", "graph", "policy"],
+    "operations": ["index", "add", "search", "episode_end", "reset", "save", "load"],
+    "integration_slots": ["context", "episode"],
+    "accepted_events": ["action", "observation", "tool_result", "feedback", "episode_start", "episode_end", "message"],
+    "scopes": ["user", "agent", "team", "session", "run"],
+    "default_scope": "user",
+    "required_episode_fields": ["success", "task", "trajectory"],
+    "supports_persistence": true,
+    "supports_async": true,
+    "read_only_mode": "snapshot"
+  },
+  "storage": {"kind": "local_files", "backend": "MemCon G-Memory and policy snapshot", "path_parameters": {"storage_path": "directory"}, "supports_snapshot": true},
+  "requirements": {"python": [], "services": []},
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "profile": {"type": "string", "enum": ["default"], "default": "default"},
+      "top_k": {"type": "integer", "minimum": 1, "default": 5},
+      "successful_topk": {"type": "integer", "minimum": 0, "default": 1},
+      "failed_topk": {"type": "integer", "minimum": 0, "default": 0},
+      "insight_topk": {"type": "integer", "minimum": 0, "default": 5},
+      "threshold": {"type": "number", "minimum": 0, "default": 0.0},
+      "storage_path": {"type": "string"}
+    },
+    "x-variants": {"default": {"top_k": 5, "successful_topk": 1, "failed_topk": 0, "insight_topk": 5, "threshold": 0.0}}
+  },
+  "input_schemas": {
+    "event": {
+      "type": "object",
+      "properties": {
+        "task": {"type": "string"},
+        "task_main": {"type": "string"},
+        "task_description": {"type": "string"},
+        "action": {"type": "string"},
+        "observation": {"type": "string"},
+        "reward": {"type": "number"},
+        "done": {"type": "boolean"}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "implementation_notes": [
+    "Preserves the MemCon event stream, pending action pairing, task context isolation, G-Memory success/failure/insight retrieval, policy feedback order, and logical save/load state.",
+    "The adapter accepts an injected native-compatible instance through memcon.instance or a service factory; the bundled fallback adds observable policy actions, discounted episode credit, and generalized success plans for deterministic framework verification.",
+    "Original MemCon/G-Memory source revision: aa15afc9406aab8854b957ebfea08816997de882."
+  ],
+  "limitations": ["The fallback does not implement the upstream Chroma embedding store, LLM key-step/failure extraction, or full UCB MemoryPolicy/MDP. Use an injected native-compatible backend with a compatibility snapshot shim for the full upstream stack."],
+  "tags": ["episodic", "procedural", "graph", "policy-control"]
+}

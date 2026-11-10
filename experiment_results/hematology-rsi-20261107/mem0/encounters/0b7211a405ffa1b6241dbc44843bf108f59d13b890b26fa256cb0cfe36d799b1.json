@@ -1,0 +1,392 @@
+{
+  "patient_id": "Patient_07033",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和既往病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，我最近总觉得浑身不对劲。感冒好久了，现在特别累，动一下就喘。身上还容易青一块紫一块，有时候会发烧，骨头也隐隐作痛，特别是晚上。刷牙时还会出血，我觉得很害怕，不知道哪里出了问题。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现出发热、乏力、出血倾向（牙龈出血、瘀斑）、骨痛等典型血液系统疾病症状，目前尚未进行任何检查。为了明确诊断，必须优先进行血常规和凝血功能检查以评估血细胞计数及凝血状态，这是诊断的关键步骤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为发热、乏力、活动后气短、易 bruising（出血倾向）、牙龈出血及骨痛，这些症状高度提示血液系统疾病（如白血病、再生障碍性贫血或血小板减少症）。血常规和血涂片是评估贫血、感染、出血风险及发现异常细胞的首选且最关键的初步检查，能直接指导后续诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"外周血涂片\", \"凝血功能全套\"], \"reason\": \"患者表现为发热、乏力、活动后气短、易出血（牙龈出血、皮肤瘀斑）、骨痛及夜间症状，高度怀疑血液系统疾病（如白血病或再生障碍性贫血等）。首先需要进行全血细胞计数（CBC）评估贫血、血小板减少及白细胞异常；外周血涂片可观察血细胞形态及有无原始细胞；凝血功能全套用于评估出血倾向的机制。这些是初步诊断血液系统疾病的关键检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：28.6 x 10^9/L [参考范围：4.5-13.0 x 10^9/L]\", \"血红蛋白\": \"Hgb：88 g/L [参考范围：130-170 g/L]\", \"血小板计数\": \"PLT：32 x 10^9/L [参考范围：150-450 x 10^9/L]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"外周血涂片\": {\"result\": {\"异型细胞或原始细胞\": \"可见大量循环淋巴母细胞，核质比高、胞质稀少\", \"血小板数量\": \"血小板减少明显［参考值：数量充足（估计150,000-400,000/μL）。］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"异型细胞或原始细胞\", \"血小板数量\"]}, \"凝血功能全套\": {\"result\": {\"凝血酶原时间\": \"PT：15.8 s [参考范围：11-13.5 s]\", \"国际标准化比值\": \"INR：1.4 [参考范围：0.8-1.2]\", \"D-二聚体\": \"D-二聚体：1.2 mg/L FEU [参考范围：<0.5 mg/L FEU]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"凝血酶原时间\", \"国际标准化比值\", \"D-二聚体\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有发热、乏力、出血倾向及骨痛症状，血常规显示白细胞显著升高伴贫血和血小板减少，外周血涂片发现大量淋巴母细胞，结合临床表现和检查结果，高度提示急性淋巴细胞白血病（ALL），信息已足够进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为发热、乏力、出血倾向（牙龈出血、瘀斑）及骨痛，全血细胞计数显示白细胞显著升高、贫血和血小板减少。外周血涂片发现大量循环淋巴母细胞，高度提示急性白血病（如B-ALL）。凝血功能异常可能继发于白血病或弥散性血管内凝血（DIC）。这些症状和检查结果均属于血液系统恶性肿瘤的典型表现，需由血液科进行确诊和治疗。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"急性淋巴细胞白血病\", \"treatment_plan\": \"1. 紧急处理与支持治疗：立即住院隔离，预防感染。针对严重血小板减少（PLT 32×10^9/L）及出血倾向，输注单采血小板；纠正贫血（Hgb 88 g/L），必要时输注红细胞；监测凝血功能，若活动性出血或D-二聚体显著升高，酌情补充新鲜冰冻血浆或抗纤溶药物。2. 诱导缓解化疗：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中大量原始细胞，达到完全缓解。3. 风险分层与巩固治疗：根据年龄、白细胞计数及微小残留病（MRD）检测结果进行风险分层，后续进行强化疗、中枢神经系统预防（鞘内注射甲氨蝶呤等）及可能的造血干细胞移植评估。4. 个性化调整：患者有骨痛及发热史，提示肿瘤负荷高且可能合并感染，化疗期间需严密监测体温及血象，预防肿瘤溶解综合征。5. 安全性监测：化疗期间每日监测血常规、肝肾功能及电解质；警惕严重感染、出血、静脉血栓及过敏反应；若出现高热不退、意识改变或大出血，立即急诊处理。\", \"reasoning\": \"诊断依据：患者表现为全血细胞减少伴白细胞异常升高（WBC 28.6×10^9/L），外周血涂片发现大量循环淋巴母细胞（核质比高、胞质稀少），结合临床发热、乏力、骨痛及出血症状，高度符合急性淋巴细胞白血病（ALL）特征。治疗方案选择基于ALL的标准诊疗指南，强调快速诱导缓解以控制病情，同时兼顾患者当前的出血风险和感染风险，制定个体化的支持与化疗计划。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_07033",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_04183's laboratory results showed severe thrombocytosis (PLT: 1350 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and elevated D-dimer (0.78 mg/L FEU) with normal PT and aPTT.",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L)."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，我最近总觉得浑身不对劲。感冒好久了，现在特别累，动一下就喘。身上还容易青一块紫一块，有时候会发烧，骨头也隐隐作痛，特别是晚上。刷牙时还会出血，我觉得很害怕，不知道哪里出了问题。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：28.6 x 10^9/L [参考范围：4.5-13.0 x 10^9/L]",
+          "血红蛋白": "Hgb：88 g/L [参考范围：130-170 g/L]",
+          "血小板计数": "PLT：32 x 10^9/L [参考范围：150-450 x 10^9/L]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "外周血涂片": {
+        "result": {
+          "异型细胞或原始细胞": "可见大量循环淋巴母细胞，核质比高、胞质稀少",
+          "血小板数量": "血小板减少明显［参考值：数量充足（估计150,000-400,000/μL）。］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "异型细胞或原始细胞",
+          "血小板数量"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "凝血酶原时间": "PT：15.8 s [参考范围：11-13.5 s]",
+          "国际标准化比值": "INR：1.4 [参考范围：0.8-1.2]",
+          "D-二聚体": "D-二聚体：1.2 mg/L FEU [参考范围：<0.5 mg/L FEU]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "凝血酶原时间",
+          "国际标准化比值",
+          "D-二聚体"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不舒服的症状？比如是否有发热、乏力、出血点或骨关节疼痛等情况？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和既往病史。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现出发热、乏力、出血倾向（牙龈出血、瘀斑）、骨痛等典型血液系统疾病症状，目前尚未进行任何检查。为了明确诊断，必须优先进行血常规和凝血功能检查以评估血细胞计数及凝血状态，这是诊断的关键步骤。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有发热、乏力、出血倾向及骨痛症状，血常规显示白细胞显著升高伴贫血和血小板减少，外周血涂片发现大量淋巴母细胞，结合临床表现和检查结果，高度提示急性淋巴细胞白血病（ALL），信息已足够进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "reason": "患者表现为发热、乏力、活动后气短、易出血（牙龈出血、皮肤瘀斑）、骨痛及夜间症状，高度怀疑血液系统疾病（如白血病或再生障碍性贫血等）。首先需要进行全血细胞计数（CBC）评估贫血、血小板减少及白细胞异常；外周血涂片可观察血细胞形态及有无原始细胞；凝血功能全套用于评估出血倾向的机制。这些是初步诊断血液系统疾病的关键检查。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "急性淋巴细胞白血病",
+      "treatment_plan": "1. 紧急处理与支持治疗：立即住院隔离，预防感染。针对严重血小板减少（PLT 32×10^9/L）及出血倾向，输注单采血小板；纠正贫血（Hgb 88 g/L），必要时输注红细胞；监测凝血功能，若活动性出血或D-二聚体显著升高，酌情补充新鲜冰冻血浆或抗纤溶药物。2. 诱导缓解化疗：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中大量原始细胞，达到完全缓解。3. 风险分层与巩固治疗：根据年龄、白细胞计数及微小残留病（MRD）检测结果进行风险分层，后续进行强化疗、中枢神经系统预防（鞘内注射甲氨蝶呤等）及可能的造血干细胞移植评估。4. 个性化调整：患者有骨痛及发热史，提示肿瘤负荷高且可能合并感染，化疗期间需严密监测体温及血象，预防肿瘤溶解综合征。5. 安全性监测：化疗期间每日监测血常规、肝肾功能及电解质；警惕严重感染、出血、静脉血栓及过敏反应；若出现高热不退、意识改变或大出血，立即急诊处理。",
+      "reasoning": "诊断依据：患者表现为全血细胞减少伴白细胞异常升高（WBC 28.6×10^9/L），外周血涂片发现大量循环淋巴母细胞（核质比高、胞质稀少），结合临床发热、乏力、骨痛及出血症状，高度符合急性淋巴细胞白血病（ALL）特征。治疗方案选择基于ALL的标准诊疗指南，强调快速诱导缓解以控制病情，同时兼顾患者当前的出血风险和感染风险，制定个体化的支持与化疗计划。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_07033",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 1.0,
+      "treatmentOverallScore": 0.58,
+      "treatmentSafety": 0.8,
+      "treatmentEffectivenessAlignment": 0.6,
+      "treatmentPersonalization": 0.8,
+      "diagnosisDetail": {
+        "submitted": [
+          "急性淋巴细胞白血病"
+        ],
+        "expected": [
+          "急性淋巴细胞白血病"
+        ],
+        "matched": [
+          "急性淋巴细胞白血病"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "荧光原位杂交（FISH）",
+          "脑脊液（CSF）分析",
+          "综合代谢面板（CMP）",
+          "凝血功能全套"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "凝血功能全套"
+        ],
+        "precision": 1.0,
+        "coverage": 0.3,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 紧急处理与支持治疗：立即住院隔离，预防感染。针对严重血小板减少（PLT 32×10^9/L）及出血倾向，输注单采血小板；纠正贫血（Hgb 88 g/L），必要时输注红细胞；监测凝血功能，若活动性出血或D-二聚体显著升高，酌情补充新鲜冰冻血浆或抗纤溶药物。2. 诱导缓解化疗：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中大量原始细胞，达到完全缓解。3. 风险分层与巩固治疗：根据年龄、白细胞计数及微小残留病（MRD）检测结果进行风险分层，后续进行强化疗、中枢神经系统预防（鞘内注射甲氨蝶呤等）及可能的造血干细胞移植评估。4. 个性化调整：患者有骨痛及发热史，提示肿瘤负荷高且可能合并感染，化疗期间需严密监测体温及血象，预防肿瘤溶解综合征。5. 安全性监测：化疗期间每日监测血常规、肝肾功能及电解质；警惕严重感染、出血、静脉血栓及过敏反应；若出现高热不退、意识改变或大出血，立即急诊处理。",
+        "overallScore": 0.58,
+        "safety": 0.8,
+        "effectivenessAlignment": 0.6,
+        "personalization": 0.8,
+        "reasoning": "方案未明确禁用禁忌药物，但遗漏关键支持细节及个体化调整。",
+        "reference": "开始CVDLD诱导治疗（环磷酰胺、长春新碱、柔红霉素、地塞米松、PEG-门冬酰胺酶），同时每日积极静脉补液，并使用别嘌醇和按体重调整剂量的拉布立酶，剂量需根据轻度肾功能损害进行调整；输注经照射、去白细胞的血小板，使血小板维持>50×10⁹/L，并输注红细胞使Hb维持≥80 g/L。置于HEPA过滤隔离环境中，使用头孢吡肟直至中性粒细胞>0.5×10⁹/L；发热/疼痛时使用对乙酰氨基酚——避免NSAIDs（包括布洛芬），且禁用阿司匹林/可待因/曲马多/肌内注射。给予软质、无麸质、高蛋白饮食，使用氯己定口腔护理，进行轻柔腿部伸展运动，避免接触性运动；推迟腰椎穿刺，直至血小板≥100×10⁹/L且INR<1.2。鉴于总胆红素（2.1 mg/dL）和肌酐（1.4 mg/dL）升高，应先进行基线肝功能评估（复查LFTs，包括AST/ALT/ALP、直接胆红素、白蛋白），并在诱导期间密切监测；明确高胆红素血症的原因（溶血、肝脏浸润、TLS/其他），如胆红素/转氨酶进一步恶化，则对肝毒性药物（尤其PEG-门冬酰胺酶和蒽环类）按方案标准执行暂停或调整剂量。若出现任何≥38 °C发热、活动性出血、严重黏膜炎或脱水，应立即返院就诊。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "急性淋巴细胞白血病",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "特殊染色",
+          "细胞遗传学分析",
+          "荧光原位杂交（FISH）",
+          "脑脊液（CSF）分析",
+          "综合代谢面板（CMP）",
+          "凝血功能全套"
+        ],
+        "contraindications": {
+          "drugs": [
+            "可待因",
+            "曲马多",
+            "阿司匹林"
+          ],
+          "treatments": [
+            "肌内注射（非必要/择期）",
+            "腰椎穿刺（在血小板计数得到充分纠正之前）"
+          ]
+        },
+        "treatment_plan": "开始CVDLD诱导治疗（环磷酰胺、长春新碱、柔红霉素、地塞米松、PEG-门冬酰胺酶），同时每日积极静脉补液，并使用别嘌醇和按体重调整剂量的拉布立酶，剂量需根据轻度肾功能损害进行调整；输注经照射、去白细胞的血小板，使血小板维持>50×10⁹/L，并输注红细胞使Hb维持≥80 g/L。置于HEPA过滤隔离环境中，使用头孢吡肟直至中性粒细胞>0.5×10⁹/L；发热/疼痛时使用对乙酰氨基酚——避免NSAIDs（包括布洛芬），且禁用阿司匹林/可待因/曲马多/肌内注射。给予软质、无麸质、高蛋白饮食，使用氯己定口腔护理，进行轻柔腿部伸展运动，避免接触性运动；推迟腰椎穿刺，直至血小板≥100×10⁹/L且INR<1.2。鉴于总胆红素（2.1 mg/dL）和肌酐（1.4 mg/dL）升高，应先进行基线肝功能评估（复查LFTs，包括AST/ALT/ALP、直接胆红素、白蛋白），并在诱导期间密切监测；明确高胆红素血症的原因（溶血、肝脏浸润、TLS/其他），如胆红素/转氨酶进一步恶化，则对肝毒性药物（尤其PEG-门冬酰胺酶和蒽环类）按方案标准执行暂停或调整剂量。若出现任何≥38 °C发热、活动性出血、严重黏膜炎或脱水，应立即返院就诊。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为长期感冒后乏力、活动后气促，伴全身瘀斑、牙龈出血、发热及夜间骨痛，提示急性白血病可能。",
+        "diagnosis_reflection": "诊断准确（100%），成功识别出急性淋巴细胞白血病的典型症状组合（贫血、出血、感染、骨痛）。",
+        "examination_reflection": "检查精准度满分但覆盖率不足（30%）。正确选择了初筛的CBC、血涂片和凝血功能，但遗漏了确诊金标准骨髓穿刺活检及流式细胞术等关键分型检查。",
+        "treatment_reflection": "治疗策略方向正确但细节缺失。方案涵盖了紧急支持治疗和诱导化疗原则，但未明确提及肿瘤溶解综合征预防（如别嘌醇/拉布立酶）、特定药物禁忌（如避免NSAIDs和阿司匹林）及基于肝肾功能的具体剂量调整。",
+        "future_strategy": "面对疑似ALL病例，确诊必须包含骨髓穿刺和免疫分型；制定治疗方案时需细化支持治疗细节，特别是TLS预防、出血风险管控及药物禁忌说明。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T10:21:32.240176+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_07033",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "急性淋巴细胞白血病"
+    ],
+    "treatment_plan": "1. 紧急处理与支持治疗：立即住院隔离，预防感染。针对严重血小板减少（PLT 32×10^9/L）及出血倾向，输注单采血小板；纠正贫血（Hgb 88 g/L），必要时输注红细胞；监测凝血功能，若活动性出血或D-二聚体显著升高，酌情补充新鲜冰冻血浆或抗纤溶药物。2. 诱导缓解化疗：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中大量原始细胞，达到完全缓解。3. 风险分层与巩固治疗：根据年龄、白细胞计数及微小残留病（MRD）检测结果进行风险分层，后续进行强化疗、中枢神经系统预防（鞘内注射甲氨蝶呤等）及可能的造血干细胞移植评估。4. 个性化调整：患者有骨痛及发热史，提示肿瘤负荷高且可能合并感染，化疗期间需严密监测体温及血象，预防肿瘤溶解综合征。5. 安全性监测：化疗期间每日监测血常规、肝肾功能及电解质；警惕严重感染、出血、静脉血栓及过敏反应；若出现高热不退、意识改变或大出血，立即急诊处理。",
+    "reasoning": "诊断依据：患者表现为全血细胞减少伴白细胞异常升高（WBC 28.6×10^9/L），外周血涂片发现大量循环淋巴母细胞（核质比高、胞质稀少），结合临床发热、乏力、骨痛及出血症状，高度符合急性淋巴细胞白血病（ALL）特征。治疗方案选择基于ALL的标准诊疗指南，强调快速诱导缓解以控制病情，同时兼顾患者当前的出血风险和感染风险，制定个体化的支持与化疗计划。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "外周血涂片",
+      "凝血功能全套"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_07033",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 1.0,
+    "treatmentOverallScore": 0.58,
+    "treatmentSafety": 0.8,
+    "treatmentEffectivenessAlignment": 0.6,
+    "treatmentPersonalization": 0.8,
+    "diagnosisDetail": {
+      "submitted": [
+        "急性淋巴细胞白血病"
+      ],
+      "expected": [
+        "急性淋巴细胞白血病"
+      ],
+      "matched": [
+        "急性淋巴细胞白血病"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "荧光原位杂交（FISH）",
+        "脑脊液（CSF）分析",
+        "综合代谢面板（CMP）",
+        "凝血功能全套"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "凝血功能全套"
+      ],
+      "precision": 1.0,
+      "coverage": 0.3,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 紧急处理与支持治疗：立即住院隔离，预防感染。针对严重血小板减少（PLT 32×10^9/L）及出血倾向，输注单采血小板；纠正贫血（Hgb 88 g/L），必要时输注红细胞；监测凝血功能，若活动性出血或D-二聚体显著升高，酌情补充新鲜冰冻血浆或抗纤溶药物。2. 诱导缓解化疗：确诊后尽快启动标准化疗方案（如VDLP方案：长春新碱、柔红霉素/阿糖胞苷、左旋门冬酰胺酶、泼尼松），以清除骨髓中大量原始细胞，达到完全缓解。3. 风险分层与巩固治疗：根据年龄、白细胞计数及微小残留病（MRD）检测结果进行风险分层，后续进行强化疗、中枢神经系统预防（鞘内注射甲氨蝶呤等）及可能的造血干细胞移植评估。4. 个性化调整：患者有骨痛及发热史，提示肿瘤负荷高且可能合并感染，化疗期间需严密监测体温及血象，预防肿瘤溶解综合征。5. 安全性监测：化疗期间每日监测血常规、肝肾功能及电解质；警惕严重感染、出血、静脉血栓及过敏反应；若出现高热不退、意识改变或大出血，立即急诊处理。",
+      "overallScore": 0.58,
+      "safety": 0.8,
+      "effectivenessAlignment": 0.6,
+      "personalization": 0.8,
+      "reasoning": "方案未明确禁用禁忌药物，但遗漏关键支持细节及个体化调整。",
+      "reference": "开始CVDLD诱导治疗（环磷酰胺、长春新碱、柔红霉素、地塞米松、PEG-门冬酰胺酶），同时每日积极静脉补液，并使用别嘌醇和按体重调整剂量的拉布立酶，剂量需根据轻度肾功能损害进行调整；输注经照射、去白细胞的血小板，使血小板维持>50×10⁹/L，并输注红细胞使Hb维持≥80 g/L。置于HEPA过滤隔离环境中，使用头孢吡肟直至中性粒细胞>0.5×10⁹/L；发热/疼痛时使用对乙酰氨基酚——避免NSAIDs（包括布洛芬），且禁用阿司匹林/可待因/曲马多/肌内注射。给予软质、无麸质、高蛋白饮食，使用氯己定口腔护理，进行轻柔腿部伸展运动，避免接触性运动；推迟腰椎穿刺，直至血小板≥100×10⁹/L且INR<1.2。鉴于总胆红素（2.1 mg/dL）和肌酐（1.4 mg/dL）升高，应先进行基线肝功能评估（复查LFTs，包括AST/ALT/ALP、直接胆红素、白蛋白），并在诱导期间密切监测；明确高胆红素血症的原因（溶血、肝脏浸润、TLS/其他），如胆红素/转氨酶进一步恶化，则对肝毒性药物（尤其PEG-门冬酰胺酶和蒽环类）按方案标准执行暂停或调整剂量。若出现任何≥38 °C发热、活动性出血、严重黏膜炎或脱水，应立即返院就诊。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "急性淋巴细胞白血病",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "特殊染色",
+        "细胞遗传学分析",
+        "荧光原位杂交（FISH）",
+        "脑脊液（CSF）分析",
+        "综合代谢面板（CMP）",
+        "凝血功能全套"
+      ],
+      "contraindications": {
+        "drugs": [
+          "可待因",
+          "曲马多",
+          "阿司匹林"
+        ],
+        "treatments": [
+          "肌内注射（非必要/择期）",
+          "腰椎穿刺（在血小板计数得到充分纠正之前）"
+        ]
+      },
+      "treatment_plan": "开始CVDLD诱导治疗（环磷酰胺、长春新碱、柔红霉素、地塞米松、PEG-门冬酰胺酶），同时每日积极静脉补液，并使用别嘌醇和按体重调整剂量的拉布立酶，剂量需根据轻度肾功能损害进行调整；输注经照射、去白细胞的血小板，使血小板维持>50×10⁹/L，并输注红细胞使Hb维持≥80 g/L。置于HEPA过滤隔离环境中，使用头孢吡肟直至中性粒细胞>0.5×10⁹/L；发热/疼痛时使用对乙酰氨基酚——避免NSAIDs（包括布洛芬），且禁用阿司匹林/可待因/曲马多/肌内注射。给予软质、无麸质、高蛋白饮食，使用氯己定口腔护理，进行轻柔腿部伸展运动，避免接触性运动；推迟腰椎穿刺，直至血小板≥100×10⁹/L且INR<1.2。鉴于总胆红素（2.1 mg/dL）和肌酐（1.4 mg/dL）升高，应先进行基线肝功能评估（复查LFTs，包括AST/ALT/ALP、直接胆红素、白蛋白），并在诱导期间密切监测；明确高胆红素血症的原因（溶血、肝脏浸润、TLS/其他），如胆红素/转氨酶进一步恶化，则对肝毒性药物（尤其PEG-门冬酰胺酶和蒽环类）按方案标准执行暂停或调整剂量。若出现任何≥38 °C发热、活动性出血、严重黏膜炎或脱水，应立即返院就诊。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为长期感冒后乏力、活动后气促，伴全身瘀斑、牙龈出血、发热及夜间骨痛，提示急性白血病可能。",
+      "diagnosis_reflection": "诊断准确（100%），成功识别出急性淋巴细胞白血病的典型症状组合（贫血、出血、感染、骨痛）。",
+      "examination_reflection": "检查精准度满分但覆盖率不足（30%）。正确选择了初筛的CBC、血涂片和凝血功能，但遗漏了确诊金标准骨髓穿刺活检及流式细胞术等关键分型检查。",
+      "treatment_reflection": "治疗策略方向正确但细节缺失。方案涵盖了紧急支持治疗和诱导化疗原则，但未明确提及肿瘤溶解综合征预防（如别嘌醇/拉布立酶）、特定药物禁忌（如避免NSAIDs和阿司匹林）及基于肝肾功能的具体剂量调整。",
+      "future_strategy": "面对疑似ALL病例，确诊必须包含骨髓穿刺和免疫分型；制定治疗方案时需细化支持治疗细节，特别是TLS预防、出血风险管控及药物禁忌说明。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/049.json#/applied_memory"
+  }
+}

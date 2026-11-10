@@ -1,0 +1,365 @@
+{
+  "patient_id": "Patient_08888",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等表现？\", \"reason\": \"当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的临床症状以评估病情。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等表现？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "医生，我最近十天特别难受！先是手臂出现瘀斑，刷牙也出血，还浑身没劲，爬一层楼就喘不上气。站久了还头晕，偶尔傍晚发低热，嘴里也有痛点。我这老运动员身体怎么成这样了？是不是要出大事？您得给我个明白方案啊！"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为发热、乏力、出血倾向（瘀斑、牙龈出血）、呼吸困难及口腔溃疡，高度怀疑血液系统疾病（如白血病）。目前尚未进行任何检查，急需通过血常规等实验室检查来评估血细胞情况，以明确诊断方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为发热、乏力、牙龈出血、皮肤瘀斑、活动后气促及口腔溃疡，高度提示血液系统疾病（如白血病或再生障碍性贫血等）。血常规是评估贫血、感染及血小板减少最基础且关键的检查，能直接反映外周血细胞数量及形态，对初步诊断和病情评估至关重要。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"凝血功能全套\", \"外周血涂片\"], \"reason\": \"患者表现为出血倾向（牙龈出血、皮肤瘀斑）、乏力、活动后气促、低热及口腔溃疡，高度怀疑血液系统疾病（如白血病或血小板减少症）。首先需进行全血细胞计数（CBC）评估贫血、白细胞异常及血小板数量；凝血功能全套用于排查凝血障碍；外周血涂片可观察血细胞形态，寻找原始细胞以辅助诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血白细胞计数\": \"WBC：2.4 × 10^9/L［参考范围：4.0-10.0 × 10^9/L］\", \"血红蛋白\": \"Hgb：82 g/L［参考范围：120-170 g/L］\", \"血小板计数\": \"PLT：38 × 10^9/L［参考范围：140-380 × 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血白细胞计数\", \"血红蛋白\", \"血小板计数\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"0.62 mg/L FEU［参考值：建议对 >50 岁患者采用年龄校正截断值（年龄[岁] × 0.01 mg/L FEU）］\", \"凝血酶原时间\": \"13.2 秒［参考值：11-13.5 秒（肝功能下降时可能轻度延长）］\", \"凝血酶时间\": \"17.5 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.08［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"30.5 秒［参考值：25-35 秒（因凝血因子VIII升高可能轻度缩短）］\", \"血浆纤维蛋白原\": \"3.8 g/L［参考值：2.0-4.5 g/L（水平通常随年龄增长而升高）］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}, \"外周血涂片\": {\"result\": {\"红细胞形态\": \"大卵圆红细胞，明显异形异大小红细胞\", \"白细胞形态\": \"低颗粒假Pelger-Huet中性粒细胞\", \"异型细胞或原始细胞\": \"偶见循环原始细胞约2%。\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"红细胞形态\", \"白细胞形态\", \"异型细胞或原始细胞\"]}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有出血倾向和发热。外周血涂片显示病态造血特征（大卵圆红细胞、假Pelger-Huet中性粒细胞）及原始细胞（2%）。结合病史和检查结果，高度提示骨髓增生异常综合征（MDS），信息已足够进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有出血倾向和发热。外周血涂片显示病态造血特征（大卵圆红细胞、假Pelger-Huet中性粒细胞）及偶见原始细胞，高度提示骨髓增生异常综合征（MDS）或急性白血病等血液系统恶性肿瘤。这些疾病的诊断和治疗需由血液科专科医生负责。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"骨髓增生异常综合征\", \"treatment_plan\": \"1. 主要治疗：鉴于患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片可见病态造血特征（如大卵圆红细胞、假Pelger-Huet中性粒细胞）及少量原始细胞（2%），符合骨髓增生异常综合征（MDS）诊断。建议尽快行骨髓穿刺及活检、染色体核型分析及基因突变检测以明确分型和预后分层。根据风险分层，低危组可考虑去甲基化药物（如阿扎胞苷或地西他滨）联合支持治疗；高危组需评估是否适合强化疗或异基因造血干细胞移植。\\n2. 个性化调整：患者有出血倾向（牙龈出血、瘀斑）和明显贫血症状（乏力、气短），目前血小板38×10^9/L，暂不需紧急输注血小板，但需密切监测。若出现活动性出血或血小板<20×10^9/L，应立即输注单采血小板。针对贫血症状，可酌情输注浓缩红细胞纠正缺氧，并补充叶酸和维生素B12（排除缺乏后）。\\n3. 安全性与监测：治疗期间需每周复查血常规，监测感染迹象（发热>38℃需立即就医）。避免使用非甾体抗炎药等影响血小板功能的药物。告知患者若出现严重出血、高热不退或呼吸困难，需立即急诊处理。定期随访评估疾病进展及治疗反应。\", \"reasoning\": \"诊断依据：患者全血细胞减少（WBC 2.4, Hgb 82, PLT 38），伴有明显的病态造血表现（大红细胞、异形红细胞、假Pelger-Huet中性粒细胞）及循环原始细胞（2%），且凝血功能正常，排除了急性白血病（原始细胞<5%通常不诊断为AML，除非特定类型）和单纯ITP。结合病史中的出血、乏力、低热等症状，高度提示骨髓增生异常综合征（MDS）。治疗方案需基于MDS的分层管理原则，兼顾改善血象、控制症状及预防并发症。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_08888",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_08508's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (low), Hgb 86 g/L (anemia), and PLT 62 x 10^9/L (thrombocytopenia).",
+      "Patient_04183's laboratory results showed severe thrombocytosis (PLT: 1350 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and elevated D-dimer (0.78 mg/L FEU) with normal PT and aPTT.",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_07050's Complete Blood Count showed WBC 26.4 x 10^9/L, Hgb 86 g/L, and PLT 62 x 10^9/L; Peripheral blood smear revealed significant monocytosis, neutrophil dysplasia, 3% circulating promonocytes/blast cells, and thrombocytopenia.",
+      "Patient_04985's complete blood count showed leukocytosis (WBC 58.4 x 10^9/L), severe anemia (Hgb 86 g/L), and severe thrombocytopenia (PLT 24 x 10^9/L).",
+      "Patient_00634's complete blood count showed significant thrombocytosis (PLT: 1280 x 10^9/L), leukocytosis (WBC: 13.8 x 10^9/L), and mild anemia (Hgb: 128 g/L).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_08330's complete blood count showed leukocytosis (WBC: 38.6 x 10^9/L), anemia (Hgb: 82 g/L), and thrombocytopenia (PLT: 42 x 10^9/L).",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_07033's complete blood count showed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 88 g/L), and severe thrombocytopenia (PLT: 32 x 10^9/L).",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_07050's coagulation profile showed elevated D-dimer (1.85 mg/L FEU), prolonged PT (14.2s), aPTT (36.5s), elevated INR (1.35), and low fibrinogen (1.4 g/L).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_08330's coagulation profile showed elevated D-dimer (2.85 mg/L FEU), prolonged PT (16.2s) and aPTT (38.6s), elevated INR (1.45), prolonged thrombin time (21.5s), and hypofibrinogenemia (fibrinogen: 1.4 g/L).",
+      "Patient_03614's CBC showed mild anemia (Hb 95 g/L) with microcytic hypochromic indices (MCV 72 fL, MCH 24 pg), normal platelets (280 × 10^9/L), and normal WBC count (10.5 × 10^9/L).",
+      "Patient_07450's CBC showed leukocytosis (WBC 28.4 x 10^9/L), anemia (Hgb 92 g/L), and thrombocytopenia (PLT 78 x 10^9/L)",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "User recommended a treatment plan for Patient_04183 including hydroxyurea as first-line cytoreductive therapy to reduce platelets below 500 x 10^9/L, weekly CBC monitoring for two months, and evaluation for acquired von Willebrand syndrome due to active bleeding with PLT >1000 x 10^9/L."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等表现？"
+      },
+      {
+        "from": "patient",
+        "text": "医生，我最近十天特别难受！先是手臂出现瘀斑，刷牙也出血，还浑身没劲，爬一层楼就喘不上气。站久了还头晕，偶尔傍晚发低热，嘴里也有痛点。我这老运动员身体怎么成这样了？是不是要出大事？您得给我个明白方案啊！"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血白细胞计数": "WBC：2.4 × 10^9/L［参考范围：4.0-10.0 × 10^9/L］",
+          "血红蛋白": "Hgb：82 g/L［参考范围：120-170 g/L］",
+          "血小板计数": "PLT：38 × 10^9/L［参考范围：140-380 × 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血白细胞计数",
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "D-二聚体": "0.62 mg/L FEU［参考值：建议对 >50 岁患者采用年龄校正截断值（年龄[岁] × 0.01 mg/L FEU）］",
+          "凝血酶原时间": "13.2 秒［参考值：11-13.5 秒（肝功能下降时可能轻度延长）］",
+          "凝血酶时间": "17.5 秒［参考值：14-19 秒］",
+          "国际标准化比值": "1.08［参考值：0.8-1.2］",
+          "活化部分凝血活酶时间": "30.5 秒［参考值：25-35 秒（因凝血因子VIII升高可能轻度缩短）］",
+          "血浆纤维蛋白原": "3.8 g/L［参考值：2.0-4.5 g/L（水平通常随年龄增长而升高）］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "外周血涂片": {
+        "result": {
+          "红细胞形态": "大卵圆红细胞，明显异形异大小红细胞",
+          "白细胞形态": "低颗粒假Pelger-Huet中性粒细胞",
+          "异型细胞或原始细胞": "偶见循环原始细胞约2%。"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "红细胞形态",
+          "白细胞形态",
+          "异型细胞或原始细胞"
+        ]
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有哪些不适症状？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）或骨关节疼痛等表现？",
+        "reason": "当前没有任何病史信息和检查结果，为了明确诊断方向，首先需要询问患者的临床症状以评估病情。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为发热、乏力、出血倾向（瘀斑、牙龈出血）、呼吸困难及口腔溃疡，高度怀疑血液系统疾病（如白血病）。目前尚未进行任何检查，急需通过血常规等实验室检查来评估血细胞情况，以明确诊断方向。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），伴有出血倾向和发热。外周血涂片显示病态造血特征（大卵圆红细胞、假Pelger-Huet中性粒细胞）及原始细胞（2%）。结合病史和检查结果，高度提示骨髓增生异常综合征（MDS），信息已足够进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片"
+        ],
+        "reason": "患者表现为出血倾向（牙龈出血、皮肤瘀斑）、乏力、活动后气促、低热及口腔溃疡，高度怀疑血液系统疾病（如白血病或血小板减少症）。首先需进行全血细胞计数（CBC）评估贫血、白细胞异常及血小板数量；凝血功能全套用于排查凝血障碍；外周血涂片可观察血细胞形态，寻找原始细胞以辅助诊断。"
+      }
+    ],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "骨髓增生异常综合征",
+      "treatment_plan": "1. 主要治疗：鉴于患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片可见病态造血特征（如大卵圆红细胞、假Pelger-Huet中性粒细胞）及少量原始细胞（2%），符合骨髓增生异常综合征（MDS）诊断。建议尽快行骨髓穿刺及活检、染色体核型分析及基因突变检测以明确分型和预后分层。根据风险分层，低危组可考虑去甲基化药物（如阿扎胞苷或地西他滨）联合支持治疗；高危组需评估是否适合强化疗或异基因造血干细胞移植。\n2. 个性化调整：患者有出血倾向（牙龈出血、瘀斑）和明显贫血症状（乏力、气短），目前血小板38×10^9/L，暂不需紧急输注血小板，但需密切监测。若出现活动性出血或血小板<20×10^9/L，应立即输注单采血小板。针对贫血症状，可酌情输注浓缩红细胞纠正缺氧，并补充叶酸和维生素B12（排除缺乏后）。\n3. 安全性与监测：治疗期间需每周复查血常规，监测感染迹象（发热>38℃需立即就医）。避免使用非甾体抗炎药等影响血小板功能的药物。告知患者若出现严重出血、高热不退或呼吸困难，需立即急诊处理。定期随访评估疾病进展及治疗反应。",
+      "reasoning": "诊断依据：患者全血细胞减少（WBC 2.4, Hgb 82, PLT 38），伴有明显的病态造血表现（大红细胞、异形红细胞、假Pelger-Huet中性粒细胞）及循环原始细胞（2%），且凝血功能正常，排除了急性白血病（原始细胞<5%通常不诊断为AML，除非特定类型）和单纯ITP。结合病史中的出血、乏力、低热等症状，高度提示骨髓增生异常综合征（MDS）。治疗方案需基于MDS的分层管理原则，兼顾改善血象、控制症状及预防并发症。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_08888",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 1.0,
+      "examinationPrecision": 0.6667,
+      "treatmentOverallScore": 0.48,
+      "treatmentSafety": 1.0,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "骨髓增生异常综合征"
+        ],
+        "expected": [
+          "骨髓增生异常综合征"
+        ],
+        "matched": [
+          "骨髓增生异常综合征"
+        ],
+        "accuracy": 1.0,
+        "status": "correct"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "凝血功能全套",
+          "外周血涂片"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "细胞遗传学分析",
+          "基因检测"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "外周血涂片"
+        ],
+        "precision": 0.6666666666666666,
+        "coverage": 0.3333333333333333,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 主要治疗：鉴于患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片可见病态造血特征（如大卵圆红细胞、假Pelger-Huet中性粒细胞）及少量原始细胞（2%），符合骨髓增生异常综合征（MDS）诊断。建议尽快行骨髓穿刺及活检、染色体核型分析及基因突变检测以明确分型和预后分层。根据风险分层，低危组可考虑去甲基化药物（如阿扎胞苷或地西他滨）联合支持治疗；高危组需评估是否适合强化疗或异基因造血干细胞移植。\n2. 个性化调整：患者有出血倾向（牙龈出血、瘀斑）和明显贫血症状（乏力、气短），目前血小板38×10^9/L，暂不需紧急输注血小板，但需密切监测。若出现活动性出血或血小板<20×10^9/L，应立即输注单采血小板。针对贫血症状，可酌情输注浓缩红细胞纠正缺氧，并补充叶酸和维生素B12（排除缺乏后）。\n3. 安全性与监测：治疗期间需每周复查血常规，监测感染迹象（发热>38℃需立即就医）。避免使用非甾体抗炎药等影响血小板功能的药物。告知患者若出现严重出血、高热不退或呼吸困难，需立即急诊处理。定期随访评估疾病进展及治疗反应。",
+        "overallScore": 0.48,
+        "safety": 1.0,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.6,
+        "reasoning": "方案未采用核心药物来那度胺，遗漏关键干预且未针对患者睡眠及运动需求做具体调整。",
+        "reference": "开始使用来那度胺 10 mg，每日一次，用于 del(5q) 型骨髓增生异常综合征，并在继续使用赖诺普利/二甲双胍的基础上加用。支持治疗包括每周使用促红细胞生成素α 40 000 U；当 Hb <80 g/L、或血小板 <20 × 10⁹/L、或出现活动性出血时进行输血。继续保持每天早晨 20 分钟轻柔步行；每日蛋白质摄入增加至 1.2 g/kg；注意睡眠卫生，日落时进行 30 分钟昏暗光线放松程序，并与家人进行视频联系。每 2 周复诊一次，复查全血细胞计数（CBC）并评估症状；若体温 >38 °C、出现新的瘀点/瘀斑、静息时呼吸困难或头晕伴跌倒，应立即就诊。注意：因过敏/禁忌应避免使用青霉素；如怀疑感染或发热性中性粒细胞减少，应选择合适的非青霉素经验性抗生素。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "骨髓增生异常综合征",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "骨髓穿刺和活检（BMAB）",
+          "流式细胞术免疫分型",
+          "细胞遗传学分析",
+          "基因检测"
+        ],
+        "contraindications": {
+          "drugs": [
+            "Penicillin"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "开始使用来那度胺 10 mg，每日一次，用于 del(5q) 型骨髓增生异常综合征，并在继续使用赖诺普利/二甲双胍的基础上加用。支持治疗包括每周使用促红细胞生成素α 40 000 U；当 Hb <80 g/L、或血小板 <20 × 10⁹/L、或出现活动性出血时进行输血。继续保持每天早晨 20 分钟轻柔步行；每日蛋白质摄入增加至 1.2 g/kg；注意睡眠卫生，日落时进行 30 分钟昏暗光线放松程序，并与家人进行视频联系。每 2 周复诊一次，复查全血细胞计数（CBC）并评估症状；若体温 >38 °C、出现新的瘀点/瘀斑、静息时呼吸困难或头晕伴跌倒，应立即就诊。注意：因过敏/禁忌应避免使用青霉素；如怀疑感染或发热性中性粒细胞减少，应选择合适的非青霉素经验性抗生素。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "老年男性，有运动背景，主诉出血倾向（瘀斑、牙龈出血）、乏力气短及低热，提示全血细胞减少风险。",
+        "diagnosis_reflection": "诊断准确命中骨髓增生异常综合征（MDS），成功识别了出血、贫血及发热等典型症状组合。",
+        "examination_reflection": "检查选择存在遗漏，仅开具了基础血常规和涂片，未包含确诊及分型必需的骨髓穿刺活检、流式细胞术及基因检测，导致覆盖度不足。",
+        "treatment_reflection": "治疗策略虽涵盖支持治疗和去甲基化药物方向，但遗漏了针对特定亚型（如del(5q)）的核心药物来那度胺，且未结合患者睡眠与运动需求制定个性化调整方案。",
+        "future_strategy": "面对疑似MDS病例，需立即完善骨髓及分子遗传学检查以明确分型；治疗方案应依据风险分层精准选用靶向药物（如来那度胺），并同步整合生活方式干预与动态监测计划。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T11:02:21.089133+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_08888",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "骨髓增生异常综合征"
+    ],
+    "treatment_plan": "1. 主要治疗：鉴于患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片可见病态造血特征（如大卵圆红细胞、假Pelger-Huet中性粒细胞）及少量原始细胞（2%），符合骨髓增生异常综合征（MDS）诊断。建议尽快行骨髓穿刺及活检、染色体核型分析及基因突变检测以明确分型和预后分层。根据风险分层，低危组可考虑去甲基化药物（如阿扎胞苷或地西他滨）联合支持治疗；高危组需评估是否适合强化疗或异基因造血干细胞移植。\n2. 个性化调整：患者有出血倾向（牙龈出血、瘀斑）和明显贫血症状（乏力、气短），目前血小板38×10^9/L，暂不需紧急输注血小板，但需密切监测。若出现活动性出血或血小板<20×10^9/L，应立即输注单采血小板。针对贫血症状，可酌情输注浓缩红细胞纠正缺氧，并补充叶酸和维生素B12（排除缺乏后）。\n3. 安全性与监测：治疗期间需每周复查血常规，监测感染迹象（发热>38℃需立即就医）。避免使用非甾体抗炎药等影响血小板功能的药物。告知患者若出现严重出血、高热不退或呼吸困难，需立即急诊处理。定期随访评估疾病进展及治疗反应。",
+    "reasoning": "诊断依据：患者全血细胞减少（WBC 2.4, Hgb 82, PLT 38），伴有明显的病态造血表现（大红细胞、异形红细胞、假Pelger-Huet中性粒细胞）及循环原始细胞（2%），且凝血功能正常，排除了急性白血病（原始细胞<5%通常不诊断为AML，除非特定类型）和单纯ITP。结合病史中的出血、乏力、低热等症状，高度提示骨髓增生异常综合征（MDS）。治疗方案需基于MDS的分层管理原则，兼顾改善血象、控制症状及预防并发症。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "凝血功能全套",
+      "外周血涂片"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_08888",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 1.0,
+    "examinationPrecision": 0.6667,
+    "treatmentOverallScore": 0.48,
+    "treatmentSafety": 1.0,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "骨髓增生异常综合征"
+      ],
+      "expected": [
+        "骨髓增生异常综合征"
+      ],
+      "matched": [
+        "骨髓增生异常综合征"
+      ],
+      "accuracy": 1.0,
+      "status": "correct"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "凝血功能全套",
+        "外周血涂片"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "细胞遗传学分析",
+        "基因检测"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "外周血涂片"
+      ],
+      "precision": 0.6666666666666666,
+      "coverage": 0.3333333333333333,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 主要治疗：鉴于患者表现为全血细胞减少（白细胞、血红蛋白、血小板均降低），外周血涂片可见病态造血特征（如大卵圆红细胞、假Pelger-Huet中性粒细胞）及少量原始细胞（2%），符合骨髓增生异常综合征（MDS）诊断。建议尽快行骨髓穿刺及活检、染色体核型分析及基因突变检测以明确分型和预后分层。根据风险分层，低危组可考虑去甲基化药物（如阿扎胞苷或地西他滨）联合支持治疗；高危组需评估是否适合强化疗或异基因造血干细胞移植。\n2. 个性化调整：患者有出血倾向（牙龈出血、瘀斑）和明显贫血症状（乏力、气短），目前血小板38×10^9/L，暂不需紧急输注血小板，但需密切监测。若出现活动性出血或血小板<20×10^9/L，应立即输注单采血小板。针对贫血症状，可酌情输注浓缩红细胞纠正缺氧，并补充叶酸和维生素B12（排除缺乏后）。\n3. 安全性与监测：治疗期间需每周复查血常规，监测感染迹象（发热>38℃需立即就医）。避免使用非甾体抗炎药等影响血小板功能的药物。告知患者若出现严重出血、高热不退或呼吸困难，需立即急诊处理。定期随访评估疾病进展及治疗反应。",
+      "overallScore": 0.48,
+      "safety": 1.0,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.6,
+      "reasoning": "方案未采用核心药物来那度胺，遗漏关键干预且未针对患者睡眠及运动需求做具体调整。",
+      "reference": "开始使用来那度胺 10 mg，每日一次，用于 del(5q) 型骨髓增生异常综合征，并在继续使用赖诺普利/二甲双胍的基础上加用。支持治疗包括每周使用促红细胞生成素α 40 000 U；当 Hb <80 g/L、或血小板 <20 × 10⁹/L、或出现活动性出血时进行输血。继续保持每天早晨 20 分钟轻柔步行；每日蛋白质摄入增加至 1.2 g/kg；注意睡眠卫生，日落时进行 30 分钟昏暗光线放松程序，并与家人进行视频联系。每 2 周复诊一次，复查全血细胞计数（CBC）并评估症状；若体温 >38 °C、出现新的瘀点/瘀斑、静息时呼吸困难或头晕伴跌倒，应立即就诊。注意：因过敏/禁忌应避免使用青霉素；如怀疑感染或发热性中性粒细胞减少，应选择合适的非青霉素经验性抗生素。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "骨髓增生异常综合征",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "骨髓穿刺和活检（BMAB）",
+        "流式细胞术免疫分型",
+        "细胞遗传学分析",
+        "基因检测"
+      ],
+      "contraindications": {
+        "drugs": [
+          "Penicillin"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "开始使用来那度胺 10 mg，每日一次，用于 del(5q) 型骨髓增生异常综合征，并在继续使用赖诺普利/二甲双胍的基础上加用。支持治疗包括每周使用促红细胞生成素α 40 000 U；当 Hb <80 g/L、或血小板 <20 × 10⁹/L、或出现活动性出血时进行输血。继续保持每天早晨 20 分钟轻柔步行；每日蛋白质摄入增加至 1.2 g/kg；注意睡眠卫生，日落时进行 30 分钟昏暗光线放松程序，并与家人进行视频联系。每 2 周复诊一次，复查全血细胞计数（CBC）并评估症状；若体温 >38 °C、出现新的瘀点/瘀斑、静息时呼吸困难或头晕伴跌倒，应立即就诊。注意：因过敏/禁忌应避免使用青霉素；如怀疑感染或发热性中性粒细胞减少，应选择合适的非青霉素经验性抗生素。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "老年男性，有运动背景，主诉出血倾向（瘀斑、牙龈出血）、乏力气短及低热，提示全血细胞减少风险。",
+      "diagnosis_reflection": "诊断准确命中骨髓增生异常综合征（MDS），成功识别了出血、贫血及发热等典型症状组合。",
+      "examination_reflection": "检查选择存在遗漏，仅开具了基础血常规和涂片，未包含确诊及分型必需的骨髓穿刺活检、流式细胞术及基因检测，导致覆盖度不足。",
+      "treatment_reflection": "治疗策略虽涵盖支持治疗和去甲基化药物方向，但遗漏了针对特定亚型（如del(5q)）的核心药物来那度胺，且未结合患者睡眠与运动需求制定个性化调整方案。",
+      "future_strategy": "面对疑似MDS病例，需立即完善骨髓及分子遗传学检查以明确分型；治疗方案应依据风险分层精准选用靶向药物（如来那度胺），并同步整合生活方式干预与动态监测计划。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/059.json#/applied_memory"
+  }
+}

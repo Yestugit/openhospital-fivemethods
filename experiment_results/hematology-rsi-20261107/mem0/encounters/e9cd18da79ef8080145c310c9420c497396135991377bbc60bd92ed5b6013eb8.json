@@ -1,0 +1,248 @@
+{
+  "patient_id": "Patient_06460",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"根据记忆摘要，患者（4岁女童）已出现发热、骨痛、出血倾向等典型症状，实验室检查显示白细胞升高、贫血和严重血小板减少。骨髓检查明确显示82%的淋巴母细胞浸润，且流式细胞术证实为CD20+ B淋巴细胞单克隆浸润，结合外周血涂片发现大量原始淋巴细胞，诊断B细胞急性淋巴细胞白血病（B-ALL）的证据已充分，无需进一步问诊或开检查即可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"血液科\", \"reason\": \"患者为4岁儿童，主要表现为发热、骨痛、出血倾向，实验室检查显示全血细胞减少（贫血、严重血小板减少）及白细胞显著升高，骨髓象提示原始淋巴细胞比例高达82%，临床高度怀疑急性淋巴细胞白血病（ALL）。尽管系统评估指出该病例存在误诊可能（实际可能为嗜酸性粒细胞增多症伴寄生虫感染），但基于当前呈现的危急重症血液学表现（如骨髓大量原始细胞、凝血功能异常、DIC风险），首要且最直接的诊疗需求是进行血液系统的紧急评估、确诊及治疗，因此血液科是最合适的科室。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"嗜酸性粒细胞增多症\", \"treatment_plan\": \"1. 有效性治疗：立即启动抗寄生虫治疗，首选阿苯达唑（400mg，每日2次，疗程7-14天）或伊维菌素（根据体重单次给药），以清除强生线虫感染源；若存在严重过敏反应或器官受累，可短期联合使用糖皮质激素（如泼尼松0.5-1mg/kg/d）控制炎症。2. 个性化调整：鉴于患者为4岁儿童且存在旅行暴露史及粪便虫卵阳性，需严格评估肝肾功能后调整剂量；若确诊为强生线虫超感染综合征，需延长驱虫疗程并密切监测神经毒性风险。3. 安全性与监测：治疗期间需每日监测血常规（重点关注嗜酸性粒细胞计数变化）、肝功能及电解质；警惕药物过敏、胃肠道反应及神经系统症状；若出现呼吸困难、意识改变或出血倾向等危重信号，需立即急诊就医。建议出院后2周复诊复查粪便常规及血象。\", \"reasoning\": \"诊断依据：系统评估明确指出既往ALL诊断错误，正确诊断为与旅行暴露相关的嗜酸性粒细胞增多症，特征包括粪便检出虫卵及强生线虫超感染风险。虽然骨髓曾报告高比例原始细胞，但结合最终系统评价，核心病理为寄生虫感染引发的血液学异常。治疗方案针对病因（寄生虫）进行特异性驱虫，同时兼顾儿童用药安全及并发症预防。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_06460",
+    "mode": "train",
+    "memory_notes": [
+      "User's child's bone marrow examination revealed absent iron stores (Grade 0), normal myeloid-to-erythroid ratio of 3:1, 2% blast cells, and adequate megakaryocytes with normal morphology.",
+      "User was informed that the correct workup for eosinophilia includes CBC, ESR, CRP, allergy testing, fecal O&P, parasitic serology, PFTs, Chest CT, skin biopsy, and bone marrow aspiration/biopsy, none of which were ordered in the erroneous case.",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "User's child's peripheral blood smear shows small cell hypochromic red blood cells with central pallor occupying half the diameter, marked anisocytosis, and target cells, but no parasites or abnormal cells.",
+      "User's child's peripheral blood smear shows small cell hypochromic red blood cells with target cells and polychromasia, but no reactive lymphocytes or blast cells",
+      "User's child's peripheral blood smear showed microcytic hypochromic red blood cells with central pallor occupying half the cell diameter, marked anisocytosis, and target cells, but no parasites, inclusions, or abnormal cells.",
+      "User's child's bone marrow examination showed massive infiltration by lymphoblasts replacing normal hematopoietic tissue, with 82% blast cells, significantly reduced myeloid and erythroid maturation, and abundant primitive B-lymphocytes.",
+      "User's child has severe thrombocytopenia (platelet count 22×10^9/L) with signs of disseminated intravascular coagulation (DIC), including elevated D-dimer and low fibrinogen.",
+      "User's child was diagnosed with iron deficiency anemia based on microcytic hypochromic anemia findings, absent bone marrow iron stores, and target cells on smear, while leukemia and myeloid sarcoma were ruled out.",
+      "User was recommended to admit their child immediately for bone marrow aspiration, biopsy, flow cytometry, and genetic testing to confirm diagnosis, along with strict bed rest and potential platelet transfusion due to low platelet count.",
+      "User's child was diagnosed with Acute Lymphoblastic Leukemia (ALL) based on clinical symptoms (fever, bone pain, bleeding) and diagnostic findings (82% blasts in bone marrow, circulating lymphoblasts).",
+      "The system evaluation revealed the diagnosis of ALL for Patient_00930 was incorrect; the correct diagnosis is Eosinophilia associated with travel exposure history, positive fecal worm eggs, and suspected Strongyloides hyperinfection risk.",
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "User's child's blood test results show hemoglobin of 78 g/L (low), MCV of 68 fL (low), RDW of 18.9% (high), indicating microcytic hypochromic anemia",
+      "User's child requires immediate hospitalization in hematology with protective isolation, strict bed rest, and potential platelet transfusion or fresh frozen plasma due to severe thrombocytopenia and bleeding history.",
+      "User's child's peripheral blood smear revealed numerous circulating lymphoblasts with high nuclear-to-cytoplasmic ratio and scant cytoplasm, along with significant thrombocytopenia.",
+      "User's child was diagnosed with iron deficiency anemia based on clinical symptoms and laboratory findings including microcytic hypochromic anemia and low ferritin levels",
+      "User was presented with a clinical case of Patient_00930, a 4-year-old girl with fever, bone pain, bleeding tendency, Hb 86 g/L, PLT 22×10^9/L, and 82% lymphoblasts in bone marrow, leading to an initial diagnosis of B-cell Acute Lymphoblastic Leukemia (ALL) with a VDLP chemotherapy plan.",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "User's child has microcytic hypochromic anemia with hemoglobin 86 g/L, RBC count 3.10 x 10^12/L, and MCV 72 fL."
+    ],
+    "chat_history": [],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {},
+    "decision_trace": [
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "根据记忆摘要，患者（4岁女童）已出现发热、骨痛、出血倾向等典型症状，实验室检查显示白细胞升高、贫血和严重血小板减少。骨髓检查明确显示82%的淋巴母细胞浸润，且流式细胞术证实为CD20+ B淋巴细胞单克隆浸润，结合外周血涂片发现大量原始淋巴细胞，诊断B细胞急性淋巴细胞白血病（B-ALL）的证据已充分，无需进一步问诊或开检查即可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [],
+    "final_plan": {
+      "department": "血液科",
+      "diagnosis": "嗜酸性粒细胞增多症",
+      "treatment_plan": "1. 有效性治疗：立即启动抗寄生虫治疗，首选阿苯达唑（400mg，每日2次，疗程7-14天）或伊维菌素（根据体重单次给药），以清除强生线虫感染源；若存在严重过敏反应或器官受累，可短期联合使用糖皮质激素（如泼尼松0.5-1mg/kg/d）控制炎症。2. 个性化调整：鉴于患者为4岁儿童且存在旅行暴露史及粪便虫卵阳性，需严格评估肝肾功能后调整剂量；若确诊为强生线虫超感染综合征，需延长驱虫疗程并密切监测神经毒性风险。3. 安全性与监测：治疗期间需每日监测血常规（重点关注嗜酸性粒细胞计数变化）、肝功能及电解质；警惕药物过敏、胃肠道反应及神经系统症状；若出现呼吸困难、意识改变或出血倾向等危重信号，需立即急诊就医。建议出院后2周复诊复查粪便常规及血象。",
+      "reasoning": "诊断依据：系统评估明确指出既往ALL诊断错误，正确诊断为与旅行暴露相关的嗜酸性粒细胞增多症，特征包括粪便检出虫卵及强生线虫超感染风险。虽然骨髓曾报告高比例原始细胞，但结合最终系统评价，核心病理为寄生虫感染引发的血液学异常。治疗方案针对病因（寄生虫）进行特异性驱虫，同时兼顾儿童用药安全及并发症预防。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_06460",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.2,
+      "treatmentPersonalization": 0.2,
+      "diagnosisDetail": {
+        "submitted": [
+          "嗜酸性粒细胞增多症"
+        ],
+        "expected": [
+          "套细胞淋巴瘤"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "流式细胞术免疫分型",
+          "β2-微球蛋白检测",
+          "心肌酶谱",
+          "骨髓穿刺和活检（BMAB）",
+          "淋巴结活检",
+          "免疫组织化学（IHC）",
+          "荧光原位杂交（FISH）",
+          "结肠镜检查"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": false
+      },
+      "treatmentDetail": {
+        "submitted": "1. 有效性治疗：立即启动抗寄生虫治疗，首选阿苯达唑（400mg，每日2次，疗程7-14天）或伊维菌素（根据体重单次给药），以清除强生线虫感染源；若存在严重过敏反应或器官受累，可短期联合使用糖皮质激素（如泼尼松0.5-1mg/kg/d）控制炎症。2. 个性化调整：鉴于患者为4岁儿童且存在旅行暴露史及粪便虫卵阳性，需严格评估肝肾功能后调整剂量；若确诊为强生线虫超感染综合征，需延长驱虫疗程并密切监测神经毒性风险。3. 安全性与监测：治疗期间需每日监测血常规（重点关注嗜酸性粒细胞计数变化）、肝功能及电解质；警惕药物过敏、胃肠道反应及神经系统症状；若出现呼吸困难、意识改变或出血倾向等危重信号，需立即急诊就医。建议出院后2周复诊复查粪便常规及血象。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.2,
+        "personalization": 0.2,
+        "reasoning": "误诊为寄生虫病，方案完全错误且未针对淋巴瘤治疗，严重违背诊疗标准。",
+        "reference": "对III–IV期套细胞淋巴瘤启动R-苯达莫司汀（利妥昔单抗、苯达莫司汀）一线治疗，避免使用含青霉素方案，并考虑到基础慢性肾病，尽量减少肾毒性药物。获取治疗前基线及治疗期间持续的肾功能评估（肌酐/eGFR），并根据肾功能调整苯达莫司汀以及预防性抗病毒治疗（阿昔洛韦或伐昔洛韦）的剂量；明确避免其他肾毒性药物，包括NSAIDs。与风湿科协作，在R-苯达莫司汀治疗期间尽可能暂停/调整甲氨蝶呤并尽量减少糖皮质激素使用，同时制定病情复发管理策略，在可能情况下避免额外免疫抑制。加用粒细胞集落刺激因子支持以降低感染风险。对于贫血（低血红蛋白），进行病因学评估（铁代谢检查、维生素B12/叶酸、网织红细胞计数及溶血指标），并结合慢性肾病和活动性淋巴瘤的背景根据结果处理；如有临床指征，优先考虑输血/支持治疗；仅在证实缺铁时使用静脉铁剂，并在完成评估后谨慎权衡风险获益再考虑ESA。建议严格遵守计划性休息，在耐受范围内进行轻度体力活动，并进行营养补充以改善体重下降和乏力，同时协调居家医疗支持以进行用药管理和监测。安排在两个疗程后复评，复查影像学、血常规和肾功能，并密切监测肿瘤溶解综合征、感染或疾病进展的迹象；如需替代治疗，可考虑BTK抑制剂或转诊进行CAR-T细胞治疗评估。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "套细胞淋巴瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "外周血涂片",
+          "流式细胞术免疫分型",
+          "β2-微球蛋白检测",
+          "心肌酶谱",
+          "骨髓穿刺和活检（BMAB）",
+          "淋巴结活检",
+          "免疫组织化学（IHC）",
+          "荧光原位杂交（FISH）",
+          "结肠镜检查"
+        ],
+        "contraindications": {
+          "drugs": [
+            "青霉素类"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "对III–IV期套细胞淋巴瘤启动R-苯达莫司汀（利妥昔单抗、苯达莫司汀）一线治疗，避免使用含青霉素方案，并考虑到基础慢性肾病，尽量减少肾毒性药物。获取治疗前基线及治疗期间持续的肾功能评估（肌酐/eGFR），并根据肾功能调整苯达莫司汀以及预防性抗病毒治疗（阿昔洛韦或伐昔洛韦）的剂量；明确避免其他肾毒性药物，包括NSAIDs。与风湿科协作，在R-苯达莫司汀治疗期间尽可能暂停/调整甲氨蝶呤并尽量减少糖皮质激素使用，同时制定病情复发管理策略，在可能情况下避免额外免疫抑制。加用粒细胞集落刺激因子支持以降低感染风险。对于贫血（低血红蛋白），进行病因学评估（铁代谢检查、维生素B12/叶酸、网织红细胞计数及溶血指标），并结合慢性肾病和活动性淋巴瘤的背景根据结果处理；如有临床指征，优先考虑输血/支持治疗；仅在证实缺铁时使用静脉铁剂，并在完成评估后谨慎权衡风险获益再考虑ESA。建议严格遵守计划性休息，在耐受范围内进行轻度体力活动，并进行营养补充以改善体重下降和乏力，同时协调居家医疗支持以进行用药管理和监测。安排在两个疗程后复评，复查影像学、血常规和肾功能，并密切监测肿瘤溶解综合征、感染或疾病进展的迹象；如需替代治疗，可考虑BTK抑制剂或转诊进行CAR-T细胞治疗评估。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为嗜酸性粒细胞增多，需警惕血液系统恶性肿瘤（如套细胞淋巴瘤）而非单纯寄生虫感染。",
+        "diagnosis_reflection": "本次误诊为嗜酸性粒细胞增多症（寄生虫相关），未识别出核心疾病套细胞淋巴瘤。关键遗漏在于未能将嗜酸细胞增多与潜在的淋巴增殖性疾病关联，导致诊断方向完全错误。",
+        "examination_reflection": "本次未开具任何检查，严重遗漏了确诊所需的关键步骤。应优先安排全血细胞计数、外周血涂片以初筛，并必须行骨髓穿刺活检、淋巴结活检及流式细胞术免疫分型来明确淋巴瘤诊断及亚型。",
+        "treatment_reflection": "治疗方案完全错误，针对寄生虫使用了驱虫药和激素，而漏掉了套细胞淋巴瘤的标准一线治疗（R-苯达莫司汀方案）。未考虑患者基础肾病对药物剂量的影响，也未制定肿瘤溶解综合征的预防策略。",
+        "future_strategy": "面对不明原因嗜酸性粒细胞显著增高，必须首先排除血液系统恶性肿瘤。诊疗路径应遵循：完善血常规与涂片 -> 骨髓/淋巴结活检 + 流式/FISH -> 确诊后根据分期及合并症选择化疗或靶向方案，严禁在未排除恶性肿瘤前盲目按感染处理。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T08:36:23.884302+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_06460",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "嗜酸性粒细胞增多症"
+    ],
+    "treatment_plan": "1. 有效性治疗：立即启动抗寄生虫治疗，首选阿苯达唑（400mg，每日2次，疗程7-14天）或伊维菌素（根据体重单次给药），以清除强生线虫感染源；若存在严重过敏反应或器官受累，可短期联合使用糖皮质激素（如泼尼松0.5-1mg/kg/d）控制炎症。2. 个性化调整：鉴于患者为4岁儿童且存在旅行暴露史及粪便虫卵阳性，需严格评估肝肾功能后调整剂量；若确诊为强生线虫超感染综合征，需延长驱虫疗程并密切监测神经毒性风险。3. 安全性与监测：治疗期间需每日监测血常规（重点关注嗜酸性粒细胞计数变化）、肝功能及电解质；警惕药物过敏、胃肠道反应及神经系统症状；若出现呼吸困难、意识改变或出血倾向等危重信号，需立即急诊就医。建议出院后2周复诊复查粪便常规及血象。",
+    "reasoning": "诊断依据：系统评估明确指出既往ALL诊断错误，正确诊断为与旅行暴露相关的嗜酸性粒细胞增多症，特征包括粪便检出虫卵及强生线虫超感染风险。虽然骨髓曾报告高比例原始细胞，但结合最终系统评价，核心病理为寄生虫感染引发的血液学异常。治疗方案针对病因（寄生虫）进行特异性驱虫，同时兼顾儿童用药安全及并发症预防。",
+    "ordered_examinations": [],
+    "conversation_rounds": 0,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_06460",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.2,
+    "treatmentPersonalization": 0.2,
+    "diagnosisDetail": {
+      "submitted": [
+        "嗜酸性粒细胞增多症"
+      ],
+      "expected": [
+        "套细胞淋巴瘤"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "流式细胞术免疫分型",
+        "β2-微球蛋白检测",
+        "心肌酶谱",
+        "骨髓穿刺和活检（BMAB）",
+        "淋巴结活检",
+        "免疫组织化学（IHC）",
+        "荧光原位杂交（FISH）",
+        "结肠镜检查"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": false
+    },
+    "treatmentDetail": {
+      "submitted": "1. 有效性治疗：立即启动抗寄生虫治疗，首选阿苯达唑（400mg，每日2次，疗程7-14天）或伊维菌素（根据体重单次给药），以清除强生线虫感染源；若存在严重过敏反应或器官受累，可短期联合使用糖皮质激素（如泼尼松0.5-1mg/kg/d）控制炎症。2. 个性化调整：鉴于患者为4岁儿童且存在旅行暴露史及粪便虫卵阳性，需严格评估肝肾功能后调整剂量；若确诊为强生线虫超感染综合征，需延长驱虫疗程并密切监测神经毒性风险。3. 安全性与监测：治疗期间需每日监测血常规（重点关注嗜酸性粒细胞计数变化）、肝功能及电解质；警惕药物过敏、胃肠道反应及神经系统症状；若出现呼吸困难、意识改变或出血倾向等危重信号，需立即急诊就医。建议出院后2周复诊复查粪便常规及血象。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.2,
+      "personalization": 0.2,
+      "reasoning": "误诊为寄生虫病，方案完全错误且未针对淋巴瘤治疗，严重违背诊疗标准。",
+      "reference": "对III–IV期套细胞淋巴瘤启动R-苯达莫司汀（利妥昔单抗、苯达莫司汀）一线治疗，避免使用含青霉素方案，并考虑到基础慢性肾病，尽量减少肾毒性药物。获取治疗前基线及治疗期间持续的肾功能评估（肌酐/eGFR），并根据肾功能调整苯达莫司汀以及预防性抗病毒治疗（阿昔洛韦或伐昔洛韦）的剂量；明确避免其他肾毒性药物，包括NSAIDs。与风湿科协作，在R-苯达莫司汀治疗期间尽可能暂停/调整甲氨蝶呤并尽量减少糖皮质激素使用，同时制定病情复发管理策略，在可能情况下避免额外免疫抑制。加用粒细胞集落刺激因子支持以降低感染风险。对于贫血（低血红蛋白），进行病因学评估（铁代谢检查、维生素B12/叶酸、网织红细胞计数及溶血指标），并结合慢性肾病和活动性淋巴瘤的背景根据结果处理；如有临床指征，优先考虑输血/支持治疗；仅在证实缺铁时使用静脉铁剂，并在完成评估后谨慎权衡风险获益再考虑ESA。建议严格遵守计划性休息，在耐受范围内进行轻度体力活动，并进行营养补充以改善体重下降和乏力，同时协调居家医疗支持以进行用药管理和监测。安排在两个疗程后复评，复查影像学、血常规和肾功能，并密切监测肿瘤溶解综合征、感染或疾病进展的迹象；如需替代治疗，可考虑BTK抑制剂或转诊进行CAR-T细胞治疗评估。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "套细胞淋巴瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "外周血涂片",
+        "流式细胞术免疫分型",
+        "β2-微球蛋白检测",
+        "心肌酶谱",
+        "骨髓穿刺和活检（BMAB）",
+        "淋巴结活检",
+        "免疫组织化学（IHC）",
+        "荧光原位杂交（FISH）",
+        "结肠镜检查"
+      ],
+      "contraindications": {
+        "drugs": [
+          "青霉素类"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "对III–IV期套细胞淋巴瘤启动R-苯达莫司汀（利妥昔单抗、苯达莫司汀）一线治疗，避免使用含青霉素方案，并考虑到基础慢性肾病，尽量减少肾毒性药物。获取治疗前基线及治疗期间持续的肾功能评估（肌酐/eGFR），并根据肾功能调整苯达莫司汀以及预防性抗病毒治疗（阿昔洛韦或伐昔洛韦）的剂量；明确避免其他肾毒性药物，包括NSAIDs。与风湿科协作，在R-苯达莫司汀治疗期间尽可能暂停/调整甲氨蝶呤并尽量减少糖皮质激素使用，同时制定病情复发管理策略，在可能情况下避免额外免疫抑制。加用粒细胞集落刺激因子支持以降低感染风险。对于贫血（低血红蛋白），进行病因学评估（铁代谢检查、维生素B12/叶酸、网织红细胞计数及溶血指标），并结合慢性肾病和活动性淋巴瘤的背景根据结果处理；如有临床指征，优先考虑输血/支持治疗；仅在证实缺铁时使用静脉铁剂，并在完成评估后谨慎权衡风险获益再考虑ESA。建议严格遵守计划性休息，在耐受范围内进行轻度体力活动，并进行营养补充以改善体重下降和乏力，同时协调居家医疗支持以进行用药管理和监测。安排在两个疗程后复评，复查影像学、血常规和肾功能，并密切监测肿瘤溶解综合征、感染或疾病进展的迹象；如需替代治疗，可考虑BTK抑制剂或转诊进行CAR-T细胞治疗评估。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为嗜酸性粒细胞增多，需警惕血液系统恶性肿瘤（如套细胞淋巴瘤）而非单纯寄生虫感染。",
+      "diagnosis_reflection": "本次误诊为嗜酸性粒细胞增多症（寄生虫相关），未识别出核心疾病套细胞淋巴瘤。关键遗漏在于未能将嗜酸细胞增多与潜在的淋巴增殖性疾病关联，导致诊断方向完全错误。",
+      "examination_reflection": "本次未开具任何检查，严重遗漏了确诊所需的关键步骤。应优先安排全血细胞计数、外周血涂片以初筛，并必须行骨髓穿刺活检、淋巴结活检及流式细胞术免疫分型来明确淋巴瘤诊断及亚型。",
+      "treatment_reflection": "治疗方案完全错误，针对寄生虫使用了驱虫药和激素，而漏掉了套细胞淋巴瘤的标准一线治疗（R-苯达莫司汀方案）。未考虑患者基础肾病对药物剂量的影响，也未制定肿瘤溶解综合征的预防策略。",
+      "future_strategy": "面对不明原因嗜酸性粒细胞显著增高，必须首先排除血液系统恶性肿瘤。诊疗路径应遵循：完善血常规与涂片 -> 骨髓/淋巴结活检 + 流式/FISH -> 确诊后根据分期及合并症选择化疗或靶向方案，严禁在未排除恶性肿瘤前盲目按感染处理。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/012.json#/applied_memory"
+  }
+}

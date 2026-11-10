@@ -1,0 +1,6 @@
+# Native online HotpotQA only; existing ExpeL dependencies remain in requirements.txt.
+requests
+wikipedia==1.4.0
+# Legacy pinned sample -> safe JSON conversion only:
+joblib
+pandas==2.3.3

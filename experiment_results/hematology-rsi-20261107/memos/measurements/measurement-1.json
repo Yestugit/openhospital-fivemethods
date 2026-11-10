@@ -1,0 +1,3160 @@
+{
+  "round": 1,
+  "tokenizer_runtime": "0.22.2",
+  "memory_text_tokens": 26566,
+  "text_layers": {
+    "tree:UserMemory": 5880,
+    "tree:LongTermMemory": 20686
+  },
+  "text_objects": [
+    {
+      "layer": "tree:UserMemory",
+      "identity": "e3b40d63-b5f1-4642-881e-8c895d213fe6",
+      "field": "memory",
+      "tokens": 48
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "db36c27b-f003-4463-932e-d8c8d1ba32b8",
+      "field": "memory",
+      "tokens": 198
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "58629daf-48bf-4b61-a177-0b469a5e19f9",
+      "field": "memory",
+      "tokens": 130
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "8cd6c87a-5a2c-4e00-8de0-191f08f57a28",
+      "field": "memory",
+      "tokens": 38
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "b3f5ca1d-b442-4811-b3e5-55cf7b3784e4",
+      "field": "memory",
+      "tokens": 63
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "86fa5408-484c-4bf2-875d-90e2f05cd126",
+      "field": "memory",
+      "tokens": 93
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "eaa757f6-0c2e-43bc-9f53-09907ae4ad45",
+      "field": "memory",
+      "tokens": 135
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "7a24cdab-307e-4462-ac3c-f305dc74118c",
+      "field": "memory",
+      "tokens": 115
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "e4db1935-9afa-4cda-8eb1-79d544ec53f0",
+      "field": "memory",
+      "tokens": 35
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "14a23c4f-88cd-476e-bbb0-ed534c7123b0",
+      "field": "memory",
+      "tokens": 39
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "880f16d1-9fc5-4803-92f7-ee8a7827c96c",
+      "field": "memory",
+      "tokens": 181
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ddd8d302-bf2d-419a-99c9-f4a7e6abe6b9",
+      "field": "memory",
+      "tokens": 160
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "f65c49b0-7bde-4b08-a59b-2ab07fcc1ce2",
+      "field": "memory",
+      "tokens": 80
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "7669f170-04ab-4018-8354-985c8312fda4",
+      "field": "memory",
+      "tokens": 64
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "d521b51c-bb46-40a0-83e6-05f3470eb4c6",
+      "field": "memory",
+      "tokens": 100
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "81f7dabf-159e-45bc-b0c7-81ec8668e626",
+      "field": "memory",
+      "tokens": 35
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "8d0f7044-ef13-4c4f-a995-0a8a4540189c",
+      "field": "memory",
+      "tokens": 60
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "2a894ad9-686e-4e0c-a6f9-09d2dc8fea98",
+      "field": "memory",
+      "tokens": 122
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "5ece380c-e02a-42b3-a322-79dc903d355a",
+      "field": "memory",
+      "tokens": 56
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "3a1ea843-e1bc-420e-b7f0-fb4ba7d7a43d",
+      "field": "memory",
+      "tokens": 17
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "6650d444-3eb2-46ff-a3e1-e3aaecb6b959",
+      "field": "memory",
+      "tokens": 116
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "9457a404-a05c-4f9e-8625-77d025485b7c",
+      "field": "memory",
+      "tokens": 37
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5a247dbc-280b-4b48-9c4c-b4a88f8d3dda",
+      "field": "memory",
+      "tokens": 105
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "d4ec8328-1708-4a3d-b888-c21ff6707474",
+      "field": "memory",
+      "tokens": 64
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "b96d618b-927a-47f0-999b-7e38d41b1149",
+      "field": "memory",
+      "tokens": 68
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "240aeb31-5e88-4eca-992d-0cce076858cc",
+      "field": "memory",
+      "tokens": 159
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "cf393b2a-1c31-4604-bbec-6797cef918a6",
+      "field": "memory",
+      "tokens": 51
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "4cdc8b9c-ba7e-4d07-998a-6f4d9e49e8a8",
+      "field": "memory",
+      "tokens": 71
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "60827026-1a97-4a40-8dec-cd807167cd91",
+      "field": "memory",
+      "tokens": 75
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "3e44a068-3abe-45c5-ad81-ae27358be8b9",
+      "field": "memory",
+      "tokens": 50
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "515569a2-f161-43d5-8129-44638aed1ef9",
+      "field": "memory",
+      "tokens": 81
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "4d0d3b64-e271-41e5-ae05-26faaf27e92b",
+      "field": "memory",
+      "tokens": 134
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5718a66e-333f-42e9-b028-cc5e35a9ab96",
+      "field": "memory",
+      "tokens": 151
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "dd0f7ef7-edfb-44d9-ba3c-c239667ad938",
+      "field": "memory",
+      "tokens": 214
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "d0d8bd76-ae9e-407e-844e-e7a12f1dcc66",
+      "field": "memory",
+      "tokens": 159
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5c936aef-0f4a-45c1-a43a-b4ca9643d4be",
+      "field": "memory",
+      "tokens": 152
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2b5089e0-5530-4a6f-af86-d5a39990e307",
+      "field": "memory",
+      "tokens": 120
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "13507cb0-6d07-4f8d-85d9-23f8babe2d59",
+      "field": "memory",
+      "tokens": 144
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "65aaa243-1619-425b-83bf-d52e081eb721",
+      "field": "memory",
+      "tokens": 128
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "e0abe526-ede6-49b5-b478-8e02aa11fbc8",
+      "field": "memory",
+      "tokens": 201
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "415b7938-476b-404e-986e-c3ee3d403b20",
+      "field": "memory",
+      "tokens": 156
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ceb01902-6f27-492a-a5bc-ac0c2a1dc8d6",
+      "field": "memory",
+      "tokens": 126
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "dafe3c7d-621c-4de9-a640-70c6d21fae5e",
+      "field": "memory",
+      "tokens": 100
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "c032b743-787f-42c0-9778-845d6d066a4a",
+      "field": "memory",
+      "tokens": 65
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "9d9c7bcd-50ea-4b09-a675-eb977351261d",
+      "field": "memory",
+      "tokens": 170
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "98e19565-c22f-4fd7-80d8-1f336e69a376",
+      "field": "memory",
+      "tokens": 134
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "54d3af6b-a44d-4528-bd35-50c063eab2fa",
+      "field": "memory",
+      "tokens": 175
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "894a746a-d39b-405f-8cb5-2a9cb6724307",
+      "field": "memory",
+      "tokens": 168
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "0431c506-7572-4e14-beb0-25166d405d5c",
+      "field": "memory",
+      "tokens": 132
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "f940a974-c584-459c-a9f5-e955fb862625",
+      "field": "memory",
+      "tokens": 147
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "20eed19d-3373-4ffb-86e2-753ea9a9bc2d",
+      "field": "memory",
+      "tokens": 126
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "688b622d-1ea7-4ab3-b7c3-f652da350398",
+      "field": "memory",
+      "tokens": 191
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "71bc9aa5-d477-4957-874b-623ef6da745b",
+      "field": "memory",
+      "tokens": 195
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "ddf62895-8029-4bbc-b727-783f9783c9d0",
+      "field": "memory",
+      "tokens": 124
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "4988467f-2c81-4f7b-ae4b-1c01e11fb331",
+      "field": "memory",
+      "tokens": 56
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5eed61d5-f8e5-440d-b20b-7a00823a94da",
+      "field": "memory",
+      "tokens": 147
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "abba1a60-bd0e-4306-b5a7-ae27da421ce7",
+      "field": "memory",
+      "tokens": 222
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "0f853e3d-2ba3-4954-872d-1544f4498a57",
+      "field": "memory",
+      "tokens": 88
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "289be69e-ec3b-4be1-872f-1450cc34613e",
+      "field": "memory",
+      "tokens": 62
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "daf89282-ef64-44a4-a403-741d8d7b6c23",
+      "field": "memory",
+      "tokens": 83
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "762968ff-95fe-4302-8cb0-1f9ae0146221",
+      "field": "memory",
+      "tokens": 141
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "47621afd-4507-41af-a031-ded57583354e",
+      "field": "memory",
+      "tokens": 195
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "533567b2-af2f-4e7f-b2a0-8568f7224a3c",
+      "field": "memory",
+      "tokens": 137
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "3eb8925b-15fa-4a7e-a4b6-9ff8145013a0",
+      "field": "memory",
+      "tokens": 238
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ec5e6a0e-b8aa-4cea-a29a-9a29d4da5aee",
+      "field": "memory",
+      "tokens": 115
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "d7e4a78c-0ab5-43c4-bd66-3fd8b375d788",
+      "field": "memory",
+      "tokens": 126
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "0297d730-5617-4a44-a65e-db5c9e875c26",
+      "field": "memory",
+      "tokens": 179
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "0edf5d68-2f21-4535-9535-a6794b30da6a",
+      "field": "memory",
+      "tokens": 179
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "3977b935-fab7-480b-968d-13fcd2dd8aa3",
+      "field": "memory",
+      "tokens": 200
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "e2efecd8-8330-4ad9-a02b-43fb048254ad",
+      "field": "memory",
+      "tokens": 99
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "6299b83c-120c-4744-86f0-3f397c223214",
+      "field": "memory",
+      "tokens": 79
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "138d2d17-d5a3-43b3-9a8b-4e1b4061ff30",
+      "field": "memory",
+      "tokens": 146
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5872e626-0721-4d05-915c-15e7cac36c6c",
+      "field": "memory",
+      "tokens": 161
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "c5284577-7109-4c7d-9203-d068bec75693",
+      "field": "memory",
+      "tokens": 108
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "bab1beaf-4a2a-4579-9492-da4a0fd3972f",
+      "field": "memory",
+      "tokens": 133
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2c50d352-db8b-4048-a66a-db856205fe5c",
+      "field": "memory",
+      "tokens": 113
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2373cd6e-e24c-424b-b17a-75b1be0fe87b",
+      "field": "memory",
+      "tokens": 62
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "49fe1ed3-786a-4862-b128-5cb9a1c02543",
+      "field": "memory",
+      "tokens": 90
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "cc91809c-37d2-4a5c-adf1-3f3cf62b7a4b",
+      "field": "memory",
+      "tokens": 176
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "44d5d8a6-3e6e-4f68-9745-2ebd9582f929",
+      "field": "memory",
+      "tokens": 179
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "b2a29594-664b-4928-b7b3-4a8e24a532ef",
+      "field": "memory",
+      "tokens": 107
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ac36afc9-dcbe-4a74-927b-80a55b685896",
+      "field": "memory",
+      "tokens": 111
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "72e4e73f-7968-44c8-b850-a47c83590cd3",
+      "field": "memory",
+      "tokens": 111
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5cd16759-6a7a-4ee6-b91e-a581ed1133bf",
+      "field": "memory",
+      "tokens": 139
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "395ab5ac-6625-403a-9c9e-97485ab51d49",
+      "field": "memory",
+      "tokens": 104
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "85d500bb-9fb7-4aa7-bb27-66ab46479cad",
+      "field": "memory",
+      "tokens": 106
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "07f8f2f2-f4d9-4357-b0c2-65a15fe76e6b",
+      "field": "memory",
+      "tokens": 141
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "307c173f-8ea2-4164-840d-55b6c111c15c",
+      "field": "memory",
+      "tokens": 197
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "c4da495f-24b7-4bf0-8604-2a75ab93902e",
+      "field": "memory",
+      "tokens": 183
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "1a6c4291-2895-4452-8aff-cb3554e3f4a2",
+      "field": "memory",
+      "tokens": 137
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ac3bfbe0-fb13-424a-b83b-095cf1c2d174",
+      "field": "memory",
+      "tokens": 95
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "e7e70a20-6abf-492f-bae1-c1ec7a03ede2",
+      "field": "memory",
+      "tokens": 76
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "72afdaa9-5541-4a18-a137-dde835e0cfe3",
+      "field": "memory",
+      "tokens": 98
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "7ef9c744-4f9a-4c58-a459-3bf60cea8f0b",
+      "field": "memory",
+      "tokens": 55
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "3ed097e9-fa26-48f3-8c75-4d666a83c5c5",
+      "field": "memory",
+      "tokens": 96
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2e9c0803-74b1-4896-bc0d-924d5d9db994",
+      "field": "memory",
+      "tokens": 207
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "b6efa007-a5bd-46fa-b9f8-7c5ac08782ce",
+      "field": "memory",
+      "tokens": 179
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "caceaced-8fe4-49bc-8911-d78bc1119012",
+      "field": "memory",
+      "tokens": 162
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "df58fb95-8a79-44db-be71-bf13772600d6",
+      "field": "memory",
+      "tokens": 144
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "0a5b2d3a-73fa-4f8b-8ce8-a8c4dcb987ee",
+      "field": "memory",
+      "tokens": 141
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "e7ea4456-24e0-4f33-81b4-550fce6ff9a4",
+      "field": "memory",
+      "tokens": 162
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "940fd081-eb91-4eda-87c7-f6267db22142",
+      "field": "memory",
+      "tokens": 103
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "17b6f270-12f4-4d5b-8dc8-ab160f8a2214",
+      "field": "memory",
+      "tokens": 88
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "8aed640e-2f05-49fe-a427-a4ddaad53471",
+      "field": "memory",
+      "tokens": 105
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ac4ec30b-13d2-46bd-a081-43cf0ab695c1",
+      "field": "memory",
+      "tokens": 91
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "ddcf48cd-da9e-4d36-b68e-67530ba2f11d",
+      "field": "memory",
+      "tokens": 55
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "18bcfd23-a6e6-44c5-b1a0-e50669401253",
+      "field": "memory",
+      "tokens": 62
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "b1c217bd-9ca8-436c-a30b-f7a6afecaf52",
+      "field": "memory",
+      "tokens": 65
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "4c1fbc17-0dc8-465f-b080-c836c5f4a460",
+      "field": "memory",
+      "tokens": 120
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "9d5b2c26-a2db-4b6c-8d85-e42f21103061",
+      "field": "memory",
+      "tokens": 68
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "fc4ebc7b-c062-46be-b365-c3bf589bba09",
+      "field": "memory",
+      "tokens": 123
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "946c4127-6c1d-40f9-bb90-8c2ff9a37bd3",
+      "field": "memory",
+      "tokens": 245
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ffb0a14a-bd05-48bb-aba2-3d52ab335290",
+      "field": "memory",
+      "tokens": 222
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "e95439a9-bcbd-4c83-a6e3-ff53bf3a1539",
+      "field": "memory",
+      "tokens": 71
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "2960b3bd-b016-448f-9a12-512c70c7f64c",
+      "field": "memory",
+      "tokens": 84
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "9ec1d1e1-5c1a-4890-a116-aae0290ae688",
+      "field": "memory",
+      "tokens": 84
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "90997993-03dc-4d96-846b-27fc70cc0683",
+      "field": "memory",
+      "tokens": 55
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "8561e9ca-948a-4208-b948-bf34330abac4",
+      "field": "memory",
+      "tokens": 129
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "cd877f50-3009-4140-818e-5af0d6526d08",
+      "field": "memory",
+      "tokens": 133
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "d5c80a5e-d0fd-4410-984a-c1cd4597980b",
+      "field": "memory",
+      "tokens": 188
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "51f52ade-83af-49c6-b0b3-1278fcd2c9d2",
+      "field": "memory",
+      "tokens": 118
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ba177ab9-39a9-4268-af39-3b115187f205",
+      "field": "memory",
+      "tokens": 131
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "17bd91ee-1fd0-4ea4-8160-54adc0aa6908",
+      "field": "memory",
+      "tokens": 199
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "762b57e0-ab4e-42c3-af11-2a4699798ad2",
+      "field": "memory",
+      "tokens": 134
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2f51e78a-a1d8-480a-8d20-bb58c44949d0",
+      "field": "memory",
+      "tokens": 136
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2f59c6af-7308-417d-8d2c-47f94380a5d0",
+      "field": "memory",
+      "tokens": 228
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "47295fd2-c36f-414e-8c96-aab2b5f0e55e",
+      "field": "memory",
+      "tokens": 38
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "334d635a-3bd8-4479-a25f-38c2da8357a7",
+      "field": "memory",
+      "tokens": 65
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "9681a145-6443-4b68-b42f-6f35f87a14a9",
+      "field": "memory",
+      "tokens": 70
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "7de555bd-b33d-4cc4-8bb2-b5112fae6d55",
+      "field": "memory",
+      "tokens": 63
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "21770822-7a18-44e1-94e7-111594a6421b",
+      "field": "memory",
+      "tokens": 81
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "a9ee1e7c-fcf2-49be-8c4e-20ab5a210980",
+      "field": "memory",
+      "tokens": 123
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "582668a0-4337-445c-8c62-0cda9d5ac889",
+      "field": "memory",
+      "tokens": 166
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ed8f1982-f79a-4591-897d-e01e85bece58",
+      "field": "memory",
+      "tokens": 82
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "8ffd8d5c-ccd7-4479-aa91-e89673469156",
+      "field": "memory",
+      "tokens": 71
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "6dc5205a-7a23-41d8-87ae-8a5ef2f9e489",
+      "field": "memory",
+      "tokens": 75
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "21d59c9b-7067-40b0-8f46-b6229e0e7ccd",
+      "field": "memory",
+      "tokens": 160
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5db33bde-6a90-41a5-87eb-af59c5389c69",
+      "field": "memory",
+      "tokens": 161
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "bc0e8669-b7b9-4c71-919b-4ab2a4e66712",
+      "field": "memory",
+      "tokens": 73
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "3b452a90-ab58-43b2-b7c3-a77696ee2d43",
+      "field": "memory",
+      "tokens": 149
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "d99e8666-4c9b-45c4-a717-1d1636649c24",
+      "field": "memory",
+      "tokens": 117
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "80a4ca00-9400-40a6-bd89-f5cf4806ecd7",
+      "field": "memory",
+      "tokens": 53
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "e8e418c5-56df-46e0-9bd3-111721dfe882",
+      "field": "memory",
+      "tokens": 99
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "f0e08061-6ecf-4329-b1db-881dc7cc4eb1",
+      "field": "memory",
+      "tokens": 141
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "928fcb89-de20-40c1-9911-267ce81fdd85",
+      "field": "memory",
+      "tokens": 107
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "f8325056-4123-444d-ad51-056eca3b869d",
+      "field": "memory",
+      "tokens": 101
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "2b42cc98-22b4-4d76-8f40-452882fd692e",
+      "field": "memory",
+      "tokens": 59
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "f2ccb894-abfb-4624-ad83-1aed1f5fe1e3",
+      "field": "memory",
+      "tokens": 48
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "daf2a5b9-5abb-40d5-a078-ed9fa4d3ced2",
+      "field": "memory",
+      "tokens": 216
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2f9de99b-7580-4c06-8a4e-978848486412",
+      "field": "memory",
+      "tokens": 127
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "3a631be0-db0a-4ced-8d5f-f1caab6e6dca",
+      "field": "memory",
+      "tokens": 133
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "a35b00ea-6cf9-4be6-9a32-83aa979b0fff",
+      "field": "memory",
+      "tokens": 255
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "dd781261-8c87-4b34-9950-d3f2495c9324",
+      "field": "memory",
+      "tokens": 103
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "d56dde2c-4d56-4d48-befe-a832b3341c93",
+      "field": "memory",
+      "tokens": 91
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "dce68fca-2974-4d35-92a9-4bb78e2d0ed5",
+      "field": "memory",
+      "tokens": 264
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "71d76511-a680-45a6-86c0-bbe3b732b5e0",
+      "field": "memory",
+      "tokens": 161
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "016c512d-cc33-4581-86d7-ed9adbf4e647",
+      "field": "memory",
+      "tokens": 64
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "09801fc7-f9eb-48f9-b37d-95e2504c9fd0",
+      "field": "memory",
+      "tokens": 195
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "5de56783-2c10-438e-8245-92a97f08e9d2",
+      "field": "memory",
+      "tokens": 118
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "b9f16b4d-e6ad-475a-9d83-f10c024155da",
+      "field": "memory",
+      "tokens": 138
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ee97c94f-2d20-4b66-b7f6-780b9807a78f",
+      "field": "memory",
+      "tokens": 193
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "22488702-85fd-4bcf-b768-2b8da7bd522c",
+      "field": "memory",
+      "tokens": 111
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "367a75df-ad11-4b4f-8a02-5576d2937374",
+      "field": "memory",
+      "tokens": 182
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "83e0db3b-3fa1-4384-b120-53c3c693d63c",
+      "field": "memory",
+      "tokens": 169
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "be42311f-7f65-47fe-a182-59f3637abcf1",
+      "field": "memory",
+      "tokens": 63
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ca93c517-824e-45e1-8af7-9fd5cadbe98b",
+      "field": "memory",
+      "tokens": 85
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "02509207-d075-4c7b-927c-8a20a4e18e04",
+      "field": "memory",
+      "tokens": 120
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "ae094af0-ca85-438d-ad4a-695176ea0aba",
+      "field": "memory",
+      "tokens": 74
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "bff47acf-000b-4fe5-b28b-43c39c7e298c",
+      "field": "memory",
+      "tokens": 120
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "6e7b6526-bffb-419a-a21d-082dcf01673d",
+      "field": "memory",
+      "tokens": 121
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "33e523ca-0bae-452d-b3ec-ca2472b5ac7a",
+      "field": "memory",
+      "tokens": 85
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "9a3e8066-7973-4957-ab81-4c3678e80bae",
+      "field": "memory",
+      "tokens": 71
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "b226201e-9659-4909-b927-9566d6fcae07",
+      "field": "memory",
+      "tokens": 113
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "bd2685da-e599-4984-a328-a5a68645408f",
+      "field": "memory",
+      "tokens": 100
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "2f6a3e8b-4db4-4e37-b26a-4da1b32e7562",
+      "field": "memory",
+      "tokens": 114
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "885f792e-810c-41a9-aaae-3d0a8a70e26e",
+      "field": "memory",
+      "tokens": 92
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "394d1b0c-76e6-4fb8-8ee3-917c01a26f6c",
+      "field": "memory",
+      "tokens": 197
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "05858fcb-b27c-4266-9154-0fc9347a2289",
+      "field": "memory",
+      "tokens": 75
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "599394fa-26e9-4165-82a4-3532d681c977",
+      "field": "memory",
+      "tokens": 79
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "32f9215c-0803-4b6d-a1ee-f96d034d7df8",
+      "field": "memory",
+      "tokens": 120
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "1885ef21-57c2-4124-b256-a4cfe333572a",
+      "field": "memory",
+      "tokens": 165
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "9b4aa87b-397b-4fde-ad63-eca36ba30863",
+      "field": "memory",
+      "tokens": 198
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "7095ecb5-9ccf-4a2c-a101-d749deee444c",
+      "field": "memory",
+      "tokens": 167
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "474d02f1-e3c8-4fc0-98e9-1aec7b87e2ba",
+      "field": "memory",
+      "tokens": 168
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "20fec544-f1dc-4602-9fac-d1f850bc1c97",
+      "field": "memory",
+      "tokens": 249
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "e513e169-72fa-46f9-b27a-980b36ff7990",
+      "field": "memory",
+      "tokens": 102
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "9736f1b5-71d6-4820-b4b4-8f6de5fe42b6",
+      "field": "memory",
+      "tokens": 125
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "aa7f3100-9359-4404-8a6a-0d0dcad33bf4",
+      "field": "memory",
+      "tokens": 94
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "07a39c4a-edad-44d6-8fb2-bf765724cae3",
+      "field": "memory",
+      "tokens": 100
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "a7567e07-60ce-45c8-a031-83d4e5d1e84f",
+      "field": "memory",
+      "tokens": 61
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "356b1d65-c702-4b86-8da4-ae44d99db3a2",
+      "field": "memory",
+      "tokens": 148
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "1ddcad06-568e-40a3-887a-f0cfd0d10038",
+      "field": "memory",
+      "tokens": 206
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "fdb7c43e-fc6f-42a3-b51e-046f781518a7",
+      "field": "memory",
+      "tokens": 233
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "a0438e56-dfa3-4286-96b3-5ed2fefd8e41",
+      "field": "memory",
+      "tokens": 148
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "c5504352-2da7-445a-a3ae-b66681ff6ec3",
+      "field": "memory",
+      "tokens": 60
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "ddb6a095-353d-4418-8bd9-6359ee1b093f",
+      "field": "memory",
+      "tokens": 40
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "4db0f73e-b769-4e53-ab64-55308e9eba12",
+      "field": "memory",
+      "tokens": 80
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "90a953a1-192f-4dd6-b3c0-34b1c9369da4",
+      "field": "memory",
+      "tokens": 146
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "4d4485bd-ffc2-40de-b276-6f64a1e407bb",
+      "field": "memory",
+      "tokens": 86
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "7f2d056a-572b-46c7-aaa6-dabe7157942e",
+      "field": "memory",
+      "tokens": 83
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "e285a965-9331-4a7a-92f1-9c128ab5b094",
+      "field": "memory",
+      "tokens": 85
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "e9c31260-e4b9-482b-ad92-e29024ac385a",
+      "field": "memory",
+      "tokens": 71
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "ff3aec16-6abf-47d4-a554-e209fa637588",
+      "field": "memory",
+      "tokens": 247
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "a6fcac79-33ca-4085-83ca-ed26c542ab32",
+      "field": "memory",
+      "tokens": 128
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "2cdd61bc-015d-4686-ba7a-544f9a44a532",
+      "field": "memory",
+      "tokens": 114
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "f8df5fa5-d176-4638-aa3a-d695a4cf26f5",
+      "field": "memory",
+      "tokens": 124
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "b680808d-3ac3-4c55-ae5a-5b88337cfed1",
+      "field": "memory",
+      "tokens": 91
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "fc23ac3a-aee9-4ae5-8f4a-1553327f9beb",
+      "field": "memory",
+      "tokens": 144
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "403b2faf-75ad-496f-83b3-05bb51115ef6",
+      "field": "memory",
+      "tokens": 172
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "964cf848-2c25-4ba0-8f94-870db80fce0a",
+      "field": "memory",
+      "tokens": 143
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "6c08f579-dd1f-42ee-b964-b7d09a86fdf8",
+      "field": "memory",
+      "tokens": 120
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "e0fc2c7e-6436-425f-8d66-5d5cebfc4468",
+      "field": "memory",
+      "tokens": 121
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "8cb5f47e-48a9-4107-b29c-bcd36168c005",
+      "field": "memory",
+      "tokens": 160
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "637d957a-dcfe-47f9-bc12-466e4b4e4559",
+      "field": "memory",
+      "tokens": 195
+    },
+    {
+      "layer": "tree:UserMemory",
+      "identity": "f25ac687-5f79-49ff-9009-6141c9102b13",
+      "field": "memory",
+      "tokens": 143
+    },
+    {
+      "layer": "tree:LongTermMemory",
+      "identity": "4b082495-f95a-48c7-a25c-3105a98b0372",
+      "field": "memory",
+      "tokens": 238
+    }
+  ],
+  "storage_bytes": 10678001,
+  "storage_files": {
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\native-store\\runs\\cba2ca8d505a45f1992af68db019ac8f\\native.json": {
+      "bytes": 234,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\store_lock": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\database_lock": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\id-buffer.tmp.0": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.counts.db": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.indexstats.db": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.labeltokenstore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db.id": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db.labels": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.nodestore.db.labels.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db": {
+      "bytes": 65536,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.arrays": {
+      "bytes": 2473984,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.arrays.id": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.id": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index.keys": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.index.keys.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.strings": {
+      "bytes": 253952,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.propertystore.db.strings.id": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipgroupstore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipgroupstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipgroupstore.degrees.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipstore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshipstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.relationshiptypestore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.schemastore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\neostore.schemastore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\database_lock": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\id-buffer.tmp.0": {
+      "bytes": 0,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.counts.db": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.indexstats.db": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.labeltokenstore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db.labels": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.nodestore.db.labels.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.arrays": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.arrays.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index.keys": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.index.keys.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.strings": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.propertystore.db.strings.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipgroupstore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipgroupstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipgroupstore.degrees.db": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipstore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshipstore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db.names": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.relationshiptypestore.db.names.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.schemastore.db": {
+      "bytes": 8192,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\neostore.schemastore.db.id": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\range-1.0\\4\\index-4": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\range-1.0\\5\\index-5": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\range-1.0\\6\\index-6": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\range-1.0\\7\\index-7": {
+      "bytes": 65536,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\token-lookup-1.0\\1\\index-1": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\token-lookup-1.0\\2\\index-2": {
+      "bytes": 40960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\failure-message": {
+      "bytes": 16384,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\segments_2": {
+      "bytes": 2874,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_0.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_0.cfs": {
+      "bytes": 27976,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_0.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_1.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_1.cfs": {
+      "bytes": 27976,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_1.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_2.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_2.cfs": {
+      "bytes": 27960,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_2.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_3.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_3.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_3.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_4.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_4.cfs": {
+      "bytes": 27968,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_4.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_5.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_5.cfs": {
+      "bytes": 27976,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_5.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_6.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_6.cfs": {
+      "bytes": 17664,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_6.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_7.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_7.cfs": {
+      "bytes": 22800,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_7.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_8.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_8.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_8.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_9.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_9.cfs": {
+      "bytes": 17656,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_9.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_a.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_a.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_a.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_b.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_b.cfs": {
+      "bytes": 27928,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_b.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_c.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_c.cfs": {
+      "bytes": 12536,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_c.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_d.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_d.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_d.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_e.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_e.cfs": {
+      "bytes": 12536,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_e.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_f.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_f.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_f.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_g.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_g.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_g.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_h.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_h.cfs": {
+      "bytes": 7408,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_h.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_i.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_i.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_i.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_j.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_j.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_j.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_k.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_k.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_k.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_l.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_l.cfs": {
+      "bytes": 12536,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_l.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_m.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_m.cfs": {
+      "bytes": 27936,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_m.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_n.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_n.cfs": {
+      "bytes": 7408,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_n.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_o.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_o.cfs": {
+      "bytes": 27944,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_o.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_p.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_p.cfs": {
+      "bytes": 27944,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_p.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_q.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_q.cfs": {
+      "bytes": 27944,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_q.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_r.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_r.cfs": {
+      "bytes": 27944,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_r.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_s.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_s.cfs": {
+      "bytes": 12536,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_s.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_t.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_t.cfs": {
+      "bytes": 27944,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_t.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_u.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_u.cfs": {
+      "bytes": 7408,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_u.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_v.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_v.cfs": {
+      "bytes": 27944,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_v.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_w.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_w.cfs": {
+      "bytes": 27944,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_w.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_x.cfe": {
+      "bytes": 716,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_x.cfs": {
+      "bytes": 17664,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\neo4j\\schema\\index\\vector-2.0\\3\\1\\_x.si": {
+      "bytes": 331,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\3\\index-3": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\4\\index-4": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\7\\index-7": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\8\\index-8": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\range-1.0\\9\\index-9": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\token-lookup-1.0\\1\\index-1": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\databases\\system\\schema\\index\\token-lookup-1.0\\2\\index-2": {
+      "bytes": 49152,
+      "category": "database_index_cache_state"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\neo4j\\checkpoint.0": {
+      "bytes": 592,
+      "category": "wal_transactions"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\neo4j\\neostore.transaction.db.0": {
+      "bytes": 4703179,
+      "category": "wal_transactions"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\system\\checkpoint.0": {
+      "bytes": 592,
+      "category": "wal_transactions"
+    },
+    "D:\\master_study\\MemAtlas\\.mematlas\\efficiency-formal-20261107-restart\\memos\\neo4j\\neo4j-community-5.26.0\\data\\transactions\\system\\neostore.transaction.db.0": {
+      "bytes": 24028,
+      "category": "wal_transactions"
+    }
+  },
+  "memory_state_serialized_bytes": 2,
+  "pending_stm_episodes": 0,
+  "pending_buffered_events": 0,
+  "storage_scope": "native_database_index_cache_state_including_wal_excluding_logs_and_snapshots",
+  "background_pending": false,
+  "rsi_tokens": 64062,
+  "payload_tokens": 13459356,
+  "submitted_payload_tokens": 13459356,
+  "additional_attempt_payload_tokens": 0,
+  "accepted_event_ledger": [
+    {
+      "event_identity": "0809bb63bd643c1f02e6cefb2df98b86c6c153c3f1f5bcd44d8b38c6c336dbd1",
+      "tokens": 113
+    },
+    {
+      "event_identity": "96713dfe014fcd57a092f9bab66fecfc40e09c7a7723fa26886151fa8c35ced3",
+      "tokens": 35
+    },
+    {
+      "event_identity": "03b9e4109582bcd31471d4d9fec78978b11e12396e0e268341ac6b99f3f5c6da",
+      "tokens": 44
+    },
+    {
+      "event_identity": "16d6dac1270d537dedf6fe562862c06bce78edbb4452567708c12f28e19c61aa",
+      "tokens": 149
+    },
+    {
+      "event_identity": "9f23ad7e8808eab120a7cbf8b241b89a822193e57fa69330ce54a043b1a0849b",
+      "tokens": 59
+    },
+    {
+      "event_identity": "190d993dc791f737a63312cb5e55a8b1ae8beac5ee3ab94362197802aae38a1d",
+      "tokens": 36
+    },
+    {
+      "event_identity": "2de52b6bad2853d0d362a440a4f1432e3abda8cc777d6fe22943b78c5dbd415a",
+      "tokens": 156
+    },
+    {
+      "event_identity": "251bc2d22ef56fd4590e05edd4e936e6a29ba6b003983324c605c34966e550b0",
+      "tokens": 132
+    },
+    {
+      "event_identity": "dc3462435799b597faaa95d05b8ed95e05b2dd1b9c6e64b4ce1483b94de3a0fd",
+      "tokens": 120
+    },
+    {
+      "event_identity": "6895357cfdc916a80cec9b60c32c2359cfeae9f796ff379c22e3112d295122c9",
+      "tokens": 659
+    },
+    {
+      "event_identity": "2853161172e2deed3db33ff819056a100bcf1c6a529153b1de1d14090cab436f",
+      "tokens": 180
+    },
+    {
+      "event_identity": "f990d2a42339e46c02ca3ccedcb4d8391b40975c84d645c63c1585e4a0c18d08",
+      "tokens": 159
+    },
+    {
+      "event_identity": "af221e1910430628c353b45bcf20ef10568bc7239a6a163d15925cbd149baa8c",
+      "tokens": 608
+    },
+    {
+      "event_identity": "ea27ff22e34f07a149a78cd58c2bd232763b73b950328403411a45f3e3e87003",
+      "tokens": 682
+    },
+    {
+      "event_identity": "f343ac4934d7cba7405530f55947d732a83b249da6b8fc7c4c9feba285c19246",
+      "tokens": 1631
+    },
+    {
+      "event_identity": "3423724af4f28035b061c1ca2c7028c07521a9436c15dc6ad48106a59d982147",
+      "tokens": 133
+    },
+    {
+      "event_identity": "af25a39a87b9094fa0732502f641182776e1b53d00db742c61f052f1b0287cac",
+      "tokens": 93
+    },
+    {
+      "event_identity": "78b46ce4b207cbdd09d6a7875fc2804241541e7cbfe266ec316ba45566a556a6",
+      "tokens": 96
+    },
+    {
+      "event_identity": "fd00951a25ba480f35e68992bb10811e66ebcfaa3b625e7aa580e63c74a5a34b",
+      "tokens": 391
+    },
+    {
+      "event_identity": "8d148d5d7fe6527b6601830ba2c7bb67c80fe08c7843ce9cf9e0c3c10b5411b6",
+      "tokens": 120
+    },
+    {
+      "event_identity": "1dd763388e38431f0ac9600dc8d15da1a87b4efb939d1423f93007cea7350769",
+      "tokens": 129
+    },
+    {
+      "event_identity": "8261e8720e19d553ec31227fb991d4593666d3f7629a8828147b441c3ccc1e2c",
+      "tokens": 488
+    },
+    {
+      "event_identity": "013ac871b3e4bbb44a30439037b49101aa3a30f2745b2fd567e4aaf472a124a1",
+      "tokens": 549
+    },
+    {
+      "event_identity": "f57d89ed95a8f3d3110b578f59b06c6ac28dd06079e48db622c0026e3e74fcaa",
+      "tokens": 1781
+    },
+    {
+      "event_identity": "30358f3a6bec36463bb25d4c8029dcd5be8a8cc46a694242414b11ce54809223",
+      "tokens": 115
+    },
+    {
+      "event_identity": "35e4b9584c8be8bba385c957bf3a6083096c5447e34382eadcd17dd637da115f",
+      "tokens": 103
+    },
+    {
+      "event_identity": "afd02fb1e8ebf6b2907b5e88041d3f68963d939064d098f46825b5cb7ad1ffeb",
+      "tokens": 114
+    },
+    {
+      "event_identity": "2dd1592a8893c1caf510ef49632cb9cc956fdb33fc9bf1fe279191e9bb4b1b63",
+      "tokens": 83
+    },
+    {
+      "event_identity": "9f910a42d8ccea223f8fe05b42e3884652a01b37258493fe3cb2e173b7a6212e",
+      "tokens": 84
+    },
+    {
+      "event_identity": "151193719ad03e079fde439b851bb3e3fc2f7bf7711f541f4bc44de9ec8e6d9f",
+      "tokens": 135
+    },
+    {
+      "event_identity": "64015221a75ce3737e824a282287eb54362f1c74c010808d1e751767a12ee0be",
+      "tokens": 357
+    },
+    {
+      "event_identity": "320cf1062313ff92983c2f2b55d804ee74ff415edad3ef8486f934ebcf8f7334",
+      "tokens": 422
+    },
+    {
+      "event_identity": "ff071e813b4e93c21a9878e867952c93612bfb4c74cd47b2261141de3f7fc3c1",
+      "tokens": 1816
+    },
+    {
+      "event_identity": "701a04d6d5713f89441a3520ee65bb463d6a645c78fb659171201c75f1acf23e",
+      "tokens": 87
+    },
+    {
+      "event_identity": "971a742999a9246d6cbee87f624ed090aa759fa76f812278a5a37b3d56233cde",
+      "tokens": 100
+    },
+    {
+      "event_identity": "128c5e0b84935d76917446f542560f1dfd9f1dfd4b847aeca0e5ee80e2c0bf5b",
+      "tokens": 543
+    },
+    {
+      "event_identity": "ed8e9b2d005b6002db6ba9d008451d1566b22d4a9e4b5b1b1e1658b0535d60cc",
+      "tokens": 596
+    },
+    {
+      "event_identity": "2a3efae67e2c4c5b956304a2899218fb3f2dab2f99d093da9ced7e38ca33f31e",
+      "tokens": 1147
+    },
+    {
+      "event_identity": "6194d4523043dc9de43ad47c90db9bd0efb7885f010dae36d7b692dffbcf4677",
+      "tokens": 146
+    },
+    {
+      "event_identity": "ff120d96638c36b1021c96683c3c6b815f5d17cd62baf14125b2d99a59877f27",
+      "tokens": 106
+    },
+    {
+      "event_identity": "f76f3f095d3396317aff37174092f6b12f5d22e69cc75cf11a669d22413331c4",
+      "tokens": 540
+    },
+    {
+      "event_identity": "cd62e979ab2f223b97d2bd988767834b4521ecca306edb402cb13352db310e4f",
+      "tokens": 593
+    },
+    {
+      "event_identity": "7ff87e5f7437cf7eda1f9e3482aa46cd5ec649550cce4cedeb7c6dd8205a6428",
+      "tokens": 1317
+    },
+    {
+      "event_identity": "0cf4873afcf082835d3168de6f32a264037d78d81ecac110689f04444c3a61c1",
+      "tokens": 159
+    },
+    {
+      "event_identity": "f44204004a574b337f91d59a41473d21cd91448fd7ae0c6042bc7dc428f30026",
+      "tokens": 110
+    },
+    {
+      "event_identity": "fd6b5edbef882c164d20a016d5e9438e830971cd2e8b59669954660ab0952f99",
+      "tokens": 491
+    },
+    {
+      "event_identity": "59599617603a4d4deed6f69c2820e51d525b39d1bb103698fcc929507dd36b2c",
+      "tokens": 544
+    },
+    {
+      "event_identity": "d7ac9cbbc8aeb56ddfda77f7db07761f578060b19b99e7c4848ce486ed7d129d",
+      "tokens": 1279
+    },
+    {
+      "event_identity": "3760e61f51e11aaa99fc734b0e168627af520cdcef61572065ddfb42c775d14a",
+      "tokens": 121
+    },
+    {
+      "event_identity": "aa673265bf4711c9ff62d2be9225f82aa6386f64c431e32b12427c782ef6a554",
+      "tokens": 129
+    },
+    {
+      "event_identity": "45cfd0d3f0a960cea2d3826bf9f7475f02147e7e7449b6f9e2b33c4d9d52d07a",
+      "tokens": 616
+    },
+    {
+      "event_identity": "332f25a9c2c2c335ee2863a263ee7b758de6aa247f856f553b660b7e90b705a6",
+      "tokens": 669
+    },
+    {
+      "event_identity": "17020ab15ab55427a7ec492e56be31c4d713f9f0b12d6b40618eb316fe901c98",
+      "tokens": 1670
+    },
+    {
+      "event_identity": "9b16375da8d469e8e25c112d4c75db8c6c21f31d0f1633fc487c5b1fddc0e890",
+      "tokens": 139
+    },
+    {
+      "event_identity": "f336ab6fddd066fdd30ea419f0eeafd2ecbe4c420eae11a066b385eaa649df1f",
+      "tokens": 114
+    },
+    {
+      "event_identity": "5930938e8f965660a16142b04a853520614a90468654c640b2a42bcb26806bd6",
+      "tokens": 129
+    },
+    {
+      "event_identity": "1ba767899d93bcccf8a0035a7312ac4c9bbb3b5d8473a71fdc68abbb6dd5b9e3",
+      "tokens": 293
+    },
+    {
+      "event_identity": "f6c2efeddfa2227d2fd3a825956e956abfef3a182b4b2c20da0726c028d52690",
+      "tokens": 120
+    },
+    {
+      "event_identity": "3fab5565507b14b7e9eb5cbb240e469fda5a74d2014e7d565d0c0ba6b40b2236",
+      "tokens": 128
+    },
+    {
+      "event_identity": "7fec983f0e0bd2309eda18823a3235bc990d3f3baf2b3180c75da4097f057591",
+      "tokens": 399
+    },
+    {
+      "event_identity": "267b12b1fbd95b2669942bce14550adff8d9221cea6abdf879b6290141296799",
+      "tokens": 473
+    },
+    {
+      "event_identity": "bcdc49e28b3c8277fa92dc599c7d4300ad0a9cb7cd7b2d29dcd25bcc9eacaba2",
+      "tokens": 1315
+    },
+    {
+      "event_identity": "39c7a9ee115ebe5565abecf1c4d1b0e99a8ebc6989d8b7982920376f54a4a2c1",
+      "tokens": 134
+    },
+    {
+      "event_identity": "a76fcd3013ac5323e5b78f5a303ad0ff42b01a361d82a796d5dbe2b83421281b",
+      "tokens": 114
+    },
+    {
+      "event_identity": "0e89dac767c52c22e32e92fd3adb5e9723145017f02a73b049f9563917ad6280",
+      "tokens": 560
+    },
+    {
+      "event_identity": "516ba3cd47a0068d2eeec5218f732467064236804e563178acfd9e0c7203302c",
+      "tokens": 613
+    },
+    {
+      "event_identity": "a93c561e5911ac297e9d644b2677ba33c69be65bdebc0e316e853eef384dd661",
+      "tokens": 2061
+    },
+    {
+      "event_identity": "81b9bbdda42970239ef238fd0070933b2533a91a4eb13429345541f84b8b7df5",
+      "tokens": 124
+    },
+    {
+      "event_identity": "f29c02d5d6282f2621fb29915d1235d01490b07000c6bdcf07bf878803c7323e",
+      "tokens": 119
+    },
+    {
+      "event_identity": "4cbc72d0ee2c9352fd89fdd08daff00f1c6bc4686a8172f1eb0ed86611a6943e",
+      "tokens": 407
+    },
+    {
+      "event_identity": "31b76f4d936b6e707d8b201d092468f174657fc2f4f68f5d6e1d91e9d81c8d5d",
+      "tokens": 460
+    },
+    {
+      "event_identity": "41134cf8770259098bc35c2c5232d6867c3aa3223ca98196c10827a20433bfb6",
+      "tokens": 1671
+    },
+    {
+      "event_identity": "40ceb48a18c643145aee64e5a0d232f0889ce9d3e6bde56fa85452298f409694",
+      "tokens": 86
+    },
+    {
+      "event_identity": "74080e725af4826413614f642e41eaad748110144b2278cc350e1f69f5fb5518",
+      "tokens": 116
+    },
+    {
+      "event_identity": "6abe0258b127d411e1be8a4474b7d710ee029197cc8aa7daf80d80308f4bb9a1",
+      "tokens": 445
+    },
+    {
+      "event_identity": "539fb4b69a951b018544de955989413f48bdde72ee5a6758f916190219f90cfb",
+      "tokens": 498
+    },
+    {
+      "event_identity": "4ea8a9258aea9f9294c0f9414338bef66d1e21e7d3c3ed44481719436a895f0a",
+      "tokens": 1899
+    },
+    {
+      "event_identity": "62b8212baa9ebd4975d098a4cace13e4aac021058890aad0e362bdfedc3c6003",
+      "tokens": 58
+    },
+    {
+      "event_identity": "4acb228dff6651d7ba8e948cb1c8b5d5a581167f330676d5c1edeece69265221",
+      "tokens": 9
+    },
+    {
+      "event_identity": "c275e16741fdcd9ff434ce473ae54f5fa938b77800647620edd7638e3c1f3a16",
+      "tokens": 40
+    },
+    {
+      "event_identity": "08cc8859a9c49f4f0f97ebf565cace6e512eb43034407c9bffc291841c11d8e5",
+      "tokens": 138
+    },
+    {
+      "event_identity": "47569bf553af611e6191540b8068f6cbe8e30d213f27f4f9aa488ae48e585cfe",
+      "tokens": 44
+    },
+    {
+      "event_identity": "dd13d794e1fe5e08efa1925b5f14adc3da97d598fa131825a4bd4bbfacaa4ae7",
+      "tokens": 48
+    },
+    {
+      "event_identity": "50b6703ec7e0acee4cd0b4957e73e6fad3a7ab5a905a231a6959a47dfc53acdc",
+      "tokens": 140
+    },
+    {
+      "event_identity": "27ae9b57b54c6c87b07c18305db9c7691d29667848b9c13e15426ac8b3c36c14",
+      "tokens": 31
+    },
+    {
+      "event_identity": "8ab34ea7a42ca6f25df6dfbd1d65b546be3656607c0ffac7d50b2a4cdeac917a",
+      "tokens": 47
+    },
+    {
+      "event_identity": "33ae2c155e8c39f71b2bceb7dd69db84ba75cf607172a70700f721ca18800628",
+      "tokens": 157
+    },
+    {
+      "event_identity": "f0a5bcfbc94f9b79ceefcf9bd39d687edac72aa360236927cb9a2d8829aa72f6",
+      "tokens": 47
+    },
+    {
+      "event_identity": "77d995dbed2be78ffe758a72612464a8799958a93f9db79f69528cfefedba371",
+      "tokens": 69
+    },
+    {
+      "event_identity": "958affca5bcd115140b258ee374c9c9006520075d010c5aa764431f03e2dc8ff",
+      "tokens": 166
+    },
+    {
+      "event_identity": "74a35c540ae00ec1de8cd950a51fce9a99c3822928bc7f7bebe95b546fe73045",
+      "tokens": 39
+    },
+    {
+      "event_identity": "0376b494922368705ad7217780328d3a288b5bc67a5639840d34288a2416f5af",
+      "tokens": 42
+    },
+    {
+      "event_identity": "6f0b1ff7c264db597f6722b51a96800b105a35b0fb6fd6394a0296aee21aff19",
+      "tokens": 150
+    },
+    {
+      "event_identity": "bcb06f88117f37c1f6b949b6c29decf81d7f1c7700cb303f0b1637e15549a11f",
+      "tokens": 109
+    },
+    {
+      "event_identity": "5ea546520dfc5be0fe9e548830a8b50b1cd30f2a37a62e3181aea0a5f6a977ee",
+      "tokens": 155
+    },
+    {
+      "event_identity": "b360ee7f0daef7b9b1eec9ade75aa3abf55a14122cc3a85d7be57753c1cc015a",
+      "tokens": 546
+    },
+    {
+      "event_identity": "13dc1c4050122ce097249f68aef1e6c9cdc18b2e5ea7394195d5d765eb572720",
+      "tokens": 173
+    },
+    {
+      "event_identity": "7a345016dd76dc69c62266b60172b2a1600b8ab5bd44fb0e0838087ee3f48347",
+      "tokens": 121
+    },
+    {
+      "event_identity": "5a8722416eb24e0ef6feadff67b46d373e11c87e0d94c6155c21dade0b559e44",
+      "tokens": 543
+    },
+    {
+      "event_identity": "a047f984e2dd47d72b7b3dc98ddbaa8b3e4ec8b680f885a610faea5ca0629084",
+      "tokens": 612
+    },
+    {
+      "event_identity": "10dff63b22914bdb9e5def8b445d341f7cfd7d896562736c86a9395a6b6370ed",
+      "tokens": 1415
+    },
+    {
+      "event_identity": "8e27192169b23c18075c96dfd2e50d9d6d2ad7a4c82f79932201f17af265b44a",
+      "tokens": 150
+    },
+    {
+      "event_identity": "6ce1b9786008c5e0be9eb939bf48d18f54782048dcaf89820e95f0257544c9ff",
+      "tokens": 153
+    },
+    {
+      "event_identity": "80f4ad4abfa42e82d8dbc215d976c73c4e92c9b3ac4faf717bbac5a688157b90",
+      "tokens": 440
+    },
+    {
+      "event_identity": "c3656e2d92b8c40810d35de131571597d712f6d80743dc57c384baa46e63a7e5",
+      "tokens": 493
+    },
+    {
+      "event_identity": "fcf8d5a4ea1d15bb8d03da081d17d465f55f0bfdc04db7cab199fb9c64bfe7b9",
+      "tokens": 1389
+    },
+    {
+      "event_identity": "4463210b9affb9314d10a114756a9deefc31a5d4520f26c373774113c733079a",
+      "tokens": 146
+    },
+    {
+      "event_identity": "facd55c4a2d227cc63b180823d6656379990c99018c2ac9f9ef2d27ed1de852a",
+      "tokens": 109
+    },
+    {
+      "event_identity": "93c5692ea04ad63bd297d439ff4da5e5c4b53210ac0e67f313873c2c22eb2c9d",
+      "tokens": 491
+    },
+    {
+      "event_identity": "349c9f18210a285f1fd74ae17af78a5bd9da30a19c5952e48336d1a81108a2cd",
+      "tokens": 544
+    },
+    {
+      "event_identity": "7ddb716a6b6ea932e8445ebde3520f2c6d19e2737069b5b5b17054d73bd873d2",
+      "tokens": 1234
+    },
+    {
+      "event_identity": "1dbfb0bc1067b0023559b9124217dfb55dd98667669fd3e15c9514f515ed0dd4",
+      "tokens": 150
+    },
+    {
+      "event_identity": "193e0e963265e36ce7576b53e45781aaf6cf6459dced6dd304fc6f0ee0bede16",
+      "tokens": 121
+    },
+    {
+      "event_identity": "ac4ae2593fa9b037a653af15e14b4ef3214d36350b569fd532e134c7887f2e20",
+      "tokens": 403
+    },
+    {
+      "event_identity": "1bfd9967dc02a35f25e47474ef85318101aefdd99c65f820823ae59415cf8b55",
+      "tokens": 456
+    },
+    {
+      "event_identity": "60763057f43ab2a418d22444d3ca59e053bef29be2f8ea8d77e48ec8dee86743",
+      "tokens": 1171
+    },
+    {
+      "event_identity": "b68b115936ad9744616e6cecdb1c03d1f3ea913529b2f8dc68ce15b6551cccf8",
+      "tokens": 139
+    },
+    {
+      "event_identity": "609e20529ee36400e8118d49d9b4ef0248261ae978a190e1fbb9ae7bcece0809",
+      "tokens": 131
+    },
+    {
+      "event_identity": "e22e13829dba939f37246848c15a1de4c00cbfe6510f045ac8690bc42ac738f3",
+      "tokens": 448
+    },
+    {
+      "event_identity": "41e4384d35e2fc58648c4478b2bdc2f3f55d2aae61ee7a8d7497982cc04e7025",
+      "tokens": 501
+    },
+    {
+      "event_identity": "1616fd918e10d2bf7d872f4b1bf91e3f5815d6d6f1030e536620e74fed2ee257",
+      "tokens": 1584
+    },
+    {
+      "event_identity": "424b4171f59ca9c8be7f54dff1d8591eb2c6983b77caa6a3174497c2c5052631",
+      "tokens": 136
+    },
+    {
+      "event_identity": "bc3325641f33b29920abc4a50e8ab1b479c524126c93bdff2e86baaa754dca3b",
+      "tokens": 155
+    },
+    {
+      "event_identity": "839103c8804716fa3a49f9e9ef17dcf73f0883cd57c370467ab303a500d91cc9",
+      "tokens": 450
+    },
+    {
+      "event_identity": "62372c77f34d6a43930373f81761518f525b53d14be8fba8190c67dd9e017d7d",
+      "tokens": 503
+    },
+    {
+      "event_identity": "8521447f426cd1cf72ca7e7308fa31cd1aad88ebfa48a5806ae8037558958f9b",
+      "tokens": 2138
+    },
+    {
+      "event_identity": "11accd63d9619d1a10f6c47b09c8e927e2625240783c544a6436ae7fcfff99e0",
+      "tokens": 83
+    },
+    {
+      "event_identity": "01e70e7136337ee30d62a0089044fe206d54cdad54497620dd753c799fcd39df",
+      "tokens": 143
+    },
+    {
+      "event_identity": "9a9d7acfc91b3fec9f7aa134388cd23d57e1fc47ae0d1cb4ba636518a2bc4d91",
+      "tokens": 150
+    },
+    {
+      "event_identity": "8b6b96d6334e0b904eb7852cea8932d40298967c2e13d31c19ab79a706dd152d",
+      "tokens": 474
+    },
+    {
+      "event_identity": "ff14a9cd6d3f59cfd506db6b2b02b108717262bcc895b1ab61e180e4e0ae0f00",
+      "tokens": 211
+    },
+    {
+      "event_identity": "090da995c850a230cb3c6dd869e2b905fb8775fd8aeb908606be056f6d51919a",
+      "tokens": 173
+    },
+    {
+      "event_identity": "f57335be40ae49da11e2173388a4bbd52dae02fc2da224586669890a90e7d9cf",
+      "tokens": 599
+    },
+    {
+      "event_identity": "0eb5897909f7018bc0da4652b00278bbf9599241ec332ed2f8f4045bb8eaf0e4",
+      "tokens": 668
+    },
+    {
+      "event_identity": "ddf3ada58b6b52233f256e073d311b76815f2a00d9170264fed4bd55f5fbb7df",
+      "tokens": 1539
+    },
+    {
+      "event_identity": "91c41e797da5482c2c861548a8f4c85e3461af8e35415aefd7b2750236e871b4",
+      "tokens": 124
+    },
+    {
+      "event_identity": "3bbf871359fcddb0ab79388f1ac9f6810513739905198d7e680ef9c4660b4d5f",
+      "tokens": 140
+    },
+    {
+      "event_identity": "cb58cb3d406c1b76b85b5cd95512e78723e639b06e40ac7f8fc08a1dc70f68a8",
+      "tokens": 484
+    },
+    {
+      "event_identity": "eb2819b70f0ea1a16fb84b11af756aab565a2eded63d80c6277ffb7318378ca5",
+      "tokens": 537
+    },
+    {
+      "event_identity": "207db8f03c0de9eeb81082e32ce6e49eb03a811106d14b15a8d830348c5dd383",
+      "tokens": 2025
+    },
+    {
+      "event_identity": "f056b36be2f391ec34f1735bd548ed4ff0d9821c461a4978c0b759d4bba5c7d7",
+      "tokens": 138
+    },
+    {
+      "event_identity": "18d55406273c60c627ac0a6c56c8e03202b252cbcc333e6be30053901711722d",
+      "tokens": 146
+    },
+    {
+      "event_identity": "8ecdc8148fcc2c6e95f4c369b1538a99c366d2a5cd485841dc99e194d3bd525d",
+      "tokens": 470
+    },
+    {
+      "event_identity": "7f73e890bd6519db742251ebc123f2a67007c8c730f9a48337fa44c6b5fecbb0",
+      "tokens": 523
+    },
+    {
+      "event_identity": "231a5b9d7eb2fd9a91df76b5fd0f2f3ecdd11b0bc8bbd895d1243187e01ab438",
+      "tokens": 1749
+    }
+  ],
+  "accepted_units": 20,
+  "round_total_s": 1221.871341,
+  "memory_foreground_wait_s": 699.0477844,
+  "memory_background_active_s": 0.0,
+  "memory_persistence_s": 23.3940871,
+  "memory_measurement_s": 61.0977446,
+  "automatic_recovery_wait_s": 0.0,
+  "memory_method_wall_s": 699.0477844,
+  "timing_complete": true,
+  "unfinished_spans": [],
+  "heartbeat_interval_s": 5,
+  "unobserved_tail_bound_s": 0,
+  "storage_growth_bytes": 8708444,
+  "round_rsi_tokens": 64062,
+  "memory_s_per_1k_rsi_tokens": 10.912050582248447,
+  "operations": {
+    "native_inventory": {
+      "calls": 2,
+      "completed_calls": 2,
+      "latencies_s": [
+        0.1568652,
+        1.3797678
+      ],
+      "median_s": 0.7683165,
+      "p95_s": 1.3797678
+    },
+    "_freeze": {
+      "calls": 83,
+      "completed_calls": 83,
+      "latencies_s": [
+        0.0135267,
+        0.0013608,
+        0.0090059,
+        0.0031317,
+        0.0116287,
+        0.0128384,
+        0.0122091,
+        0.0118319,
+        0.0118967,
+        0.0142955,
+        0.0125654,
+        0.0019748,
+        0.0079771,
+        0.0089568,
+        0.008065,
+        0.0019675,
+        0.018983,
+        0.0080707,
+        0.0087854,
+        0.0083575,
+        0.0075553,
+        0.0215011,
+        0.0081362,
+        0.008406,
+        0.0079952,
+        0.009102,
+        0.0080216,
+        0.0025683,
+        0.0165273,
+        0.0080745,
+        0.0080446,
+        0.0028926,
+        0.0074262,
+        0.0087167,
+        0.0081783,
+        0.0028951,
+        0.007997,
+        0.0079852,
+        0.0079875,
+        0.0098879,
+        0.0085587,
+        0.0083656,
+        0.0078194,
+        0.0076079,
+        0.0078245,
+        0.0084074,
+        0.008236,
+        0.0079329,
+        0.0163469,
+        0.0084849,
+        0.008424,
+        0.0079336,
+        0.0113771,
+        0.0089879,
+        0.0124625,
+        0.0039922,
+        0.0144576,
+        0.007902,
+        0.0084472,
+        0.0036047,
+        0.0201865,
+        0.0085436,
+        0.0140305,
+        0.0084672,
+        0.0127274,
+        0.0092417,
+        0.0084285,
+        0.0034516,
+        0.0111,
+        0.0086641,
+        0.0082446,
+        0.0116724,
+        0.0199522,
+        0.0086759,
+        0.0095953,
+        0.0081958,
+        0.0200431,
+        0.0089615,
+        0.0082938,
+        0.0082887,
+        0.0193593,
+        0.0038283,
+        0.0138299
+      ],
+      "median_s": 0.0084285,
+      "p95_s": 0.0193593
+    },
+    "_thaw": {
+      "calls": 83,
+      "completed_calls": 83,
+      "latencies_s": [
+        0.0145874,
+        0.0014065,
+        0.0006295,
+        0.0020593,
+        0.014491,
+        0.0023259,
+        0.0034926,
+        0.012134,
+        0.0174933,
+        0.0023539,
+        0.0023282,
+        0.0017723,
+        0.0082976,
+        0.0014002,
+        0.0014066,
+        0.008211,
+        0.0084333,
+        0.0015704,
+        0.001615,
+        0.0083321,
+        0.0219965,
+        0.0015496,
+        0.0017847,
+        0.0081585,
+        0.018685,
+        0.0015709,
+        0.0014737,
+        0.0105067,
+        0.008221,
+        0.0017129,
+        0.0019422,
+        0.0086016,
+        0.0198867,
+        0.0018594,
+        0.0017066,
+        0.0084222,
+        0.017577,
+        0.0019446,
+        0.0018077,
+        0.0082407,
+        0.0143904,
+        0.0094007,
+        0.0019215,
+        0.0088513,
+        0.0128837,
+        0.0020207,
+        0.0020435,
+        0.0081709,
+        0.0087543,
+        0.00209,
+        0.0021646,
+        0.0085302,
+        0.0083574,
+        0.0025521,
+        0.0023691,
+        0.0083261,
+        0.0152828,
+        0.0024963,
+        0.0029318,
+        0.008222,
+        0.0129861,
+        0.0078522,
+        0.0049373,
+        0.0087486,
+        0.0131464,
+        0.0027408,
+        0.0032642,
+        0.0092238,
+        0.0087137,
+        0.002856,
+        0.00298,
+        0.0089583,
+        0.0126015,
+        0.0031626,
+        0.0031587,
+        0.0092274,
+        0.0127472,
+        0.0036307,
+        0.0035543,
+        0.0079405,
+        0.0136517,
+        0.0097594,
+        0.0082075
+      ],
+      "median_s": 0.0079405,
+      "p95_s": 0.0174933
+    },
+    "round_active": {
+      "calls": 21,
+      "completed_calls": 21,
+      "latencies_s": [
+        115.4026791,
+        43.8150778,
+        51.8560169,
+        40.0426248,
+        45.0345421,
+        47.5548098,
+        39.9454007,
+        42.7168556,
+        56.7796459,
+        47.5950799,
+        41.5035468,
+        55.8487026,
+        68.6594075,
+        55.5933943,
+        52.3079895,
+        82.171751,
+        55.9813348,
+        70.8827553,
+        72.6040915,
+        118.7553822,
+        8.5509327
+      ],
+      "median_s": 52.3079895,
+      "p95_s": 115.4026791
+    },
+    "clinical_sdk": {
+      "calls": 20,
+      "completed_calls": 20,
+      "latencies_s": [
+        112.3716418,
+        43.1142028,
+        51.1381019,
+        39.0715773,
+        43.7256258,
+        45.9928942,
+        38.2718601,
+        40.752072,
+        54.5737779,
+        45.1569828,
+        38.8077292,
+        52.0337295,
+        65.4002945,
+        51.1810258,
+        47.2217774,
+        77.5957131,
+        50.0697431,
+        65.5856369,
+        66.7398008,
+        110.8457685
+      ],
+      "median_s": 50.603922499999996,
+      "p95_s": 110.8457685
+    },
+    "search": {
+      "calls": 59,
+      "completed_calls": 59,
+      "latencies_s": [
+        0.0016287,
+        0.0017336,
+        0.0015912,
+        0.009814,
+        0.000901,
+        0.0010328,
+        0.0018962,
+        0.0017362,
+        0.0117725,
+        1.1626971,
+        0.5867987,
+        0.3023615,
+        0.1638244,
+        0.0950019,
+        0.0961357,
+        0.0930488,
+        0.0928349,
+        0.1053975,
+        0.1093943,
+        0.1146362,
+        0.1554264,
+        0.0989362,
+        0.1006726,
+        0.0906724,
+        0.0972477,
+        0.0946824,
+        0.0964134,
+        0.093194,
+        0.0916855,
+        0.1009653,
+        0.0918402,
+        0.1001106,
+        0.0949586,
+        0.1840768,
+        0.0999085,
+        0.1075066,
+        0.2517849,
+        0.5306373,
+        0.5274075,
+        0.0996369,
+        0.0928182,
+        1.6112513,
+        1.6858149,
+        0.0950541,
+        0.0984184,
+        0.096309,
+        0.0992652,
+        1.1178733,
+        1.1349543,
+        0.1050519,
+        0.1004834,
+        1.4472022,
+        1.4058813,
+        0.1178444,
+        0.574955,
+        0.8840675,
+        0.8869033,
+        3.1315481,
+        3.2384198
+      ],
+      "median_s": 0.1001106,
+      "p95_s": 1.6858149
+    },
+    "save": {
+      "calls": 61,
+      "completed_calls": 61,
+      "latencies_s": [
+        0.0013166,
+        0.0007755,
+        0.5515514,
+        0.1482353,
+        0.212082,
+        0.2305116,
+        0.1423954,
+        0.2054897,
+        0.1680105,
+        0.1076831,
+        0.1530158,
+        0.171483,
+        0.1280899,
+        0.1735999,
+        0.2274845,
+        0.1335503,
+        0.1947451,
+        0.2205787,
+        0.1429878,
+        0.2241835,
+        0.2370211,
+        0.1534533,
+        0.2426947,
+        0.2820005,
+        0.1684859,
+        0.2552098,
+        0.3070225,
+        0.1936801,
+        0.2907124,
+        0.3213517,
+        0.2160365,
+        0.3214274,
+        0.3444746,
+        0.2285995,
+        0.3412252,
+        0.4248436,
+        0.2604385,
+        0.3814632,
+        0.4422345,
+        0.2939952,
+        0.4260759,
+        0.4431369,
+        0.2980433,
+        0.4466871,
+        0.49897,
+        0.3418804,
+        0.9020235,
+        0.583665,
+        0.3973937,
+        0.5814363,
+        0.6213703,
+        0.5184677,
+        0.6263809,
+        0.691177,
+        0.4750216,
+        0.7279626,
+        0.7506423,
+        0.5320349,
+        0.7536394,
+        0.9264788,
+        0.617385
+      ],
+      "median_s": 0.2939952,
+      "p95_s": 0.7506423
+    },
+    "episode_end": {
+      "calls": 20,
+      "completed_calls": 20,
+      "latencies_s": [
+        0.0014612,
+        0.0019915,
+        0.0022217,
+        0.0011833,
+        0.0015809,
+        0.0013933,
+        0.0014699,
+        0.0019538,
+        0.0017779,
+        0.0017419,
+        0.002188,
+        0.0022989,
+        0.002008,
+        0.0022678,
+        0.0025857,
+        0.0026973,
+        0.0026851,
+        0.0026035,
+        0.0101186,
+        0.0104754
+      ],
+      "median_s": 0.002098,
+      "p95_s": 0.0101186
+    },
+    "add": {
+      "calls": 20,
+      "completed_calls": 20,
+      "latencies_s": [
+        61.2721326,
+        25.025379,
+        34.5415022,
+        23.6062774,
+        28.5434573,
+        29.1062333,
+        23.4637696,
+        25.0884732,
+        37.0699751,
+        27.7634538,
+        24.2474102,
+        35.4575621,
+        45.0865971,
+        31.8703338,
+        22.7050824,
+        41.0824784,
+        31.9592231,
+        35.2871715,
+        33.8918547,
+        57.9282128
+      ],
+      "median_s": 31.91477845,
+      "p95_s": 57.9282128
+    },
+    "case_native_inventory": {
+      "calls": 20,
+      "completed_calls": 20,
+      "latencies_s": [
+        1.3478371,
+        2.5072772,
+        1.7403212,
+        1.8289711,
+        2.0415419,
+        2.7131709,
+        1.959677,
+        2.0668888,
+        2.1452273,
+        2.2151213,
+        2.2241289,
+        2.8863045,
+        2.3926087,
+        3.3088593,
+        4.5904582,
+        4.5012019,
+        2.9586651,
+        4.6212643,
+        4.8294618,
+        6.6821251
+      ],
+      "median_s": 2.4499429499999996,
+      "p95_s": 4.8294618
+    },
+    "flush": {
+      "calls": 1,
+      "completed_calls": 1,
+      "latencies_s": [
+        0.0083845
+      ],
+      "median_s": 0.0083845,
+      "p95_s": 0.0083845
+    }
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "patient_id": "Patient_08871",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或关节疼痛等情况？\", \"reason\": \"当前没有患者的病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或关节疼痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "搬重物后中下背部突然剧痛，伴有明显乏力。最近一周还出现活动头晕、口渴和排尿增多，晨起眼睑肿胀，傍晚脚踝也肿了。双足有间歇性麻木刺痛，轻微碰撞容易瘀青。没有发热或排尿痛。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为骨痛、乏力、多饮多尿、水肿及出血倾向，高度怀疑多发性骨髓瘤或血液系统恶性肿瘤。根据记忆摘要提示，该情况需要完善血常规、肾功能、血清蛋白电泳、骨骼X线及骨髓穿刺等关键检查以明确诊断，目前尚未开具任何检查，故优先选择开检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为突发背痛、乏力、多尿、口渴、水肿及易瘀青，症状高度提示多发性骨髓瘤（骨痛、贫血、肾功能异常、高钙血症）或血液系统恶性肿瘤。虽然已提及尿液和粪便检查类别，但确诊此类疾病首先需要进行全面的血液学评估，包括全血细胞计数（CBC）、生化全套（评估肾功能、电解质/钙水平）、血清蛋白电泳及免疫固定电泳等，以明确是否存在贫血、肾功能损害、高钙血症及单克隆蛋白，这是指导后续影像学（如骨骼X线/MRI）和病理检查的关键第一步。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"空腹血糖（FBG）\", \"肾功能检查（RFTs）\", \"血清电解质\", \"凝血功能全套\"], \"reason\": \"患者表现为搬重物后背部剧痛、乏力、口渴、多尿、水肿及双足麻木，需排查高钙血症、糖尿病或肾脏问题；同时有轻微碰撞易瘀青，提示可能存在血小板减少或凝血功能障碍。因此首选全血细胞计数（CBC）评估贫血和血小板情况，空腹血糖（FBG）筛查糖尿病，肾功能检查（RFTs）和血清电解质评估肾功能和钙/钠水平，凝血功能全套排查出血倾向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"92 g/L［参考范围：140-180 g/L］\", \"血小板计数\": \"118 x 10^9/L［参考范围：150-400 x 10^9/L］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血小板计数\"]}, \"空腹血糖（FBG）\": {\"result\": {\"空腹血糖\": \"12.5 mmol/L［参考值：3.9-6.1 mmol/L (70-110 mg/dL)］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"空腹血糖\"]}, \"肾功能检查（RFTs）\": {\"result\": {\"血清肌酐\": \"2.3 mg/dL［参考范围：0.7-1.3 mg/dL］\", \"估算肾小球滤过率\": \"34 mL/min/1.73m^2［参考范围：>=90 mL/min/1.73m^2］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清肌酐\", \"估算肾小球滤过率\"]}, \"血清电解质\": {\"result\": {\"血钙\": \"12.1 mg/dL［参考范围：8.5-10.5 mg/dL］\", \"磷酸盐\": \"2.0 mg/dL［参考范围：2.5-4.5 mg/dL］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血钙\", \"磷酸盐\"]}, \"凝血功能全套\": {\"result\": {\"D-二聚体\": \"0.45 mg/L FEU［参考值：<0.5 mg/L FEU（或 <250 ng/mL DDU）］\", \"凝血酶原时间\": \"12.5 秒［参考值：11-13.5 秒］\", \"凝血酶时间\": \"16.0 秒［参考值：14-19 秒］\", \"国际标准化比值\": \"1.05［参考值：0.8-1.2］\", \"活化部分凝血活酶时间\": \"30.0 秒［参考值：25-35 秒］\", \"血浆纤维蛋白原\": \"3.2 g/L［参考值：2.0-4.0 g/L］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者症状（多饮、多尿、乏力、水肿）及检查结果（高血糖、贫血、血小板减少、肾功能不全、高钙血症、低磷血症）已高度提示糖尿病合并慢性肾脏病及可能的甲状旁腺功能亢进或相关代谢紊乱，关键诊断信息已具备，可进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"肾内科\", \"reason\": \"患者主要表现为多尿、口渴、乏力、眼睑及下肢水肿，结合检查结果提示严重高钙血症（12.1 mg/dL）、低磷血症、肾功能不全（肌酐升高、eGFR降低）以及贫血。这些症状和实验室异常高度提示由肾脏疾病（如慢性肾病或急性肾损伤）引起的高钙血症及相关代谢紊乱，需优先由肾内科进行诊治以评估肾功能并纠正电解质紊乱。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"慢性肾脏病\", \"treatment_plan\": \"1. 有效性治疗：立即启动针对慢性肾脏病（CKD）3b期的综合管理。首要措施是严格控制血糖（空腹血糖12.5 mmol/L），建议立即开始胰岛素强化治疗或调整口服降糖药方案，以逆转高血糖引起的渗透性利尿和脱水状态。针对高钙血症（12.1 mg/dL）和低磷血症，需限制高钙饮食，必要时使用降钙药物（如双膦酸盐需谨慎评估肾功能后使用）并补充活性维生素D前体。针对贫血（Hb 92 g/L），暂不急于输血，先纠正病因，待病情稳定后评估促红细胞生成素（EPO）的使用指征。\\n2. 个性化调整：患者有背痛、乏力、水肿及多尿口渴症状，提示急性加重可能。需根据患者年龄（若为儿童需按体重精确计算剂量）和当前肾功能（eGFR 34 mL/min）调整所有经肾排泄药物的剂量，避免使用肾毒性药物（如NSAIDs）。针对双足麻木刺痛，需排查糖尿病周围神经病变，给予营养神经治疗。\\n3. 安全性监测：严密监测血钙、血钾及尿量变化，防止高钙危象或电解质紊乱。每日记录体重和水肿情况。教育患者识别危险信号：如出现意识模糊、严重呼吸困难、胸痛或无尿，需立即急诊就医。建议2周内复查肾功能、电解质及糖化血红蛋白，评估治疗效果。\", \"reasoning\": \"诊断依据：患者表现为明显的肾功能不全（血清肌酐2.3 mg/dL，eGFR 34 mL/min），伴有贫血（Hb 92 g/L）、高钙血症和低磷血症，符合慢性肾脏病（CKD）的代谢紊乱特征。同时存在显著的高血糖（12.5 mmol/L）和多尿、口渴等糖尿病典型症状，提示糖尿病肾病可能是导致CKD的原发病因。虽然患者有凝血异常病史记忆，但本次检查结果中凝血功能全套正常，排除了DIC或严重凝血障碍作为当前主要矛盾。结合肾内科科室设置及标准疾病名称，'慢性肾脏病'是最准确的诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_08871",
+    "mode": "train",
+    "memory_notes": [
+      "User's child has coagulation abnormalities with D-dimer 1.8 mg/L FEU, prolonged PT (16.5s), aPTT (38s), elevated INR (1.4), and low fibrinogen (0.9 g/L).",
+      "Patient_01894's coagulation profile showed elevated D-dimer (1.82 mg/L FEU), prolonged PT (16.5s) and PTT (38.0s), elevated INR (1.45), and low fibrinogen (1.6 g/L).",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Patient_07345 had severe thrombocytopenia (platelet count 18 x 10^9/L) with normal hemoglobin and white blood cell counts, along with an elevated international normalized ratio (INR) of 1.3.",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_07426's CBC revealed anemia (Hb 92 g/L), leukocytosis (WBC 18.6 x10^9/L), and thrombocytopenia (platelets 92 x10^9/L).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)",
+      "Patient_01590 has mild anemia with hemoglobin of 98 g/L, normal platelet count (280 x 10^9/L), and isolated prolonged activated partial thromboplastin time (aPTT) of 46 seconds.",
+      "Patient_01894's complete blood count showed WBC 24.6 x 10^9/L (elevated), hemoglobin 86 g/L (anemia), and platelet count 88 x 10^9/L (thrombocytopenia).",
+      "Patient_04911's CBC showed elevated hemoglobin at 162 g/L (high) and elevated RBC count at 5.8 x 10^12/L (high), indicating secondary polycythemia.",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "Patient_08256's CBC showed mild anemia (Hgb 128 g/L) but normal platelet count (210,000/μL) and morphology."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或关节疼痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "搬重物后中下背部突然剧痛，伴有明显乏力。最近一周还出现活动头晕、口渴和排尿增多，晨起眼睑肿胀，傍晚脚踝也肿了。双足有间歇性麻木刺痛，轻微碰撞容易瘀青。没有发热或排尿痛。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "92 g/L［参考范围：140-180 g/L］",
+          "血小板计数": "118 x 10^9/L［参考范围：150-400 x 10^9/L］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "血小板计数"
+        ]
+      },
+      "空腹血糖（FBG）": {
+        "result": {
+          "空腹血糖": "12.5 mmol/L［参考值：3.9-6.1 mmol/L (70-110 mg/dL)］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "空腹血糖"
+        ]
+      },
+      "肾功能检查（RFTs）": {
+        "result": {
+          "血清肌酐": "2.3 mg/dL［参考范围：0.7-1.3 mg/dL］",
+          "估算肾小球滤过率": "34 mL/min/1.73m^2［参考范围：>=90 mL/min/1.73m^2］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清肌酐",
+          "估算肾小球滤过率"
+        ]
+      },
+      "血清电解质": {
+        "result": {
+          "血钙": "12.1 mg/dL［参考范围：8.5-10.5 mg/dL］",
+          "磷酸盐": "2.0 mg/dL［参考范围：2.5-4.5 mg/dL］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血钙",
+          "磷酸盐"
+        ]
+      },
+      "凝血功能全套": {
+        "result": {
+          "D-二聚体": "0.45 mg/L FEU［参考值：<0.5 mg/L FEU（或 <250 ng/mL DDU）］",
+          "凝血酶原时间": "12.5 秒［参考值：11-13.5 秒］",
+          "凝血酶时间": "16.0 秒［参考值：14-19 秒］",
+          "国际标准化比值": "1.05［参考值：0.8-1.2］",
+          "活化部分凝血活酶时间": "30.0 秒［参考值：25-35 秒］",
+          "血浆纤维蛋白原": "3.2 g/L［参考值：2.0-4.0 g/L］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有什么不舒服的症状？比如是否有发热、乏力、出血点或关节疼痛等情况？",
+        "reason": "当前没有患者的病史信息和检查结果，为了明确诊断方向，首先需要询问患者的主要症状和体征。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为骨痛、乏力、多饮多尿、水肿及出血倾向，高度怀疑多发性骨髓瘤或血液系统恶性肿瘤。根据记忆摘要提示，该情况需要完善血常规、肾功能、血清蛋白电泳、骨骼X线及骨髓穿刺等关键检查以明确诊断，目前尚未开具任何检查，故优先选择开检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者症状（多饮、多尿、乏力、水肿）及检查结果（高血糖、贫血、血小板减少、肾功能不全、高钙血症、低磷血症）已高度提示糖尿病合并慢性肾脏病及可能的甲状旁腺功能亢进或相关代谢紊乱，关键诊断信息已具备，可进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "空腹血糖（FBG）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "凝血功能全套"
+        ],
+        "reason": "患者表现为搬重物后背部剧痛、乏力、口渴、多尿、水肿及双足麻木，需排查高钙血症、糖尿病或肾脏问题；同时有轻微碰撞易瘀青，提示可能存在血小板减少或凝血功能障碍。因此首选全血细胞计数（CBC）评估贫血和血小板情况，空腹血糖（FBG）筛查糖尿病，肾功能检查（RFTs）和血清电解质评估肾功能和钙/钠水平，凝血功能全套排查出血倾向。"
+      }
+    ],
+    "final_plan": {
+      "department": "肾内科",
+      "diagnosis": "慢性肾脏病",
+      "treatment_plan": "1. 有效性治疗：立即启动针对慢性肾脏病（CKD）3b期的综合管理。首要措施是严格控制血糖（空腹血糖12.5 mmol/L），建议立即开始胰岛素强化治疗或调整口服降糖药方案，以逆转高血糖引起的渗透性利尿和脱水状态。针对高钙血症（12.1 mg/dL）和低磷血症，需限制高钙饮食，必要时使用降钙药物（如双膦酸盐需谨慎评估肾功能后使用）并补充活性维生素D前体。针对贫血（Hb 92 g/L），暂不急于输血，先纠正病因，待病情稳定后评估促红细胞生成素（EPO）的使用指征。\n2. 个性化调整：患者有背痛、乏力、水肿及多尿口渴症状，提示急性加重可能。需根据患者年龄（若为儿童需按体重精确计算剂量）和当前肾功能（eGFR 34 mL/min）调整所有经肾排泄药物的剂量，避免使用肾毒性药物（如NSAIDs）。针对双足麻木刺痛，需排查糖尿病周围神经病变，给予营养神经治疗。\n3. 安全性监测：严密监测血钙、血钾及尿量变化，防止高钙危象或电解质紊乱。每日记录体重和水肿情况。教育患者识别危险信号：如出现意识模糊、严重呼吸困难、胸痛或无尿，需立即急诊就医。建议2周内复查肾功能、电解质及糖化血红蛋白，评估治疗效果。",
+      "reasoning": "诊断依据：患者表现为明显的肾功能不全（血清肌酐2.3 mg/dL，eGFR 34 mL/min），伴有贫血（Hb 92 g/L）、高钙血症和低磷血症，符合慢性肾脏病（CKD）的代谢紊乱特征。同时存在显著的高血糖（12.5 mmol/L）和多尿、口渴等糖尿病典型症状，提示糖尿病肾病可能是导致CKD的原发病因。虽然患者有凝血异常病史记忆，但本次检查结果中凝血功能全套正常，排除了DIC或严重凝血障碍作为当前主要矛盾。结合肾内科科室设置及标准疾病名称，'慢性肾脏病'是最准确的诊断。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_08871",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.6,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.2,
+      "treatmentPersonalization": 0.4,
+      "diagnosisDetail": {
+        "submitted": [
+          "慢性肾脏病"
+        ],
+        "expected": [
+          "多发性骨髓瘤"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "空腹血糖（FBG）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "凝血功能全套"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "全身骨骼X线检查",
+          "磁共振成像（MRI）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "血清电解质"
+        ],
+        "precision": 0.6,
+        "coverage": 0.3,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 有效性治疗：立即启动针对慢性肾脏病（CKD）3b期的综合管理。首要措施是严格控制血糖（空腹血糖12.5 mmol/L），建议立即开始胰岛素强化治疗或调整口服降糖药方案，以逆转高血糖引起的渗透性利尿和脱水状态。针对高钙血症（12.1 mg/dL）和低磷血症，需限制高钙饮食，必要时使用降钙药物（如双膦酸盐需谨慎评估肾功能后使用）并补充活性维生素D前体。针对贫血（Hb 92 g/L），暂不急于输血，先纠正病因，待病情稳定后评估促红细胞生成素（EPO）的使用指征。\n2. 个性化调整：患者有背痛、乏力、水肿及多尿口渴症状，提示急性加重可能。需根据患者年龄（若为儿童需按体重精确计算剂量）和当前肾功能（eGFR 34 mL/min）调整所有经肾排泄药物的剂量，避免使用肾毒性药物（如NSAIDs）。针对双足麻木刺痛，需排查糖尿病周围神经病变，给予营养神经治疗。\n3. 安全性监测：严密监测血钙、血钾及尿量变化，防止高钙危象或电解质紊乱。每日记录体重和水肿情况。教育患者识别危险信号：如出现意识模糊、严重呼吸困难、胸痛或无尿，需立即急诊就医。建议2周内复查肾功能、电解质及糖化血红蛋白，评估治疗效果。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.2,
+        "personalization": 0.4,
+        "reasoning": "误诊为糖尿病致方案完全错误且危险，未针对多发性骨髓瘤治疗。",
+        "reference": "开始硼替佐米-来那度胺-低剂量地塞米松诱导治疗（VRd-lite），共6个周期。骨保护方面，采用适合 eGFR 约34 mL/min/1.73m^2 的经肾功能调整的静脉双膦酸盐方案（并根据指征补充钙/维生素D，同时注意颌骨坏死预防措施及进行口腔评估）。对于伴多尿/口渴及急性肾损伤风险的高钙血症，给予积极静脉输注等渗盐水补液，并频繁监测容量状态、电解质、尿量和肾功能；仅在充分补液后，如临床上存在容量负荷过多时再加用袢利尿剂，并在血钙/肾功能改善后重新评估口服补液目标。停用所有NSAIDs，穿戴弹力袜缓解水肿，并安排脊柱矫形支具适配，以稳定L2骨折并防止进一步椎体塌陷。除非有支持性化验结果记录提示高肿瘤溶解综合征（TLS）风险（如尿酸/LDH及酸碱状态），否则不要常规使用肿瘤溶解预防（口服碳酸氢钠/别嘌醇）；应以补液和监测作为一线措施。对于贫血，检查铁代谢指标（铁蛋白/TSAT）并据此调整补铁治疗；促红细胞生成素（ESA）仅保留用于评估后的症状性贫血，需记录血红蛋白目标值，并避免经验性联合使用ESA+铁剂。在来那度胺治疗期间，应根据风险明确提供静脉血栓栓塞（VTE）预防（如低风险用阿司匹林，较高风险用抗凝治疗）。1周后复查血清钙、肌酐和全血细胞计数（CBC）；如出现新发麻木、无力、尿潴留或血钙 >13 mg/dL，应立即就医。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "多发性骨髓瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "全身骨骼X线检查",
+          "磁共振成像（MRI）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [],
+          "treatments": []
+        },
+        "treatment_plan": "开始硼替佐米-来那度胺-低剂量地塞米松诱导治疗（VRd-lite），共6个周期。骨保护方面，采用适合 eGFR 约34 mL/min/1.73m^2 的经肾功能调整的静脉双膦酸盐方案（并根据指征补充钙/维生素D，同时注意颌骨坏死预防措施及进行口腔评估）。对于伴多尿/口渴及急性肾损伤风险的高钙血症，给予积极静脉输注等渗盐水补液，并频繁监测容量状态、电解质、尿量和肾功能；仅在充分补液后，如临床上存在容量负荷过多时再加用袢利尿剂，并在血钙/肾功能改善后重新评估口服补液目标。停用所有NSAIDs，穿戴弹力袜缓解水肿，并安排脊柱矫形支具适配，以稳定L2骨折并防止进一步椎体塌陷。除非有支持性化验结果记录提示高肿瘤溶解综合征（TLS）风险（如尿酸/LDH及酸碱状态），否则不要常规使用肿瘤溶解预防（口服碳酸氢钠/别嘌醇）；应以补液和监测作为一线措施。对于贫血，检查铁代谢指标（铁蛋白/TSAT）并据此调整补铁治疗；促红细胞生成素（ESA）仅保留用于评估后的症状性贫血，需记录血红蛋白目标值，并避免经验性联合使用ESA+铁剂。在来那度胺治疗期间，应根据风险明确提供静脉血栓栓塞（VTE）预防（如低风险用阿司匹林，较高风险用抗凝治疗）。1周后复查血清钙、肌酐和全血细胞计数（CBC）；如出现新发麻木、无力、尿潴留或血钙 >13 mg/dL，应立即就医。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "患者表现为搬重物后突发剧痛伴乏力，近期出现多尿、口渴、水肿及双足麻木，有易瘀青史。",
+        "diagnosis_reflection": "误诊为慢性肾脏病（CKD），未识别出多发性骨髓瘤（MM）的典型线索（如骨痛、高钙血症、贫血、肾功能不全）。需警惕‘腰痛+肾损+贫血’组合提示MM可能，避免仅按糖尿病或单纯肾病处理。",
+        "examination_reflection": "遗漏了关键检查：血清蛋白电泳（SPEP）、24小时尿蛋白、尿蛋白电泳、全身骨骼X线/MRI及骨髓穿刺活检。已做CBC、RFTs和电解质正确，但不足以确诊MM，需补充免疫学及影像学评估。",
+        "treatment_reflection": "治疗方案完全错误，针对CKD/糖尿病管理而忽略MM核心治疗（如VRd-lite方案）。未考虑高钙血症的紧急处理（补液+降钙）及骨保护策略，且未停用NSAIDs等肾毒性药物。",
+        "future_strategy": "面对‘骨痛+肾衰+贫血+高钙’综合征时，优先排查多发性骨髓瘤；立即完善SPEP、骨髓活检及骨骼影像；治疗上以诱导化疗、纠正高钙及骨保护为核心，避免经验性按常见慢性病处理。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:46:28.491951+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_08871",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "慢性肾脏病"
+    ],
+    "treatment_plan": "1. 有效性治疗：立即启动针对慢性肾脏病（CKD）3b期的综合管理。首要措施是严格控制血糖（空腹血糖12.5 mmol/L），建议立即开始胰岛素强化治疗或调整口服降糖药方案，以逆转高血糖引起的渗透性利尿和脱水状态。针对高钙血症（12.1 mg/dL）和低磷血症，需限制高钙饮食，必要时使用降钙药物（如双膦酸盐需谨慎评估肾功能后使用）并补充活性维生素D前体。针对贫血（Hb 92 g/L），暂不急于输血，先纠正病因，待病情稳定后评估促红细胞生成素（EPO）的使用指征。\n2. 个性化调整：患者有背痛、乏力、水肿及多尿口渴症状，提示急性加重可能。需根据患者年龄（若为儿童需按体重精确计算剂量）和当前肾功能（eGFR 34 mL/min）调整所有经肾排泄药物的剂量，避免使用肾毒性药物（如NSAIDs）。针对双足麻木刺痛，需排查糖尿病周围神经病变，给予营养神经治疗。\n3. 安全性监测：严密监测血钙、血钾及尿量变化，防止高钙危象或电解质紊乱。每日记录体重和水肿情况。教育患者识别危险信号：如出现意识模糊、严重呼吸困难、胸痛或无尿，需立即急诊就医。建议2周内复查肾功能、电解质及糖化血红蛋白，评估治疗效果。",
+    "reasoning": "诊断依据：患者表现为明显的肾功能不全（血清肌酐2.3 mg/dL，eGFR 34 mL/min），伴有贫血（Hb 92 g/L）、高钙血症和低磷血症，符合慢性肾脏病（CKD）的代谢紊乱特征。同时存在显著的高血糖（12.5 mmol/L）和多尿、口渴等糖尿病典型症状，提示糖尿病肾病可能是导致CKD的原发病因。虽然患者有凝血异常病史记忆，但本次检查结果中凝血功能全套正常，排除了DIC或严重凝血障碍作为当前主要矛盾。结合肾内科科室设置及标准疾病名称，'慢性肾脏病'是最准确的诊断。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "空腹血糖（FBG）",
+      "肾功能检查（RFTs）",
+      "血清电解质",
+      "凝血功能全套"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_08871",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.6,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.2,
+    "treatmentPersonalization": 0.4,
+    "diagnosisDetail": {
+      "submitted": [
+        "慢性肾脏病"
+      ],
+      "expected": [
+        "多发性骨髓瘤"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "空腹血糖（FBG）",
+        "肾功能检查（RFTs）",
+        "血清电解质",
+        "凝血功能全套"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "血清电解质",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "全身骨骼X线检查",
+        "磁共振成像（MRI）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "血清电解质"
+      ],
+      "precision": 0.6,
+      "coverage": 0.3,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 有效性治疗：立即启动针对慢性肾脏病（CKD）3b期的综合管理。首要措施是严格控制血糖（空腹血糖12.5 mmol/L），建议立即开始胰岛素强化治疗或调整口服降糖药方案，以逆转高血糖引起的渗透性利尿和脱水状态。针对高钙血症（12.1 mg/dL）和低磷血症，需限制高钙饮食，必要时使用降钙药物（如双膦酸盐需谨慎评估肾功能后使用）并补充活性维生素D前体。针对贫血（Hb 92 g/L），暂不急于输血，先纠正病因，待病情稳定后评估促红细胞生成素（EPO）的使用指征。\n2. 个性化调整：患者有背痛、乏力、水肿及多尿口渴症状，提示急性加重可能。需根据患者年龄（若为儿童需按体重精确计算剂量）和当前肾功能（eGFR 34 mL/min）调整所有经肾排泄药物的剂量，避免使用肾毒性药物（如NSAIDs）。针对双足麻木刺痛，需排查糖尿病周围神经病变，给予营养神经治疗。\n3. 安全性监测：严密监测血钙、血钾及尿量变化，防止高钙危象或电解质紊乱。每日记录体重和水肿情况。教育患者识别危险信号：如出现意识模糊、严重呼吸困难、胸痛或无尿，需立即急诊就医。建议2周内复查肾功能、电解质及糖化血红蛋白，评估治疗效果。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.2,
+      "personalization": 0.4,
+      "reasoning": "误诊为糖尿病致方案完全错误且危险，未针对多发性骨髓瘤治疗。",
+      "reference": "开始硼替佐米-来那度胺-低剂量地塞米松诱导治疗（VRd-lite），共6个周期。骨保护方面，采用适合 eGFR 约34 mL/min/1.73m^2 的经肾功能调整的静脉双膦酸盐方案（并根据指征补充钙/维生素D，同时注意颌骨坏死预防措施及进行口腔评估）。对于伴多尿/口渴及急性肾损伤风险的高钙血症，给予积极静脉输注等渗盐水补液，并频繁监测容量状态、电解质、尿量和肾功能；仅在充分补液后，如临床上存在容量负荷过多时再加用袢利尿剂，并在血钙/肾功能改善后重新评估口服补液目标。停用所有NSAIDs，穿戴弹力袜缓解水肿，并安排脊柱矫形支具适配，以稳定L2骨折并防止进一步椎体塌陷。除非有支持性化验结果记录提示高肿瘤溶解综合征（TLS）风险（如尿酸/LDH及酸碱状态），否则不要常规使用肿瘤溶解预防（口服碳酸氢钠/别嘌醇）；应以补液和监测作为一线措施。对于贫血，检查铁代谢指标（铁蛋白/TSAT）并据此调整补铁治疗；促红细胞生成素（ESA）仅保留用于评估后的症状性贫血，需记录血红蛋白目标值，并避免经验性联合使用ESA+铁剂。在来那度胺治疗期间，应根据风险明确提供静脉血栓栓塞（VTE）预防（如低风险用阿司匹林，较高风险用抗凝治疗）。1周后复查血清钙、肌酐和全血细胞计数（CBC）；如出现新发麻木、无力、尿潴留或血钙 >13 mg/dL，应立即就医。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "多发性骨髓瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "血清电解质",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "全身骨骼X线检查",
+        "磁共振成像（MRI）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [],
+        "treatments": []
+      },
+      "treatment_plan": "开始硼替佐米-来那度胺-低剂量地塞米松诱导治疗（VRd-lite），共6个周期。骨保护方面，采用适合 eGFR 约34 mL/min/1.73m^2 的经肾功能调整的静脉双膦酸盐方案（并根据指征补充钙/维生素D，同时注意颌骨坏死预防措施及进行口腔评估）。对于伴多尿/口渴及急性肾损伤风险的高钙血症，给予积极静脉输注等渗盐水补液，并频繁监测容量状态、电解质、尿量和肾功能；仅在充分补液后，如临床上存在容量负荷过多时再加用袢利尿剂，并在血钙/肾功能改善后重新评估口服补液目标。停用所有NSAIDs，穿戴弹力袜缓解水肿，并安排脊柱矫形支具适配，以稳定L2骨折并防止进一步椎体塌陷。除非有支持性化验结果记录提示高肿瘤溶解综合征（TLS）风险（如尿酸/LDH及酸碱状态），否则不要常规使用肿瘤溶解预防（口服碳酸氢钠/别嘌醇）；应以补液和监测作为一线措施。对于贫血，检查铁代谢指标（铁蛋白/TSAT）并据此调整补铁治疗；促红细胞生成素（ESA）仅保留用于评估后的症状性贫血，需记录血红蛋白目标值，并避免经验性联合使用ESA+铁剂。在来那度胺治疗期间，应根据风险明确提供静脉血栓栓塞（VTE）预防（如低风险用阿司匹林，较高风险用抗凝治疗）。1周后复查血清钙、肌酐和全血细胞计数（CBC）；如出现新发麻木、无力、尿潴留或血钙 >13 mg/dL，应立即就医。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "患者表现为搬重物后突发剧痛伴乏力，近期出现多尿、口渴、水肿及双足麻木，有易瘀青史。",
+      "diagnosis_reflection": "误诊为慢性肾脏病（CKD），未识别出多发性骨髓瘤（MM）的典型线索（如骨痛、高钙血症、贫血、肾功能不全）。需警惕‘腰痛+肾损+贫血’组合提示MM可能，避免仅按糖尿病或单纯肾病处理。",
+      "examination_reflection": "遗漏了关键检查：血清蛋白电泳（SPEP）、24小时尿蛋白、尿蛋白电泳、全身骨骼X线/MRI及骨髓穿刺活检。已做CBC、RFTs和电解质正确，但不足以确诊MM，需补充免疫学及影像学评估。",
+      "treatment_reflection": "治疗方案完全错误，针对CKD/糖尿病管理而忽略MM核心治疗（如VRd-lite方案）。未考虑高钙血症的紧急处理（补液+降钙）及骨保护策略，且未停用NSAIDs等肾毒性药物。",
+      "future_strategy": "面对‘骨痛+肾衰+贫血+高钙’综合征时，优先排查多发性骨髓瘤；立即完善SPEP、骨髓活检及骨骼影像；治疗上以诱导化疗、纠正高钙及骨保护为核心，避免经验性按常见慢性病处理。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/038.json#/applied_memory"
+  }
+}

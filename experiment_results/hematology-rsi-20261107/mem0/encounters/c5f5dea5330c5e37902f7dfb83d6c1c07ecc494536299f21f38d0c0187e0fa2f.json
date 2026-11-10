@@ -1,0 +1,593 @@
+{
+  "patient_id": "Patient_02475",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等？\", \"reason\": \"当前没有患者的主诉和病史信息，且未进行任何检查，无法做出诊断。为了明确病情并决定下一步的检查方向，首先需要询问患者的主要症状。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "主要是下背痛和肋骨痛，大概4个月了，越来越重。最近两周走路多了就喘不上气。还有浑身没劲，口渴、尿多，脚底像戴了袜子一样发麻。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛加重伴活动后气促，需进一步排查肺部疾病（如肺癌）或血液系统恶性肿瘤（如多发性骨髓瘤）等可能引起骨痛和贫血的病因，同时询问吸烟史和全身症状有助于鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、活动后气短、乏力、口渴多尿及手脚麻木，伴有近期体重下降。虽然已询问部分症状，但为了鉴别诊断（如排除肺部疾病、糖尿病并发症、肿瘤骨转移等），需要进一步确认吸烟史、呼吸道症状细节以及夜间盗汗情况，这些是评估病情严重性和方向的关键信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、活动后气短、乏力、口渴尿多及手脚麻木，伴有近期体重下降。虽然已询问过吸烟史和体重变化，但关于夜间盗汗的确认尚不明确，且需要进一步排查是否存在肺部感染、结核或恶性肿瘤（如淋巴瘤）等潜在病因，因此需要再次详细问诊以完善病史。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、气短、乏力、口渴尿多及手脚麻木，伴有近期体重下降。虽然已询问过部分症状，但病史摘要中多次提及发热、盗汗、体重下降等B症状相关线索（如套细胞淋巴瘤、毛细胞白血病等），且患者对夜间盗汗描述模糊。为了明确鉴别诊断（如排除血液系统恶性肿瘤、结核、糖尿病并发症等），需要再次确认是否存在典型的全身性症状（如盗汗）以及更详细的呼吸道和代谢症状，以指导后续检查方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如多发性骨髓瘤或转移癌）、结核或肺部疾病。虽然患者已提及戒烟和体重下降，但关于夜间盗汗、具体咳嗽情况及吸烟细节仍需进一步确认以完善病史采集，为后续检查选择提供依据。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、活动后气短、乏力、口渴多尿及手脚麻木，伴有近期体重下降。虽然已询问过吸烟史和体重变化，但对话历史显示该问题被重复询问且患者回答未完全明确（如夜间盗汗不确定），为进一步鉴别诊断（如排除结核、肿瘤或糖尿病等），需要再次确认关键症状细节。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、活动后气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如骨转移）、结核或其他系统性疾病。虽然已询问过部分问题，但病史摘要中关于吸烟史、盗汗等关键鉴别诊断信息尚需进一步确认以完善评估，且当前未进行任何检查，需先补充问诊信息。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如肺癌骨转移）或其他系统性疾病。虽然病史中已提及戒烟和体重下降，但关于吸烟的具体年限、是否伴有呼吸道症状以及夜间盗汗等B症状的详细信息尚不明确，需要进一步问诊以完善鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、活动后气短、乏力及消瘦，需进一步确认吸烟史、呼吸道症状及B症状（如盗汗）以鉴别肺部疾病、恶性肿瘤或血液系统疾病。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示骨骼病变（如转移瘤）或血液系统疾病。虽然已询问过部分信息，但为了明确鉴别诊断（如排除多发性骨髓瘤、淋巴瘤或实体肿瘤骨转移），需要再次确认关键的全身症状（B症状：发热、盗汗、体重减轻）以及呼吸道相关病史，以指导后续检查方向。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？\", \"reason\": \"患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如骨转移、淋巴瘤）或结核等疾病。虽然病史中已提及戒烟和体重下降，但关于夜间盗汗、具体吸烟年限及咳嗽咳痰情况的描述仍不够明确，需要进一步确认以完善鉴别诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"骨科\", \"reason\": \"患者主要症状为持续4个月的下背痛和肋骨痛，且疼痛进行性加重，伴有近期体重下降（3个月瘦4公斤）和呼吸困难。虽然患者有糖尿病史（口渴、尿多、脚麻），但骨骼疼痛是核心主诉，需优先排查骨转移瘤、多发性骨髓瘤或脊柱病变等骨科/肿瘤相关疾病，故首选骨科进行进一步评估。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"腰椎间盘突出症（腰椎间盘突出）\", \"treatment_plan\": \"1. 一般治疗与康复：建议急性期卧床休息，避免弯腰负重及剧烈运动；症状缓解后在专业指导下进行核心肌群训练（如小燕飞、平板支撑），以增强脊柱稳定性。2. 药物治疗：针对疼痛和神经根水肿，可短期使用非甾体抗炎药（NSAIDs，需注意患者有高血压病史，需监测血压及胃肠道反应）及营养神经药物（如甲钴胺）。3. 物理治疗：推荐牵引、理疗（如超短波、中频电疗）以缓解肌肉痉挛和减轻神经压迫。4. 个性化调整：鉴于患者有长期吸烟史（虽已戒除但属风险因素）及近期体重下降，需警惕骨质疏松或潜在肿瘤风险，若保守治疗无效或出现马尾神经综合征（大小便失禁、鞍区麻木），需立即转诊评估手术指征。5. 安全性监测：定期复查腰椎MRI，观察神经功能变化；若出现下肢无力加重、感觉丧失或大小便功能障碍，应立即就医。\", \"reasoning\": \"患者主要症状为下背痛伴肋骨痛持续4个月且加重，伴有活动后气促（可能与疼痛限制胸廓扩张有关）、乏力、口渴尿多（需排查糖尿病等代谢问题，但骨科首诊聚焦骨骼）、脚底袜套样麻木（典型周围神经病变表现，提示神经根受压或全身性神经病变）。结合“走路多了喘不上气”及“脚底发麻”，高度怀疑腰椎间盘突出症压迫神经根导致下肢感觉异常及疼痛放射。虽然患者有消瘦史需排除肿瘤骨转移，但在骨科标准疾病列表中，腰椎间盘突出症最符合其慢性腰背痛伴神经根症状的临床表现。需进一步通过影像学检查确诊并排除其他病因。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_02475",
+    "mode": "train",
+    "memory_notes": [
+      "User is an adult patient presenting with low-grade fever, fatigue, and decreased appetite over the past 3 months, resulting in a 4 kg weight loss.",
+      "User's patient (Patient_09288) has a history of travel to tropical regions, with symptoms worsening after the trip, including recurrent generalized itching, hives (urticaria), shortness of breath, dry cough, and diarrhea for the past two weeks, accompanied by night sweats.",
+      "User is a middle-aged male patient diagnosed with Mantle Cell Lymphoma (套细胞淋巴瘤) around November 2026, presenting with a painless left neck mass the size of a large walnut discovered 10 days prior",
+      "User's patient (Patient_05266) is a boarding student who developed symptoms four months ago, including itchy skin with urticaria-like red patches on the trunk and arms, wheezing, coughing (worse at night), abdominal pain, diarrhea, loss of appetite, and weight loss.",
+      "User's patient does not have fever, bone pain, bleeding tendencies, abdominal pain, nausea, or vomiting, and denies eating raw freshwater fish/shrimp or drinking untreated water.",
+      "User participated in a hematology diagnostic task for Patient_01894, a patient presenting with low-grade fever, easy bruising, occasional gum bleeding, and bone pain.",
+      "The correct treatment for Stage III-IV Mantle Cell Lymphoma in this patient involves R-bendamustine therapy (rituximab + bendamustine), avoiding penicillin, managing tumor lysis syndrome risk, and coordinating with rheumatology to adjust methotrexate use.",
+      "The patient has underlying chronic kidney disease, which complicates the treatment of Mantle Cell Lymphoma by requiring avoidance of nephrotoxic drugs like NSAIDs and dose adjustments for bendamustine.",
+      "User's child has a history of fever, night sweats, and weight loss of approximately 12 pounds starting around 8 weeks ago, with low-grade fever recurring for the past month (max 37.8°C).",
+      "User was diagnosed with Hairy Cell Leukemia based on clinical symptoms (fever, night sweats, bleeding, bone pain), pancytopenia, characteristic hairy cells on blood smear, dry tap on bone marrow aspiration, and honeycomb-pattern infiltration with fibrosis on biopsy",
+      "User has a history of hypertension, hyperlipidemia, and rheumatoid arthritis, with no family history of similar diseases",
+      "User's bone marrow biopsy showed 'dry tap' on aspiration, diffuse hairy cell infiltration in a honeycomb pattern, increased reticulin fibrosis, and reduced trilineage hematopoiesis",
+      "User experiences B symptoms including night sweats, unintentional weight loss of several pounds, fatigue, early satiety, and loose stools alongside the neck mass",
+      "User presented with symptoms of fever (night sweats), easy bruising, gum bleeding during brushing, and bone/joint pain, initially worrying about leukemia due to anxiety from watching Detroit Lions games online",
+      "Patient_05266 denies fever or night sweats but reports significant anxiety about being poor and having done something wrong, frequently searching online for information about parasites despite lacking typical risk factors.",
+      "Patient_02800 has underlying metabolic issues including low Vitamin D (14 ng/mL), mild hypocalcemia, and hypoalbuminemia, requiring supplementation and nutritional support.",
+      "User was recommended to order fecal occult blood test (FOBT), pelvic ultrasound, and esophagogastroduodenoscopy (EGD) to investigate the cause of iron deficiency anemia in Patient_03943.",
+      "User's child exhibits easy fatigability, pale complexion, decreased appetite, and occasional bruising on the body.",
+      "Patient_05266 was diagnosed with eosinophilia, characterized by multi-system involvement (skin rash, respiratory wheezing/cough, gastrointestinal pain/diarrhea) and weight loss, with peripheral blood smear showing eosinophilic increase but no parasites or abnormal cells.",
+      "User's complete blood count showed leukopenia (WBC: 2.1 x 10^9/L), anemia (Hgb: 112 g/L), and thrombocytopenia (PLT: 78 x 10^9/L)"
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等？"
+      },
+      {
+        "from": "patient",
+        "text": "主要是下背痛和肋骨痛，大概4个月了，越来越重。最近两周走路多了就喘不上气。还有浑身没劲，口渴、尿多，脚底像戴了袜子一样发麻。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "from": "doctor",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "from": "doctor",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "我年轻时抽过烟，但几十年前就戒了。最近三个月瘦了大概四公斤。至于晚上出汗，我不太确定，可能是天气热或者被子盖多了，我没太注意这个细节。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "from": "doctor",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "from": "doctor",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "from": "doctor",
+        "text": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      },
+      {
+        "from": "doctor",
+        "text": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？"
+      },
+      {
+        "from": "patient",
+        "text": "年轻时抽过烟，几十年前就戒了。没怎么咳过痰。最近三个月瘦了大概四公斤。晚上出汗我不太确定，可能是天热或被子厚，我没太注意。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {},
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问患者目前的主要症状是什么？例如是否有发热、乏力、出血倾向（如牙龈出血、皮肤瘀斑）、骨痛或淋巴结肿大等？",
+        "reason": "当前没有患者的主诉和病史信息，且未进行任何检查，无法做出诊断。为了明确病情并决定下一步的检查方向，首先需要询问患者的主要症状。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛加重伴活动后气促，需进一步排查肺部疾病（如肺癌）或血液系统恶性肿瘤（如多发性骨髓瘤）等可能引起骨痛和贫血的病因，同时询问吸烟史和全身症状有助于鉴别诊断。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、活动后气短、乏力、口渴多尿及手脚麻木，伴有近期体重下降。虽然已询问部分症状，但为了鉴别诊断（如排除肺部疾病、糖尿病并发症、肿瘤骨转移等），需要进一步确认吸烟史、呼吸道症状细节以及夜间盗汗情况，这些是评估病情严重性和方向的关键信息。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、活动后气短、乏力、口渴尿多及手脚麻木，伴有近期体重下降。虽然已询问过吸烟史和体重变化，但关于夜间盗汗的确认尚不明确，且需要进一步排查是否存在肺部感染、结核或恶性肿瘤（如淋巴瘤）等潜在病因，因此需要再次详细问诊以完善病史。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、气短、乏力、口渴尿多及手脚麻木，伴有近期体重下降。虽然已询问过部分症状，但病史摘要中多次提及发热、盗汗、体重下降等B症状相关线索（如套细胞淋巴瘤、毛细胞白血病等），且患者对夜间盗汗描述模糊。为了明确鉴别诊断（如排除血液系统恶性肿瘤、结核、糖尿病并发症等），需要再次确认是否存在典型的全身性症状（如盗汗）以及更详细的呼吸道和代谢症状，以指导后续检查方向。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如多发性骨髓瘤或转移癌）、结核或肺部疾病。虽然患者已提及戒烟和体重下降，但关于夜间盗汗、具体咳嗽情况及吸烟细节仍需进一步确认以完善病史采集，为后续检查选择提供依据。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、活动后气短、乏力、口渴多尿及手脚麻木，伴有近期体重下降。虽然已询问过吸烟史和体重变化，但对话历史显示该问题被重复询问且患者回答未完全明确（如夜间盗汗不确定），为进一步鉴别诊断（如排除结核、肿瘤或糖尿病等），需要再次确认关键症状细节。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、活动后气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如骨转移）、结核或其他系统性疾病。虽然已询问过部分问题，但病史摘要中关于吸烟史、盗汗等关键鉴别诊断信息尚需进一步确认以完善评估，且当前未进行任何检查，需先补充问诊信息。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如肺癌骨转移）或其他系统性疾病。虽然病史中已提及戒烟和体重下降，但关于吸烟的具体年限、是否伴有呼吸道症状以及夜间盗汗等B症状的详细信息尚不明确，需要进一步问诊以完善鉴别诊断。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、活动后气短、乏力及消瘦，需进一步确认吸烟史、呼吸道症状及B症状（如盗汗）以鉴别肺部疾病、恶性肿瘤或血液系统疾病。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "请问患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示骨骼病变（如转移瘤）或血液系统疾病。虽然已询问过部分信息，但为了明确鉴别诊断（如排除多发性骨髓瘤、淋巴瘤或实体肿瘤骨转移），需要再次确认关键的全身症状（B症状：发热、盗汗、体重减轻）以及呼吸道相关病史，以指导后续检查方向。"
+      },
+      {
+        "action": "ask_patient",
+        "question": "患者是否有长期吸烟史、慢性咳嗽或咳痰？近期体重是否有明显下降？是否有夜间盗汗的情况？",
+        "reason": "患者主诉下背痛、肋骨痛、气短、乏力及体重下降，这些症状可能提示恶性肿瘤（如骨转移、淋巴瘤）或结核等疾病。虽然病史中已提及戒烟和体重下降，但关于夜间盗汗、具体吸烟年限及咳嗽咳痰情况的描述仍不够明确，需要进一步确认以完善鉴别诊断。"
+      }
+    ],
+    "exam_decision_trace": [],
+    "final_plan": {
+      "department": "骨科",
+      "diagnosis": "腰椎间盘突出症（腰椎间盘突出）",
+      "treatment_plan": "1. 一般治疗与康复：建议急性期卧床休息，避免弯腰负重及剧烈运动；症状缓解后在专业指导下进行核心肌群训练（如小燕飞、平板支撑），以增强脊柱稳定性。2. 药物治疗：针对疼痛和神经根水肿，可短期使用非甾体抗炎药（NSAIDs，需注意患者有高血压病史，需监测血压及胃肠道反应）及营养神经药物（如甲钴胺）。3. 物理治疗：推荐牵引、理疗（如超短波、中频电疗）以缓解肌肉痉挛和减轻神经压迫。4. 个性化调整：鉴于患者有长期吸烟史（虽已戒除但属风险因素）及近期体重下降，需警惕骨质疏松或潜在肿瘤风险，若保守治疗无效或出现马尾神经综合征（大小便失禁、鞍区麻木），需立即转诊评估手术指征。5. 安全性监测：定期复查腰椎MRI，观察神经功能变化；若出现下肢无力加重、感觉丧失或大小便功能障碍，应立即就医。",
+      "reasoning": "患者主要症状为下背痛伴肋骨痛持续4个月且加重，伴有活动后气促（可能与疼痛限制胸廓扩张有关）、乏力、口渴尿多（需排查糖尿病等代谢问题，但骨科首诊聚焦骨骼）、脚底袜套样麻木（典型周围神经病变表现，提示神经根受压或全身性神经病变）。结合“走路多了喘不上气”及“脚底发麻”，高度怀疑腰椎间盘突出症压迫神经根导致下肢感觉异常及疼痛放射。虽然患者有消瘦史需排除肿瘤骨转移，但在骨科标准疾病列表中，腰椎间盘突出症最符合其慢性腰背痛伴神经根症状的临床表现。需进一步通过影像学检查确诊并排除其他病因。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_02475",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.0,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.2,
+      "treatmentPersonalization": 0.2,
+      "diagnosisDetail": {
+        "submitted": [
+          "腰椎间盘突出症（腰椎间盘突出）"
+        ],
+        "expected": [
+          "多发性骨髓瘤"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "综合代谢面板（CMP）",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "全身骨骼X线检查",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [],
+        "precision": 0.0,
+        "coverage": 0.0,
+        "precisionEligible": false
+      },
+      "treatmentDetail": {
+        "submitted": "1. 一般治疗与康复：建议急性期卧床休息，避免弯腰负重及剧烈运动；症状缓解后在专业指导下进行核心肌群训练（如小燕飞、平板支撑），以增强脊柱稳定性。2. 药物治疗：针对疼痛和神经根水肿，可短期使用非甾体抗炎药（NSAIDs，需注意患者有高血压病史，需监测血压及胃肠道反应）及营养神经药物（如甲钴胺）。3. 物理治疗：推荐牵引、理疗（如超短波、中频电疗）以缓解肌肉痉挛和减轻神经压迫。4. 个性化调整：鉴于患者有长期吸烟史（虽已戒除但属风险因素）及近期体重下降，需警惕骨质疏松或潜在肿瘤风险，若保守治疗无效或出现马尾神经综合征（大小便失禁、鞍区麻木），需立即转诊评估手术指征。5. 安全性监测：定期复查腰椎MRI，观察神经功能变化；若出现下肢无力加重、感觉丧失或大小便功能障碍，应立即就医。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.2,
+        "personalization": 0.2,
+        "reasoning": "误诊为腰突，方案完全错误且违反禁忌。",
+        "reference": "启动针对多发性骨髓瘤的按剂量调整的硼替佐米联合地塞米松诱导治疗，并根据 eGFR 28 mL/min 进行肾功能相关剂量调整。为保护骨骼，将唑来膦酸替换为每月一次皮下注射地舒单抗。对于血红蛋白 86 g/L 的症状性贫血，给予促红细胞生成素治疗。针对高钙血症，给予生理盐水积极补液，并避免使用肾毒性药物。在硼替佐米治疗期间，实施有针对性的感染预防，包括按肾功能调整剂量的带状疱疹抗病毒预防（例如阿昔洛韦/伐昔洛韦应根据肾功能调整剂量）；抗菌预防应仅限于明确的高风险标准，如显著中性粒细胞减少或反复严重细菌感染，而非常规广谱抗生素预防。使用地舒单抗时，应在基线及治疗过程中持续监测钙、磷、镁水平，并在血清钙恢复正常后计划补充维生素D和钙剂（采用适合肾功能状态的剂量），同时继续早期高钙血症处理。保持活动受限以预防骨折，并安排两周后血液科随访，以评估治疗反应并处理毒性。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "多发性骨髓瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "肾功能检查（RFTs）",
+          "综合代谢面板（CMP）",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "全身骨骼X线检查",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "Methotrexate"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "启动针对多发性骨髓瘤的按剂量调整的硼替佐米联合地塞米松诱导治疗，并根据 eGFR 28 mL/min 进行肾功能相关剂量调整。为保护骨骼，将唑来膦酸替换为每月一次皮下注射地舒单抗。对于血红蛋白 86 g/L 的症状性贫血，给予促红细胞生成素治疗。针对高钙血症，给予生理盐水积极补液，并避免使用肾毒性药物。在硼替佐米治疗期间，实施有针对性的感染预防，包括按肾功能调整剂量的带状疱疹抗病毒预防（例如阿昔洛韦/伐昔洛韦应根据肾功能调整剂量）；抗菌预防应仅限于明确的高风险标准，如显著中性粒细胞减少或反复严重细菌感染，而非常规广谱抗生素预防。使用地舒单抗时，应在基线及治疗过程中持续监测钙、磷、镁水平，并在血清钙恢复正常后计划补充维生素D和钙剂（采用适合肾功能状态的剂量），同时继续早期高钙血症处理。保持活动受限以预防骨折，并安排两周后血液科随访，以评估治疗反应并处理毒性。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "老年患者，主诉进行性下背痛、肋骨痛伴乏力、多尿口渴及四肢麻木，近期体重明显下降。有长期吸烟史（已戒），需警惕肿瘤或代谢性疾病。",
+        "diagnosis_reflection": "本次误诊为腰椎间盘突出症，完全遗漏了多发性骨髓瘤的鉴别诊断。关键线索包括：4个月进行性骨痛（非典型机械性疼痛）、不明原因体重下降、贫血症状（乏力）及高钙血症/肾功能损害相关表现（口渴、尿多）。未识别出CRAB标准中的骨质破坏和贫血风险。",
+        "examination_reflection": "检查选择严重缺失，未开具任何实验室或影像学检查。应优先安排全血细胞计数（筛查贫血）、肾功能及电解质（评估高钙/肾损）、血清蛋白电泳及免疫固定电泳（筛查M蛋白）、24小时尿蛋白及尿轻链、全身骨骼X线或低剂量CT（排查溶骨性病变），必要时行骨髓穿刺活检。",
+        "treatment_reflection": "治疗方案基于错误的腰突诊断制定，使用了NSAIDs等可能加重肾损伤的药物，且未针对潜在的高钙血症、贫血及感染风险进行处理。正确策略应包含针对多发性骨髓瘤的诱导化疗（如硼替佐米联合地塞米松）、双膦酸盐或地舒单抗治疗骨病、纠正高钙血症及根据肾功能调整药物剂量。",
+        "future_strategy": "面对中老年患者出现持续性骨痛伴体重下降、贫血或肾功能异常时，必须将多发性骨髓瘤、转移性肿瘤纳入首要鉴别诊断，立即完善血液学、生化及骨骼影像检查，避免仅凭局部症状盲目诊断为骨科退行性疾病。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:02:57.846520+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_02475",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "腰椎间盘突出症（腰椎间盘突出）"
+    ],
+    "treatment_plan": "1. 一般治疗与康复：建议急性期卧床休息，避免弯腰负重及剧烈运动；症状缓解后在专业指导下进行核心肌群训练（如小燕飞、平板支撑），以增强脊柱稳定性。2. 药物治疗：针对疼痛和神经根水肿，可短期使用非甾体抗炎药（NSAIDs，需注意患者有高血压病史，需监测血压及胃肠道反应）及营养神经药物（如甲钴胺）。3. 物理治疗：推荐牵引、理疗（如超短波、中频电疗）以缓解肌肉痉挛和减轻神经压迫。4. 个性化调整：鉴于患者有长期吸烟史（虽已戒除但属风险因素）及近期体重下降，需警惕骨质疏松或潜在肿瘤风险，若保守治疗无效或出现马尾神经综合征（大小便失禁、鞍区麻木），需立即转诊评估手术指征。5. 安全性监测：定期复查腰椎MRI，观察神经功能变化；若出现下肢无力加重、感觉丧失或大小便功能障碍，应立即就医。",
+    "reasoning": "患者主要症状为下背痛伴肋骨痛持续4个月且加重，伴有活动后气促（可能与疼痛限制胸廓扩张有关）、乏力、口渴尿多（需排查糖尿病等代谢问题，但骨科首诊聚焦骨骼）、脚底袜套样麻木（典型周围神经病变表现，提示神经根受压或全身性神经病变）。结合“走路多了喘不上气”及“脚底发麻”，高度怀疑腰椎间盘突出症压迫神经根导致下肢感觉异常及疼痛放射。虽然患者有消瘦史需排除肿瘤骨转移，但在骨科标准疾病列表中，腰椎间盘突出症最符合其慢性腰背痛伴神经根症状的临床表现。需进一步通过影像学检查确诊并排除其他病因。",
+    "ordered_examinations": [],
+    "conversation_rounds": 12,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_02475",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.0,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.2,
+    "treatmentPersonalization": 0.2,
+    "diagnosisDetail": {
+      "submitted": [
+        "腰椎间盘突出症（腰椎间盘突出）"
+      ],
+      "expected": [
+        "多发性骨髓瘤"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "综合代谢面板（CMP）",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "全身骨骼X线检查",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [],
+      "precision": 0.0,
+      "coverage": 0.0,
+      "precisionEligible": false
+    },
+    "treatmentDetail": {
+      "submitted": "1. 一般治疗与康复：建议急性期卧床休息，避免弯腰负重及剧烈运动；症状缓解后在专业指导下进行核心肌群训练（如小燕飞、平板支撑），以增强脊柱稳定性。2. 药物治疗：针对疼痛和神经根水肿，可短期使用非甾体抗炎药（NSAIDs，需注意患者有高血压病史，需监测血压及胃肠道反应）及营养神经药物（如甲钴胺）。3. 物理治疗：推荐牵引、理疗（如超短波、中频电疗）以缓解肌肉痉挛和减轻神经压迫。4. 个性化调整：鉴于患者有长期吸烟史（虽已戒除但属风险因素）及近期体重下降，需警惕骨质疏松或潜在肿瘤风险，若保守治疗无效或出现马尾神经综合征（大小便失禁、鞍区麻木），需立即转诊评估手术指征。5. 安全性监测：定期复查腰椎MRI，观察神经功能变化；若出现下肢无力加重、感觉丧失或大小便功能障碍，应立即就医。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.2,
+      "personalization": 0.2,
+      "reasoning": "误诊为腰突，方案完全错误且违反禁忌。",
+      "reference": "启动针对多发性骨髓瘤的按剂量调整的硼替佐米联合地塞米松诱导治疗，并根据 eGFR 28 mL/min 进行肾功能相关剂量调整。为保护骨骼，将唑来膦酸替换为每月一次皮下注射地舒单抗。对于血红蛋白 86 g/L 的症状性贫血，给予促红细胞生成素治疗。针对高钙血症，给予生理盐水积极补液，并避免使用肾毒性药物。在硼替佐米治疗期间，实施有针对性的感染预防，包括按肾功能调整剂量的带状疱疹抗病毒预防（例如阿昔洛韦/伐昔洛韦应根据肾功能调整剂量）；抗菌预防应仅限于明确的高风险标准，如显著中性粒细胞减少或反复严重细菌感染，而非常规广谱抗生素预防。使用地舒单抗时，应在基线及治疗过程中持续监测钙、磷、镁水平，并在血清钙恢复正常后计划补充维生素D和钙剂（采用适合肾功能状态的剂量），同时继续早期高钙血症处理。保持活动受限以预防骨折，并安排两周后血液科随访，以评估治疗反应并处理毒性。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "多发性骨髓瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "肾功能检查（RFTs）",
+        "综合代谢面板（CMP）",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "全身骨骼X线检查",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "Methotrexate"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "启动针对多发性骨髓瘤的按剂量调整的硼替佐米联合地塞米松诱导治疗，并根据 eGFR 28 mL/min 进行肾功能相关剂量调整。为保护骨骼，将唑来膦酸替换为每月一次皮下注射地舒单抗。对于血红蛋白 86 g/L 的症状性贫血，给予促红细胞生成素治疗。针对高钙血症，给予生理盐水积极补液，并避免使用肾毒性药物。在硼替佐米治疗期间，实施有针对性的感染预防，包括按肾功能调整剂量的带状疱疹抗病毒预防（例如阿昔洛韦/伐昔洛韦应根据肾功能调整剂量）；抗菌预防应仅限于明确的高风险标准，如显著中性粒细胞减少或反复严重细菌感染，而非常规广谱抗生素预防。使用地舒单抗时，应在基线及治疗过程中持续监测钙、磷、镁水平，并在血清钙恢复正常后计划补充维生素D和钙剂（采用适合肾功能状态的剂量），同时继续早期高钙血症处理。保持活动受限以预防骨折，并安排两周后血液科随访，以评估治疗反应并处理毒性。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "老年患者，主诉进行性下背痛、肋骨痛伴乏力、多尿口渴及四肢麻木，近期体重明显下降。有长期吸烟史（已戒），需警惕肿瘤或代谢性疾病。",
+      "diagnosis_reflection": "本次误诊为腰椎间盘突出症，完全遗漏了多发性骨髓瘤的鉴别诊断。关键线索包括：4个月进行性骨痛（非典型机械性疼痛）、不明原因体重下降、贫血症状（乏力）及高钙血症/肾功能损害相关表现（口渴、尿多）。未识别出CRAB标准中的骨质破坏和贫血风险。",
+      "examination_reflection": "检查选择严重缺失，未开具任何实验室或影像学检查。应优先安排全血细胞计数（筛查贫血）、肾功能及电解质（评估高钙/肾损）、血清蛋白电泳及免疫固定电泳（筛查M蛋白）、24小时尿蛋白及尿轻链、全身骨骼X线或低剂量CT（排查溶骨性病变），必要时行骨髓穿刺活检。",
+      "treatment_reflection": "治疗方案基于错误的腰突诊断制定，使用了NSAIDs等可能加重肾损伤的药物，且未针对潜在的高钙血症、贫血及感染风险进行处理。正确策略应包含针对多发性骨髓瘤的诱导化疗（如硼替佐米联合地塞米松）、双膦酸盐或地舒单抗治疗骨病、纠正高钙血症及根据肾功能调整药物剂量。",
+      "future_strategy": "面对中老年患者出现持续性骨痛伴体重下降、贫血或肾功能异常时，必须将多发性骨髓瘤、转移性肿瘤纳入首要鉴别诊断，立即完善血液学、生化及骨骼影像检查，避免仅凭局部症状盲目诊断为骨科退行性疾病。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/023.json#/applied_memory"
+  }
+}

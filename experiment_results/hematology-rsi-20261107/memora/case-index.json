@@ -1,0 +1,602 @@
+[
+  {
+    "position": 1,
+    "round": 1,
+    "case_id": "Patient_00948",
+    "file": "cases/001.json"
+  },
+  {
+    "position": 2,
+    "round": 1,
+    "case_id": "Patient_00278",
+    "file": "cases/002.json"
+  },
+  {
+    "position": 3,
+    "round": 1,
+    "case_id": "Patient_01332",
+    "file": "cases/003.json"
+  },
+  {
+    "position": 4,
+    "round": 1,
+    "case_id": "Patient_04339",
+    "file": "cases/004.json"
+  },
+  {
+    "position": 5,
+    "round": 1,
+    "case_id": "Patient_01666",
+    "file": "cases/005.json"
+  },
+  {
+    "position": 6,
+    "round": 1,
+    "case_id": "Patient_03281",
+    "file": "cases/006.json"
+  },
+  {
+    "position": 7,
+    "round": 1,
+    "case_id": "Patient_04641",
+    "file": "cases/007.json"
+  },
+  {
+    "position": 8,
+    "round": 1,
+    "case_id": "Patient_00554",
+    "file": "cases/008.json"
+  },
+  {
+    "position": 9,
+    "round": 1,
+    "case_id": "Patient_00930",
+    "file": "cases/009.json"
+  },
+  {
+    "position": 10,
+    "round": 1,
+    "case_id": "Patient_09288",
+    "file": "cases/010.json"
+  },
+  {
+    "position": 11,
+    "round": 1,
+    "case_id": "Patient_03252",
+    "file": "cases/011.json"
+  },
+  {
+    "position": 12,
+    "round": 1,
+    "case_id": "Patient_06460",
+    "file": "cases/012.json"
+  },
+  {
+    "position": 13,
+    "round": 1,
+    "case_id": "Patient_04601",
+    "file": "cases/013.json"
+  },
+  {
+    "position": 14,
+    "round": 1,
+    "case_id": "Patient_01894",
+    "file": "cases/014.json"
+  },
+  {
+    "position": 15,
+    "round": 1,
+    "case_id": "Patient_09281",
+    "file": "cases/015.json"
+  },
+  {
+    "position": 16,
+    "round": 1,
+    "case_id": "Patient_03943",
+    "file": "cases/016.json"
+  },
+  {
+    "position": 17,
+    "round": 1,
+    "case_id": "Patient_06974",
+    "file": "cases/017.json"
+  },
+  {
+    "position": 18,
+    "round": 1,
+    "case_id": "Patient_03774",
+    "file": "cases/018.json"
+  },
+  {
+    "position": 19,
+    "round": 1,
+    "case_id": "Patient_05266",
+    "file": "cases/019.json"
+  },
+  {
+    "position": 20,
+    "round": 1,
+    "case_id": "Patient_04911",
+    "file": "cases/020.json"
+  },
+  {
+    "position": 21,
+    "round": 2,
+    "case_id": "Patient_02800",
+    "file": "cases/021.json"
+  },
+  {
+    "position": 22,
+    "round": 2,
+    "case_id": "Patient_01590",
+    "file": "cases/022.json"
+  },
+  {
+    "position": 23,
+    "round": 2,
+    "case_id": "Patient_02475",
+    "file": "cases/023.json"
+  },
+  {
+    "position": 24,
+    "round": 2,
+    "case_id": "Patient_07426",
+    "file": "cases/024.json"
+  },
+  {
+    "position": 25,
+    "round": 2,
+    "case_id": "Patient_02851",
+    "file": "cases/025.json"
+  },
+  {
+    "position": 26,
+    "round": 2,
+    "case_id": "Patient_02118",
+    "file": "cases/026.json"
+  },
+  {
+    "position": 27,
+    "round": 2,
+    "case_id": "Patient_08308",
+    "file": "cases/027.json"
+  },
+  {
+    "position": 28,
+    "round": 2,
+    "case_id": "Patient_07345",
+    "file": "cases/028.json"
+  },
+  {
+    "position": 29,
+    "round": 2,
+    "case_id": "Patient_04112",
+    "file": "cases/029.json"
+  },
+  {
+    "position": 30,
+    "round": 2,
+    "case_id": "Patient_03568",
+    "file": "cases/030.json"
+  },
+  {
+    "position": 31,
+    "round": 2,
+    "case_id": "Patient_03068",
+    "file": "cases/031.json"
+  },
+  {
+    "position": 32,
+    "round": 2,
+    "case_id": "Patient_09606",
+    "file": "cases/032.json"
+  },
+  {
+    "position": 33,
+    "round": 2,
+    "case_id": "Patient_05572",
+    "file": "cases/033.json"
+  },
+  {
+    "position": 34,
+    "round": 2,
+    "case_id": "Patient_02107",
+    "file": "cases/034.json"
+  },
+  {
+    "position": 35,
+    "round": 2,
+    "case_id": "Patient_01539",
+    "file": "cases/035.json"
+  },
+  {
+    "position": 36,
+    "round": 2,
+    "case_id": "Patient_08256",
+    "file": "cases/036.json"
+  },
+  {
+    "position": 37,
+    "round": 2,
+    "case_id": "Patient_00952",
+    "file": "cases/037.json"
+  },
+  {
+    "position": 38,
+    "round": 2,
+    "case_id": "Patient_08871",
+    "file": "cases/038.json"
+  },
+  {
+    "position": 39,
+    "round": 2,
+    "case_id": "Patient_00827",
+    "file": "cases/039.json"
+  },
+  {
+    "position": 40,
+    "round": 2,
+    "case_id": "Patient_07450",
+    "file": "cases/040.json"
+  },
+  {
+    "position": 41,
+    "round": 3,
+    "case_id": "Patient_06317",
+    "file": "cases/041.json"
+  },
+  {
+    "position": 42,
+    "round": 3,
+    "case_id": "Patient_04985",
+    "file": "cases/042.json"
+  },
+  {
+    "position": 43,
+    "round": 3,
+    "case_id": "Patient_08508",
+    "file": "cases/043.json"
+  },
+  {
+    "position": 44,
+    "round": 3,
+    "case_id": "Patient_02057",
+    "file": "cases/044.json"
+  },
+  {
+    "position": 45,
+    "round": 3,
+    "case_id": "Patient_01050",
+    "file": "cases/045.json"
+  },
+  {
+    "position": 46,
+    "round": 3,
+    "case_id": "Patient_00634",
+    "file": "cases/046.json"
+  },
+  {
+    "position": 47,
+    "round": 3,
+    "case_id": "Patient_04183",
+    "file": "cases/047.json"
+  },
+  {
+    "position": 48,
+    "round": 3,
+    "case_id": "Patient_06532",
+    "file": "cases/048.json"
+  },
+  {
+    "position": 49,
+    "round": 3,
+    "case_id": "Patient_07033",
+    "file": "cases/049.json"
+  },
+  {
+    "position": 50,
+    "round": 3,
+    "case_id": "Patient_00068",
+    "file": "cases/050.json"
+  },
+  {
+    "position": 51,
+    "round": 3,
+    "case_id": "Patient_03960",
+    "file": "cases/051.json"
+  },
+  {
+    "position": 52,
+    "round": 3,
+    "case_id": "Patient_08330",
+    "file": "cases/052.json"
+  },
+  {
+    "position": 53,
+    "round": 3,
+    "case_id": "Patient_06427",
+    "file": "cases/053.json"
+  },
+  {
+    "position": 54,
+    "round": 3,
+    "case_id": "Patient_00783",
+    "file": "cases/054.json"
+  },
+  {
+    "position": 55,
+    "round": 3,
+    "case_id": "Patient_01919",
+    "file": "cases/055.json"
+  },
+  {
+    "position": 56,
+    "round": 3,
+    "case_id": "Patient_07050",
+    "file": "cases/056.json"
+  },
+  {
+    "position": 57,
+    "round": 3,
+    "case_id": "Patient_03614",
+    "file": "cases/057.json"
+  },
+  {
+    "position": 58,
+    "round": 3,
+    "case_id": "Patient_08247",
+    "file": "cases/058.json"
+  },
+  {
+    "position": 59,
+    "round": 3,
+    "case_id": "Patient_08888",
+    "file": "cases/059.json"
+  },
+  {
+    "position": 60,
+    "round": 3,
+    "case_id": "Patient_07621",
+    "file": "cases/060.json"
+  },
+  {
+    "position": 61,
+    "round": 4,
+    "case_id": "Patient_03135",
+    "file": "cases/061.json"
+  },
+  {
+    "position": 62,
+    "round": 4,
+    "case_id": "Patient_09774",
+    "file": "cases/062.json"
+  },
+  {
+    "position": 63,
+    "round": 4,
+    "case_id": "Patient_05578",
+    "file": "cases/063.json"
+  },
+  {
+    "position": 64,
+    "round": 4,
+    "case_id": "Patient_06243",
+    "file": "cases/064.json"
+  },
+  {
+    "position": 65,
+    "round": 4,
+    "case_id": "Patient_09977",
+    "file": "cases/065.json"
+  },
+  {
+    "position": 66,
+    "round": 4,
+    "case_id": "Patient_01544",
+    "file": "cases/066.json"
+  },
+  {
+    "position": 67,
+    "round": 4,
+    "case_id": "Patient_03544",
+    "file": "cases/067.json"
+  },
+  {
+    "position": 68,
+    "round": 4,
+    "case_id": "Patient_06270",
+    "file": "cases/068.json"
+  },
+  {
+    "position": 69,
+    "round": 4,
+    "case_id": "Patient_03573",
+    "file": "cases/069.json"
+  },
+  {
+    "position": 70,
+    "round": 4,
+    "case_id": "Patient_08107",
+    "file": "cases/070.json"
+  },
+  {
+    "position": 71,
+    "round": 4,
+    "case_id": "Patient_02913",
+    "file": "cases/071.json"
+  },
+  {
+    "position": 72,
+    "round": 4,
+    "case_id": "Patient_00351",
+    "file": "cases/072.json"
+  },
+  {
+    "position": 73,
+    "round": 4,
+    "case_id": "Patient_05523",
+    "file": "cases/073.json"
+  },
+  {
+    "position": 74,
+    "round": 4,
+    "case_id": "Patient_09529",
+    "file": "cases/074.json"
+  },
+  {
+    "position": 75,
+    "round": 4,
+    "case_id": "Patient_09102",
+    "file": "cases/075.json"
+  },
+  {
+    "position": 76,
+    "round": 4,
+    "case_id": "Patient_05207",
+    "file": "cases/076.json"
+  },
+  {
+    "position": 77,
+    "round": 4,
+    "case_id": "Patient_05291",
+    "file": "cases/077.json"
+  },
+  {
+    "position": 78,
+    "round": 4,
+    "case_id": "Patient_09094",
+    "file": "cases/078.json"
+  },
+  {
+    "position": 79,
+    "round": 4,
+    "case_id": "Patient_01909",
+    "file": "cases/079.json"
+  },
+  {
+    "position": 80,
+    "round": 4,
+    "case_id": "Patient_03549",
+    "file": "cases/080.json"
+  },
+  {
+    "position": 81,
+    "round": 5,
+    "case_id": "Patient_09548",
+    "file": "cases/081.json"
+  },
+  {
+    "position": 82,
+    "round": 5,
+    "case_id": "Patient_03827",
+    "file": "cases/082.json"
+  },
+  {
+    "position": 83,
+    "round": 5,
+    "case_id": "Patient_05345",
+    "file": "cases/083.json"
+  },
+  {
+    "position": 84,
+    "round": 5,
+    "case_id": "Patient_00638",
+    "file": "cases/084.json"
+  },
+  {
+    "position": 85,
+    "round": 5,
+    "case_id": "Patient_07127",
+    "file": "cases/085.json"
+  },
+  {
+    "position": 86,
+    "round": 5,
+    "case_id": "Patient_01299",
+    "file": "cases/086.json"
+  },
+  {
+    "position": 87,
+    "round": 5,
+    "case_id": "Patient_00518",
+    "file": "cases/087.json"
+  },
+  {
+    "position": 88,
+    "round": 5,
+    "case_id": "Patient_06604",
+    "file": "cases/088.json"
+  },
+  {
+    "position": 89,
+    "round": 5,
+    "case_id": "Patient_01886",
+    "file": "cases/089.json"
+  },
+  {
+    "position": 90,
+    "round": 5,
+    "case_id": "Patient_02239",
+    "file": "cases/090.json"
+  },
+  {
+    "position": 91,
+    "round": 5,
+    "case_id": "Patient_05500",
+    "file": "cases/091.json"
+  },
+  {
+    "position": 92,
+    "round": 5,
+    "case_id": "Patient_05308",
+    "file": "cases/092.json"
+  },
+  {
+    "position": 93,
+    "round": 5,
+    "case_id": "Patient_09476",
+    "file": "cases/093.json"
+  },
+  {
+    "position": 94,
+    "round": 5,
+    "case_id": "Patient_04352",
+    "file": "cases/094.json"
+  },
+  {
+    "position": 95,
+    "round": 5,
+    "case_id": "Patient_03440",
+    "file": "cases/095.json"
+  },
+  {
+    "position": 96,
+    "round": 5,
+    "case_id": "Patient_05191",
+    "file": "cases/096.json"
+  },
+  {
+    "position": 97,
+    "round": 5,
+    "case_id": "Patient_07043",
+    "file": "cases/097.json"
+  },
+  {
+    "position": 98,
+    "round": 5,
+    "case_id": "Patient_07845",
+    "file": "cases/098.json"
+  },
+  {
+    "position": 99,
+    "round": 5,
+    "case_id": "Patient_08284",
+    "file": "cases/099.json"
+  },
+  {
+    "position": 100,
+    "round": 5,
+    "case_id": "Patient_03511",
+    "file": "cases/100.json"
+  }
+]

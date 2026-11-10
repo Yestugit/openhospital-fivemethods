@@ -1,0 +1,466 @@
+{
+  "patient_id": "Patient_00827",
+  "case_state": {
+    "timeline": [
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"ask_patient\", \"question\": \"请问您目前有什么不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等情况？\", \"reason\": \"当前没有任何病史记录、已开检查及检查结果，缺乏诊断所需的关键临床信息，因此需要先通过问诊了解患者的主要症状和体征。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "message",
+        "role": "assistant",
+        "text": "请问您目前有什么不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等情况？"
+      },
+      {
+        "kind": "message",
+        "role": "user",
+        "text": "腰痛是提重物后突然出现的，活动时变锐痛，休息能缓解。最近两周越来越累，走路耐力下降，站着会头晕。还有口渴、尿多、便秘，偶尔脑子发蒙，脚踝下午肿，早上眼睛也肿。脚底偶尔刺痛麻木。没有发烧或出血点。"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者表现为腰痛、乏力、口渴多尿、水肿及神经症状，结合记忆摘要中类似病例（如Patient_08871）的病史，高度怀疑多发性骨髓瘤。目前尚未进行任何检查，需立即开具血常规、肾功能、血钙、血清蛋白电泳及骨骼X线等关键检查以明确诊断。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 血液\", \"reason\": \"患者表现为腰痛、乏力、口渴多尿、水肿及脚底麻木，结合记忆摘要中类似病例（如Patient_08871）的病史，高度怀疑多发性骨髓瘤。该病典型表现为骨痛、贫血、肾功能不全和高钙血症。目前尚未进行任何检查，首选“实验室检查 - 血液”以完善血常规（评估贫血）、生化全套（评估肾功能、血钙、血糖）及血清蛋白电泳等关键指标，这是确诊和鉴别诊断的基础。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"全血细胞计数（CBC）\", \"综合代谢面板（CMP）\", \"肾功能检查（RFTs）\", \"血清电解质\", \"甲状旁腺激素检测（PTH）\"], \"reason\": \"患者表现为腰痛、乏力、口渴、多尿、便秘、水肿及脚底麻木，结合记忆摘要中类似病例（如Patient_08871）的病史，高度怀疑多发性骨髓瘤。该病典型表现为骨痛、贫血、肾功能不全和高钙血症。因此，急需进行全血细胞计数（CBC）评估贫血和血小板情况，综合代谢面板（CMP）和肾功能检查（RFTs）评估肾功能和电解质（特别是钙），以及甲状旁腺激素检测（PTH）鉴别高钙血症的原因。这些是诊断和评估病情严重程度的关键基础检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"全血细胞计数（CBC）\": {\"result\": {\"血红蛋白\": \"88 g/L [参考范围：120-170 g/L]\", \"血液红细胞计数\": \"3.0 × 10^12/L [参考范围：4.0-5.3 × 10^12/L]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血红蛋白\", \"血液红细胞计数\"]}, \"综合代谢面板（CMP）\": {\"result\": {\"血钙\": \"12.1 mg/dL [参考范围：8.4-10.2 mg/dL]\", \"血清总蛋白\": \"9.4 g/dL [参考范围：5.8-8.0 g/dL]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血钙\", \"血清总蛋白\"]}, \"肾功能检查（RFTs）\": {\"result\": {\"血清肌酐\": \"2.3 mg/dL [参考范围：0.7-1.5 mg/dL]\", \"估算肾小球滤过率\": \"28 mL/min/1.73m² [参考范围：>=60 mL/min/1.73m²]\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血清肌酐\", \"估算肾小球滤过率\"]}, \"血清电解质\": {\"result\": {\"磷酸盐\": \"2.8 mg/dL［参考值：2.3-4.1 mg/dL（0.74-1.32 mmol/L）］\", \"血氯\": \"102 mmol/L［参考值：98-106 mmol/L］\", \"血清碳酸氢盐\": \"24 mmol/L［参考值：22-29 mmol/L］\", \"血钙\": \"12.1 mg/dL［参考值：8.5-10.2 mg/dL（2.12-2.55 mmol/L）］\", \"血钠\": \"139 mmol/L［参考值：136-145 mmol/L］\", \"血钾\": \"4.6 mmol/L［参考值：3.5-5.0 mmol/L］\", \"血镁\": \"1.9 mg/dL［参考值：1.7-2.2 mg/dL（0.70-0.90 mmol/L）］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"血钙\"]}, \"甲状旁腺激素检测（PTH）\": {\"result\": {\"PTH参考范围\": \"20-75 pg/mL［参考值：通常为 20-75 pg/mL（2.1-8.0 pmol/L）；一般高于年轻成人］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"order_examination\", \"question\": \"\", \"reason\": \"患者存在贫血、高钙血症、肾功能不全及血清总蛋白升高，高度怀疑多发性骨髓瘤。PTH正常排除了甲状旁腺功能亢进。为明确诊断，急需进行血清蛋白电泳（SPEP）、免疫固定电泳（IFE）检测M蛋白，以及24小时尿蛋白定量和游离轻链检测等检查。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_category\", \"decision\": {\"category\": \"实验室检查 - 其他\", \"reason\": \"患者表现为严重高钙血症、肾功能不全、贫血及血清总蛋白升高，且甲状旁腺激素（PTH）正常，临床高度怀疑多发性骨髓瘤。为明确诊断，需进行血清蛋白电泳、免疫固定电泳及游离轻链检测等特异性实验室检查，以寻找M蛋白并评估浆细胞病变。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"exam_item\", \"decision\": {\"examinations\": [\"糖类抗原125（CA-125）检测\", \"癌胚抗原（CEA）检测\"], \"reason\": \"患者表现为严重高钙血症、肾功能不全、贫血及血清总蛋白升高，结合腰痛症状，需高度警惕多发性骨髓瘤或恶性肿瘤骨转移。在现有检查类别中，选择肿瘤标志物检测（如CA-125和CEA）作为初步筛查，以辅助鉴别是否存在潜在的恶性肿瘤。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "tool_result",
+        "role": "user",
+        "text": "{\"results\": {\"糖类抗原125（CA-125）检测\": {\"result\": {\"CA-125\": \"42 U/mL［参考值：0-35 U/mL］\"}, \"status\": \"abnormal\", \"abnormal_indicators\": [\"CA-125\"]}, \"癌胚抗原（CEA）检测\": {\"result\": {\"吸烟者\": \"4.2 ng/mL［参考值：< 5.0 ng/mL（生理基线通常高于年轻成人）］\", \"非吸烟者\": \"< 5.0 ng/mL［参考值：< 5.0 ng/mL］\"}, \"status\": \"normal\", \"abnormal_indicators\": []}}}"
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"next_action\", \"decision\": {\"action\": \"final_diagnosis\", \"question\": \"\", \"reason\": \"患者有贫血、高钙血症、肾功能不全（肌酐升高、eGFR降低）、总蛋白升高，且PTH正常，结合症状（腰痛、乏力、口渴、多尿、便秘、骨痛），高度提示多发性骨髓瘤。已开检查（CBC, CMP, RFTs, 电解质, PTH, CA-125, CEA）结果支持该诊断方向，信息已足够进入诊断和治疗阶段。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"department\", \"decision\": {\"department\": \"肾内科\", \"reason\": \"患者表现为严重的肾功能不全（血清肌酐 2.3 mg/dL，eGFR 28 mL/min/1.73m²），伴有高钙血症（12.1 mg/dL）、贫血和蛋白尿迹象（总蛋白升高）。虽然高钙血症需鉴别甲状旁腺功能亢进或恶性肿瘤，但PTH正常且存在明确的肾脏损伤证据，结合多系统受累（如骨痛、乏力、消化道症状），首先考虑由肾脏疾病引起的代谢紊乱（如肾性骨病或慢性肾病并发症），故首选肾内科进行诊治。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      },
+      {
+        "kind": "action",
+        "role": "assistant",
+        "text": "{\"phase\": \"disease_and_treatment\", \"decision\": {\"diagnosis\": \"慢性肾脏病\", \"treatment_plan\": \"1. 紧急处理高钙血症与肾功能不全：立即静脉补液（生理盐水）促进钙排泄，监测尿量及电解质；若血钙持续>12 mg/dL或症状加重，考虑使用降钙素或双膦酸盐（需根据eGFR调整剂量），并暂停所有含钙/维生素D补充剂。2. 针对贫血治疗：评估铁代谢后给予促红细胞生成素（EPO）联合铁剂治疗，目标血红蛋白维持在10-11 g/L，避免过度纠正。3. 骨骼与矿物质管理：鉴于高钙、低磷及CKD背景，严格限制饮食磷摄入，避免活性维生素D使用以防高钙加重，定期监测PTH及骨密度。4. 并发症监测：密切观察腰痛性质变化以排除骨折或肾结石，控制血压，预防感染。5. 随访计划：每周复查血钙、肌酐、电解质及血常规，根据病情调整方案；若出现意识模糊、严重心律失常或无尿，立即急诊就医。\", \"reasoning\": \"患者表现为中度贫血（Hb 88g/L）、显著高钙血症（12.1 mg/dL）、肾功能不全（Cr 2.3 mg/dL, eGFR 28 mL/min）及血清总蛋白升高。虽然PTH正常排除了原发性甲状旁腺功能亢进，但高钙合并肾功能衰竭及多系统症状（乏力、口渴、骨痛、水肿）高度提示慢性肾脏病（CKD）导致的继发性矿物质骨代谢紊乱或潜在恶性肿瘤相关高钙血症。结合腰痛及蛋白升高，需优先按CKD进行综合管理，同时排查多发性骨髓瘤等病因。治疗方案重点在于纠正危及生命的高钙血症、保护残余肾功能及纠正贫血。\"}}",
+        "json_repair_count": 0,
+        "json_fallback": false
+      }
+    ],
+    "patient_id": "Patient_00827",
+    "mode": "train",
+    "memory_notes": [
+      "Patient_08871's laboratory results showed anemia (Hemoglobin 92 g/L), thrombocytopenia (Platelets 118 x 10^9/L), hyperglycemia (Fasting Blood Glucose 12.5 mmol/L), renal insufficiency (Serum Creatinine 2.3 mg/dL, eGFR 34 mL/min/1.73m^2), hypercalcemia (Calcium 12.1 mg/dL), and hypophosphatemia (Phosphate 2.0 mg/dL).",
+      "Patient_08308's CBC showed microcytic hypochromic anemia: Hemoglobin 82 g/L, Hematocrit 27%, MCV 68 fL, MCH 21 pg.",
+      "User diagnosed Patient_00952 with Chronic Lymphocytic Leukemia (CLL) based on B symptoms (fatigue, night sweats, weight loss), painless lymphadenopathy, bleeding tendency, leukocytosis with lymphocytosis (WBC 68.4 x 10^9/L, 82% lymphocytes), anemia (Hgb 98 g/L), thrombocytopenia (PLT 92 x 10^9/L), smudge cells on peripheral smear, and biopsy confirmation of monoclonal B-cell infiltration.",
+      "Patient_03568's Complete Blood Count (CBC) showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hemoglobin 82 g/L (anemia), and Platelets 32 x 10^9/L (severe thrombocytopenia).",
+      "Laboratory results for Patient_00952 showed pancytopenia with leukocytosis: WBC 68.4 x 10^9/L, Hgb 98 g/L, PLT 92 x 10^9/L; peripheral smear revealed 82% mature small lymphocytes with smudge cells.",
+      "User's child's Complete Blood Count (CBC) showed pancytopenia: Hemoglobin 78 g/L (anemia), WBC 3.1 × 10^9/L (leukopenia), Platelets 68 × 10^9/L (thrombocytopenia), RBC 3.2 × 10^12/L, and hematocrit 24%.",
+      "Patient_02118's complete blood count showed pancytopenia: WBC 2.1 x 10^9/L (leukopenia), Hgb 86 g/L (anemia), and PLT 48 x 10^9/L (thrombocytopenia).",
+      "Patient_04911's CBC showed elevated hemoglobin at 162 g/L (high) and elevated RBC count at 5.8 x 10^12/L (high), indicating secondary polycythemia.",
+      "User diagnosed Patient_02107 with iron deficiency anemia based on symptoms of progressive fatigue, dizziness, shortness of breath, pale complexion, heavy menstrual bleeding, and pica (craving ice), supported by lab results showing microcytic hypochromic anemia (Hgb 82 g/L, MCV 72 fL) and severe iron deficiency (serum iron 22 ug/dL, TIBC 452 ug/dL, transferrin saturation 5%, ferritin 6 ng/mL)",
+      "User's child's complete blood count showed WBC 28.4 x 10^9/L (elevated), hemoglobin 82 g/L (anemia), and platelet count 22 x 10^9/L (severe thrombocytopenia).",
+      "Patient_03068's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 108 g/L) and normal white blood cell count.",
+      "Patient_09606's complete blood count revealed leukocytosis (WBC: 28.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_01539's complete blood count showed leukocytosis (WBC: 48.6 x 10^9/L), anemia (Hgb: 86 g/L), and severe thrombocytopenia (PLT: 28 x 10^9/L).",
+      "Patient_05572's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with mild anemia (Hgb: 104 g/L) and normal white blood cell count.",
+      "User's 4-year-old daughter had laboratory results showing abnormal blood counts: white blood cell count of 28.6 x 10^9/L (elevated), hemoglobin of 86 g/L (anemia), and platelet count of 42 x 10^9/L (thrombocytopenia).",
+      "Patient_05266's laboratory results show leukocytosis (WBC: 16.2 x 10^9/L) and significant eosinophilia (absolute count: 2.4 x 10^9/L, 10% of differential), with elevated CRP (18 mg/L) and ESR (22 mm/hr).",
+      "Patient_06974's complete blood count showed severe thrombocytopenia (PLT: 12 x 10^9/L) with normal hemoglobin (128 g/L) and white blood cell count (7.8 x 10^9/L).",
+      "Patient_02800 has underlying metabolic issues including low Vitamin D (14 ng/mL), mild hypocalcemia, and hypoalbuminemia, requiring supplementation and nutritional support.",
+      "Patient_03943's CBC showed microcytic hypochromic anemia with hemoglobin 78 g/L, hematocrit 26%, MCV 68 fL, and MCH 21 pg.",
+      "Patient_04911's iron metabolism tests were normal with total iron binding capacity 320 μg/dL, serum iron 75 μg/dL, ferritin 45 ng/mL, and transferrin saturation 28%."
+    ],
+    "chat_history": [
+      {
+        "from": "doctor",
+        "text": "请问您目前有什么不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等情况？"
+      },
+      {
+        "from": "patient",
+        "text": "腰痛是提重物后突然出现的，活动时变锐痛，休息能缓解。最近两周越来越累，走路耐力下降，站着会头晕。还有口渴、尿多、便秘，偶尔脑子发蒙，脚踝下午肿，早上眼睛也肿。脚底偶尔刺痛麻木。没有发烧或出血点。"
+      }
+    ],
+    "ordered_examinations": [],
+    "invalid_examinations": [],
+    "examination_results": {
+      "全血细胞计数（CBC）": {
+        "result": {
+          "血红蛋白": "88 g/L [参考范围：120-170 g/L]",
+          "血液红细胞计数": "3.0 × 10^12/L [参考范围：4.0-5.3 × 10^12/L]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血红蛋白",
+          "血液红细胞计数"
+        ]
+      },
+      "综合代谢面板（CMP）": {
+        "result": {
+          "血钙": "12.1 mg/dL [参考范围：8.4-10.2 mg/dL]",
+          "血清总蛋白": "9.4 g/dL [参考范围：5.8-8.0 g/dL]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血钙",
+          "血清总蛋白"
+        ]
+      },
+      "肾功能检查（RFTs）": {
+        "result": {
+          "血清肌酐": "2.3 mg/dL [参考范围：0.7-1.5 mg/dL]",
+          "估算肾小球滤过率": "28 mL/min/1.73m² [参考范围：>=60 mL/min/1.73m²]"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血清肌酐",
+          "估算肾小球滤过率"
+        ]
+      },
+      "血清电解质": {
+        "result": {
+          "磷酸盐": "2.8 mg/dL［参考值：2.3-4.1 mg/dL（0.74-1.32 mmol/L）］",
+          "血氯": "102 mmol/L［参考值：98-106 mmol/L］",
+          "血清碳酸氢盐": "24 mmol/L［参考值：22-29 mmol/L］",
+          "血钙": "12.1 mg/dL［参考值：8.5-10.2 mg/dL（2.12-2.55 mmol/L）］",
+          "血钠": "139 mmol/L［参考值：136-145 mmol/L］",
+          "血钾": "4.6 mmol/L［参考值：3.5-5.0 mmol/L］",
+          "血镁": "1.9 mg/dL［参考值：1.7-2.2 mg/dL（0.70-0.90 mmol/L）］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "血钙"
+        ]
+      },
+      "甲状旁腺激素检测（PTH）": {
+        "result": {
+          "PTH参考范围": "20-75 pg/mL［参考值：通常为 20-75 pg/mL（2.1-8.0 pmol/L）；一般高于年轻成人］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      },
+      "糖类抗原125（CA-125）检测": {
+        "result": {
+          "CA-125": "42 U/mL［参考值：0-35 U/mL］"
+        },
+        "status": "abnormal",
+        "abnormal_indicators": [
+          "CA-125"
+        ]
+      },
+      "癌胚抗原（CEA）检测": {
+        "result": {
+          "吸烟者": "4.2 ng/mL［参考值：< 5.0 ng/mL（生理基线通常高于年轻成人）］",
+          "非吸烟者": "< 5.0 ng/mL［参考值：< 5.0 ng/mL］"
+        },
+        "status": "normal",
+        "abnormal_indicators": []
+      }
+    },
+    "decision_trace": [
+      {
+        "action": "ask_patient",
+        "question": "请问您目前有什么不适症状？例如是否有发热、乏力、出血点或骨关节疼痛等情况？",
+        "reason": "当前没有任何病史记录、已开检查及检查结果，缺乏诊断所需的关键临床信息，因此需要先通过问诊了解患者的主要症状和体征。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者表现为腰痛、乏力、口渴多尿、水肿及神经症状，结合记忆摘要中类似病例（如Patient_08871）的病史，高度怀疑多发性骨髓瘤。目前尚未进行任何检查，需立即开具血常规、肾功能、血钙、血清蛋白电泳及骨骼X线等关键检查以明确诊断。"
+      },
+      {
+        "action": "order_examination",
+        "question": "",
+        "reason": "患者存在贫血、高钙血症、肾功能不全及血清总蛋白升高，高度怀疑多发性骨髓瘤。PTH正常排除了甲状旁腺功能亢进。为明确诊断，急需进行血清蛋白电泳（SPEP）、免疫固定电泳（IFE）检测M蛋白，以及24小时尿蛋白定量和游离轻链检测等检查。"
+      },
+      {
+        "action": "final_diagnosis",
+        "question": "",
+        "reason": "患者有贫血、高钙血症、肾功能不全（肌酐升高、eGFR降低）、总蛋白升高，且PTH正常，结合症状（腰痛、乏力、口渴、多尿、便秘、骨痛），高度提示多发性骨髓瘤。已开检查（CBC, CMP, RFTs, 电解质, PTH, CA-125, CEA）结果支持该诊断方向，信息已足够进入诊断和治疗阶段。"
+      }
+    ],
+    "exam_decision_trace": [
+      {
+        "category": "实验室检查 - 血液",
+        "examinations": [
+          "全血细胞计数（CBC）",
+          "综合代谢面板（CMP）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "甲状旁腺激素检测（PTH）"
+        ],
+        "reason": "患者表现为腰痛、乏力、口渴、多尿、便秘、水肿及脚底麻木，结合记忆摘要中类似病例（如Patient_08871）的病史，高度怀疑多发性骨髓瘤。该病典型表现为骨痛、贫血、肾功能不全和高钙血症。因此，急需进行全血细胞计数（CBC）评估贫血和血小板情况，综合代谢面板（CMP）和肾功能检查（RFTs）评估肾功能和电解质（特别是钙），以及甲状旁腺激素检测（PTH）鉴别高钙血症的原因。这些是诊断和评估病情严重程度的关键基础检查。"
+      },
+      {
+        "category": "实验室检查 - 其他",
+        "examinations": [
+          "糖类抗原125（CA-125）检测",
+          "癌胚抗原（CEA）检测"
+        ],
+        "reason": "患者表现为严重高钙血症、肾功能不全、贫血及血清总蛋白升高，结合腰痛症状，需高度警惕多发性骨髓瘤或恶性肿瘤骨转移。在现有检查类别中，选择肿瘤标志物检测（如CA-125和CEA）作为初步筛查，以辅助鉴别是否存在潜在的恶性肿瘤。"
+      }
+    ],
+    "final_plan": {
+      "department": "肾内科",
+      "diagnosis": "慢性肾脏病",
+      "treatment_plan": "1. 紧急处理高钙血症与肾功能不全：立即静脉补液（生理盐水）促进钙排泄，监测尿量及电解质；若血钙持续>12 mg/dL或症状加重，考虑使用降钙素或双膦酸盐（需根据eGFR调整剂量），并暂停所有含钙/维生素D补充剂。2. 针对贫血治疗：评估铁代谢后给予促红细胞生成素（EPO）联合铁剂治疗，目标血红蛋白维持在10-11 g/L，避免过度纠正。3. 骨骼与矿物质管理：鉴于高钙、低磷及CKD背景，严格限制饮食磷摄入，避免活性维生素D使用以防高钙加重，定期监测PTH及骨密度。4. 并发症监测：密切观察腰痛性质变化以排除骨折或肾结石，控制血压，预防感染。5. 随访计划：每周复查血钙、肌酐、电解质及血常规，根据病情调整方案；若出现意识模糊、严重心律失常或无尿，立即急诊就医。",
+      "reasoning": "患者表现为中度贫血（Hb 88g/L）、显著高钙血症（12.1 mg/dL）、肾功能不全（Cr 2.3 mg/dL, eGFR 28 mL/min）及血清总蛋白升高。虽然PTH正常排除了原发性甲状旁腺功能亢进，但高钙合并肾功能衰竭及多系统症状（乏力、口渴、骨痛、水肿）高度提示慢性肾脏病（CKD）导致的继发性矿物质骨代谢紊乱或潜在恶性肿瘤相关高钙血症。结合腰痛及蛋白升高，需优先按CKD进行综合管理，同时排查多发性骨髓瘤等病因。治疗方案重点在于纠正危及生命的高钙血症、保护残余肾功能及纠正贫血。"
+    },
+    "evaluation_report": {
+      "patientId": "Patient_00827",
+      "status": "evaluated",
+      "evaluationStatus": "evaluated",
+      "diagnosisAccuracy": 0.0,
+      "examinationPrecision": 0.4286,
+      "treatmentOverallScore": 0.2,
+      "treatmentSafety": 0.2,
+      "treatmentEffectivenessAlignment": 0.4,
+      "treatmentPersonalization": 0.6,
+      "diagnosisDetail": {
+        "submitted": [
+          "慢性肾脏病"
+        ],
+        "expected": [
+          "多发性骨髓瘤"
+        ],
+        "matched": [],
+        "accuracy": 0.0,
+        "status": "wrong"
+      },
+      "examinationDetail": {
+        "ordered": [
+          "全血细胞计数（CBC）",
+          "综合代谢面板（CMP）",
+          "肾功能检查（RFTs）",
+          "血清电解质",
+          "甲状旁腺激素检测（PTH）",
+          "糖类抗原125（CA-125）检测",
+          "癌胚抗原（CEA）检测"
+        ],
+        "expected": [
+          "全血细胞计数（CBC）",
+          "综合代谢面板（CMP）",
+          "肾功能检查（RFTs）",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "全身骨骼X线检查",
+          "磁共振成像（MRI）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "matched": [
+          "全血细胞计数（CBC）",
+          "综合代谢面板（CMP）",
+          "肾功能检查（RFTs）"
+        ],
+        "precision": 0.42857142857142855,
+        "coverage": 0.3,
+        "precisionEligible": true
+      },
+      "treatmentDetail": {
+        "submitted": "1. 紧急处理高钙血症与肾功能不全：立即静脉补液（生理盐水）促进钙排泄，监测尿量及电解质；若血钙持续>12 mg/dL或症状加重，考虑使用降钙素或双膦酸盐（需根据eGFR调整剂量），并暂停所有含钙/维生素D补充剂。2. 针对贫血治疗：评估铁代谢后给予促红细胞生成素（EPO）联合铁剂治疗，目标血红蛋白维持在10-11 g/L，避免过度纠正。3. 骨骼与矿物质管理：鉴于高钙、低磷及CKD背景，严格限制饮食磷摄入，避免活性维生素D使用以防高钙加重，定期监测PTH及骨密度。4. 并发症监测：密切观察腰痛性质变化以排除骨折或肾结石，控制血压，预防感染。5. 随访计划：每周复查血钙、肌酐、电解质及血常规，根据病情调整方案；若出现意识模糊、严重心律失常或无尿，立即急诊就医。",
+        "overallScore": 0.2,
+        "safety": 0.2,
+        "effectivenessAlignment": 0.4,
+        "personalization": 0.6,
+        "reasoning": "方案未提及暂停禁忌药物甲氨蝶呤，存在严重安全风险且遗漏核心抗肿瘤治疗。",
+        "reference": "由于肾功能下降，以及在骨髓瘤诱导治疗期间免疫抑制/细胞减少风险增加，暂停使用甲氨蝶呤（及叶酸）；待肾功能和血细胞计数稳定后重新评估其适用性。开始使用硼替佐米和地塞米松进行诱导治疗。考虑到肾功能受损，骨保护方面使用地舒单抗代替唑来膦酸。使用硼替佐米期间，开始进行带状疱疹抗病毒预防（如阿昔洛韦/伐昔洛韦）。静脉血栓栓塞（VTE）预防方面，仅在VTE风险高于出血风险时使用低分子肝素（例如因骨折/背痛导致活动受限及使用大剂量激素时）；开始治疗前及治疗期间应检查血小板计数并评估出血风险，如有血小板减少或活动性出血则暂停使用。给予生理盐水静脉补液和降钙素以降低钙水平；鉴于慢性肾病（CKD），需密切监测液体状态（出入量、每日体重、电解质、肌酐）。针对有症状的贫血给予红细胞输注。使用地塞米松期间监测血糖；如存在胃肠道出血风险或激素相关胃炎风险，可考虑胃肠道预防（如PPI）。请物理治疗会诊，在背部支具支持下进行安全活动。通过每日体重监测和限盐来维持液体平衡监测。一周后复诊，重新评估实验室检查结果和症状。"
+      },
+      "ground_truth": {
+        "final_diagnosis": "多发性骨髓瘤",
+        "necessary_examinations": [
+          "全血细胞计数（CBC）",
+          "综合代谢面板（CMP）",
+          "肾功能检查（RFTs）",
+          "血清蛋白电泳（SPEP）",
+          "尿液分析（UA）",
+          "24小时尿蛋白检测",
+          "尿蛋白电泳（UPEP）",
+          "全身骨骼X线检查",
+          "磁共振成像（MRI）",
+          "骨髓穿刺和活检（BMAB）"
+        ],
+        "contraindications": {
+          "drugs": [
+            "Methotrexate"
+          ],
+          "treatments": []
+        },
+        "treatment_plan": "由于肾功能下降，以及在骨髓瘤诱导治疗期间免疫抑制/细胞减少风险增加，暂停使用甲氨蝶呤（及叶酸）；待肾功能和血细胞计数稳定后重新评估其适用性。开始使用硼替佐米和地塞米松进行诱导治疗。考虑到肾功能受损，骨保护方面使用地舒单抗代替唑来膦酸。使用硼替佐米期间，开始进行带状疱疹抗病毒预防（如阿昔洛韦/伐昔洛韦）。静脉血栓栓塞（VTE）预防方面，仅在VTE风险高于出血风险时使用低分子肝素（例如因骨折/背痛导致活动受限及使用大剂量激素时）；开始治疗前及治疗期间应检查血小板计数并评估出血风险，如有血小板减少或活动性出血则暂停使用。给予生理盐水静脉补液和降钙素以降低钙水平；鉴于慢性肾病（CKD），需密切监测液体状态（出入量、每日体重、电解质、肌酐）。针对有症状的贫血给予红细胞输注。使用地塞米松期间监测血糖；如存在胃肠道出血风险或激素相关胃炎风险，可考虑胃肠道预防（如PPI）。请物理治疗会诊，在背部支具支持下进行安全活动。通过每日体重监测和限盐来维持液体平衡监测。一周后复诊，重新评估实验室检查结果和症状。"
+      }
+    },
+    "evaluation_reflection": {
+      "reflection": {
+        "profile": "中老年患者，主诉腰痛伴活动后加重、乏力、口渴多尿及双下肢水肿，需警惕多发性骨髓瘤引起的骨痛、高钙血症及肾功能损害。",
+        "diagnosis_reflection": "诊断错误（提交慢性肾脏病，预期多发性骨髓瘤）。遗漏了‘腰痛’与‘贫血/高钙’组合对多发性骨髓瘤的提示，未将CKD作为并发症而非原发病考虑。",
+        "examination_reflection": "检查覆盖不足（精确度0.43，覆盖率0.3）。漏选关键确诊检查：血清蛋白电泳(SPEP)、24小时尿蛋白、全身骨骼X线/MRI及骨髓穿刺活检；过度开具肿瘤标志物(CA-125, CEA)且未针对骨髓瘤特征性检查。",
+        "treatment_reflection": "治疗方案严重偏离（安全分0.2）。未提及暂停禁忌药物甲氨蝶呤，遗漏核心诱导治疗（硼替佐米+地塞米松），未根据肾功能调整骨保护药物（应用地舒单抗而非唑来膦酸）及抗病毒预防，仅关注对症处理而忽略病因治疗。",
+        "future_strategy": "面对‘腰痛+贫血+肾损+高钙’综合征时，优先排查多发性骨髓瘤，立即完善SPEP、骨髓穿刺及骨骼影像；治疗上必须启动针对性化疗并严格评估药物相互作用及肾功能调整方案。"
+      }
+    },
+    "encounter_timestamp": "2026-11-08T09:48:59.816535+00:00"
+  },
+  "final_result": {
+    "patient_id": "Patient_00827",
+    "team_id": "rsi_b6cec452d4564d6090379bab2a2a498f",
+    "diagnosis": [
+      "慢性肾脏病"
+    ],
+    "treatment_plan": "1. 紧急处理高钙血症与肾功能不全：立即静脉补液（生理盐水）促进钙排泄，监测尿量及电解质；若血钙持续>12 mg/dL或症状加重，考虑使用降钙素或双膦酸盐（需根据eGFR调整剂量），并暂停所有含钙/维生素D补充剂。2. 针对贫血治疗：评估铁代谢后给予促红细胞生成素（EPO）联合铁剂治疗，目标血红蛋白维持在10-11 g/L，避免过度纠正。3. 骨骼与矿物质管理：鉴于高钙、低磷及CKD背景，严格限制饮食磷摄入，避免活性维生素D使用以防高钙加重，定期监测PTH及骨密度。4. 并发症监测：密切观察腰痛性质变化以排除骨折或肾结石，控制血压，预防感染。5. 随访计划：每周复查血钙、肌酐、电解质及血常规，根据病情调整方案；若出现意识模糊、严重心律失常或无尿，立即急诊就医。",
+    "reasoning": "患者表现为中度贫血（Hb 88g/L）、显著高钙血症（12.1 mg/dL）、肾功能不全（Cr 2.3 mg/dL, eGFR 28 mL/min）及血清总蛋白升高。虽然PTH正常排除了原发性甲状旁腺功能亢进，但高钙合并肾功能衰竭及多系统症状（乏力、口渴、骨痛、水肿）高度提示慢性肾脏病（CKD）导致的继发性矿物质骨代谢紊乱或潜在恶性肿瘤相关高钙血症。结合腰痛及蛋白升高，需优先按CKD进行综合管理，同时排查多发性骨髓瘤等病因。治疗方案重点在于纠正危及生命的高钙血症、保护残余肾功能及纠正贫血。",
+    "ordered_examinations": [
+      "全血细胞计数（CBC）",
+      "综合代谢面板（CMP）",
+      "肾功能检查（RFTs）",
+      "血清电解质",
+      "甲状旁腺激素检测（PTH）",
+      "糖类抗原125（CA-125）检测",
+      "癌胚抗原（CEA）检测"
+    ],
+    "conversation_rounds": 1,
+    "finished": true
+  },
+  "evaluation_report": {
+    "patientId": "Patient_00827",
+    "status": "evaluated",
+    "evaluationStatus": "evaluated",
+    "diagnosisAccuracy": 0.0,
+    "examinationPrecision": 0.4286,
+    "treatmentOverallScore": 0.2,
+    "treatmentSafety": 0.2,
+    "treatmentEffectivenessAlignment": 0.4,
+    "treatmentPersonalization": 0.6,
+    "diagnosisDetail": {
+      "submitted": [
+        "慢性肾脏病"
+      ],
+      "expected": [
+        "多发性骨髓瘤"
+      ],
+      "matched": [],
+      "accuracy": 0.0,
+      "status": "wrong"
+    },
+    "examinationDetail": {
+      "ordered": [
+        "全血细胞计数（CBC）",
+        "综合代谢面板（CMP）",
+        "肾功能检查（RFTs）",
+        "血清电解质",
+        "甲状旁腺激素检测（PTH）",
+        "糖类抗原125（CA-125）检测",
+        "癌胚抗原（CEA）检测"
+      ],
+      "expected": [
+        "全血细胞计数（CBC）",
+        "综合代谢面板（CMP）",
+        "肾功能检查（RFTs）",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "全身骨骼X线检查",
+        "磁共振成像（MRI）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "matched": [
+        "全血细胞计数（CBC）",
+        "综合代谢面板（CMP）",
+        "肾功能检查（RFTs）"
+      ],
+      "precision": 0.42857142857142855,
+      "coverage": 0.3,
+      "precisionEligible": true
+    },
+    "treatmentDetail": {
+      "submitted": "1. 紧急处理高钙血症与肾功能不全：立即静脉补液（生理盐水）促进钙排泄，监测尿量及电解质；若血钙持续>12 mg/dL或症状加重，考虑使用降钙素或双膦酸盐（需根据eGFR调整剂量），并暂停所有含钙/维生素D补充剂。2. 针对贫血治疗：评估铁代谢后给予促红细胞生成素（EPO）联合铁剂治疗，目标血红蛋白维持在10-11 g/L，避免过度纠正。3. 骨骼与矿物质管理：鉴于高钙、低磷及CKD背景，严格限制饮食磷摄入，避免活性维生素D使用以防高钙加重，定期监测PTH及骨密度。4. 并发症监测：密切观察腰痛性质变化以排除骨折或肾结石，控制血压，预防感染。5. 随访计划：每周复查血钙、肌酐、电解质及血常规，根据病情调整方案；若出现意识模糊、严重心律失常或无尿，立即急诊就医。",
+      "overallScore": 0.2,
+      "safety": 0.2,
+      "effectivenessAlignment": 0.4,
+      "personalization": 0.6,
+      "reasoning": "方案未提及暂停禁忌药物甲氨蝶呤，存在严重安全风险且遗漏核心抗肿瘤治疗。",
+      "reference": "由于肾功能下降，以及在骨髓瘤诱导治疗期间免疫抑制/细胞减少风险增加，暂停使用甲氨蝶呤（及叶酸）；待肾功能和血细胞计数稳定后重新评估其适用性。开始使用硼替佐米和地塞米松进行诱导治疗。考虑到肾功能受损，骨保护方面使用地舒单抗代替唑来膦酸。使用硼替佐米期间，开始进行带状疱疹抗病毒预防（如阿昔洛韦/伐昔洛韦）。静脉血栓栓塞（VTE）预防方面，仅在VTE风险高于出血风险时使用低分子肝素（例如因骨折/背痛导致活动受限及使用大剂量激素时）；开始治疗前及治疗期间应检查血小板计数并评估出血风险，如有血小板减少或活动性出血则暂停使用。给予生理盐水静脉补液和降钙素以降低钙水平；鉴于慢性肾病（CKD），需密切监测液体状态（出入量、每日体重、电解质、肌酐）。针对有症状的贫血给予红细胞输注。使用地塞米松期间监测血糖；如存在胃肠道出血风险或激素相关胃炎风险，可考虑胃肠道预防（如PPI）。请物理治疗会诊，在背部支具支持下进行安全活动。通过每日体重监测和限盐来维持液体平衡监测。一周后复诊，重新评估实验室检查结果和症状。"
+    },
+    "ground_truth": {
+      "final_diagnosis": "多发性骨髓瘤",
+      "necessary_examinations": [
+        "全血细胞计数（CBC）",
+        "综合代谢面板（CMP）",
+        "肾功能检查（RFTs）",
+        "血清蛋白电泳（SPEP）",
+        "尿液分析（UA）",
+        "24小时尿蛋白检测",
+        "尿蛋白电泳（UPEP）",
+        "全身骨骼X线检查",
+        "磁共振成像（MRI）",
+        "骨髓穿刺和活检（BMAB）"
+      ],
+      "contraindications": {
+        "drugs": [
+          "Methotrexate"
+        ],
+        "treatments": []
+      },
+      "treatment_plan": "由于肾功能下降，以及在骨髓瘤诱导治疗期间免疫抑制/细胞减少风险增加，暂停使用甲氨蝶呤（及叶酸）；待肾功能和血细胞计数稳定后重新评估其适用性。开始使用硼替佐米和地塞米松进行诱导治疗。考虑到肾功能受损，骨保护方面使用地舒单抗代替唑来膦酸。使用硼替佐米期间，开始进行带状疱疹抗病毒预防（如阿昔洛韦/伐昔洛韦）。静脉血栓栓塞（VTE）预防方面，仅在VTE风险高于出血风险时使用低分子肝素（例如因骨折/背痛导致活动受限及使用大剂量激素时）；开始治疗前及治疗期间应检查血小板计数并评估出血风险，如有血小板减少或活动性出血则暂停使用。给予生理盐水静脉补液和降钙素以降低钙水平；鉴于慢性肾病（CKD），需密切监测液体状态（出入量、每日体重、电解质、肌酐）。针对有症状的贫血给予红细胞输注。使用地塞米松期间监测血糖；如存在胃肠道出血风险或激素相关胃炎风险，可考虑胃肠道预防（如PPI）。请物理治疗会诊，在背部支具支持下进行安全活动。通过每日体重监测和限盐来维持液体平衡监测。一周后复诊，重新评估实验室检查结果和症状。"
+    }
+  },
+  "reflection": {
+    "reflection": {
+      "profile": "中老年患者，主诉腰痛伴活动后加重、乏力、口渴多尿及双下肢水肿，需警惕多发性骨髓瘤引起的骨痛、高钙血症及肾功能损害。",
+      "diagnosis_reflection": "诊断错误（提交慢性肾脏病，预期多发性骨髓瘤）。遗漏了‘腰痛’与‘贫血/高钙’组合对多发性骨髓瘤的提示，未将CKD作为并发症而非原发病考虑。",
+      "examination_reflection": "检查覆盖不足（精确度0.43，覆盖率0.3）。漏选关键确诊检查：血清蛋白电泳(SPEP)、24小时尿蛋白、全身骨骼X线/MRI及骨髓穿刺活检；过度开具肿瘤标志物(CA-125, CEA)且未针对骨髓瘤特征性检查。",
+      "treatment_reflection": "治疗方案严重偏离（安全分0.2）。未提及暂停禁忌药物甲氨蝶呤，遗漏核心诱导治疗（硼替佐米+地塞米松），未根据肾功能调整骨保护药物（应用地舒单抗而非唑来膦酸）及抗病毒预防，仅关注对症处理而忽略病因治疗。",
+      "future_strategy": "面对‘腰痛+贫血+肾损+高钙’综合征时，优先排查多发性骨髓瘤，立即完善SPEP、骨髓穿刺及骨骼影像；治疗上必须启动针对性化疗并严格评估药物相互作用及肾功能调整方案。"
+    }
+  },
+  "applied_memory": {
+    "$ref": "../cases/039.json#/applied_memory"
+  }
+}

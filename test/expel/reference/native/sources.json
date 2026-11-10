@@ -1,0 +1,27 @@
+[
+  {
+    "path": "expel_hotpotqa_env.py",
+    "url": "https://raw.githubusercontent.com/LeapLabTHU/ExpeL/e41ec9a24823e7b560c561ab191441b56d9bcefc/envs/hotpotqa/hotpotqa.py",
+    "sha256": "50b36080aa3c9c7dbe10a49d1eed3448fb948dc37f9b5b2f5197edb62262b3cb"
+  },
+  {
+    "path": "expel_base_env.py",
+    "url": "https://raw.githubusercontent.com/LeapLabTHU/ExpeL/e41ec9a24823e7b560c561ab191441b56d9bcefc/envs/base.py",
+    "sha256": "2c7acbffe90f6b9e993d83135fdd0cc30663d95930533281b9ce95c051237ac2"
+  },
+  {
+    "path": "expel_hotpotqa.yaml",
+    "url": "https://raw.githubusercontent.com/LeapLabTHU/ExpeL/e41ec9a24823e7b560c561ab191441b56d9bcefc/configs/benchmark/hotpotqa.yaml",
+    "sha256": "97fb380ac34a25b9f6f9c76e560363d5307da0ea98f9418512ada0cabd926e86"
+  },
+  {
+    "path": "langchain_wikipedia.py",
+    "url": "https://raw.githubusercontent.com/langchain-ai/langchain/v0.0.181/langchain/docstore/wikipedia.py",
+    "sha256": "d0f8669e00868db0853830daee151815af3e1b267e8ea127c975ff20c84993b3"
+  },
+  {
+    "path": "langchain_docstore.py",
+    "url": "https://raw.githubusercontent.com/langchain-ai/langchain/v0.0.181/langchain/agents/react/base.py",
+    "sha256": "418b19c7758556c51b748733d412c9243c7a46850ac6d527480ed97975957308"
+  }
+]
